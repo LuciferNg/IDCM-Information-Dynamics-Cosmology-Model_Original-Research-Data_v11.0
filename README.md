@@ -1,52 +1,68 @@
-# IDCM-v11.0 -- Reality-Architecture
+# IDCM v11.0 — Reality-Architecture
 
-> **Project**: 公式驗證 —— 所有 IDCM 公式必須通過「第一性原理推導」審計
-> **鐵律**: 公式不能以現有數值來後驗擬合 (no post-hoc fitting to measured values)
-> **創建**: 2026-09-03 | **狀態**: 🔴 框架階段, 逐 q 處理
-> **位置**: `/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/`
+**Information Dynamics Cosmology Model — 11th Generation**
 
----
-
-> **命名記錄 (2026-10-14, 調律者)**: 本 repo 名稱由 `IDCM-v11.0--Equation-Verification` 改為
-> `IDCM-v11.0--Reality-Architecture`。方向以 Reality-Architecture 為準；公式驗證（緣起目標）繼續為
-> 支柱之一。O115 docs/03 曾訂名「It-From-Selection」——與實際開檔名唔一致，以 Reality-Architecture 為最終名。
-
----
+> 公式驗證：所有 IDCM 公式必須通過「第一性原理推導」審計。鐵律：公式不能以現有數值後驗擬合（no post-hoc fitting）。
+> 創建 2026-09-03；命名 2026-10-14 由 `Equation-Verification` 改為 `Reality-Architecture`。
 
 ## 緣起
 
-v10.0 嘅公式 (Ω_Λ=4/(φ⁴−1)、Ω_b、ε=φ⁻¹/4 等) 大量以「MERA 分支閉合」「轉移矩陣不變量」等標籤呈現, 但追源發現多處只有**數值巧合接軌**, 冇結構推導。本 project 逐條公式重新推導, 唔接受後驗擬合。
+v10.0 嘅公式（Ω_Λ=4/(φ⁴−1)、Ω_b、ε=φ⁻¹/4 等）大量以「MERA 分支閉合」「轉移矩陣不變量」等標籤呈現，追源發現多處只有數值巧合接軌、冇結構推導。本 project 逐條公式重新推導，唔接受後驗擬合。
 
-## 背景判決 (2026-09-03, 前 session 完成)
+## 方法
 
-針對 Ω_Λ=4/(φ⁴−1) 分子 4 嘅追源:
+1. 逐條公式追源至 K_Chain ⊗ K_Tree 譜結構
+2. 標籤 vs 結構分離：數值巧合唔算閉合
+3. 盲測＋預測閉合（禁 post-hoc fitting）
+4. 已否證路線保留 FAIL ＋校正 tag，唔重推
+5. 每問題獨立目錄：README＋01_problem_record＋SESSION_START
+
+## 項目結構
+
+```
+IDCM-v11.0--Reality-Architecture/
+├── README.md
+└── main_problems/            # M 系列（M1–M4）
+```
+
+## 狀態快照
+
+```
+M 系列：4 個（M1–M4）— 全部已註冊（未開始推導）
+Q 系列：Q1 已刪除（2026-10-14，調律者指示）
+```
+
+## 已閉合關鍵結果（選錄）
+
+- 暫無（M1–M4 只開不推；Q1 已刪）— 背景判決見附錄
+
+## 驗證紀律
+
+- 4 Hard Tests：①零參數自由度 ②MC null（10⁷, 5σ）③樣本外盲測 ④結構剛性
+- 公式不能以現有數值後驗擬合
+- 每發現 → 獨立 doc；更正 append-only 附註
+- pid 大寫（M1..M4），folder 細寫（m1_mass_file_schema…）
+
+## O/P/M 系列全列表
+
+| 編號 | 標題 | 核心發現 | 狀態 |
+|------|------|----------|------|
+| M1 | 質量檔案 schema：譜點/標度/算子/拓撲/標籤五層格式規範 | 五層格式規範（由 v10 O251 遷移, 2026-10-14） | 已註冊 |
+| M2 | 同步態 ↔ 脫同步態互換公式（質能公式） | 互換律待推（⟨W⟩²=61.5 錨）；只開不推 | 已註冊 |
+| M3 | Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60 | 3:16:41 結構鎖定待推；只開不推 | 已註冊 |
+| M4 | 質量 = 譜讀數差值：全費米子譜差閉合 | 差值閉合力學 v2（O257 R7 定案承接）；只開不推 | 已註冊 |
+
+## 附錄 — 背景判決（2026-09-03，前 session）
+
+針對 Ω_Λ=4/(φ⁴−1) 分子 4 嘅追源：
 
 | 項目 | 狀態 |
-|:---|:---:|
-| Ω_Λ=1/(1+3ε) 精確代數恆等式 (ktree_structure/08 引理3) | ✅ 結構 |
-| 分子 4 = 通分產物 (唔係 B 空降) | ✅ 事實 |
-| **分子 4 ≡ B** 嘅推導連接 | 🔴 **空缺, 只係數值巧合+標籤** |
-| **ε=φ⁻¹/4 嘅「4」來源** | 🔴 **從未推導 (全 corpus 0 命中)** |
+|:---|:--:|
+| Ω_Λ=1/(1+3ε) 精確代數恆等式（ktree_structure/08 引理3） | 結構 |
+| 分子 4 = 通分產物（唔係 B 空降） | 事實 |
+| 分子 4 ≡ B 嘅推導連接 | 空缺（只係數值巧合＋標籤） |
+| ε=φ⁻¹/4 嘅「4」來源 | 從未推導（全 corpus 0 命中） |
 
-→ 觸發 Q1。
+## 附錄 — Q 系列歷史
 
----
-
-## Q-series 索引
-
-| ID | 問題 | 狀態 |
-|:---|:-----|:----:|
-| ~~Q1~~ | ~~真空能 4/(φ⁴−1) 分子 4 第一性原理~~ | ~~🔴 框架已寫, 待下 session~~ |
-
-> Q1 已刪除（2026-10-14, 調律者指示）；備份 `/tmp/q1_vacuum_energy_backup_20261014.tar.gz`（session 用, WSL 重啟會清空）。
-
----
-
-## main_problems 索引
-
-| ID | 問題 | 狀態 |
-|:---|:-----|:----:|
-| [M1](main_problems/m1_mass_file_schema/) | 質量檔案 schema：譜點/標度/算子/拓撲/標籤五層格式規範（Reality-Architecture; 由 v10 O251 遷移, 2026-10-14） | 📄 已註冊 — 未開始 |
-| [M2](main_problems/m2_sync_desync_exchange/) | 同步態 ↔ 脫同步態互換公式（質能公式；只開不推, 2026-10-15） | 📄 已註冊 — 未開始 |
-| [M3](main_problems/m3_omega_ratio_lock/) | Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推, 2026-10-15） | 📄 已註冊 — 未開始 |
-| [M4](main_problems/m4_mass_spectral_readout/) | 質量 = 譜讀數差值：全費米子譜差閉合（差值閉合力學 v2, O257 R7 定案承接；8 支遷入 scripts；只開不推, 2026-10-21） | 📄 已註冊 — 未開始 |
+Q1（真空能 4/(φ⁴−1) 分子 4 第一性原理）已刪除（2026-10-14，調律者指示）；備份 `/tmp/q1_vacuum_energy_backup_20261014.tar.gz`（session 用，WSL 重啟會清空）。
