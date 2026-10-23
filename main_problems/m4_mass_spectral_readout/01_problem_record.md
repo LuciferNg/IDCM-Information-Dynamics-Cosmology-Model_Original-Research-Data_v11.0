@@ -14,7 +14,7 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 -->
 
 > **狀態**: 📄 **已註冊 — 未開始（只開不推；推導鏈＋報告文檔由新 session 完成）**
-> **2026-10-24 追加**: 🟡 **partial — R1 閘通過、R2 橋精確、R3 lattice 重判、R4 A 攻堅（negative）；未 close（見 §八／docs/r06）**
+> **2026-10-24 追加**: 🟡 **partial — R1 閘通過、R2 橋精確、R3 lattice 重判、R4 A 攻堅（negative）；未 close（見 §八／docs/13_script13_mdmu_second_instance.md）**
 > **建立**: 2026-10-21（v11 Reality-Architecture）
 > **位置**: `main_problems/m4_mass_spectral_readout/`
 > **來源**: O257 R7 定案（`open_problems_fresh/o257_mcomp_log10_mechanism/docs/07_round7_difference_closure.md`）＋ /tmp 8 支測試 script 全量遷移
@@ -88,7 +88,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 - R2: γ₁↔γ₆ 橋掃描（γ₆/γ₁、γ₁^kγ₆^l·A 混合形式，density 閘）
 - R3: lattice 值（FLAG 2024 m_u/m_d/m_s）代入重做 span/比掃描
 - R4: A 譜身份攻堅（v²/M_comp→純譜量重寫）
-- R5: 報告文檔（docs/r01-03：定案承接／掃描全滅／GUT 錨分層）
+- R5: 報告文檔（docs/01–08-03：定案承接／掃描全滅／GUT 錨分層）
 
 ## 五、驗證標準
 
@@ -100,7 +100,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 ## 六、狀態
 
 - 📄 **已註冊 — 只開不推**（推導鏈＋報告文檔 = 新 session 第一步）
-- **2026-10-24**：🟡 partial — R1 閘 8/8、R2 結構橋（Chebyshev 精確）、R3 lattice 重判（span≈12 升 🟡）、R4 A（🔴 negative）；詳 §八＋`docs/r01–r06`
+- **2026-10-24**：🟡 partial — R1 閘 8/8、R2 結構橋（Chebyshev 精確）、R3 lattice 重判（span≈12 升 🟡）、R4 A（🔴 negative）；詳 §八＋`docs/01–13`
 
 ## 七、相關文件
 
@@ -115,19 +115,19 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 
 ## 八、R1–R4 執行結果（2026-10-24 追加；原文 §〇–§七 一字未改）
 
-**推導時序索引**：R1 閘（04:56）→ F1 修 01 [C]（04:58）→ F2 05 MC 判別（05:00）→ R3 lattice（05:03，含 FLAG PDF 實檔）→ R2 橋（05:06）→ R4 A（05:07）→ 文檔 docs/r01–r06（05:15）
+**推導時序索引**：R1 閘（04:56）→ F1 修 01 [C]（04:58）→ F2 05 MC 判別（05:00）→ R3 lattice（05:03，含 FLAG PDF 實檔）→ R2 橋（05:06）→ R4 A（05:07）→ 文檔 docs/01–13（05:15）
 
 | 輪 | 結果 | 檔 |
 |:--|:--|:--|
-| R1 閘 | 8/8 跑通；7/8 逐位吻合；01 首跑 crash（TypeError，/tmp 原版 bug）已修；05 MC 43.3% ≠ 記錄 8.7%（不可復現） | docs/r01 |
-| R1-corr | 統一 density protocol（thr = 命中自身 dev；域 = 受測比值域）：**全部 sector PN ≥ 31%** ⟹ 夸克/輕子/hadron 命中全滅 | docs/r02 |
-| R2 | γ_n = 2−2T_n(c) 精確；遞推 `γ_{n+1}=2cγ_n−γ_{n−1}+2γ₁`；γ₆/γ₁ = deg-20 本原元（ℚ(ζ₈₈)⁺）⟹ **「橋」唔缺常數** | docs/r03 |
-| R3 | FLAG 2024 lattice：c/s 🔴（PN 78.75%）、s/d=20 🔴（19.8866±0.2452，PN 99.69%） | docs/r04 |
-| R3 ★ | **span_Q/span_ν = 12 由 🔴 升 🟡**：R=12.0055±0.0399（0.14σ）；預言 **m_u = 2.1498 MeV**（FLAG 2.14±0.08，+0.12σ） | docs/r04 |
-| R3 🟡 | 新命中 **m_d/m_u = L₅/F₅ = 2.19929±0.08605**（dev 0.032%, 0.01σ；密度 P1 1.85%；後驗）— **同日 R3b 已降級，見下行** | docs/r04 |
-| R3b 🔴 | m_d/m_u=11/5 **第二實例搜索 = 降級**：K-ratio 族 79 值，密度 P1(0.17%) = 5.69% ⟹ 15 比期望命中 0.85；觀察 2 個 <1% 少於隨機期望 4.34 ⟹ 密度解釋 | docs/r04 §四 |
-| R4 | A = 1.64337 eV/γ²（v_SM）；族 13104 組合 **0 命中 <0.1%**，密度 5.21% ⟹ 🔴 未閉合 | docs/r05 |
-| R2 🔴 | O89 M_GUT/PS/R 三階梯 **不可引用**（O85 由零重建證階梯唔存在、目標硬編碼） | docs/r03 |
+| R1 閘 | 8/8 跑通；7/8 逐位吻合；01 首跑 crash（TypeError，/tmp 原版 bug）已修；05 MC 43.3% ≠ 記錄 8.7%（不可復現） | docs/01–08 |
+| R1-corr | 統一 density protocol（thr = 命中自身 dev；域 = 受測比值域）：**全部 sector PN ≥ 31%** ⟹ 夸克/輕子/hadron 命中全滅 | docs/09_script09_density_gate.md |
+| R2 | γ_n = 2−2T_n(c) 精確；遞推 `γ_{n+1}=2cγ_n−γ_{n−1}+2γ₁`；γ₆/γ₁ = deg-20 本原元（ℚ(ζ₈₈)⁺）⟹ **「橋」唔缺常數** | docs/10_script10_gamma1_gamma6_bridge.md |
+| R3 | FLAG 2024 lattice：c/s 🔴（PN 78.75%）、s/d=20 🔴（19.8866±0.2452，PN 99.69%） | docs/11_script11_lattice_flag_span.md |
+| R3 ★ | **span_Q/span_ν = 12 由 🔴 升 🟡**：R=12.0055±0.0399（0.14σ）；預言 **m_u = 2.1498 MeV**（FLAG 2.14±0.08，+0.12σ） | docs/11_script11_lattice_flag_span.md |
+| R3 🟡 | 新命中 **m_d/m_u = L₅/F₅ = 2.19929±0.08605**（dev 0.032%, 0.01σ；密度 P1 1.85%；後驗）— **同日 R3b 已降級，見下行** | docs/11_script11_lattice_flag_span.md |
+| R3b 🔴 | m_d/m_u=11/5 **第二實例搜索 = 降級**：K-ratio 族 79 值，密度 P1(0.17%) = 5.69% ⟹ 15 比期望命中 0.85；觀察 2 個 <1% 少於隨機期望 4.34 ⟹ 密度解釋 | docs/11_script11_lattice_flag_span.md §四 |
+| R4 | A = 1.64337 eV/γ²（v_SM）；族 13104 組合 **0 命中 <0.1%**，密度 5.21% ⟹ 🔴 未閉合 | docs/12_script12_A_spectral_identity.md |
+| R2 🔴 | O89 M_GUT/PS/R 三階梯 **不可引用**（O85 由零重建證階梯唔存在、目標硬編碼） | docs/10_script10_gamma1_gamma6_bridge.md |
 
 **狀態**：M4 = partial（未 close）。剩 🟡 兩項：span≈12（等 m_u <0.5% 精度 ＋ sample-out blind）、m_d/m_u=11/5（等第二實例）。
 
@@ -137,12 +137,12 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 
 - §2.4 寫「n−p/m_e=γ29/γ16 dev 0.0195% … 但 MC null **8.7%**（0.01% 級）→ density 殺」
 - **2026-10-24 更正附註**：遷入腳本 `scripts/05_hadron_dm.py` 實跑 MC null = **43.3%**（域 0.1–10、thr 0.1%）；
-  8.7% 對應一個**唔同 protocol**（域 1–10、thr 0.015%），唔可以由現存腳本唯一復現（詳 docs/r01 §三）。
-  統一 protocol 重判（docs/r02）：同域同 N、thr = 命中自身 dev（0.0195%）⟹ **PN = 30.98%**。
+  8.7% 對應一個**唔同 protocol**（域 1–10、thr 0.015%），唔可以由現存腳本唯一復現（詳 docs/05 §七）。
+  統一 protocol 重判（docs/09_script09_density_gate.md）：同域同 N、thr = 命中自身 dev（0.0195%）⟹ **PN = 30.98%**。
   **裁定不變**：density 殺（30.98% > 5%），但數字以 **30.98%** 為準（8.7% 作廢為不可復現）。
 
 - §2.2 寫「m_c/m_s vs γ20/γ5 dev 0.042%——MC null **97.9%**」：97.9% 係 02 腳本嘅**族級**null（質量域）；
-  dev 0.042% 嘅**單比/同域族級** PN = **48.07%**（docs/r02 §二）。兩者都 ⟹ 隨機級，數字以 docs/r02 為準。
+  dev 0.042% 嘅**單比/同域族級** PN = **48.07%**（docs/09_script09_density_gate.md §二）。兩者都 ⟹ 隨機級，數字以 docs/09_script09_density_gate.md 為準。
 
 ---
 
@@ -161,12 +161,22 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `06_hop_probe.py` | `docs/06` | `run_06_hop_probe.log` `772b5ed26c8d` | 91 ms / 38 行 | 🔴 hop 非質量算子 |
 | `07_hit_followup.py` | `docs/07` | `run_07_hit_followup.log` `37941c2647ab` | 83 ms / 28 行 | 🔴 s/d=20 引用值巧合；🟡 span 11.995 |
 | `08_span_12_judge.py` | `docs/08` | `run_08_span_12_judge.log` `71887104775c` | 632 ms / 36 行 | 🔴（後由 `11` 升 🟡）；MC 0.166% |
-| `09_density_gate.py` | `docs/09` | `run_09_density_gate.log` `06ca6b95974c` | 7 291 ms / 55 行 | 🟢 統一 protocol；全部 sector PN ≥ 30.98% |
-| `10_gamma1_gamma6_bridge.py` | `docs/10` | `run_10_gamma1_gamma6_bridge.log` `7e7b38f94f1a` | 1 010 ms / 51 行 | 🟢 譜代數精確；🔴 階梯族不可辨識 |
-| `11_lattice_flag_span.py` | `docs/11` | `run_11_lattice_flag_span.log` `24512bc505e7` | 973 ms / 57 行 | 🔴 T1/T2；🟡 T3（span=12, 0.14σ）|
-| `12_A_spectral_identity.py` | `docs/12` | `run_12_A_spectral_identity.log` `e2d938abba0d` | 3 133 ms / 38 行 | 🔴 0/13 104 命中；密度 5.21% |
-| `13_mdmu_second_instance.py` | `docs/13` | `run_13_mdmu_second_instance.log` `60364add23b2` | 259 ms / 40 行 | 🔴 11/5 降級（密度解釋）|
+| `09_density_gate.py` | `docs/09_script09_density_gate.md` | `run_09_density_gate.log` `06ca6b95974c` | 7 291 ms / 55 行 | 🟢 統一 protocol；全部 sector PN ≥ 30.98% |
+| `10_gamma1_gamma6_bridge.py` | `docs/10_script10_gamma1_gamma6_bridge.md` | `run_10_gamma1_gamma6_bridge.log` `7e7b38f94f1a` | 1 010 ms / 51 行 | 🟢 譜代數精確；🔴 階梯族不可辨識 |
+| `11_lattice_flag_span.py` | `docs/11_script11_lattice_flag_span.md` | `run_11_lattice_flag_span.log` `24512bc505e7` | 973 ms / 57 行 | 🔴 T1/T2；🟡 T3（span=12, 0.14σ）|
+| `12_A_spectral_identity.py` | `docs/12_script12_A_spectral_identity.md` | `run_12_A_spectral_identity.log` `e2d938abba0d` | 3 133 ms / 38 行 | 🔴 0/13 104 命中；密度 5.21% |
+| `13_mdmu_second_instance.py` | `docs/13_script13_mdmu_second_instance.md` | `run_13_mdmu_second_instance.log` `60364add23b2` | 259 ms / 40 行 | 🔴 11/5 降級（密度解釋）|
 
-**編號重排說明（append-only）**：本 session 早前建立嘅 6 份輪次報告原為 `docs/01–06`，與「docs/NN ↔ scripts/NN」規則衝突，
-已 `git mv` 為 `docs/r01–r06`（內容一字未改）；register 舊 event 嘅 ref 由翻譯層（register.py `REF_PATH_FIX`）指向新路徑，
-**歷史 event 不改**。逐腳本文檔 `docs/01–13` 為本輪新建。
+**編號重排說明（append-only）**：本 session 早前建立嘅 6 份輪次報告原為 `docs/01–06`，與「docs/NN ↔ scripts/NN」規則衝突；
+2026-10-24 調律者指令「只保留 01–13」⟹ 輪次報告**內容全部併入對應腳本文檔後刪檔**（合併位置見下表），
+`docs/` 現時只有 `docs/01–13`。register 舊 event 嘅 ref 由翻譯層（`register.py` `REF_PATH_FIX`）指向合併後文檔，**歷史 event 不改**。
+
+| 已刪輪次檔 | 併入位置 | 併入內容 |
+|:--|:--|:--|
+| `r01` | `docs/01–08` §六、`docs/01` §七、`docs/05` §七 | 閘 8 支期望 vs 實跑；[C] TypeError 取證；05 MC protocol 不符 |
+| `r02` | `docs/09` §六 | protocol 理由、夸克/輕子/hadron 逐命中全表、跨 sector 結論 |
+| `r03` | `docs/10` §六–§九 | 代數恆等細節、範疇錯誤判詞、O89 階梯核證表、log 階梯真值、R2 裁定表 |
+| `r04` | `docs/11` §六–§七 | FLAG 數據來源表、誤差傳播方法、1σ 帶、T4 density 細節、裁定表 |
+| `r04 §四` | `docs/13` §五 | T4b 第二實例全表 |
+| `r05` | `docs/12` §六–§七 | v 版本表、γ₆² 差異註、族結構、M_comp 比對、下一步、裁定表 |
+| `r06` | `docs/13` §六 | 16 項 derived-vs-not、gap G1–G6、自我約束記錄 |

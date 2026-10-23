@@ -42,4 +42,16 @@
 
 - ← `05`（同一 mass-difference 數據）
 - → `07`（s/d 追擊 + hop⇄log 間距）、`11`（lattice 重判）
-- 文檔：`docs/r04_lattice_r3.md` T2、`docs/r06_r_summary.md` G5
+- 文檔：`docs/11_script11_lattice_flag_span.md` T2、`docs/13_script13_mdmu_second_instance.md` G5
+
+---
+
+## 六、閘核對（原 docs/01–08 §六 併入；2026-10-24 04:56 首輪閘）
+
+> 閘 = 遷入 scripts 逐支重跑，同 SESSION_START §一 期望值對照。本支結果：
+
+| 期望 | 實跑 | 判 |
+|:--|:--|:--|
+| s/d=20 池零偏差 | `s/d = 20.000000` → hop 結構池 20 **dev 0.000%** | 🟢（後證係 PDG 引用值算術，見 §四 2）|
+
+**閘判**：8 支全部跑通；7 支逐位吻合；01 首跑 crash（腳本 bug，非物理，見 `docs/01` §七）；05 MC 數字與記錄不符（見 `docs/05` §七）。

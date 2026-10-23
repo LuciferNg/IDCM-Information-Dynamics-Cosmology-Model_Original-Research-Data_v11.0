@@ -64,7 +64,7 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 2. **R2 γ₁↔γ₆ 橋**：γ₆/γ₁=35.47≈?、γ₁ᵏγ₆ˡ·A 混合、γ₁ 階梯 log 等距 2.29279 身份（事前定義族＋density 閘）
 3. **R3 lattice 高精度值**：FLAG 2024 m_u/m_d/m_s 代入 span/比掃描（誤差收窄 10 倍後重判）
 4. **R4 A 譜身份**：A=1.64044 eV/γ² 唔靠 M_comp 嘅譜讀數形式（v²/M_comp→γ 純量重寫）
-5. **R5 報告文檔**：docs/r01 承接定案／docs/r02 掃描全滅判決／docs/r03 GUT 錨分層
+5. **R5 報告文檔**：docs/01–08 承接定案／docs/09_script09_density_gate.md 掃描全滅判決／docs/10_script10_gamma1_gamma6_bridge.md GUT 錨分層
 6. 完成後決定 close 定開子題
 
 ## 五、交接/依賴
@@ -102,8 +102,8 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 **R4（A 身份）🔴**：A = 1.64337 eV/γ²（v_SM；v=246 版 1.64044）；族 13104 組合 0 命中 <0.1%，密度 5.21%
 ⟹ 唔可辨識；M_comp 反解 = 3.689e13 GeV（近整數無身份）。
 
-**產物**：`docs/r01–r06`（6 檔輪次報告）＋ `docs/01–13`（13 檔逐腳本記錄：前設問題＋結論報告）、`scripts/01–13`（13 支全部 fresh-run exit 0）、`data/`（14 log ＋ 4 JSON，附 sha256）、register `progress` ＋ 2 個 handoff。
-**編號規則（2026-10-24 追加）**：`docs/NN` ↔ `scripts/NN`（一對一）；輪次報告移至 `docs/r01–r06`（內容未改，register 舊 ref 由 `REF_PATH_FIX` 翻譯層處理）。
+**產物**：`docs/01–13`（13 檔逐腳本記錄：前設問題＋事前判準＋執行＋結論；原 6 份輪次報告內容已全部併入後刪檔）、`scripts/01–13`（13 支全部 fresh-run exit 0）、`data/`（14 log ＋ 4 JSON，附 sha256）、register `progress` ＋ 2 個 handoff。
+**編號規則（2026-10-24）**：`docs/NN` ↔ `scripts/NN`（一對一）；輪次／閘報告唔另立檔，一律併入對應腳本文檔（合併表見 `01_problem_record.md` §十）；register 舊 ref 由 `REF_PATH_FIX` 翻譯層處理。
 
 **下一 session 接點**：
 1. **🟡 span≈12**：等獨立 m_u <0.5% 量度（FLAG 2025 更新宣稱改善 50–60% 仍不足）；預言 m_u=2.1498 MeV 已登記

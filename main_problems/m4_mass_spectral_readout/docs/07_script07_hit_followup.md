@@ -43,4 +43,16 @@
 
 - ← `06`（s/d = 20 假命中）
 - → `08`（span ≈ 12 嚴格判別）→ `11` T3（lattice 升 🟡）
-- 文檔：`docs/r04_lattice_r3.md` §T2/§T3、`docs/r06_r_summary.md` #6/#7
+- 文檔：`docs/11_script11_lattice_flag_span.md` §T2/§T3、`docs/13_script13_mdmu_second_instance.md` #6/#7
+
+---
+
+## 六、閘核對（原 docs/01–08 §六 併入；2026-10-24 04:56 首輪閘）
+
+> 閘 = 遷入 scripts 逐支重跑，同 SESSION_START §一 期望值對照。本支結果：
+
+| 期望 | 實跑 | 判 |
+|:--|:--|:--|
+| 誤差帶 [17.4, 22.6] | **[17.409, 22.591]**（m_d ±10.28%）| 🟢 |
+
+**閘判**：8 支全部跑通；7 支逐位吻合；01 首跑 crash（腳本 bug，非物理，見 `docs/01` §七）；05 MC 數字與記錄不符（見 `docs/05` §七）。

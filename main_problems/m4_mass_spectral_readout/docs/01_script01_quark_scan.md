@@ -50,4 +50,28 @@
 - → `03` 測「讀數×譜強度」形式
 - → `09` 統一 density protocol 給最終 PN（本腳本 [B] 密度 → 09 的 PN 值）
 - → `11` lattice 重判（PDG 引用值誤差主導嘅兩個命中）
-- 記錄於 `docs/r01_r1_chain_rebuild.md`（閘重建）、`docs/r02_density_unified.md`（統一判決）
+- 記錄於 `docs/01–08`（閘重建）、`docs/09_script09_density_gate.md`（統一判決）
+
+---
+
+## 六、閘核對（原 docs/01–08 §六 併入；2026-10-24 04:56 首輪閘）
+
+> 閘 = 遷入 scripts 逐支重跑，同 SESSION_START §一 期望值對照。本支結果：
+
+| 期望（SESSION_START §一） | 實跑（2026-10-24 04:56） | 判 |
+|:--|:--|:--|
+| `m_c/m_s` vs γ20/γ5 dev 0.0424%；池 density 高 | [A] `13.5974` → `13.6032` **dev 0.0424%**；[B] `\|dev\|<0.1%` 比數 **2/30** | 🟢 |
+
+**閘判**：8 支全部跑通；7 支逐位吻合；01 首跑 crash（腳本 bug，非物理，見 `docs/01` §七）；05 MC 數字與記錄不符（見 `docs/05` §七）。
+
+---
+
+## 七、F1 取證 —— [C] 段 TypeError（原 docs/01 §七 併入）
+
+- **症狀**（首跑 exit=1）：`TypeError: unsupported format string passed to numpy.ndarray.__format__`，位置 `scripts/01_quark_scan.py:118`
+- **根因①**：`Aq = m/g2` 係 44 值向量 ⟹ `abs(b1[0]/Aq−1)*100` 亦係向量 ⟹ `:.2f` 直接 crash
+- **根因②（更根本）**：`argmin(|A_q(n) − 1/γ_n|)` 係**同 index 硬配**（A_q 用 mode n、候選又用同一 n）⟹ 冇物理意義
+- **修法（well-posed 化，唔係降標準）**：改為自由 index 掃描 `∃(n,k): γ_n²·c_k = m_q`，`c_k ∈ S ∪ {γ_k} ∪ {1/γ_k}`（44 mode × 99 候選 = 4356/夸克）＋ MC density（200 隨機夸克）
+- **修後**：`[0]/[A]/[B]` 60 行與原版 **byte-identical**（`diff` 已驗）⟹ 只有 [C] 語義被修正
+- **取證檔**：`data/run_01_quark_scan.pre_fix.log`（崩潰原文，保存）／`data/run_01_quark_scan.log`（修後）；backup `~/.hermes/backups/scripts__01_quark_scan.py.v22pre.20261024_045821`
+- **知識**：SESSION_START §一「8/8 跑通」在 /tmp 原版**未曾達成**（01 係唯一 crash 點，記錄膨脹已修）
