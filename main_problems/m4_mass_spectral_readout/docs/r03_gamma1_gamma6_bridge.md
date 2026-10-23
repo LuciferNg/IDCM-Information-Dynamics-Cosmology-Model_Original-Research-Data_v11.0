@@ -50,10 +50,10 @@ RAG（v10.0）＋實檔核證：
 
 | 來源 | 內容 |
 |:--|:--|
-| `open_problems_fresh/o89_mass_hierarchy_coupling/docs/r01_gamma_cascade_closure.md` | M_GUT/PS/R = M_Pl×γ₁^{1,2,3}；目標 2e16/1e14/1e12 GeV；偏差 **3.1×／3.2×／1.6×** |
-| `open_problems_fresh/o85_su12_breaking/docs/r01_breaking_path_classification.md` § | 「**全程零硬編碼標度（GUT/PS/R 階梯唔存在 —— 舊污染已刪）**」 |
-| `…/o85…/docs/r02_q6_global_vs_gauge.md` | 「冇 `M_GUT/M_PS/M_R` 階梯（舊污染已刪，階段 3 由結構輸出標度）」 |
-| `…/o85…/docs/r06_scale.md` | 「Λ 係唯一自由標度…冇 M_GUT/M_PS/M_R 階梯 ✓」；`Λ = M_Pl/87 > 1.41×10¹⁷ GeV` |
+| `open_problems_fresh/o89_mass_hierarchy_coupling/docs/01_gamma_cascade_closure.md` | M_GUT/PS/R = M_Pl×γ₁^{1,2,3}；目標 2e16/1e14/1e12 GeV；偏差 **3.1×／3.2×／1.6×** |
+| `open_problems_fresh/o85_su12_breaking/docs/01_breaking_path_classification.md` § | 「**全程零硬編碼標度（GUT/PS/R 階梯唔存在 —— 舊污染已刪）**」 |
+| `…/o85…/docs/02_q6_global_vs_gauge.md` | 「冇 `M_GUT/M_PS/M_R` 階梯（舊污染已刪，階段 3 由結構輸出標度）」 |
+| `…/o85…/docs/06_scale.md` | 「Λ 係唯一自由標度…冇 M_GUT/M_PS/M_R 階梯 ✓」；`Λ = M_Pl/87 > 1.41×10¹⁷ GeV` |
 | `…/o85…/docs/09_u1_scale_ladder.md` | 7 級 U(1) 階梯 = **λ_m 環譜**（跨度 λ₁₃/λ₁ ≈ 157×），非 M_GUT/PS/R 三階 |
 
 ⟹ O89 嘅三階梯**上游標度係硬編碼目標反推**，O85 重建已刪。SESSION_START 禁區 #5 之核證結果：**M4 不得引用三階梯作閉合證據**。
