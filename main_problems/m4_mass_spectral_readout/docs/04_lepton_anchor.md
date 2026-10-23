@@ -7,12 +7,17 @@
 ## 一、前設問題
 
 ```
-方向判斷 — 費米子 anchor 分層測試
+/tmp 方向判斷 — 費米子 anchor 分層測試 (2026-10-21)
+=====================================================
 問題: 全費米子譜差結構有冇得推? 邊啲實驗值夠乾淨做 anchor?
-精度分層: L1 (可閉合) 帶電輕子 e/μ/τ pole ~1e-6 ; 中微子 Δm²
-          L2 (量級驗證) quark t/b/c ~1% ; s/d/u 10-20% running mass
-ΛQCD running: MS̄ mass scale-dependent = probe-dependent 讀數
-測試: 帶電輕子 μ/e, τ/μ, τ/e 對 γ比池 + sector 因子 (vs quark 97.9%)
+
+實驗值精度分層:
+  L1 (anchor 可閉合): 帶電輕子 e/μ/τ — pole mass 精確 ~1e-6
+  L1: 中微子 Δm² — 差譜 (唯一實驗量)
+  L2 (量級驗證): quark t/b/c ~1%; s/d/u 10-20% running mass
+  ΛQCD running: MS̄ mass scale-dependent = probe-dependent 讀數
+
+測試: 帶電輕子質量比 μ/e, τ/μ, τ/e 對 γ比池 + sector 因子 (vs quark 97.9%)
 memory 先例: μ/e = (γ7/γ1)(F_μ/F_e) = 206.705 (0.031%)
 ```
 

@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "script": "14_double_probe",
+    "date": "2026-10-24",
+    "seed": 20261030,
+    "NMC_density": 1000000,
+    "NMC_spectral": 200000
+  },
+  "data": {
+    "d_pi": 4.59359,
+    "s_pi": 0.00014,
+    "d_k": -3.934,
+    "s_k": 0.021,
+    "d_n": 1.293331,
+    "s_n": 5e-07,
+    "md_mu_lattice": 2.56,
+    "s_md_mu_lattice": 0.094
+  },
+  "P1": {
+    "E_MeV": -1.3203345,
+    "md_mu_derived": 2.6136655,
+    "dev_pct": 2.096308593750007,
+    "sigma": 0.09458461820012015,
+    "z": 0.5673808386735336,
+    "verdict": "red"
+  },
+  "P2": {
+    "R_em": 3.479110785940987,
+    "best_gamma_pool": 3.481540648981711,
+    "dev_gamma_pool_pct": 0.06984149658422201,
+    "best_struct_pool": 3.5,
+    "dev_struct_pool_pct": 0.6004181914363249,
+    "P1_gamma": 0.347292,
+    "PN_gamma": 0.34729199999999993,
+    "P1_struct": 0.279034,
+    "PN_struct": 0.279034,
+    "verdict": "🔴 唔可辨識（密度殺）"
+  },
+  "P3": {
+    "E_negative": true,
+    "m_dm_u_gt_absE": true,
+    "pred_dN": 1.2933310000000002,
+    "pred_dK": -3.934,
+    "verdict": "structural_green"
+  },
+  "P4": {
+    "family_size": 13104,
+    "hits_0p1pct": 0,
+    "P1_density": 0.043875,
+    "top5": [
+      {
+        "value": 1.2972539491926096,
+        "anchor": "M_Pl",
+        "k": 10,
+        "S": "N_gen²",
+        "dev_pct": 1.748083596042549
+      },
+      {
+        "value": 1.2795900064030405,
+        "anchor": "M0",
+        "k": 1,
+        "S": "N_gen²",
+        "dev_pct": 3.0859220596719528
+      },
+      {
+        "value": 1.4335239405290248,
+        "anchor": "v_SM",
+        "k": 3,
+        "S": "L/2",
+        "dev_pct": 8.572785194132603
+      },
+      {
+        "value": 1.4335239405290248,
+        "anchor": "v_SM",
+        "k": 3,
+        "S": "N_d",
+        "dev_pct": 8.572785194132603
+      },
+      {
+        "value": 1.1538065864956768,
+        "anchor": "Λ_IDCM",
+        "k": 1,
+        "S": "F5",
+        "dev_pct": 12.612554886986837
+      }
+    ],
+    "verdict": "🔴 唔可辨識"
+  }
+}

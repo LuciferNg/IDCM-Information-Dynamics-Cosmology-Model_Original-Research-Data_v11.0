@@ -7,14 +7,17 @@
 ## 一、前設問題
 
 ```
-hadron 質量差測試 01 — 數據表 + 事前掃描
+/tmp hadron 質量差測試 01 — 數據表 + 事前掃描 (2026-10-21)
+=============================================================
 調律者 framing: 質量 = 駐波態之間交互嘅同步邊界譜讀數差值
 ⟹ hadron 質量差 (π⁺−π⁰, n−p, K⁺−K⁰, D, B, m_d−m_u) 先係名副其實嘅「譜差讀數」。
+
 物理層:
-  π⁺−π⁰ = +4.5936 MeV — 主要電磁 self-energy (photon probe 讀數差)
+  π⁺−π⁰ = +4.5936 MeV — 主要電磁 self-energy (photon probe 讀數差!)
   n−p    = 1.2933 MeV — d−u 質量差 + 電磁 (strong sync boundary)
   K⁺−K⁰ = −3.937 MeV  — 電磁 vs u−d 反相!
   m_d−m_u ≈ 2.3 MeV   — isospin breaking (uncertainty ~10%)
+
 協議 (事前定義, 唔准見 target 反揀):
   [A] 質量差比 Δm_i/Δm_j vs γ比池 (同 R7 A 族)
   [B] 絕對質量差 Δm vs γ_n × A_scale (A ∈ {m_e, f_π, Λ, v/1000...})

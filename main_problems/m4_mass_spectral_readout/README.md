@@ -6,17 +6,20 @@
 已確立：差值閉合力學（Δm²+R 直出譜，唔經 M_comp）＋ K_chain 譜代數（γ_n = 2−2T_n(c)，全譜 ∈ ℤ[γ₁]）。
 攻堅路線：全費米子單點譜比（已全滅，density 閘）、lattice 精度重判（span≈12 升部分閉合）、A 譜身份（開放）。
 
-詳見 `01_problem_record.md`／`SESSION_START.md`／`docs/13_mdmu_second_instance.md`。
+2026-10-24 追加：**審計**（13+1 支全部 byte-identical 重現、14 檔文檔結構全核）、**開放問題整理**（`01_problem_record.md` §十一：Q1–Q8 ＋ 已判死路線 ＋ 三軸判讀紀律）、
+**繼續推**（`docs/14_double_probe.md`：雙 probe 反相證明係**恆等還原**、G5 量化為 `R_em = 3.479111`（密度殺 34.73%）、`E` 無譜形式 0/13104）。
+
+詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13_mdmu_second_instance.md`／`docs/14_double_probe.md`。
 
 ## 檔案
 
 | 檔案 | 描述 | 狀態 |
 |:----|:-----|:----:|
-| `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十） | 部分閉合 |
+| `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十）＋ **開放問題整理（§十一）** ＋ **審計記錄（§十二）** | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 13 檔（`01–13`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
-| `scripts/` | 計算腳本（13 檔：01–08 遷入、09–13 新增） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（14 log ＋ 4 JSON） | 部分閉合 |
+| `docs/` | 14 檔（`01–14`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
+| `scripts/` | 計算腳本（14 檔：01–08 遷入、09–14 新增；含 G5 `14_double_probe`） | 部分閉合 |
+| `data/` | stdout log ＋ JSON（15 log ＋ 5 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
 
 ## 編號規則
 
