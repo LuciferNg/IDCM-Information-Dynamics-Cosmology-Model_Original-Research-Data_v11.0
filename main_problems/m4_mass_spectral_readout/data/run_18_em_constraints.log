@@ -1,0 +1,49 @@
+==============================================================================
+M4 Q2/Q3 — em 讀數 operator 約束集 v1
+==============================================================================
+
+外部固定：X = m_d − m_u = 2.56 ± 0.094 MeV（FLAG24）
+
+[C1] 通道 em 讀數 E_ch = Δm − (sub)·X
+  通道               Δm  sub      E_ch     σ_E  類型
+  n−p          1.2933    1   -1.2667  0.0940  baryon u↔d, spectators {u,d}
+  K+−K0       -3.9340   -1   -1.3740  0.0963  meson u→d（Δ 定義為 K+−K0 ⟹ 質量項 = −X）
+  π+−π0        4.5936    1    2.0336  0.0940  annihilation（質量項 +X，標準分解）
+  Σ−−Σ0        4.8070    1    2.2470  0.1010  baryon d→u, spectators {d,s}
+  Σ0−Σ+        3.2720    1    0.7120  0.1196  baryon d→u, spectators {u,s}
+  Σ−−Σ+        8.0790    2    2.9590  0.2028  baryon 2×u↔d
+  Ξ−−Ξ0        6.8500    1    4.2900  0.2301  baryon d→u, spectators {s,s}
+  D+−D0        4.8200    1    2.2600  0.1172  meson d→u, spectator c
+
+[C2a] 電荷加性測試：E 對 Δ(ΣQ²) 與 ΔQ_had 線性？
+  dQ2: slope +0.343  R² = 0.0026 ⟹ 🔴 排除
+  dQh: slope -0.874  R² = 0.0240 ⟹ 🔴 排除
+
+[C2b] substitution-count 線性：E ≈ k·sub
+  E = -0.416 + +1.687·sub   R² = 0.0894 ⟹ 🔴 排除
+  殘差範圍 -2.646 … +3.018 MeV
+
+[C2c] spectator 獨立：同 substitution、唔同 spectator ⟹ E 應相等（|ΔE| < 2σ）
+  A: +X 方向（final 含 d 取代 u）：meson/baryon 混合: n−p=-1.267±0.094  K+−K0=-1.374±0.096  ⟹ spread 0.107 MeV
+  B: +X 方向 baryon (d 取代 u, 唔同 spectator): Σ−−Σ0=+2.247±0.101  Σ0−Σ+=+0.712±0.120  Ξ−−Ξ0=+4.290±0.230  D+−D0=+2.260±0.117  ⟹ spread 3.578 MeV
+     ⟹ 🔴 spectator 獨立**排除**（spread 3.578 ≫ 誤差）
+  綜合：🔴 spectator 獨立排除
+
+[C2d] 標度幂律 E ∝ M^p：由 (n−p, D+−D0) 定 p，再預測其餘
+  由 n−p(-1.267 @ 938.9) 與 D+−D0(+2.260 @ 1867.2) ⟹ p = 0.8422
+    K+−K0     預言 |E| = 0.740 vs 實測 1.374 ⟹ dev  46.17%
+    π+−π0     預言 |E| = 0.251 vs 實測 2.034 ⟹ dev  87.66%
+    Σ−−Σ0     預言 |E| = 1.552 vs 實測 2.247 ⟹ dev  30.93%
+    Σ0−Σ+     預言 |E| = 1.548 vs 實測 0.712 ⟹ dev 117.35%
+    Σ−−Σ+     預言 |E| = 1.550 vs 實測 2.959 ⟹ dev  47.61%
+    Ξ−−Ξ0     預言 |E| = 1.686 vs 實測 4.290 ⟹ dev  60.71%
+  worst dev 117.4% ⟹ 🔴 幂律標度排除
+
+[C3] 依賴圖
+  事實：8 通道中，同一 substitution 數嘅 E 值由 −1.374 到 +4.29（跨度 5.66 MeV）
+        ⟹ 電荷加性 (a)、substitution-count 線性 (b)、spectator 獨立 (c)、單一幂律 (d) 全排除
+  結論：operator 必須含**通道內 mode 佔用**資訊（邊界類型／佔用 mode 集合）
+        ⟹ 需 flavour→mode 映射 = Q5 selection rule ⟹ **屬 O140**（已 handoff）
+        ⟹ Q2/Q3 形式上下游於 O140：本 O 唔可自行補此映射（10-16 裁決）
+
+→ data/18_em_constraints.json

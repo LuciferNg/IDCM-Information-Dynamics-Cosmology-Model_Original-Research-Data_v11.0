@@ -170,6 +170,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `15_exponent8.py` | `docs/15_exponent8.md` | `run_15_exponent8.log` `2385fc190075` | 81 行 | 🔴 指數 k=8 反選確認（1/8 anchor; density 5.59%; identity 冗餘 17 個）|
 | `16_scale_operator.py` | `docs/16_scale_operator.md` | `run_16_scale_operator.log` `70bfe7983a82` | 41 行 | 🟢 零參數 α_s 跑動（m_b 0.236%／m_c 1.680%／2GeV 1.182%）；🟡 scale 語義=自對偶點二分；🔴 指數數值檢定阻塞 |
 | `17_em_decomposition.py` | `docs/17_em_decomposition.md` | `run_17_em_decomposition.log` `3e50997a859f` | 43 行 | 🔴 兩標度電荷模型結構否證（ΔK=−ΔN ⟹ 125.7σ）；🟡 H1 r=1 落 [0.941,1.252]、X +0.57σ、偶然率 0.41% |
+| `18_em_constraints.py` | `docs/18_em_constraints.md` | `run_18_em_constraints.log` `018f044d0972` | 49 行 | 🔴 四類形式排除（電荷加性 R²0.003／sub-count 0.089／spectator 獨立／幂律 117%）；🟡 K/N spread 0.107；⟹ Q2/Q3 blocked-by-O140 |
 
 **編號重排說明（append-only）**：本 session 早前建立嘅 6 份輪次報告原為 `docs/01–06`，與「docs/NN ↔ scripts/NN」規則衝突；
 2026-10-24 調律者指令「只保留 01–13」⟹ 輪次報告**內容全部併入對應腳本文檔後刪檔**（合併位置見下表），
@@ -203,8 +204,8 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | # | 開放問題 | 類型 | 狀態 | 現有證據／數字 | 阻塞 | 解鎖條件 | 產權／去向 |
 |:--|:--|:--|:--:|:--|:--|:--|:--|
 | Q1 | `span_Q/span_ν = 12 = 88−L₉` | 結構（唯一 🟡） | 🟡 後驗 | lattice `R = 12.005533 ± 0.039896`（0.14σ）；MC null 0.166%；預言 `m_u = 2.1498 MeV` | m_u 誤差 3.7%（FLAG 2+1+1） | 獨立 m_u 量度 <0.2–0.5%，或 sample-out blind test | M4 自持（等數據） |
-| Q2 | `R_em = Δπ/|E| = 3.479111`（em 通道算子身份） | 結構 | 🔴 | γ 比池 0.0698% 但 density **34.73%**；結構整數比 27.90% ⟹ 隨機級 | 冇 em 讀數算子（QCD+QED 混合） | 需 channel-dependent em operator；K_chain 譜池不足以辨識 | M4 自持（`docs/14` 已量化） |
-| Q3 | `E = −1.320334 MeV` 嘅譜／算子身份 | 結構 | 🔴 | 13104 族 0/13104 命中，density 4.39% | 同上（em 算子） | 同 Q2 同一解鎖點 | M4 自持 |
+| Q2 | `R_em = Δπ/|E| = 3.479111`（em 通道算子身份） | 結構 | 🔴 **blocked-by-O140** | 8 通道實證譜（`docs/18`）：四類形式全排除（電荷加性 R²=0.003、sub-count R²=0.089、spectator 獨立 spread 3.578、幂律 worst 117%）；γ 比池 density 34.73% | 需 flavour→mode 映射（= Q5 selection rule，屬 O140） | 等 O140 映射；屆時用 8 通道約束集直接檢定 operator | **O140 上游**（`docs/18` §五 5） |
+| Q3 | `E = −1.320334 MeV` 嘅譜／算子身份 | 結構 | 🔴 **blocked-by-O140** | 13104 族 0/13104、density 4.39%；K/N 通道 E 一致（−1.374／−1.267，spread 0.107）⟹ E 係 substitution-channel 常數 | 同 Q2（flavour→mode 映射） | 同 Q2 同一解鎖點 | **O140 上游**（`docs/18`） |
 | Q4 | `A = 1.64337 eV/γ²` 譜身份 | 結構 | 🔴 | 13104 族 0 命中 <0.1%，density 5.21% | A 定義鏈 `M_comp`（O66 已降級） | σ 橋算子化（O142）或 `Λ_eff` 通道（O86） | **handoff P6** |
 | Q5 | selection rule：為何揀某個 ℤ[γ₁] 元素 | 結構 | 🔴 | 全譜 ∈ ℤ[γ₁] ⟹ 比例冇自由度（`docs/10`） | 無選擇機制 | 譜強度／hop／邊界類型選擇規則 | **handoff O140** |
 | Q6 | 夸克質量 scale 語義 | 結構 | **🟡 部分閉合**（`docs/16`） | **自對偶點 μ*=m(μ*)**：重夸克 b/c 恆等成立、輕夸克 u/d/s `m/μ`=0.0026–0.113 無解 ⟹ PDG 雙重約定結構強制；**零參數 α_s 跑動** m_b 0.236%／m_c 1.680%／2GeV 1.182%（PDG 三錨點）| 質量跑動指數 d=4/7 有 6 個身份且係 SM 值；**無乾淨雙標度對** | 等 lattice 同一計算雙標度輸出（FLAG 未提供） | M4 自持（阻塞待數據） |
@@ -227,6 +228,10 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `M_EW` 指數 8 嘅「身份」（Λ²(12)／N_gen²−1／L/L₅／F₆／hop） | 🔴 反選 | `docs/15`：1/8 anchor、density 5.59%、identity 17 個冗餘、M1/M2 否證 |
 | `m_b(2 GeV) = 4.93` 作 PDG 對齊值 | 🔴 非 PDG 值 | `docs/16` §五 5：PDG 2024 只報 `m_b(m_b)=4.18`（α_s(m_b)=0.223）⟹ 只可作量級 |
 | 最小電荷 em 模型 `κ_sΣQ²+κ_xΣQ_iQ_j` | 🔴 結構否證 | `docs/17`：三通道係數自動退化 ⟹ 恆等 ΔK=−ΔN，觀測差 2.641 MeV＝125.7σ |
+| em operator「電荷加性」 | 🔴 排除 | `docs/18` C2a：E vs Δ(ΣQ²) R²=0.0026、vs ΔQ_had R²=0.0240（8 通道） |
+| em operator「substitution-count 線性」 | 🔴 排除 | `docs/18` C2b：R²=0.0894，殘差 ±3 MeV |
+| em operator「spectator 獨立」 | 🔴 部分排除 | `docs/18` C2c：baryon spread 3.578 MeV（A 組 K/N 一致 0.107） |
+| em operator「單一標度幂律」 | 🔴 排除 | `docs/18` C2d：worst dev 117.4% |
 
 ### 11.3 三軸判讀紀律（本 M 統一）
 
@@ -293,3 +298,4 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | 結構檢查 | 16/16 H1／前設問題（docstring 原文）／事前判準／結論報告；0 斷鏈；README 0 違規 |
 | `docs/16` 審計修正 | ① 跑動公約首版寫 β₁/(4π²) 且 n_f(M_Z)=6 → 對 PDG dev 9.4%；改 β₁/(8π²)、n_f(M_Z)=5 後 dev 0.236%（公約由 T1 驗證，非擬合）；② `run_mass` 分段首版反向排序 bug → m_s(1GeV) 假 77.45 MeV（實際應升）；修後 112.79 MeV；③ T2 首版用同步積分遇 Landau pole 爆炸 → 改分段冪律、掃描域 [1,2] GeV |
 | `docs/17` 審計發現 | 首版 `exch_sum` 用 `int(w*2)` 令權重 1 變 2 → 交換和錯（π+ 應 −2/9，實 −1/3）；改精確 `Fraction` 逐強子列係數後，模型自帶約束 `ΔK+ΔN=0` 才顯露 ⟹ 由 fit 改為結構否證 |
+| `docs/18` 審計發現 | 首版 K 通道 X 係數用 +1（Δ K = m_K+−m_K0 應為 −1）⟹ E_K 假 −6.494、spectator 判詞假「排除」；修正後 E_K=−1.374 與 E_N=−1.267 一致（H1 再證）。此係真 bug，已修並重跑 |
