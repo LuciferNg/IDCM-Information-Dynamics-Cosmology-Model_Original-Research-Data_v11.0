@@ -6,7 +6,7 @@
 已確立：差值閉合力學（Δm²+R 直出譜，唔經 M_comp）＋ K_chain 譜代數（γ_n = 2−2T_n(c)，全譜 ∈ ℤ[γ₁]）。
 攻堅路線：全費米子單點譜比（已全滅，density 閘）、lattice 精度重判（span≈12 升部分閉合）、A 譜身份（開放）。
 
-詳見 `01_problem_record.md`／`SESSION_START.md`／`docs/13_script13_mdmu_second_instance.md`。
+詳見 `01_problem_record.md`／`SESSION_START.md`／`docs/13_mdmu_second_instance.md`。
 
 ## 檔案
 

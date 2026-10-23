@@ -64,7 +64,7 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 2. **R2 γ₁↔γ₆ 橋**：γ₆/γ₁=35.47≈?、γ₁ᵏγ₆ˡ·A 混合、γ₁ 階梯 log 等距 2.29279 身份（事前定義族＋density 閘）
 3. **R3 lattice 高精度值**：FLAG 2024 m_u/m_d/m_s 代入 span/比掃描（誤差收窄 10 倍後重判）
 4. **R4 A 譜身份**：A=1.64044 eV/γ² 唔靠 M_comp 嘅譜讀數形式（v²/M_comp→γ 純量重寫）
-5. **R5 報告文檔**：docs/01–08 承接定案／docs/09_script09_density_gate.md 掃描全滅判決／docs/10_script10_gamma1_gamma6_bridge.md GUT 錨分層
+5. **R5 報告文檔**：docs/01–08 承接定案／docs/09_density_gate.md 掃描全滅判決／docs/10_gamma1_gamma6_bridge.md GUT 錨分層
 6. 完成後決定 close 定開子題
 
 ## 五、交接/依賴
