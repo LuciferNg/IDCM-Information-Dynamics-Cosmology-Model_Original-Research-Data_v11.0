@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "script": "17_em_decomposition",
+    "date": "2026-10-24",
+    "seed": 20261032
+  },
+  "data": {
+    "dpi": 4.59359,
+    "dK": -3.934,
+    "dN": 1.293331,
+    "X_lattice": 2.56,
+    "sigma_lattice": 0.094
+  },
+  "M1": {
+    "X": 2.6136655,
+    "z": 0.5709095744680867,
+    "verdict": "ok"
+  },
+  "M2": {
+    "coef": {
+      "π+": [
+        "5/9",
+        "-2/9"
+      ],
+      "π0": [
+        "5/9",
+        "5/18"
+      ],
+      "K+": [
+        "5/9",
+        "-2/9"
+      ],
+      "K0": [
+        "2/9",
+        "1/9"
+      ],
+      "p": [
+        "1",
+        "0"
+      ],
+      "n": [
+        "2/3",
+        "-1/3"
+      ]
+    },
+    "aP": [
+      "0",
+      "-1/2"
+    ],
+    "aK": [
+      "1/3",
+      "-1/3"
+    ],
+    "aN": [
+      "-1/3",
+      "-1/3"
+    ],
+    "model_constraint": "ΔK + ΔN = 0 (identity)",
+    "observed_sum": -2.640669,
+    "violation_sigma": 125.74614282150051,
+    "verdict": "structurally_falsified"
+  },
+  "M3": {
+    "r_lo": 0.9407137224409465,
+    "r_hi": 1.2518451498248864,
+    "r_center": 1.0847348439094981,
+    "r1_inside": true,
+    "note": "M2 falsified ⟹ r_pred undefined"
+  },
+  "M4": {
+    "p_random_hit": 0.00412
+  },
+  "M5": {
+    "verdict": "weak_structural_reason_not_derivation"
+  }
+}
