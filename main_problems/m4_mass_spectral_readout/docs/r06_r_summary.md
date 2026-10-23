@@ -1,4 +1,4 @@
-# M4 docs/06 — R1–R4 總結：derived-vs-not ＋ 結構化 gap (2026-10-24)
+# M4 docs/r06 — R1–R4 總結：derived-vs-not ＋ 結構化 gap (2026-10-24)
 
 > 本 session 完成：閘重建（R1）＋ density 統一（R1-corr）＋ 結構橋（R2）＋ lattice 重判（R3）＋ A 攻堅（R4）
 > 未 close（維持 partial）：剩 2 個 🟡 開放（span≈12 預言待精度、m_d/m_u 候選待第二實例）

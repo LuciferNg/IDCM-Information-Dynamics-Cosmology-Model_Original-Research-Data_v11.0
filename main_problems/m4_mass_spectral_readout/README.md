@@ -6,17 +6,23 @@
 已確立：差值閉合力學（Δm²+R 直出譜，唔經 M_comp）＋ K_chain 譜代數（γ_n = 2−2T_n(c)，全譜 ∈ ℤ[γ₁]）。
 攻堅路線：全費米子單點譜比（已全滅，density 閘）、lattice 精度重判（span≈12 升部分閉合）、A 譜身份（開放）。
 
-詳見 `01_problem_record.md`／`SESSION_START.md`／`docs/06_r_summary.md`。
+詳見 `01_problem_record.md`／`SESSION_START.md`／`docs/r06_r_summary.md`。
 
 ## 檔案
 
 | 檔案 | 描述 | 狀態 |
 |:----|:-----|:----:|
-| `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九） | 部分閉合 |
+| `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十） | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 推導記錄（6 檔：01–06） | 部分閉合 |
+| `docs/` | 19 檔：`01–13` = 逐腳本記錄（前設問題＋結論報告）、`r01–r06` = 輪次報告 | 部分閉合 |
 | `scripts/` | 計算腳本（13 檔：01–08 遷入、09–13 新增） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（18 檔） | 部分閉合 |
+| `data/` | stdout log ＋ JSON（14 log ＋ 4 JSON） | 部分閉合 |
+
+## 編號規則
+
+- `docs/NN_scriptNN_<slug>.md`：**一對一**對應 `scripts/NN_<slug>.py`（NN = 01…13），內含「前設問題（腳本 docstring）＋ 事前判準 ＋ 執行記錄 ＋ 結論報告」
+- `docs/rNN_<slug>.md`：輪次報告（r01 = R1 閘重建、r02 = density 統一、r03 = 橋、r04 = lattice 重判、r05 = A 身份、r06 = 總結）
+- 所有腳本一律「假設從未執行過」重跑：canonical run log 存 `data/run_NN_<slug>.log`（附 sha256）
 
 ## 依賴
 

@@ -1,4 +1,4 @@
-# M4 docs/01 — R1 推導鏈重建（8 支遷入 scripts 逐支驗證）(2026-10-24)
+# M4 docs/r01 — R1 推導鏈重建（8 支遷入 scripts 逐支驗證）(2026-10-24)
 
 > 狀態：🟢 閘通過（8/8 跑通）＋ 🟡 兩項誠實修正（01 crash、05 MC protocol 不一致）
 > 腳本：`scripts/01_quark_scan.py` … `scripts/08_span_12_judge.py`（原 8 支，未改計算內容）
@@ -62,7 +62,7 @@ backup：`~/.hermes/backups/scripts__01_quark_scan.py.v22pre.20261024_045821`。
 - 三支腳本 MC 準則互不可比：02 族級 thr 0.1%（質量域）→97.9%；04 單比 thr 0.05%→16.8%；
   05 單比 thr 0.1%（差比域）→43.3%
 - **結論**：05 嘅「density 殺」裁定**不變**（43.3% > 8.7% ⟹ 更強否定），但記錄數字係**不可復現嘅舊 protocol**。
-  統一 protocol 見 `docs/02_density_unified.md`（`scripts/09_density_gate.py`）：
+  統一 protocol 見 `docs/r02_density_unified.md`（`scripts/09_density_gate.py`）：
   以 **命中自身 dev** 做 thr、以受測比值域做 null 域 ⟹ n−p/m_e 命中 PN = **30.98%** 🔴
 
 ---

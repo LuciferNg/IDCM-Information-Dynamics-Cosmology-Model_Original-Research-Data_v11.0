@@ -1,8 +1,8 @@
-# M4 docs/02 — Density 閘統一 protocol：全費米子譜比掃描嘅形式化判決 (2026-10-24)
+# M4 docs/r02 — Density 閘統一 protocol：全費米子譜比掃描嘅形式化判決 (2026-10-24)
 
 > 狀態：🔴 夸克／輕子／hadron 全部命中 = 隨機級（單一 protocol 重判）
 > 腳本：`scripts/09_density_gate.py` → `data/09_density_gate.json`
-> 上游問題：`docs/01` §三（三 sector 三 protocol，數字互不可比）
+> 上游問題：`docs/r01` §三（三 sector 三 protocol，數字互不可比）
 
 ---
 
