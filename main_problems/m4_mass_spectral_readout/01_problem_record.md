@@ -168,6 +168,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `13_mdmu_second_instance.py` | `docs/13_mdmu_second_instance.md` | `run_13_mdmu_second_instance.log` `60364add23b2` | 259 ms / 40 行 | 🔴 11/5 降級（密度解釋）|
 | `14_double_probe.py` | `docs/14_double_probe.md` | `run_14_double_probe.log` `8fd73580bdc5` | 43 行 | 🔴 R_em 密度殺（34.73%）；🔴 E 0/13104；反相=恆等還原；🟡 m_d−m_u 反解 2.6137（0.57σ）|
 | `15_exponent8.py` | `docs/15_exponent8.md` | `run_15_exponent8.log` `2385fc190075` | 81 行 | 🔴 指數 k=8 反選確認（1/8 anchor; density 5.59%; identity 冗餘 17 個）|
+| `16_scale_operator.py` | `docs/16_scale_operator.md` | `run_16_scale_operator.log` `70bfe7983a82` | 41 行 | 🟢 零參數 α_s 跑動（m_b 0.236%／m_c 1.680%／2GeV 1.182%）；🟡 scale 語義=自對偶點二分；🔴 指數數值檢定阻塞 |
 
 **編號重排說明（append-only）**：本 session 早前建立嘅 6 份輪次報告原為 `docs/01–06`，與「docs/NN ↔ scripts/NN」規則衝突；
 2026-10-24 調律者指令「只保留 01–13」⟹ 輪次報告**內容全部併入對應腳本文檔後刪檔**（合併位置見下表），
@@ -205,7 +206,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | Q3 | `E = −1.320334 MeV` 嘅譜／算子身份 | 結構 | 🔴 | 13104 族 0/13104 命中，density 4.39% | 同上（em 算子） | 同 Q2 同一解鎖點 | M4 自持 |
 | Q4 | `A = 1.64337 eV/γ²` 譜身份 | 結構 | 🔴 | 13104 族 0 命中 <0.1%，density 5.21% | A 定義鏈 `M_comp`（O66 已降級） | σ 橋算子化（O142）或 `Λ_eff` 通道（O86） | **handoff P6** |
 | Q5 | selection rule：為何揀某個 ℤ[γ₁] 元素 | 結構 | 🔴 | 全譜 ∈ ℤ[γ₁] ⟹ 比例冇自由度（`docs/10`） | 無選擇機制 | 譜強度／hop／邊界類型選擇規則 | **handoff O140** |
-| Q6 | 夸克質量 scale 語義（running mass probe-dependent） | 結構 | 🔴 | `m_b(m_b)=4.18` vs `m_b(2GeV)=4.93`；差值閉合「讀數本質」✅ 但 scale 無結構理由 | 無 scale 選擇算子 | 需 scale 算子（Λ 唯一標度框架） | M4／O85 Λ 框架 |
+| Q6 | 夸克質量 scale 語義 | 結構 | **🟡 部分閉合**（`docs/16`） | **自對偶點 μ*=m(μ*)**：重夸克 b/c 恆等成立、輕夸克 u/d/s `m/μ`=0.0026–0.113 無解 ⟹ PDG 雙重約定結構強制；**零參數 α_s 跑動** m_b 0.236%／m_c 1.680%／2GeV 1.182%（PDG 三錨點）| 質量跑動指數 d=4/7 有 6 個身份且係 SM 值；**無乾淨雙標度對** | 等 lattice 同一計算雙標度輸出（FLAG 未提供） | M4 自持（阻塞待數據） |
 | Q7 | `M_EW = M_Pl γ₁⁸ N_d`（0.8051%） | 結構 | **🔴 指數反選確認**（2026-10-24 `docs/15`） | 8 anchor 中只有 v 嘅 best k = 8（Λ/M₀ 皆 9）；`k_mech = 7.2817 ≠ 8` ⟹ M1 否證；M2 唔支持；8 有 17 個 identity（rank 2/30）⟹ 冗餘；density **P1 5.59%** | 無機制；族對 Λ 只到 37.5% | 需全新機制（非 identity 拼湊）⟹ **現階段判死，唔重推** | M4（已封閉；O59 另議） |
 | Q8 | `m_d−m_u` 反解 2.6137 MeV（0.57σ） | 半結構 | 🟡 premise | 依賴 `E_K = E_N`（未推導）；dev 2.10% 未過事前 <1% | premise 未由 K_chain 導出 | 推導「K/N 同 |ΔQ| 通道 ⟹ em 相同」 | M4 自持（`docs/14`） |
 
@@ -223,6 +224,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | 反相「需要雙通道算子」 | 🔵 恆等還原 | `docs/14` §五 3：`E` 定義式 |
 | `R_em`／`E` 譜形式 | 🔴 密度殺 | `docs/14`：34.73%／4.39% |
 | `M_EW` 指數 8 嘅「身份」（Λ²(12)／N_gen²−1／L/L₅／F₆／hop） | 🔴 反選 | `docs/15`：1/8 anchor、density 5.59%、identity 17 個冗餘、M1/M2 否證 |
+| `m_b(2 GeV) = 4.93` 作 PDG 對齊值 | 🔴 非 PDG 值 | `docs/16` §五 5：PDG 2024 只報 `m_b(m_b)=4.18`（α_s(m_b)=0.223）⟹ 只可作量級 |
 
 ### 11.3 三軸判讀紀律（本 M 統一）
 
@@ -286,4 +288,5 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `docs/14` 單位核實 | 8 anchor 全部 MeV（1 eV = 1e-6 MeV）⟹ 無單位混用（首輪懷疑屬誤報，已在腳本註釋更正） |
 | `docs/15` 判準修正 | T5 判準首版寫成「排名前 3 ⟹ 罕有」（方向錯），按 intent 改為「identity 數 ≥ 中位數 ⟹ 冗餘」並重跑；T6 加離散度 std 判別力檢查 |
 | 文檔數 | `docs/` 15 檔、`scripts/` 15 支、`data/` 17 log（含審計）＋ 6 JSON |
-| 結構檢查 | 15/15 H1／前設問題（docstring 原文）／事前判準／結論報告；0 斷鏈；README 0 違規 |
+| 結構檢查 | 16/16 H1／前設問題（docstring 原文）／事前判準／結論報告；0 斷鏈；README 0 違規 |
+| `docs/16` 審計修正 | ① 跑動公約首版寫 β₁/(4π²) 且 n_f(M_Z)=6 → 對 PDG dev 9.4%；改 β₁/(8π²)、n_f(M_Z)=5 後 dev 0.236%（公約由 T1 驗證，非擬合）；② `run_mass` 分段首版反向排序 bug → m_s(1GeV) 假 77.45 MeV（實際應升）；修後 112.79 MeV；③ T2 首版用同步積分遇 Landau pole 爆炸 → 改分段冪律、掃描域 [1,2] GeV |

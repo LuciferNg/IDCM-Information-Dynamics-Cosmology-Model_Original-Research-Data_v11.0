@@ -102,7 +102,7 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 **R4（A 身份）🔴**：A = 1.64337 eV/γ²（v_SM；v=246 版 1.64044）；族 13104 組合 0 命中 <0.1%，密度 5.21%
 ⟹ 唔可辨識；M_comp 反解 = 3.689e13 GeV（近整數無身份）。
 
-**產物**：`docs/01–15`（15 檔逐腳本記錄，2026-10-24 **全文重寫 v2**：前設問題（docstring 原文）＋事前判準＋執行＋原始輸出＋結論）、`scripts/01–15`（15 支全部 fresh-run exit 0；13/13 byte-identical 審計）、`data/`（17 log ＋ 6 JSON ＋ `audit_20261024/`）、`01_problem_record.md` §十一（開放問題 Q1–Q8）／§十二（審計記錄）、register `progress` ＋ 2 個 handoff。
+**產物**：`docs/01–16`（16 檔逐腳本記錄，2026-10-24 **全文重寫 v2**：前設問題（docstring 原文）＋事前判準＋執行＋原始輸出＋結論）、`scripts/01–16`（16 支全部 fresh-run exit 0；13/13 byte-identical 審計）、`data/`（18 log ＋ 7 JSON ＋ `audit_20261024/`）、`01_problem_record.md` §十一（開放問題 Q1–Q8）／§十二（審計記錄）、register `progress` ＋ 2 個 handoff。
 **編號規則（2026-10-24）**：`docs/NN` ↔ `scripts/NN`（一對一）；輪次／閘報告唔另立檔，一律併入對應腳本文檔（歷史映射見 `01_problem_record.md` §十）；register 舊 ref 由 `REF_PATH_FIX` 翻譯層處理。
 
 **下一 session 接點**：

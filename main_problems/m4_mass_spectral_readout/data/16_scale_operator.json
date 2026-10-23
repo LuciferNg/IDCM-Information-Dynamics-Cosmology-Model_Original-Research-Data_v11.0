@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "script": "16_scale_operator",
+    "date": "2026-10-24",
+    "alpha_MZ": 0.117985,
+    "nf": 6
+  },
+  "S0": {
+    "C_F": 1.3333333333333333,
+    "gam0": 8.0,
+    "d_exponent": 0.5714285714285714,
+    "gamma1_formula": "12 + 8n_f/9"
+  },
+  "T1": {
+    "rows": [
+      {
+        "tag": "m_b",
+        "pred": 0.22352578795641448,
+        "pdg": 0.223,
+        "err": 0.008,
+        "dev_pct": 0.23577935265222116,
+        "z": 0.0657234945518094
+      },
+      {
+        "tag": "m_c",
+        "pred": 0.37361688729219217,
+        "pdg": 0.38,
+        "err": 0.03,
+        "dev_pct": 1.6797665020546915,
+        "z": -0.21277042359359455
+      },
+      {
+        "tag": "2GeV",
+        "pred": 0.2964552298930036,
+        "pdg": 0.3,
+        "err": 0.02,
+        "dev_pct": 1.1815900356654585,
+        "z": -0.17723850534981933
+      }
+    ],
+    "alpha_3GeV": 0.25108132140395856,
+    "nf_at_2GeV": 4,
+    "max_dev_pct": 1.6797665020546915,
+    "verdict": "green"
+  },
+  "T2": {
+    "b": {
+      "mu_star": 4.18,
+      "ratio": 1.0,
+      "identity": true,
+      "note": "PDG 約定 μ=m_q ⟹ 自對偶係**恆等**（非量度結果）"
+    },
+    "c": {
+      "mu_star": 1.273,
+      "ratio": 1.0,
+      "identity": true,
+      "note": "PDG 約定 μ=m_q ⟹ 自對偶係**恆等**（非量度結果）"
+    },
+    "s": {
+      "mu_star": null,
+      "m_at_1GeV": 0.11278524908624585,
+      "ratio": 0.11278524908624585,
+      "identity": false,
+      "note": "掃描域內 f(μ)=m(μ)−μ 全負 ⟹ 無自對偶點"
+    },
+    "d": {
+      "mu_star": null,
+      "m_at_1GeV": 0.005671845395948593,
+      "ratio": 0.005671845395948593,
+      "identity": false,
+      "note": "掃描域內 f(μ)=m(μ)−μ 全負 ⟹ 無自對偶點"
+    },
+    "u": {
+      "mu_star": null,
+      "m_at_1GeV": 0.002606635330904034,
+      "ratio": 0.002606635330904034,
+      "identity": false,
+      "note": "掃描域內 f(μ)=m(μ)−μ 全負 ⟹ 無自對偶點"
+    }
+  },
+  "T3": {
+    "d": 0.5714285714285714,
+    "note": "beta0/gamma0 are SM values reproduced by O124/O85; consistency not new physics"
+  },
+  "T4": {
+    "pairs": [
+      {
+        "pair": "m_c(3 GeV) = 0.986 ± 0.013 vs m_c(m_c) = 1.2730 ± 0.0046",
+        "why_unusable": "⚠ 唔可用：3 GeV 值係 KUHN 07 四圈 sum-rule（e+e− 強子截面），m_c(m_c) 係 PDG 全球平均；唔同定定、唔同 scheme 轉換 ⟹ 純跑動比值 0.775 對比微擾預言 (α(3)/α(m_c))^{γ} 差 ~8% 以上（見 probe）"
+      },
+      {
+        "pair": "m_s(3 GeV) = 84.78 ± 0.65 vs m_s(2 GeV) = 93.46 ± 0.58",
+        "why_unusable": "⚠ 唔可用：3 GeV 值（LYTLE18+CHAKRABORTY15）屬 n_f=2+1+1，2 GeV 值屬 n_f=4 動態夸克 ⟹ 唔同理論設定"
+      },
+      {
+        "pair": "m_b(2 GeV) = 4.93 vs m_b(m_b) = 4.18",
+        "why_unusable": "⚠ 唔可用：4.93 係 docs/04 [E] 引用嘅舊式換算，PDG 2024 只報 m_b(m_b)=4.18（α_s(m_b)=0.223±0.008）"
+      }
+    ],
+    "verdict": "no_clean_two_scale_pair ⟹ numerical exponent test blocked"
+  },
+  "T5": {
+    "simple": [
+      "12/21",
+      "4/7"
+    ],
+    "multi": [
+      "γ₀/(2β₀)",
+      "6C_F/(2(L₅−B))",
+      "2B/(2(L₅−B))",
+      "B/(L₅−B)"
+    ],
+    "n": 6
+  }
+}
