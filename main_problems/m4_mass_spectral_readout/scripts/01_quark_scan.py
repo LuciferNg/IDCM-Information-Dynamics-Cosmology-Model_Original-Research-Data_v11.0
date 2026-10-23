@@ -101,23 +101,37 @@ print(f"  |dev|<1% 嘅比數: {sum(1 for d,_ in all_best_dev if d<1)}/30")
 
 # ── [C] m_q = γ_n²·A_q 讀數×譜強度 (同 m₃=γ₆²A) ──
 print("\n[C] m_q = γ_n²·A_q 讀數×譜強度形式:")
-v = 246.0  # GeV
+print("  ⚠️ 修正 (2026-10-24 R1 重建): /tmp 原版呢段用 A_q=m/γ² 嘅 44 值向量 同")
+print("     inv_g / gamma 向量做「同 index 配對」再格式化向量 ⟹ TypeError 全支 crash。")
+print("     改為 well-posed 自由 index 掃描: ∃(n,k) 使 γ_n²·c_k = m_q, c_k ∈ S ∪ {γ_k} ∪ {1/γ_k}")
 g2 = gamma**2
+cands = {}
+for i, g in enumerate(gamma, 1):
+    cands[f"γ{i}"] = g
+    cands[f"1/γ{i}"] = 1.0/g
+for k, val in S.items():
+    cands[k] = val
+cnames = list(cands)
+cvals = np.array([cands[k] for k in cnames])
+print(f"  掃描空間: 44 mode × {len(cnames)} 結構候選 = {len(cnames)*44} 組合/夸克")
 for qname, m in quarks.items():
-    Aq = m/g2  # GeV per γ² (array)
-    # 最接近結構常數/譜值嘅 A_q?
-    best = np.argmin(np.abs(Aq - inv_g))   # A ~ 1/γ
-    b1 = (inv_g[best], best+1)
-    best2 = np.argmin(np.abs(Aq - gamma))  # A ~ γ
-    b2 = (gamma[best2], best2+1)
-    # A_q ~ v²/M? M = ?
-    M_eff = (v**2)/Aq
-    best3 = np.argmin(np.abs(M_eff - gamma))
-    b3v = gamma[best3]
-    b3 = (M_eff[best3], best3+1, b3v)
-    print(f"  m_{qname} ({m:>7g} GeV): A_q=m/γ², 最優 A~1/γ{best+1}={b1[0]:.4g} (dev {abs(b1[0]/Aq-1)*100:.2f}%) | "
-          f"A~γ{best2+1}={b2[0]:.4g} (dev {abs(b2[0]/Aq-1)*100:.2f}%) | "
-          f"v²/A~γ{best3+1}={b3v:.4g} (M_eff={v**2/Aq:.4g} GeV, dev {abs(b3v/Aq-1)*100:.2f}%)")
+    dev = np.abs(g2[:, None]*cvals[None, :]/m - 1)*100
+    bi = np.unravel_index(np.argmin(dev), dev.shape)
+    Aq = m/g2
+    print(f"  m_{qname} ({m:>8g} GeV): A_q=m/γ² ∈ [{Aq.min():.3g}, {Aq.max():.3g}] GeV | "
+          f"最優 γ{bi[0]+1}²·{cnames[bi[1]]} = {g2[bi[0]]*cvals[bi[1]]:.6g} dev {dev[bi]:.4f}% | "
+          f"<0.1% 組合 {int((dev<0.1).sum())} | <1% 組合 {int((dev<1).sum())}")
+rng_c = random.Random(25711)
+NMC_C = 200
+h01 = h1 = 0
+for _ in range(NMC_C):
+    mm = 10**rng_c.uniform(np.log10(0.002), np.log10(173))
+    dv = np.abs(g2[:, None]*cvals[None, :]/mm - 1)*100
+    if dv.min() < 0.1: h01 += 1
+    if dv.min() < 1.0: h1 += 1
+print(f"  MC null ({NMC_C} 隨機夸克質量, log10∈[log10 2e-3, log10 173]): "
+      f"best<0.1% {h01/NMC_C*100:.1f}% | best<1% {h1/NMC_C*100:.1f}%")
+print("  ⟹ 密度閘: 池大到單點 <1% 命中 = 隨機級; A_q 逐夸克唔同值 ⟹ 零預言力")
 
 print("\n" + "="*40)
 print("Quark test 01 done — 見上")

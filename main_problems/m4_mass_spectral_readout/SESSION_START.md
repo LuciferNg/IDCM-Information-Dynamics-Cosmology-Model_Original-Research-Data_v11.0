@@ -3,12 +3,12 @@
 <!-- registry
 pid:     M4
 title:   質量 = 譜讀數差值：全費米子譜差閉合（差值閉合力學 v2, R7 定案承接；只開不推）
-state:   registered
+state:   partial
 verdict: -
-flags:   register-only
+flags:   running; r1-gate-pass; r2-bridge-exact; r3-lattice-rejudge; r4-negative
 owner:   M4
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-24
 prereq:  O257 + O66 + O89 + O57 + P6 + O73 + O212
 source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新session重建推導鏈及報告文檔
 -->
@@ -79,3 +79,33 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 - u/d/s 誤差 ±10%：0.01% 級「閉合」無意義
 - O89 有污染史：引用前 RAG 核證
 - scripts/01-08 由 /tmp 遷入：路徑零依賴但輸出格式要同 §一 期望值對返
+
+---
+
+## 七、2026-10-24 執行記錄（新 session 完成；§一–§六 原文不動）
+
+**閘（§一）**：8/8 跑通；7/8 逐位吻合；**01 首跑 crash**（[C] 段 TypeError，/tmp 原版 bug）→ well-posed 修復後
+[0]/[A]/[B] 60 行 byte-identical；**05 MC null = 43.3%（記錄 8.7% 不可復現）** ⟹ 統一 protocol 取代。
+
+**R2（γ₁↔γ₆ 橋）🟢 已解**：`γ_n = 2−2T_n(c)`、`γ_{n+1} = 2cγ_n − γ_{n−1} + 2γ₁`（sympy 精確）；
+γ₆/γ₁ = `32c⁵+32c⁴−16c³−16c²+2c+2` = 35.467845…，最小多項式 **degree 20**（ℚ(ζ₈₈)⁺ 本原元）
+⟹ 橋唔缺常數、亦冇「≈35.47 簡單數」身份。`log10(1/γ₁)=2.29279` 係定義式。
+**O89 三階梯核證 = 🔴 不可引用**（O85 docs/01/02/06：「GUT/PS/R 階梯唔存在，舊污染已刪」）。
+
+**R3（lattice）**：FLAG 2024 實档（arXiv:2411.04268 PDF 直讀 Table 1/12）：
+- `c/s=γ20/γ5` 🔴（2+1+1 dev 0.11%／2+1 1.03%，PN 78.75%）
+- `s/d=20 EXACT` 🔴（19.8866±0.2452 = 0.46σ，但 PN 99.69%）
+- **`span_Q/span_ν = 12` 🔴→🟡**：R=12.0055±0.0399（0.14σ）；**預言 m_u = 2.1498 MeV**
+- 新 🟡：`m_d/m_u = 11/5 = 2.19929±0.08605`（dev 0.032%，密度 P1 1.85%，後驗）
+
+**R4（A 身份）🔴**：A = 1.64337 eV/γ²（v_SM；v=246 版 1.64044）；族 13104 組合 0 命中 <0.1%，密度 5.21%
+⟹ 唔可辨識；M_comp 反解 = 3.689e13 GeV（近整數無身份）。
+
+**產物**：`docs/01–06`（6 檔）、`scripts/09–12`（4 支）、`data/`（17 檔 log+JSON）、register `progress` ＋ 2 個 handoff。
+
+**下一 session 接點**：
+1. **🟡 span≈12**：等獨立 m_u <0.5% 量度（FLAG 2025 更新宣稱改善 50–60% 仍不足）；預言 m_u=2.1498 MeV 已登記
+2. **🟡 m_d/m_u = 11/5**：需第二實例（另一 flavour 比 = 相鄰整數比）＋ 事前預註冊，否則維持後驗
+3. **🔴 A 身份**：已 handoff P6（需 σ 橋算子化 O142 或 Λ_eff 通道 O86）
+4. **selection rule**（為何選某個 ℤ[γ₁] 元素）：已 handoff O140
+5. 本 M **唔 close**（partial；剩餘項屬觀測精度 + 他 O 產權）
