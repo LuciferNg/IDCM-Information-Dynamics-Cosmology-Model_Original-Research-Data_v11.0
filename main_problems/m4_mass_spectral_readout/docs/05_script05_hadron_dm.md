@@ -1,8 +1,8 @@
-# M4 docs/05 — `scripts/05_hadron_dm.py`：前設問題與結論報告
+# M4 docs/05 — hadron 質量差（π⁺−π⁰／n−p／K⁺−K⁰／m_d−m_u）vs 譜池
 
-> 腳本：`scripts/05_hadron_dm.py`｜log：`data/run_05_hadron_dm.log`（sha256 `86cc1139fb5f44e919a60f155f70c22f1d46d9fda6040834a35f3c4e4e9baeee`，36 行）
+> 腳本：`scripts/05_hadron_dm.py`｜log：`data/run_05_hadron_dm.log`（sha256 `86cc1139fb5f…`，36 行）
 > Canonical run（2026-10-24 05:34）：exit 0，**116 ms**，36 行
-> 狀態：🔴 差比／差絕對值命中全判隨機級；✅ em/strong 反相 observation（結構線索）
+> 狀態：🔴 差比／差絕對值命中全判隨機級；✅ em/strong 反相（結構線索）
 
 ## 一、前設問題
 
@@ -10,20 +10,32 @@
 hadron 質量差測試 01 — 數據表 + 事前掃描
 調律者 framing: 質量 = 駐波態之間交互嘅同步邊界譜讀數差值
 ⟹ hadron 質量差 (π⁺−π⁰, n−p, K⁺−K⁰, D, B, m_d−m_u) 先係名副其實嘅「譜差讀數」。
-物理層: π⁺−π⁰ = +4.5936 MeV (em self-energy) ; n−p = 1.2933 MeV (strong+em)
-        K⁺−K⁰ = −3.937 MeV (電磁 vs u−d 反相) ; m_d−m_u ≈ 2.3 MeV (isospin, ~10%)
+物理層:
+  π⁺−π⁰ = +4.5936 MeV — 主要電磁 self-energy (photon probe 讀數差)
+  n−p    = 1.2933 MeV — d−u 質量差 + 電磁 (strong sync boundary)
+  K⁺−K⁰ = −3.937 MeV  — 電磁 vs u−d 反相!
+  m_d−m_u ≈ 2.3 MeV   — isospin breaking (uncertainty ~10%)
 協議 (事前定義, 唔准見 target 反揀):
-  [A] 差比 Δm_i/Δm_j vs γ比池 ; [B] 絕對差 Δm vs γ_n × A_scale ; [C] 差組合 (Σ/差) 對結構池
+  [A] 質量差比 Δm_i/Δm_j vs γ比池 (同 R7 A 族)
+  [B] 絕對質量差 Δm vs γ_n × A_scale (A ∈ {m_e, f_π, Λ, v/1000...})
+  [C] 質量差組合 (Σ/差) 對結構池
 ```
 
 ## 二、事前判準
 
-- [A] γ 比池（a,b ∈ 1..44）；MC `NMC = 3000`，域 = 差比實際範圍
-- [B] 標度候選事前固定：`{m_e, 2m_e, 10m_e, f_π(=130 MeV)/30, Λ_QCD/100, v/1e5}`
-- [C] `Δm/m_e` 對 γ 比池
-- 判定：MC null > 5% ⟹ 隨機級
+- **[A]** 差比進 γ 比池（1936 值）；MC null 用差比域、單比級 thr 0.1%
+- **[B]** 標度候選事前寫死：`{m_e, f_π, Λ_QCD, v/1e5, m_e×2, f_π/28}` × 44 mode
+- **[C]** 組合形式 `Δm/m_e` 對 `γ_a·γ_b` 池
+- **判定**：`|dev| < 0.1%` 為命中；命中必須過 density（MC null），dev 再細都唔例外
 
-## 三、原始輸出要點
+## 三、執行記錄
+
+| 項 | 結果 |
+|:--|:--|
+| Canonical run | exit 0，116 ms，36 行 |
+| 閘核對（原 docs/r01 §一） | 期望「n−p/m_e γ29/γ16 dev 0.0195%（density 殺）」；實跑 dev **0.0195%**、MC null **43.3%**（記錄寫 8.7%，見 §四）⟹ 🟡（數字對、記錄 protocol 錯） |
+
+## 四、原始輸出要點
 
 | 段 | 結果 |
 |:--|:--|
@@ -33,37 +45,27 @@ hadron 質量差測試 01 — 數據表 + 事前掃描
 | [C] | `Δm/m_e`：π−π0/γ3·γ1 dev 0.2223%、**n−p/γ29·γ16 dev 0.0195%**、K/γ37·γ10 0.2205%、d−u/γ35·γ13 0.1719% |
 | [D] | 反相結構：`π⁺−π⁰ > 0`（em +）；`K⁺−K⁰ < 0`（u<d 拉輕，克服 em）⟹ em 與 strong-isospin 反相 |
 
-## 四、結論報告
+## 五、MC null protocol 取證（8.7% 記錄 vs 43.3% 實跑）
 
-1. **[A] 43.3% MC null（canonical 實跑值）**：`|dev|` 細至 0.0118% 都係隨機級 —— 因為差比域窄（0.56–3.55），γ 池 1936 值在窄域內密度極高。
-   **附註（append-only 更正）**：舊記錄寫 8.7%，係**另一個 protocol**（域 1–10、thr 0.015%），唔可由現存腳本復現 ⟹ 以 43.3% 為準（見 `docs/01–08` §三、`docs/09_script09_density_gate.md` §二）。
-2. **[C] 最細 dev 0.0195%（n−p/m_e ≈ γ29/γ16）** 用統一 protocol（thr = 自身 dev 0.0195%、域 = 4 個受測比）重判 ⟹ **PN = 30.98%** ⟹ 隨機級 🔴。
-3. **[B] 標度族**：6 個標度 × 44 mode 全部 > 0.5% ⟹ 絕對差冇結構式（且標度候選本身係事前列出，仍 0 命中）。
-4. **[D] 唯一 ✅ 結構 observation（非掃描）**：em 與 strong-isospin 反相（π vs K 符號相反）⟹ 係「雙 probe 讀數差」嘅真實物理簽名，需要 QCD+QED 混合讀數算子才能形式化（本 M 未解，登記為 gap G5）。
-5. **判定 🔴**（數值閉合）；**🟡**（反相結構線索，屬新方向）。
+| 項 | 記錄（01_problem_record §2.4） | 遷入腳本實跑 | docstring 聲稱 |
+|:--|:--|:--|:--|
+| MC null（γ 比池命中） | **8.7%** | **43.3%** | 「隨機質量差對 (0.5..6 MeV log-均勻)」 |
 
-## 五、關係
+- 腳本碼用域 `log10(0.1)…log10(10)`、thr 0.1%；docstring 寫 0.5–6 MeV ⟹ **碼／文檔不一致**
+- 網格掃（lo×hi×thr×單比/族級，3000 MC × 168 組）：域 0.1–10 / thr 0.015% 給 8.7%；域 0.5–6 / thr 0.1% 給 **55.2%** ⟹ 8.7% 唔可以由現存腳本唯一復現（係另一版本嘅 protocol）
+- 三支腳本 MC 準則互不可比：02 族級 thr 0.1%（質量域）→ 97.9%；04 單比 thr 0.05% → 16.8%；05 單比 thr 0.1%（差比域）→ 43.3%
+- **裁定**：05 嘅「density 殺」**不變**（43.3% > 8.7% ⟹ 更強否定），但舊記錄數字屬**不可復現嘅 protocol**；統一 protocol 見 `docs/09` ⟹ 本支 `(n−p)/m_e` 命中 PN = **30.98%** 🔴
 
-- → `06`（hop 探測，同數據）、`09`（統一 PN 30.98%）
-- 文檔：`docs/09_script09_density_gate.md` §三（hadron 兩 sector PN）、`docs/13_script13_mdmu_second_instance.md` G5
+## 六、結論報告
 
----
+1. **[A] 43.3% MC null（canonical 實跑值）**：`|dev|` 細至 0.0118% 都係隨機級 —— 差比域窄（0.56–3.55），1936 值池在窄域內密度極高。
+2. **[C] 最細 dev 0.0195%（n−p/m_e ≈ γ29/γ16）** 用統一 protocol（thr = 自身 dev、域 = 4 個受測比）重判 ⟹ **PN = 30.98%** ⟹ 隨機級 🔴。
+3. **[B] 標度族**：6 標度 × 44 mode 全部 > 0.5% ⟹ 絕對差冇結構式（標度候選事前列出仍 0 命中）。
+4. **[D] 唯一 ✅ 結構 observation**：em 與 strong-isospin 反相（π vs K 符號相反）⟹ 真實物理簽名，需 QCD+QED 混合讀數算子才能形式化（本 M 未解 ⟹ gap G5）。
+5. **判定**：🔴（數值閉合）；🟡（反相結構線索）。
 
-## 六、閘核對 — 原 docs/r01 §一「閘結果（期望值 vs 實跑）」
+## 七、與其他腳本／O 的關係
 
-> 8 支閘表全文（含 01 [C] bug 取證、05 MC protocol 不符、新增知識）照錄於 `docs/01` §七 附錄（原 docs/r01 §一–§四）。
-
-> 閘 = 遷入 scripts 逐支重跑，同 SESSION_START §一 期望值對照。本支結果：
-
-| 期望 | 實跑 | 判 |
-|:--|:--|:--|
-| n−p/m_e γ29/γ16 0.0195%（density 殺） | Δm(n−p)/m_e = 2.53092 → γ29/γ16 = 2.530426 **dev 0.0195%**；MC null **43.3%**（記錄 8.7% 不可復現，見 §七） | 🟡 |
-
-**閘判**：8 支全部跑通；7 支逐位吻合；01 首跑 crash（腳本 bug，非物理，見 `docs/01` §七）；05 MC 數字與記錄不符（見 `docs/05` §七）。
-
----
-
-## 七、F2（MC protocol 不符）全文位置
-
-本項取證明細（8.7% vs 43.3%、168 組網格掃、docstring 不一致）已照錄於 `docs/01` §七 附錄（原 docs/r01 §三）。
-本支 canonical MC null = **43.3%**；統一 protocol 重判 `(n−p)/m_e` PN = **30.98%**（見 `docs/09` §六）。
+- ← `docs/03`（夸克形式失敗 → 改測差值）
+- → `docs/06`（雙 probe 讀數差）、`docs/09`（統一 density）
+- → `docs/13` §三 gap G5（雙 probe 算子）
