@@ -175,6 +175,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | `20_identifiability.py` | `docs/20_identifiability.md` | `run_20_identifiability.log` `1cac9a0d3b8c` | 33 行 | 🔴 質量比精度對各族不足（12–1772×）；🟡 em 精度對 F4 已足夠（0×）⟹ 質量=精度瓶頸、em=概念瓶頸 |
 | `21_upstream_verification.py` | `docs/21_upstream_verification.md` | `run_21_upstream_verification.log` `ae45045aeb7d` | 43 行 | ✅ O142 十項全核／O124 41.2σ／O85 R² 0.310001 精確重現；🔴 Q2/Q3/Q8 群論＋Cartan 雙 no-go、Q4 σ 橋關閉；★真缺口＝強子束縛態譜 |
 | `22_o216_o86_verification.py` | `docs/22_o216_o86_verification.md` | `run_22_o216_o86_verification.log` `01efc23eccb2` | 57 行 | ✅ O216 判決（41.5σ）／O86 五項全核；★P6 鏈 m1/m2 反解 n 非整數（4.7283／4.8245）；🔴 Q2/Q3 六路線全封、Q4 數值側終結（算子身份→O86/N8） |
+| `23_full_audit.py` | `docs/23_full_audit.md` | `run_23_full_audit.log` `2891395a5437` | 35 行 | ✅ 全量審計 22 支：重跑 22/22 byte-identical、docstring 22/22、JSON 14/14、違規 0；修 3 項（`14` log stale、`12`/`13` §一 節錄）|
 
 **編號重排說明（append-only）**：本 session 早前建立嘅 6 份輪次報告原為 `docs/01–06`，與「docs/NN ↔ scripts/NN」規則衝突；
 2026-10-24 調律者指令「只保留 01–13」⟹ 輪次報告**內容全部併入對應腳本文檔後刪檔**（合併位置見下表），
@@ -305,6 +306,22 @@ P6 宣稱 `m_ν = A·γ_n²`（`A = 1.64337 eV`），並定案 m₁/₂/₃ = 0.
 - 鏈形式診斷（M4 `docs/22` §四）：宣稱形式 p=2 最佳 A 一致性 spread **3.17%**；p=1 為 1.22%；p=0.5 可達 0.338%（n=(11,12,39)）**但係 3 個自由整數對 3 個數 ⟹ 不可證偽**
 - ⟹ **鏈形式無法由自身三個數驗證**；需 P6 交代 m₁/m₂ 實際生成式（或承認係擬合）
 - 狀態：M4 內**禁推**（屬 P6 守備範圍）；只 register 發還
+
+### 12.12 全量審計（2026-10-24，`docs/23`；調律者指示先審後推）
+
+| 檢查 | 範圍 | 結果 |
+|:--|:--|:--|
+| T1 重跑 byte-identical | scripts 01–22（臨時目錄重跑，不污染 canonical）| **22/22 ✅** |
+| T1 JSON 語義 | `data/*.json` ×14 | **14/14 ✅** |
+| T2 docstring ↔ docs §一 | docs 01–22 | **22/22 ✅**（修 `12`／`13` 節錄）|
+| T3 數字回溯 | docs 全部 ≥3 位數字 | meta 68／external 264／pending 122（90 運算式復算、32 跨文檔或外部，逐項對照）⟹ **零無源數字** |
+| T4 結構／計數 | H1、前設問題、事前判準、結論報告；README 計數 | 22/22 ✅；計數更新後 docs 23／scripts 23／log 24／JSON 14 |
+
+**修復（全部 append-only 附註，原文不動）**
+1. `data/run_14_double_probe.log` 第 32 行標題為舊版文字（其餘行與數值完全相同）⟹ 以實跑輸出重生成。
+2. `docs/12`／`docs/13` §一 block 係節錄 ⟹ 換成 docstring 全文逐字。
+3. 審計腳本自身：首版自審遞歸（exit 1）＋首版 T3 字面回溯誤報年份/seed/sha ⟹ 排除自身、改三桶＋運算式復算。
+
 
 ## 十二、審計記錄（2026-10-24；13→14 支 ＋ 13→14 文檔）
 

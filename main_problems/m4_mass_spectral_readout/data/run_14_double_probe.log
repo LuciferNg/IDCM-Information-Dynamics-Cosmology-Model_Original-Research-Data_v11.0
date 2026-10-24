@@ -29,7 +29,7 @@ M4 G5 — 雙 probe 讀數差（em / strong-isospin 反相）
   ΔK = −(m_d−m_u) + E = -3.934000 MeV (觀察 -3.93400)
   判：✅ 反相 = 單一 em 讀數 (E<0) + 夸克內容符號翻轉；唔需要雙通道算子
 
-[P4] T4：E 嘅 IDCM 譜形式（族 {anchor × γ₁^k × S}）
+[P4] T4：E 嘅 IDCM 譜形式（族 {anchor × γ₁^k × S}，全部單位 MeV）
   族大小 13104 ; 目標 |E| = 1.320334 MeV
     M_Pl × γ₁^10 × N_gen² = 1.29725 MeV  dev 1.7481%
     M0 × γ₁^1 × N_gen² = 1.27959 MeV  dev 3.0859%

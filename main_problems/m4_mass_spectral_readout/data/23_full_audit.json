@@ -1,0 +1,558 @@
+{
+  "meta": {
+    "script": "23_full_audit",
+    "date": "2026-10-24",
+    "python": "/usr/bin/python3",
+    "root": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout"
+  },
+  "scripts": {
+    "01": {
+      "script": "01_quark_scan.py",
+      "doc": "01_quark_scan.md",
+      "log": "run_01_quark_scan.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 9,
+        "pending": 26,
+        "unexplained": [
+          "50000"
+        ],
+        "unexplained_n": 1
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "02": {
+      "script": "02_mc_mcs_judge.py",
+      "doc": "02_mc_mcs_judge.md",
+      "log": "run_02_mc_mcs_judge.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 8,
+        "pending": 2,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "03": {
+      "script": "03_reading_strength.py",
+      "doc": "03_reading_strength.md",
+      "log": "run_03_reading_strength.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 2,
+        "pending": 3,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "04": {
+      "script": "04_lepton_anchor.py",
+      "doc": "04_lepton_anchor.md",
+      "log": "run_04_lepton_anchor.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 5,
+        "external": 6,
+        "pending": 2,
+        "unexplained": [
+          "3000",
+          "136"
+        ],
+        "unexplained_n": 2
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "05": {
+      "script": "05_hadron_dm.py",
+      "doc": "05_hadron_dm.md",
+      "log": "run_05_hadron_dm.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 4,
+        "pending": 10,
+        "unexplained": [
+          "1936",
+          "3000",
+          "1936"
+        ],
+        "unexplained_n": 3
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "06": {
+      "script": "06_hop_probe.py",
+      "doc": "06_hop_probe.md",
+      "log": "run_06_hop_probe.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 12,
+        "pending": 1,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "07": {
+      "script": "07_hit_followup.py",
+      "doc": "07_hit_followup.md",
+      "log": "run_07_hit_followup.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 4,
+        "external": 11,
+        "pending": 9,
+        "unexplained": [
+          "132",
+          "132"
+        ],
+        "unexplained_n": 2
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "08": {
+      "script": "08_span_12_judge.py",
+      "doc": "08_span_12_judge.md",
+      "log": "run_08_span_12_judge.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 7,
+        "external": 7,
+        "pending": 3,
+        "unexplained": [
+          "0.00216",
+          "50000",
+          "632"
+        ],
+        "unexplained_n": 3
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "09": {
+      "script": "09_density_gate.py",
+      "doc": "09_density_gate.md",
+      "log": "run_09_density_gate.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "09_density_gate.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 4,
+        "external": 6,
+        "pending": 1,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "10": {
+      "script": "10_gamma1_gamma6_bridge.py",
+      "doc": "10_gamma1_gamma6_bridge.md",
+      "log": "run_10_gamma1_gamma6_bridge.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "10_gamma1_gamma6_bridge.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 6,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "11": {
+      "script": "11_lattice_flag_span.py",
+      "doc": "11_lattice_flag_span.md",
+      "log": "run_11_lattice_flag_span.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "11_lattice_flag.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 19,
+        "pending": 13,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "12": {
+      "script": "12_A_spectral_identity.py",
+      "doc": "12_A_spectral_identity.md",
+      "log": "run_12_A_spectral_identity.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "12_A_identity.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 4,
+        "external": 8,
+        "pending": 12,
+        "unexplained": [
+          "115",
+          "45.28487",
+          "115",
+          "0.179",
+          "53.6815",
+          "0.03266551",
+          "0.0326662",
+          "53.6815"
+        ],
+        "unexplained_n": 8
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "13": {
+      "script": "13_mdmu_second_instance.py",
+      "doc": "13_mdmu_second_instance.md",
+      "log": "run_13_mdmu_second_instance.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [],
+      "docstring_match": true,
+      "t3": {
+        "meta": 5,
+        "external": 22,
+        "pending": 10,
+        "unexplained": [
+          "3.689010474e13"
+        ],
+        "unexplained_n": 1
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "14": {
+      "script": "14_double_probe.py",
+      "doc": "14_double_probe.md",
+      "log": "run_14_double_probe.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "14_double_probe.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 8,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "15": {
+      "script": "15_exponent8.py",
+      "doc": "15_exponent8.md",
+      "log": "run_15_exponent8.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "15_exponent8.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 3,
+        "external": 5,
+        "pending": 6,
+        "unexplained": [
+          "200"
+        ],
+        "unexplained_n": 1
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "16": {
+      "script": "16_scale_operator.py",
+      "doc": "16_scale_operator.md",
+      "log": "run_16_scale_operator.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "16_scale_operator.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 6,
+        "pending": 2,
+        "unexplained": [
+          "173"
+        ],
+        "unexplained_n": 1
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "17": {
+      "script": "17_em_decomposition.py",
+      "doc": "17_em_decomposition.md",
+      "log": "run_17_em_decomposition.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "17_em_decomposition.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 5,
+        "external": 15,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "18": {
+      "script": "18_em_constraints.py",
+      "doc": "18_em_constraints.md",
+      "log": "run_18_em_constraints.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "18_em_constraints.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 6,
+        "external": 13,
+        "pending": 1,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "19": {
+      "script": "19_delivery_processing.py",
+      "doc": "19_delivery_processing.md",
+      "log": "run_19_delivery_processing.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "19_delivery_processing.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 3,
+        "pending": 4,
+        "unexplained": [
+          "0.0209452",
+          "0.0226848",
+          "0.0536815"
+        ],
+        "unexplained_n": 3
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "20": {
+      "script": "20_identifiability.py",
+      "doc": "20_identifiability.md",
+      "log": "run_20_identifiability.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "20_identifiability.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 5,
+        "external": 34,
+        "pending": 9,
+        "unexplained": [
+          "1936",
+          "1000",
+          "0.107",
+          "2.6137",
+          "0.941",
+          "1.252",
+          "8.1e-5"
+        ],
+        "unexplained_n": 7
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "21": {
+      "script": "21_upstream_verification.py",
+      "doc": "21_upstream_verification.md",
+      "log": "run_21_upstream_verification.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "21_upstream_verification.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 18,
+        "pending": 5,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "22": {
+      "script": "22_o216_o86_verification.py",
+      "doc": "22_o216_o86_verification.md",
+      "log": "run_22_o216_o86_verification.log",
+      "log_exists": true,
+      "exit": 0,
+      "rerun_identical": true,
+      "json": [
+        [
+          "22_o216_o86_verification.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 3,
+        "external": 8,
+        "pending": 3,
+        "unexplained": [],
+        "unexplained_n": 0
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    }
+  },
+  "counts": {
+    "docs": 22,
+    "scripts": 23,
+    "scripts_audited": 22,
+    "logs": 24,
+    "json": 14,
+    "claims": {
+      "docs_claim": [
+        "22"
+      ],
+      "scripts_claim": [
+        "22"
+      ],
+      "log_claim": [
+        "23"
+      ],
+      "json_claim": [
+        "13"
+      ]
+    }
+  },
+  "violations": []
+}
