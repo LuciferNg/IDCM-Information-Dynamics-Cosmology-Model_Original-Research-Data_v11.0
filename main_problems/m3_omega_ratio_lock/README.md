@@ -1,6 +1,6 @@
 # M3 — Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60
 
-## 狀態: 🟡 部分推進（2026-10-24 四輪；只剩 Ω_b 實證缺口）
+## 狀態: 🟡 部分推進（2026-10-24 五輪；預算全植根 icosahedral，只剩 Ω_b 實證缺口）
 
 Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）。詳見 `01_problem_record.md`／`SESSION_START.md`。
 
@@ -17,7 +17,9 @@
 | `docs/03_round3_r3_operatorization.md` | 第三輪 R3 算子化：K_chain≡L(C₈₈)、三 rank、比值 chain-獨立預言 | 部分推進 |
 | `scripts/03_round3_r3_operatorization.py` | 15/15 PASS | — |
 | `docs/04_round4_oplus_legitimacy.md` | 第四輪 ⊕ 合法性：能量/秩測度等價（量子 3/2）、B=4 唯一重合、自我修正 | 部分推進 |
-| `scripts/04_round4_oplus_legitimacy.py` | 9/9 PASS | — |
+| `scripts/04_round4_oplus_legitimacy.py` | 16/16 PASS（含 §6 生成閉包）| — |
+| `docs/05_round5_chain_length_origin.md` | 第五輪：88 之源（U11 獨立重算）、生成鏈植根、撤回「L₅ 輸入」論 | 部分推進 |
+| `scripts/05_round5_chain_length_origin.py` | 24/24 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
