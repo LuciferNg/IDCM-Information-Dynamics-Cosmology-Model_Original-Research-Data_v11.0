@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "script": "21_upstream_verification",
+    "date": "2026-10-24"
+  },
+  "A_O142": [
+    {
+      "item": "87γ₁⁴M₀ (eV)",
+      "recomputed": 1.6367307248738878,
+      "delivered": 1.636730725,
+      "rel_diff": 7.705125426582526e-11,
+      "ok": true
+    },
+    {
+      "item": "γ₁/(A/M₀)",
+      "recomputed": 86515.31145032197,
+      "delivered": 86515.31,
+      "rel_diff": 1.6763760823934604e-08,
+      "ok": true
+    },
+    {
+      "item": "x = A/M₀",
+      "recomputed": 5.8900218863789954e-08,
+      "delivered": 5.89002188638e-08,
+      "rel_diff": 1.7053025658242404e-13,
+      "ok": true
+    },
+    {
+      "item": "x* = ln x / ln(Λ/M₀)",
+      "recomputed": -34.373234758454075,
+      "delivered": -34.373235,
+      "rel_diff": 7.0271514163167126e-09,
+      "ok": true
+    },
+    {
+      "item": "x* = ln x / ln(γ₂₀)",
+      "recomputed": -30.849752995055198,
+      "delivered": -30.849753,
+      "rel_diff": 1.602865618011151e-10,
+      "ok": true
+    },
+    {
+      "item": "x* = ln x / ln(γ₁)",
+      "recomputed": 3.153312220491388,
+      "delivered": 3.153312,
+      "rel_diff": 6.99237461265767e-08,
+      "ok": true
+    },
+    {
+      "item": "γ₂₀ = 4cos²(3π/11)",
+      "recomputed": 1.7153703234534299,
+      "delivered": 1.71537032345343,
+      "rel_diff": 1.1102230246251565e-16,
+      "ok": true
+    },
+    {
+      "item": "λ_max = 36 − 1/γ₂₀",
+      "recomputed": 35.41703550170626,
+      "delivered": 35.4170355017063,
+      "rel_diff": 1.2212453270876722e-15,
+      "ok": true
+    },
+    {
+      "item": "Λ/M₀ = ρ√λ_max",
+      "recomputed": 1.6230603669218115,
+      "delivered": 1.62306036692181,
+      "rel_diff": 8.881784197001252e-16,
+      "ok": true
+    },
+    {
+      "item": "A/ρ_Λ^¼",
+      "recomputed": 731.6874443455031,
+      "delivered": 731.0,
+      "rel_diff": 0.0009404163413175848,
+      "ok": true
+    }
+  ],
+  "A_unit_residuals": {
+    "Lam": 0.3732347584540747,
+    "g20": 0.15024700494480214,
+    "g1": 0.15331222049138793
+  },
+  "B_O124": {
+    "group_d_excess": [
+      "n−p",
+      "Σ⁻−Σ⁰",
+      "Σ⁰−Σ⁺",
+      "Ξ⁻−Ξ⁰"
+    ],
+    "group_u_excess": [
+      "K⁺−K⁰",
+      "π⁺−π⁰",
+      "D⁺−D⁰"
+    ],
+    "group_double": [
+      "Σ⁻−Σ⁺"
+    ],
+    "spread_d_excess": 5.556699999999999,
+    "spread_u_excess": 3.6340000000000003,
+    "sigma_d_excess_conservative": 41.187869259580275,
+    "sigma_u_excess_conservative": 26.9651653240554,
+    "sigma_d_excess_naive": 59.11382978723403
+  },
+  "C_O85": {
+    "rank_given": 2,
+    "r2_pure_Q": 0.011042089456486444,
+    "r2_given": 0.31000109635769396,
+    "rank_corrected": 2,
+    "r2_corrected": 0.31000109635769396
+  },
+  "D_O86": {
+    "ratio_A_over_rho_lambda_quarter": 731.6874443455031
+  }
+}
