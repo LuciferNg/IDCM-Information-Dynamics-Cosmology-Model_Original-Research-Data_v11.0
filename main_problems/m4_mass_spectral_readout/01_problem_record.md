@@ -278,7 +278,7 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 
 **⟹ Q2/Q3/Q8 的真正上游係一個未建立嘅結構層**，唔係任何現存 O 嘅待辦項。
 
-**★已立項：`P16`（2026-10-24，調律者批准）** —— `main_problems/p16_hadron_bound_state_spectrum/`（v10 repo）
+**★已立項：`M5`（2026-10-24 立項，同日由 v10 `P16` 遷入 v11）** —— `IDCM-v11.0--Reality-Architecture/main_problems/m5_hadron_bound_state_spectrum/`
 
 | P16 子問題 | 狀態 | 結果 |
 |:--|:--|:--|
