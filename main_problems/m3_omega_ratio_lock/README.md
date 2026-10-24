@@ -30,6 +30,8 @@
 | `scripts/09_round9_gamma1_identity.py` | 16/16 PASS | — |
 | `docs/10_round10_omega_b_fork.md` | 第十輪 Ω_b 攻堅：張力=一個 bit；`N_d=45` 失敗 8/8；`N_d=B·L₅`；CMB-S4 預註冊 | 推進 |
 | `scripts/10_round10_omega_b_fork.py` | 12/12 PASS | — |
+| `docs/11_round11_g3_fork.md` | 第十一輪 G3 裁決：`3=⌈ln B²⌉`；`3=B−1`／鏈-3 否證；`⊕` 獲理由；DM=B² | 推進 |
+| `scripts/11_round11_g3_fork.py` | 8/8 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
