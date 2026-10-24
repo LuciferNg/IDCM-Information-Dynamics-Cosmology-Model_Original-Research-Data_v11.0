@@ -78,6 +78,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -165,6 +169,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -254,6 +262,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -341,6 +353,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -430,6 +446,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -517,6 +537,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -606,6 +630,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -693,6 +721,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -782,6 +814,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -869,6 +905,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -958,6 +998,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1045,6 +1089,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -1134,6 +1182,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1221,6 +1273,10 @@
         ],
         [
           "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
           true
         ]
       ],
@@ -1310,6 +1366,10 @@
         [
           "16_verification.json",
           true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1325,19 +1385,111 @@
       "sections_ok": true,
       "has_criteria_section": false,
       "h1_ok": true
+    },
+    "17": {
+      "script": "17_d2_strong_ib.py",
+      "doc": "16_d2_strong_ib.md",
+      "log": "run_17_d2_strong_ib.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 1,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 15,
-    "scripts": 16,
-    "logs": 18,
-    "json": 16,
+    "docs": 16,
+    "scripts": 17,
+    "logs": 19,
+    "json": 17,
     "claims": {
       "docs": [
-        "15"
+        "16"
       ],
       "scripts": [
-        "16"
+        "17"
       ],
       "log_json": []
     }

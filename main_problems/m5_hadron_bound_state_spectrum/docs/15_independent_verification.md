@@ -119,7 +119,7 @@ M5 docs/15 配套 — 獨立驗證器：PDG 輸入 → 頭條數字 → root doc
 
 ### 四.4 V4 計數
 
-實測 `docs = 15`、`scripts = 16`、`logs = 18`、`json = 16`；README 宣稱 `docs = 15`／`scripts = 16` ⟹ 一致 ✅
+實測 `docs = 16`、`scripts = 17`、`logs = 19`、`json = 17`；README 宣稱 `docs = 16`／`scripts = 17` ⟹ 一致 ✅
 
 ## 五、結論報告
 

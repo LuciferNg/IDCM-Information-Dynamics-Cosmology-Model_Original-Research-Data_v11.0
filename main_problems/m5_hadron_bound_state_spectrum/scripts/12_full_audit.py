@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS, SCRIPTS, DATA = ROOT / "docs", ROOT / "scripts", ROOT / "data"
 PY = "/usr/bin/python3"
 NUM = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
-PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13", "15": "14", "16": "15"}
+PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13", "15": "14", "16": "15", "17": "16"}
 #   11→10（同 doc 兩腳本）；13→12；14→13；15→14；16→15（docs 比 scripts 少 1）
 
 
