@@ -23,7 +23,9 @@
 
 **上游交付核實（`docs/21_upstream_verification.md`）**：✅ O142 十項全核（≤9.4e-4）、O124 41.2σ 範疇 no-go、O85 R²=0.310001 精確重現 ⟹ **Q2/Q3/Q8 判死（群論＋Cartan 雙 no-go）、Q4 σ 橋通道關閉**；★真缺口＝**強子束縛態譜／`⟨1/r_ij⟩` 重疊算子**（IDCM 現無任何 O 承擔，見 §11.5）。
 
-詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/21`。
+**O216／O86 交付核實（`docs/22_o216_o86_verification.md`）**：✅ 標籤層加性被 41.5σ 否證 ⟹ Q2/Q3 **六路線全封**；✅ O86 接手 A 算子身份（O86/N8 open）⟹ Q4 數值側 M4 終結；★P6 鏈 `m_ν=A·γ_n²` 之 m1/m2 反解 n = 4.7283／4.8245 **非整數**（§11.6，發還 P6）。
+
+詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/22`。
 
 ## 檔案
 
@@ -31,9 +33,9 @@
 |:----|:-----|:----:|
 | `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十）＋ **開放問題整理（§十一）** ＋ **審計記錄（§十二）** | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 21 檔（`01–21`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
-| `scripts/` | 計算腳本（21 檔：01–08 遷入、09–21 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`、可辨識性 `20_identifiability`、上游核實 `21_upstream_verification`） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（22 log ＋ 12 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
+| `docs/` | 22 檔（`01–22`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
+| `scripts/` | 計算腳本（22 檔：01–08 遷入、09–22 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`、可辨識性 `20_identifiability`、上游核實 `21_upstream_verification`、O216/O86 核實 `22_o216_o86_verification`） | 部分閉合 |
+| `data/` | stdout log ＋ JSON（23 log ＋ 13 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
 
 ## 編號規則
 
