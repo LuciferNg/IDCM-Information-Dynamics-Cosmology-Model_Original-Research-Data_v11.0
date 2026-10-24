@@ -246,9 +246,9 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 0,
         "external": 0,
-        "derived": 6,
+        "derived": 9,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -274,9 +274,9 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 24,
+        "derived": 52,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -302,9 +302,9 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 17,
+        "derived": 45,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -330,9 +330,37 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 3,
+        "meta": 4,
         "external": 0,
-        "derived": 5,
+        "derived": 13,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "14": {
+      "script": "14_spin_operator_decoupling.py",
+      "doc": "13_normalisation_fix_and_d1.md",
+      "log": "run_14_spin_operator_decoupling.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 13,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -344,16 +372,16 @@
     }
   },
   "counts": {
-    "docs": 12,
-    "scripts": 13,
-    "logs": 15,
-    "json": 13,
+    "docs": 13,
+    "scripts": 14,
+    "logs": 16,
+    "json": 14,
     "claims": {
       "docs": [
-        "12"
+        "13"
       ],
       "scripts": [
-        "13"
+        "14"
       ],
       "log_json": []
     }
