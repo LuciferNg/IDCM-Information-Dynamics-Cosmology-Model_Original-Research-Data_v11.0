@@ -26,6 +26,8 @@
 | `scripts/07_round7_single_component.py` | 13/13 PASS（§b₁ 部分已由 docs/08 更正）| — |
 | `docs/08_round8_correction_k.md` | 第八輪 **更正**：撤回 `b₁⟹k`；改判據 `k = gapless 數 = 1`（44 模式 ≠ 44 分量）| 更正 |
 | `scripts/08_round8_correction_k.py` | 12/12 PASS | — |
+| `docs/09_round9_gamma1_identity.md` | 第九輪 γ₁ 身份：`∏γ=N_d`、全譜∈ℤ[γ₁]、deg 20 unit、分形倍頻 | 推進 |
+| `scripts/09_round9_gamma1_identity.py` | 16/16 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
