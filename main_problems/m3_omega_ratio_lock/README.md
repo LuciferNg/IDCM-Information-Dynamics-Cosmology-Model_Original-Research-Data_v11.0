@@ -1,6 +1,6 @@
 # M3 — Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60
 
-## 狀態: 🟡 部分推進（2026-10-24 三輪）
+## 狀態: 🟡 部分推進（2026-10-24 四輪；只剩 Ω_b 實證缺口）
 
 Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）。詳見 `01_problem_record.md`／`SESSION_START.md`。
 
@@ -16,6 +16,8 @@
 | —（附註）| O163 docs/04 (a)–(d) 對接：答 (b)(c)、剩 (a)(d)；R3 式 `Ω=(N_gen:B²:N_d−N_gen)/(N_d+B²)` | docs/02 §10 |
 | `docs/03_round3_r3_operatorization.md` | 第三輪 R3 算子化：K_chain≡L(C₈₈)、三 rank、比值 chain-獨立預言 | 部分推進 |
 | `scripts/03_round3_r3_operatorization.py` | 15/15 PASS | — |
+| `docs/04_round4_oplus_legitimacy.md` | 第四輪 ⊕ 合法性：能量/秩測度等價（量子 3/2）、B=4 唯一重合、自我修正 | 部分推進 |
+| `scripts/04_round4_oplus_legitimacy.py` | 9/9 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
