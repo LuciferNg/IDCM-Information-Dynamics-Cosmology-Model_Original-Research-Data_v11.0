@@ -58,3 +58,9 @@ JSON 11/11 **語義完全相同**（舊 log 之數字結論零漂移）。
 - ← `scripts/01–11`（被審計對象）
 - → `final_result.md`（階段性 closeout 狀態）
 - → M4 `docs/24`（同輪之增量審計：審計器與審計報告自身）
+## 七、審計器 v2（2026-10-24 增補，append-only）
+
+- **覆蓋缺口發現**：v1 之 `PAIR_OVERRIDE` 只有 `11→10`；`scripts/13_layer_pin_a3.py` 因無 `docs/13` 而配對到 `None` ⟹ **docstring 與 T3 數字回溯被靜默跳過**（首輪 v2 跑出 `[13] docstring=None`）。此即「0 違規」中嘅**盲區**，屬審計器缺陷而非交付合格。
+- **修正**：`PAIR_OVERRIDE` 加 `"13": "12"`；標題改為動態計數。
+- **重跑結果**：13 腳本（不含審計器）× 12 推導文檔（不含本檔），**違規 0**；`[13] docstring=True`、T3 meta 3／external 0／pending 0、未解釋 0；I1–I6 全 0。
+- 本檔 §一 保留 v1 docstring 原文（不改舊記錄）；v2 之差異即本節所述。

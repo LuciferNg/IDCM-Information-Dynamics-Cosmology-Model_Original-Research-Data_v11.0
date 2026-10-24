@@ -313,19 +313,47 @@
       "sections_ok": true,
       "has_criteria_section": false,
       "h1_ok": true
+    },
+    "13": {
+      "script": "13_layer_pin_a3.py",
+      "doc": "12_layer_pin_a3.md",
+      "log": "run_13_layer_pin_a3.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "13_layer_pin_a3.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 3,
+        "external": 0,
+        "derived": 5,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 11,
-    "scripts": 12,
-    "logs": 13,
-    "json": 12,
+    "docs": 12,
+    "scripts": 13,
+    "logs": 15,
+    "json": 13,
     "claims": {
       "docs": [
-        "11"
+        "12"
       ],
       "scripts": [
-        "11"
+        "13"
       ],
       "log_json": []
     }

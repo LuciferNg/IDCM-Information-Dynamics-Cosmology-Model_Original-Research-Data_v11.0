@@ -7,6 +7,7 @@
   - `data/NN_*.json`（11 個）＋ `data/pdg_mass_width_2024.mcd`（外部輸入，PDG 官方下載）
 
 四類主檢（T1–T4，機械化）＋ 六項完整性掃描（I1–I6）：
+  v2（2026-10-24 增補）：PAIR_OVERRIDE 加 "13"→"12"，覆蓋 A3 腳本↔文檔；標題改動態計數。
   T1 重跑一致：臨時目錄（預置 PDG 輸入）重跑 ⟹ stdout 與正典 log byte 相同、JSON 語義相同
   T2 docstring 對齊：docs/NN「## 一、前設問題」fenced block 逐字等於腳本 docstring
   T3 數字回溯：docs 內 ≥3 位有效數字須能回溯（字串／0.5% 相對／三桶分流＋運算式復算 0.6%）
@@ -27,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS, SCRIPTS, DATA = ROOT / "docs", ROOT / "scripts", ROOT / "data"
 PY = "/usr/bin/python3"
 NUM = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
-PAIR_OVERRIDE = {"11": "10"}          # scripts/11 → docs/10（同 doc 兩腳本）
+PAIR_OVERRIDE = {"11": "10", "13": "12"}   # scripts/11→docs/10（同 doc 兩腳本）；13→docs/12
 
 
 def nums(text):
@@ -59,7 +60,7 @@ def doc_block(txt, header):
 report = {"meta": {"script": "12_full_audit", "date": "2026-10-24", "python": PY, "root": str(ROOT)},
           "pairs": {}, "counts": {}, "violations": [], "info": []}
 print("=" * 96)
-print("M5 docs/11 — 全量審計（11 支腳本 × 10 份文檔）")
+print(f"M5 docs/11 — 全量審計（{len(list(SCRIPTS.glob('[0-9][0-9]_*.py')))-1} 支腳本（不含本審計器） × {len(list(DOCS.glob('[0-9][0-9]_*.md')))-1} 份推導文檔（不含 docs/11 本身））")
 print("=" * 96)
 
 SELF = Path(__file__).name
