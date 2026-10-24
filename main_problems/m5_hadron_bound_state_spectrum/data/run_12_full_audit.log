@@ -1,21 +1,25 @@
 ================================================================================================
-M5 docs/11 — 全量審計（11 支腳本 × 10 份文檔）
+M5 docs/11 — 全量審計（15 支腳本（不含本審計器） × 14 份推導文檔（不含 docs/11 本身））
 ================================================================================================
 
-配對 11 組；deprecated（按設計排除，只列 INFO）=['10_v1_minE_bug.py']
-docs=11 scripts=12 logs=13 json=12
-臨時目錄：/tmp/m5audit_uku0wbci
-  [01] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True]
-  [02] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
-  [03] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
-  [04] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True]
-  [05] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True]
-  [06] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True]
-  [07] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
-  [08] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True]
-  [09] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
-  [10] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
-  [11] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True]
+配對 15 組；deprecated（按設計排除，只列 INFO）=['10_v1_minE_bug.py']
+docs=15 scripts=16 logs=18 json=16
+臨時目錄：/tmp/m5audit_ar2zwea_
+  [01] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [02] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [03] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [04] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [05] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [06] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [07] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [08] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [09] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [10] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [11] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [13] exit=0 重跑=True docstring=True T3 4/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [14] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [15] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [16] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
 
 [完整性掃描]
   I1_tmp_write: 0 
@@ -25,7 +29,7 @@ docs=11 scripts=12 logs=13 json=12
   I5_nondocumented_script: 0 
   I6_missing_root_files: 0 
 
-[計數] actual docs=11 scripts=12 logs=13 json=12；README 宣稱 {'docs': ['11'], 'scripts': ['11'], 'log_json': []}
+[計數] actual docs=15 scripts=16 logs=18 json=16；README 宣稱 {'docs': ['15'], 'scripts': ['16'], 'log_json': []}
 
 [違規] 0
 

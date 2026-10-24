@@ -18,6 +18,66 @@
         [
           "01_chain_green_function.json",
           true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -44,7 +104,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
           "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -72,7 +192,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
           "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -100,7 +280,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
           "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -128,7 +368,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
           "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -156,7 +456,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
           "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -184,7 +544,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
           "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -212,7 +632,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
           "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -240,7 +720,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
           "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -268,7 +808,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
           "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -296,7 +896,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
           "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -324,7 +984,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
           "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -352,7 +1072,67 @@
       "rerun_identical": true,
       "json": [
         [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
           "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
           true
         ]
       ],
@@ -369,19 +1149,195 @@
       "sections_ok": true,
       "has_criteria_section": true,
       "h1_ok": true
+    },
+    "15": {
+      "script": "15_contact_term_corrected.py",
+      "doc": "14_contact_term_corrected.md",
+      "log": "run_15_contact_term_corrected.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 6,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "16": {
+      "script": "16_independent_verification.py",
+      "doc": "15_independent_verification.md",
+      "log": "run_16_independent_verification.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 0,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 13,
-    "scripts": 14,
-    "logs": 16,
-    "json": 14,
+    "docs": 15,
+    "scripts": 16,
+    "logs": 18,
+    "json": 16,
     "claims": {
       "docs": [
-        "13"
+        "15"
       ],
       "scripts": [
-        "14"
+        "16"
       ],
       "log_json": []
     }

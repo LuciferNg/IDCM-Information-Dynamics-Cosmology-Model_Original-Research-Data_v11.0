@@ -28,7 +28,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS, SCRIPTS, DATA = ROOT / "docs", ROOT / "scripts", ROOT / "data"
 PY = "/usr/bin/python3"
 NUM = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
-PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13"}   # 11→10（同 doc 兩腳本）；13→12；14→13
+PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13", "15": "14", "16": "15"}
+#   11→10（同 doc 兩腳本）；13→12；14→13；15→14；16→15（docs 比 scripts 少 1）
 
 
 def nums(text):
@@ -89,6 +90,20 @@ for nn, sc, doc, log in pairs:
     mcd = DATA / "pdg_mass_width_2024.mcd"
     if mcd.exists():
         shutil.copy(mcd, work / "data" / mcd.name)
+    # 全項目驗證器（scripts/16）需要 root docs、docs/、data/*.json ⟹ 一併複製（隔離性保持：
+    # 只讀複本，寫入仍落 work 內）
+    for f in ROOT.glob("*.md"):
+        shutil.copy(f, work / f.name)
+    (work / "docs").mkdir(exist_ok=True)
+    for f in DOCS.glob("*.md"):
+        shutil.copy(f, work / "docs" / f.name)
+    for f in DATA.glob("*.json"):
+        shutil.copy(f, work / "data" / f.name)
+    for f in DATA.glob("run_*.log"):
+        shutil.copy(f, work / "data" / f.name)
+    (work / "scripts").mkdir(exist_ok=True)
+    for f in SCRIPTS.glob("*.py"):
+        shutil.copy(f, work / "scripts" / f.name)
     try:
         r = subprocess.run([PY, sc.name], cwd=work, capture_output=True, text=True, timeout=1800)
         out, err, rc = r.stdout, r.stderr, r.returncode
