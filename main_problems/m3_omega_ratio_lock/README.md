@@ -1,6 +1,6 @@
 # M3 — Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60
 
-## 狀態: 🟡 部分推進（2026-10-24 六輪；預算全植根 icosahedral；F2 已解至相位秩）
+## 狀態: 🟡 部分推進（2026-10-24 七輪；預算全植根 icosahedral；F2 已解至單環拓撲）
 
 Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）。詳見 `01_problem_record.md`／`SESSION_START.md`。
 
@@ -22,6 +22,8 @@
 | `scripts/05_round5_chain_length_origin.py` | 24/24 PASS | — |
 | `docs/06_round6_f2_onedim.md` | 第六輪 F2：相位秩 + 譜指紋（1D 100% vs 2D ≤53%）+ 否證 A₅ 群路線 | 部分推進 |
 | `scripts/06_round6_f2_onedim.py` | 20/20 PASS | — |
+| `docs/07_round7_single_component.md` | 第七輪 單分量：`k=b₁`（C₈₈=1 ⟹ W∈ℂ；P₈₈=0 ⟹ 鏈必為環）+ 否證預算判 k | 部分推進 |
+| `scripts/07_round7_single_component.py` | 13/13 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
