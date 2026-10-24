@@ -19,7 +19,9 @@
 
 **O140／P6 交付處理（`docs/19_delivery_processing.md`）**：✅ O140 五項全核實（≤1.1e-13）；🔴 ℤ[γ₁] 多項式框架無鑑別力（deg-0 空洞：τ/e 0.0066%；deg≥1 密度 1.97% ⟹ Q5 判死）；硬約束：單模上限 `4/γ₁=784.9647` ⟹ 跨代/跨類必須多模；🟡 A 線索 `87γ₁⁴M₀=1.63673 eV`（0.404%，未過門檻）。
 
-詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/19`。
+**可辨識性曲線（`docs/20_identifiability.md`）**：密度殺定量化 —— F1 單模比族 0.1% 帶覆蓋率 **20.61%**（1/5 隨機）；所需精度 δ★：F1 0.0004%／F4 0.0081%；質量比精度對各族短欠 **12–1 772×**（精度瓶頸），而 em 精度 0.003% 對 F4 **已足夠**（概念瓶頸）⟹ Q2/Q3 推唔動係 operator 未定義，非量度不足。
+
+詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/20`。
 
 ## 檔案
 
@@ -27,9 +29,9 @@
 |:----|:-----|:----:|
 | `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十）＋ **開放問題整理（§十一）** ＋ **審計記錄（§十二）** | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 19 檔（`01–19`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
-| `scripts/` | 計算腳本（19 檔：01–08 遷入、09–19 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（21 log ＋ 10 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
+| `docs/` | 20 檔（`01–20`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
+| `scripts/` | 計算腳本（20 檔：01–08 遷入、09–20 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`、可辨識性 `20_identifiability`） | 部分閉合 |
+| `data/` | stdout log ＋ JSON（22 log ＋ 11 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
 
 ## 編號規則
 

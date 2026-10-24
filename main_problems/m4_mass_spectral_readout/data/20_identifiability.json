@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "script": "20_identifiability",
+    "date": "2026-10-24",
+    "seed": 20261034,
+    "targets": 200000,
+    "domain_log10": [
+      -2,
+      4
+    ]
+  },
+  "families": [
+    {
+      "family": "F1 γ_a/γ_b",
+      "size": 1892,
+      "cov_0p1pct": 0.206065,
+      "cov_1pct": 0.67309,
+      "delta_for_1e-3": 4.116638530060612e-06,
+      "delta_for_1e-4": 3.5687156652031154e-07
+    },
+    {
+      "family": "F2 p(γ₁) deg≤2,|c|≤10",
+      "size": 4630,
+      "cov_0p1pct": 0.032615,
+      "cov_1pct": 0.06159,
+      "delta_for_1e-3": 1.5657468620533521e-06,
+      "delta_for_1e-4": 2.16040313083532e-07
+    },
+    {
+      "family": "F3 p(γ₁) deg≤4,|c|≤10",
+      "size": 2042050,
+      "cov_0p1pct": 0.032985,
+      "cov_1pct": 0.061625,
+      "delta_for_1e-3": 5.642003306771671e-07,
+      "delta_for_1e-4": 2.8634246085346153e-09
+    },
+    {
+      "family": "F4 n·γ₁^k (n≤100,k≤12)",
+      "size": 1200,
+      "cov_0p1pct": 0.01437,
+      "cov_1pct": 0.12122,
+      "delta_for_1e-3": 8.146057627955729e-05,
+      "delta_for_1e-4": 7.790588386846766e-06
+    }
+  ],
+  "data_precision": {
+    "quark mass ratio (FLAG)": 0.001,
+    "X = m_d−m_u (FLAG)": 0.037,
+    "E_ch 最差 (docs/18)": 0.074,
+    "em ratio Δπ (PDG)": 3e-05
+  },
+  "loosest_family": {
+    "family": "F4 n·γ₁^k (n≤100,k≤12)",
+    "size": 1200,
+    "cov_0p1pct": 0.01437,
+    "cov_1pct": 0.12122,
+    "delta_for_1e-3": 8.146057627955729e-05,
+    "delta_for_1e-4": 7.790588386846766e-06
+  },
+  "strictest_family": {
+    "family": "F3 p(γ₁) deg≤4,|c|≤10",
+    "size": 2042050,
+    "cov_0p1pct": 0.032985,
+    "cov_1pct": 0.061625,
+    "delta_for_1e-3": 5.642003306771671e-07,
+    "delta_for_1e-4": 2.8634246085346153e-09
+  },
+  "shortfall": {
+    "F1 γ_a/γ_b": {
+      "quark mass ratio (FLAG)": 242.91664004448705,
+      "X = m_d−m_u (FLAG)": 8987.91568164602,
+      "E_ch 最差 (docs/18)": 17975.83136329204,
+      "em ratio Δπ (PDG)": 7.287499201334612
+    },
+    "F2 p(γ₁) deg≤2,|c|≤10": {
+      "quark mass ratio (FLAG)": 638.6728431239388,
+      "X = m_d−m_u (FLAG)": 23630.895195585734,
+      "E_ch 最差 (docs/18)": 47261.79039117147,
+      "em ratio Δπ (PDG)": 19.160185293718165
+    },
+    "F3 p(γ₁) deg≤4,|c|≤10": {
+      "quark mass ratio (FLAG)": 1772.4200884458457,
+      "X = m_d−m_u (FLAG)": 65579.54327249629,
+      "E_ch 最差 (docs/18)": 131159.08654499258,
+      "em ratio Δπ (PDG)": 53.17260265337538
+    },
+    "F4 n·γ₁^k (n≤100,k≤12)": {
+      "quark mass ratio (FLAG)": 12.275876818845342,
+      "X = m_d−m_u (FLAG)": 454.2074422972776,
+      "E_ch 最差 (docs/18)": 908.4148845945552,
+      "em ratio Δπ (PDG)": 0.36827630456536026
+    }
+  }
+}
