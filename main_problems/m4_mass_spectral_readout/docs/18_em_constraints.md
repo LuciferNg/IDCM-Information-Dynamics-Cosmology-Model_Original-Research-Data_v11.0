@@ -85,7 +85,7 @@ Protocol（事前寫死）：
 | operator 形式 | 「需 channel-dependent」 | **四類形式排除**：電荷加性／sub-count／spectator 獨立／標度幂律 |
 | 通道實證譜 | 只有 π/K/N 三通道 | **8 通道**（含 Σ、Ξ、D）＋ 精確 E 值與誤差 |
 | 方向不對稱 | 未知 | E(u→d 輕) ≈ −1.3；E(d→u 重子) = +0.71…+4.29 |
-| 依賴 | 「需 em operator」 | **blocked-by-O140**（flavour→mode 映射 = selection rule） |
+| 依賴 | 「需 em operator」 | **blocked-by-O140**（flavour→mode 映射 = selection rule）｜**handoff 已登記**：`2026-10-24T10:14:04` M4 → O140（register `handed_off`，ref = 本檔），非轉交產權 |
 | 下一步 | — | 等 O140 的 flavour→mode 映射；屆時 M4 可用 8 通道約束集**直接檢定** operator |
 
 ## 七、與其他腳本／O 的關係

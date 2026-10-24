@@ -204,8 +204,8 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 | # | 開放問題 | 類型 | 狀態 | 現有證據／數字 | 阻塞 | 解鎖條件 | 產權／去向 |
 |:--|:--|:--|:--:|:--|:--|:--|:--|
 | Q1 | `span_Q/span_ν = 12 = 88−L₉` | 結構（唯一 🟡） | 🟡 後驗 | lattice `R = 12.005533 ± 0.039896`（0.14σ）；MC null 0.166%；預言 `m_u = 2.1498 MeV` | m_u 誤差 3.7%（FLAG 2+1+1） | 獨立 m_u 量度 <0.2–0.5%，或 sample-out blind test | M4 自持（等數據） |
-| Q2 | `R_em = Δπ/|E| = 3.479111`（em 通道算子身份） | 結構 | 🔴 **blocked-by-O140** | 8 通道實證譜（`docs/18`）：四類形式全排除（電荷加性 R²=0.003、sub-count R²=0.089、spectator 獨立 spread 3.578、幂律 worst 117%）；γ 比池 density 34.73% | 需 flavour→mode 映射（= Q5 selection rule，屬 O140） | 等 O140 映射；屆時用 8 通道約束集直接檢定 operator | **O140 上游**（`docs/18` §五 5） |
-| Q3 | `E = −1.320334 MeV` 嘅譜／算子身份 | 結構 | 🔴 **blocked-by-O140** | 13104 族 0/13104、density 4.39%；K/N 通道 E 一致（−1.374／−1.267，spread 0.107）⟹ E 係 substitution-channel 常數 | 同 Q2（flavour→mode 映射） | 同 Q2 同一解鎖點 | **O140 上游**（`docs/18`） |
+| Q2 | `R_em = Δπ/|E| = 3.479111`（em 通道算子身份） | 結構 | 🔴 **blocked-by-O140** | 8 通道實證譜（`docs/18`）：四類形式全排除（電荷加性 R²=0.003、sub-count R²=0.089、spectator 獨立 spread 3.578、幂律 worst 117%）；γ 比池 density 34.73% | 需 flavour→mode 映射（= Q5 selection rule，屬 O140） | 等 O140 映射；屆時用 8 通道約束集直接檢定 operator（**handoff 2026-10-24T10:14:04 已登記**） | **O140 上游**（`docs/18` §五 5） |
+| Q3 | `E = −1.320334 MeV` 嘅譜／算子身份 | 結構 | 🔴 **blocked-by-O140** | 13104 族 0/13104、density 4.39%；K/N 通道 E 一致（−1.374／−1.267，spread 0.107）⟹ E 係 substitution-channel 常數 | 同 Q2（flavour→mode 映射） | 同 Q2 同一解鎖點（**handoff 2026-10-24T10:14:04**） | **O140 上游**（`docs/18`） |
 | Q4 | `A = 1.64337 eV/γ²` 譜身份 | 結構 | 🔴 | 13104 族 0 命中 <0.1%，density 5.21% | A 定義鏈 `M_comp`（O66 已降級） | σ 橋算子化（O142）或 `Λ_eff` 通道（O86） | **handoff P6** |
 | Q5 | selection rule：為何揀某個 ℤ[γ₁] 元素 | 結構 | 🔴 | 全譜 ∈ ℤ[γ₁] ⟹ 比例冇自由度（`docs/10`） | 無選擇機制 | 譜強度／hop／邊界類型選擇規則 | **handoff O140** |
 | Q6 | 夸克質量 scale 語義 | 結構 | **🟡 部分閉合**（`docs/16`） | **自對偶點 μ*=m(μ*)**：重夸克 b/c 恆等成立、輕夸克 u/d/s `m/μ`=0.0026–0.113 無解 ⟹ PDG 雙重約定結構強制；**零參數 α_s 跑動** m_b 0.236%／m_c 1.680%／2GeV 1.182%（PDG 三錨點）| 質量跑動指數 d=4/7 有 6 個身份且係 SM 值；**無乾淨雙標度對** | 等 lattice 同一計算雙標度輸出（FLAG 未提供） | M4 自持（阻塞待數據） |
@@ -286,6 +286,19 @@ R7 喺中微子 sector 確立「差值閉合力學」：實驗差譜（Δm²）+
 2. `docs/01–11` §一 前設問題係我寫嘅摘要，唔係 docstring 原文 ⟹ 全部改回原文（14/14 逐字對齊）。
 3. `docs/09`／`10`／`12`／`13` 冇「原始輸出」標示 ⟹ 章節改名為「原始輸出：…」並重編 09 章節序。
 4. `scripts/14` 首版 density 用**未排序**池做 `searchsorted` ⟹ P1 假 0.00%；已改 `np.sort` 後重跑（真值 34.73%／4.39%）。**此為真 bug，已修並重跑，取證見 log。**
+
+### 12.6 外部依賴 handoff 審計（2026-10-24 收尾核實）
+
+| 項 | register 事件 | 狀態 |
+|:--|:--|:--|
+| Q4 A 譜身份 | `2026-10-24T05:16:38 handed_off M4 → P6` | ✅ 已 handoff |
+| Q5 selection rule（R2 ℤ[γ₁] 結果） | `2026-10-24T05:16:43 handed_off M4 → O140` | ✅ 已 handoff |
+| Q2/Q3/Q8 channel operator 上游映射 | `2026-10-24T10:14:04 handed_off M4 → O140`（本輪補登；此前只有 progress note） | ✅ 已 handoff |
+| Q1 span 12（m_u 精度） | — | 等外部**量度數據**（FLAG/lattice），非 O 問題 ⟹ 不作 handoff |
+| Q6 跑動指數數值檢定 | — | 等 lattice 同一計算雙標度輸出，非 O 問題 ⟹ 不作 handoff |
+| Q7 M_EW 指數 8 | — | 已判死 🔴，無下游 |
+
+⟹ register 內 M4 現有 **3 個 handed_off 事件**（P6、O140×2）；`check`：REF-MISSING 0／BLOCK-DRIFT 0／BLOCK-UNREGISTERED 0／HARD DRIFT 0。
 
 ### 12.5 第二輪審計（新增 14／15 支）
 
