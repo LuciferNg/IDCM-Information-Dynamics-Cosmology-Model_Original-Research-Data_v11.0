@@ -5,11 +5,24 @@
 
 ## 一、前設問題
 
-```
-H1 結論：K_chain 88 環上嘅 Coulomb 核（Laplacian 偽逆）係反屏蔽（g(0)=+7.332, g(44)=−3.668，比值−2），
-        完全無 1/r ⟹ QED 自能差必須由 K_tree 徑向自由度承載。
-H2 問題：K_tree 嘅 Green 函數實際衰減律係咩？邊個條件下會給 1/r？IDCM 有兩把尺
-        （能量階梯 μ_ℓ = φ^(291.5−ℓ)、因果階梯 t_ℓ = 4^ℓ·t_site），邊把承載 Coulomb？
+```text
+M5 docs/02 配套 — H2: K_tree 徑向核（1/r 嘅結構來源）
+=================================================================
+問題（承接 H1）：H1 證 K_chain 環上嘅 Coulomb 核係反屏蔽、無 1/r ⟹ QED 自能差必須由
+K_tree 徑向自由度承載。本腳本回答：K_tree 嘅 Green 函數到底給咩衰減律？邊個條件下係 1/r？
+
+三件事（全部精確算術，唔用浮點做核心步驟）：
+  A. 徑向 Green 函數精確解：rooted tree（分支 b、層 0..L、葉端 Dirichlet）上取
+     level-symmetric 源，解 tri-diagonal 系統（Fraction Thomas）⟹ 每層衰減率
+     t = G_{ℓ+1}/G_ℓ，核對 t → 1/b（與 w 無關）
+  B. 質量 resolvent 閉式：u(ε) = [(ε+b+1) − √((ε+b+1)²−4b)]/(2b)，u(0) = 1/b 精確；
+     用顯式樹（sparse solve）核對 bulk 衰減率 = u(ε)
+  C. 指數恆等式：設物理半徑 r_ℓ = w^ℓ ⟹ G ∝ r^(−α)，α = ln b / ln w
+     ⟹ 1/r（Coulomb）⟺ w = b。代入 IDCM 兩把尺：
+        能量階梯 μ_ℓ = φ^(291.5−ℓ) ⟹ w_E = φ ⟹ α_E = ln4/lnφ = 2.88084（≠1）
+        因果階梯 t_ℓ = 4^ℓ·t_site  ⟹ w_t = 4  ⟹ α_t = ln4/ln4 = 1  **EXACT**
+     ⟹ 1/r 由**因果（時間）階梯**承載，唔係能量階梯。零自由參數。
+輸出：`data/02_ktree_radial_kernel.json`（另 stdout log）
 ```
 
 ## 二、事前判準（寫死，唔准事後改）

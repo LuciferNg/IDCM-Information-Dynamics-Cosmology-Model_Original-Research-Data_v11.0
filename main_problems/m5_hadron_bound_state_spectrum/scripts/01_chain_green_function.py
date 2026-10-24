@@ -1,4 +1,4 @@
-"""P16 docs/01 配套 — C_N 環上嘅 Coulomb 核：精確 Green 函數 ＋ 非加性示範（2026-10-24）
+"""M5 docs/01 配套 — C_N 環上嘅 Coulomb 核：精確 Green 函數 ＋ 非加性示範（2026-10-24）
 =========================================================================================
 前設問題（M4 三份上游 no-go 合流得出，見 v11 M4 `docs/21` §五.4、`docs/22` §五.2）：
   em 通道分裂 = ⟨Σ_{i<j} q_i q_j / r_ij⟩ ＋ Σ_i q_i² Δm_i
@@ -19,7 +19,7 @@ from fractions import Fraction as F
 OUT = "data/01_chain_green_function.json"
 N = 88
 print("=" * 88)
-print("P16 docs/01 — C_N 環 Coulomb 核（Laplacian 偽逆）精確核實 + 非加性示範")
+print("M5 docs/01 — C_N 環 Coulomb 核（Laplacian 偽逆）精確核實 + 非加性示範")
 print("=" * 88)
 
 def closed_form(d, n):

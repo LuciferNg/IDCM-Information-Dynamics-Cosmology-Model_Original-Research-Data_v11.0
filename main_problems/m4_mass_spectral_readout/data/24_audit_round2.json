@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "script": "24_audit_round2",
+    "date": "2026-10-24"
+  },
+  "checks": {
+    "C1_scripts_unchanged_since_audit": {
+      "pass": true,
+      "diff": ""
+    },
+    "C2_doc23_claims_vs_json": {
+      "pass": true,
+      "pairs": 22,
+      "all_identical": true,
+      "all_exit0": true,
+      "docstring_ok": true,
+      "violations_in_json": [],
+      "claim_tokens": {
+        "22 支腳本": true,
+        "22/22 byte-identical": true,
+        "docstring 22/22": true,
+        "違規 0": true
+      }
+    },
+    "C3_sample_rerun": {
+      "pass": true,
+      "samples": {
+        "07_hit_followup": {
+          "exit": 0,
+          "identical": true
+        },
+        "15_exponent8": {
+          "exit": 0,
+          "identical": true
+        },
+        "16_scale_operator": {
+          "exit": 0,
+          "identical": true
+        }
+      },
+      "tmp": "/home/wsl/.hermes/cache/scratch/m4r2_cq4ldw7x"
+    },
+    "C4_doc23_structure_t3": {
+      "pass": true,
+      "h1": true,
+      "sections": true,
+      "unexplained": [],
+      "n": 0
+    },
+    "C5_postaudit_numeric_drift": {
+      "pass": true,
+      "numeric_tokens_in_diff": [],
+      "changed_lines": 12
+    }
+  },
+  "violations": []
+}

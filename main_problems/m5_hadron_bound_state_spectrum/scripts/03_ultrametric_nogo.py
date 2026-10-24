@@ -1,4 +1,4 @@
-"""P16 docs/03 配套 — H3a: 超度量 Coulomb 核類之解析否證（K 通道符號矛盾）
+"""M5 docs/03 配套 — H3a: 超度量 Coulomb 核類之解析否證（K 通道符號矛盾）
 ================================================================================
 H2 得核形式：V_ij = κ q_i q_j x_{f_i f_j}，x_AB = B^(−|ℓ_A−ℓ_B|) ∈ (0,1]（同味 x_AA = 1）。
 H3a 問題：呢一整個核類（任意 κ>0、任意層指派、任意 b）能唔能重現 8 通道 em 譜？
@@ -75,7 +75,7 @@ def diff(init, fin, selfa=False):
     return const, {k: v for k, v in co.items() if v != 0}
 
 print("=" * 96)
-print("P16 docs/03 — H3a: 超度量核類之解析否證")
+print("M5 docs/03 — H3a: 超度量核類之解析否證")
 print("=" * 96)
 rows = []
 for name, i, f, obs, sig in CH:

@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "script": "12_full_audit",
+    "date": "2026-10-24",
+    "python": "/usr/bin/python3",
+    "root": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m5_hadron_bound_state_spectrum"
+  },
+  "pairs": {
+    "01": {
+      "script": "01_chain_green_function.py",
+      "doc": "01_chain_coulomb_kernel.md",
+      "log": "run_01_chain_green_function.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 9,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "02": {
+      "script": "02_ktree_radial_kernel.py",
+      "doc": "02_ktree_radial_kernel.md",
+      "log": "run_02_ktree_radial_kernel.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 2,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "03": {
+      "script": "03_ultrametric_nogo.py",
+      "doc": "03_ultrametric_nogo.md",
+      "log": "run_03_ultrametric_nogo.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 1,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "04": {
+      "script": "04_signed_kernel_identifiability.py",
+      "doc": "04_signed_kernel_nogo.md",
+      "log": "run_04_signed_kernel_identifiability.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 1,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "05": {
+      "script": "05_state_overlap_identifiability.py",
+      "doc": "05_state_kernel_probe.md",
+      "log": "run_05_state_overlap_identifiability.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 0,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "06": {
+      "script": "06_kappa_interval_exclusion.py",
+      "doc": "06_state_sign_reachability.md",
+      "log": "run_06_kappa_interval_exclusion.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 5,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "07": {
+      "script": "07_sign_structure_audit.py",
+      "doc": "07_sign_structure_audit.md",
+      "log": "run_07_sign_structure_audit.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "07_sign_structure_audit.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 3,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "08": {
+      "script": "08_sampleout_channels.py",
+      "doc": "08_sampleout_spin_test.md",
+      "log": "run_08_sampleout_channels.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "08_sampleout_channels.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 4,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": true,
+      "h1_ok": true
+    },
+    "09": {
+      "script": "09_contact_term.py",
+      "doc": "09_contact_term_derivation.md",
+      "log": "run_09_contact_term.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "09_contact_term.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 6,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "10": {
+      "script": "10_tree_two_body.py",
+      "doc": "10_tree_two_body.md",
+      "log": "run_10_tree_two_body.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "10_tree_two_body.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 24,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "11": {
+      "script": "11_scale_fixed_test.py",
+      "doc": "10_tree_two_body.md",
+      "log": "run_11_scale_fixed_test.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "11_scale_fixed_test.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 17,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    }
+  },
+  "counts": {
+    "docs": 11,
+    "scripts": 12,
+    "logs": 13,
+    "json": 12,
+    "claims": {
+      "docs": [
+        "11"
+      ],
+      "scripts": [
+        "11"
+      ],
+      "log_json": []
+    }
+  },
+  "violations": [],
+  "info": [],
+  "integrity": {
+    "I1_tmp_write": [],
+    "I2_ghost_path": [],
+    "I3_vacuous_check": [],
+    "I4_orphan_json": [],
+    "I5_nondocumented_script": [],
+    "I6_missing_root_files": []
+  }
+}

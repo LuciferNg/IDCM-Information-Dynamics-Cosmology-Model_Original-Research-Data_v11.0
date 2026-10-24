@@ -1,4 +1,4 @@
-"""P16 docs/05 配套 — H4a: 態依賴（state-dependent）超度量核之「可否證性」審計
+"""M5 docs/05 配套 — H4a: 態依賴（state-dependent）超度量核之「可否證性」審計
 ================================================================================
 H3a/H3b 用「味標籤 → 固定層」證死；H4a 問：若層係**態依賴**（同一味喺唔同強子可佔唔同層，
 即波函數自由度），8 通道仲有無約束力？
@@ -40,7 +40,7 @@ STATES = list(HAD)
 IDX = {st: k for k, st in enumerate(STATES)}
 NB = len(STATES)
 print("=" * 96)
-print("P16 docs/05 — H4a: 態依賴超度量核之可否證性審計")
+print("M5 docs/05 — H4a: 態依賴超度量核之可否證性審計")
 print("=" * 96)
 print(f"獨立強子態 = {NB}（每態有 2 或 3 個價夸克，層自由 ⟹ 參數 ≥ {sum(len(s)-1 for s in STATES)} + 1）")
 print(f"數據方程 = {len(CH)} ⟹ 自由度嚴重過剩，先驗預期「擬合必然可行」")
@@ -130,7 +130,7 @@ kap0 = best[0][1]
 for k, v in REF.items():
     print(f"    κ / {k:22s} = {kap0 / v:.6f}")
 print(f"  ⟹ κ ≈ {kap0:.4f} MeV 嘅絕對值屬**量綱定義**（同 M₀ 一樣：絕對數值 = 單位制 artifact 偽命題）")
-print("  ⟹ P16 只可交付**比值**（如 n−p = −κ/3）；κ 絕對值 = hadronic scale 識別，非本 O 可推")
+print("  ⟹ M5 只可交付**比值**（如 n−p = −κ/3）；κ 絕對值 = hadronic scale 識別，非本 O 可推")
 
 out = {"n_states": NB, "n_trials": NTRIAL, "dof": dof,
        "hits_chi2_3": hits1, "hits_chi2_9": hits,

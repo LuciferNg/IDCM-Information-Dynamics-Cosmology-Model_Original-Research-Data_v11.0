@@ -1,0 +1,13 @@
+================================================================================================
+M4 docs/24 — 第二輪審計（增量）：審計審計自身 ＋ 審計後改動核對
+================================================================================================
+
+[C1] scripts/ 自 ea59cf9 起零改動：✅  
+[C2] docs/23 宣稱 vs JSON：✅  配對=22 全同=True exit0=True docstring=True JSON違規=0
+[C3] 抽樣重跑：✅  {'07_hit_followup': {'exit': 0, 'identical': True}, '15_exponent8': {'exit': 0, 'identical': True}, '16_scale_operator': {'exit': 0, 'identical': True}}
+[C4] docs/23 結構=True H1=True T3 未解釋=0 []
+[C5] 審計後改動數值漂移：✅ 零（改動行 12）
+
+[違規] 0 []
+
+→ data/24_audit_round2.json

@@ -1,4 +1,4 @@
-"""P16 docs/10 配套（A2a）— 樹層兩體問題：(a, t) 兩未知、兩方程（A_D, K_D），再盲測 K 通道
+"""M5 docs/10 配套（A2a）— 樹層兩體問題：(a, t) 兩未知、兩方程（A_D, K_D），再盲測 K 通道
 ================================================================================
 ⚠️ 版本史（誠實記錄，append-only）：
   v1（本日首跑，已封存 `scripts/deprecated/10_v1_minE_bug.py`，log = `data/run_10_tree_two_body.v1_buggy.log`）
@@ -63,7 +63,7 @@ def solve_t(a_fm, target=A_D):
 
 
 print("=" * 96)
-print("P16 docs/10 — A2a: 樹層兩體問題求解 (a, t) ⟹ 盲測 K 通道")
+print("M5 docs/10 — A2a: 樹層兩體問題求解 (a, t) ⟹ 盲測 K 通道")
 print("=" * 96)
 
 scan = []

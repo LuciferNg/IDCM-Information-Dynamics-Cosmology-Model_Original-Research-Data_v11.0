@@ -1,4 +1,4 @@
-"""P16 docs/07 配套 — H5a: H4b 存活號組合之結構性審計（s_d = −1 可否由量子數／A₅ 分級導出？）
+"""M5 docs/07 配套 — H5a: H4b 存活號組合之結構性審計（s_d = −1 可否由量子數／A₅ 分級導出？）
 ================================================================================
 H4b 唯一存活號組合：{s_u, s_d, s_s, s_c} = {+1, −1, +1, ±1}（全域翻號等價 ⟹ 4 個等價類）。
 H5a 問題：呢個號向量能唔能寫成**已登記結構**嘅 Z₂ 特徵（charge／strangeness／isospin／baryon／
@@ -27,7 +27,7 @@ def canon(d):
 
 REQ_C = {canon(r) for r in REQ}
 print("=" * 96)
-print("P16 docs/07 — H5a: H4b 存活號組合之結構性審計")
+print("M5 docs/07 — H5a: H4b 存活號組合之結構性審計")
 print("=" * 96)
 print(f"需求類（s_u = +1 規範）= {sorted(REQ_C)}")
 
@@ -63,7 +63,7 @@ verdict = ("非結構：候選空間命中密度 = %d/%d = %.1f%% ≫ 門檻 %.2
            "（A₅ 路線亦因缺 flavour→vertex 映射而不可用）" % (len(match), len(cands), 100 * density, 100 * THRESH)
            if density > THRESH else "結構性（密度低於門檻）")
 print(f"\n[判定] {verdict}")
-print("  ⟹ P16 收緊結論：8 通道 + 超度量核（正／號／態依賴）全部得唔到結構性結果；")
+print("  ⟹ M5 收緊結論：8 通道 + 超度量核（正／號／態依賴）全部得唔到結構性結果；")
 print("    唯一出路 = 由 lattice Hamiltonian H_ℓ 導出 ψ（H5b），否則本核路線終止。")
 
 out = {"required_classes": sorted(REQ_C),
