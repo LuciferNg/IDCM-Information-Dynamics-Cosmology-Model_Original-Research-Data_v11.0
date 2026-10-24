@@ -86,6 +86,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -181,6 +185,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -278,6 +286,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -373,6 +385,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -470,6 +486,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -565,6 +585,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -662,6 +686,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -757,6 +785,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -854,6 +886,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -949,6 +985,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -1046,6 +1086,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1141,6 +1185,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -1238,6 +1286,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1333,6 +1385,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -1430,6 +1486,10 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1525,6 +1585,10 @@
         ],
         [
           "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
           true
         ]
       ],
@@ -1622,6 +1686,110 @@
         [
           "18_g_kernel_first_pass.json",
           true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 5,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "19": {
+      "script": "19_two_sector.py",
+      "doc": "18_two_sector.md",
+      "log": "run_19_two_sector.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1635,21 +1803,21 @@
         "ctx": []
       },
       "sections_ok": true,
-      "has_criteria_section": false,
+      "has_criteria_section": true,
       "h1_ok": true
     }
   },
   "counts": {
-    "docs": 17,
-    "scripts": 18,
-    "logs": 20,
-    "json": 18,
+    "docs": 18,
+    "scripts": 19,
+    "logs": 21,
+    "json": 19,
     "claims": {
       "docs": [
-        "17"
+        "18"
       ],
       "scripts": [
-        "18"
+        "19"
       ],
       "log_json": []
     }
