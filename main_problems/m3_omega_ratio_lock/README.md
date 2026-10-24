@@ -13,6 +13,7 @@
 | `docs/01_round1_partition_null.md` | 第一輪：譜身份、T1 分割 null、T2 剛性 | 部分推進 |
 | `docs/02_round2_g3_assignment.md` | 第二輪 G3：閉式、B 剛性、分母張力、R1/R2 分叉 | 部分推進 |
 | `scripts/02_round2_g3_assignment.py` | 5/5 PASS | — |
+| —（附註）| O163 docs/04 (a)–(d) 對接：答 (b)(c)、剩 (a)(d)；R3 式 `Ω=(N_gen:B²:N_d−N_gen)/(N_d+B²)` | docs/02 §10 |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
