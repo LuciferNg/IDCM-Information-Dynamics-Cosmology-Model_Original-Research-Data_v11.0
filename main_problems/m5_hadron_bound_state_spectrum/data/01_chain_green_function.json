@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "script": "01_chain_green_function",
+    "date": "2026-10-24",
+    "N": 88,
+    "note": "首版 sympy DFT 超時；改閉式+精確矩陣驗證（L⁺ 唯一）"
+  },
+  "verify": [
+    {
+      "N": 8,
+      "symmetric": true,
+      "rowsum_zero": true,
+      "max_residual": "0"
+    },
+    {
+      "N": 12,
+      "symmetric": true,
+      "rowsum_zero": true,
+      "max_residual": "0"
+    },
+    {
+      "N": 88,
+      "symmetric": true,
+      "rowsum_zero": true,
+      "max_residual": "0"
+    }
+  ],
+  "g": {
+    "g0": [
+      2581,
+      352
+    ],
+    "g1": [
+      2407,
+      352
+    ],
+    "g2": [
+      2237,
+      352
+    ],
+    "g44": [
+      -1291,
+      352
+    ]
+  },
+  "non_additivity": {
+    "E": {
+      "A": -0.9573863636363636,
+      "B": 6.1335227272727275,
+      "C": 19.076704545454547,
+      "D": 20.03125
+    },
+    "spread": 20.988636363636363
+  },
+  "kappa_MeV": 0.2698603140227396
+}

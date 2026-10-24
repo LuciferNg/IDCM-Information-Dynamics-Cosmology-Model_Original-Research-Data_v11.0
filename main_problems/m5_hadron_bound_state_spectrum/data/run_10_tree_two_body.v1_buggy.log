@@ -1,0 +1,17 @@
+================================================================================================
+P16 docs/10 — A2: 樹層兩體本徵問題 ⟹ 解 (a, t) ⟹ 盲測 K 通道
+================================================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m5_hadron_bound_state_spectrum/scripts/10_tree_two_body.py", line 78, in <module>
+    sol = mp.findroot(resid, [mp.log("0.3"), mp.log("0.5")], tol=mp.mpf("1e-20"), maxsteps=200)
+  File "/home/wsl/.local/lib/python3.13/site-packages/mpmath/calculus/optimization.py", line 969, in findroot
+    for x, error in iterations:
+                    ^^^^^^^^^^
+  File "/home/wsl/.local/lib/python3.13/site-packages/mpmath/calculus/optimization.py", line 660, in __iter__
+    s = self.ctx.lu_solve(Jx, fxn)
+  File "/home/wsl/.local/lib/python3.13/site-packages/mpmath/matrices/linalg.py", line 224, in lu_solve
+    A, p = ctx.LU_decomp(A)
+           ~~~~~~~~~~~~~^^^
+  File "/home/wsl/.local/lib/python3.13/site-packages/mpmath/matrices/linalg.py", line 149, in LU_decomp
+    raise ZeroDivisionError('matrix is numerically singular')
+ZeroDivisionError: matrix is numerically singular
