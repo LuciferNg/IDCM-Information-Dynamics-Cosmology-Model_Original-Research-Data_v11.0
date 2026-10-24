@@ -28,6 +28,8 @@
 | `scripts/08_round8_correction_k.py` | 12/12 PASS | — |
 | `docs/09_round9_gamma1_identity.md` | 第九輪 γ₁ 身份：`∏γ=N_d`、全譜∈ℤ[γ₁]、deg 20 unit、分形倍頻 | 推進 |
 | `scripts/09_round9_gamma1_identity.py` | 16/16 PASS | — |
+| `docs/10_round10_omega_b_fork.md` | 第十輪 Ω_b 攻堅：張力=一個 bit；`N_d=45` 失敗 8/8；`N_d=B·L₅`；CMB-S4 預註冊 | 推進 |
+| `scripts/10_round10_omega_b_fork.py` | 12/12 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
