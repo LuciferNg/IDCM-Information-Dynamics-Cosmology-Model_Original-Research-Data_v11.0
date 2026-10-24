@@ -98,6 +98,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -205,6 +209,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -314,6 +322,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -421,6 +433,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -530,6 +546,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -637,6 +657,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -746,6 +770,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -853,6 +881,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -962,6 +994,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1069,6 +1105,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -1178,6 +1218,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1285,6 +1329,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -1394,6 +1442,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1501,6 +1553,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -1610,6 +1666,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1717,6 +1777,10 @@
         ],
         [
           "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
           true
         ]
       ],
@@ -1826,6 +1890,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1934,6 +2002,10 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1957,7 +2029,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_dno9aa6e/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_i2_ipnh8/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -2045,13 +2117,17 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 83,
+        "derived": 92,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2068,7 +2144,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_dno9aa6e/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_i2_ipnh8/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -2156,13 +2232,129 @@
         [
           "21_R_ceiling.json",
           true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 2,
+        "external": 0,
+        "derived": 42,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "22": {
+      "script": "22_registered_family.py",
+      "doc": "20_registered_family.md",
+      "log": "run_22_registered_family.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
         "meta": 1,
         "external": 0,
-        "derived": 40,
+        "derived": 2,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2174,16 +2366,16 @@
     }
   },
   "counts": {
-    "docs": 19,
-    "scripts": 21,
-    "logs": 23,
-    "json": 21,
+    "docs": 20,
+    "scripts": 22,
+    "logs": 24,
+    "json": 22,
     "claims": {
       "docs": [
-        "19"
+        "20"
       ],
       "scripts": [
-        "21"
+        "22"
       ],
       "log_json": []
     }
