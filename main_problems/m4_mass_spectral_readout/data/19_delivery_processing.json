@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "script": "19_delivery_processing",
+    "date": "2026-10-24",
+    "seed": 20261033
+  },
+  "A_verify": {
+    "gamma1": 0.005095770779492917,
+    "gamma44": 4.0,
+    "inv_g1": 196.24116611059782,
+    "cap_4_over_g1": 784.9646644423913,
+    "recurrence_max_err": 2.220446049250313e-15,
+    "gamma2_identity_sympy": "0",
+    "c_identity_err": 0.0
+  },
+  "B": [
+    {
+      "pair": "τ/e",
+      "ratio": 3477.228280018971,
+      "exceeds_cap": true
+    },
+    {
+      "pair": "t/e",
+      "ratio": 338082.88647168456,
+      "exceeds_cap": true
+    },
+    {
+      "pair": "t/c",
+      "ratio": 135.7109190887667,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "μ/e",
+      "ratio": 206.76828298766566,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "b/s",
+      "ratio": 44.72501604964691,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "c/s",
+      "ratio": 13.620800342392469,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "s/d",
+      "ratio": 19.885106382978723,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "d/u",
+      "ratio": 2.175925925925926,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "τ/μ",
+      "ratio": 16.81702933242618,
+      "exceeds_cap": false
+    },
+    {
+      "pair": "p/e",
+      "ratio": 1836.1526734252586,
+      "exceeds_cap": true
+    }
+  ],
+  "C1": [
+    {
+      "pair": "τ/e",
+      "ratio": 3477.228280018971,
+      "nearest_int": 3477,
+      "dev_pct": 0.0065654305139828395
+    },
+    {
+      "pair": "p/e",
+      "ratio": 1836.1526734252586,
+      "nearest_int": 1836,
+      "dev_pct": 0.008315546038062394
+    },
+    {
+      "pair": "μ/e",
+      "ratio": 206.76828298766566,
+      "nearest_int": 207,
+      "dev_pct": 0.1119405856687683
+    },
+    {
+      "pair": "τ/μ",
+      "ratio": 16.81702933242618,
+      "nearest_int": 17,
+      "dev_pct": 1.0762980445518822
+    }
+  ],
+  "C2": {
+    "family_size": 2042050,
+    "p_within_1pct": 0.03678,
+    "p_within_0p1pct": 0.01966
+  },
+  "D": {
+    "A_over_M0": 5.8900218863789954e-08,
+    "best_unbounded": {
+      "n": 4989052423542202,
+      "k": 10,
+      "dev_pct": 0.0
+    },
+    "best_n_le_200": {
+      "n": 87,
+      "k": 4,
+      "A_pred_eV": 1.6367307248738878,
+      "dev_pct": 0.4040036708782724
+    },
+    "family_hits": 2,
+    "family_size": 2400
+  }
+}

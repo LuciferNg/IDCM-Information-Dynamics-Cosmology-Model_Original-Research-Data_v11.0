@@ -17,7 +17,9 @@
 
 **Q2/Q3 追推（`docs/18_em_constraints.md`）**：8 通道實證譜 ⟹ em operator 四類形式全排除（電荷加性 R²=0.003、sub-count R²=0.089、spectator 獨立 spread 3.578 MeV、單一幂律 worst 117%）；K/N 一致（spread 0.107）再證 H1；operator 必須含 mode-level 資訊 ⟹ **Q2/Q3 blocked-by-O140**（flavour→mode 映射）。
 
-詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/18`。
+**O140／P6 交付處理（`docs/19_delivery_processing.md`）**：✅ O140 五項全核實（≤1.1e-13）；🔴 ℤ[γ₁] 多項式框架無鑑別力（deg-0 空洞：τ/e 0.0066%；deg≥1 密度 1.97% ⟹ Q5 判死）；硬約束：單模上限 `4/γ₁=784.9647` ⟹ 跨代/跨類必須多模；🟡 A 線索 `87γ₁⁴M₀=1.63673 eV`（0.404%，未過門檻）。
+
+詳見 `01_problem_record.md`（§八／§十一／§十二）／`SESSION_START.md`／`docs/13`–`docs/19`。
 
 ## 檔案
 
@@ -25,9 +27,9 @@
 |:----|:-----|:----:|
 | `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十）＋ **開放問題整理（§十一）** ＋ **審計記錄（§十二）** | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 18 檔（`01–18`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
-| `scripts/` | 計算腳本（18 檔：01–08 遷入、09–18 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（20 log ＋ 9 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
+| `docs/` | 19 檔（`01–19`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
+| `scripts/` | 計算腳本（19 檔：01–08 遷入、09–19 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`） | 部分閉合 |
+| `data/` | stdout log ＋ JSON（21 log ＋ 10 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
 
 ## 編號規則
 
