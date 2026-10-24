@@ -212,6 +212,29 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 
 累計 111 PASS / 0 FAIL。
 
+## 十三、2026-10-24 第八輪（更正：`b₁ ⟹ k=1` 滑步）
+
+```text
+腳本: scripts/08_round8_correction_k.py   12/12 PASS
+輸出: data/08_round8.out
+文檔: docs/08_round8_correction_k.md
+觸發: 用戶質疑「單環？不是 44 個有各自頻率的點嗎」
+```
+
+| 結果 | 內容 |
+|:--|:--|
+| ⚠️ 質疑成立 | 44 個頻率 = **同一分量之 44 個模式**；每模式有自己相位，global U(1) 下**全部 physical** |
+| 🔴 撤回 | round 7 之 `k = b₁ ⟹ W∈ℂ`：`b₁` 數 **gauge holonomy**（局部 U(1) 專用），與場分量無關 |
+| ★ 正確判據 | `k = gapless 模式數`（凝聚必有 VEV ⟹ 必無 gap）：唯一零模 `n=0` ⟹ `k=1` |
+| 譜 | `γ_1 = 0.00509577`（有 gap）、`γ_22 = 2`、`γ_44 = 4`；相異值 45 |
+| 精確 | `k=1` rank 87 / nullity 1；`k=2` rank 174 / nullity 2 ⟹ `k≥2` 多一個無質量純量 |
+| 保留 | `nullity L(C₈₈)=1`、`2×C₈₈ ⟹ 2`、`T∩R` 維 1、預算 projective FAIL-ROUTE |
+| 改證 | 「鏈係環」改由「相位 ∈ S¹ + 世界環封閉」得出（🟡），唔用 holonomy |
+
+累計 123 PASS / 0 FAIL。
+
+---
+
 ---
 
 ---

@@ -23,7 +23,9 @@
 | `docs/06_round6_f2_onedim.md` | 第六輪 F2：相位秩 + 譜指紋（1D 100% vs 2D ≤53%）+ 否證 A₅ 群路線 | 部分推進 |
 | `scripts/06_round6_f2_onedim.py` | 20/20 PASS | — |
 | `docs/07_round7_single_component.md` | 第七輪 單分量：`k=b₁`（C₈₈=1 ⟹ W∈ℂ；P₈₈=0 ⟹ 鏈必為環）+ 否證預算判 k | 部分推進 |
-| `scripts/07_round7_single_component.py` | 13/13 PASS | — |
+| `scripts/07_round7_single_component.py` | 13/13 PASS（§b₁ 部分已由 docs/08 更正）| — |
+| `docs/08_round8_correction_k.md` | 第八輪 **更正**：撤回 `b₁⟹k`；改判據 `k = gapless 數 = 1`（44 模式 ≠ 44 分量）| 更正 |
+| `scripts/08_round8_correction_k.py` | 12/12 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
