@@ -3,18 +3,18 @@
 <!-- registry
 pid:     M3
 title:   Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）
-state:   registered
+state:   partial
 verdict: -
-flags:   register-only
+flags:   register-only; round1-g1-g4-closed; g3-open
 owner:   M3
 created: 2026-10-15
-updated: 2026-10-15
+updated: 2026-10-24
 prereq:  O215 (Ω 預算 3/16/41) + O39 (⟨W⟩²=61.5) + O121 (同步池) + O212 (dof=1) + O223 (|A₅|=60) + M2 (同步↔脫同步互換)
 source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼必須限制在3/60（5%）和Ω_m 為什麼是16/60, 兩者之間又和Ω_Λ 41/60有什麼比例的硬性鎖定？」，只開不推
 -->
 
 > **Session**: 2026-10-15（v11 Reality-Architecture 建立）
-> **狀態**: 📄 **已註冊 — 未開始（只開不推；推導用新 session）**
+> **狀態**: 🟡 **部分推進（2026-10-24 第一輪：G1/G4 關閉、G3 開放）—— 見 `docs/01_round1_partition_null.md`**
 > **來源**: 調律者 2026-10-15「在v11.0 開2個新M，現在只開不推」
 > **前置**: O215（Ω 預算 3:16:41）; O39（⟨W⟩²=61.5）; O121（同步池）; O223（|A₅|=60）; M2（互換公式）
 > **位置**: `main_problems/m3_omega_ratio_lock/`
@@ -73,5 +73,28 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 
 ---
 
+## 六、2026-10-24 第一輪進度（開推）
+
+```text
+腳本: scripts/01_round1_spectral_identities.py   18/18 PASS (mpmath dps=50 + sympy 有理核)
+輸出: data/01_round1.out
+文檔: docs/01_round1_partition_null.md
+```
+
+| 結果 | 內容 |
+|:--|:--|
+| ✅ 新定理 | 半譜求和：Σγ = 2M+2、**Σγ_odd = M = N_d**、Σγ_even = M+2、γ_M = 4（Nyquist, 普適）|
+| ✅ 身份鏈 | 3=γ_max−1、16=γ_max²、41=Σγ_odd−γ_max+1、60=Σγ_odd+γ_max²（EXACT 1e-49）|
+| ✅ G4 關閉 | `41=Σγ_odd−γ_max+1` 與 `41=N_d−N_gen` **同一恆等式**（γ_max−1=N_gen），非兩條 |
+| ✅ G1 降級 | 分母 60 = 三份額之和（組合恆等，任意 B 成立）⟹ 非獨立假設；其他 60 全屬數值巧合 |
+| 🟡 G2 收窄 | 預算 = 弧譜重 Σγ_odd + 門檻權重 γ_max²；混合合法性 ⟸ Σγ_odd=N_d（count ≡ weight）|
+| 🔴 G3 開放 | 三扇區↔三區塊賦值理由未推；且「可見=B−1」只喺 B=4 成立（條件恆等, §4b）|
+| 🟡 T1 | 23-operator 字典 16 個分割中 rank 1/16（χ²=5.67 vs 次佳 140）；但係**一致性檢查非結構證據**（Ω_b σ 釘死 a=3）|
+| 🟡 Ω_b | 3/60 = +2.33σ 不變，CMB-S4 判生死 |
+
+下一步: G3（κ 閘門→扇區權重算子化）; T4（Σγ_even/Σγ_odd=23/22 可測比）; Ω_b 判死。
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
-> 當前狀態以 `README.md` 為準；生命週期事件以 v10 `problem_register/`（M3 註冊記錄）為準。
+> 當前狀態以 `README.md` 為準；生命週期事件以 **repo 根 `../problem_register/`**（2026-10-24 由 v10 遷出）為準。

@@ -1,6 +1,6 @@
 # M3 — Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60
 
-## 狀態: 已註冊
+## 狀態: 🟡 部分推進（2026-10-24 第一輪）
 
 Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）。詳見 `01_problem_record.md`／`SESSION_START.md`。
 
@@ -8,8 +8,10 @@
 
 | 檔案 | 描述 | 狀態 |
 |:----|:-----|:----:|
-| `01_problem_record.md` | 問題陳述 + 已確立結構 + 攻堅路線 | 已註冊 |
-| `SESSION_START.md` | 起手式 + 接手起點 | 已註冊 |
+| `01_problem_record.md` | 問題陳述 + 已確立結構 + 攻堅路線 + §八 第一輪結果 | 部分推進 |
+| `SESSION_START.md` | 起手式 + 接手起點 + §六 第一輪進度 | 部分推進 |
+| `docs/01_round1_partition_null.md` | 第一輪：譜身份、T1 分割 null、T2 剛性 | 部分推進 |
+| `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
 
