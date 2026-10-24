@@ -84,4 +84,17 @@ print("  ⊕ 之合法性 = equipartition 之合法性 = 「B=4 下兩條獨立�
 print("  ⟹ 由【額外建模選擇】降級為【一致性條件】（非自由參數）")
 print("  殘餘: 為何 N_d = N_gen·B² − B（44=48−4）本身仍需第一性原理（B=4 特例族）")
 
+# ── §6 生成閉包：整個預算塌縮到 {B, N_gen, L₅} ──────────────────────
+print("\n§6 生成閉包（三個整數 ⟹ 全部預算數）")
+Ng, L5 = 3, 11
+chk("L₅ = N_gen·B − 1  (11 = 12−1)", L5 == Ng*B - 1)
+chk("N_d = B·L₅  (44 = 4×11)", B*L5 == N_d, f"{B*L5}")
+chk("K_tree = N_gen·L₅  (33 = 3×11)", Ng*L5 == M_tree, f"{Ng*L5}")
+chk("Σγ = 2B·L₅ + 2  (90)", 2*B*L5 + 2 == 90, f"{2*B*L5+2}")
+chk("2⟨W⟩² = Σγ + K_tree  (123)", 90 + M_tree == 123)
+chk("60 = N_d + B² ; 41 = N_d−N_gen ; 19 = N_gen+B²",
+    N_d+B**2 == 60 and N_d-Ng == 41 and Ng+B**2 == 19)
+chk("123 = N_gen·(N_d−N_gen) = L₁₀", Ng*(N_d-Ng) == 123, f"{Ng*(N_d-Ng)}")
+print("  ⟹ 全部預算數由 (B=4, N_gen=3, L₅=11) 生成，約束 = L₅ = N_gen·B − 1")
+
 print(f"\n結算: PASS {PASS} / FAIL {FAIL}")

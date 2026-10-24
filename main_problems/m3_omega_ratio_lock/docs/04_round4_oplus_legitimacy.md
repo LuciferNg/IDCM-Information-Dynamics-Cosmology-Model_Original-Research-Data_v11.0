@@ -93,6 +93,29 @@ docs/01 §4b、docs/02 §1 曾把 `3 = B−1`、`Σγ = B(N_d+1)/2` 判為「B=4
 ## §8 檔案
 
 ```
-scripts/04_round4_oplus_legitimacy.py   9/9 PASS (Fraction 精確 + mpmath dps=50)
+scripts/04_round4_oplus_legitimacy.py   16/16 PASS (Fraction 精確 + mpmath dps=50)
 data/04_round4.out
 ```
+
+## §9 生成閉包：整個預算塌縮到三個整數（2026-10-24 追加）
+
+```
+基礎整數:  B = 4 (≡ γ_max, Nyquist) ;  N_gen = 3 (⌈ln B²⌉) ;  L₅ = 11 (Lucas)
+約束:      L₅ = N_gen·B − 1            (11 = 12 − 1)
+
+導出:
+  N_d    = B·L₅      = 44   =  88/2
+  K_tree = N_gen·L₅  = 33
+  Σγ     = 2B·L₅ + 2 = 90
+  2⟨W⟩²  = Σγ+K_tree = 123
+  60     = N_d + B²  ;  41 = N_d−N_gen  ;  19 = N_gen+B²
+  123    = N_gen·(N_d−N_gen) = L₁₀
+  量子   = Σγ/60 = 3/2
+```
+
+實算 16/16 PASS（`data/04_round4.out` §6）。
+⟹ **所有預算數（3/16/41/60/90/123/61.5）都係 `(B, N_gen, L₅)` 之函數**，
+唯一約束 `L₅ = N_gen·B − 1` 即語料既有之 `12 = L₅ + 1`。
+
+**⟹ 全框架只剩一個非平凡輸入**：`L₅ = 11`（或等價：88 = 2B·L₅ = 8×11）。
+若 88 位鏈長可由更深結構導出，則 ⊕ 之最後算術殘餘亦一併降級。
