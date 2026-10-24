@@ -1,33 +1,34 @@
 ================================================================================================
-M5 docs/11 — 全量審計（23 支腳本（不含本審計器） × 21 份推導文檔（不含 docs/11 本身））
+M5 docs/11 — 全量審計（24 支腳本（不含本審計器） × 22 份推導文檔（不含 docs/11 本身））
 ================================================================================================
 
-配對 23 組；deprecated（按設計排除，只列 INFO）=['10_v1_minE_bug.py']
-docs=22 scripts=24 logs=26 json=24
-臨時目錄：/tmp/m5audit_72suo68g
-  [01] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [02] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [03] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [04] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [05] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [06] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [07] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [08] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [09] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [10] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [11] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [13] exit=0 重跑=True docstring=True T3 4/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [14] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [15] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [16] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [17] exit=0 重跑=True docstring=True T3 3/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [18] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [19] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [20] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [21] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [22] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [23] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
-  [24] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+配對 24 組；deprecated（按設計排除，只列 INFO）=['10_v1_minE_bug.py']
+docs=23 scripts=25 logs=27 json=25
+臨時目錄：/tmp/m5audit_b9wcco6f
+  [01] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [02] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [03] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [04] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [05] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [06] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [07] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [08] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [09] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [10] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [11] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [13] exit=0 重跑=True docstring=True T3 4/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [14] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [15] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [16] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [17] exit=0 重跑=True docstring=True T3 3/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [18] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [19] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [20] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [21] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [22] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [23] exit=0 重跑=True docstring=True T3 2/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [24] exit=0 重跑=True docstring=True T3 1/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+  [25] exit=0 重跑=True docstring=True T3 0/0/0 未解釋=0 結構=True json=[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
 
 [完整性掃描]
   I1_tmp_write: 0 
@@ -37,7 +38,7 @@ docs=22 scripts=24 logs=26 json=24
   I5_nondocumented_script: 0 
   I6_missing_root_files: 0 
 
-[計數] actual docs=22 scripts=24 logs=26 json=24；README 宣稱 {'docs': ['22'], 'scripts': ['24'], 'log_json': []}
+[計數] actual docs=23 scripts=25 logs=27 json=25；README 宣稱 {'docs': ['23'], 'scripts': ['25'], 'log_json': []}
 
 [違規] 0
 

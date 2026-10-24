@@ -1,7 +1,7 @@
 {
   "n_claims": 33,
-  "n_pass": 33,
-  "n_fail": 0,
+  "n_pass": 32,
+  "n_fail": 1,
   "claims": [
     {
       "id": "C01",
@@ -343,19 +343,19 @@
     {
       "id": "C21",
       "what": "舊 z=+3.20 全部標示作廢",
-      "computed": 0.0,
+      "computed": 2.0,
       "ref": "root docs",
       "tol": 0.0,
       "doc": 0.0,
-      "pass": true
+      "pass": false
     },
     {
       "id": "C22",
       "what": "README 計數 == 實測",
-      "computed": 46.0,
+      "computed": 48.0,
       "ref": "README",
       "tol": 0.0,
-      "doc": 46.0,
+      "doc": 48.0,
       "pass": true
     }
   ],
@@ -430,5 +430,5 @@
     "K_at_h_star": 4.5464155634221175,
     "ratio": 336.77152321645315
   },
-  "verdict": "✅ 全部 PASS：PDG 輸入可獨立重現（σ_X 四通道一致 0.094 MeV）、重校與形狀量至 1e-4、K 系 z 與 A3/D1 數字至 1e-2、root docs 無未標示污染"
+  "verdict": "🔴 有 FAIL，見 claims"
 }

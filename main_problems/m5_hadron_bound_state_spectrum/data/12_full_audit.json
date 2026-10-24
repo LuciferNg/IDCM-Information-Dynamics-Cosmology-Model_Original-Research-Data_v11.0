@@ -110,6 +110,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -229,6 +233,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -350,6 +358,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -469,6 +481,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -590,6 +606,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -709,6 +729,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -830,6 +854,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -949,6 +977,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -1070,6 +1102,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1189,6 +1225,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -1310,6 +1350,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1429,6 +1473,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -1550,6 +1598,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1669,6 +1721,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -1790,6 +1846,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1909,6 +1969,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -2030,6 +2094,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -2150,6 +2218,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -2173,7 +2245,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_72suo68g/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_b9wcco6f/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -2273,6 +2345,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -2296,7 +2372,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_72suo68g/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_b9wcco6f/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -2395,6 +2471,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -2516,6 +2596,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -2635,6 +2719,10 @@
         ],
         [
           "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
           true
         ]
       ],
@@ -2756,6 +2844,10 @@
         [
           "24_assignment_scope.json",
           true
+        ],
+        [
+          "25_family_resolution.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -2771,19 +2863,143 @@
       "sections_ok": true,
       "has_criteria_section": true,
       "h1_ok": true
+    },
+    "25": {
+      "script": "25_family_resolution.py",
+      "doc": "23_family_resolution.md",
+      "log": "run_25_family_resolution.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 0,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 22,
-    "scripts": 24,
-    "logs": 26,
-    "json": 24,
+    "docs": 23,
+    "scripts": 25,
+    "logs": 27,
+    "json": 25,
     "claims": {
       "docs": [
-        "22"
+        "23"
       ],
       "scripts": [
-        "24"
+        "25"
       ],
       "log_json": []
     }
