@@ -396,10 +396,10 @@
     {
       "id": "C22",
       "what": "README 計數 == 實測",
-      "computed": 52.0,
+      "computed": 54.0,
       "ref": "README",
       "tol": 0.0,
-      "doc": 52.0,
+      "doc": 54.0,
       "pass": true
     }
   ],

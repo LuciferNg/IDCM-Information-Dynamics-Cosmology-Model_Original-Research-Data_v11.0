@@ -1,0 +1,224 @@
+{
+  "K1": {
+    "reachable_from_25": [
+      "02_ktree_radial_kernel.md",
+      "03_ultrametric_nogo.md",
+      "09_contact_term_derivation.md",
+      "10_tree_two_body.md",
+      "12_layer_pin_a3.md",
+      "13_normalisation_fix_and_d1.md",
+      "14_contact_term_corrected.md",
+      "23_family_resolution.md",
+      "24_downstream_recompute.md"
+    ],
+    "edges_in": {
+      "01_chain_coulomb_kernel.md": [],
+      "02_ktree_radial_kernel.md": [],
+      "03_ultrametric_nogo.md": [
+        "02"
+      ],
+      "04_signed_kernel_nogo.md": [
+        "02",
+        "03"
+      ],
+      "05_state_kernel_probe.md": [
+        "03",
+        "04"
+      ],
+      "06_state_sign_reachability.md": [
+        "03",
+        "04",
+        "05"
+      ],
+      "07_sign_structure_audit.md": [
+        "03",
+        "04",
+        "06"
+      ],
+      "08_sampleout_spin_test.md": [
+        "02",
+        "03"
+      ],
+      "09_contact_term_derivation.md": [
+        "03"
+      ],
+      "10_tree_two_body.md": [
+        "02",
+        "09"
+      ],
+      "11_full_audit.md": [
+        "01"
+      ],
+      "12_layer_pin_a3.md": [
+        "09",
+        "10"
+      ],
+      "13_normalisation_fix_and_d1.md": [
+        "09",
+        "10",
+        "12"
+      ],
+      "14_contact_term_corrected.md": [
+        "09",
+        "10",
+        "12",
+        "13"
+      ],
+      "15_independent_verification.md": [
+        "11",
+        "13",
+        "14"
+      ],
+      "16_d2_strong_ib.md": [
+        "13",
+        "14",
+        "15"
+      ],
+      "17_g_kernel_first_pass.md": [
+        "01",
+        "02",
+        "16"
+      ],
+      "18_two_sector.md": [
+        "01",
+        "02",
+        "16",
+        "17"
+      ],
+      "19_shape_ratio_ceiling.md": [
+        "01",
+        "14",
+        "18"
+      ],
+      "20_registered_family.md": [
+        "01",
+        "14",
+        "19"
+      ],
+      "21_sign_theorem.md": [
+        "01",
+        "18",
+        "19",
+        "20"
+      ],
+      "22_assignment_scope.md": [
+        "18",
+        "20",
+        "21"
+      ],
+      "23_family_resolution.md": [
+        "13",
+        "14"
+      ],
+      "24_downstream_recompute.md": [
+        "13",
+        "23"
+      ],
+      "25_rederivation_theorem.md": [
+        "23",
+        "24"
+      ],
+      "26_chain_audit.md": [
+        "11",
+        "15",
+        "23",
+        "24",
+        "25"
+      ]
+    },
+    "edges_out": {
+      "01_chain_coulomb_kernel.md": [],
+      "02_ktree_radial_kernel.md": [],
+      "03_ultrametric_nogo.md": [],
+      "04_signed_kernel_nogo.md": [],
+      "05_state_kernel_probe.md": [
+        "06"
+      ],
+      "06_state_sign_reachability.md": [],
+      "07_sign_structure_audit.md": [],
+      "08_sampleout_spin_test.md": [],
+      "09_contact_term_derivation.md": [],
+      "10_tree_two_body.md": [],
+      "11_full_audit.md": [],
+      "12_layer_pin_a3.md": [],
+      "13_normalisation_fix_and_d1.md": [
+        "10",
+        "12"
+      ],
+      "14_contact_term_corrected.md": [
+        "13",
+        "15"
+      ],
+      "15_independent_verification.md": [],
+      "16_d2_strong_ib.md": [],
+      "17_g_kernel_first_pass.md": [
+        "16"
+      ],
+      "18_two_sector.md": [
+        "17"
+      ],
+      "19_shape_ratio_ceiling.md": [
+        "18"
+      ],
+      "20_registered_family.md": [
+        "19"
+      ],
+      "21_sign_theorem.md": [],
+      "22_assignment_scope.md": [
+        "21"
+      ],
+      "23_family_resolution.md": [],
+      "24_downstream_recompute.md": [
+        "19",
+        "25"
+      ],
+      "25_rederivation_theorem.md": [
+        "19"
+      ],
+      "26_chain_audit.md": []
+    },
+    "forward_violations": [],
+    "mutual": [],
+    "reachable_from_last": [
+      "01_chain_coulomb_kernel.md",
+      "02_ktree_radial_kernel.md",
+      "03_ultrametric_nogo.md",
+      "09_contact_term_derivation.md",
+      "10_tree_two_body.md",
+      "11_full_audit.md",
+      "12_layer_pin_a3.md",
+      "13_normalisation_fix_and_d1.md",
+      "14_contact_term_corrected.md",
+      "15_independent_verification.md",
+      "23_family_resolution.md",
+      "24_downstream_recompute.md",
+      "25_rederivation_theorem.md"
+    ],
+    "leaves": [
+      "04_signed_kernel_nogo.md",
+      "05_state_kernel_probe.md",
+      "06_state_sign_reachability.md",
+      "07_sign_structure_audit.md",
+      "08_sampleout_spin_test.md",
+      "16_d2_strong_ib.md",
+      "17_g_kernel_first_pass.md",
+      "18_two_sector.md",
+      "19_shape_ratio_ceiling.md",
+      "20_registered_family.md",
+      "21_sign_theorem.md",
+      "22_assignment_scope.md"
+    ]
+  },
+  "K2": [],
+  "K3": {
+    "missing": []
+  },
+  "K4": [],
+  "K5": [],
+  "K6": [],
+  "K7_uncovered": [],
+  "fail": [],
+  "info": [
+    "K7 register 未覆蓋 0 份（INFO）"
+  ]
+}
