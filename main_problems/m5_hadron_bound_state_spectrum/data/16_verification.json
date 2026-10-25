@@ -1,7 +1,7 @@
 {
-  "n_claims": 33,
-  "n_pass": 32,
-  "n_fail": 1,
+  "n_claims": 37,
+  "n_pass": 37,
+  "n_fail": 0,
   "claims": [
     {
       "id": "C01",
@@ -343,11 +343,55 @@
     {
       "id": "C21",
       "what": "舊 z=+3.20 全部標示作廢",
-      "computed": 2.0,
+      "computed": 0.0,
       "ref": "root docs",
       "tol": 0.0,
       "doc": 0.0,
-      "pass": false
+      "pass": true
+    },
+    {
+      "id": "C23",
+      "what": "數據 |r| 最大相對偏差（Fraction 精確）",
+      "computed": 0.00017717686565860483,
+      "ref": "docs/23 §三",
+      "tol": 0.001,
+      "doc": 0.0,
+      "pass": true,
+      "unit": "",
+      "rel_err": null
+    },
+    {
+      "id": "C24",
+      "what": "束縛模式 c_ud=True／s_ud=c_s=False（3/3）",
+      "computed": 1.0,
+      "ref": "docs/23 §四bis",
+      "tol": 0.0,
+      "doc": 1.0,
+      "pass": true,
+      "unit": "",
+      "rel_err": 0.0
+    },
+    {
+      "id": "C24b",
+      "what": "r(c_ud)（束縛類，獨立 eig）",
+      "computed": 3.4112638515739606,
+      "ref": "docs/23 §四bis",
+      "tol": 0.005,
+      "doc": 3.411,
+      "pass": true,
+      "unit": "",
+      "rel_err": 7.7353143934501e-05
+    },
+    {
+      "id": "C27",
+      "what": "r 只依 m_h·m_l（乘積不變，dev）",
+      "computed": 0.0,
+      "ref": "docs/23 §二",
+      "tol": 1e-09,
+      "doc": 0.0,
+      "pass": true,
+      "unit": "",
+      "rel_err": null
     },
     {
       "id": "C22",
@@ -410,10 +454,10 @@
   "K_channel": {
     "A": 0.29030205587686886,
     "c": 0.1880222842489025,
-    "E1": 0.8543689086235763,
-    "E2": 0.10227977162796636,
-    "z1": -5.408717243832659,
-    "z2": -3.56864938942165
+    "E1": "17/100",
+    "E2": "-103/50",
+    "z1": -12.532151500644371,
+    "z2": -9.905423803602963
   },
   "a3": {
     "n_bound": 3,
@@ -430,5 +474,5 @@
     "K_at_h_star": 4.5464155634221175,
     "ratio": 336.77152321645315
   },
-  "verdict": "🔴 有 FAIL，見 claims"
+  "verdict": "✅ 全部 PASS：PDG 輸入可獨立重現（σ_X 四通道一致 0.094 MeV）、重校與形狀量至 1e-4、K 系 z 與 A3/D1 數字至 1e-2、root docs 無未標示污染"
 }

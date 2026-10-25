@@ -50,6 +50,8 @@ CLASS = {"s_ud": (M_S, M_L, Q_S, G0), "c_ud": (M_C, M_L, Q_C, G7), "c_s": (M_C, 
 
 
 def shape(a, t, q, mh, ml):
+    """v2（2026-10-25 審計修正）：加回 scripts/15／19 之束縛守門（bound = ⟨B⟩>1e-3 ∧ d_peak≤20）
+    —— v1 缺此守門，s_ud／c_s 之解為尾端帶邊態（d_peak 36–38）而被當作束縛態使用 ⟹ 舊 r 值作廢。"""
     g = ALPHA * q * HBARC / a / t
     Cq = (8 * np.pi / 3) * ALPHA * q / (16 * mh * ml)
     h = Cq * (HBARC / a) ** 3 / t
@@ -59,9 +61,11 @@ def shape(a, t, q, mh, ml):
     v = evec[:, 0]
     w = np.array(NODES) * v ** 2
     w = w / w.sum()
-    return (float((w * np.array(POW)).sum()), float(w[0]),
-            ALPHA * q * (HBARC / a) * float((w * np.array(POW)).sum()) * 1000,
-            Cq * (HBARC / a) ** 3 * float(w[0]) * 1000)
+    rA, P0 = float((w * np.array(POW)).sum()), float(w[0])
+    return (rA, P0,
+            ALPHA * q * (HBARC / a) * rA * 1000,
+            Cq * (HBARC / a) ** 3 * P0 * 1000,
+            int(np.argmax(w)), bool(rA > 1e-3 and int(np.argmax(w)) <= 20))
 
 
 def bisect(f, lo, hi, n=300):
@@ -137,12 +141,14 @@ for kp in (0.2150, 0.26986):
     line = {}
     print(f"     κ = {kp:.5f}（a₀ = {a:.6f} fm、t = {t*1000:.4f} MeV）：")
     for cls, (mh, ml, q, gch) in CLASS.items():
-        rA, P0, A, c = shape(a, t, q, mh, ml)
+        rA, P0, A, c, dpk, bd = shape(a, t, q, mh, ml)
         ch = kp * gch * q
-        r = (A + ch) / c
+        r = (A + ch) / c if bd else float("nan")
         line[cls] = r
+        tag = "✅ 束縛" if bd else "🔴 非束縛（帶邊，d_peak=%d）⟹ r 未定義" % dpk
+        rr = f"{r:9.3f}" if bd else "      N/A"
         print(f"        {cls:6s}（m_h = {mh:.3f}、m_l = {ml:.3f}）⟹ ⟨B⟩ = {rA:.4f}、P₀ = {P0:.4f}、"
-              f"A = {A+ch:8.4f}、c = {c:8.4f} ⟹ **r = {r:9.3f}**")
+              f"d_peak = {dpk:2d} {tag}、A = {A+ch:8.4f}、c = {c:8.4f} ⟹ **r = {rr}**")
     sols[str(kp)] = line
 
 print(f"\n[Z3] 對照（用 |r| 與其 σ 傳播；禁以點估計之比作判）")
@@ -151,6 +157,9 @@ for kp, line in sols.items():
     print(f"     κ = {kp}：")
     chi = {}
     for r in rows:
+        if line[r["class"]] != line[r["class"]]:      # nan ⟹ 非束縛，模型無預言
+            print(f"        {r['family']:26s} 模型 r = N/A（非束縛）⟹ 不入 χ²")
+            continue
         pred = abs(line[r["class"]])
         obs, sd = abs(r["r"]), r["sigma_r"]
         z = (pred - obs) / sd if sd not in (0, float("inf")) else 0.0
@@ -164,7 +173,7 @@ for kp, line in sols.items():
     zs[kp] = {cls: sum(z * z for _, z in lst) for cls, lst in chi.items()}
 
 out = {"data_r": rows, "model_r": sols, "class_chi2": zs,
-       "verdict": "🔴 族間分辨力定理成立：r 為質量函數 ⟹ 同族必須同 r；數據同族跨度 25.5×（s_ud）／13.8×（c_ud）⟹ 兩體 (A,c) 參數化結構上不可能"}
+       "verdict": "🔴 v2 審計修正：加束縛守門後 s_ud／c_s 於 D 校準點（兩 κ 皆）為非束縛帶邊態（d_peak 35–38）⟹ 模型對該兩類無預言；v1 之 13.403／73.963 及 χ² 14.7σ／73.2σ 作廢。結構定理（r 只依 m_h·m_l）不受影響"}
 with open("data/25_family_resolution.json", "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=2, default=str)
 print("\n-> data/25_family_resolution.json")

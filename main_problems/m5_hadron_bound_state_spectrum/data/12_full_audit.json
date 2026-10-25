@@ -2245,7 +2245,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_b9wcco6f/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_9o3n7f0m/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -2353,9 +2353,9 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
-        "derived": 92,
+        "derived": 96,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2372,7 +2372,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_b9wcco6f/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_9o3n7f0m/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -2480,7 +2480,7 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
         "derived": 42,
         "pending": 0,
@@ -2604,7 +2604,7 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
         "derived": 2,
         "pending": 0,
@@ -2978,7 +2978,7 @@
       "t3": {
         "meta": 0,
         "external": 0,
-        "derived": 0,
+        "derived": 11,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,

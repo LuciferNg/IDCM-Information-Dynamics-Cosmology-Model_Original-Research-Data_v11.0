@@ -282,12 +282,97 @@ claim("C20", "0.5287 只出現於更正語境", float(len(bad)), "root docs", 0.
 claims[-1]["doc"] = 0.0
 claims[-1]["pass"] = not bad
 
-z_old = [(f, i) for f in ROOTS for i, ln in enumerate(norm((ROOT / f).read_text()).splitlines(), 1)
-         if "3.20" in ln and "作廢" not in ln and "舊" not in ln]
+# v-ext（2026-10-25）：舊版以 substring "3.20" 判 ⟹ 「73.20」（Ξc z 值）誤觸兩次假陽性
+# ⟹ 改用數字邊界正則：只認獨立之 3.20，不認 73.20／30.20／0.320
+Z_OLD = re.compile(r"(?<![\d.])3\.20(?![\d])")
+z_old = [(f, i, ln.strip()[:60]) for f in ROOTS for i, ln in enumerate(norm((ROOT / f).read_text()).splitlines(), 1)
+         if Z_OLD.search(ln) and "作廢" not in ln and "舊" not in ln]
+z_all = [(f, i) for f in ROOTS for i, ln in enumerate(norm((ROOT / f).read_text()).splitlines(), 1)
+         if Z_OLD.search(ln)]
+print(f"  （舊 z 出現 {len(z_all)} 處，全部需帶作廢標記）")
 print(f"  未標示之舊 z=+3.20：{len(z_old)} 處" + ("" if not z_old else f" ⟹ {z_old[:3]}"))
 claim("C21", "舊 z=+3.20 全部標示作廢", float(len(z_old)), "root docs", 0.0)
 claims[-1]["doc"] = 0.0
 claims[-1]["pass"] = not z_old
+
+# ---------------------------------------------------------------- V5 docs/23（D5，v2 審計修正）
+print("\n" + "=" * 108)
+print("V5 docs/23（D5）獨立驗證：數據 r 精確反解 ＋ 束縛守門模式（np.linalg.eig 路徑）＋ 乘積不變性")
+print("=" * 108)
+from fractions import Fraction as _F
+from math import pi as _pi
+import numpy as _np
+
+# ---- C23 數據側（Fraction 精確）
+FAM = [("K vs K*", "s_ud", "1.374", "1.320"),
+       ("Sigma[-/0]", "s_ud", "2.247", "0.940"),
+       ("Sigma[0/+]", "s_ud", "0.712", "-1.690"),
+       ("D vs D*", "c_ud", "2.260", "0.850"),
+       ("Sigmac", "c_ud", "-3.880", "-3.570"),
+       ("Xic", "c_s", "0.170", "-2.060")]
+DOC_R = {"K vs K*": 98.778, "Sigma[-/0]": 3.877, "Sigma[0/+]": -1.814,
+         "D vs D*": 3.411, "Sigmac": 47.065, "Xic": -2.695}
+worst = 0.0
+for nm, cls, e1, e2 in FAM:
+    E1, E2 = _F(e1), _F(e2)
+    A, c = (E1 + 3 * E2) / 4, (E1 - E2) / 4
+    r = float(A / c)
+    dev = abs(r - DOC_R[nm]) / abs(DOC_R[nm])
+    worst = max(worst, dev)
+    print(f"  {nm:12s} E1={e1:>6s} E2={e2:>7s} ⟹ A={float(A):9.4f} c={float(c):8.4f} r={r:10.4f}"
+          f"（文件 {DOC_R[nm]:10.3f}，dev {dev:.2e}）")
+rec("C23", "數據 |r| 最大相對偏差（Fraction 精確）", worst, 0.0, "docs/23 §三", 1e-3)
+
+# ---- C24 束縛守門模式：獨立 eig 路徑（np.linalg.eig，非 eigh）重解 κ=0.2150 校準點
+B_, L_ = 4, 40
+NODES_ = [1.0] + [B_ * (B_ - 1) ** (d - 1) for d in range(1, L_ + 1)]
+POW_ = [_np.float64(B_) ** (-d) for d in range(L_ + 1)]
+OFF_ = [_np.sqrt(B_)] + [_np.sqrt(B_ - 1)] * (L_ - 1)
+A0D, T0D = 0.243274, 2.5743e-3
+HC_, AL_, KAP = 0.1973269804, 1 / 137.035999084, 0.2150
+G0_, G7_ = 2581 / 352, 1447 / 352
+
+
+def _state(q, mh, ml):
+    g = AL_ * q * HC_ / A0D / T0D
+    Cq = (8 * _pi / 3) * AL_ * q / (16 * mh * ml)
+    h = Cq * (HC_ / A0D) ** 3 / T0D
+    M = _np.diag([-g * POW_[d] - (h if d == 0 else 0.0) for d in range(L_ + 1)])
+    for d in range(L_):
+        M[d, d + 1] = M[d + 1, d] = -OFF_[d]
+    ev, evec = _np.linalg.eig(M)                  # 非 eigh 路徑
+    i = int(_np.argmin(ev.real))
+    v = _np.real(evec[:, i])
+    w = _np.array(NODES_) * v ** 2
+    w /= w.sum()
+    rA, P0 = float((w * _np.array(POW_)).sum()), float(w[0])
+    Aamp = AL_ * q * (HC_ / A0D) * rA * 1000
+    camp = Cq * (HC_ / A0D) ** 3 * P0 * 1000
+    return rA, P0, int(_np.argmax(w)), bool(rA > 1e-3 and int(_np.argmax(w)) <= 20), Aamp, camp
+
+
+pat = {}
+for cls, (q, mh, ml) in {"s_ud": (1 / 3, 0.495, 0.30), "c_ud": (2 / 3, 1.27, 0.30), "c_s": (2 / 3, 1.27, 0.495)}.items():
+    rA, P0, dp, bd, Aamp, camp = _state(q, mh, ml)
+    pat[cls] = (dp, bd, Aamp, camp)
+    print(f"  {cls:5s} ⟨B⟩={rA:.6f} P0={P0:.6f} d_peak={dp:2d} ⟹ {'✅ 束縛' if bd else '🔴 非束縛（帶邊）'}")
+ok_pat = (pat["c_ud"][1] is True) and (pat["s_ud"][1] is False) and (pat["c_s"][1] is False)
+rec("C24", "束縛模式 c_ud=True／s_ud=c_s=False（3/3）", float(ok_pat), 1.0, "docs/23 §四bis", 0.0)
+r_cud = (pat["c_ud"][2] + KAP * G7_ * (2 / 3)) / pat["c_ud"][3]
+print(f"  c_ud（唯一束縛類）r = {r_cud:.4f}（校準恆等 ⟹ 應 3.411）")
+rec("C24b", "r(c_ud)（束縛類，獨立 eig）", r_cud, 3.411, "docs/23 §四bis", 5e-3)
+
+# ---- C27 乘積不變性（r 只依 m_h·m_l）
+def _r_of(q, mh, ml, gch):
+    rA, P0, dp, bd, Aamp, camp = _state(q, mh, ml)
+    return (Aamp + KAP * gch * q) / camp, dp, bd
+
+
+r1, _, _ = _r_of(1 / 3, 0.495, 0.30, G0_)
+r2, _, _ = _r_of(1 / 3, 0.594, 0.25, G0_)
+dev_prod = abs(r1 - r2) / abs(r1)
+print(f"  乘積不變性：r(0.495,0.30)={r1:.6f} vs r(0.594,0.25)={r2:.6f} ⟹ dev {dev_prod:.2e}")
+rec("C27", "r 只依 m_h·m_l（乘積不變，dev）", dev_prod, 0.0, "docs/23 §二", 1e-9)
 
 # ---------------------------------------------------------------- V4 計數
 print("\n" + "=" * 108)
