@@ -22,7 +22,7 @@ POW = [B ** (-d) for d in range(L + 1)]
 OFF = np.array([-np.sqrt(B)] + [-np.sqrt(B - 1)] * (L - 1))
 HBARC, ALPHA = 0.1973269804, 1 / 137.035999084
 M_C, M_S, M_L, Q_C, Q_S = 1.27, 0.495, 0.30, 2 / 3, 1 / 3
-G7 = 1447 / 352
+G0, G7 = 2581 / 352, 1447 / 352
 KAP = 0.2150
 R_DATA_K, R_DATA_D = 98.77777777777769, 3.4113475177304964
 C_K, C_D = 0.0135, 0.3525                     # data |c|
@@ -65,8 +65,8 @@ print(f"\n[B1] 載入 data/21 之 {len(rows)} 個校準點；守門：⟨B⟩ > 
 both, k_only = [], []
 for r in rows:
     a, t = r["a0_fm"], r["t_MeV"] * 1e-3
-    rK, sK = r_of(Q_S, M_S, M_L, a, t, 0.0)          # K 之 r 不含 chain（contact 通道）
-    rD, sD = r_of(Q_C, M_C, M_L, a, t, 0.0)
+    rK, sK = r_of(Q_S, M_S, M_L, a, t, G0)          # K：d_pair = 0 ⟹ g(0)，含 chain（與 scripts/25 同模型）
+    rD, sD = r_of(Q_C, M_C, M_L, a, t, G7)
     if sK["bound"] and sD["bound"] and rK and rD:
         both.append({"kappa": r["kappa"], "a0_fm": a, "t_MeV": r["t_MeV"],
                      "r_K": rK, "r_D": rD, "R": rK / rD,
