@@ -1,0 +1,68 @@
+{
+  "script": "03_null_rigidity.py",
+  "A_sharp_cutoff": {
+    "S26": 26.416534734944,
+    "S27": 29.115463094142196,
+    "target": 28.5,
+    "closest_k": 27,
+    "closest_dev": 0.6154630941421964,
+    "conclusion": "無尖截斷命中 28.5 ⟹ bottleneck n*=27 被迫, f_proj∈(0,1) 唯一"
+  },
+  "B_MC_null": {
+    "N_masks": 10000000,
+    "identity_max_dev": 0.0,
+    "half_integer_hits": 9,
+    "E_range": [
+      4.934663445441121,
+      84.3383465830203
+    ],
+    "identity_note": "Σ 恆等對所有 mask 偏差 0 — 定律係代數, 唔係擬合; 相位 null 為敏感度研究 (對稱 δ), 非 p-value; 28.5 之精確由 f_proj 定義 (O121), 結構內容在 A (尖截斷不可能)",
+    "phase_perturbation": {
+      "N": 1000000,
+      "mean": 28.505071979414407,
+      "std": 0.1641672120471128,
+      "z_of_28.5": -0.030895203440203113,
+      "P_within_0.5": 0.997984
+    }
+  },
+  "C_rigidity": {
+    "dE_df": 2.698928359198196,
+    "f_proj_precision_for_1e-12": 3.7051743022074226e-13,
+    "flip_quantum_range": {
+      "min": 0.005095770779492917,
+      "max": 4.0
+    }
+  },
+  "D_external": {
+    "pred": {
+      "Omega_Lambda": 0.6833333333333333,
+      "Omega_m": 0.31666666666666665
+    },
+    "obs_Planck2018": {
+      "Omega_Lambda": [
+        0.6847,
+        0.0073
+      ],
+      "Omega_m": [
+        0.3153,
+        0.0073
+      ]
+    },
+    "z": {
+      "Omega_Lambda": -0.1872146118721407,
+      "Omega_m": 0.1872146118721407
+    }
+  },
+  "checks": {
+    "A1_no_sharp_cutoff_hits_28.5": true,
+    "A2_28.5_between_S26_S27": true,
+    "A3_f_proj_in_(0,1)": true,
+    "B1_MC_identity_dev_zero": true,
+    "B2_half_integer_hits_rare": true,
+    "C1_quanta_discrete": true,
+    "D1_Planck_within_1sigma": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 7,
+  "n_total": 7
+}

@@ -1,0 +1,38 @@
+{
+  "script": "05_beat_duality.py",
+  "totals": {
+    "Sigma_gamma_energy": "90.0",
+    "Sigma_sqrt_gamma_amplitude": "57.016589855870940235",
+    "cot_pi_176": "56.016589855870940235"
+  },
+  "pools": {
+    "E_proj": "28.5",
+    "E_sync": "61.5",
+    "A_proj": "24.515848127105511426",
+    "A_sync": "32.500741728765428809",
+    "f_E": "0.31666666666666666667",
+    "f_amp": "0.42997745373895137457",
+    "amp_vs_refs": {
+      "19/60": "0.113311",
+      "41/60": "-0.253356",
+      "17/44": "0.0436138"
+    }
+  },
+  "preregistered": {
+    "P_a_m1_MeV": "1.9916975102932092047",
+    "P_b_m44_MeV": "55.8018290224",
+    "P_c_f_amp": "0.42997745373895137457",
+    "note": "M1 未有 data 檔 — 本三個數字在建檔前鎖定"
+  },
+  "checks": {
+    "C1_sum_sqrt_gamma_exact_cot_plus_1": true,
+    "C2_beat_equals_chord": true,
+    "C3_X_involution_amplitude": true,
+    "C4_T_commutes_with_X": true,
+    "C5_amplitude_pool_conserved": true,
+    "C6_amplitude_law_holds": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 6,
+  "n_total": 6
+}

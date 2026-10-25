@@ -1,0 +1,57 @@
+{
+  "script": "04_uniqueness_scaleblind.py",
+  "A_p_family": {
+    "results": {
+      "0.5": {
+        "m_MeV": "684.014582764",
+        "ratio_spread": "28.0172208551"
+      },
+      "1": {
+        "m_MeV": "795.176063569",
+        "ratio_spread": "1.0"
+      },
+      "2": {
+        "m_MeV": "1391.94488884",
+        "ratio_spread": "784.964664442"
+      },
+      "3": {
+        "m_MeV": "2827.96350558",
+        "ratio_spread": "616169.524423"
+      }
+    },
+    "verdict": "只有 p=1: 量子∝γ (E∝m) + 對 γ 加性; p≠1 比值散度>1 且非加性"
+  },
+  "B_scale_blind": {
+    "law": "m/M₀ + E_sync = Σγ",
+    "M0_cancels": true,
+    "verdict": "互換律唔能定 M₀ ⟹ 絕對標度必須外來 (O38 handoff)"
+  },
+  "C_beat_reading": {
+    "sum_sqrt_gamma": "57.016589855870940235",
+    "cot(pi/176)": "56.016589855870940235",
+    "dev": "1.0",
+    "pool": "24.515848127105511426"
+  },
+  "D_rate": {
+    "law_has_time_param": false,
+    "candidates": {
+      "1/88 (tick)": "0.0113636363636",
+      "19/41 (回收率)": "0.463414634146",
+      "41/60 (Ω_Λ)": "0.683333333333",
+      "1/176": "0.00568181818182"
+    },
+    "verdict": "conditional no-go: 速率需新無量綱常數; 零參數下不可導"
+  },
+  "checks": {
+    "A1_p1_quantum_proportional_to_gamma": true,
+    "A2_p_not1_ratio_spread_gt_1": true,
+    "A3_topology_additive_only_p1": true,
+    "B1_scale_blind_M0_cancels": true,
+    "C1_beat_equals_sqrt_gamma": true,
+    "C2_beat_sum_identity_exact": true,
+    "D1_no_time_parameter_in_law": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 7,
+  "n_total": 7
+}

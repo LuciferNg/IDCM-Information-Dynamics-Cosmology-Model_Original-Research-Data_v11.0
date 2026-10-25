@@ -1,0 +1,57 @@
+{
+  "script": "02_exchange_operator.py",
+  "correction_2026_10_24": {
+    "claim": "SESSION_START「投影 = 幂等 P₂=P」只對 binary 模成立",
+    "fact": "σ₂₇ = f_proj = 0.771960195963 ∈ (0,1) ⟹ ‖P²−P‖ = f(1−f) = 0.176037651812 (唔係 0)",
+    "status": "T_pipe = 收縮 (singular values ∈[0,1]); bottleneck 唯一部分模"
+  },
+  "algebra": {
+    "idempotents_in_span{1,σ_bin}": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "-1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ]
+  },
+  "exchange": {
+    "X": "σ ↦ 1−σ (對合)",
+    "invariant": "Σγ",
+    "order_param": "E_sync−E_proj = K_tree (變號)"
+  },
+  "mass": {
+    "form": "m = M₀·E_proj",
+    "sum_rule": "m/M₀ + E_sync = Σγ = 90",
+    "m_total_MeV": "795.1760635692",
+    "q_min_MeV": "0.142176664887",
+    "q_max_MeV": "111.603658045",
+    "M0_MeV": "27.9009145112"
+  },
+  "checks": {
+    "C1_idempotent_classification_binary": true,
+    "C2_X_involution_symbolic": true,
+    "C3_X_swaps_sigma": true,
+    "C4_binary_sector_idempotent_43modes": true,
+    "C5_bottleneck_deviation_f(1-f)_0.17604": true,
+    "C6_PQ_zero_on_binary_sector": true,
+    "C7_X_numeric_square_identity": true,
+    "C8_exchange_swaps_pools": true,
+    "C9_mass_sum_rule": true,
+    "C10_quantum_n44_4M0": true,
+    "C11_gamma_equals_chord2": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 11,
+  "n_total": 11
+}

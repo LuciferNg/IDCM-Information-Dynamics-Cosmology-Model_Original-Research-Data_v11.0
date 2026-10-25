@@ -1,0 +1,51 @@
+{
+  "script": "01_ledger_exact.py",
+  "inputs": {
+    "B": 4,
+    "N_d": 44,
+    "L_6": 18,
+    "gamma": "4*sin^2(pi*n/88)",
+    "n_star": 27,
+    "kernel": "n=28..44 (sync side, sigma=0)"
+  },
+  "values": {
+    "Sigma_gamma": "90",
+    "E_sync": "123/2",
+    "E_proj": "57/2",
+    "K_tree": "33",
+    "f_proj": "0.77196019596272469215",
+    "E_sync_over_E_proj": "41/19",
+    "E_sync_over_Sigma": "41/60",
+    "E_proj_over_Sigma": "19/60",
+    "sharp_cut_n_ge_28": "60.884536905857798248",
+    "sharp_cut_n_le_27": "29.115463094142201752",
+    "bottleneck_term": "0.61546309414220175202"
+  },
+  "sympy_exact": {
+    "sum_sin2_1_44": "45/2",
+    "sum_sin2_1_27": "-sqrt(2)/4 - 4*sin(pi/11)**4 + sin(pi/88)**2 + sin(pi/44)**2 + sin(3*pi/88)**2 + sin(pi/22)**2 + sin(5*pi/88)**2 + sin(3*pi/44)**2 + sin(7*pi/88)**2 + sin(9*pi/88)**2 + sin(5*pi/44)**2 + sin(3*pi/22)**2 + sin(13*pi/88)**2 + sin(7*pi/44)**2 + sin(15*pi/88)**2 + 5*sin(pi/11)**2 + 6",
+    "sum_sin2_28_44": "sqrt(2)/4 + sin(7*pi/22)**2 + sin(29*pi/88)**2 + sin(15*pi/44)**2 + sin(31*pi/88)**2 + sin(4*pi/11)**2 + sin(17*pi/44)**2 + sin(35*pi/88)**2 + cos(pi/11)**2 + sin(37*pi/88)**2 + sin(19*pi/44)**2 + sin(39*pi/88)**2 + cos(pi/22)**2 + sin(41*pi/88)**2 + cos(pi/44)**2 + cos(pi/88)**2 + 3/2"
+  },
+  "checks": {
+    "C1_Sigma_gamma_90_exact": true,
+    "C1_Sigma_gamma_numeric": true,
+    "C2_E_proj_28.5": true,
+    "C3_E_sync_61.5": true,
+    "C4_K_tree_33": true,
+    "C5_pool_sum_Sigma": true,
+    "C6_ratio_41_19": true,
+    "C7_frac_41_60": true,
+    "C8_frac_19_60": true,
+    "C9_f_proj_0.771960": true,
+    "C10_n_star_27": true,
+    "C11_kernel_dim_17": true,
+    "C12_sharp_cut_60.8845": true,
+    "C13_sharp_cut_29.1155": true,
+    "C14_bottleneck_bridge": true,
+    "C15_condensate_anchor": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 16,
+  "n_total": 16,
+  "honest_note": "E_proj=28.5 係 O121 投影預算輸入, f_proj 由它反解 (非硬編碼)。另一側獨立錨: E_sync=⟨W⟩²=μ²/(2λ)=61.5 (O204) ⟹ 28.5=90−61.5 被兩錨夾定。"
+}

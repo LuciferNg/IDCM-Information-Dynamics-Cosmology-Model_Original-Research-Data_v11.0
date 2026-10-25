@@ -3,18 +3,18 @@
 <!-- registry
 pid:     M2
 title:   同步態 ↔ 脫同步態互換公式（質能公式；只開不推）
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   register-only
 owner:   M2
 created: 2026-10-15
-updated: 2026-10-15
+updated: 2026-10-24
 prereq:  O121 (sync sector E_sync=61.5) + O237 (質量=脫相位) + O204 (⟨W⟩²=61.5) + O212 (dof=1) + O73 (c 第一性原理) + O215 (Ω 預算) + M1 (質量檔案 schema)
 source:  調律者2026-10-15: 喺 v11 開新 M——「推從同步態到脫同步態的互換公式（質能公式）」，只開不推
 -->
 
 > **Session**: 2026-10-15（v11 Reality-Architecture 建立）
-> **狀態**: 📄 **已註冊 — 未開始（只開不推；推導用新 session）**
+> **狀態**: 🟡 **partial — 推導已開始**（首輪完成 52/52；見 `docs/01_exchange_law.md`）｜原文 2026-10-15：未開始
 > **來源**: 調律者 2026-10-15「在v11.0 開2個新M，現在只開不推」
 > **前置**: O121（同步池）; O237（質量=脫相位）; O204（⟨W⟩²=61.5）; O212（dof=1）; O73/O213（c）; M1（質量檔案 schema）
 > **位置**: `main_problems/m2_sync_desync_exchange/`
@@ -71,3 +71,27 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「推從同步態到脫同�
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `README.md` 為準；生命週期事件以 v10 `problem_register/`（M2 註冊記錄）為準。
+---
+
+## 附註更正（2026-10-24）
+
+> 原文不動；以下為「四、關鍵數字」表兩項校正（據 v10 corpus 實核，append-only 附註）。
+
+**① 第 55 行 `E_proj = 28.5 = L₅+1/2` — 結構式誤。**
+正確（O121）：`E_proj = (Σγ − K_tree)/2 = (90 − 33)/2 = 28.5`；`E_sync = (Σγ + K_tree)/2 = 61.5`；`E_sync − E_proj = K_tree = 33`。
+（出處：o121/docs/14_g8_three_items.md:28–32；o121/final_result.md:83）
+`L₅ = 11` ⟹ `L₅+½ = 11.5 ≠ 28.5`。`L₇ − ½ = 28.5` 僅數值巧合（L₇ = 29），不可作結構式。
+
+**② 第 56 行 `Σγ = 90 | O37` — 出處誤。**
+正確：`γ_n = B·sin²(πn/88)`、`Σγ = B(N_d+1)/2 = 90`（EXACT）→ **O211** final_result:12；61.5/90 投影守恆前身 → **O33**（closed）。
+**O37** =「W-field 係 KChain 圖上 real scalar 場，完整 Lagrangian」（closed），非 Σγ 主張。
+
+**③ §二「投影 = 幂等: P₂=P」— 只對 binary 模成立。**
+σ₂₇ = f_proj = 0.771960 ∈ (0,1) ⟹ `‖P²−P‖ = f_proj(1−f_proj) = 0.176037651812 ≠ 0`。
+T_pipe 係**收縮**（singular values ∈ [0,1]），bottleneck 為唯一部分模；互換算子 `X: σ↦1−σ` 仍為對合（見 `docs/01_exchange_law.md` §2）。
+
+**④ §一／§二 已被 2026-10-24 推導取代（原文保留）。**
+- ① 守恆帳本 ✅：`m/M₀ + E_sync = Σγ = 90`
+- ② 算子 ✅：`X: σ↦1−σ` 唯一互補對（P 非幂等見③）
+- ③ 標度橋 🔴：`φ^(47+37/528)` 已於 O136 判過度吻合否證 = **禁區**，不得用；本 M 標度盲引理：`m/M₀+E_sync=Σγ` 中 M₀ 相消 ⟹ M₀ 只能外來（O38）
+- §二 三步全部已有結果；§一「未開始」屬歷史快照。

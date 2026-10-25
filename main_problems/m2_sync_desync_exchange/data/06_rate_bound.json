@@ -1,0 +1,32 @@
+{
+  "script": "06_rate_bound.py",
+  "time": {
+    "T_ring_Gyr": "84.637",
+    "T_tick_s": "3.03515976273e+16",
+    "T_tick_Gyr": "0.961784090909"
+  },
+  "rate": {
+    "R_max_per_s": "3.29471948159e-17",
+    "R_max_per_Gyr": "1.03973439512",
+    "per_mode": true
+  },
+  "mass_rate": {
+    "q_max_MeV": "111.603658045",
+    "dmdt_mode_MeV_s": "3.67702746377e-15",
+    "dmdt_mode_kg_s": "6.55489684214e-45",
+    "dmdt_total_MeV_s": "8.27331179348e-14",
+    "dmdt_total_kg_s": "1.47485178948e-43",
+    "dmdt_total_GeV_per_Gyr": "2.61085864254"
+  },
+  "verdict": "速率上界 (零參數, 由 tick 離散性); 實際值 dm/dt = p·R_max, p 未導 ⟹ 值 conditional no-go",
+  "checks": {
+    "B1_tick_equals_Tring_over_88": true,
+    "B2_rate_bound_positive": true,
+    "B3_mass_rate_scales_with_quantum": true,
+    "B4_value_requires_p": true,
+    "B5_no_posthoc_p_adopted": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 5,
+  "n_total": 5
+}
