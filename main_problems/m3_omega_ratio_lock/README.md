@@ -32,6 +32,8 @@
 | `scripts/10_round10_omega_b_fork.py` | 12/12 PASS | — |
 | `docs/11_round11_g3_fork.md` | 第十一輪 G3 裁決：`3=⌈ln B²⌉`；`3=B−1`／鏈-3 否證；`⊕` 獲理由；DM=B² | 推進 |
 | `scripts/11_round11_g3_fork.py` | 8/8 PASS | — |
+| `docs/12_round12_g3a_p4.md` | 第十二輪 (a) 單閘門兩泛函 ＋ (b) P4 橋閉合；`60=Σγ/(3/2)` 導出 | 推進 |
+| `scripts/12_round12_g3a_p4.py` | 15/15 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴

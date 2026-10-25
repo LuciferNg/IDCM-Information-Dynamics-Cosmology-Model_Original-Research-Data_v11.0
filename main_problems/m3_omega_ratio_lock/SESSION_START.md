@@ -5,7 +5,7 @@ pid:     M3
 title:   Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）
 state:   partial
 verdict: -
-flags:   register-only; rounds-1-11; g1-g4-closed; g3-decided; omega_b-preregistered
+flags:   register-only; rounds-1-12; g1-g4-closed; p4-bridge-closed; omega_b-preregistered
 owner:   M3
 created: 2026-10-15
 updated: 2026-10-24
@@ -14,7 +14,7 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 -->
 
 > **Session**: 2026-10-15（v11 Reality-Architecture 建立）
-> **狀態**: 🟡 **部分推進（2026-10-24 十一輪：G1/G2/G4 關閉；G3 已裁決；剩 Ω_b 預言等 CMB-S4）—— 見 `docs/01`–`docs/11`**
+> **狀態**: 🟡 **部分推進（2026-10-24 十二輪：G1–G4 關閉；P4 橋閉合；只剩 Ω_b 預言等 CMB-S4）—— 見 `docs/01`–`docs/12`**
 > **來源**: 調律者 2026-10-15「在v11.0 開2個新M，現在只開不推」
 > **前置**: O215（Ω 預算 3:16:41）; O39（⟨W⟩²=61.5）; O121（同步池）; O223（|A₅|=60）; M2（互換公式）
 > **位置**: `main_problems/m3_omega_ratio_lock/`
@@ -294,6 +294,28 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 | ⚠️ 更正 | (i) docs/03 `P_κ` 應正名「樹層閘門」；(ii) §四 `Ω_b h² = 1/45` 條目錯（1/45 對應 h=2/3；現行 0.0227186）|
 
 累計 159 PASS / 0 FAIL。
+
+## 十七、2026-10-24 第十二輪（(a) 不對稱 ＋ (b) P4 橋）
+
+```text
+腳本: scripts/12_round12_g3a_p4.py   15/15 PASS（Fraction 精確）
+輸出: data/12_round12.out
+文檔: docs/12_round12_g3a_p4.md
+```
+
+| 結果 | 內容 |
+|:--|:--|
+| ★ (a) 統一 | 可見 `⌈ln κ⁻¹⌉ = 3`（深度）、暗 `κ⁻¹ = 16`（標度）⟹ **同一閘門 κ=B⁻² 之兩泛函**；物質 `19 = 3+16` |
+| 🔴 (a) 殘餘 | `B^(L−1) = κ⁻¹` 只喺 B=3,4 成立（`⌈2lnB⌉−1=2`）⟹ 算術重疊，非結構律 |
+| ★ (b) P4 閉合 | M2: `E_sync = ⟨W⟩² = 123/2`、`E_proj = 57/2` ⟹ `E_sync/E_proj = 41/19` **EXACT**；`41/60`、`19/60` EXACT |
+| ★ 互證 | `K_tree = E_sync − E_proj = 33` = M3 `N_gen·L₅` ✓ |
+| ★ 簡化 | **`60 = Σγ/(3/2)` 係導出**（非前提）⟹ 邏輯重排兩層：能量（41:19）→ 閘門（3:16）|
+| ★ ⊕ 降級 | `⊕` 只係換算後寫法（第三輪 (d) 表述層 🟢）|
+| ★ 三路線 | M2 能量 / M3 秩 / 量子換算 全部 41/19 |
+
+累計 174 PASS / 0 FAIL。
+
+---
 
 ---
 
