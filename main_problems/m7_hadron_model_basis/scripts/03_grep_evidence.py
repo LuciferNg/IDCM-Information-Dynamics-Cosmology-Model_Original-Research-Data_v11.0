@@ -40,16 +40,24 @@ def corpus(ver):
     """回傳 (files_rel, head, mode)：優先用 git tracked（可重現），否則全掃（fallback）。"""
     base = os.path.join(ROOT, ver)
     if not os.path.isdir(base):
-        return [], None, "missing"
+        return [], None, "missing", None
     try:
         head = subprocess.run(["git", "-C", base, "rev-parse", "--short", "HEAD"],
                               capture_output=True, text=True, check=True).stdout.strip()
-        tracked = subprocess.run(["git", "-C", base, "ls-files"],
-                                 capture_output=True, text=True, check=True).stdout.splitlines()
+        tree = subprocess.run(["git", "-C", base, "ls-tree", "-r", "HEAD"],
+                              capture_output=True, text=True, check=True).stdout.splitlines()
         rel = os.path.relpath(M7, base)
-        files = [f for f in tracked
-                 if f.endswith((".md", ".py", ".json", ".tex")) and not f.startswith(rel)]
-        return files, head, "git-tracked"
+        pairs = []  # (path, blob_sha)
+        for ln in tree:
+            meta, path = ln.split("\t", 1)
+            blob = meta.split()[2]
+            if path.endswith((".md", ".py", ".json", ".tex")) and not path.startswith(rel):
+                pairs.append((path, blob))
+        pairs.sort()
+        files = [p_ for p_, _ in pairs]
+        # 語料身份 = sha256( sorted "path\0blob" )：與 commit 無關，只隨語料內容變
+        csha = hashlib.sha256("\n".join(f"{p_}\0{b}" for p_, b in pairs).encode()).hexdigest()
+        return files, head, "git-tracked", csha
     except (subprocess.CalledProcessError, OSError):
         out = []
         for dirpath, dirnames, filenames in os.walk(base):
@@ -58,7 +66,8 @@ def corpus(ver):
             for fn in filenames:
                 if fn.endswith((".md", ".py", ".json", ".tex")):
                     out.append(os.path.relpath(os.path.join(dirpath, fn), base))
-        return sorted(out), None, "walk-fallback"
+        return sorted(out), None, "walk-fallback", hashlib.sha256(
+            "\n".join(sorted(out)).encode()).hexdigest()
 
 
 CORPUS = {}
@@ -100,8 +109,8 @@ def main():
     print("=" * 100)
     print("E0 語料指紋（git HEAD tracked files，排除本 M）")
     for v in VERS:
-        hh, nn, mm = CORPUS[v][1], len(CORPUS[v][0]), CORPUS[v][2]
-        print(f"  {v:<38} HEAD={hh}  files={nn}  mode={mm}")
+        hh, nn, mm, cc_ = CORPUS[v][1], len(CORPUS[v][0]), CORPUS[v][2], CORPUS[v][3]
+        print(f"  {v:<38} HEAD={hh}  files={nn}  mode={mm}  corpus_sha={cc_[:12]}")
     print("\nE1 概念詞語料命中（排除本 M 目錄）")
     print(f"{'詞':22}" + "".join(f"{v.split('--')[0]:>18}" for v in VERS))
     for name, rx in TERMS:
@@ -135,8 +144,8 @@ def main():
     out = dict(terms=res, verdicts=verdicts, def_sha256=h,
                exclusion="m7_hadron_model_basis 已排除",
                corpus_scope="git HEAD tracked files only（untracked WIP 不計）",
-               fingerprint={v: dict(head=CORPUS[v][1], nfiles=len(CORPUS[v][0]), mode=CORPUS[v][2])
-                            for v in VERS},
+               fingerprint={v: dict(head=CORPUS[v][1], nfiles=len(CORPUS[v][0]), mode=CORPUS[v][2],
+                                    corpus_sha256=CORPUS[v][3]) for v in VERS},
                versions=VERS)
     p = os.path.normpath(os.path.join(M7, "data", "03_grep_evidence.json"))
     with open(p, "w") as f:

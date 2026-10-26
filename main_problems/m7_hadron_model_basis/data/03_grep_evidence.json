@@ -277,17 +277,20 @@
   "IDCM-v9.0--W-Field-Lattice": {
    "head": "60d67ae",
    "nfiles": 407,
-   "mode": "git-tracked"
+   "mode": "git-tracked",
+   "corpus_sha256": "299a36d3848a393552f14c0f599040979875e75eeceae4c09f9d2374cb968b4f"
   },
   "IDCM-v10.0--It-From-Beat": {
    "head": "151ec75a",
    "nfiles": 10247,
-   "mode": "git-tracked"
+   "mode": "git-tracked",
+   "corpus_sha256": "f71f6d39776e93876a66bbe065834c60837d410140d70d0adc9ab8bb98299a63"
   },
   "IDCM-v11.0--Reality-Architecture": {
-   "head": "1ee1ee2",
+   "head": "5e0b80d",
    "nfiles": 229,
-   "mode": "git-tracked"
+   "mode": "git-tracked",
+   "corpus_sha256": "d5050c59304fde3f88d64c98388ad14f2e6b09b35883eb4151063d21e6caf08e"
   }
  },
  "versions": [
