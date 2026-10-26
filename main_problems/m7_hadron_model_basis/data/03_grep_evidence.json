@@ -287,7 +287,7 @@
    "corpus_sha256": "f71f6d39776e93876a66bbe065834c60837d410140d70d0adc9ab8bb98299a63"
   },
   "IDCM-v11.0--Reality-Architecture": {
-   "head": "5e0b80d",
+   "head": null,
    "nfiles": 229,
    "mode": "git-tracked",
    "corpus_sha256": "d5050c59304fde3f88d64c98388ad14f2e6b09b35883eb4151063d21e6caf08e"

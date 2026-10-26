@@ -144,8 +144,11 @@ def main():
     out = dict(terms=res, verdicts=verdicts, def_sha256=h,
                exclusion="m7_hadron_model_basis 已排除",
                corpus_scope="git HEAD tracked files only（untracked WIP 不計）",
-               fingerprint={v: dict(head=CORPUS[v][1], nfiles=len(CORPUS[v][0]), mode=CORPUS[v][2],
-                                    corpus_sha256=CORPUS[v][3]) for v in VERS},
+               fingerprint={v: dict(
+                   # host repo（本 M 所屬版本）之 head 每 commit 自變 ⟹ 不記，只留 corpus_sha256
+                   head=(None if M7.startswith(os.path.join(ROOT, v)) else CORPUS[v][1]),
+                   nfiles=len(CORPUS[v][0]), mode=CORPUS[v][2],
+                   corpus_sha256=CORPUS[v][3]) for v in VERS},
                versions=VERS)
     p = os.path.normpath(os.path.join(M7, "data", "03_grep_evidence.json"))
     with open(p, "w") as f:
