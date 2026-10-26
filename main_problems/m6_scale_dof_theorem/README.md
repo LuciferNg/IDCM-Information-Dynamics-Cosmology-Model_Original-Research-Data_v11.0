@@ -4,6 +4,7 @@
 
 > **地位演進**：原 T2 = 定義性歸約（`docs/08` 自審）→ **T2′ = 定理**（`docs/10` 上界 ＋ `docs/12` §2 下界 ＋ `docs/11` β no-go）。
 > 假設明列：H1 Galois 協變、H2 質量繼承晶格關係（`docs/10` §6）；界外：離散 RG 類比（`docs/11` §4）。
+> ★ **H2 已判假**（`docs/13`，2026-10-26）：K_chain 核非加性 20/20 ⟹ 強子層加性不成立；`dof_scale = 1` 以弱理由（全部參數皆 M₀ 倍數）存活，T2′ 上界只覆蓋加性 sector。
 
 問「絕對標度係唔係獨立結構對象」。命題：原子以上皆複合投影（質量加性）⟹ 中間層標度只係計數／插值；全域尺度自由度 = 1（O212 錨）；剩餘唯一非平凡數 = 純計數 `ω_M0/ω_site = 4.095e38`（T3 → M8）。
 
@@ -35,7 +36,9 @@
 | `docs/12_economy_and_homogeneity.md` | 參數經濟（速率軸 ≤6）＋ **齊次性 no-go**（dof=0 不可能） | 🟢 4/4 |
 | `scripts/01–07_*.py` | 推導腳本（精確算術） | 🟢 40/40 ＋ 13/13 |
 | `scripts/08`–`11_*.py` | 自審／對稱／強制單一標度／β＋齊次性 | 🟢 25/25 |
-| `scripts/12_audit_chain.py` | 全鏈審計（十項，唯讀） | 🟢 30/30 |
+| `scripts/12_audit_chain.py` | 全鏈審計（十項，唯讀） | 🟢 37/37 |
+| `docs/13_h2_verdict.md` | **H2 判定**：核非加性 20/20 ⟹ 強子層加性假；dof_scale 以弱理由存活 | 🟢 8/8 |
+| `scripts/13_h2_layer_scope.py` | H2 判定腳本（核加性 ＋ M₀ 標度身份 ＋ 帳本） | 🟢 8/8 |
 | `scripts/04_doc_consistency.py` | 文檔↔數據一致性（32 claims） | 🟢 32/32 |
 | `scripts/run_chain.sh` | 全鏈 driver（預設 dry-run，`--run` 才跑） | 🟢 |
 | `data/01–12_*.json`、`data/run_*.log` | 輸出數據與執行記錄（重跑 byte-identical） | 🟢 |

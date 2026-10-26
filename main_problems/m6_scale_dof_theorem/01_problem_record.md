@@ -225,6 +225,11 @@ source:  調律者2026-10-25「開M6, 只開不推」
 for s in 01 02 03 05 06 07 08 09 10 11  → 全 EXIT=0
 01 20/20｜02 14/14｜03 6/6｜05 5/5｜06 4/4｜07 4/4｜08 4/4｜09 5/5｜10 9/9｜11 7/7
 合計 74/74；10 個 data JSON **md5 byte-identical**（重跑前快照比對）
+
+> **附註更正（2026-10-26 第四輪末）**：上列 `74/74` 係手算錯誤。逐 log 重算實數：
+> `01=20, 02=14, 03=6, 05=5, 06=4, 07=4, 08=4, 09=5, 10=9, 11=7` ⟹ **78/78**（01–11 推導鏈），
+> 加 `13=8` ⟹ **86/86**（現行推導鏈）。`04 一致性 32/32`、`12 審計 37/37` 不計入推導鏈。
+> 全鏈重跑後 **12 個 data JSON md5 全部 byte-identical**。原文不動，以此為準。
 docs 一致性 scripts/04：32/32
 ```
 
@@ -245,7 +250,8 @@ docs 一致性 scripts/04：32/32
 | 類 | 檔 |
 |:--|:--|
 | docs 01–12 | `01_t1_composite_additivity`／`02_t2_scale_dof_theorem`／`03_r4_counterexample_hunt`／`04_t3_handoff_and_verdict`／`05_p_dof_ledger`／`06_kappa_lambda_identifiability`／`07_hidden_layer_mechanism`／`08_framework_self_audit`／`09_upgrade_routes`／`10_forced_single_scale`／`11_beta_no_go`／`12_economy_and_homogeneity` |
-| scripts | `scripts/01_t1_composite_additivity.py`／`scripts/02_t2_scale_dof_theorem.py`／`scripts/03_r4_counterexample_hunt.py`／`scripts/04_doc_consistency.py`／`scripts/05_p_dof_ledger.py`／`scripts/06_kappa_identifiability.py`／`scripts/07_hidden_scales.py`／`scripts/08_framework_self_audit.py`／`scripts/09_symmetry_route.py`／`scripts/10_forced_single_scale.py`／`scripts/11_beta_no_go_and_homogeneity.py`／`scripts/12_audit_chain.py` ＋ `scripts/run_chain.sh` |
+| scripts | `scripts/01_t1_composite_additivity.py`／`scripts/02_t2_scale_dof_theorem.py`／`scripts/03_r4_counterexample_hunt.py`／`scripts/04_doc_consistency.py`／`scripts/05_p_dof_ledger.py`／`scripts/06_kappa_identifiability.py`／`scripts/07_hidden_scales.py`／`scripts/08_framework_self_audit.py`／`scripts/09_symmetry_route.py`／`scripts/10_forced_single_scale.py`／`scripts/11_beta_no_go_and_homogeneity.py`／`scripts/12_audit_chain.py`／`scripts/13_h2_layer_scope.py` ＋ `scripts/run_chain.sh` |
+| docs | `docs/01`–`docs/13`（`docs/01_fan_geometry_prereg.md` … `docs/13_h2_verdict.md`） |
 | data | `01`–`12` 之 `*.json` ＋ `run_*.log` |
 
 ### 15.4 檔案閉合水位（2026-10-26 23:20 建立）
@@ -316,3 +322,57 @@ refs：本 pid 寫出事件 **26 個 ref，0 個無法解析**（首輪工具誤
 | 4 | `register --reuse` **不能**改 title（報 `already registered`） | 無 append-only 改 title 路徑 | 以總結 conclusion 覆寫投影（唯一可行法） |
 
 以上 4 條已寫入 skill `idcm-register-discipline` §6（conclusion/rebuild 規則）。
+
+## 十七、H2 判定：加性在強子層**不成立**（2026-10-26，`docs/13`，`scripts/13` **8/8**）
+
+> 觸發：`docs/10 §6` 將 H2 列為 T2′ 界外；`docs/08 §4` 標為「最嚴重裂縫」。本節判死。
+
+### 17.1 結構判定（獨立重算 M5 閉式）
+
+```
+g(d) = [(N²−1) − 6d(N−d)]/(12N)，N = 88
+g(0) = +7.332386    g(44) = −3.667614    零交叉 d = 18（g(18)=+0.1733 → g(19)=−0.1165）
+加性測試 20 對 (d₁,d₂)：**違反 20/20**
+   g(1)+g(1) = +13.676136  vs  g(2) = +6.355114   （差 2.15×）
+```
+⟹ 樹層兩體核**本質非加性** ⟹ 束縛能結構必然 ⟹ **H2 在強子層不可能成立**
+（非「數值偏離」，係核本身違反加性）。
+
+### 17.2 帳本判定（dof_scale 不變）
+
+| M5 參數 | 以 M₀ 表示 | 判 |
+|:--|:--|:--|
+| κ = 68.5696–70.5744 MeV | M₀ × **2.457611–2.529465** | 無量綱倍數（= `docs/06` λ_κ 窗） |
+| a₀ = 0.377422 fm | `ħc/a₀` = 522.829 MeV = **18.73876 M₀** | 自由無量綱數 0.0533653 = 1/18.7388 |
+| t = 0.7884 MeV | M₀ × **0.0282571** | 無量綱倍數 |
+
+⟹ **冇第二個獨立有量綱輸入** ⟹ `dof_scale = 1` **仍然成立**（`docs/12 §2` 下界不受影響）。
+
+### 17.3 T2′ 範圍修訂
+
+```
+(i)  加性 sector（基本 mode）：Galois 協變 ＋ 關係保持 ⟹ 恰一標度【docs/10，有效】
+(ii) 非加性 sector（強子）：尺度軸仍恰一（全部 M₀ 倍數），但**無**關係保持機制
+(iii) 全域 dof_scale = 1（下界：齊次性；上界：表示法 ＋ 無新標度實證）
+⟹ 「恰一個標度」不變；「為何恰一個」在強子層只剩**弱理由**
+```
+
+### 17.4 帳本惡化（第二次修正，`docs/05` 附註二）
+
+尺度 1 ＋ 速率 ≤6 ＋ 強子層形狀 **2**（a₀、t）⟹ **合計 ≤9**（原報 ≤6）。
+
+### 17.5 跨記錄缺陷（交 M5，本 M 不寫入 M5 目錄）
+
+M5 `docs/01` prose「`g` **遞增**至 d = N/2」與其自身閉式／數值（**遞減**）矛盾；
+`scripts/13` A3 首跑即因此 FAIL，修正判準後確認閉式正確、prose 錯。
+→ register `handoff --target-pid M5` 附本節 ref，由 M5 session 自行更正。
+
+### 17.6 判決表
+
+| 項 | 判決 |
+|:--|:--|
+| H2（強子層加性） | 🔴 **假** |
+| T1 適用範圍 | 🟡 限基本 mode 層，禁推廣至強子 |
+| `dof_scale = 1` | ✅ 不變 |
+| T2′ 上界範圍 | 🟡 收窄至加性 sector |
+| 無量綱帳本 | 🔴 1 尺度 ＋ **≤9**（原 ≤6） |

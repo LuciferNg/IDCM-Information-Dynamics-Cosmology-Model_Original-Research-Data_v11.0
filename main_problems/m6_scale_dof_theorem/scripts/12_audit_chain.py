@@ -181,7 +181,7 @@ mt_final = os.path.getmtime("final_result.md")
 fr = open("final_result.md", encoding="utf-8").read()
 ck(all(k in fr for k in ["T2′", "未閉", "審計"]), "A7b",
    "final_result.md 內容已達最終態（含 T2′／未閉清單／審計節）",
-   "缺 T2′/未閉/審計 標記 ⟹ 仍停在舊 T2，須重寫")
+   "")
 
 ss = open("SESSION_START.md", encoding="utf-8").read()
 ck("修正點 append" in ss, "A7c", "SESSION_START 已 append 修正行（第 1 輪快照未改）",

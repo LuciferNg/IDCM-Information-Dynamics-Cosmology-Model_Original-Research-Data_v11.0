@@ -1,0 +1,29 @@
+{
+ "checks": {
+  "A_kernel_additivity": {
+   "g0": 7.332386363636363,
+   "g44": -3.6676136363636362,
+   "pairs_tested": 20,
+   "violations": 20,
+   "verdict": "kernel intrinsically non-additive"
+  },
+  "B_scales": {
+   "kappa_over_M0": [
+    2.457611157196816,
+    2.529465431510042
+   ],
+   "hbar_c_over_a0_MeV": 522.8285060224364,
+   "hbar_c_over_a0_over_M0": 18.738758425035037,
+   "t_over_M0": 0.028257137803545152
+  },
+  "C_ledger": {
+   "尺度軸": "1（docs/10 上界：僅覆蓋**加性 sector**；docs/12 下界：恆 ≥1）",
+   "速率軸": "≤6（docs/05 附註：7 軌道速率 − 1 正規化）",
+   "強子層形狀": "2（a₀、t 之校準值；M5 docs/12–13 之 5 標度律 × 3 模式 = 0 命中 ⟹ 未結構化）",
+   "合計（上界）": "9 個無量綱自由數（6 + 2 + 1 整體速率正規化）"
+  },
+  "H2_verdict": "FALSE at hadron layer; dof_scale = 1 survives (weak route)"
+ },
+ "pass": 8,
+ "fail": 0
+}
