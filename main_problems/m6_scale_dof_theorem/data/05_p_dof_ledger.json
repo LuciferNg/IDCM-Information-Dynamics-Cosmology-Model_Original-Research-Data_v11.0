@@ -1,0 +1,117 @@
+{
+ "checks": {
+  "A": {
+   "dim_p": [
+    0,
+    0,
+    0
+   ],
+   "dim_rate": [
+    1,
+    0,
+    -1
+   ],
+   "dim_wrong": [
+    1,
+    0,
+    0
+   ]
+  },
+  "B": {
+   "jacobian": [
+    [
+     "1",
+     "0"
+    ],
+    [
+     "1",
+     "1"
+    ]
+   ],
+   "det": "1"
+  },
+  "C": {
+   "R_max": 1.0397344,
+   "tick_Gyr": 0.96178409,
+   "coverage": "100%",
+   "samples": [
+    {
+     "p": "0.001",
+     "rate_Gyr^-1": 0.0010397344
+    },
+    {
+     "p": "0.01",
+     "rate_Gyr^-1": 0.010397344
+    },
+    {
+     "p": "0.1",
+     "rate_Gyr^-1": 0.10397344
+    },
+    {
+     "p": "19/41",
+     "rate_Gyr^-1": 0.48182813658536583
+    },
+    {
+     "p": "1/88",
+     "rate_Gyr^-1": 0.011815163636363635
+    },
+    {
+     "p": "1/2",
+     "rate_Gyr^-1": 0.5198672
+    },
+    {
+     "p": "0.9",
+     "rate_Gyr^-1": 0.93576096
+    },
+    {
+     "p": "1.0",
+     "rate_Gyr^-1": 1.0397344
+    }
+   ],
+   "dmdt_total_GeV_Gyr": 2.6109
+  },
+  "D": {
+   "ledger": [
+    {
+     "axis": "scale",
+     "name": "M₀/M_Pl",
+     "value": "4.3758064e+20",
+     "status": "free",
+     "source": "M6 docs/02 §2（dof_scale = 1）"
+    },
+    {
+     "axis": "dimensionless",
+     "name": "p（交換躍遷機率）",
+     "value": "∈(0,1) 未知",
+     "status": "free",
+     "source": "M2 docs/01 §9"
+    },
+    {
+     "axis": "dimensionless",
+     "name": "f_proj",
+     "value": "0.771960195963",
+     "status": "derived",
+     "source": "M2（兩錨解出）"
+    },
+    {
+     "axis": "dimensionless",
+     "name": "γ_n 比值",
+     "value": "∈ℚ(ζ₈₈)⁺",
+     "status": "derived",
+     "source": "M6 docs/01（rank 20 離散集）"
+    },
+    {
+     "axis": "dimensionless",
+     "name": "Ω_Λ, Ω_m, Ω_b",
+     "value": "41/60, 19/60, 1/45",
+     "status": "derived",
+     "source": "O168/O215"
+    }
+   ],
+   "n_scale_free": 1,
+   "n_dimensionless_free": 1
+  }
+ },
+ "pass": 5,
+ "fail": 0
+}

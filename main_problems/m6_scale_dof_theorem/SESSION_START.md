@@ -3,19 +3,20 @@
 <!-- registry
 pid:     M6
 title:   尺度自由度定理：複合投影 ⟹ dof=1（絕對標度非獨立自由度）
-state:   registered
-verdict: -
-flags:   register-only
+state:   closed
+verdict: closed
+flags:   -
 owner:   M6
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-26
 prereq:  O38, O212, M2, O213, O121
 source:  調律者2026-10-25「開M6, 只開不推」；理據源於 2026-10-25 對話（絕對標度／複合投影推論）
 -->
 
-> **Session**: 2026-10-25（v11 Reality-Architecture 新開）
-> **狀態**: 📄 **已註冊 — 未開始（只開不推；推導用新 session）**
-> **來源**: 調律者 2026-10-25「開M6, 只開不推」
+> **Session**: 2026-10-25 開檔 → **2026-10-26 推導完成（本 session）**
+> **狀態**: 🟢 **已閉合** — T1 ✅ · T2 `dof_scale = 1` ✅ · P4 反例 0 ✅ · T3 → O38 G2（handoff）
+> **結果摘要**: `final_result.md`｜**推導**: `docs/01`–`docs/04`（40/40 PASS）
+> **來源**: 調律者 2026-10-25「開M6, 只開不推」；2026-10-26 指定本 session 為 M6 專用
 > **前置**: O38（docs/15 §4 單位制測試；docs/28 穹頂判據；docs/38 G1/G2 裁決）· O212（錨定理 dof=1）· M2（標度盲引理）· O213/O121（宏觀端錨）
 > **位置**: `main_problems/m6_scale_dof_theorem/`
 

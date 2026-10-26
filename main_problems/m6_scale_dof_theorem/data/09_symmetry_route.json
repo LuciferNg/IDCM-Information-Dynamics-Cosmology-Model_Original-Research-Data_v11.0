@@ -1,0 +1,50 @@
+{
+ "checks": {
+  "orbits": {
+   "n_orbits": 7,
+   "sizes": [
+    20,
+    10,
+    5,
+    5,
+    2,
+    1,
+    1
+   ],
+   "sample": [
+    [
+     22,
+     1
+    ],
+    [
+     44,
+     1
+    ],
+    [
+     11,
+     2
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     8,
+     5
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     1,
+     20
+    ]
+   ],
+   "galois_consistency": true,
+   "verdict": "symmetry bounds sectors at 7, not 1"
+  }
+ },
+ "pass": 5,
+ "fail": 0
+}

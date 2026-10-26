@@ -1,0 +1,37 @@
+================================================================================================
+M6 scripts/04 — 文檔↔數據一致性核對（零可調容差）
+================================================================================================
+  [PASS] docs/01_t1_composite_additivity.md         20
+  [PASS] docs/01_t1_composite_additivity.md         24
+  [PASS] docs/01_t1_composite_additivity.md         41,841,412,812
+  [PASS] docs/01_t1_composite_additivity.md         17,592,186,044,416
+  [PASS] docs/01_t1_composite_additivity.md         420.4
+  [PASS] docs/01_t1_composite_additivity.md         20
+  [PASS] docs/01_t1_composite_additivity.md         9100
+  [PASS] docs/01_t1_composite_additivity.md         46
+  [PASS] docs/02_t2_scale_dof_theorem.md            0.771960195963
+  [PASS] docs/02_t2_scale_dof_theorem.md            20.6411
+  [PASS] docs/04_t3_handoff_and_verdict.md          2.457611
+  [PASS] docs/04_t3_handoff_and_verdict.md          2.529465
+  [PASS] docs/02_t2_scale_dof_theorem.md            75.3026
+  [PASS] docs/02_t2_scale_dof_theorem.md            0.561
+  [PASS] docs/02_t2_scale_dof_theorem.md            2.22e-09
+  [PASS] docs/03_r4_counterexample_hunt.md          0.786081
+  [PASS] docs/03_r4_counterexample_hunt.md          22,545,093
+  [PASS] docs/03_r4_counterexample_hunt.md          19,231
+  [PASS] docs/03_r4_counterexample_hunt.md          98,562
+  [PASS] docs/03_r4_counterexample_hunt.md          8.25
+  [PASS] final_result.md                            2.2852931e-21
+  [PASS] docs/05_p_dof_ledger.md                    0
+  [PASS] docs/05_p_dof_ledger.md                    1
+  [PASS] docs/05_p_dof_ledger.md                    1.0397344
+  [PASS] docs/05_p_dof_ledger.md                    0.481828
+  [PASS] docs/06_kappa_lambda_identifiability.md    1,817
+  [PASS] docs/06_kappa_lambda_identifiability.md    10
+  [PASS] docs/07_hidden_layer_mechanism.md          7.994904
+  [PASS] docs/07_hidden_layer_mechanism.md          0.902813
+  [PASS] docs/07_hidden_layer_mechanism.md          4.86e+18
+  [PASS] docs/07_hidden_layer_mechanism.md          10.5622
+  [PASS] docs/07_hidden_layer_mechanism.md          2207
+================================================================================================
+一致性：32/32 PASS

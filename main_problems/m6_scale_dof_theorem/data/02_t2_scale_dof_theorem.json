@@ -1,0 +1,95 @@
+{
+  "pass": 14,
+  "fail": 0,
+  "checks": {
+    "B1": {
+      "solved": 22,
+      "total": 22,
+      "nonzero": {
+        "M0": 7,
+        "c": 12,
+        "hbar": 10
+      }
+    },
+    "B2": {
+      "ratio_example": 0.07742049730106364,
+      "rank_jacobian": 1
+    },
+    "B3": {
+      "N_ratio": 4.375806389819761e+20,
+      "log10": 20.641058098130433
+    },
+    "B4": {
+      "note": "non-additivity shifts lambda (dimensionless), not scale"
+    },
+    "B5": {
+      "t_values": {
+        "m_e": 0.3936188550922226,
+        "m_p": 0.4447056242458433,
+        "t_site": 0.9285412063372667,
+        "τ_depth": 0.9543039819472522
+      },
+      "spread": 0.5606851268550296
+    },
+    "B6": {
+      "worst_bound": 2.2247125783793445e-09
+    },
+    "B7": {
+      "f_proj": 0.7719601959627264,
+      "binary_rigid": true,
+      "d_m_df_proj_MeV": 75.30256942188913
+    },
+    "B8": {
+      "table": [
+        [
+          "M₀ 之絕對數值（MeV）",
+          "scale",
+          "單位制 artifact（O38 docs/15 §4）",
+          "非結構對象"
+        ],
+        [
+          "M_Pl/M₀ = M₀⁻¹√(ħc/G)",
+          "scale",
+          "未閉合（O38 G1 偽命題／G2 計數）",
+          "★唯一標度 dof"
+        ],
+        [
+          "f_proj",
+          "dimensionless",
+          "由兩錨解出（B7b）",
+          "已定"
+        ],
+        [
+          "質量比 λ_i/λ_j",
+          "dimensionless",
+          "∈ ℚ(ζ₈₈)⁺（R1）",
+          "已定（離散）"
+        ],
+        [
+          "Ω_Λ, Ω_m, Ω_b",
+          "dimensionless",
+          "41/60, 19/60, 1/45",
+          "已定（純數）"
+        ],
+        [
+          "交換速率機率 p（M2 §9）",
+          "dimensionless",
+          "corpus 無來源",
+          "未定（唔算標度 dof）"
+        ]
+      ],
+      "n_scale_undetermined": 1
+    },
+    "B9": {
+      "lam_window": [
+        2.4576112002505144,
+        2.5294654758225206
+      ],
+      "n_small_rationals_in_window": 3,
+      "named_hits": {
+        "5/2": 2.5,
+        "√(88/14)": 2.5071326821120348
+      }
+    }
+  }
+}

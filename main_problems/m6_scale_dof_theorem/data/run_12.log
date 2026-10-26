@@ -1,0 +1,65 @@
+================================================================================================
+M6 全鏈審計（唯讀）
+================================================================================================
+  目錄：/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem
+  檔案數：docs 12｜scripts 12｜data json 10｜logs 12
+
+A1 腳本集對稱
+  [PASS] A1a｜四件套所列 7 支腳本全部在磁碟
+  [WARN] A1b｜磁碟 12 支腳本全部被記錄引用  ⟹ 未記錄 ['04_doc_consistency.py', '09_symmetry_route.py', '10_forced_single_scale.py', '11_beta_no_go_and_homogeneity.py']
+
+A2 逆向綁定（headline 數字 → producer）
+  [PASS] A2｜Σγ = 90 / 配對和 4 / rank 20 / 核 24 ← scripts/01
+  [PASS] A2｜子集和零證據力（tail 空） ← scripts/03
+  [PASS] A2｜7 個 Galois 軌道（大小和 = 44） ← scripts/09
+  [PASS] A2｜上界解空間 = 1（7 軌道全等） ← scripts/10
+  [PASS] A2｜反例案 = 120（場值 6 自由）/ 400（44 權重） ← scripts/10
+  [PASS] A2｜b₀ = L₄ = 7（Tr(Q^B) 跡身份） ← scripts/11
+  [PASS] A2｜齊次性 no-go（λ 全保關係） ← scripts/11
+  [PASS] A2｜速率軸 ≤ 6 ← scripts/10
+
+A3 路徑衛生
+  [PASS] A3｜12 支腳本零 /tmp 寫入
+
+A4 產物綁定
+  [PASS] A4a｜10 個 data JSON 全部有 producer
+  [PASS] A4b｜12 個 log 全部對應腳本
+
+A5 driver
+  [WARN] A5｜無 driver（run_chain.sh 缺失）  ⟹ 可接受：本 M 全程用明確 for 迴圈重跑；建議補一支
+
+A6 data ↔ stdout 一致
+  [FAIL] A6｜10 個 JSON 的 pass/fail 與 run log 逐一致  ⟹ 不一致 ['01_t1_composite_additivity.json json 20/0 ≠ log 20/20', '02_t2_scale_dof_theorem.json json 14/0 ≠ log 14/14', '03_r4_counterexample_hunt.json json 6/0 ≠ log 6/6', '05_p_dof_ledger.json json 5/0 ≠ log 5/5', '06_kappa_identifiability.json json 4/0 ≠ log 4/4', '07_hidden_scales.json json 4/0 ≠ log 4/4', '08_framework_self_audit.json json 4/0 ≠ log 4/4', '09_symmetry_route.json json 5/0 ≠ log 5/5', '10_forced_single_scale.json json 9/0 ≠ log 9/9', '11_beta_no_go_and_homogeneity.json json 7/0 ≠ log 7/7']
+
+A7 四件套狀態同步
+    01_problem_record.md=closed｜README.md=closed｜final_result.md=None｜SESSION_START.md=closed
+  [FAIL] A7a｜四件套狀態值全一致  ⟹ {'01_problem_record.md': 'closed', 'README.md': 'closed', 'final_result.md': None, 'SESSION_START.md': 'closed'}
+  [WARN] A7b｜final_result.md 新鮮（17:04）  ⟹ final_result 17:04 < 最新 doc 18:45（01_problem_record.md） ⟹ 結論已反轉但 final_result 只寫舊 T2（須重寫）
+  [WARN] A7c｜SESSION_START 已 append 修正行  ⟹ SESSION_START 仍停在 14:27（無「⚠️ 修正點」append 行）⟹ §0.1 要求結論反轉須 append 一行
+
+A8 append-only 完整性 / 編碼衛生
+  [PASS] A8a｜docs/05 原文各節仍在，附註更正位於檔尾（append-only）
+  [PASS] A8b｜docs/08 原文各節仍在，附註更正位於檔尾（append-only）
+  [PASS] A8c｜38 檔零 U+FFFD
+  [PASS] A8d｜16 檔 markdown 圍欄全偶數
+
+A9 pre-patch backup
+  [FAIL] A9｜16 個今日改動檔全部有 pre-patch 備份  ⟹ 缺備份 ['01_problem_record.md', 'README.md', 'final_result.md', 'SESSION_START.md', 'docs/01_t1_composite_additivity.md', 'docs/02_t2_scale_dof_theorem.md', 'docs/03_r4_counterexample_hunt.md', 'docs/04_t3_handoff_and_verdict.md', 'docs/05_p_dof_ledger.md', 'docs/06_kappa_lambda_identifiability.md', 'docs/07_hidden_layer_mechanism.md', 'docs/08_framework_self_audit.md', 'docs/09_upgrade_routes.md', 'docs/10_forced_single_scale.md', 'docs/11_beta_no_go.md', 'docs/12_economy_and_homogeneity.md'] ⟹ 違反 patch-backup 鐵律（git 僅 1 commit、docs/ 未追蹤 ⟹ 無其他回溯途徑）
+
+A10 prose 值重算
+  [PASS] A10｜關係數 25 = 22 + 3
+  [PASS] A10｜rank 24 = 44 − 20
+  [PASS] A10｜7 軌道大小和 = 44
+  [PASS] A10｜7 軌道大小集合 = [20,10,5,5,2,1,1]
+  [PASS] A10｜120 = 6 × 20
+  [PASS] A10｜400 = 20 × 20
+  [PASS] A10｜500 = 25 關係 × 20 基
+  [PASS] A10｜140 = 7 軌道 × 20 基
+  [PASS] A10｜880 = 44 模式 × 20 基
+  [PASS] A10｜gcd 軌道標籤 = {1,2,4,8,11,22,44}
+  [PASS] A10｜獨立重算軌道結構 = [20, 10, 5, 5, 2, 1, 1]（|G| = 40）
+
+================================================================================================
+審計：PASS 27｜FAIL 3｜WARN 4
+================================================================================================
+→ data/12_audit_chain.json

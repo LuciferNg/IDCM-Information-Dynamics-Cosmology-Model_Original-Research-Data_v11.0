@@ -1,0 +1,49 @@
+{
+ "checks": {
+  "A": {
+   "real": 0,
+   "random_positive": [
+    0,
+    0,
+    0
+   ],
+   "random_signed": 0,
+   "verdict": "zero discriminating power"
+  },
+  "B": {
+   "ranks": [
+    1
+   ],
+   "n_trials": 100,
+   "verdict": "definitional (single dimensionful input)"
+  },
+  "C": {
+   "dimV": 20,
+   "thresholds": [
+    {
+     "delta": 0.0001,
+     "H_max": 1.5505157798326246
+    },
+    {
+     "delta": 1e-06,
+     "H_max": 1.93069772888325
+    },
+    {
+     "delta": 1e-08,
+     "H_max": 2.4040991835099716
+    },
+    {
+     "delta": 1e-10,
+     "H_max": 2.9935772947204895
+    },
+    {
+     "delta": 1e-12,
+     "H_max": 3.72759372031494
+    }
+   ],
+   "verdict": "test exists but not yet decisive (need 21 masses @ 1e-10)"
+  }
+ },
+ "pass": 4,
+ "fail": 0
+}

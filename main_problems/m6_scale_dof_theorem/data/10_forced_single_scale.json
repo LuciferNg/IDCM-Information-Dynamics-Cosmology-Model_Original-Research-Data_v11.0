@@ -1,0 +1,29 @@
+{
+ "checks": {
+  "theorem": {
+   "orbit_scales_nullspace_W": 120,
+   "orbit_scales_nullspace_Q": 1,
+   "free44_nullspace": 400,
+   "orbits": [
+    1,
+    2,
+    4,
+    8,
+    11,
+    22,
+    44
+   ],
+   "rank": 20,
+   "relations": 25,
+   "relations_rank": 24,
+   "verdict": "single scale FORCED under Galois covariance + relation preservation(rational orbit scales) ; NOT forced for field-valued scales (6 free)"
+  },
+  "rate_axis": {
+   "free_after_normalisation": 6,
+   "uniform_case": 1,
+   "note": "no relation to preserve ⟹ not forced"
+  }
+ },
+ "pass": 9,
+ "fail": 0
+}
