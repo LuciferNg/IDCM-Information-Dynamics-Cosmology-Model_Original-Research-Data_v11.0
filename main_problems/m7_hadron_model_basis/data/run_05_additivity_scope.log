@@ -32,8 +32,8 @@ C4 已註冊交互核之 body order（三體束縛之前置）
     on-site 磁接觸 ∝ δ_{d,0}（兩體）              body order = 2  [M5 docs/09]
     層釘（單粒子）                                body order = 1  [P10 §6 / M5 docs/12]
   ✅ C4 已註冊核全部 body order ≤ 2（無三體頂點）                      got [2, 2, 2, 1] | want 全部 ≤ 2  ⟹ E_bind^(3) 之味奇部分只可由 pair 核誘導
-    語料「三體」: 9 命中（['main_problems/m4_mass_spectral_readout/01_problem_record.md', 'main_problems/m5_hadron_bound_state_spectrum/01_problem_record.md']）
-    語料「three-body」: 0 命中
+    語料「三體」: 17 命中（['main_problems/m4_mass_spectral_readout/01_problem_record.md', 'main_problems/m4_mass_spectral_readout/docs/30_prediction_envelope.md']）
+    語料「three-body」: 2 命中（['main_problems/m4_mass_spectral_readout/scripts/33_handoff_intake_20261026.py']）
     語料「3-body」: 0 命中
     語料「triple vertex」: 0 命中
 
@@ -45,5 +45,5 @@ C5 pairwise-only 之三體相關（3 等質量 + pairwise 諧核，精確本徵�
 
 ==============================================================================================================
 結果：10/10 PASS
-① **NO-GO（加性覆蓋複合態）**：每模容量 = 6 > N_q = 3 ⟹ σ_n ≤ 0.5 ⟹ 永不飽和 ⟹ σ 可加；7 種味道內容皆無強迫共享；唯一反事實路線（容量=1）符號相反且 N/Σ 為 0。② **NO-GO（條件性）**：已註冊核全部 pairwise（body order ≤ 2）；三體核／頂點定義語料 0 命中（「三體」9 命中全屬 M5 之界限聲明「重子需三體階梯解，未推」）⟹ E_bind^(3) 之味奇部分只可誘導，而 pairwise-only 之三體相關僅 -18.4% ⟹ 無法放大 36.5–433×。
+① **NO-GO（加性覆蓋複合態）**：每模容量 = 6 > N_q = 3 ⟹ σ_n ≤ 0.5 ⟹ 永不飽和 ⟹ σ 可加；7 種味道內容皆無強迫共享；唯一反事實路線（容量=1）符號相反且 N/Σ 為 0。② **NO-GO（條件性）**：已註冊核全部 pairwise（body order ≤ 2）；三體核／頂點定義語料 0 命中（「三體」17 命中全屬 M5 之界限聲明「重子需三體階梯解，未推」）⟹ E_bind^(3) 之味奇部分只可誘導，而 pairwise-only 之三體相關僅 -18.4% ⟹ 無法放大 36.5–433×。
 JSON → data/05_additivity_scope.json

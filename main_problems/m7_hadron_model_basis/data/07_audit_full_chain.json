@@ -1,0 +1,292 @@
+{
+ "module": "M7",
+ "script": "07_audit_full_chain.py",
+ "checks": [
+  {
+   "item": "A1 README 引用全部存在",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "A1 所有 scripts/*.py 與 docs/*.md 已列於 README",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "A2 無孤兒 JSON",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "A2 無宣告缺檔",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "A3 scripts 無 /tmp／scratch 寫入",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "A5 版本檔有記錄歸屬（被 doc 提及）",
+   "pass_": true,
+   "got": "{'02_r5_mode_content_nogo.v1.json': True}",
+   "want": "全部 True",
+   "note": "v1＝02 之舊版；docs/12 命名為 v1/v2 對照"
+  },
+  {
+   "item": "B1 兩法一致（<1e−45）",
+   "pass_": true,
+   "got": "1.07e-50",
+   "want": "<1e−45",
+   "note": ""
+  },
+  {
+   "item": "B1 配對恆等 γ_n+γ_{44−n}=4（n=0..44）",
+   "pass_": true,
+   "got": "1.07e-50",
+   "want": "<1e−45",
+   "note": ""
+  },
+  {
+   "item": "B2 Σγ = 90（兩法）",
+   "pass_": true,
+   "got": "90.0",
+   "want": "90",
+   "note": ""
+  },
+  {
+   "item": "B3 χ² 重算一致（<1e−9）",
+   "pass_": true,
+   "got": "18.220726674",
+   "want": "18.220726674",
+   "note": ""
+  },
+  {
+   "item": "B3 p 重算一致（相對 <2%）",
+   "pass_": true,
+   "got": "0.000396066",
+   "want": "3.9607e-04",
+   "note": ""
+  },
+  {
+   "item": "B4 b̂ 一致（<1e−9）",
+   "pass_": true,
+   "got": "0.675330350",
+   "want": "0.675330350",
+   "note": ""
+  },
+  {
+   "item": "B4 σ_b 一致（<1e−8）",
+   "pass_": true,
+   "got": "0.16134792",
+   "want": "0.161347924",
+   "note": ""
+  },
+  {
+   "item": "B5 MC 與解析一致（比值 0.9–1.1）",
+   "pass_": true,
+   "got": "比值 1.0196",
+   "want": "≈1.0",
+   "note": "MC 誤差 ~1/√(10⁷p)≈6% ⟹ 容差 10%"
+  },
+  {
+   "item": "B6 三通道皆 1（與 06 讀法 A/B 一致）",
+   "pass_": true,
+   "got": "{'N': 1, 'Σ': 1, 'Ξ': 1}",
+   "want": "[1, 1, 1]",
+   "note": ""
+  },
+  {
+   "item": "B7 與 05 C5 記錄一致（−18.35%）",
+   "pass_": true,
+   "got": "-18.350342%",
+   "want": "-18.35%",
+   "note": ""
+  },
+  {
+   "item": "B8 容量 6 > 3",
+   "pass_": true,
+   "got": "6",
+   "want": "6",
+   "note": ""
+  },
+  {
+   "item": "B9 γ₄M₀ 與 05 C3 一致（−2.2605）",
+   "pass_": true,
+   "got": "-2.2603662",
+   "want": "-2.260366",
+   "note": ""
+  },
+  {
+   "item": "B9 所需 = Δ×2.56 一致（+3.310）",
+   "pass_": true,
+   "got": "3.31008",
+   "want": "3.310",
+   "note": ""
+  },
+  {
+   "item": "C1 register = closed/negative",
+   "pass_": true,
+   "got": "closed/negative",
+   "want": "closed/negative",
+   "note": ""
+  },
+  {
+   "item": "C1 registry block == register state（無 BLOCK-DRIFT）",
+   "pass_": true,
+   "got": "{'01_problem_record.md': ('closed', 'negative'), 'SESSION_START.md': ('closed', 'negative')}",
+   "want": "closed/negative",
+   "note": ""
+  },
+  {
+   "item": "C2 水位表覆蓋全部 close 後變更檔",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": "close 後經 docs/13–17 四輪 ⟹ 水位行須逐檔補登"
+  },
+  {
+   "item": "C3 歷史檔零內容消失（append-only）",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": "刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫"
+  }
+ ],
+ "findings": [],
+ "A4": {
+  "run_chain_sh": true
+ },
+ "C2": {
+  "close_ts": "2026-10-26T12:59:45+08:00",
+  "changed_after_close": [
+   "docs/10_reproduction_gate.md",
+   "docs/11_definition_freeze.md",
+   "docs/12_r5_verdict.md",
+   "docs/13_file_deletion_audit.md",
+   "docs/14_rerun_verification.md",
+   "docs/15_additivity_scope_verdict.md",
+   "docs/16_gap_closure.md",
+   "docs/17_audit_full_chain.md",
+   "scripts/03_grep_evidence.py",
+   "scripts/04_doc_consistency.py",
+   "scripts/05_additivity_scope.py",
+   "scripts/06_gap_closure.py",
+   "scripts/07_audit_full_chain.py",
+   "scripts/run_chain.sh",
+   "data/01_reproduction_gate.json",
+   "data/02_r5_mode_content_nogo.json",
+   "data/02b_r5_mode_content_nogo.json",
+   "data/03_grep_evidence.json",
+   "data/04_doc_consistency.json",
+   "data/05_additivity_scope.json",
+   "data/06_gap_closure.json",
+   "data/07_audit_full_chain.json",
+   "data/run_01_reproduction_gate.log",
+   "data/run_02_r5_mode_content_nogo.log",
+   "data/run_02_r5_mode_content_nogo.v1.log",
+   "data/run_02b_r5_mode_content_nogo.log",
+   "data/run_03_grep_evidence.log",
+   "data/run_04_doc_consistency.log",
+   "data/run_05_additivity_scope.log",
+   "data/run_06_gap_closure.log",
+   "data/run_07_audit_full_chain.log",
+   "01_problem_record.md",
+   "SESSION_START.md",
+   "README.md",
+   "final_result.md"
+  ],
+  "watermark_listed": [
+   "01_problem_record.md",
+   "README.md",
+   "SESSION_START.md",
+   "data/01_reproduction_gate.json",
+   "data/02_r5_mode_content_nogo.json",
+   "data/02_r5_mode_content_nogo.v1.json",
+   "data/02b_r5_mode_content_nogo.json",
+   "data/03_grep_evidence.json",
+   "data/04_doc_consistency.json",
+   "data/05_additivity_scope.json",
+   "data/06_gap_closure.json",
+   "data/07_audit_full_chain.json",
+   "data/run_01_reproduction_gate.log",
+   "data/run_02_r5_mode_content_nogo.log",
+   "data/run_02_r5_mode_content_nogo.v1.log",
+   "data/run_02b_r5_mode_content_nogo.log",
+   "data/run_03_grep_evidence.log",
+   "data/run_04_doc_consistency.log",
+   "data/run_05_additivity_scope.log",
+   "data/run_06_gap_closure.log",
+   "data/run_07_audit_full_chain.log",
+   "docs/10_reproduction_gate.md",
+   "docs/11_definition_freeze.md",
+   "docs/12_r5_verdict.md",
+   "docs/13_file_deletion_audit.md",
+   "docs/14_rerun_verification.md",
+   "docs/15_additivity_scope_verdict.md",
+   "docs/16_gap_closure.md",
+   "docs/17_audit_full_chain.md",
+   "final_result.md",
+   "scripts/01_reproduction_gate.py",
+   "scripts/02_r5_mode_content_nogo.py",
+   "scripts/02b_r5_mode_content_nogo.py",
+   "scripts/03_grep_evidence.py",
+   "scripts/04_doc_consistency.py",
+   "scripts/05_additivity_scope.py",
+   "scripts/06_gap_closure.py",
+   "scripts/07",
+   "scripts/07_audit_full_chain.py",
+   "scripts/run_chain.sh"
+  ],
+  "uncovered": []
+ },
+ "C3": {
+  "rows": [
+   {
+    "commit": "78fe123",
+    "file": "15_additivity_scope_verdict.md",
+    "n_del": 1,
+    "n_lost": 0
+   },
+   {
+    "commit": "913714b",
+    "file": "11_definition_freeze.md",
+    "n_del": 1,
+    "n_lost": 0
+   },
+   {
+    "commit": "5e0b80d",
+    "file": "14_rerun_verification.md",
+    "n_del": 1,
+    "n_lost": 0
+   }
+  ],
+  "violations": []
+ },
+ "metrics": {
+  "b_hat": 0.6753303504664904,
+  "sig_b": 0.16134792363395115,
+  "chi2": 18.220726674357785,
+  "p": 0.00039606636098030195,
+  "sum_gamma": 90.0,
+  "corr_pct": -18.350341907227396,
+  "mc_ratio": 1.019613541891172,
+  "cap": 6,
+  "g4M0": -2.2603661605696623,
+  "need_xi": 3.31008,
+  "uncovered": 0
+ },
+ "npass": 23,
+ "ntotal": 23
+}

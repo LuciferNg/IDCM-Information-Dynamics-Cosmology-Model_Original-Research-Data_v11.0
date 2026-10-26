@@ -21,12 +21,16 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/17_audit_full_chain.md` | 全鏈審計（A 結構／B 獨立重推導／C 記錄）；審計器自身兩處算法錯已修（§2.1） | ✅ |
 | `docs/16_gap_closure.md` | 未推盡審計（R3／MC null／剛性／Q4／7-12）4 項全補；**撤回 `docs/12` K6「sector ⟹ ≡2」**；失配在斜率 4.19σ | ✅ |
 | `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② **不獨立**（M2 唯一性禁止獨立束縛項）⟹ **單一 no-go**（§九 更正） | 🔴 |
+| `scripts/02_r5_mode_content_nogo.py` | v1（歷史；R5 初版 7 檢查）。其輸出 `data/02_r5_mode_content_nogo.json` 與 `….v1.json` **byte-identical 重複副本**（legacy，docs/17 §A5 已記） | 📦 歷史 |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/run_chain.sh` | 推導鏈 driver（預設 dry-run；`--run` 逐 script 執行並覆寫 log） | ✅ |
+| `scripts/07_audit_full_chain.py` | 全鏈審計（**23/23**）：結構對稱／產物綁定／路徑衛生 ＋ L2 獨立重推導（sympy 符號微分、mpmath Γ、Fraction 正規方程、sympy eigenvals）＋ 四件套／水位／append-only | ✅ |
 | `scripts/06_gap_closure.py` | 未推盡補推 G1–G6（**12/12**）：MC null 10⁷、家族可辨識性、Q4 判死、剛性、7/11 重現 | ✅ |
 | `scripts/05_additivity_scope.py` | ① 容量／強迫共享搜索 ＋ ② pairwise-only 量級核（**10/10**） | ✅ |
 | `data/` | 5 JSON ＋ 5 run log（含 v1 log 存證） | ✅ |
@@ -48,6 +52,10 @@ handoff ×3：→ **M2**（加性泛函適用範圍）· → **M5**（weight 約
 
 1. ~~M2 加性泛函是否覆蓋複合態~~ ⟹ **已答：覆蓋**（每模容量 6 > `N_q` 3 ⟹ 永不飽和）→ `docs/15`
 2. ~~三體束縛 `E_bind^{(3)}`~~ ⟹ **不獨立**（M2 唯一性窮盡 ⟹ 冇束縛能槽位；量級核降為旁證）→ `docs/15` §九
+
+## 審計（docs/17）
+
+全鏈 `scripts/07_audit_full_chain.py` **23/23 PASS**：B 層全部改用**不同算法**重推（sympy 符號微分／mpmath 上不完全 Γ／Fraction 精確正規方程／sympy eigenvals），C 層四件套＋水位＋append-only（零內容消失）。
 
 ## 未閉合（下游／新結構需求，未開題）
 

@@ -312,3 +312,88 @@ M7 收官（closed/negative）後，**非 M7 歸屬**之殘餘逐項路由（全
 - `register check`：`PID-NO-FOLDER 0`、`REF-MISSING 0`、`STATUS-DRIFT 0`
 - `HARD DRIFT 2` **全屬 M8**（並行 session 在研）：`SESSION_START.md`／`01_problem_record.md` block=`open` vs register=`partial` ⟹ 已 register note 報告；**係 M7 補 `THEME_MOVE` m8 映射後揭露之真陽性**（此前 `theme_dir("M8")` 失敗 ⟹ 該兩檔從未被掃描）
 - `register.py` 修改：`THEME_MOVE` 補 `m8`/`M8` 絕對路徑（備份 `backups/register.py.bak_*_pre_M8`）
+
+---
+
+### §檔案閉合水位（初始化 2026-10-26 23:2x；close-out 基準 = register close `2026-10-26T12:59:45+08:00`）
+
+> 判「未變」不只用 mtime：本輪全部檔案另經 `scripts/07` 之 B 層（數值）與 C3（append-only）內容級核對。
+
+| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |
+|:-:|:-----|:---------------------|:----------------|:---------|:-----|
+| 1 | `docs/10_reproduction_gate.md` | 2026-10-26 14:14 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 2 | `docs/11_definition_freeze.md` | 2026-10-26 14:44 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 3 | `docs/12_r5_verdict.md` | 2026-10-26 15:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 4 | `docs/13_file_deletion_audit.md` | 2026-10-26 13:41 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 5 | `docs/14_rerun_verification.md` | 2026-10-26 14:25 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 6 | `docs/15_additivity_scope_verdict.md` | 2026-10-26 14:55 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 7 | `docs/16_gap_closure.md` | 2026-10-26 15:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 8 | `docs/17_audit_full_chain.md` | 2026-10-27 00:44 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 9 | `scripts/01_reproduction_gate.py` | 2026-10-26 11:32 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 10 | `scripts/02_r5_mode_content_nogo.py` | 2026-10-26 11:45 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 11 | `scripts/02b_r5_mode_content_nogo.py` | 2026-10-26 12:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 12 | `scripts/03_grep_evidence.py` | 2026-10-26 14:43 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 13 | `scripts/04_doc_consistency.py` | 2026-10-26 15:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 14 | `scripts/05_additivity_scope.py` | 2026-10-26 14:41 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 15 | `scripts/06_gap_closure.py` | 2026-10-26 15:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 16 | `scripts/07_audit_full_chain.py` | 2026-10-27 00:42 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 17 | `scripts/run_chain.sh` | 2026-10-27 00:42 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 18 | `data/01_reproduction_gate.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 19 | `data/02_r5_mode_content_nogo.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 20 | `data/02_r5_mode_content_nogo.v1.json` | 2026-10-26 11:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 21 | `data/02b_r5_mode_content_nogo.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 22 | `data/03_grep_evidence.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 23 | `data/04_doc_consistency.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 24 | `data/05_additivity_scope.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 25 | `data/06_gap_closure.json` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 26 | `data/07_audit_full_chain.json` | 2026-10-26 23:16 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 27 | `data/run_01_reproduction_gate.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 28 | `data/run_02_r5_mode_content_nogo.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 29 | `data/run_02_r5_mode_content_nogo.v1.log` | 2026-10-26 14:15 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 30 | `data/run_02b_r5_mode_content_nogo.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 31 | `data/run_03_grep_evidence.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 32 | `data/run_04_doc_consistency.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 33 | `data/run_05_additivity_scope.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 34 | `data/run_06_gap_closure.log` | 2026-10-26 15:09 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已於 docs/17 §B/C 驗 |
+| 35 | `docs/17_audit_full_chain.md` | 2026-10-26 23:32 | 2026-10-26 12:59 | 全文 | ⏳ 本輪審計報告（自身） |
+| 36 | `data/07_audit_full_chain.json` | 2026-10-26 23:35 | 2026-10-26 12:59 | 全文 | ⏳ 本輪審計輸出 |
+| 37 | `data/run_07_audit_full_chain.log` | 2026-10-26 23:35 | 2026-10-26 12:59 | 全文 | ⏳ 本輪審計 log（每次重跑更新） |
+| 38 | `01_problem_record.md` | 2026-10-26 23:45 | 2026-10-26 12:59 | 全文 | ⏳ 本輪審計＋水位＋時序（append-only） |
+| 39 | `SESSION_START.md` | 2026-10-26 12:0x | 2026-10-26 12:59 | 全文 | ✅ 開檔快照（依 §0.1 不改） |
+| 40 | `README.md` | 2026-10-26 23:40 | 2026-10-26 12:59 | 全文 | ⏳ 狀態＋索引（只改狀態／列檔） |
+| 41 | `final_result.md` | 2026-10-26 14:56 | 2026-10-26 12:59 | 全文 | ⏳ 活摘要（更正段落 append） |
+
+---
+
+## 十七、全鏈 audit-verify（2026-10-26；調律者指令）
+
+**腳本** `scripts/07_audit_full_chain.py`（**23/23 PASS**）｜**driver** `scripts/run_chain.sh`（新，預設 dry-run）｜**判決** `docs/17_audit_full_chain.md`｜檢查器 **121/121 PASS**
+
+| 層 | 檢查 | 結果 |
+|:-:|:--|:--|
+| A | A1 檔案對稱／A2 產物綁定／A3 路徑衛生／A4 driver／A5 版本檔歸屬 | 5/5（3 即場修：README 補 `scripts/07`+`scripts/02v1`、建 `run_chain.sh`、審計器自身 pattern 排除） |
+| B | B1–B9 **獨立重推導**（γ 用複數模方／Σγ 用結構計數／p 用 mpmath 上不完全 Γ／b̂ σ_b 用 Fraction 精確正規方程／MC 對解析常態尾／G3 用 sympy 符號微分／諧振用 sympy eigenvals） | 9/9 一致 |
+| C | C1 四件套＋register／C2 水位覆蓋／C3 append-only | 3/3 |
+
+### 17.1 ★ 審計器自身兩處算法錯（首跑即捉，已修）
+
+| 檢查 | 首跑錯值 | 成因 | 修正後 |
+|:--|:--|:--|:--|
+| B5 | `p_an = 5.689e-5`（比值 2.04） | `Q(1/2,z²/2)=erfc(z/√2)=2Φ(−z)` **已含雙尾**，再乘 2 | 比值 **1.0196** |
+| B7 | `−59.18%` | `eigenvals()` 返回 `{0:1, 3:2}`，迭代 keys **未展開重數** | **−18.350342%** |
+
+⟹ 兩者皆屬**審計器**錯；不改則會把正確記錄誤報 MISMATCH。
+
+### 17.2 C 層要點
+
+- 四件套：`register` = `closed/negative`；兩個 registry block 同值 ⟹ **無 BLOCK-DRIFT**
+- 水位：close（`12:59:45`）後 **31 檔**變更（含四件套）⟹ §檔案閉合水位 **41 行**逐檔補登
+- append-only：掃 10 commit，僅 2 處「刪 1 行」係**尾行換行正規化**（`cat >>` 撞無 EOL），刪除行**逐字重現** ⟹ **零內容消失**
+
+### 17.3 邏輯鏈（§3.3）唯一 🟡
+
+`02b` K3 之「sector ⟹ `⟨O⟩≡2`」row 用 `2*np.ones(3)` **硬寫**（非由 hadron 內容算出）。已於 `docs/12` §十 撤回、`docs/16` G3 以 sympy 重推證其為係數錯 ⟹ 現況無殘留影響，但該硬寫屬記錄污點，留作後續 `02b` 修訂警示。
+
+### 17.4 待批（唯一）
+
+`data/02_r5_mode_content_nogo.v1.json`／`.v1.log` 與現行輸出 **byte-identical**（`9f4912ea…`／`c1576c42…`）⟹ 重複副本，可刪；依政策**待調律者逐項批准**，未動。

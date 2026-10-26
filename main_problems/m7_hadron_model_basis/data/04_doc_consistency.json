@@ -1,6 +1,6 @@
 {
- "npass": 111,
- "ntotal": 111,
+ "npass": 121,
+ "ntotal": 121,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -684,6 +684,66 @@
    "doc": "16_gap_closure.md",
    "status": "✅",
    "detail": "doc=3.68 art=3.68376068376 |Δ|=3.76e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§17 npass",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=23 art=23（整數須全等）"
+  },
+  {
+   "name": "§17 ntotal",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=23 art=23（整數須全等）"
+  },
+  {
+   "name": "§17 b̂",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=0.675330350 art=0.675330350466 |Δ|=4.66e-10 ≤ 5.0e-10"
+  },
+  {
+   "name": "§17 σ_b",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=0.161347924 art=0.161347923634 |Δ|=3.66e-10 ≤ 5.0e-10"
+  },
+  {
+   "name": "§17 χ²",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=18.220727 art=18.2207266744 |Δ|=3.26e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§17 p",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=0.000396066 art=0.00039606636098 |Δ|=3.61e-10 ≤ 5.0e-10"
+  },
+  {
+   "name": "§17 Σγ",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=90 art=90（整數須全等）"
+  },
+  {
+   "name": "§17 B7 相關%",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=-18.350342 art=-18.3503419072 |Δ|=9.28e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§17 MC/解析比值",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=1.0196 art=1.01961354189 |Δ|=1.35e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§17 C2 未覆蓋",
+   "doc": "17_audit_full_chain.md",
+   "status": "✅",
+   "detail": "doc=0 art=0（整數須全等）"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

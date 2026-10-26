@@ -33,6 +33,7 @@ J01, J02, J03, Jv1 = (load("01_reproduction_gate.json"), load("02b_r5_mode_conte
                       load("03_grep_evidence.json"), load("02_r5_mode_content_nogo.json"))
 J05 = load("05_additivity_scope.json")
 J06 = load("06_gap_closure.json")
+J07 = load("07_audit_full_chain.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -292,6 +293,18 @@ claim("§16 7/11", "16_gap_closure.md", J06["G5"]["ratio"], "| 7/11 |", cell=2, 
 claim("§16 σ_N", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][0]), "| `σ_N` |", cell=2, kth=0)
 claim("§16 σ_Σ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][1]), "| `σ_Σ` |", cell=2, kth=0)
 claim("§16 σ_Ξ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][2]), "| `σ_Ξ` |", cell=2, kth=0)
+
+# ══════════ docs/17（全鏈審計） ══════════
+claim("§17 npass", "17_audit_full_chain.md", J07["npass"], "| 審計 npass |", cell=2, kth=0, integer=True)
+claim("§17 ntotal", "17_audit_full_chain.md", J07["ntotal"], "| 審計 ntotal |", cell=2, kth=0, integer=True)
+claim("§17 b̂", "17_audit_full_chain.md", J07["metrics"]["b_hat"], "| 審計 b̂ |", cell=2, kth=0)
+claim("§17 σ_b", "17_audit_full_chain.md", J07["metrics"]["sig_b"], "| 審計 σ_b |", cell=2, kth=0)
+claim("§17 χ²", "17_audit_full_chain.md", J07["metrics"]["chi2"], "| 審計 χ² |", cell=2, kth=0)
+claim("§17 p", "17_audit_full_chain.md", J07["metrics"]["p"], "| 審計 p |", cell=2, kth=0)
+claim("§17 Σγ", "17_audit_full_chain.md", J07["metrics"]["sum_gamma"], "| 審計 Σγ |", cell=2, kth=0, integer=True)
+claim("§17 B7 相關%", "17_audit_full_chain.md", J07["metrics"]["corr_pct"], "| 審計 B7 相關% |", cell=2, kth=0)
+claim("§17 MC/解析比值", "17_audit_full_chain.md", J07["metrics"]["mc_ratio"], "| 審計 MC/解析比值 |", cell=2, kth=0)
+claim("§17 C2 未覆蓋", "17_audit_full_chain.md", J07["metrics"]["uncovered"], "| 審計 C2 未覆蓋 |", cell=2, kth=0, integer=True)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

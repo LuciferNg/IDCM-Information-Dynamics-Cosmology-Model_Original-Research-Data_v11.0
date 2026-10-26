@@ -1,0 +1,94 @@
+====================================================================================================================
+M7 全鏈審計（scripts/07）—— A 結構 / B 獨立重推導 / C 記錄層
+====================================================================================================================
+
+A1 檔案對稱（README 所列 ↔ 磁碟）
+    README 提 25 項；磁碟 35 檔（含 log/版本檔）
+    跨 M／O 引用（存在於他目錄，合法）：['docs/01', 'docs/28', 'docs/29', 'docs/31', 'docs/32']
+    README 有而全樹各處都冇：無
+    磁碟有而 README 冇（除 run log／.v1）：無
+  ✅ A1 README 引用全部存在                                   0 | want 0
+  ✅ A1 所有 scripts/*.py 與 docs/*.md 已列於 README          0 | want 0
+
+A2 產物綁定（data/*.json ↔ producer script）
+    JSON 9 個；無 producer 者：無；歷史快照（白名單）：['02_r5_mode_content_nogo.v1.json']
+    script 宣告但缺檔：無
+  ✅ A2 無孤兒 JSON                                        0 | want 0
+  ✅ A2 無宣告缺檔                                           0 | want 0
+
+A3 路徑衛生（scripts/ 內 /tmp、scratch 寫入）
+    命中檔：無
+  ✅ A3 scripts 無 /tmp／scratch 寫入                       0
+
+A4 driver
+    scripts/run_chain.sh：存在
+
+A5 版本檔（.v1）是否被引用
+    ['02_r5_mode_content_nogo.v1.json'] ⟹ 被 doc 引用: {'02_r5_mode_content_nogo.v1.json': True}
+  ✅ A5 版本檔有記錄歸屬（被 doc 提及）                              {'02_r5_mode_content_nogo.v1.json': True} | want 全部 True  v1＝02 之舊版；docs/12 命名為 v1/v2 對照
+
+B1 γ_n 兩法（|1−ζ^n|² vs 4sin²；50 dps）
+    n=0..44；max dev = 1.0691e-50
+  ✅ B1 兩法一致（<1e−45）                                    1.07e-50 | want <1e−45
+  ✅ B1 配對恆等 γ_n+γ_{44−n}=4（n=0..44）                    1.07e-50 | want <1e−45
+
+B2 Σγ（n=0..44）
+    數值 Σ_{n=0..44} γ_n = 90.0；結構計數 22×4+2 = 90
+  ✅ B2 Σγ = 90（兩法）                                     90.0 | want 90
+
+B3 χ²(⟨O⟩≡1) 與 p（mpmath 上不完全 Γ）
+    χ² = 18.220727；p(3 dof) = 0.00039606636
+    02b K3 報：χ² = 18.220727，p = 3.9607e-04
+  ✅ B3 χ² 重算一致（<1e−9）                                  18.220726674 | want 18.220726674
+  ✅ B3 p 重算一致（相對 <2%）                                  0.000396066 | want 3.9607e-04
+
+B4 b̂/σ_b（Fraction 精確；獨立於 numpy lstsq）
+    b̂ = 0.675330350  σ_b = 0.16134792  â = 0.885740285  σ_a = 0.095333
+    06 G1 報：b̂ = 0.675330350  σ_b = 0.161347924  â = 0.885740285
+  ✅ B4 b̂ 一致（<1e−9）                                    0.675330350 | want 0.675330350
+  ✅ B4 σ_b 一致（<1e−8）                                   0.16134792 | want 0.161347924
+
+B5 MC p（2.79e−5）vs 解析常態尾（跨方法）
+    z = 4.185553；解析雙尾 p = Q(1/2,z²/2) = 2.84472e-5；MC(06) = 2.7900e-05
+  ✅ B5 MC 與解析一致（比值 0.9–1.1）                            比值 1.0196 | want ≈1.0  MC 誤差 ~1/√(10⁷p)≈6% ⟹ 容差 10%
+
+B6 G3 導數（sympy 對 M=Σn_q m_q 符號微分）
+    ∂(ΔM)/∂m_u / coeff = {'N': 1, 'Σ': 1, 'Ξ': 1}
+  ✅ B6 三通道皆 1（與 06 讀法 A/B 一致）                          {'N': 1, 'Σ': 1, 'Ξ': 1} | want [1, 1, 1]
+
+B7 pairwise 三體相關（sympy eigenvals，非手寫 √3）
+    K 本徵值 [0, 3] ⟹ E₀^(3) = sqrt(3) = 1.732051
+    Σ_pair = 2.121320（3×½√2）；相關 = -18.3503%
+  ✅ B7 與 05 C5 記錄一致（−18.35%）                           -18.350342% | want -18.35%
+
+B8/B9 容量與 docs/15 C3 值
+    cap = 2×(B−1) = 6 > N_q = 3；γ₄M₀ = -2.2603662 MeV；需 +3.31008 MeV
+  ✅ B8 容量 6 > 3                                        6 | want 6
+  ✅ B9 γ₄M₀ 與 05 C3 一致（−2.2605）                        -2.2603662 | want -2.260366
+  ✅ B9 所需 = Δ×2.56 一致（+3.310）                          3.31008 | want 3.310
+
+C1 四件套狀態行 ＋ register state
+    01_problem_record.md       > **狀態**: 📄 **已註冊 — 未開始（只開不推）**｜本檔只有問題陳述，**無任何推導**
+    SESSION_START.md           > **狀態**: 📄 **已註冊 — 未開始；推導用新 session**
+    README.md                  ## 狀態: 🔴 closed / verdict **negative**（2026-10-26）
+    final_result.md            **狀態：🔴 判死（2026-10-26）** — `w_k(h)` **存在但退化為恒等**（T1）；`⟨O⟩ = w₁ − w₄` **雙重死**（T2：定義層無依據 ＋ 數值 3.36σ 否證）；三錨**未閉合**（T3）。★ 本輪最
+    register: state=closed verdict=negative ts=2026-10-26T12:59:45+08:00
+  ✅ C1 register = closed/negative                      closed/negative | want closed/negative
+    registry block: {'01_problem_record.md': ('closed', 'negative'), 'SESSION_START.md': ('closed', 'negative')}
+  ✅ C1 registry block == register state（無 BLOCK-DRIFT） {'01_problem_record.md': ('closed', 'negative'), 'SESSION_START.md': ('closed', 'negative')} | want closed/negative
+
+C2 水位：register close（2026-10-26T12:59:45）之後被改嘅檔
+    35 檔：['docs/10_reproduction_gate.md', 'docs/11_definition_freeze.md', 'docs/12_r5_verdict.md', 'docs/13_file_deletion_audit.md', 'docs/14_rerun_verification.md', 'docs/15_additivity_scope_verdict.md', 'docs/16_gap_closure.md', 'docs/17_audit_full_chain.md', 'scripts/03_grep_evidence.py', 'scripts/04_doc_consistency.py', 'scripts/05_additivity_scope.py', 'scripts/06_gap_closure.py', 'scripts/07_audit_full_chain.py', 'scripts/run_chain.sh', 'data/01_reproduction_gate.json', 'data/02_r5_mode_content_nogo.json', 'data/02b_r5_mode_content_nogo.json', 'data/03_grep_evidence.json', 'data/04_doc_consistency.json', 'data/05_additivity_scope.json', 'data/06_gap_closure.json', 'data/07_audit_full_chain.json', 'data/run_01_reproduction_gate.log', 'data/run_02_r5_mode_content_nogo.log', 'data/run_02_r5_mode_content_nogo.v1.log', 'data/run_02b_r5_mode_content_nogo.log', 'data/run_03_grep_evidence.log', 'data/run_04_doc_consistency.log', 'data/run_05_additivity_scope.log', 'data/run_06_gap_closure.log', 'data/run_07_audit_full_chain.log', '01_problem_record.md', 'SESSION_START.md', 'README.md', 'final_result.md']
+    水位表（01_problem_record §檔案閉合水位）列 40 項；未覆蓋 0：[]
+  ✅ C2 水位表覆蓋全部 close 後變更檔                              0  close 後經 docs/13–17 四輪 ⟹ 水位行須逐檔補登
+
+C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可接受；內容消失不可）
+    78fe123 15_additivity_scope_verdict.md     刪   1 行；未重現 0
+    913714b 11_definition_freeze.md            刪   1 行；未重現 0
+    5e0b80d 14_rerun_verification.md           刪   1 行；未重現 0
+    違規（內容消失）：無
+  ✅ C3 歷史檔零內容消失（append-only）                           0  刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫
+
+====================================================================================================================
+結果：23/23 PASS；findings = 0
+JSON → data/07_audit_full_chain.json
