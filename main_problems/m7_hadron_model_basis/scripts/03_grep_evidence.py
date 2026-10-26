@@ -109,7 +109,8 @@ def main():
     print("=" * 100)
     print("E0 語料指紋（git HEAD tracked files，排除本 M）")
     for v in VERS:
-        hh, nn, mm, cc_ = CORPUS[v][1], len(CORPUS[v][0]), CORPUS[v][2], CORPUS[v][3]
+        nn, mm, cc_ = len(CORPUS[v][0]), CORPUS[v][2], CORPUS[v][3]
+        hh = "—(host,不入指紋)" if M7.startswith(os.path.join(ROOT, v)) else CORPUS[v][1]
         print(f"  {v:<38} HEAD={hh}  files={nn}  mode={mm}  corpus_sha={cc_[:12]}")
     print("\nE1 概念詞語料命中（排除本 M 目錄）")
     print(f"{'詞':22}" + "".join(f"{v.split('--')[0]:>18}" for v in VERS))

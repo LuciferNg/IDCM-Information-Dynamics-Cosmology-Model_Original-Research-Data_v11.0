@@ -1,9 +1,9 @@
 {
- "npass": 88,
+ "npass": 87,
  "ntotal": 88,
- "nfail": 0,
+ "nfail": 1,
  "corrected": 4,
- "verdict": "PASS",
+ "verdict": "FAIL",
  "corrigenda": [
   {
    "name": "§三 16 mpmath ⟨B⟩",
@@ -292,8 +292,8 @@
   {
    "name": "grep 表 質量泛函非可加",
    "doc": "11_definition_freeze.md",
-   "status": "✅",
-   "detail": "doc=[('0', '0'), ('0', '0'), ('3', '4')]"
+   "status": "🔴 MISMATCH",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('3', '4')] | IDCM-v11.0 art=4f/5h"
   },
   {
    "name": "grep 表 ⟨O⟩ 矩陣元",

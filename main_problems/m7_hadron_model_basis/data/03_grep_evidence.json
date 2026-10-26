@@ -223,12 +223,13 @@
     "files": []
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 3,
-    "nhits": 4,
+    "nfiles": 4,
+    "nhits": 5,
     "files": [
      "main_problems/m2_sync_desync_exchange/README.md",
      "main_problems/m2_sync_desync_exchange/docs/01_exchange_law.md",
-     "main_problems/m2_sync_desync_exchange/scripts/02_exchange_operator.py"
+     "main_problems/m2_sync_desync_exchange/scripts/02_exchange_operator.py",
+     "main_problems/m6_scale_dof_theorem/README.md"
     ]
    }
   },

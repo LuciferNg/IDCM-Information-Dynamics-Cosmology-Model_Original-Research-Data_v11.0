@@ -2,7 +2,7 @@
 E0 語料指紋（git HEAD tracked files，排除本 M）
   IDCM-v9.0--W-Field-Lattice             HEAD=60d67ae  files=407  mode=git-tracked  corpus_sha=299a36d3848a
   IDCM-v10.0--It-From-Beat               HEAD=151ec75a  files=10247  mode=git-tracked  corpus_sha=f71f6d39776e
-  IDCM-v11.0--Reality-Architecture       HEAD=9948377  files=229  mode=git-tracked  corpus_sha=d5050c59304f
+  IDCM-v11.0--Reality-Architecture       HEAD=—(host,不入指紋)  files=229  mode=git-tracked  corpus_sha=d5050c59304f
 
 E1 概念詞語料命中（排除本 M 目錄）
 詞                              IDCM-v9.0        IDCM-v10.0        IDCM-v11.0
@@ -15,7 +15,7 @@ E1 概念詞語料命中（排除本 M 目錄）
   ūu − d̄d                         0f/0h             0f/0h            6f/20h
   夸克含量                             0f/0h             7f/9h             0f/0h
   海夸克／介子雲                          0f/0h             0f/0h             0f/0h
-  質量泛函非可加                          0f/0h             0f/0h             3f/4h
+  質量泛函非可加                          0f/0h             0f/0h             4f/5h
   ⟨O⟩ 矩陣元                          0f/0h             0f/0h          15f/187h
 
 E2 判定（v9.0 為原文權威；v9 命中 = 已形式化，v9 0 命中 = 概念未形式化）
