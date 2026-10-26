@@ -1,6 +1,6 @@
 {
- "npass": 99,
- "ntotal": 99,
+ "npass": 111,
+ "ntotal": 111,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -612,6 +612,78 @@
    "doc": "15_additivity_scope_verdict.md",
    "status": "✅",
    "detail": "doc=-18.35 art=-18.3503419072 |Δ|=3.42e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§16 b̂",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=0.675330 art=0.675330350466 |Δ|=3.50e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§16 σ_b",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=0.161348 art=0.161347923634 |Δ|=7.64e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§16 z_b",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=4.186 art=4.18555340073 |Δ|=4.47e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§16 p_MC",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=2.790e-05 art=2.79e-05 |Δ|=0.00e+00 ≤ 5.0e-09"
+  },
+  {
+   "name": "§16 帶內成員",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=17 art=17（整數須全等）"
+  },
+  {
+   "name": "§16 帶寬/間距",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=28.4 art=28.3972345596 |Δ|=2.77e-03 ≤ 5.0e-02"
+  },
+  {
+   "name": "§16 grading 權重值",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=5 art=5（整數須全等）"
+  },
+  {
+   "name": "§16 χ²_D",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=111.79 art=111.790563308 |Δ|=5.63e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§16 7/11",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=0.64 art=0.636363636364 |Δ|=3.64e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§16 σ_N",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=1.02 art=1.01869158879 |Δ|=1.31e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§16 σ_Σ",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=1.90 art=1.90076335878 |Δ|=7.63e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§16 σ_Ξ",
+   "doc": "16_gap_closure.md",
+   "status": "✅",
+   "detail": "doc=3.68 art=3.68376068376 |Δ|=3.76e-03 ≤ 5.0e-03"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

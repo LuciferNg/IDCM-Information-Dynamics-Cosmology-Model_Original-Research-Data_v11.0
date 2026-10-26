@@ -32,6 +32,7 @@ def load(n):
 J01, J02, J03, Jv1 = (load("01_reproduction_gate.json"), load("02b_r5_mode_content_nogo.json"),
                       load("03_grep_evidence.json"), load("02_r5_mode_content_nogo.json"))
 J05 = load("05_additivity_scope.json")
+J06 = load("06_gap_closure.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -277,6 +278,20 @@ claim("§15 C5 E₀^(3)", "15_additivity_scope_verdict.md", J05["C5"]["E3"],
       rx=r"= \(1/2\)\(0 \+ 2√3\) = ([\d.]+) ℏ", grp=1)
 claim("§15 C5 相關 %", "15_additivity_scope_verdict.md", J05["C5"]["corr_rel"] * 100,
       rx=r"三體相關\s+= ([−-][\d.]+)%", grp=1)
+
+# ══════════ docs/16（未推盡補推；R7）—— σ_* 用絕對值（文檔報偏離量級） ══════════
+claim("§16 b̂", "16_gap_closure.md", J06["G1"]["b"], "| `b̂` |", cell=2, kth=0)
+claim("§16 σ_b", "16_gap_closure.md", J06["G1"]["sig_b"], "| `σ_b` |", cell=2, kth=0)
+claim("§16 z_b", "16_gap_closure.md", J06["G1"]["z_b"], "| `z_b` |", cell=2, kth=0)
+claim("§16 p_MC", "16_gap_closure.md", J06["G1"]["p_mc"], "| `p_MC` |", cell=2, kth=0)
+claim("§16 帶內成員", "16_gap_closure.md", J06["G2"]["n_in_band"], "| 帶內成員 |", cell=2, kth=0, integer=True)
+claim("§16 帶寬/間距", "16_gap_closure.md", J06["G2"]["bandwidth_over_gap"], "| 帶寬/間距 |", cell=2, kth=0)
+claim("§16 grading 權重值", "16_gap_closure.md", J06["G3"]["vecC"][0], "| grading 權重值 |", cell=2, kth=0, integer=True)
+claim("§16 χ²_D", "16_gap_closure.md", J06["G3"]["chi2_D"], "| `χ²_D` |", cell=2, kth=0)
+claim("§16 7/11", "16_gap_closure.md", J06["G5"]["ratio"], "| 7/11 |", cell=2, kth=0)
+claim("§16 σ_N", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][0]), "| `σ_N` |", cell=2, kth=0)
+claim("§16 σ_Σ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][1]), "| `σ_Σ` |", cell=2, kth=0)
+claim("§16 σ_Ξ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][2]), "| `σ_Ξ` |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

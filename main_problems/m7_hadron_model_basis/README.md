@@ -21,11 +21,13 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/16_gap_closure.md` | 未推盡審計（R3／MC null／剛性／Q4／7-12）4 項全補；**撤回 `docs/12` K6「sector ⟹ ≡2」**；失配在斜率 4.19σ | ✅ |
 | `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② **不獨立**（M2 唯一性禁止獨立束縛項）⟹ **單一 no-go**（§九 更正） | 🔴 |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
-| `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**99** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/06_gap_closure.py` | 未推盡補推 G1–G6（**12/12**）：MC null 10⁷、家族可辨識性、Q4 判死、剛性、7/11 重現 | ✅ |
 | `scripts/05_additivity_scope.py` | ① 容量／強迫共享搜索 ＋ ② pairwise-only 量級核（**10/10**） | ✅ |
 | `data/` | 5 JSON ＋ 5 run log（含 v1 log 存證） | ✅ |
 
