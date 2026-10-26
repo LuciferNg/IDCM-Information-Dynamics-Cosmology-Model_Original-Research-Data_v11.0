@@ -76,3 +76,11 @@
 - ← `docs/31`（斷裂點）、`docs/30`（包絡）、`docs/29`（形式）、v9 `wfield_lattice/03_extended_derivation.md` §D.1 / `paper/17_paper.md` / O216
 - → `01_problem_record.md` §二十、register（note ＋ 發還）
 - 更正：`docs/31` §十 之「味分支結構」用語（見本文 §四.4）
+## 八、發還已正式執行（2026-10-26，append-only 附註）
+
+§五 之發還已由 register 落地：
+
+- `register.py handoff --pid M4 --target-pid M7`（target `M7` 已註冊；交接原文見 register event）
+- 承接單位：`IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/`（pid `M7`，2026-10-26 開檔，**只開不推**，推導留新 session）
+- ⚠️ 命名註記：調律者原話「開新m6」，但 **M6 = `m6_scale_dof_theorem`（尺度自由度定理）已存在** ⟹ 本題實際開為 **M7**
+- M4 側維持不變：A2 仍後驗；`em(K) ∈ [−0.52, +0.55] MeV` 型式無關預言仍待外部 lattice QED

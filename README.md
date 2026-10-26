@@ -30,20 +30,21 @@ v11.0 因此不做新物理，只做三件事：
 ```
 IDCM-v11.0--Reality-Architecture/
 ├── README.md
-└── main_problems/                     # M 系列 M1–M6
+└── main_problems/                     # M 系列 M1–M7
     ├── m1_mass_file_schema/
     ├── m2_sync_desync_exchange/
     ├── m3_omega_ratio_lock/
     ├── m4_mass_spectral_readout/
     ├── m5_hadron_bound_state_spectrum/
-    └── m6_scale_dof_theorem/
+    ├── m6_scale_dof_theorem/
+    └── m7_hadron_model_basis/
 ```
 
 ## 狀態快照
 
 ```
-M 系列：6 個（register 2026-10-25）
-  registered : M1, M6
+M 系列：7 個（register 2026-10-26）
+  registered : M1, M6, M7
   partial    : M2, M3, M4, M5
   closed     : 0
 ```
@@ -63,7 +64,7 @@ M 系列：6 個（register 2026-10-25）
 - **五反模式**：同義反覆／循環／範疇錯／枚舉即隱藏 dof／密度家族依賴
 - 公式不能以現有數值後驗擬合
 - 每發現 → 獨立 doc；更正 append-only 附註
-- pid 大寫（M1–M6），folder 細寫（`m1_mass_file_schema`…）
+- pid 大寫（M1–M7），folder 細寫（`m1_mass_file_schema`…）
 
 ## M 系列全列表
 
@@ -75,3 +76,4 @@ M 系列：6 個（register 2026-10-25）
 | M4 | 質量 = 譜讀數差值：全費米子譜差閉合 | `γ` 譜 ∈ ℤ[γ₁]；span = 12（0.14σ）⟹ `m_u = 2.1498 MeV`；單點譜比全滅 | 部分閉合 |
 | M5 | 強子束縛態譜與 ⟨1/r⟩ 重疊算子（em 分裂之連續動力學層） | `C_88` 精確核；`1/r ⟺ w=b`（α=1 EXACT）；味標籤核四層否證（D/D* 8.48σ）；K 通道盲測失敗 z=+3.20 | 部分閉合 |
 | M6 | 尺度自由度定理：複合投影 ⟹ dof=1（絕對標度非獨立自由度） | 只開不推（三問：絕對標度是否獨立／複合投影是否退化為計數／剩餘唯一非平凡數） | 已註冊 |
+| M7 | 強子模基展開：多夸克態 `w_k(h)` ⟹ `⟨O⟩ = w_1 − w_4` | 缺口源自 M4 `docs/32` §五 發還；BMW 三錨 `0.891/1.498/2.293`（`n_s=0/1/2`）待零參數盲測 | 已註冊 |
