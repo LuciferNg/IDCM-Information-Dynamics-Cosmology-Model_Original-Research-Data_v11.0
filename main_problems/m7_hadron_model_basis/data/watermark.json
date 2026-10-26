@@ -1,6 +1,6 @@
 {
  "close_out": "2026-10-26T12:59:45+08:00",
- "generated": "2026-10-27 01:11",
+ "generated": "2026-10-27 01:15",
  "n": 49,
  "rows": [
   {
@@ -40,12 +40,12 @@
   },
   {
    "path": "docs/17_audit_full_chain.md",
-   "mtime": "2026-10-27 00:46",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "docs/18_m4_intake_receipt.md",
-   "mtime": "2026-10-27 01:08",
+   "mtime": "2026-10-27 01:12",
    "after_close": true
   },
   {
@@ -85,12 +85,12 @@
   },
   {
    "path": "scripts/07_audit_full_chain.py",
-   "mtime": "2026-10-27 01:03",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "scripts/08_handoff_matrix.py",
-   "mtime": "2026-10-27 00:55",
+   "mtime": "2026-10-27 01:12",
    "after_close": true
   },
   {
@@ -110,12 +110,12 @@
   },
   {
    "path": "data/01_reproduction_gate.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/02_r5_mode_content_nogo.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
@@ -125,52 +125,52 @@
   },
   {
    "path": "data/02b_r5_mode_content_nogo.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/03_grep_evidence.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/04_doc_consistency.json",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/05_additivity_scope.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/06_gap_closure.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/07_audit_full_chain.json",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/08_handoff_matrix.json",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/09_m4_receipt.json",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/run_01_reproduction_gate.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/run_02_r5_mode_content_nogo.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
@@ -180,57 +180,57 @@
   },
   {
    "path": "data/run_02b_r5_mode_content_nogo.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/run_03_grep_evidence.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/run_04_doc_consistency.log",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/run_05_additivity_scope.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/run_06_gap_closure.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/run_07_audit_full_chain.log",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/run_08_handoff_matrix.log",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/run_09_m4_receipt.log",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:14",
    "after_close": true
   },
   {
    "path": "data/run_10_watermark.log",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "data/watermark.json",
-   "mtime": "2026-10-27 01:11",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {
    "path": "01_problem_record.md",
-   "mtime": "2026-10-27 01:10",
+   "mtime": "2026-10-27 01:15",
    "after_close": true
   },
   {

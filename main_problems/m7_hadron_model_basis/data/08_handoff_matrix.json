@@ -3,10 +3,10 @@
  "script": "08_handoff_matrix.py",
  "checks": [
   {
-   "item": "§2 每個目標 ins == outs（送達齊）",
+   "item": "§2 handoff 記錄無重複（每封一條）",
    "pass_": true,
-   "got": "3 目標",
-   "want": "全部相等",
+   "got": "0",
+   "want": "0",
    "note": ""
   },
   {
@@ -28,7 +28,9 @@
   {
    "target": "M2",
    "n_out": 2,
-   "n_in": 2,
+   "n_reply": 0,
+   "reply_ts": [],
+   "prior_incoming": [],
    "ts": [
     "2026-10-26T12:59:16+08:00",
     "2026-10-26T18:38:39+08:00"
@@ -37,12 +39,19 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/12_r5_verdict.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/15_additivity_scope_verdict.md"
    ],
-   "target_activity_after": 0
+   "target_activity_after": 0,
+   "status": "⏳ 未閉環（無回覆）"
   },
   {
    "target": "M4",
    "n_out": 3,
-   "n_in": 3,
+   "n_reply": 1,
+   "reply_ts": [
+    "2026-10-27T00:43:11+08:00"
+   ],
+   "prior_incoming": [
+    "2026-10-26T08:07:43+08:00"
+   ],
    "ts": [
     "2026-10-26T12:59:17+08:00",
     "2026-10-26T14:45:43+08:00",
@@ -53,19 +62,23 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/15_additivity_scope_verdict.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/16_gap_closure.md"
    ],
-   "target_activity_after": 5
+   "target_activity_after": 5,
+   "status": "✅ 已閉環"
   },
   {
    "target": "M5",
    "n_out": 1,
-   "n_in": 1,
+   "n_reply": 0,
+   "reply_ts": [],
+   "prior_incoming": [],
    "ts": [
     "2026-10-26T12:59:17+08:00"
    ],
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/10_reproduction_gate.md"
    ],
-   "target_activity_after": 1
+   "target_activity_after": 1,
+   "status": "⏳ 未閉環（無回覆）"
   }
  ],
  "notes_out": [],

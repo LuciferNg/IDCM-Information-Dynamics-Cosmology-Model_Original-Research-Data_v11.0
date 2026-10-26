@@ -3,17 +3,19 @@ kind 值域：note=1587, registered=547, progress=386, handed_off=305, conclusio
 
 M7 outgoing handoff = 6；incoming = 2
 
-§2 送達矩陣（逐目標核 ins==outs）
-  M2   outs=2  ins=2  ✅  目標其後活動 0 條
+§2 送達矩陣（送達 = 記錄唯一 ＋ ref 存在；回覆 = 對方 pid 回本 M 之記錄）
+  M2   outs=2  回覆(發出後)=0  其後活動=0  ⏳ 未閉環（無回覆）
        2026-10-26T12:59:16+08:00  12_r5_verdict.md
        2026-10-26T18:38:39+08:00  15_additivity_scope_verdict.md
-  M4   outs=3  ins=3  ✅  目標其後活動 5 條
+  M4   outs=3  回覆(發出後)=1  其後活動=5  ✅ 已閉環  [另有 1 條為發出前之對方來件]
        2026-10-26T12:59:17+08:00  12_r5_verdict.md
        2026-10-26T14:45:43+08:00  15_additivity_scope_verdict.md
        2026-10-26T18:38:10+08:00  16_gap_closure.md
-  M5   outs=1  ins=1  ✅  目標其後活動 1 條
+       ← 2026-10-27T00:43:11+08:00  33_handoff_intake_20261026.md
+  M5   outs=1  回覆(發出後)=0  其後活動=1  ⏳ 未閉環（無回覆）
        2026-10-26T12:59:17+08:00  10_reproduction_gate.md
-  ✅ §2 每個目標 ins == outs（送達齊）                     3 目標 | want 全部相等
+  ✅ §2 handoff 記錄無重複（每封一條）                       0 | want 0
+    回覆覆蓋：1/3 目標（M4）—— 屬對方責任，不作本 M PASS 判據
 
 §3 閉環判定：incoming 之後本 M 有無動作
   ← 2026-10-26T08:07:43+08:00  from M4  REF=32_flavour_structure_scout.md

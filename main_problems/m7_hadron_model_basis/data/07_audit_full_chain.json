@@ -273,15 +273,24 @@
  "C3": {
   "rows": [
    {
+    "commit": "64b65b7",
+    "file": "01_problem_record.md",
+    "n_del": 49,
+    "n_live": 45,
+    "n_lost": 0
+   },
+   {
     "commit": "78fe123",
     "file": "15_additivity_scope_verdict.md",
     "n_del": 1,
+    "n_live": 0,
     "n_lost": 0
    },
    {
     "commit": "913714b",
     "file": "11_definition_freeze.md",
     "n_del": 1,
+    "n_live": 0,
     "n_lost": 0
    }
   ],

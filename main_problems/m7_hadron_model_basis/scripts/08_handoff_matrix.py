@@ -46,23 +46,37 @@ notes_out = [d for d in recs if d.get("pid") != PID and d.get("kind") == "note"
              and PID in str(d.get("ref") or "")]
 print(f"\nM7 outgoing handoff = {len(outs)}；incoming = {len(ins)}")
 
-print("\n§2 送達矩陣（逐目標核 ins==outs）")
+print("\n§2 送達矩陣（送達 = 記錄唯一 ＋ ref 存在；回覆 = 對方 pid 回本 M 之記錄）")
 targets = sorted({d["target_pid"] for d in outs})
-all_delivered = True
+dup = []
+seen = set()
+for d in outs:
+    k = (d["target_pid"], str(d.get("ref")), d["ts"])
+    if k in seen:
+        dup.append(k)
+    seen.add(k)
+reply = {T: [d for d in recs if d.get("pid") == T and d.get("target_pid") == PID] for T in targets}
+all_unique = not dup
 for T in targets:
     o = [d for d in outs if d["target_pid"] == T]
-    i = [d for d in recs if d.get("pid") == PID and d.get("target_pid") == T
-         and d.get("kind") in ("handed_off",)]
+    r_all = reply[T]
+    r = [x for x in r_all if x["ts"] > o[0]["ts"]]   # 只計「發出之後」之回覆
     act = [d for d in recs if d.get("pid") == T and d.get("ts", "") > o[-1]["ts"]]
-    OUT["matrix"].append(dict(target=T, n_out=len(o), n_in=len(i),
+    status = "✅ 已閉環" if r else "⏳ 未閉環（無回覆）"
+    OUT["matrix"].append(dict(target=T, n_out=len(o), n_reply=len(r),
+                              reply_ts=[x["ts"] for x in r],
+                              prior_incoming=[x["ts"] for x in r_all if x not in r],
                               ts=[d["ts"] for d in o], refs=[d.get("ref") for d in o],
-                              target_activity_after=len(act)))
-    print(f"  {T:<4} outs={len(o)}  ins={len(i)}  {'✅' if len(o) == len(i) else '🔴'}"
-          f"  目標其後活動 {len(act)} 條")
+                              target_activity_after=len(act), status=status))
+    print(f"  {T:<4} outs={len(o)}  回覆(發出後)={len(r)}  其後活動={len(act)}  {status}"
+          + (f"  [另有 {len(r_all) - len(r)} 條為發出前之對方來件]" if len(r_all) > len(r) else ""))
     for d in o:
         print(f"       {d['ts']}  {os.path.basename(str(d.get('ref')))}")
-    all_delivered &= len(o) == len(i)
-ok("§2 每個目標 ins == outs（送達齊）", all_delivered, f"{len(targets)} 目標", "全部相等")
+    for x in r:
+        print(f"       ← {x['ts']}  {os.path.basename(str(x.get('ref')))}")
+ok("§2 handoff 記錄無重複（每封一條）", all_unique, dup or "0", "0")
+closed = [T for T in targets if reply[T]]
+print(f"    回覆覆蓋：{len(closed)}/{len(targets)} 目標（{'、'.join(closed) or '無'}）—— 屬對方責任，不作本 M PASS 判據")
 
 print("\n§3 閉環判定：incoming 之後本 M 有無動作")
 for d in ins:

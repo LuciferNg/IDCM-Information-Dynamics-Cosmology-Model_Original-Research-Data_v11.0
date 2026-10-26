@@ -83,8 +83,9 @@ C2 水位：register close（2026-10-26T12:59:45）之後被改嘅檔
   ✅ C2 水位覆蓋全部 close 後變更檔                               0  水位屬 live field，由 scripts/10 重生；本檢查只核覆蓋性
 
 C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可接受；內容消失不可）
-    78fe123 15_additivity_scope_verdict.md     刪   1 行；未重現 0
-    913714b 11_definition_freeze.md            刪   1 行；未重現 0
+    64b65b7 01_problem_record.md               刪  49 行；其中水位 live-field 45；未重現 0
+    78fe123 15_additivity_scope_verdict.md     刪   1 行；其中水位 live-field  0；未重現 0
+    913714b 11_definition_freeze.md            刪   1 行；其中水位 live-field  0；未重現 0
     違規（內容消失）：無
   ✅ C3 歷史檔零內容消失（append-only）                           0  刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫
 

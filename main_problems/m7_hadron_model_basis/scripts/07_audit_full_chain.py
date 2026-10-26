@@ -328,10 +328,17 @@ for c in commits:
     out = subprocess.run(["git", "-C", gitdir, "show", "--format=", "--unified=0", c, "--",
                           "main_problems/m7_hadron_model_basis"], capture_output=True, text=True).stdout
     cur, dels, adds = None, [], []
+    def is_live(d):   # 水位屬 live field（skill §1）：重生可刪舊行
+        return bool(re.match(r"^\| \d+ \| `", d) or d.startswith("### §檔案閉合水位")
+                    or d.startswith("> live field") or d.startswith("> 判「未變」")
+                    or d.startswith("| # | 檔案 |") or d.startswith("|:-:|:-----"))
+
     def flush():
         if cur and dels:
-            lost = [d for d in dels if d.strip() and d not in adds]
-            rows.append(dict(commit=c[:7], file=os.path.basename(cur), n_del=len(dels), n_lost=len(lost)))
+            live = [d for d in dels if is_live(d)]
+            lost = [d for d in dels if d.strip() and d not in adds and not is_live(d)]
+            rows.append(dict(commit=c[:7], file=os.path.basename(cur), n_del=len(dels),
+                             n_live=len(live), n_lost=len(lost)))
             if lost:
                 violations.append(dict(commit=c[:7], file=os.path.basename(cur), lost=lost[:2]))
     for ln in out.splitlines():
@@ -349,7 +356,7 @@ for c in commits:
                 adds.append(ln[1:])
     flush()
 for r in rows:
-    print(f"    {r['commit']} {r['file']:<34} 刪 {r['n_del']:>3} 行；未重現 {r['n_lost']}")
+    print(f"    {r['commit']} {r['file']:<34} 刪 {r['n_del']:>3} 行；其中水位 live-field {r['n_live']:>2}；未重現 {r['n_lost']}")
 print(f"    違規（內容消失）：{violations or '無'}")
 ok("C3 歷史檔零內容消失（append-only）", not violations, len(violations), 0,
    "刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫")
