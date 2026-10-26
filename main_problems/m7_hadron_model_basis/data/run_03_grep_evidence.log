@@ -1,0 +1,33 @@
+====================================================================================================
+E1 概念詞語料命中（排除本 M 目錄）
+詞                              IDCM-v9.0        IDCM-v10.0        IDCM-v11.0
+  w_k 佔用                           0f/0h           28f/85h            4f/11h
+  佔有率／佔據數                          3f/7h           12f/15h             3f/4h
+  多夸克態                             0f/0h             1f/1h             5f/6h
+  Fock 展開                          0f/0h             2f/2h             0f/0h
+  投影子差                             0f/0h             0f/0h             0f/0h
+  isovector                        0f/0h             0f/0h            5f/10h
+  ūu − d̄d                         0f/0h             0f/0h            6f/20h
+  夸克含量                             0f/0h             7f/9h             0f/0h
+  海夸克／介子雲                          0f/0h             0f/0h             0f/0h
+  質量泛函非可加                          0f/0h             0f/0h             3f/4h
+  ⟨O⟩ 矩陣元                          0f/0h             0f/0h          15f/187h
+
+E2 判定（v9.0 為原文權威；v9 命中 = 已形式化，v9 0 命中 = 概念未形式化）
+  w_k 佔用               v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  佔有率／佔據數              v9 = 3 ⟹ v9 已見（須逐條核是否同義）
+  多夸克態                 v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  Fock 展開              v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  投影子差                 v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  isovector            v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  ūu − d̄d             v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  夸克含量                 v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  海夸克／介子雲              v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  質量泛函非可加              v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+  ⟨O⟩ 矩陣元              v9 = 0 ⟹ v9 0 命中 ⟹ 未形式化
+
+E3 定義凍結 hash（docs/11 §二 定義區塊）
+  SHA-256 = 883e91d5338ad58509670baf9d692b94e560a0bc3577f4fa8de5074b16e92421
+  區塊長度 = 1614 chars
+
+JSON → /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/data/03_grep_evidence.json

@@ -3,9 +3,9 @@
 <!-- registry
 pid:     M7
 title:   強子模基展開：多夸克態 w_k(h) ⟹ ⟨O⟩ = w_1 − w_4
-state:   registered
-verdict: -
-flags:   register-only
+state:   closed
+verdict: negative
+flags:   r5-death-gate-fired; cross-M-conflict(M2); handoff×3(M2,M5,M4)
 owner:   M7
 created: 2026-10-26
 updated: 2026-10-26
@@ -127,3 +127,24 @@ M4 `docs/32` 定位：`⟨O⟩` 唔可以由樹幾何得出（密度插入已死
 - ← v9 `IDCM-v9.0--W-Field-Lattice/wfield_lattice/03_extended_derivation.md` §D.1、`paper/17_paper.md` L217–231、`fermion/11_dirac_lattice_derivation.md` L181
 - 外部：BMW PRL 111, 252001 (2013) TABLE I；FLAG24 `m_d − m_u = 2.56 ± 0.094` MeV
 - 生命週期：`problem_register`（pid `M7`）
+
+---
+
+## 十、執行 timeline（append-only，2026-10-26 首輪）
+
+| # | 輪 | 內容 | 判 | 檔 |
+|:-:|:--|:--|:--:|:--|
+| 01 | R0 | 重現閘：兩體徑向骨架零 import 獨立重建 ＋ mpmath 30 dps 打磨 | ✅ **19/19** | `docs/10`／`scripts/01` |
+| 02 | R1 | 定義凍結 `w_k(h) = ⟨h|P_k|h⟩`；語料 grep 證據（`w_k` v9 **0 命中**、投影子差全語料 0）＋ hash `883e91d5…92421` | 🔒 | `docs/11`／`scripts/03` |
+| 03 | R5-a | **T-M7-1 整數定理**：`[V,P_k]=0 ⟹ w_k ∈ ℤ`（1000 次隨機核，dev `5.8e−15`）；唯一破口 = 味非對角（語料 0、違反電荷守恆） | ✅ 定理成立 | `docs/12` §3.1 |
+| 04 | R5-b | **Q4 升為前置閘**：v9 §D.1 sector 表 `(c,t)／(s,b)／(e,μ,τ)` **不含 u、d** ⟹ `ūu→P₁`、`d̄d→P₄` 無文本依據 ⟹ T2 未良定義 | 🔴 T2 定義層死 | `docs/12` §3.2 |
+| 05 | R5-c | **T-M7-2 恒等定理**：整數 `w` ≡ 價夸克計數 ⟹ `⟨O⟩ ≡ 1`（Fraction 精確）；sector 讀法 ⟹ `⟨O⟩ ≡ 2`（`χ² = 111.79`、`p = 4.5e−24`）| 🔴 T2 數值死（兩讀法） | `docs/12` §3.2–3.3 |
+| 06 | R5-d | 三錨 χ² 獨立重算：`⟨O⟩≡1` `χ² = 18.22/3 dof`、**`p = 3.96e−4`（3.36σ）**；★ 揭 M4 `docs/29` 之 `p = 1.97e−5` 係 **1 dof** 值 | 🔴 T3 死＋審計項 | `docs/12` §二／§六 |
+| 07 | R5-e | **K8 跨 M 核**：M2 `docs/01` §2 已證「質量 = **加性**泛函」（`m = M₀Σσ_nγ_n`）＋ `Σγ = 90` EXACT ⟹ IDCM 已註冊結構**強制** `⟨O⟩ ≡ 1` ⟹ 與 BMW 三錨衝突 **3.36σ** | 🔴 **跨 M 硬衝突** | `docs/12` §3.3 |
+| 08 | R5-f | 非可加性需求量化：`Δ = (−0.109, +0.498, +1.293)`；M5 兩體 binding 響應差 **36.5–433×**（M5 約定）／**181–2150×**（`w=v²`），且 N 通道**反號** | 🔴 唯一活口封 | `docs/12` §3.4 |
+
+**R5 判決**：T1 🟡（存在但退化為恒等）｜T2 🔴 否證（定義層 ＋ 數值，雙重）｜T3 🔴 否證。
+**本輪最重要結果**：唔係「M7 推唔到」，而係 **IDCM 已註冊結構（M2 加性泛函）強制 `⟨O⟩ ≡ 1`，而 BMW 三錨否證之（3.36σ）** ⟹ 衝突須上游裁定（M2 加性之適用範圍／三體束縛）。
+
+**並行 session 註記**：本目錄同時有另一 session 之 `scripts/01_repro_gate.py`／`02_definition_freeze.py`（11:42／11:45）；
+本輪未覆寫其任何檔案，並獨立核到其提出之 M5 weight 約定問題（`w_d = N_d v_d²` 雙重計數；兩約定重校解見 `docs/10` §五）。

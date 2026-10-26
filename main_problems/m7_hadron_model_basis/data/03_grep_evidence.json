@@ -1,0 +1,280 @@
+{
+ "terms": {
+  "w_k 佔用": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 28,
+    "nhits": 85,
+    "files": [
+     "main_problems/p11_little_red_dots/records/26_root_cause_equal_weight.md",
+     "open_problems_fresh/README.md",
+     "open_problems_fresh/o225_mechanism_born_forcing/docs/37_r18_contract.md",
+     "open_problems_fresh/o53_cy3_reality/scripts/13_fixed_projection.py",
+     "open_problems_fresh/o219_pt_mode_index_premise/data/02_scan.json",
+     "open_problems_fresh/o202_spectral_representation/docs/04_routes234_bvp_kernel_fsr.md"
+    ]
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 4,
+    "nhits": 11,
+    "files": [
+     "README.md",
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/README.md",
+     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+    ]
+   }
+  },
+  "佔有率／佔據數": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 3,
+    "nhits": 7,
+    "files": [
+     "sync_bump_analysis/idcm_wfield_expansion.py",
+     "sync_bump_analysis/idcm_closed_loop_cosmology.py",
+     "open_problems_fresh/kchain_cosmic_web/64_dm_abundance_geometric.md"
+    ]
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 12,
+    "nhits": 15,
+    "files": [
+     "open_problems_fresh/o32_galaxy_rotation/scripts/20_microscopic_interp.py",
+     "open_problems_fresh/o165_exponential_weight_origin/SESSION_START.md",
+     "open_problems_fresh/o116_dm_abundance/SESSION_START.md",
+     "open_problems_fresh/o116_dm_abundance/docs/01_problem_record.md",
+     "open_problems_fresh/o144_boson_identity/docs/12_epistemology_reclass.md",
+     "open_problems_fresh/o121_black_hole_entropy/docs/03_entropy_structure.md"
+    ]
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 3,
+    "nhits": 4,
+    "files": [
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
+     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+    ]
+   }
+  },
+  "多夸克態": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 1,
+    "nhits": 1,
+    "files": [
+     "open_problems_fresh/o137_cy3_topological_resonance/SESSION_START.md"
+    ]
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 5,
+    "nhits": 6,
+    "files": [
+     "README.md",
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/README.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
+     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+    ]
+   }
+  },
+  "Fock 展開": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 2,
+    "nhits": 2,
+    "files": [
+     "open_problems_fresh/o121_black_hole_entropy/docs/05_string_comparison.md",
+     "open_problems_fresh/o204_wfield_constitution/docs/08_cross_version_audit.md"
+    ]
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   }
+  },
+  "投影子差": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   }
+  },
+  "isovector": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 5,
+    "nhits": 10,
+    "files": [
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
+     "main_problems/m4_mass_spectral_readout/docs/29_operator_structure.md",
+     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+    ]
+   }
+  },
+  "ūu − d̄d": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 6,
+    "nhits": 20,
+    "files": [
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/README.md",
+     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
+     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md",
+     "main_problems/m4_mass_spectral_readout/scripts/28_matrix_element_resolution.py"
+    ]
+   }
+  },
+  "夸克含量": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 7,
+    "nhits": 9,
+    "files": [
+     "open_problems_fresh/o88_anomaly_fermion_rep/docs/07_pd2_scalar_sector.md",
+     "open_problems_fresh/o144_boson_identity/docs/01_qcd_mass_budget.md",
+     "open_problems_fresh/o144_boson_identity/scripts/42_spin_sector_out_of_sample.py",
+     "open_problems_fresh/o119_positron_excess/scripts/04_kinematic_window.py",
+     "open_problems_fresh/o139_finite_qft_to_qed/docs/01_problem_record.md",
+     "open_problems_fresh/o139_finite_qft_to_qed/docs/03_problem_A_alpha_running.md"
+    ]
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   }
+  },
+  "海夸克／介子雲": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   }
+  },
+  "質量泛函非可加": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 3,
+    "nhits": 4,
+    "files": [
+     "main_problems/m2_sync_desync_exchange/README.md",
+     "main_problems/m2_sync_desync_exchange/docs/01_exchange_law.md",
+     "main_problems/m2_sync_desync_exchange/scripts/02_exchange_operator.py"
+    ]
+   }
+  },
+  "⟨O⟩ 矩陣元": {
+   "IDCM-v9.0--W-Field-Lattice": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v10.0--It-From-Beat": {
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
+   },
+   "IDCM-v11.0--Reality-Architecture": {
+    "nfiles": 15,
+    "nhits": 187,
+    "files": [
+     "README.md",
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m4_mass_spectral_readout/README.md",
+     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
+     "main_problems/m4_mass_spectral_readout/docs/29_operator_structure.md"
+    ]
+   }
+  }
+ },
+ "verdicts": {
+  "w_k 佔用": "v9 0 命中 ⟹ 未形式化",
+  "佔有率／佔據數": "v9 已見（須逐條核是否同義）",
+  "多夸克態": "v9 0 命中 ⟹ 未形式化",
+  "Fock 展開": "v9 0 命中 ⟹ 未形式化",
+  "投影子差": "v9 0 命中 ⟹ 未形式化",
+  "isovector": "v9 0 命中 ⟹ 未形式化",
+  "ūu − d̄d": "v9 0 命中 ⟹ 未形式化",
+  "夸克含量": "v9 0 命中 ⟹ 未形式化",
+  "海夸克／介子雲": "v9 0 命中 ⟹ 未形式化",
+  "質量泛函非可加": "v9 0 命中 ⟹ 未形式化",
+  "⟨O⟩ 矩陣元": "v9 0 命中 ⟹ 未形式化"
+ },
+ "def_sha256": "883e91d5338ad58509670baf9d692b94e560a0bc3577f4fa8de5074b16e92421",
+ "exclusion": "m7_hadron_model_basis 已排除",
+ "versions": [
+  "IDCM-v9.0--W-Field-Lattice",
+  "IDCM-v10.0--It-From-Beat",
+  "IDCM-v11.0--Reality-Architecture"
+ ]
+}

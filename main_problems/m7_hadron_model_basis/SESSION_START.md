@@ -1,11 +1,14 @@
 # M7 SESSION_START — 強子模基展開：w_k(h) ⟹ ⟨O⟩ = w_1 − w_4
 
+> ⚠️ **本文已於 2026-10-26 執行完畢（verdict: negative）** ⟹ 結果見 `final_result.md`；
+> 執行紀錄 `docs/10`（R0 重現閘 19/19）、`docs/11`（R1 凍結）、`docs/12`（R5 判死）。以下為原始起手式，保留不動。
+
 <!-- registry
 pid:     M7
 title:   強子模基展開：多夸克態 w_k(h) ⟹ ⟨O⟩ = w_1 − w_4
-state:   registered
-verdict: -
-flags:   register-only
+state:   closed
+verdict: negative
+flags:   r5-death-gate-fired; cross-M-conflict(M2); handoff×3(M2,M5,M4)
 owner:   M7
 created: 2026-10-26
 updated: 2026-10-26
