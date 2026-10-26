@@ -1,0 +1,256 @@
+{
+ "script": "scripts/33_handoff_intake_20261026.py",
+ "date": "2026-10-26",
+ "scope": "incoming handoffs addressed to M4 (11 events); independent rebuild of M7 x3",
+ "anchors": {
+  "O": [
+   "891/1000",
+   "749/500",
+   "2293/1000"
+  ],
+  "sigma": [
+   "107/1000",
+   "131/500",
+   "351/1000"
+  ]
+ },
+ "chi2_const": "49005809061739/2689563920121",
+ "p_3dof": "0.00039606636098",
+ "p_1dof": "1.96726288858e-5",
+ "sigma_3dof": "3.3555293",
+ "fit": {
+  "a": 0.8857402853191146,
+  "sigma_a": 0.10549260150065136,
+  "b": 0.6753303504664904,
+  "sigma_b": 0.16134792363395115,
+  "chi2_min": 0.08636792383670637,
+  "z_b": 4.185553400728028
+ },
+ "models_chi2": {
+  "M1  1+2n/3        ": 1.4653713492251708,
+  "A2  Nq(n+1)/B     ": 1.7515498024074376,
+  "M0sea 1+n*P0      ": 3.7820452099002266,
+  "MB   1+n*<B^-d>   ": 2.0265761356369265,
+  "M34  1+0.75n      ": 2.310650968404726,
+  "Mhalf 1+0.5n      ": 1.7346114674134818,
+  "M2   3/(3-n)      ": 5.094973802134791
+ },
+ "delta_chi2_m1_vs_p0sea": 2.316673860675056,
+ "mc": {
+  "N": 10000000,
+  "hits": 279,
+  "p": 2.79e-05,
+  "sigma": 4.029902470015303,
+  "seed": 20261026,
+  "stat": "|b_hat| >= b_fit under <O>=1"
+ },
+ "capacity": {
+  "per_mode": 6,
+  "N_q": 3,
+  "sigma_max": "1/2"
+ },
+ "three_body_rel_pct": -18.350341907227396,
+ "v9_labels": [
+  "b",
+  "c",
+  "e",
+  "s",
+  "t"
+ ],
+ "checks": [
+  {
+   "label": "A1a chi2(<O>==1) == 18.22 (docs/29 C1)",
+   "ok": true,
+   "got": "18.2207",
+   "expect": "18.22"
+  },
+  {
+   "label": "A1b p(3 dof) == 3.96e-4 (M7 K3)",
+   "ok": true,
+   "got": "0.00039607",
+   "expect": "3.96e-4"
+  },
+  {
+   "label": "A1c p(1 dof) == 1.97e-5 (= docs/29 C1 figure)",
+   "ok": true,
+   "got": "1.9673e-5",
+   "expect": "1.97e-5"
+  },
+  {
+   "label": "A1d sigma(3 dof) == 3.36",
+   "ok": true,
+   "got": "3.356",
+   "expect": "3.36"
+  },
+  {
+   "label": "A2a a == 0.885740 +- 0.105493",
+   "ok": true,
+   "got": "0.885740 +- 0.105493",
+   "expect": "0.885740 +- 0.105493"
+  },
+  {
+   "label": "A2b b == 0.675330 +- 0.161348",
+   "ok": true,
+   "got": "0.675330 +- 0.161348",
+   "expect": "0.675330 +- 0.161348"
+  },
+  {
+   "label": "A2c chi2_min == 0.0864",
+   "ok": true,
+   "got": "0.086368",
+   "expect": "0.0864"
+  },
+  {
+   "label": "A2d chi2(b=0, a free) - chi2_min == (b/sigma_b)^2",
+   "ok": true,
+   "got": "17.605225 - 0.086368 = 17.518857",
+   "expect": "identity"
+  },
+  {
+   "label": "A2e chi2(<O>==1) - chi2(b=0, a free) == (a0-1)^2*Sw",
+   "ok": true,
+   "got": "18.220727 - 17.605225 = 0.615501",
+   "expect": "identity"
+  },
+  {
+   "label": "A3a z_N == 1.02",
+   "ok": true,
+   "got": "1.019",
+   "expect": "1.02"
+  },
+  {
+   "label": "A3b z_Sigma == 1.90",
+   "ok": true,
+   "got": "-1.901",
+   "expect": "1.90"
+  },
+  {
+   "label": "A3c z_Xi == 3.68",
+   "ok": true,
+   "got": "-3.684",
+   "expect": "3.68"
+  },
+  {
+   "label": "A3d intercept a compatible with 1 (|1-a|/sig_a < 2)",
+   "ok": true,
+   "got": "1.083",
+   "expect": "< 2"
+  },
+  {
+   "label": "A4a chi2(M1) == 1.47",
+   "ok": true,
+   "got": "1.4654",
+   "expect": "1.47"
+  },
+  {
+   "label": "A4b Delta chi2(M1 vs 1+n*P0 sea) == 2.32 (M7 K5)",
+   "ok": true,
+   "got": "2.3167",
+   "expect": "2.32"
+  },
+  {
+   "label": "A4c sqrt(Delta chi2) == 1.52 sigma",
+   "ok": true,
+   "got": "1.522",
+   "expect": "1.52"
+  },
+  {
+   "label": "A4d no registered-structure form beats M1 by >4 in chi2 (indistinguishable)",
+   "ok": true,
+   "got": "Mhalf 1+0.5n D=0.269",
+   "expect": ">-4"
+  },
+  {
+   "label": "A5a MC p in [1e-5, 6e-5] (M7 quote 2.79e-5)",
+   "ok": true,
+   "got": "2.790e-05",
+   "expect": "2.79e-5"
+  },
+  {
+   "label": "A5b MC sigma equivalent >= 4.0",
+   "ok": true,
+   "got": "4.03",
+   "expect": ">= 4.0 (M7: 4.19)"
+  },
+  {
+   "label": "A5c analytic z_b == 4.186",
+   "ok": true,
+   "got": "4.186",
+   "expect": "4.186"
+  },
+  {
+   "label": "A6a <O> == 1 exactly in all 3 channels",
+   "ok": true,
+   "got": "['1', '1', '1']",
+   "expect": "1 (exact)"
+  },
+  {
+   "label": "A7a sum gamma == 90 exact (50 dps)",
+   "ok": true,
+   "got": "90.0",
+   "expect": "90"
+  },
+  {
+   "label": "A7b sum sin^2 == 45/2 exact",
+   "ok": true,
+   "got": "22.5",
+   "expect": "45/2"
+  },
+  {
+   "label": "A8a capacity == 6",
+   "ok": true,
+   "got": "6",
+   "expect": "6"
+  },
+  {
+   "label": "A8b max occupancy == 1/2 < 1 (never saturates => additivity not an assumption)",
+   "ok": true,
+   "got": "1/2",
+   "expect": "1/2"
+  },
+  {
+   "label": "A9a three-body shift == -18.35 %",
+   "ok": true,
+   "got": "-18.35 %",
+   "expect": "-18.35 %"
+  },
+  {
+   "label": "A10a block reproduces (c,t)/(s,b)/(e,...) sector table",
+   "ok": true,
+   "got": "['b', 'c', 'e', 's', 't']",
+   "expect": "{c,t,s,b,e}"
+  },
+  {
+   "label": "A10b u absent from sector table (=> u->P_1 is an extrapolation)",
+   "ok": true,
+   "got": "['b', 'c', 'e', 's', 't']",
+   "expect": "u absent"
+  },
+  {
+   "label": "A10c d absent from sector table (=> d->P_4 is an extrapolation)",
+   "ok": true,
+   "got": "['b', 'c', 'e', 's', 't']",
+   "expect": "d absent"
+  }
+ ],
+ "diag": [
+  {
+   "label": "docs/29 quotes p = 1.97e-05 (stale, 1 dof value used for 3 dof)",
+   "text": "True"
+  },
+  {
+   "label": "docs/29 keeps M1 labelled post-hoc",
+   "text": "True"
+  },
+  {
+   "label": "docs/30 lists M1/A1 and A2",
+   "text": "True"
+  },
+  {
+   "label": "docs/32 asserts the mode-subspace mapping P_{k=1} / P_{k=4}",
+   "text": "True"
+  }
+ ],
+ "n_pass": 29,
+ "n_checks": 29
+}

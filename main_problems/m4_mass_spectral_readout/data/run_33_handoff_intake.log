@@ -1,0 +1,80 @@
+==============================================================================
+M4 scripts/33 -- incoming handoff intake audit (2026-10-26)
+==============================================================================
+anchors: <O> = ['891/1000', '749/500', '2293/1000']  sigma = ['107/1000', '131/500', '351/1000']
+
+[A1] chi2(<O>==1) exact Fraction = 49005809061739/2689563920121 = 18.22072667435779
+     p (3 dof) = 0.000396066    p (1 dof) = 1.96726e-5
+PASS A1a chi2(<O>==1) == 18.22 (docs/29 C1)         | 18.2207 | expect 18.22
+PASS A1b p(3 dof) == 3.96e-4 (M7 K3)                | 0.00039607 | expect 3.96e-4
+PASS A1c p(1 dof) == 1.97e-5 (= docs/29 C1 figure)  | 1.9673e-5 | expect 1.97e-5
+     equivalent one-sided sigma(3 dof) = 3.3555
+PASS A1d sigma(3 dof) == 3.36                       | 3.356 | expect 3.36
+
+[A2] weighted fit: a = 0.8857402853191146  sigma_a = 0.10549260150065136
+     b = 0.6753303504664904  sigma_b = 0.16134792363395115  chi2_min = 0.08636792383670637
+PASS A2a a == 0.885740 +- 0.105493                  | 0.885740 +- 0.105493 | expect 0.885740 +- 0.105493
+PASS A2b b == 0.675330 +- 0.161348                  | 0.675330 +- 0.161348 | expect 0.675330 +- 0.161348
+PASS A2c chi2_min == 0.0864                         | 0.086368 | expect 0.0864
+PASS A2d chi2(b=0, a free) - chi2_min == (b/sigma_b)^2 | 17.605225 - 0.086368 = 17.518857 | expect identity
+PASS A2e chi2(<O>==1) - chi2(b=0, a free) == (a0-1)^2*Sw | 18.220727 - 17.605225 = 0.615501 | expect identity
+
+[A3] per-anchor z (value 1 vs anchor): [1.019, -1.901, -3.684]
+PASS A3a z_N == 1.02                                | 1.019 | expect 1.02
+PASS A3b z_Sigma == 1.90                            | -1.901 | expect 1.90
+PASS A3c z_Xi == 3.68                               | -3.684 | expect 3.68
+PASS A3d intercept a compatible with 1 (|1-a|/sig_a < 2) | 1.083 | expect < 2
+
+[A4] model chi2 (3 dof) and Delta chi2 vs M1
+     chi2(M1) = 1.4654
+     M1  1+2n/3           chi2 =   1.4654   Dchi2 vs M1 =  0.0000
+     A2  Nq(n+1)/B        chi2 =   1.7515   Dchi2 vs M1 =  0.2862
+     M0sea 1+n*P0         chi2 =   3.7820   Dchi2 vs M1 =  2.3167
+     MB   1+n*<B^-d>      chi2 =   2.0266   Dchi2 vs M1 =  0.5612
+     M34  1+0.75n         chi2 =   2.3107   Dchi2 vs M1 =  0.8453
+     Mhalf 1+0.5n         chi2 =   1.7346   Dchi2 vs M1 =  0.2692
+     M2   3/(3-n)         chi2 =   5.0950   Dchi2 vs M1 =  3.6296
+PASS A4a chi2(M1) == 1.47                           | 1.4654 | expect 1.47
+PASS A4b Delta chi2(M1 vs 1+n*P0 sea) == 2.32 (M7 K5) | 2.3167 | expect 2.32
+PASS A4c sqrt(Delta chi2) == 1.52 sigma             | 1.522 | expect 1.52
+PASS A4d no registered-structure form beats M1 by >4 in chi2 (indistinguishable) | Mhalf 1+0.5n D=0.269 | expect >-4
+
+[A5] MC null 1e7 under <O>==1: |b| >= 0.675330 in 279 draws -> p = 2.790e-05 (0.9s)
+PASS A5a MC p in [1e-5, 6e-5] (M7 quote 2.79e-5)    | 2.790e-05 | expect 2.79e-5
+PASS A5b MC sigma equivalent >= 4.0                 | 4.03 | expect >= 4.0 (M7: 4.19)
+PASS A5c analytic z_b == 4.186                      | 4.186 | expect 4.186
+
+[A6] valence identity <O>_ch = dnu/coeff = {'N': '1', 'Sigma': '1', 'Xi': '1'}
+PASS A6a <O> == 1 exactly in all 3 channels         | ['1', '1', '1'] | expect 1 (exact)
+
+[A7] sum_k gamma_k (44-chain) = 90.0
+PASS A7a sum gamma == 90 exact (50 dps)             | 90.0 | expect 90
+PASS A7b sum sin^2 == 45/2 exact                    | 22.5 | expect 45/2
+
+[A8] capacity per chain mode = 2*(B-1) = 6 ; N_q = 3 ; max sigma = 1/2
+PASS A8a capacity == 6                              | 6 | expect 6
+PASS A8b max occupancy == 1/2 < 1 (never saturates => additivity not an assumption) | 1/2 | expect 1/2
+
+[A9] E0^(3) = 1.73205080757  sum pair = 2.12132034356  rel = -18.3503 %
+PASS A9a three-body shift == -18.35 %               | -18.35 % | expect -18.35 %
+
+[A10] v9 section D.1 block:
+Generation modes = chain eigenmodes k ∈ {1, 4, 5} with (s,d) grading:
+- k=1 (s=2, d=3): Up sector (c, t)
+- k=4 (s=1, d=2): Down sector (s, b)
+- k=5 (s=0, d=2): Lepton sector (e, μ, τ)
+
+---
+     parsed quark labels in the three sector lines: ['b', 'c', 'e', 's', 't']
+PASS A10a block reproduces (c,t)/(s,b)/(e,...) sector table | ['b', 'c', 'e', 's', 't'] | expect {c,t,s,b,e}
+PASS A10b u absent from sector table (=> u->P_1 is an extrapolation) | ['b', 'c', 'e', 's', 't'] | expect u absent
+PASS A10c d absent from sector table (=> d->P_4 is an extrapolation) | ['b', 'c', 'e', 's', 't'] | expect d absent
+[DIAG] docs/29 quotes p = 1.97e-05 (stale, 1 dof value used for 3 dof) | True
+[DIAG] docs/29 keeps M1 labelled post-hoc | True
+[DIAG] docs/30 lists M1/A1 and A2 | True
+[DIAG] docs/32 asserts the mode-subspace mapping P_{k=1} / P_{k=4} | True
+
+==============================================================================
+SUMMARY: 29/29 PASS   (4 DIAG lines)
+==============================================================================
+wrote data/33_handoff_intake.json
