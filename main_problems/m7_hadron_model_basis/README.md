@@ -21,7 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
-| `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② 三體束縛 ⟹ **條件性 NO-GO** | 🔴 |
+| `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② **不獨立**（M2 唯一性禁止獨立束縛項）⟹ **單一 no-go**（§九 更正） | 🔴 |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
@@ -45,11 +45,11 @@ handoff ×3：→ **M2**（加性泛函適用範圍）· → **M5**（weight 約
 ## 已封（2026-10-26 第三輪）
 
 1. ~~M2 加性泛函是否覆蓋複合態~~ ⟹ **已答：覆蓋**（每模容量 6 > `N_q` 3 ⟹ 永不飽和）→ `docs/15`
-2. ~~三體束縛 `E_bind^{(3)}`~~ ⟹ **條件性 NO-GO**（全部核 pairwise；相關僅 −18.35% vs 需 3650%+）→ `docs/15`
+2. ~~三體束縛 `E_bind^{(3)}`~~ ⟹ **不獨立**（M2 唯一性窮盡 ⟹ 冇束縛能槽位；量級核降為旁證）→ `docs/15` §九
 
 ## 未閉合（下游／新結構需求，未開題）
 
-1. **三體（多體）味奇頂點 `λ₃`** —— ② 之唯一活口
-2. **連續夸克質量參數** —— 現譜離散 ⟹ Feynman–Hellmann `⟨O⟩` 本身唔係 IDCM 內在量
+1. ~~三體味奇頂點 `λ₃`~~ —— **撤回**（加入即放棄 M2 唯一性）
+2. **連續夸克質量參數**（唯一活口） —— 現譜離散 ⟹ Feynman–Hellmann `⟨O⟩` 本身唔係 IDCM 內在量
 3. Q4：s/d、u/c 之 sector 內細分（v9／P10 側）
 4. M4：`⟨O⟩` 程序須重審（對應關係問題）
