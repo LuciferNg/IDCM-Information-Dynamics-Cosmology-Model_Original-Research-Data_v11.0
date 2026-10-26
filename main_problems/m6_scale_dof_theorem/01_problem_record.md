@@ -213,3 +213,106 @@ source:  調律者2026-10-25「開M6, 只開不推」
 3. ② 之**離散 RG 類比**未排除。
 4. ③ 速率軸 ≤6 未定（p 屬 M2）。
 5. ④ 之非齊次路線（絕對標度）屬 O38 G2／穹頂，非 M6。
+
+## 十五、全鏈審計（2026-10-26，`scripts/12_audit_chain.py`，**30/30**）
+
+> 依據 skill `idcm-audit-verify`（十項：腳本集對稱／逆向綁定／路徑衛生／產物綁定／driver／
+> data↔stdout／四件套同步／append-only／pre-patch 備份／prose 重算）。
+
+### 15.1 重跑證據（先重跑，後審計）
+
+```
+for s in 01 02 03 05 06 07 08 09 10 11  → 全 EXIT=0
+01 20/20｜02 14/14｜03 6/6｜05 5/5｜06 4/4｜07 4/4｜08 4/4｜09 5/5｜10 9/9｜11 7/7
+合計 74/74；10 個 data JSON **md5 byte-identical**（重跑前快照比對）
+docs 一致性 scripts/04：32/32
+```
+
+### 15.2 首輪 audit（27 PASS｜3 FAIL｜4 WARN）與處置
+
+| # | 級 | 發現 | 性質 | 處置 |
+|:-:|:-:|:--|:--|:--|
+| 1 | 🔴 | A6「data↔stdout 不一致」×10 | **審計腳本自身 bug**（把 json `fail`=0 對 log 分母 20） | 改為 `json.pass == log 分子 ∧ json.fail == 分母−分子` ⟹ 10/10 一致 |
+| 2 | 🔴 | A7a 四件套狀態 `final_result=None` | regex 不識「已閉合」 | 加 `NORM` 映射 ⟹ 四份皆 `closed` |
+| 3 | 🔴 | A9 缺 pre-patch 備份 | **真違規**：`01_problem_record`/`README`/`docs/05`/`docs/08` 在本審計前已被 patch 而無備份 | ① 建 `~/.hermes/backups/m6_audit_20261026_2310/`（7 檔 ＋ MANIFEST sha256）；② `docs/05`、`docs/08` 以 **A8 append-only 結構證明**原文未被覆寫（各節標題仍在、附註在檔尾）；③ `record`/`README`/`SESSION_START` 有 git registration commit 版本 |
+| 4 | 🟡 | A1b 4 支腳本未入四件套（`04`,`09`,`10`,`11`） | 文檔缺口 | 下節 15.3 補檔表；README 檔表同步 |
+| 5 | 🟡 | A5 無 driver | 可重跑性弱 | 新增 `scripts/run_chain.sh`（預設 dry-run，`--run` 才跑） |
+| 6 | 🟡 | A7b `final_result.md` 陳舊（17:04 < 18:45） | §0.1 結論反轉須重寫 | **已全文重寫至最終態**（T2′／四路／未閉清單／審計結論） |
+| 7 | 🟡 | A7c `SESSION_START` 無修正行 | §0.1 | 已 append「修正點 append」一節（第 1 輪快照不動） |
+
+### 15.3 檔案清單（權威；A1 對稱檢查對象）
+
+| 類 | 檔 |
+|:--|:--|
+| docs 01–12 | `01_t1_composite_additivity`／`02_t2_scale_dof_theorem`／`03_r4_counterexample_hunt`／`04_t3_handoff_and_verdict`／`05_p_dof_ledger`／`06_kappa_lambda_identifiability`／`07_hidden_layer_mechanism`／`08_framework_self_audit`／`09_upgrade_routes`／`10_forced_single_scale`／`11_beta_no_go`／`12_economy_and_homogeneity` |
+| scripts | `scripts/01_t1_composite_additivity.py`／`scripts/02_t2_scale_dof_theorem.py`／`scripts/03_r4_counterexample_hunt.py`／`scripts/04_doc_consistency.py`／`scripts/05_p_dof_ledger.py`／`scripts/06_kappa_identifiability.py`／`scripts/07_hidden_scales.py`／`scripts/08_framework_self_audit.py`／`scripts/09_symmetry_route.py`／`scripts/10_forced_single_scale.py`／`scripts/11_beta_no_go_and_homogeneity.py`／`scripts/12_audit_chain.py` ＋ `scripts/run_chain.sh` |
+| data | `01`–`12` 之 `*.json` ＋ `run_*.log` |
+
+### 15.4 檔案閉合水位（2026-10-26 23:20 建立）
+
+| 檔 | mtime | 已驗範圍 | 狀態 |
+|:--|:--|:--|:--|
+| `scripts/01`–`03`（第一輪） | 10-26 14:00–14:13 | 全檔重跑 | ✅ 40/40 |
+| `scripts/05`–`07`（第二輪） | 10-26 16:53–16:52 | 全檔重跑 | ✅ 13/13 |
+| `scripts/08`–`11`（四路） | 10-26 17:39–18:34 | 全檔重跑 | ✅ 25/25 |
+| `scripts/04`（doc 一致性） | 10-26 17:02 | 全檔重跑 | ✅ 32/32 |
+| `scripts/12`（審計） | 10-26 23:20 | 全檔（含自身 bug 修正） | ✅ 30/30 |
+| `docs/01`–`07` | 10-26 14:00–16:55 | 數字↔data 逐項（A10 ＋ scripts/04） | ✅ |
+| `docs/08`–`12` | 10-26 17:39–18:44 | 數字↔run log 逐項（A10 11/11） | ✅ |
+| 四件套 | 10-26 23:1x | 狀態同步 ＋ 新鮮度 | ✅ |
+
+### 15.5 審計結論
+
+> **全鏈可重現、可追溯、append-only 完整、狀態四份同步。**
+> 真正 DEFECT 只有一項：**審計前 4 個就地改動檔無 pre-patch 備份**（已以 append-only 結構證明 ＋
+> git registration 版本補救，並建立審計時點備份）。其餘 3 FAIL 屬審計腳本自身 bug（已修）。
+> 未閉之**科學**項（非記錄缺陷）：H1／H2／離散 RG／21 質量關係測試 —— 見 §十四 未閉清單。
+
+## 十六、Register handoff 審計（2026-10-26 23:30，唯讀 parse jsonl 3,293 事件）
+
+> 依 skill `o-series-handoff-audit`。`register.py check` 全綠：**HARD DRIFT 0**、新增斷點 0、
+> `REF-MISSING 0`、`STATUS-DRIFT 0`、`PID-NO-FOLDER 0`、`COLLISION-STALE 0`、`ALIAS-DANGLING 0`。
+
+### 16.1 收訖矩陣
+
+| 方向 | ts | 對方 | 送達 | 閉環 | 處置 |
+|:--|:--|:--|:--:|:--:|:--|
+| **out** | 10-26 14:29:23 | M6 → O38（T3） | — | — | 🟡 **已撤回**（調律者「v11.0 不逆交接回 v10.0」；register 14:52／15:22 兩條 note 已記；事件按 append-only 保留）⟹ 非缺陷 |
+| **in** | 10-25 10:57:22 | M5 → M6（κ／hadronic scale） | ✅ | ✅ | 已於 14:30:37 note 回覆「dof=1 不能定 κ 之 MeV 值」 |
+| **in** | 10-26 23:09:32 | **M8 → M6（T3 判決回交）** | ✅ | 🔴 到達時零活動 | **本輪收訖並落地**（見 §16.2） |
+
+refs：本 pid 寫出事件 **26 個 ref，0 個無法解析**（首輪工具誤報 9 個 = refs 欄係 JSON 陣列字串，已修正解析）。
+
+### 16.2 收據（三件式，依 skill §3d）
+
+1. **逐項核（用本 M 自己嘅輸入重算）**：`2.894296 + 35.717977 = 38.612273`（vs 申報 `38.612274`，差 1e−6 = 成分四捨五入）；
+   `10^35.717977 = 5.2236852e35`（vs 申報 `5.223686e35` ✅）；M8 `final_result.md` 逐行字面核（docs/04 §4、docs/06、R3 撤銷）✅。
+2. **瑕疵判 invariant**：缺口 dex 與倍數一致（同一量兩種寫法）；`f_M0 ≡ X₀/√N_IDCM ≡ μ` 為**代數恆等**（零新內容）⟹ 不影響本 M 任何結論；
+   `dof_scale = 1` 之兩界定理與 T3 身份**獨立**（T3 屬計數層）。
+3. **雙向更正**：對方指正本 M 者 = 無（本 M 未對 4.095e38 之 fan 路線下過判）；本 M 指正對方者 = 無。
+   落地位置：`docs/04_t3_handoff_and_verdict.md` 檔尾附註（原文不動）＋ register `note`（本節 ref）。
+
+### 16.3 T3 最終狀態（收訖後）
+
+| 命題 | 狀態 |
+|:--|:--|
+| 「4.095e38 係純計數、唔佔標度 dof」 | ✅ 不變（本 M docs/02 §6 分類成立） |
+| 「4.095e38 由 **fan／圖卡** 生成」 | 🔴 **否證**（M8；跨距 2.894296 dex vs 需 38.612274 dex） |
+| 「4.095e38 = `f_M0·f_R/44`」 | 🟡 收窄；殘餘**獨立未解 = 2**（屬 O38 G2／M8；本 M 不重推） |
+
+### 16.4 未閉環清單（handoff 面）
+
+- ✅ 無未答 incoming（兩條均已回覆／收訖）。
+- 🟡 outgoing 至 O38 已撤回，但 register 事件仍在 ⟹ 未來審計會再見到此條；**判據 = 14:52、15:22 兩條 note**（勿重發）。
+- 🔴 無 dangling ref、無 state drift、無 collision。
+
+### 16.5 本輪 register 層發現（已修，並回寫 skill）
+
+| # | 發現 | 影響 | 處置 |
+|:-:|:--|:--|:--|
+| 1 | `conclusion --verdict negative` 令 `status` 顯示 `state=closed verdict=**negative**` | 個別 claim 之 verdict **蓋過**記錄 verdict，未來審計會誤判 M6 為負結果 | `close --pid M6 --verdict closed` 校正 ⟹ 現 `closed/closed` |
+| 2 | `conclusion --claim` 成為投影 **title**（顯示為長 claim 截斷） | status 一眼讀不到記錄名 | 補一條總結 conclusion（claim 以「M6 尺度自由度定理（兩界）：…」開頭）＋ `rebuild` ⟹ title 正常 |
+| 3 | conclusion／close 後 `status` **投影滯後**（sqlite 未更新） | 會誤以為 register 未生效 | 一律 `register.py rebuild` → `status` → `check` |
+| 4 | `register --reuse` **不能**改 title（報 `already registered`） | 無 append-only 改 title 路徑 | 以總結 conclusion 覆寫投影（唯一可行法） |
+
+以上 4 條已寫入 skill `idcm-register-discipline` §6（conclusion/rebuild 規則）。

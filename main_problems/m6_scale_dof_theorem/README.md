@@ -1,6 +1,6 @@
 # M6 — 尺度自由度定理（兩界）：`dof_scale = 1` **恰**（條件性定理）
 
-## 狀態: 🟢 closed（2026-10-26；第一輪 40/40 ＋ 第二輪 13/13 ＋ 自審 4/4 ＋ 四路升級 ①②④ 完成）
+## 狀態: 🟢 closed（2026-10-26；第一輪 40/40 ＋ 第二輪 13/13 ＋ 自審 4/4 ＋ 四路 ①②④ 完成 ＋ 全鏈審計 37/37 ＋ M8 T3 回交已收訖）
 
 > **地位演進**：原 T2 = 定義性歸約（`docs/08` 自審）→ **T2′ = 定理**（`docs/10` 上界 ＋ `docs/12` §2 下界 ＋ `docs/11` β no-go）。
 > 假設明列：H1 Galois 協變、H2 質量繼承晶格關係（`docs/10` §6）；界外：離散 RG 類比（`docs/11` §4）。
@@ -28,8 +28,17 @@
 | `docs/05_p_dof_ledger.md` | item 2：p 之自由度總帳（量綱／Jacobian／預言力） | 🟢 5/5 |
 | `docs/06_kappa_lambda_identifiability.md` | item 3：κ 之 λ 可識別性（精確 2⁴⁴ 計數） | 🟢 4/4 |
 | `docs/07_hidden_layer_mechanism.md` | item 4：中間層隱藏機制（支撐定理＋加法量子化） | 🟢 4/4 |
-| `scripts/01–07_*.py` | 可重跑腳本（精確算術） | 🟢 |
-| `data/01–07_*.json`、`data/run_0*.log` | 輸出數據與執行記錄 | 🟢 |
+| `docs/08_framework_self_audit.md` | 框架自審：T1/T2 鑑別力測試（4/4 = 零鑑別力之證） | 🟡 |
+| `docs/09_upgrade_routes.md` | 四條升級路線 ＋ Galois 軌道（44 → 7） | 🟢 5/5 |
+| `docs/10_forced_single_scale.md` | **T2′ 上界**：7 軌道標度被迫全等（精確代數） | 🟢 9/9 |
+| `docs/11_beta_no_go.md` | **標度生成 no-go**：無連續 β ⟹ 無 transmutation | 🟢 7/7 |
+| `docs/12_economy_and_homogeneity.md` | 參數經濟（速率軸 ≤6）＋ **齊次性 no-go**（dof=0 不可能） | 🟢 4/4 |
+| `scripts/01–07_*.py` | 推導腳本（精確算術） | 🟢 40/40 ＋ 13/13 |
+| `scripts/08`–`11_*.py` | 自審／對稱／強制單一標度／β＋齊次性 | 🟢 25/25 |
+| `scripts/12_audit_chain.py` | 全鏈審計（十項，唯讀） | 🟢 30/30 |
+| `scripts/04_doc_consistency.py` | 文檔↔數據一致性（32 claims） | 🟢 32/32 |
+| `scripts/run_chain.sh` | 全鏈 driver（預設 dry-run，`--run` 才跑） | 🟢 |
+| `data/01–12_*.json`、`data/run_*.log` | 輸出數據與執行記錄（重跑 byte-identical） | 🟢 |
 
 ## 依賴
 

@@ -47,3 +47,15 @@ source:  調律者2026-10-25「開M6, 只開不推」；理據源於 2026-10-25 
 | `SESSION_START.md` | 本檔 = 起手式 |
 | `final_result.md` | 未建（未開始，無結果可摘要） |
 | `problem_register/` | 生命週期（pid `M6`） |
+
+---
+
+## 修正點 append（2026-10-26，append-only；第 1 輪快照不改）
+
+> 依 skill `idcm-audit-verify` §0.1「結論反轉須 append 一行」。
+
+1. **T2 地位兩次變更**：`定理` → `定義性歸約`（`docs/08` 自審）→ **`定理 T2′`**（`docs/10` 上界 ＋ `docs/12 §2` 下界 ＋ `docs/11` β no-go）⟹ 現況：`dof_scale = 1` **恰**。
+2. **新增**：`docs/08`–`docs/12`；`scripts/08`–`scripts/12`（含 `12_audit_chain.py` 全鏈審計、`run_chain.sh` driver）。
+3. **修正**：速率軸自由度 `1 → ≤ 6`（`docs/05` 附註更正；需 mode-blind 均勻假設才為 1）。
+4. **未閉**：H2（強子層加性 vs M5 束縛能）· H1（Galois 協變）· 離散 RG 類比 · 21 質量 ℤ-關係測試（等數據）。
+5. **審計**：`scripts/12` 全鏈 **30/30**（重跑 74/74、10 JSON byte-identical、一致性 32/32）；`final_result.md` 已重寫至最終態。

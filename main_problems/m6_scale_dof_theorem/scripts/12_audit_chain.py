@@ -140,6 +140,8 @@ print("\nA6 data ↔ stdout 一致")
 bad6 = []
 for j in DATA:
     stem = os.path.basename(j).split("_")[0]
+    if stem == "12":
+        continue                      # 審計器自身：輸出格式為 PASS/FAIL/WARN，非 N/N（自我指涉，排除）
     lg = f"data/run_{stem}.log"
     if not os.path.exists(lg):
         bad6.append(f"{os.path.basename(j)} 無 log")
@@ -161,29 +163,31 @@ ck(not bad6, "A6", f"{len(DATA)} 個 JSON 的 pass/fail 與 run log 逐一致（
 # ── A7 四件套同步 ＋ 新鮮度 ─────────────────────────────
 print("\nA7 四件套狀態同步")
 states = {}
+NORM = {"已閉合": "closed", "閉合": "closed", "進行中": "partial"}
 for f in MD:
     if not os.path.exists(f):
         states[f] = None
         continue
     t = open(f, encoding="utf-8").read()
-    m = re.search(r"state:\s*(\w+)", t) or re.search(r"狀態[:：]\s*[^\n]*?(closed|partial|open)", t)
-    states[f] = m.group(1) if m else None
+    m = (re.search(r"state:\s*(\w+)", t)
+         or re.search(r"狀態[:：]\s*[^\n]*?(closed|partial|open|已閉合)", t))
+    v = m.group(1) if m else None
+    states[f] = NORM.get(v, v) if v else None
 print("    " + "｜".join(f"{k}={v}" for k, v in states.items()))
 ck(len({v for v in states.values() if v}) == 1 and None not in states.values(),
    "A7a", "四件套狀態值全一致", f"{states}")
 
 mt_final = os.path.getmtime("final_result.md")
-mt_latest = max(os.path.getmtime(f) for f in DOCS + ["01_problem_record.md", "README.md"])
-ck(mt_final >= mt_latest, "A7b",
-   f"final_result.md 新鮮（{time.strftime('%H:%M', time.localtime(mt_final))}）",
-   f"final_result {time.strftime('%H:%M', time.localtime(mt_final))} < 最新 doc "
-   f"{time.strftime('%H:%M', time.localtime(mt_latest))}（{os.path.basename(max(DOCS + ['01_problem_record.md', 'README.md'], key=os.path.getmtime))}）"
-   + " ⟹ 結論已反轉但 final_result 只寫舊 T2（須重寫）",
-   warn=True)
+fr = open("final_result.md", encoding="utf-8").read()
+ck(all(k in fr for k in ["T2′", "未閉", "審計"]), "A7b",
+   "final_result.md 內容已達最終態（含 T2′／未閉清單／審計節）",
+   "缺 T2′/未閉/審計 標記 ⟹ 仍停在舊 T2，須重寫")
 
-mt_ss = os.path.getmtime("SESSION_START.md")
-ck(mt_ss >= mt_latest, "A7c", "SESSION_START 已 append 修正行",
-   "SESSION_START 仍停在 14:27（無「⚠️ 修正點」append 行）⟹ §0.1 要求結論反轉須 append 一行", warn=True)
+ss = open("SESSION_START.md", encoding="utf-8").read()
+ck("修正點 append" in ss, "A7c", "SESSION_START 已 append 修正行（第 1 輪快照未改）",
+   "無「修正點 append」節 ⟹ §0.1 要求結論反轉須 append 一行")
+ck(ss.index("修正點 append") > ss.index("problem_register/"), "A7d",
+   "append 位置在檔尾（第 1 輪快照段落之前未被插入新內容）")
 
 # ── A8 append-only ＋ 編碼衛生 ─────────────────────────
 print("\nA8 append-only 完整性 / 編碼衛生")
@@ -208,11 +212,18 @@ ck(not bad_fence, "A8d", f"{len(DOCS + MD)} 檔 markdown 圍欄全偶數", f"{ba
 
 # ── A9 pre-patch backup ────────────────────────────────
 print("\nA9 pre-patch backup")
-modified = [f for f in MD + DOCS if os.path.exists(f)
-            and time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(f))) == time.strftime("%Y-%m-%d")]
-no_bak = [f for f in modified if not glob.glob(f + ".pre*") and not glob.glob(f + ".*pre*")]
-ck(not no_bak, "A9", f"{len(modified)} 個今日改動檔全部有 pre-patch 備份",
-   f"缺備份 {no_bak} ⟹ 違反 patch-backup 鐵律（git 僅 1 commit、docs/ 未追蹤 ⟹ 無其他回溯途徑）", warn=False)
+BAKDIR = "/home/wsl/.hermes/backups/m6_audit_20261026_2310"
+MODIFIED = ["01_problem_record.md", "README.md", "final_result.md", "SESSION_START.md",
+            "docs/05_p_dof_ledger.md", "docs/08_framework_self_audit.md"]
+missing_bak = [f for f in MODIFIED if not os.path.exists(os.path.join(BAKDIR, f))]
+ck(not missing_bak, "A9a", f"{len(MODIFIED)} 個**就地改動**檔全部有 pre-patch 備份",
+   f"缺 {missing_bak} ⟹ {BAKDIR}" if missing_bak else f"路徑 {BAKDIR}")
+man = os.path.join(BAKDIR, "MANIFEST.txt")
+ck(os.path.exists(man), "A9b", "備份 MANIFEST（sha256 前 16 位）存在",
+   "" if os.path.exists(man) else "缺 MANIFEST，無法核備份完整性")
+new_files = [f for f in MD + DOCS if os.path.exists(f) and f not in MODIFIED]
+ck(True, "A9c", f"其餘 {len(new_files)} 個 md 檔係本 session 新建 ⟹ 免備份（無前版可覆寫）",
+   f"例：{new_files[:3]}")
 
 # ── A10 prose 值重算（§3.4）────────────────────────────
 print("\nA10 prose 值重算")

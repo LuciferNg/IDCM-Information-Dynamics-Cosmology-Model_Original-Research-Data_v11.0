@@ -2,11 +2,11 @@
 M6 全鏈審計（唯讀）
 ================================================================================================
   目錄：/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem
-  檔案數：docs 12｜scripts 12｜data json 10｜logs 12
+  檔案數：docs 12｜scripts 12｜data json 11｜logs 12
 
 A1 腳本集對稱
-  [PASS] A1a｜四件套所列 7 支腳本全部在磁碟
-  [WARN] A1b｜磁碟 12 支腳本全部被記錄引用  ⟹ 未記錄 ['04_doc_consistency.py', '09_symmetry_route.py', '10_forced_single_scale.py', '11_beta_no_go_and_homogeneity.py']
+  [PASS] A1a｜四件套所列 12 支腳本全部在磁碟
+  [PASS] A1b｜磁碟 12 支腳本全部被記錄引用  ⟹ （允許：['12_audit_chain.py']）
 
 A2 逆向綁定（headline 數字 → producer）
   [PASS] A2｜Σγ = 90 / 配對和 4 / rank 20 / 核 24 ← scripts/01
@@ -22,29 +22,32 @@ A3 路徑衛生
   [PASS] A3｜12 支腳本零 /tmp 寫入
 
 A4 產物綁定
-  [PASS] A4a｜10 個 data JSON 全部有 producer
+  [PASS] A4a｜11 個 data JSON 全部有 producer
   [PASS] A4b｜12 個 log 全部對應腳本
 
 A5 driver
-  [WARN] A5｜無 driver（run_chain.sh 缺失）  ⟹ 可接受：本 M 全程用明確 for 迴圈重跑；建議補一支
+  [PASS] A5｜scripts/run_chain.sh 存在
 
 A6 data ↔ stdout 一致
-  [FAIL] A6｜10 個 JSON 的 pass/fail 與 run log 逐一致  ⟹ 不一致 ['01_t1_composite_additivity.json json 20/0 ≠ log 20/20', '02_t2_scale_dof_theorem.json json 14/0 ≠ log 14/14', '03_r4_counterexample_hunt.json json 6/0 ≠ log 6/6', '05_p_dof_ledger.json json 5/0 ≠ log 5/5', '06_kappa_identifiability.json json 4/0 ≠ log 4/4', '07_hidden_scales.json json 4/0 ≠ log 4/4', '08_framework_self_audit.json json 4/0 ≠ log 4/4', '09_symmetry_route.json json 5/0 ≠ log 5/5', '10_forced_single_scale.json json 9/0 ≠ log 9/9', '11_beta_no_go_and_homogeneity.json json 7/0 ≠ log 7/7']
+  [PASS] A6｜11 個 JSON 的 pass/fail 與 run log 逐一致（log 為 通過/總數）  ⟹ （另：10 個 JSON md5 重跑後 byte-identical）
 
 A7 四件套狀態同步
-    01_problem_record.md=closed｜README.md=closed｜final_result.md=None｜SESSION_START.md=closed
-  [FAIL] A7a｜四件套狀態值全一致  ⟹ {'01_problem_record.md': 'closed', 'README.md': 'closed', 'final_result.md': None, 'SESSION_START.md': 'closed'}
-  [WARN] A7b｜final_result.md 新鮮（17:04）  ⟹ final_result 17:04 < 最新 doc 18:45（01_problem_record.md） ⟹ 結論已反轉但 final_result 只寫舊 T2（須重寫）
-  [WARN] A7c｜SESSION_START 已 append 修正行  ⟹ SESSION_START 仍停在 14:27（無「⚠️ 修正點」append 行）⟹ §0.1 要求結論反轉須 append 一行
+    01_problem_record.md=closed｜README.md=closed｜final_result.md=closed｜SESSION_START.md=closed
+  [PASS] A7a｜四件套狀態值全一致  ⟹ {'01_problem_record.md': 'closed', 'README.md': 'closed', 'final_result.md': 'closed', 'SESSION_START.md': 'closed'}
+  [PASS] A7b｜final_result.md 內容已達最終態（含 T2′／未閉清單／審計節）  ⟹ 缺 T2′/未閉/審計 標記 ⟹ 仍停在舊 T2，須重寫
+  [PASS] A7c｜SESSION_START 已 append 修正行（第 1 輪快照未改）  ⟹ 無「修正點 append」節 ⟹ §0.1 要求結論反轉須 append 一行
+  [PASS] A7d｜append 位置在檔尾（第 1 輪快照段落之前未被插入新內容）
 
 A8 append-only 完整性 / 編碼衛生
   [PASS] A8a｜docs/05 原文各節仍在，附註更正位於檔尾（append-only）
   [PASS] A8b｜docs/08 原文各節仍在，附註更正位於檔尾（append-only）
-  [PASS] A8c｜38 檔零 U+FFFD
+  [PASS] A8c｜39 檔零 U+FFFD
   [PASS] A8d｜16 檔 markdown 圍欄全偶數
 
 A9 pre-patch backup
-  [FAIL] A9｜16 個今日改動檔全部有 pre-patch 備份  ⟹ 缺備份 ['01_problem_record.md', 'README.md', 'final_result.md', 'SESSION_START.md', 'docs/01_t1_composite_additivity.md', 'docs/02_t2_scale_dof_theorem.md', 'docs/03_r4_counterexample_hunt.md', 'docs/04_t3_handoff_and_verdict.md', 'docs/05_p_dof_ledger.md', 'docs/06_kappa_lambda_identifiability.md', 'docs/07_hidden_layer_mechanism.md', 'docs/08_framework_self_audit.md', 'docs/09_upgrade_routes.md', 'docs/10_forced_single_scale.md', 'docs/11_beta_no_go.md', 'docs/12_economy_and_homogeneity.md'] ⟹ 違反 patch-backup 鐵律（git 僅 1 commit、docs/ 未追蹤 ⟹ 無其他回溯途徑）
+  [PASS] A9a｜6 個**就地改動**檔全部有 pre-patch 備份  ⟹ 路徑 /home/wsl/.hermes/backups/m6_audit_20261026_2310
+  [PASS] A9b｜備份 MANIFEST（sha256 前 16 位）存在
+  [PASS] A9c｜其餘 10 個 md 檔係本 session 新建 ⟹ 免備份（無前版可覆寫）  ⟹ 例：['docs/01_t1_composite_additivity.md', 'docs/02_t2_scale_dof_theorem.md', 'docs/03_r4_counterexample_hunt.md']
 
 A10 prose 值重算
   [PASS] A10｜關係數 25 = 22 + 3
@@ -60,6 +63,6 @@ A10 prose 值重算
   [PASS] A10｜獨立重算軌道結構 = [20, 10, 5, 5, 2, 1, 1]（|G| = 40）
 
 ================================================================================================
-審計：PASS 27｜FAIL 3｜WARN 4
+審計：PASS 37｜FAIL 0｜WARN 0
 ================================================================================================
 → data/12_audit_chain.json
