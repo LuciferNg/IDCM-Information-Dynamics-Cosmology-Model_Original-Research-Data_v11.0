@@ -1,0 +1,170 @@
+{
+ "module": "M7",
+ "round": "R6",
+ "script": "05_additivity_scope.py",
+ "checks": [
+  {
+   "item": "C1 dim(色嵌入) = B−1 = 3（O216）",
+   "pass_": true,
+   "got": "3",
+   "want": "3",
+   "note": ""
+  },
+  {
+   "item": "C1 每模容量 = 2×3 = 6",
+   "pass_": true,
+   "got": "6",
+   "want": "6",
+   "note": ""
+  },
+  {
+   "item": "C1 N_q ≤ 3 ⟹ max σ_n = 3/6 = 0.5 < 1（永不飽和）",
+   "pass_": true,
+   "got": "0.500",
+   "want": "< 1",
+   "note": "⟹ σ 可自由相加 ⟹ 加性覆蓋複合態"
+  },
+  {
+   "item": "C2 全部 7 種味道內容皆無溢出 ⟹ 無強迫共享",
+   "pass_": true,
+   "got": "0 個",
+   "want": "0 個",
+   "note": "最大單 sector = 3（uuu/ddd/sss）≤ 6"
+  },
+  {
+   "item": "C3 γ₄ = 4sin²(4π/88) 與 v9 §D.1 之 0.0810 一致",
+   "pass_": true,
+   "got": "0.0810141",
+   "want": "0.081",
+   "note": ""
+  },
+  {
+   "item": "C3 容量=1 之 Ξ dev 符號 vs 所需（需 +，得 −）",
+   "pass_": true,
+   "got": "-2.260 MeV",
+   "want": "需 +3.310 MeV",
+   "note": "★符號相反"
+  },
+  {
+   "item": "C3 容量=1 之 N/Σ dev（皆 0，所需非 0）",
+   "pass_": true,
+   "got": "0, 0",
+   "want": "需 -0.279, +1.275",
+   "note": ""
+  },
+  {
+   "item": "C4 已註冊核全部 body order ≤ 2（無三體頂點）",
+   "pass_": true,
+   "got": "[2, 2, 2, 1]",
+   "want": "全部 ≤ 2",
+   "note": "⟹ E_bind^(3) 之味奇部分只可由 pair 核誘導"
+  },
+  {
+   "item": "C5 三體相關為 O(10%)，非 O(10²)",
+   "pass_": true,
+   "got": "-18.35%",
+   "want": "|相關| < 50%",
+   "note": ""
+  },
+  {
+   "item": "C5 相關量級 ≪ ② 所需放大（36.5–433×）",
+   "pass_": true,
+   "got": "18.4%",
+   "want": "需 ≥ 36.5× = 3650%",
+   "note": ""
+  }
+ ],
+ "C1": {
+  "dim_colour": 3,
+  "capacity": 6,
+  "sigma_max": 0.5
+ },
+ "C2": {
+  "hadrons": [
+   "N uud",
+   "Σ uus",
+   "Λ uds",
+   "Ξ uss",
+   "Δ⁺⁺ uuu",
+   "Ω⁻ sss",
+   "d* ddd"
+  ],
+  "forced_sharing": [],
+  "capacity": 6
+ },
+ "C3": {
+  "gamma4": 0.08101405277100522,
+  "dev": {
+   "N (uud)": 0.0,
+   "Σ (uus)": 0.0,
+   "Ξ (uss)": -2.2603661605696623
+  },
+  "need_MeV": [
+   -0.27904,
+   1.27488,
+   3.3100799999999997
+  ],
+  "verdict": "容量=1 路線：Ξ 之量級接近（2.26 vs 需 3.31）但**符號相反**，且 N/Σ 皆 0 ⟹ 否證"
+ },
+ "C4": {
+  "kernels": [
+   {
+    "name": "em 電荷核 α q_iq_j B^{−d}",
+    "body_order": 2,
+    "src": "M5 docs/09"
+   },
+   {
+    "name": "樹核 κ q_iq_j B^{−d}",
+    "body_order": 2,
+    "src": "M4/M5"
+   },
+   {
+    "name": "on-site 磁接觸 ∝ δ_{d,0}（兩體）",
+    "body_order": 2,
+    "src": "M5 docs/09"
+   },
+   {
+    "name": "層釘（單粒子）",
+    "body_order": 1,
+    "src": "P10 §6 / M5 docs/12"
+   }
+  ],
+  "corpus_hits": {
+   "三體": {
+    "n": 9,
+    "files": [
+     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+     "main_problems/m5_hadron_bound_state_spectrum/01_problem_record.md",
+     "main_problems/m5_hadron_bound_state_spectrum/SESSION_START.md",
+     "main_problems/m5_hadron_bound_state_spectrum/docs/01_chain_coulomb_kernel.md",
+     "main_problems/m5_hadron_bound_state_spectrum/docs/12_layer_pin_a3.md"
+    ]
+   },
+   "three-body": {
+    "n": 0,
+    "files": []
+   },
+   "3-body": {
+    "n": 0,
+    "files": []
+   },
+   "triple vertex": {
+    "n": 0,
+    "files": []
+   }
+  }
+ },
+ "C5": {
+  "E_pair": 2.1213203435596424,
+  "E3": 1.7320508075688772,
+  "corr_rel": -0.18350341907227397,
+  "required_gain": [
+   36.5,
+   433.0
+  ],
+  "verdict": "pairwise-only 三體束縛最多提供 O(10%) 修正 ⟹ 不可能放大 36.5–433×"
+ },
+ "npass": 10,
+ "ntotal": 10,
+ "verdict": "① **NO-GO（加性覆蓋複合態）**：每模容量 = 6 > N_q = 3 ⟹ σ_n ≤ 0.5 ⟹ 永不飽和 ⟹ σ 可加；7 種味道內容皆無強迫共享；唯一反事實路線（容量=1）符號相反且 N/Σ 為 0。② **NO-GO（條件性）**：已註冊核全部 pairwise（body order ≤ 2）；三體核／頂點定義語料 0 命中（「三體」9 命中全屬 M5 之界限聲明「重子需三體階梯解，未推」）⟹ E_bind^(3) 之味奇部分只可誘導，而 pairwise-only 之三體相關僅 -18.4% ⟹ 無法放大 36.5–433×。"
+}

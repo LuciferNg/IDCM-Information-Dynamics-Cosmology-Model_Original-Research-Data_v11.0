@@ -21,10 +21,12 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② 三體束縛 ⟹ **條件性 NO-GO** | 🔴 |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
-| `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（88 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**99** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/05_additivity_scope.py` | ① 容量／強迫共享搜索 ＋ ② pairwise-only 量級核（**10/10**） | ✅ |
 | `data/` | 5 JSON ＋ 5 run log（含 v1 log 存證） | ✅ |
 
 ## 依賴
@@ -40,8 +42,14 @@ M4（`docs/28` 三錨／`docs/31` 密度插入否證／`docs/32` 發還原文）
 pid `M7`（created 2026-10-26；closed 2026-10-26 verdict `negative`）
 handoff ×3：→ **M2**（加性泛函適用範圍）· → **M5**（weight 約定 `N_dv²` vs `v²`）· → **M4**（`docs/29` p 值 3.96e−4；M1 後驗標記）
 
-## 未閉合（下游）
+## 已封（2026-10-26 第三輪）
 
-1. 三體束縛 `E_bind^{(3)}`（唯一實質活口，需新題）
-2. M2 加性泛函是否覆蓋複合態（決定 `⟨O⟩` 問題係數據讀法抑或結構缺口）
+1. ~~M2 加性泛函是否覆蓋複合態~~ ⟹ **已答：覆蓋**（每模容量 6 > `N_q` 3 ⟹ 永不飽和）→ `docs/15`
+2. ~~三體束縛 `E_bind^{(3)}`~~ ⟹ **條件性 NO-GO**（全部核 pairwise；相關僅 −18.35% vs 需 3650%+）→ `docs/15`
+
+## 未閉合（下游／新結構需求，未開題）
+
+1. **三體（多體）味奇頂點 `λ₃`** —— ② 之唯一活口
+2. **連續夸克質量參數** —— 現譜離散 ⟹ Feynman–Hellmann `⟨O⟩` 本身唔係 IDCM 內在量
 3. Q4：s/d、u/c 之 sector 內細分（v9／P10 側）
+4. M4：`⟨O⟩` 程序須重審（對應關係問題）

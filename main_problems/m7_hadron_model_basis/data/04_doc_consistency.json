@@ -1,9 +1,9 @@
 {
- "npass": 87,
- "ntotal": 88,
- "nfail": 1,
+ "npass": 99,
+ "ntotal": 99,
+ "nfail": 0,
  "corrected": 4,
- "verdict": "FAIL",
+ "verdict": "PASS",
  "corrigenda": [
   {
    "name": "§三 16 mpmath ⟨B⟩",
@@ -239,19 +239,19 @@
    "name": "grep 表 w_k 佔用",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('0', '0'), ('28', '85'), ('4', '11')]"
+   "detail": "doc=[('0', '0'), ('28', '85'), ('1', '1')]"
   },
   {
    "name": "grep 表 佔有率／佔據數",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('3', '7'), ('12', '15'), ('3', '4')]"
+   "detail": "doc=[('3', '7'), ('12', '15'), ('0', '0')]"
   },
   {
    "name": "grep 表 多夸克態",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('0', '0'), ('1', '1'), ('5', '6')]"
+   "detail": "doc=[('0', '0'), ('1', '1'), ('1', '1')]"
   },
   {
    "name": "grep 表 Fock 展開",
@@ -269,13 +269,13 @@
    "name": "grep 表 isovector",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('0', '0'), ('0', '0'), ('5', '10')]"
+   "detail": "doc=[('0', '0'), ('0', '0'), ('0', '0')]"
   },
   {
    "name": "grep 表 ūu − d̄d",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('0', '0'), ('0', '0'), ('6', '20')]"
+   "detail": "doc=[('0', '0'), ('0', '0'), ('0', '0')]"
   },
   {
    "name": "grep 表 夸克含量",
@@ -292,14 +292,14 @@
   {
    "name": "grep 表 質量泛函非可加",
    "doc": "11_definition_freeze.md",
-   "status": "🔴 MISMATCH",
-   "detail": "doc=[('0', '0'), ('0', '0'), ('3', '4')] | IDCM-v11.0 art=4f/5h"
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('0', '0')]"
   },
   {
    "name": "grep 表 ⟨O⟩ 矩陣元",
    "doc": "11_definition_freeze.md",
    "status": "✅",
-   "detail": "doc=[('0', '0'), ('0', '0'), ('15', '187')]"
+   "detail": "doc=[('0', '0'), ('0', '0'), ('1', '1')]"
   },
   {
    "name": "§二 K1 max_dev",
@@ -546,6 +546,72 @@
    "doc": "final_result.md",
    "status": "✅",
    "detail": "doc=0.1613 art=0.161347923634 |Δ|=4.79e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§15 C1 色嵌入 dim",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=3 art=3（整數須全等）"
+  },
+  {
+   "name": "§15 C1 每模容量",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§15 C1 max σ_n",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=0.5 art=0.5 |Δ|=0.00e+00 ≤ 5.0e-02"
+  },
+  {
+   "name": "§15 C3 N dev",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=0 art=0 |Δ|=0.00e+00 ≤ 5.0e-01"
+  },
+  {
+   "name": "§15 C3 N 所需",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=-0.279 art=-0.27904 |Δ|=4.00e-05 ≤ 5.0e-04"
+  },
+  {
+   "name": "§15 C3 Σ 所需",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=+1.275 art=1.27488 |Δ|=1.20e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§15 C3 Ξ dev",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=-2.260 art=-2.26036616057 |Δ|=3.66e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§15 C3 Ξ 所需",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=+3.310 art=3.31008 |Δ|=8.00e-05 ≤ 5.0e-04"
+  },
+  {
+   "name": "§15 C5 Σ_pair",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=2.121320 art=2.12132034356 |Δ|=3.44e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§15 C5 E₀^(3)",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=1.732051 art=1.73205080757 |Δ|=1.92e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§15 C5 相關 %",
+   "doc": "15_additivity_scope_verdict.md",
+   "status": "✅",
+   "detail": "doc=-18.35 art=-18.3503419072 |Δ|=3.42e-04 ≤ 5.0e-03"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

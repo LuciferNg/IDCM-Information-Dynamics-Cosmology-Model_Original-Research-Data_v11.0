@@ -31,6 +31,7 @@ def load(n):
 
 J01, J02, J03, Jv1 = (load("01_reproduction_gate.json"), load("02b_r5_mode_content_nogo.json"),
                       load("03_grep_evidence.json"), load("02_r5_mode_content_nogo.json"))
+J05 = load("05_additivity_scope.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -186,7 +187,15 @@ DOCLAB = {"w_k 佔用": "`w_k`", "佔有率／佔據數": "佔有率", "多夸�
 VERS = ["IDCM-v9.0--W-Field-Lattice", "IDCM-v10.0--It-From-Beat", "IDCM-v11.0--Reality-Architecture"]
 for term, row in J03["terms"].items():
     lab = DOCLAB.get(term, term)
-    cand = [ln for ln in doc("11_definition_freeze.md") if ln.strip().startswith("|") and lab in ln]
+    # 只讀 §三.2（v4 語料範圍）之表格，避免與 §三 E1 舊表混淆
+    alllines = doc("11_definition_freeze.md")
+    try:
+        i0 = next(i for i, ln in enumerate(alllines) if "§三.2" in ln)
+        i1 = next((i for i, ln in enumerate(alllines) if i > i0 and ln.startswith("## ")), len(alllines))
+    except StopIteration:
+        i0, i1 = 0, len(alllines)
+    block = alllines[i0:i1]
+    cand = [ln for ln in block if ln.strip().startswith("|") and (lab in ln or term in ln)]
     if not cand:
         RES.append(dict(name=f"grep 表 {term}", doc="11_definition_freeze.md", status="🔴 MISSING", detail=lab))
         continue
@@ -244,6 +253,30 @@ claim("FR a 斜率", "final_result.md", J02["K3"]["linear"]["a"], "三錨 χ²�
 claim("FR σ_a", "final_result.md", J02["K3"]["linear"]["sig_a"], "三錨 χ²（獨立重算）", cell=2, kth=6)
 claim("FR b 斜率", "final_result.md", J02["K3"]["linear"]["b"], "三錨 χ²（獨立重算）", cell=2, kth=7)
 claim("FR σ_b", "final_result.md", J02["K3"]["linear"]["sig_b"], "三錨 χ²（獨立重算）", cell=2, kth=8)
+
+# ══════════ docs/15（① ② 判決；R6） ══════════
+claim("§15 C1 色嵌入 dim", "15_additivity_scope_verdict.md", J05["C1"]["dim_colour"],
+      rx=r"= 2 × \(B−1\) = 2 × (\d+)", grp=1, integer=True)
+claim("§15 C1 每模容量", "15_additivity_scope_verdict.md", J05["C1"]["capacity"],
+      rx=r"= 2 × \(B−1\) = 2 × \d+ = (\d+)", grp=1, integer=True)
+claim("§15 C1 max σ_n", "15_additivity_scope_verdict.md", J05["C1"]["sigma_max"],
+      rx=r"max σ_n = 3/6 = ([\d.]+) < 1", grp=1)
+claim("§15 C3 N dev", "15_additivity_scope_verdict.md", J05["C3"]["dev"]["N (uud)"],
+      "N (uud) | 1 |", cell=3, kth=0)
+claim("§15 C3 N 所需", "15_additivity_scope_verdict.md", J05["C3"]["need_MeV"][0],
+      "N (uud) | 1 |", cell=4, kth=0)
+claim("§15 C3 Σ 所需", "15_additivity_scope_verdict.md", J05["C3"]["need_MeV"][1],
+      "Σ (uus) | 1 |", cell=4, kth=0)
+claim("§15 C3 Ξ dev", "15_additivity_scope_verdict.md", J05["C3"]["dev"]["Ξ (uss)"],
+      "Ξ (uss) | 2 |", cell=3, kth=0)
+claim("§15 C3 Ξ 所需", "15_additivity_scope_verdict.md", J05["C3"]["need_MeV"][2],
+      "Ξ (uss) | 2 |", cell=4, kth=0)
+claim("§15 C5 Σ_pair", "15_additivity_scope_verdict.md", J05["C5"]["E_pair"],
+      rx=r"= \((3/2)\)√2 = ([\d.]+) ℏ", grp=2)
+claim("§15 C5 E₀^(3)", "15_additivity_scope_verdict.md", J05["C5"]["E3"],
+      rx=r"= \(1/2\)\(0 \+ 2√3\) = ([\d.]+) ℏ", grp=1)
+claim("§15 C5 相關 %", "15_additivity_scope_verdict.md", J05["C5"]["corr_rel"] * 100,
+      rx=r"三體相關\s+= ([−-][\d.]+)%", grp=1)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

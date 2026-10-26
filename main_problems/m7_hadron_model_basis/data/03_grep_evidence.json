@@ -19,13 +19,10 @@
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 4,
-    "nhits": 11,
+    "nfiles": 1,
+    "nhits": 1,
     "files": [
-     "README.md",
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/README.md",
-     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+     "README.md"
     ]
    }
   },
@@ -52,13 +49,9 @@
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 3,
-    "nhits": 4,
-    "files": [
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
-     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
-    ]
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
    }
   },
   "多夸克態": {
@@ -75,14 +68,10 @@
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 5,
-    "nhits": 6,
+    "nfiles": 1,
+    "nhits": 1,
     "files": [
-     "README.md",
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/README.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
-     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
+     "README.md"
     ]
    }
   },
@@ -135,15 +124,9 @@
     "files": []
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 5,
-    "nhits": 10,
-    "files": [
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
-     "main_problems/m4_mass_spectral_readout/docs/29_operator_structure.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
-     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
-    ]
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
    }
   },
   "ūu − d̄d": {
@@ -158,16 +141,9 @@
     "files": []
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 6,
-    "nhits": 20,
-    "files": [
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/README.md",
-     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
-     "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md",
-     "main_problems/m4_mass_spectral_readout/scripts/28_matrix_element_resolution.py"
-    ]
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
    }
   },
   "夸克含量": {
@@ -223,14 +199,9 @@
     "files": []
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 4,
-    "nhits": 5,
-    "files": [
-     "main_problems/m2_sync_desync_exchange/README.md",
-     "main_problems/m2_sync_desync_exchange/docs/01_exchange_law.md",
-     "main_problems/m2_sync_desync_exchange/scripts/02_exchange_operator.py",
-     "main_problems/m6_scale_dof_theorem/README.md"
-    ]
+    "nfiles": 0,
+    "nhits": 0,
+    "files": []
    }
   },
   "⟨O⟩ 矩陣元": {
@@ -245,15 +216,10 @@
     "files": []
    },
    "IDCM-v11.0--Reality-Architecture": {
-    "nfiles": 15,
-    "nhits": 187,
+    "nfiles": 1,
+    "nhits": 1,
     "files": [
-     "README.md",
-     "main_problems/m4_mass_spectral_readout/01_problem_record.md",
-     "main_problems/m4_mass_spectral_readout/README.md",
-     "main_problems/m4_mass_spectral_readout/docs/26_em_window_theorem.md",
-     "main_problems/m4_mass_spectral_readout/docs/27_em_sign_theorem.md",
-     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md"
+     "README.md"
     ]
    }
   }
@@ -272,8 +238,8 @@
   "⟨O⟩ 矩陣元": "v9 0 命中 ⟹ 未形式化"
  },
  "def_sha256": "883e91d5338ad58509670baf9d692b94e560a0bc3577f4fa8de5074b16e92421",
- "exclusion": "m7_hadron_model_basis 已排除",
- "corpus_scope": "git HEAD tracked files only（untracked WIP 不計）",
+ "exclusion": "m7_hadron_model_basis 已排除；host repo 之 main_problems/ 全排除（v4）",
+ "corpus_scope": "git HEAD tracked files；凍結語料 = v9 全 + v10 全 + v11 核心",
  "fingerprint": {
   "IDCM-v9.0--W-Field-Lattice": {
    "head": "60d67ae",
@@ -289,9 +255,9 @@
   },
   "IDCM-v11.0--Reality-Architecture": {
    "head": null,
-   "nfiles": 229,
+   "nfiles": 1,
    "mode": "git-tracked",
-   "corpus_sha256": "d5050c59304fde3f88d64c98388ad14f2e6b09b35883eb4151063d21e6caf08e"
+   "corpus_sha256": "869cf8389e19f23c41bbb0576c01a5849cfb59ac633bda66cdcea5209eade8f3"
   }
  },
  "versions": [

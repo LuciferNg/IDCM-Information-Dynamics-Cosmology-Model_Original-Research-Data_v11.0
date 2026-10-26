@@ -5,9 +5,11 @@
      「命中」= 檔案含該字串（files_with），另報總行數（lines）。
   E2 任何詞若只在 M4 docs/32／M7 自身出現 ⟹ 判「概念未形式化」（= 本 M 自建之依據）。
   E3 定義凍結：對 docs/11 之 §二 定義區塊原文算 SHA-256；之後任何修改 = 新 doc 明寫「移動球門」。
-  E0 語料定義（v2，2026-10-26 修）：**只掃各版本 git HEAD 之 tracked files**（`git ls-files`），
-     並排除本 M 目錄。理由：untracked 之並行 WIP（如 m6_*）會令計數漂移而不可重現；
-     tracked-only ⟹ 數字綁定 commit hash，可精確復現。指紋寫入 JSON。
+  E0 語料定義（v4，2026-10-26 修）：**只掃各版本 git HEAD 之 tracked files**，且
+    ① 排除本 M 目錄；② **host repo（在研版本）排除整個 `main_problems/`**。
+     理由：在研 M 目錄必然增長（實錄：M6 commit 後「質量泛函非可加」由 3f/4h → 4f/5h），
+     計入即令「缺口有無定義」之證據永不可重現、且無證據力（在研 M 必然提及缺口詞）。
+     ⟹ 凍結語料 = v9 全 ＋ v10 全 ＋ v11 核心（README 等，不含 main_problems/）。
 
 輸出：data/03_grep_evidence.json
 """
@@ -47,12 +49,17 @@ def corpus(ver):
         tree = subprocess.run(["git", "-C", base, "ls-tree", "-r", "HEAD"],
                               capture_output=True, text=True, check=True).stdout.splitlines()
         rel = os.path.relpath(M7, base)
+        # host repo（在研版本）排除整個 main_problems/：在研 M 目錄必然增長，計入則不可重現且無證據力
+        host_excl = rel.split(os.sep)[0] + os.sep if M7.startswith(os.path.join(ROOT, ver)) else None
         pairs = []  # (path, blob_sha)
         for ln in tree:
             meta, path = ln.split("\t", 1)
             blob = meta.split()[2]
-            if path.endswith((".md", ".py", ".json", ".tex")) and not path.startswith(rel):
-                pairs.append((path, blob))
+            if not path.endswith((".md", ".py", ".json", ".tex")) or path.startswith(rel):
+                continue
+            if host_excl and path.startswith(host_excl):
+                continue
+            pairs.append((path, blob))
         pairs.sort()
         files = [p_ for p_, _ in pairs]
         # 語料身份 = sha256( sorted "path\0blob" )：與 commit 無關，只隨語料內容變
@@ -143,8 +150,8 @@ def main():
         print("  🔴 未找到凍結標記（docs/11 未寫或標記缺失）")
 
     out = dict(terms=res, verdicts=verdicts, def_sha256=h,
-               exclusion="m7_hadron_model_basis 已排除",
-               corpus_scope="git HEAD tracked files only（untracked WIP 不計）",
+               exclusion="m7_hadron_model_basis 已排除；host repo 之 main_problems/ 全排除（v4）",
+               corpus_scope="git HEAD tracked files；凍結語料 = v9 全 + v10 全 + v11 核心",
                fingerprint={v: dict(
                    # host repo（本 M 所屬版本）之 head 每 commit 自變 ⟹ 不記，只留 corpus_sha256
                    head=(None if M7.startswith(os.path.join(ROOT, v)) else CORPUS[v][1]),
