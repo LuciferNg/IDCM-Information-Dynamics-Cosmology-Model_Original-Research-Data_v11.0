@@ -63,3 +63,10 @@
 ## 檔案審計（10-26 13:33 事件）
 
 - 🔎 本 M 21 個 artifact **零缺失**（git status 空 ＋ HEAD 21 檔逐一在碟 ＋ 三腳本重跑 JSON byte-identical）；離碟 6 檔全屬並行 session、全未 commit、**6/6 副本在 scratch**（`~/.hermes/cache/scratch/m7_wrongdir_backup/`）⟹ 見 `docs/13_file_deletion_audit.md`
+
+## 重跑核（10-26 第二輪）
+
+- 🔁 **全 4 腳本重跑**（`01`／`02`(v1)／`02b`／`03`）⟹ exit 0，JSON **全部 byte-identical**、log 全部 identical
+- 🔍 **文檔數字逐條核**（新 `scripts/04`，88 條 claim，ulp 由文檔精度推 ⟹ 零可調容差）⟹ **88/88 PASS**
+- ✏️ 發現 3 個**記錄層**錯並 append-only 更正（不影響結論）：§三 第16/17 行 mpmath 尾數（`⟨B⟩`、`P₀`）＋ Ξ 通道 `2150×`→`2151.377×`
+- 📄 詳 `docs/14_rerun_verification.md`

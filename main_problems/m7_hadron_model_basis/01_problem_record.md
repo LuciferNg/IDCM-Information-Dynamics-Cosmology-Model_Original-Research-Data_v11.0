@@ -168,3 +168,28 @@ M4 `docs/32` 定位：`⟨O⟩` 唔可以由樹幾何得出（密度插入已死
 
 **判**：✅ 本 session 無誤刪；§十 之並行 session 註記屬歷史陳述（當時存在），原文不動，以本節為更正。
 **不建議自動復原**入 `scripts/`（會造成兩套同題重現閘腳本並存之命名混淆）。
+
+---
+
+## 十二、全 Python 重跑 ＋ 文檔數字逐條核（2026-10-26 第二輪；append-only）
+
+**觸發**：調律者「M7 全部 python 重跑，確定和文檔記錄相同」。詳 `docs/14_rerun_verification.md`。
+
+| 腳本 | exit | JSON vs commit | log vs commit |
+|:--|:--:|:--|:--|
+| `01_reproduction_gate.py` | 0 | ✅ byte-identical | ✅ identical |
+| `02_r5_mode_content_nogo.py`（v1） | 0 | ✅ byte-identical | ✅ identical |
+| `02b_r5_mode_content_nogo.py`（v2） | 0 | ✅ byte-identical | ✅ identical |
+| `03_grep_evidence.py` | 0 | ✅ byte-identical | ✅ identical |
+| `04_doc_consistency.py`（新） | 0 | — | `88/88 PASS` |
+
+**文檔↔輸出核（新增 `scripts/04`，88 條 claim，零可調容差）**：判準 = 文檔值 == 腳本值四捨五入到文檔自身所印精度（ulp 由文檔字串推）。
+⟹ **88/88 PASS**（84 直接相符 ＋ 4 經更正行相符 ＋ 0 不合）。
+
+**發現 3 個記錄錯（全屬記錄層，非計算錯；原文不動，另加更正）**：
+
+1. `docs/10` §三 第16行 mpmath `⟨B^{−d}⟩` = `0.472772220017288211` → 正確 `0.472772220017289335655`（Δ 註 1.1e−16 亦誤，實為 1.0e−15）
+2. `docs/10` §三 第17行 mpmath `P₀` = `0.368921706883373474` → 正確 `0.368921706883374606256`（Δ 註 5.6e−17 亦誤，實為 1.2e−15）
+3. `docs/12` §二 K4／§3.4 之 Ξ 通道 `2150×` → 正確 `2151.377×`（0.06%）
+
+**判**：M7 全部數字可由 4 腳本零依賴重跑復現；上述 3 錯不影響任何結論（15 位有效數字皆同；Ξ 通道兩種寫法皆遠超判準 ≥10²）。

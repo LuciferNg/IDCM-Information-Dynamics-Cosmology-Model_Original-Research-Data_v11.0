@@ -20,10 +20,12 @@
 | `docs/11_definition_freeze.md` | R1 定義凍結（hash `883e91d5…92421`）＋ 語料 grep 證據 | 🔒 |
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
+| `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
-| `data/` | 3 JSON ＋ 全部 run log（含 v1 log 存證） | ✅ |
+| `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（88 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `data/` | 5 JSON ＋ 5 run log（含 v1 log 存證） | ✅ |
 
 ## 依賴
 

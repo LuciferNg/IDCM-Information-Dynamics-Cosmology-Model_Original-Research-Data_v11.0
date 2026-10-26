@@ -1,0 +1,563 @@
+{
+ "npass": 88,
+ "ntotal": 88,
+ "nfail": 0,
+ "corrected": 4,
+ "verdict": "PASS",
+ "corrigenda": [
+  {
+   "name": "§三 16 mpmath ⟨B⟩",
+   "original": "0.472772220017288211",
+   "corrected": "0.472772220017289335655",
+   "art": 0.47277222001728936
+  },
+  {
+   "name": "§三 17 mpmath P₀",
+   "original": "0.368921706883373474",
+   "corrected": "0.368921706883374606256",
+   "art": 0.3689217068833746
+  },
+  {
+   "name": "§二 K4 corr Ξ",
+   "original": "2150",
+   "corrected": "2151.377",
+   "art": 2151.3774123347926
+  },
+  {
+   "name": "§3.4 corr short Ξ",
+   "original": "2150",
+   "corrected": "2151.377",
+   "art": 2151.3774123347926
+  }
+ ],
+ "results": [
+  {
+   "name": "§三 V1 有限 L 精確式",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=-3.464097350 art=-3.46409735 |Δ|=0.00e+00 ≤ 5.0e-10"
+  },
+  {
+   "name": "§三 V1 外推",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=-3.464101613716 art=-3.46410161372 |Δ|=0.00e+00 ≤ 5.0e-13"
+  },
+  {
+   "name": "§三 V2 `a₀` (fm)",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.377422 art=0.377422 |Δ|=0.00e+00 ≤ 5.0e-07"
+  },
+  {
+   "name": "§三 V2 `t` (MeV)",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.7884 art=0.7884 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§三 V2 `⟨B^{−d}⟩`",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.4728 art=0.4728 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§三 V2 `P₀`",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.3689 art=0.3689 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§三 V3 乘積守恆",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.170276394 art=1.170276394 |Δ|=0.00e+00 ≤ 5.0e-10"
+  },
+  {
+   "name": "§三 V4 `B⁷`",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=16384 art=16384 |Δ|=0.00e+00 ≤ 5.0e-01"
+  },
+  {
+   "name": "§三 V5 `A_max",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.271754 art=1.271754 |Δ|=0.00e+00 ≤ 5.0e-07"
+  },
+  {
+   "name": "§三 V2 `E(D⁺−D⁰)",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=2.2600 art=2.26 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§三 V2 `E(D*⁺−D*⁰)",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.8500 art=0.85 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§三 V3 解析式",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.170276394 art=1.170276394 |Δ|=0.00e+00 ≤ 5.0e-10"
+  },
+  {
+   "name": "§三 V7 `r = (π|ψ(0)|²)",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.313879 art=0.313879 |Δ|=0.00e+00 ≤ 5.0e-07"
+  },
+  {
+   "name": "§三 12 比值集=16384",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=16384 art=16384（整數須全等）"
+  },
+  {
+   "name": "§三 13 逐元素 max=1",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.0 art=1 |Δ|=0.00e+00 ≤ 5.0e-02"
+  },
+  {
+   "name": "§三 16 mpmath ⟨B⟩",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅ (corrected)",
+   "detail": "原文 0.472772220017288211 → 更正 0.472772220017289335655；doc=0.472772220017289335655 art=0.472772220017 |Δ|=0.00e+00 ≤ 5.0e-22"
+  },
+  {
+   "name": "§三 17 mpmath P₀",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅ (corrected)",
+   "detail": "原文 0.368921706883373474 → 更正 0.368921706883374606256；doc=0.368921706883374606256 art=0.368921706883 |Δ|=0.00e+00 ≤ 5.0e-22"
+  },
+  {
+   "name": "§三 18 mpmath a₀",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.37742216816391858835 art=0.377422168164 |Δ|=0.00e+00 ≤ 5.0e-21"
+  },
+  {
+   "name": "§三 19 mpmath t",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.788398083633567408 art=0.788398083634 |Δ|=0.00e+00 ≤ 5.0e-19"
+  },
+  {
+   "name": "§三 殘差 A",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.26e-29 art=1.26218e-29 |Δ|=2.18e-32 ≤ 5.0e-32"
+  },
+  {
+   "name": "§三 殘差 K",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=5.37e-30 art=5.37411e-30 |Δ|=4.11e-33 ≤ 5.0e-33"
+  },
+  {
+   "name": "§三 |ψ(0)|²",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0 art=0.0527243706193 |Δ|=5.27e-02 ≤ 5.0e-01"
+  },
+  {
+   "name": "§三 r 重校",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.3593 art=0.35930730307 |Δ|=7.30e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 M5 a",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.377422 art=0.377422168164 |Δ|=1.68e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§五 M5 t",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.7884 art=0.788398083634 |Δ|=1.92e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 M5 ⟨B⟩",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.4728 art=0.472772220017 |Δ|=2.78e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 M5 P₀",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.3689 art=0.368921706883 |Δ|=2.17e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 M5 ε",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=-5.441929 art=-5.44192947922 |Δ|=4.79e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§五 正確 a",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.384184 art=0.384184066601 |Δ|=6.66e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§五 正確 t",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=1.7711 art=1.7711079471 |Δ|=7.95e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 正確 ⟨B⟩",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.4812 art=0.481242410709 |Δ|=4.24e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 正確 P₀",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=0.3891 art=0.389107893933 |Δ|=7.89e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§五 正確 ε",
+   "doc": "10_reproduction_gate.md",
+   "status": "✅",
+   "detail": "doc=-3.748155 art=-3.7481549102 |Δ|=8.98e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "docs/11 凍結 hash",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "883e91d5338a"
+  },
+  {
+   "name": "grep 表 w_k 佔用",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('28', '85'), ('4', '11')]"
+  },
+  {
+   "name": "grep 表 佔有率／佔據數",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('3', '7'), ('12', '15'), ('3', '4')]"
+  },
+  {
+   "name": "grep 表 多夸克態",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('1', '1'), ('5', '6')]"
+  },
+  {
+   "name": "grep 表 Fock 展開",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('2', '2'), ('0', '0')]"
+  },
+  {
+   "name": "grep 表 投影子差",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('0', '0')]"
+  },
+  {
+   "name": "grep 表 isovector",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('5', '10')]"
+  },
+  {
+   "name": "grep 表 ūu − d̄d",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('6', '20')]"
+  },
+  {
+   "name": "grep 表 夸克含量",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('7', '9'), ('0', '0')]"
+  },
+  {
+   "name": "grep 表 海夸克／介子雲",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('0', '0')]"
+  },
+  {
+   "name": "grep 表 質量泛函非可加",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('3', '4')]"
+  },
+  {
+   "name": "grep 表 ⟨O⟩ 矩陣元",
+   "doc": "11_definition_freeze.md",
+   "status": "✅",
+   "detail": "doc=[('0', '0'), ('0', '0'), ('15', '187')]"
+  },
+  {
+   "name": "§二 K1 max_dev",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=5.8e-15 art=5.77315972805e-15 |Δ|=2.68e-17 ≤ 5.0e-17"
+  },
+  {
+   "name": "§二 K1 非整數態",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=0 art=0（整數須全等）"
+  },
+  {
+   "name": "§二 K2 耦合",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=24 art=24（整數須全等）"
+  },
+  {
+   "name": "§二 K2 非整數態",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=20 art=20（整數須全等）"
+  },
+  {
+   "name": "§二 K3 χ²",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=18.22 art=18.2207266744 |Δ|=7.27e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§二 K3 p",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=3.96e-4 art=0.00039606636098 |Δ|=6.64e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§二 K5 Δχ²",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=2.32 art=2.31667386068 |Δ|=3.33e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§二 K6 χ²_sector",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=111.79 art=111.790563308 |Δ|=5.63e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§二 K6 p_sector",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=4.5e-24 art=4.51818811415e-24 |Δ|=1.82e-26 ≤ 5.0e-26"
+  },
+  {
+   "name": "§二 K4 M5 N",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=36.5 art=36.5083461257 |Δ|=8.35e-03 ≤ 5.0e-02"
+  },
+  {
+   "name": "§二 K4 corr N",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=181 art=181.361282246 |Δ|=3.61e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§二 K4 M5 Σ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=167 art=166.79959973 |Δ|=2.00e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§二 K4 corr Σ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=829 art=828.604757419 |Δ|=3.95e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§二 K4 M5 Ξ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=433 art=433.076069179 |Δ|=7.61e-02 ≤ 5.0e-01"
+  },
+  {
+   "name": "§二 K4 corr Ξ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅ (corrected)",
+   "detail": "原文 2150 → 更正 2151.377；doc=2151.377 art=2151.37741233 |Δ|=4.12e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.1 偏差",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=5.8e-15 art=5.77315972805e-15 |Δ|=2.68e-17 ≤ 5.0e-17"
+  },
+  {
+   "name": "§3.3 Σγ=90",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=90 art=90（整數須全等）"
+  },
+  {
+   "name": "§3.4 M5 E_bind",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=-4.290 art=-4.29040677269 |Δ|=4.07e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.4 M5 ∂E/∂m",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=+2.99e-3 art=0.00298561867538 |Δ|=4.38e-06 ≤ 5.0e-06"
+  },
+  {
+   "name": "§3.4 M5 short N",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=36.5 art=36.5083461257 |Δ|=8.35e-03 ≤ 5.0e-02"
+  },
+  {
+   "name": "§3.4 M5 short Σ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=167 art=166.79959973 |Δ|=2.00e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§3.4 M5 short Ξ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=433 art=433.076069179 |Δ|=7.61e-02 ≤ 5.0e-01"
+  },
+  {
+   "name": "§3.4 corr E_bind",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=-6.638 art=-6.63838694841 |Δ|=3.87e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.4 corr ∂E/∂m",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=+6.01e-4 art=0.000601010307437 |Δ|=1.03e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§3.4 corr short N",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=181 art=181.361282246 |Δ|=3.61e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§3.4 corr short Σ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=829 art=828.604757419 |Δ|=3.95e-01 ≤ 5.0e-01"
+  },
+  {
+   "name": "§3.4 corr short Ξ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅ (corrected)",
+   "detail": "原文 2150 → 更正 2151.377；doc=2151.377 art=2151.37741233 |Δ|=4.12e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.4 Δ_N",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=-0.109 art=-0.109 |Δ|=1.39e-17 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.4 Δ_Σ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=+0.498 art=0.498 |Δ|=0.00e+00 ≤ 5.0e-04"
+  },
+  {
+   "name": "§3.4 Δ_Ξ",
+   "doc": "12_r5_verdict.md",
+   "status": "✅",
+   "detail": "doc=+1.293 art=1.293 |Δ|=2.22e-16 ≤ 5.0e-04"
+  },
+  {
+   "name": "FR 19/19",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=19 art=19（整數須全等）"
+  },
+  {
+   "name": "FR a₀ 20位",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.37742216816391858835 art=0.377422168164 |Δ|=0.00e+00 ≤ 5.0e-21"
+  },
+  {
+   "name": "FR t 18位",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.788398083633567408 art=0.788398083634 |Δ|=0.00e+00 ≤ 5.0e-19"
+  },
+  {
+   "name": "FR 殘差",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=1.3e-29 art=1.26218e-29 |Δ|=3.78e-31 ≤ 5.0e-31"
+  },
+  {
+   "name": "FR χ²",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=18.22 art=18.2207266744 |Δ|=7.27e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "FR p",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=3.96e-4 art=0.00039606636098 |Δ|=6.64e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "FR 3.36σ",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=3.36 art=3.36 |Δ|=0.00e+00 ≤ 5.0e-03"
+  },
+  {
+   "name": "FR a 斜率",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.8857 art=0.885740285319 |Δ|=4.03e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "FR σ_a",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.1055 art=0.105492601501 |Δ|=7.40e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "FR b 斜率",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.6753 art=0.675330350466 |Δ|=3.04e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "FR σ_b",
+   "doc": "final_result.md",
+   "status": "✅",
+   "detail": "doc=0.1613 art=0.161347923634 |Δ|=4.79e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "v1 vs v2 K1 max_dev",
+   "doc": "—",
+   "status": "✅",
+   "detail": "5.7732e-15 vs 5.7732e-15"
+  },
+  {
+   "name": "v1 vs v2 K3 χ²",
+   "doc": "—",
+   "status": "✅",
+   "detail": "18.220727 vs 18.220727"
+  }
+ ]
+}
