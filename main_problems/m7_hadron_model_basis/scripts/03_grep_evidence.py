@@ -5,6 +5,9 @@
      「命中」= 檔案含該字串（files_with），另報總行數（lines）。
   E2 任何詞若只在 M4 docs/32／M7 自身出現 ⟹ 判「概念未形式化」（= 本 M 自建之依據）。
   E3 定義凍結：對 docs/11 之 §二 定義區塊原文算 SHA-256；之後任何修改 = 新 doc 明寫「移動球門」。
+  E0 語料定義（v2，2026-10-26 修）：**只掃各版本 git HEAD 之 tracked files**（`git ls-files`），
+     並排除本 M 目錄。理由：untracked 之並行 WIP（如 m6_*）會令計數漂移而不可重現；
+     tracked-only ⟹ 數字綁定 commit hash，可精確復現。指紋寫入 JSON。
 
 輸出：data/03_grep_evidence.json
 """
@@ -33,25 +36,51 @@ TERMS = [
 ]
 
 
+def corpus(ver):
+    """回傳 (files_rel, head, mode)：優先用 git tracked（可重現），否則全掃（fallback）。"""
+    base = os.path.join(ROOT, ver)
+    if not os.path.isdir(base):
+        return [], None, "missing"
+    try:
+        head = subprocess.run(["git", "-C", base, "rev-parse", "--short", "HEAD"],
+                              capture_output=True, text=True, check=True).stdout.strip()
+        tracked = subprocess.run(["git", "-C", base, "ls-files"],
+                                 capture_output=True, text=True, check=True).stdout.splitlines()
+        rel = os.path.relpath(M7, base)
+        files = [f for f in tracked
+                 if f.endswith((".md", ".py", ".json", ".tex")) and not f.startswith(rel)]
+        return files, head, "git-tracked"
+    except (subprocess.CalledProcessError, OSError):
+        out = []
+        for dirpath, dirnames, filenames in os.walk(base):
+            if M7 in os.path.abspath(dirpath) or "/.git" in dirpath:
+                continue
+            for fn in filenames:
+                if fn.endswith((".md", ".py", ".json", ".tex")):
+                    out.append(os.path.relpath(os.path.join(dirpath, fn), base))
+        return sorted(out), None, "walk-fallback"
+
+
+CORPUS = {}
+for _v in VERS:
+    CORPUS[_v] = corpus(_v)
+
+
 def grep(term_re, ver):
     base = os.path.join(ROOT, ver)
     out = {"files": [], "lines": 0}
     if not os.path.isdir(base):
         return out
-    for dirpath, dirnames, filenames in os.walk(base):
-        if M7 in os.path.abspath(dirpath) or "/.git" in dirpath:
-            continue
-        for fn in filenames:
-            if not fn.endswith((".md", ".py", ".json", ".tex")):
-                continue
-            fp = os.path.join(dirpath, fn)
+    for rel in CORPUS[ver][0]:
+        fp = os.path.join(base, rel)
+        if True:
             try:
                 txt = open(fp, encoding="utf-8", errors="ignore").read()
             except OSError:
                 continue
             hits = re.findall(term_re, txt)
             if hits:
-                out["files"].append(os.path.relpath(fp, base))
+                out["files"].append(rel)
                 out["lines"] += len(hits)
     return out
 
@@ -69,7 +98,11 @@ def sha256_block(path, start_marker, end_marker):
 def main():
     res = {}
     print("=" * 100)
-    print("E1 概念詞語料命中（排除本 M 目錄）")
+    print("E0 語料指紋（git HEAD tracked files，排除本 M）")
+    for v in VERS:
+        hh, nn, mm = CORPUS[v][1], len(CORPUS[v][0]), CORPUS[v][2]
+        print(f"  {v:<38} HEAD={hh}  files={nn}  mode={mm}")
+    print("\nE1 概念詞語料命中（排除本 M 目錄）")
     print(f"{'詞':22}" + "".join(f"{v.split('--')[0]:>18}" for v in VERS))
     for name, rx in TERMS:
         row = {}
@@ -100,7 +133,11 @@ def main():
         print("  🔴 未找到凍結標記（docs/11 未寫或標記缺失）")
 
     out = dict(terms=res, verdicts=verdicts, def_sha256=h,
-               exclusion="m7_hadron_model_basis 已排除", versions=VERS)
+               exclusion="m7_hadron_model_basis 已排除",
+               corpus_scope="git HEAD tracked files only（untracked WIP 不計）",
+               fingerprint={v: dict(head=CORPUS[v][1], nfiles=len(CORPUS[v][0]), mode=CORPUS[v][2])
+                            for v in VERS},
+               versions=VERS)
     p = os.path.normpath(os.path.join(M7, "data", "03_grep_evidence.json"))
     with open(p, "w") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)

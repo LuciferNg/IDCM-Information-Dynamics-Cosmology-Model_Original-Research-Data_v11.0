@@ -55,3 +55,22 @@
 - ← `docs/10`／`11`／`12`／`final_result`（被核之文檔）
 - → `docs/10` §八、`docs/12` §九（更正）、`data/04_doc_consistency.json`（88 條逐項明細）
 - 重跑閘 ⚠️：本目錄另有並行 session 之 `m6_scale_dof_theorem/{data,scripts}`（未追蹤），本輪**未觸碰**。
+## 六、重跑所揭之可重現性缺陷（已修）：語料定義漂移
+
+**現象**：第二次重跑時 `03_grep_evidence.json` 與 commit 版**不再一致**（1 條 claim FAIL）——
+唯一變動 = 「質量泛函非可加」v11 欄 `3f/4h → 6f/10h`，新增命中全來自**未追蹤**之並行 WIP：
+`main_problems/m6_scale_dof_theorem/{docs/01_t1_composite_additivity.md, scripts/02_t2_scale_dof_theorem.py, data/02_t2_scale_dof_theorem.json}`。
+
+**根因**：`03` 以 `os.walk` 掃碟 ⟹ 語料 = 「此刻碟上有咩」，其他 M 一動計數即漂 ⟹ **不可重現**。
+
+**修法（v2，不改變任何已記錄數字）**：語料改定義為**各版本 `git HEAD` 之 tracked files**（`git ls-files`），仍排除本 M；
+JSON 新增 `corpus_scope` 與 `fingerprint`（每版本 HEAD ＋ 掃描檔數）：
+
+| 版本 | HEAD | 掃描檔數 |
+|:--|:--|--:|
+| v9.0 | `60d67ae` | 407 |
+| v10.0 | `151ec75a` | 10247 |
+| v11.0 | `1ee1ee2` | 229 |
+
+**核**：修後 11 詞 × 3 版本全部計數與原記錄**逐格相同**（只多出 fingerprint 欄），`docs/11` 表**無需改動**；`04` 重跑回 **88/88 PASS**。
+⚠️ 副作用（正面）：`m6_scale_dof_theorem/docs/01_t1_composite_additivity.md` 之出現，顯示並行 session 正處理本 M 所 register 之 **M2 加性適用範圍** 交接項。

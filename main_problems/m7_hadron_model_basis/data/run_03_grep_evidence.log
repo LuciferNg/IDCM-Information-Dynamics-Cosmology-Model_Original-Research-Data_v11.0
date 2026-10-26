@@ -1,4 +1,9 @@
 ====================================================================================================
+E0 語料指紋（git HEAD tracked files，排除本 M）
+  IDCM-v9.0--W-Field-Lattice             HEAD=60d67ae  files=407  mode=git-tracked
+  IDCM-v10.0--It-From-Beat               HEAD=151ec75a  files=10247  mode=git-tracked
+  IDCM-v11.0--Reality-Architecture       HEAD=1ee1ee2  files=229  mode=git-tracked
+
 E1 概念詞語料命中（排除本 M 目錄）
 詞                              IDCM-v9.0        IDCM-v10.0        IDCM-v11.0
   w_k 佔用                           0f/0h           28f/85h            4f/11h

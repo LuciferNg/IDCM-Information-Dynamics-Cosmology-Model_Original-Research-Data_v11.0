@@ -12,10 +12,10 @@
     "files": [
      "main_problems/p11_little_red_dots/records/26_root_cause_equal_weight.md",
      "open_problems_fresh/README.md",
-     "open_problems_fresh/o225_mechanism_born_forcing/docs/37_r18_contract.md",
-     "open_problems_fresh/o53_cy3_reality/scripts/13_fixed_projection.py",
-     "open_problems_fresh/o219_pt_mode_index_premise/data/02_scan.json",
-     "open_problems_fresh/o202_spectral_representation/docs/04_routes234_bvp_kernel_fsr.md"
+     "open_problems_fresh/o144_boson_identity/01_problem_record.md",
+     "open_problems_fresh/o144_boson_identity/SESSION_START.md",
+     "open_problems_fresh/o144_boson_identity/docs/10_su3_connection_functional_sigma.md",
+     "open_problems_fresh/o144_boson_identity/docs/11_scale_bridge.md"
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
@@ -34,21 +34,21 @@
     "nfiles": 3,
     "nhits": 7,
     "files": [
-     "sync_bump_analysis/idcm_wfield_expansion.py",
+     "open_problems_fresh/kchain_cosmic_web/64_dm_abundance_geometric.md",
      "sync_bump_analysis/idcm_closed_loop_cosmology.py",
-     "open_problems_fresh/kchain_cosmic_web/64_dm_abundance_geometric.md"
+     "sync_bump_analysis/idcm_wfield_expansion.py"
     ]
    },
    "IDCM-v10.0--It-From-Beat": {
     "nfiles": 12,
     "nhits": 15,
     "files": [
-     "open_problems_fresh/o32_galaxy_rotation/scripts/20_microscopic_interp.py",
-     "open_problems_fresh/o165_exponential_weight_origin/SESSION_START.md",
      "open_problems_fresh/o116_dm_abundance/SESSION_START.md",
      "open_problems_fresh/o116_dm_abundance/docs/01_problem_record.md",
-     "open_problems_fresh/o144_boson_identity/docs/12_epistemology_reclass.md",
-     "open_problems_fresh/o121_black_hole_entropy/docs/03_entropy_structure.md"
+     "open_problems_fresh/o121_black_hole_entropy/docs/03_entropy_structure.md",
+     "open_problems_fresh/o121_black_hole_entropy/scripts/03_microstate_count.py",
+     "open_problems_fresh/o140_finite_spectral_relativity/docs/07_gemini_walls_resolution.md",
+     "open_problems_fresh/o144_boson_identity/docs/12_epistemology_reclass.md"
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
@@ -140,8 +140,8 @@
     "files": [
      "main_problems/m4_mass_spectral_readout/01_problem_record.md",
      "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
      "main_problems/m4_mass_spectral_readout/docs/29_operator_structure.md",
+     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
      "main_problems/m4_mass_spectral_readout/docs/32_flavour_structure_scout.md"
     ]
    }
@@ -180,12 +180,12 @@
     "nfiles": 7,
     "nhits": 9,
     "files": [
-     "open_problems_fresh/o88_anomaly_fermion_rep/docs/07_pd2_scalar_sector.md",
-     "open_problems_fresh/o144_boson_identity/docs/01_qcd_mass_budget.md",
-     "open_problems_fresh/o144_boson_identity/scripts/42_spin_sector_out_of_sample.py",
      "open_problems_fresh/o119_positron_excess/scripts/04_kinematic_window.py",
      "open_problems_fresh/o139_finite_qft_to_qed/docs/01_problem_record.md",
-     "open_problems_fresh/o139_finite_qft_to_qed/docs/03_problem_A_alpha_running.md"
+     "open_problems_fresh/o139_finite_qft_to_qed/docs/03_problem_A_alpha_running.md",
+     "open_problems_fresh/o139_finite_qft_to_qed/scripts/12_verify_all.py",
+     "open_problems_fresh/o144_boson_identity/docs/01_qcd_mass_budget.md",
+     "open_problems_fresh/o144_boson_identity/scripts/42_spin_sector_out_of_sample.py"
     ]
    },
    "IDCM-v11.0--Reality-Architecture": {
@@ -250,9 +250,9 @@
      "README.md",
      "main_problems/m4_mass_spectral_readout/01_problem_record.md",
      "main_problems/m4_mass_spectral_readout/README.md",
-     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md",
-     "main_problems/m4_mass_spectral_readout/docs/31_flavour_insertion_negative.md",
-     "main_problems/m4_mass_spectral_readout/docs/29_operator_structure.md"
+     "main_problems/m4_mass_spectral_readout/docs/26_em_window_theorem.md",
+     "main_problems/m4_mass_spectral_readout/docs/27_em_sign_theorem.md",
+     "main_problems/m4_mass_spectral_readout/docs/28_matrix_element_resolution.md"
     ]
    }
   }
@@ -272,6 +272,24 @@
  },
  "def_sha256": "883e91d5338ad58509670baf9d692b94e560a0bc3577f4fa8de5074b16e92421",
  "exclusion": "m7_hadron_model_basis 已排除",
+ "corpus_scope": "git HEAD tracked files only（untracked WIP 不計）",
+ "fingerprint": {
+  "IDCM-v9.0--W-Field-Lattice": {
+   "head": "60d67ae",
+   "nfiles": 407,
+   "mode": "git-tracked"
+  },
+  "IDCM-v10.0--It-From-Beat": {
+   "head": "151ec75a",
+   "nfiles": 10247,
+   "mode": "git-tracked"
+  },
+  "IDCM-v11.0--Reality-Architecture": {
+   "head": "1ee1ee2",
+   "nfiles": 229,
+   "mode": "git-tracked"
+  }
+ },
  "versions": [
   "IDCM-v9.0--W-Field-Lattice",
   "IDCM-v10.0--It-From-Beat",
