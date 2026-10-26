@@ -148,3 +148,23 @@ M4 `docs/32` 定位：`⟨O⟩` 唔可以由樹幾何得出（密度插入已死
 
 **並行 session 註記**：本目錄同時有另一 session 之 `scripts/01_repro_gate.py`／`02_definition_freeze.py`（11:42／11:45）；
 本輪未覆寫其任何檔案，並獨立核到其提出之 M5 weight 約定問題（`w_d = N_d v_d²` 雙重計數；兩約定重校解見 `docs/10` §五）。
+---
+
+## 十一、檔案審計（2026-10-26 13:33 刪除事件；append-only 附註）
+
+**觸發**：調律者「並行 session 檔案已刪除，檢查 scripts／logs／docs 是否有誤刪」。詳 `docs/13_file_deletion_audit.md`。
+
+| 核 | 結果 |
+|:--|:--|
+| `git status` | **空**（無 tracked 檔案被刪） |
+| commit `669f28b` 21 檔逐一在碟 | **0 MISSING** |
+| 三腳本重跑 vs 已 commit JSON | `diff` **全空**（byte-identical）⟹ 零依賴已刪檔 |
+| 凍結 hash 重算 | `883e91d5…92421` **不變** |
+
+**離碟 6 檔（全屬並行 session，全未 commit，git 不可復原）**：`scripts/01_repro_gate.py`、`scripts/02_definition_freeze.py`、
+`data/01_repro_gate.json`、`data/02_definition_freeze.json`、`data/run_01_repro_gate.log`、`data/run_02_definition_freeze.log`。
+**計數核**：`data/` 13→9、`scripts/` 6→4 ⟹ 缺失 6，與清單全等 ⟹ **無第七項被刪**。
+**🟢 6/6 副本完好**：`/home/wsl/.hermes/cache/scratch/m7_wrongdir_backup/`（sha256 全列於 `docs/13` §三）。
+
+**判**：✅ 本 session 無誤刪；§十 之並行 session 註記屬歷史陳述（當時存在），原文不動，以本節為更正。
+**不建議自動復原**入 `scripts/`（會造成兩套同題重現閘腳本並存之命名混淆）。

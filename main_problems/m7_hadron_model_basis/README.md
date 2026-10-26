@@ -19,6 +19,7 @@
 | `docs/10_reproduction_gate.md` | R0 重現閘 **19/19**（含 mpmath 30 dps 打磨、weight 約定雙軌） | ✅ |
 | `docs/11_definition_freeze.md` | R1 定義凍結（hash `883e91d5…92421`）＋ 語料 grep 證據 | 🔒 |
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
+| `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `scripts/01_reproduction_gate.py` | 零 import 獨立重建兩體骨架 | ✅ |
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |

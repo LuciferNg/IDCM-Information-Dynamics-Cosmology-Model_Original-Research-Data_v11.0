@@ -59,3 +59,7 @@
 2. 若 M2 加性只覆蓋單粒子 ⟹ 開新題：三體束縛 `E_bind^{(3)}`（零參數，`N_q = 3`、`B = 4` 已定）。
 3. 若 M2 加性覆蓋複合態 ⟹ M4 之 `⟨O⟩` 程序須重審（BMW 之 `ΔQCD` 分割是否需要 IDCM 外之成分）。
 4. 禁區：φ-power 族、密度插入（樹幾何）、`⟨O⟩ ≡ 1` 當預言、味非對角項、事後 `2/3` 結構讀法。
+
+## 檔案審計（10-26 13:33 事件）
+
+- 🔎 本 M 21 個 artifact **零缺失**（git status 空 ＋ HEAD 21 檔逐一在碟 ＋ 三腳本重跑 JSON byte-identical）；離碟 6 檔全屬並行 session、全未 commit、**6/6 副本在 scratch**（`~/.hermes/cache/scratch/m7_wrongdir_backup/`）⟹ 見 `docs/13_file_deletion_audit.md`
