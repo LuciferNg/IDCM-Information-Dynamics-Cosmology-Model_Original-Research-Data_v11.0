@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/18_m4_intake_receipt.md` | M4 `docs/33` 收件收據（三件式，7/7）；指正 N2 stale 引用、補 Σγ 結構證明 | ✅ |
 | `docs/17_audit_full_chain.md` | 全鏈審計（A 結構／B 獨立重推導／C 記錄）；審計器自身兩處算法錯已修（§2.1） | ✅ |
 | `docs/16_gap_closure.md` | 未推盡審計（R3／MC null／剛性／Q4／7-12）4 項全補；**撤回 `docs/12` K6「sector ⟹ ≡2」**；失配在斜率 4.19σ | ✅ |
 | `docs/15_additivity_scope_verdict.md` | ① 加性適用範圍（容量／飽和攻擊）⟹ **NO-GO**；② **不獨立**（M2 唯一性禁止獨立束縛項）⟹ **單一 no-go**（§九 更正） | 🔴 |
@@ -29,6 +30,9 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/10_watermark.py` | 檔案閉合水位生成器（live field；寫 `data/watermark.json`） | ✅ |
+| `scripts/09_m4_receipt.py` | M4 交付收據核實（7/7） | ✅ |
+| `scripts/08_handoff_matrix.py` | register handoff 收訖矩陣（唯讀 parse jsonl） | ✅ |
 | `scripts/run_chain.sh` | 推導鏈 driver（預設 dry-run；`--run` 逐 script 執行並覆寫 log） | ✅ |
 | `scripts/07_audit_full_chain.py` | 全鏈審計（**23/23**）：結構對稱／產物綁定／路徑衛生 ＋ L2 獨立重推導（sympy 符號微分、mpmath Γ、Fraction 正規方程、sympy eigenvals）＋ 四件套／水位／append-only | ✅ |
 | `scripts/06_gap_closure.py` | 未推盡補推 G1–G6（**12/12**）：MC null 10⁷、家族可辨識性、Q4 判死、剛性、7/11 重現 | ✅ |

@@ -1,0 +1,82 @@
+{
+ "module": "M7",
+ "script": "08_handoff_matrix.py",
+ "checks": [
+  {
+   "item": "§2 每個目標 ins == outs（送達齊）",
+   "pass_": true,
+   "got": "3 目標",
+   "want": "全部相等",
+   "note": ""
+  },
+  {
+   "item": "§3 incoming 已回應",
+   "pass_": true,
+   "got": "2 條 incoming",
+   "want": "全部有後續事件",
+   "note": ""
+  },
+  {
+   "item": "§3 全部 handoff ref 存在",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  }
+ ],
+ "matrix": [
+  {
+   "target": "M2",
+   "n_out": 2,
+   "n_in": 2,
+   "ts": [
+    "2026-10-26T12:59:16+08:00",
+    "2026-10-26T18:38:39+08:00"
+   ],
+   "refs": [
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/12_r5_verdict.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/15_additivity_scope_verdict.md"
+   ],
+   "target_activity_after": 0
+  },
+  {
+   "target": "M4",
+   "n_out": 3,
+   "n_in": 3,
+   "ts": [
+    "2026-10-26T12:59:17+08:00",
+    "2026-10-26T14:45:43+08:00",
+    "2026-10-26T18:38:10+08:00"
+   ],
+   "refs": [
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/12_r5_verdict.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/15_additivity_scope_verdict.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/16_gap_closure.md"
+   ],
+   "target_activity_after": 5
+  },
+  {
+   "target": "M5",
+   "n_out": 1,
+   "n_in": 1,
+   "ts": [
+    "2026-10-26T12:59:17+08:00"
+   ],
+   "refs": [
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/10_reproduction_gate.md"
+   ],
+   "target_activity_after": 1
+  }
+ ],
+ "notes_out": [],
+ "npass": 3,
+ "ntotal": 3,
+ "n_out": 6,
+ "n_in": 2,
+ "targets": [
+  "M2",
+  "M4",
+  "M5"
+ ],
+ "stale": []
+}

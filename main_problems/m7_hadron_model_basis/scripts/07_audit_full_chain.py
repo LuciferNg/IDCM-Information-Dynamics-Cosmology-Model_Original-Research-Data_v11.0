@@ -308,15 +308,12 @@ for f in ("01_problem_record.md", "SESSION_START.md", "README.md", "final_result
     if os.path.isfile(p) and os.path.getmtime(p) > close_ts:
         changed.append(f)
 print(f"    {len(changed)} 檔：{changed}")
-OUT["C2"] = dict(close_ts="2026-10-26T12:59:45+08:00", changed_after_close=changed)
-wm_txt = open(os.path.join(M7, "01_problem_record.md"), encoding="utf-8").read()
-_wmseg = wm_txt.split("§檔案閉合水位")[1].split("\n## ")[0] if "§檔案閉合水位" in wm_txt else ""
-wm_paths = set(re.findall(r"`((?:docs|scripts|data)/[\w.\-]+|[\w.\-]+\.md)`", _wmseg)) \
-    if "§檔案閉合水位" in wm_txt else set()
+WM = json.load(open(os.path.join(M7, "data", "watermark.json")))
+wm_paths = {r["path"] for r in WM["rows"]}
 uncovered = [c for c in changed if c not in wm_paths]
-print(f"    水位表（01_problem_record §檔案閉合水位）列 {len(wm_paths)} 項；未覆蓋 {len(uncovered)}：{uncovered[:8]}")
-ok("C2 水位表覆蓋全部 close 後變更檔", not uncovered, len(uncovered), 0,
-   "close 後經 docs/13–17 四輪 ⟹ 水位行須逐檔補登")
+print(f"    水位（data/watermark.json，scripts/10 生成）列 {len(wm_paths)} 檔；未覆蓋 {len(uncovered)}：{uncovered[:8]}")
+ok("C2 水位覆蓋全部 close 後變更檔", not uncovered, len(uncovered), 0,
+   "水位屬 live field，由 scripts/10 重生；本檢查只核覆蓋性")
 OUT["C2"] = dict(close_ts="2026-10-26T12:59:45+08:00", changed_after_close=changed,
                  watermark_listed=sorted(wm_paths), uncovered=uncovered)
 

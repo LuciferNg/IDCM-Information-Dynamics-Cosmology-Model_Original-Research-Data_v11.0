@@ -1,6 +1,6 @@
 {
- "npass": 121,
- "ntotal": 121,
+ "npass": 128,
+ "ntotal": 128,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -744,6 +744,48 @@
    "doc": "17_audit_full_chain.md",
    "status": "✅",
    "detail": "doc=0 art=0（整數須全等）"
+  },
+  {
+   "name": "§18 npass",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§18 ntotal",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§18 R2",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=17.518857 art=17.5188572703 |Δ|=2.70e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§18 R3",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=0.615501 art=0.615501480175 |Δ|=4.80e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§18 χ²_min",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=0.086368 art=0.0863679238367 |Δ|=7.62e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§18 R4",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=4.0299 art=4.02990247002 |Δ|=2.47e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§18 R5",
+   "doc": "18_m4_intake_receipt.md",
+   "status": "✅",
+   "detail": "doc=90 art=90（整數須全等）"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

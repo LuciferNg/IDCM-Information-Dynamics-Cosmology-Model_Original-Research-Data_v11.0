@@ -1,0 +1,252 @@
+{
+ "close_out": "2026-10-26T12:59:45+08:00",
+ "generated": "2026-10-27 01:11",
+ "n": 49,
+ "rows": [
+  {
+   "path": "docs/10_reproduction_gate.md",
+   "mtime": "2026-10-26 14:14",
+   "after_close": true
+  },
+  {
+   "path": "docs/11_definition_freeze.md",
+   "mtime": "2026-10-26 14:44",
+   "after_close": true
+  },
+  {
+   "path": "docs/12_r5_verdict.md",
+   "mtime": "2026-10-26 15:07",
+   "after_close": true
+  },
+  {
+   "path": "docs/13_file_deletion_audit.md",
+   "mtime": "2026-10-26 13:41",
+   "after_close": true
+  },
+  {
+   "path": "docs/14_rerun_verification.md",
+   "mtime": "2026-10-26 14:25",
+   "after_close": true
+  },
+  {
+   "path": "docs/15_additivity_scope_verdict.md",
+   "mtime": "2026-10-26 14:55",
+   "after_close": true
+  },
+  {
+   "path": "docs/16_gap_closure.md",
+   "mtime": "2026-10-26 15:07",
+   "after_close": true
+  },
+  {
+   "path": "docs/17_audit_full_chain.md",
+   "mtime": "2026-10-27 00:46",
+   "after_close": true
+  },
+  {
+   "path": "docs/18_m4_intake_receipt.md",
+   "mtime": "2026-10-27 01:08",
+   "after_close": true
+  },
+  {
+   "path": "scripts/01_reproduction_gate.py",
+   "mtime": "2026-10-26 11:32",
+   "after_close": false
+  },
+  {
+   "path": "scripts/02_r5_mode_content_nogo.py",
+   "mtime": "2026-10-26 11:45",
+   "after_close": false
+  },
+  {
+   "path": "scripts/02b_r5_mode_content_nogo.py",
+   "mtime": "2026-10-26 12:49",
+   "after_close": false
+  },
+  {
+   "path": "scripts/03_grep_evidence.py",
+   "mtime": "2026-10-26 14:43",
+   "after_close": true
+  },
+  {
+   "path": "scripts/04_doc_consistency.py",
+   "mtime": "2026-10-27 01:08",
+   "after_close": true
+  },
+  {
+   "path": "scripts/05_additivity_scope.py",
+   "mtime": "2026-10-26 14:41",
+   "after_close": true
+  },
+  {
+   "path": "scripts/06_gap_closure.py",
+   "mtime": "2026-10-26 15:05",
+   "after_close": true
+  },
+  {
+   "path": "scripts/07_audit_full_chain.py",
+   "mtime": "2026-10-27 01:03",
+   "after_close": true
+  },
+  {
+   "path": "scripts/08_handoff_matrix.py",
+   "mtime": "2026-10-27 00:55",
+   "after_close": true
+  },
+  {
+   "path": "scripts/09_m4_receipt.py",
+   "mtime": "2026-10-27 01:08",
+   "after_close": true
+  },
+  {
+   "path": "scripts/10_watermark.py",
+   "mtime": "2026-10-27 00:59",
+   "after_close": true
+  },
+  {
+   "path": "scripts/run_chain.sh",
+   "mtime": "2026-10-27 01:09",
+   "after_close": true
+  },
+  {
+   "path": "data/01_reproduction_gate.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/02_r5_mode_content_nogo.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/02_r5_mode_content_nogo.v1.json",
+   "mtime": "2026-10-26 11:49",
+   "after_close": false
+  },
+  {
+   "path": "data/02b_r5_mode_content_nogo.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/03_grep_evidence.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/04_doc_consistency.json",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/05_additivity_scope.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/06_gap_closure.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/07_audit_full_chain.json",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/08_handoff_matrix.json",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/09_m4_receipt.json",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/run_01_reproduction_gate.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_02_r5_mode_content_nogo.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_02_r5_mode_content_nogo.v1.log",
+   "mtime": "2026-10-26 14:15",
+   "after_close": true
+  },
+  {
+   "path": "data/run_02b_r5_mode_content_nogo.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_03_grep_evidence.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_04_doc_consistency.log",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/run_05_additivity_scope.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_06_gap_closure.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/run_07_audit_full_chain.log",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/run_08_handoff_matrix.log",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/run_09_m4_receipt.log",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "data/run_10_watermark.log",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "data/watermark.json",
+   "mtime": "2026-10-27 01:11",
+   "after_close": true
+  },
+  {
+   "path": "01_problem_record.md",
+   "mtime": "2026-10-27 01:10",
+   "after_close": true
+  },
+  {
+   "path": "SESSION_START.md",
+   "mtime": "2026-10-26 13:00",
+   "after_close": true
+  },
+  {
+   "path": "README.md",
+   "mtime": "2026-10-27 00:58",
+   "after_close": true
+  },
+  {
+   "path": "final_result.md",
+   "mtime": "2026-10-26 15:07",
+   "after_close": true
+  }
+ ]
+}

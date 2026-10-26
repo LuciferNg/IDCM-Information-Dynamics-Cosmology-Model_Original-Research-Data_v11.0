@@ -12,6 +12,9 @@ CHAIN=(
   03_grep_evidence
   05_additivity_scope
   06_gap_closure
+  10_watermark          # 水位重生（07 C2 之輸入）
+  08_handoff_matrix     # register 收訖矩陣（唯讀）
+  09_m4_receipt         # M4 交付收據核實
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )

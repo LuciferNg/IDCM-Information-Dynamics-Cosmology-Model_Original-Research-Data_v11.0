@@ -150,11 +150,11 @@
    "note": ""
   },
   {
-   "item": "C2 水位表覆蓋全部 close 後變更檔",
+   "item": "C2 水位覆蓋全部 close 後變更檔",
    "pass_": true,
    "got": "0",
    "want": "0",
-   "note": "close 後經 docs/13–17 四輪 ⟹ 水位行須逐檔補登"
+   "note": "水位屬 live field，由 scripts/10 重生；本檢查只核覆蓋性"
   },
   {
    "item": "C3 歷史檔零內容消失（append-only）",
@@ -179,11 +179,15 @@
    "docs/15_additivity_scope_verdict.md",
    "docs/16_gap_closure.md",
    "docs/17_audit_full_chain.md",
+   "docs/18_m4_intake_receipt.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
    "scripts/06_gap_closure.py",
    "scripts/07_audit_full_chain.py",
+   "scripts/08_handoff_matrix.py",
+   "scripts/09_m4_receipt.py",
+   "scripts/10_watermark.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -193,6 +197,8 @@
    "data/05_additivity_scope.json",
    "data/06_gap_closure.json",
    "data/07_audit_full_chain.json",
+   "data/08_handoff_matrix.json",
+   "data/09_m4_receipt.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -202,6 +208,10 @@
    "data/run_05_additivity_scope.log",
    "data/run_06_gap_closure.log",
    "data/run_07_audit_full_chain.log",
+   "data/run_08_handoff_matrix.log",
+   "data/run_09_m4_receipt.log",
+   "data/run_10_watermark.log",
+   "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
    "README.md",
@@ -220,6 +230,8 @@
    "data/05_additivity_scope.json",
    "data/06_gap_closure.json",
    "data/07_audit_full_chain.json",
+   "data/08_handoff_matrix.json",
+   "data/09_m4_receipt.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -229,6 +241,10 @@
    "data/run_05_additivity_scope.log",
    "data/run_06_gap_closure.log",
    "data/run_07_audit_full_chain.log",
+   "data/run_08_handoff_matrix.log",
+   "data/run_09_m4_receipt.log",
+   "data/run_10_watermark.log",
+   "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
    "docs/12_r5_verdict.md",
@@ -237,6 +253,7 @@
    "docs/15_additivity_scope_verdict.md",
    "docs/16_gap_closure.md",
    "docs/17_audit_full_chain.md",
+   "docs/18_m4_intake_receipt.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -245,8 +262,10 @@
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
    "scripts/06_gap_closure.py",
-   "scripts/07",
    "scripts/07_audit_full_chain.py",
+   "scripts/08_handoff_matrix.py",
+   "scripts/09_m4_receipt.py",
+   "scripts/10_watermark.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
@@ -262,12 +281,6 @@
    {
     "commit": "913714b",
     "file": "11_definition_freeze.md",
-    "n_del": 1,
-    "n_lost": 0
-   },
-   {
-    "commit": "5e0b80d",
-    "file": "14_rerun_verification.md",
     "n_del": 1,
     "n_lost": 0
    }

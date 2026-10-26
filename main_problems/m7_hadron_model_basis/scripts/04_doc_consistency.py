@@ -34,6 +34,7 @@ J01, J02, J03, Jv1 = (load("01_reproduction_gate.json"), load("02b_r5_mode_conte
 J05 = load("05_additivity_scope.json")
 J06 = load("06_gap_closure.json")
 J07 = load("07_audit_full_chain.json")
+J09 = load("09_m4_receipt.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -305,6 +306,15 @@ claim("§17 Σγ", "17_audit_full_chain.md", J07["metrics"]["sum_gamma"], "| 審
 claim("§17 B7 相關%", "17_audit_full_chain.md", J07["metrics"]["corr_pct"], "| 審計 B7 相關% |", cell=2, kth=0)
 claim("§17 MC/解析比值", "17_audit_full_chain.md", J07["metrics"]["mc_ratio"], "| 審計 MC/解析比值 |", cell=2, kth=0)
 claim("§17 C2 未覆蓋", "17_audit_full_chain.md", J07["metrics"]["uncovered"], "| 審計 C2 未覆蓋 |", cell=2, kth=0, integer=True)
+
+# ══════════ docs/18（M4 收件收據） ══════════
+claim("§18 npass", "18_m4_intake_receipt.md", J09["npass"], "| 收據 npass |", cell=2, kth=0, integer=True)
+claim("§18 ntotal", "18_m4_intake_receipt.md", J09["ntotal"], "| 收據 ntotal |", cell=2, kth=0, integer=True)
+claim("§18 R2", "18_m4_intake_receipt.md", J09["metrics"]["ident_d"], "| R2 值 |", cell=2, kth=0)
+claim("§18 R3", "18_m4_intake_receipt.md", J09["metrics"]["ident_e"], "| R3 值 |", cell=2, kth=0)
+claim("§18 χ²_min", "18_m4_intake_receipt.md", J09["metrics"]["chi2_min"], "| 反推 χ²_min |", cell=2, kth=0)
+claim("§18 R4", "18_m4_intake_receipt.md", J09["metrics"]["z_eq"], "| R4 z 等效 |", cell=2, kth=0)
+claim("§18 R5", "18_m4_intake_receipt.md", J09["metrics"]["sum_gamma_struct"], "| R5 Σγ 結構 |", cell=2, kth=0, integer=True)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",
