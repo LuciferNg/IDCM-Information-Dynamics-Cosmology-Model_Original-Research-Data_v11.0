@@ -1,0 +1,144 @@
+
+==============================================================================
+§A 腳本鏈重跑：exit code ＋ JSON 逐位元決定性
+==============================================================================
+[PASS] A1 腳本數 = 8（01–08）  |  ['01_fan_geometry.py', '02_two_chart_junction.py', '03_m0_absolute_usage_audit.py', '04_two_factor_decomposition.py', '05_hierarchy_reduction.py', '06_three_input_falsifiability.py', '07_target_shift_discriminating_power.py', '08_forcing_candidates.py']
+[PASS] A2.01 01_fan_geometry.py: exit=0 且 JSON 逐位元一致（11 PASS / 0 FAIL）  |  sha 0dd87158c768bcd4→0dd87158c768bcd4
+[PASS] A2.02 02_two_chart_junction.py: exit=0 且 JSON 逐位元一致（26 PASS / 0 FAIL）  |  sha 2bf675e8b4b3355d→2bf675e8b4b3355d
+[PASS] A2.03 03_m0_absolute_usage_audit.py: exit=0 且 JSON 逐位元一致（20 PASS / 0 FAIL）  |  sha 36705ba133e0a83d→36705ba133e0a83d
+[PASS] A2.04 04_two_factor_decomposition.py: exit=0 且 JSON 逐位元一致（14 PASS / 0 FAIL）  |  sha d8853af6c28f86a0→d8853af6c28f86a0
+[PASS] A2.05 05_hierarchy_reduction.py: exit=0 且 JSON 逐位元一致（22 PASS / 0 FAIL）  |  sha d0ab0fbdb201ebc7→d0ab0fbdb201ebc7
+[PASS] A2.06 06_three_input_falsifiability.py: exit=0 且 JSON 逐位元一致（14 PASS / 0 FAIL）  |  sha b3f490f3a75e082e→b3f490f3a75e082e
+[PASS] A2.07 07_target_shift_discriminating_power.py: exit=0 且 JSON 逐位元一致（19 PASS / 0 FAIL）  |  sha 1ef1b0714e2e554e→1ef1b0714e2e554e
+[PASS] A2.08 08_forcing_candidates.py: exit=0 且 JSON 逐位元一致（19 PASS / 0 FAIL）  |  sha 880171ec54d5bef9→880171ec54d5bef9
+
+==============================================================================
+§B 檢查項總計（data/*.json _summary）
+==============================================================================
+[PASS] B1 全部 8 個腳本 FAIL 總和 = 0  |  checks 總計 = 134，fail = 0
+[PASS] B2 檢查項總計 ≥ 120（本 M 迄今驗證密度）  |  tot = 134
+
+==============================================================================
+§C 追溯矩陣：文檔內檢查標籤必須存在於 data JSON 且 pass=True
+==============================================================================
+[PASS] C1 文檔引用之全部標籤皆有對應已執行檢查（無幽靈引用）  |  幽靈 = []
+[PASS] C2 被引用之檢查全部 pass=True  |  失敗 = []
+
+==============================================================================
+§D 數字可追溯：文檔 e-記法數字必須存在於 data JSON（4 s.f.）
+==============================================================================
+    [申報] 04_r2prime_two_chart_results.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
+    [申報] 04_r2prime_two_chart_results.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
+    [申報] 04_r2prime_two_chart_results.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 04_r2prime_two_chart_results.md 5.2237e35 — D2.3 重算值（更正後，4 s.f.）
+    [申報] 05_r3prime_r4prime_audit.md 6.871698e9 — 同上：X₀ convention-free
+    [申報] 06_r5prime_hierarchy_reduction.md 6.38e28 — 文內 decade 縮減（D2.6 重算）
+    [申報] 06_r5prime_hierarchy_reduction.md 6.875e9 — 約定變體：O34 (1−CY₃/45²)（docs/06 E2.4 披露）
+    [申報] 06_r5prime_hierarchy_reduction.md 5.9e-2 — 文內 dev 界（docs/06 E5 次佳）
+    [申報] 06_r5prime_hierarchy_reduction.md 3.08e-3 — D2.4 重算值（17/50 vs p）
+    [申報] 06_r5prime_hierarchy_reduction.md 1.40e-2 — D2.4 重算值（11/32 vs p）
+    [申報] 07_r6prime_three_input_falsifiability.md 2.216e-06 — D2.5 重算值（1/(2q²)，q=475）
+    [申報] README.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
+    [申報] README.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 01_problem_record.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
+    [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 01_problem_record.md 6.875e9 — 約定變體：O34 (1−CY₃/45²)（docs/06 E2.4 披露）
+    [申報] 01_problem_record.md 2.22e-06 — D2.5 重算值（3 s.f.）
+    [申報] 01_problem_record.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
+    [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
+[PASS] D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）  |  未申報 = []
+
+==============================================================================
+§D2 文內推導值重算（唔信文檔，重新計）
+==============================================================================
+[PASS] D2.1 cot²(π/88) = 783.964664（docs/04 §4）  |  783.964664442
+[PASS] D2.2 Δt = 6.664364 e-folds = 2.894296 decade（docs/04 §4）  |  6.6643639 / 2.8942965
+[PASS] D2.3 缺口 = 35.717977 decade ⟹ 因子 = 5.223686e35（docs/04 原寫 2.3e35 ✗ 已附註更正）  |  factor = 5.2236865e+35
+[PASS] D2.4 有理數 dev 表（docs/06 §G，約定 |p−q|/q）逐項重算一致（rel < 1%）  |  4/4
+[PASS] D2.5 隨機基準 1/(2q²) = 2.21607e−06（docs/07 §G2）  |  2.216066e-06
+[PASS] D2.6 log₁₀(6.38e28) = 28.8048 ⟹ 文檔 −28.805 一致（docs/06 §E2.3）  |  28.804821
+[PASS] D2.7 44·T₁ vs N_O38 = 1.801868e40 ⟹ dev 7.4e−6（docs/06 §E3.1）  |  dev = 7.583e-06
+
+==============================================================================
+§E 檔案清單一致性（README ↔ 實際）
+==============================================================================
+[PASS] E1 每個 docs/*.md 皆列於 README  |  缺 = []
+[PASS] E2 每個 scripts/*.py 皆列於 README  |  缺 = []
+[PASS] E3 README 引用之檔案路徑全部存在（無斷鏈；已剔模板／裸前綴）  |  斷鏈 = []
+[PASS] E4 docs 編號連續 01–09  |  9 個檔案
+
+==============================================================================
+§F 時序表：01_problem_record 每 row 必須引用存在之文檔
+==============================================================================
+[PASS] F1 每個 docs/01–09 至少被時序表或結果節引用一次  |  未引用 = []
+[PASS] F2 時序 row 數 = 9（R1／R2′／R3′+R4′／R5′／R6′／R7′／R8′／審計一輪／audit-verify 全鏈）  |  rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+[PASS] F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）  |  推翻=2 撤回=2 撤銷=5
+
+==============================================================================
+§G register 一致性：block state == register state；ref 存在
+==============================================================================
+[PASS] G1 兩檔 block state 一致且 = partial  |  partial / partial
+[PASS] G2 兩檔 block updated = 2026-10-26  |  ok
+[PASS] G3 register check: HARD DRIFT = 0  |  HARD DRIFT = 0
+[PASS] G4 register check 內無 M8 相關漂移  |  M8 零命中
+
+==============================================================================
+§H 更正標記：已推翻之結論必須標記
+==============================================================================
+[PASS] H1 docs/02_r1_results.md 含更正標記 ['docs/08', '無判別力']  |  缺 []
+[PASS] H1 docs/04_r2prime_two_chart_results.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/06_r5prime_hierarchy_reduction.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/07_r6prime_three_input_falsifiability.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/08_r7prime_power_audit_selfcorrection.md 含更正標記 ['推翻']  |  缺 []
+[PASS] H1b R3 撤銷標記留存（docs/04 含『撤銷』）  |  撤銷 出現 3 次
+[PASS] H2 README 之『23/68』舊宣稱已標記為被 161/475 取代  |  檢查 161/475 或『已取代』字樣
+
+==============================================================================
+§K 推導鏈六項核對（腳本集／逆向綁定／路徑衛生／產物綁定／幽靈推導／driver）
+=========================================
+  時序 row 數 = 9：['1', '2', '3', '4', '5', '6', '7', '8', '9']
+  被引用 docs = ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+[PASS] F1 每個 docs/01–09 至少被時序表或結果節引用一次  |  未引用 = []
+[PASS] F2 時序 row 數 = 9（R1／R2′／R3′+R4′／R5′／R6′／R7′／R8′／審計一輪／audit-verify 全鏈）  |  rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+[PASS] F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）  |  推翻=2 撤回=2 撤銷=5
+
+==============================================================================
+§G register 一致性：block state == register state；ref 存在
+==============================================================================
+  01_problem_record: state=partial verdict=-
+  SESSION_START    : state=partial
+[PASS] G1 兩檔 block state 一致且 = partial  |  partial / partial
+[PASS] G2 兩檔 block updated = 2026-10-26  |  ok
+[PASS] G3 register check: HARD DRIFT = 0  |  HARD DRIFT = 0
+[PASS] G4 register check 內無 M8 相關漂移  |  M8 零命中
+
+==============================================================================
+§H 更正標記：已推翻之結論必須標記
+==============================================================================
+[PASS] H1 docs/02_r1_results.md 含更正標記 ['docs/08', '無判別力']  |  缺 []
+[PASS] H1 docs/04_r2prime_two_chart_results.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/06_r5prime_hierarchy_reduction.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/07_r6prime_three_input_falsifiability.md 含更正標記 ['更正']  |  缺 []
+[PASS] H1 docs/08_r7prime_power_audit_selfcorrection.md 含更正標記 ['推翻']  |  缺 []
+[PASS] H1b R3 撤銷標記留存（docs/04 含『撤銷』）  |  撤銷 出現 3 次
+[PASS] H2 README 之『23/68』舊宣稱已標記為被 161/475 取代  |  檢查 161/475 或『已取代』字樣
+
+==============================================================================
+§K 推導鏈六項核對（腳本集／逆向綁定／路徑衛生／產物綁定／幽靈推導／driver）
+==============================================================================
+[PASS] K1 腳本集對稱（磁碟 ↔ 記錄）：兩側差集空  |  僅磁碟=[]；僅記錄=[]
+[PASS] K2 逆向綁定：10 個 headline 數字皆有 producer（data 全部／腳本輸入）  |  無 producer = []
+[PASS] K3 路徑衛生：scripts/*.py 內 `/tmp/` **寫入**模式 = 0  |  命中 = []
+[PASS] K4 產物綁定：無孤兒 JSON、無無輸出腳本  |  孤兒=[]；無輸出=[]
+[PASS] K5 無 inline 幽靈推導：session 內算過之關鍵值全部已入 script  |  幽靈 = []
+[PASS] K6 driver 存在（scripts/run_chain.sh，預設 dry-run）  |  skill §3.1 ⑥
+[PASS] K6b driver dry-run 可執行且列出 11 步  |  exit=0，[dry] 行數=11
+
+==============================================================================
+§I 審計匯總
+==============================================================================
+PASS = 46，WARN = 0，FAIL = 0
+
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/09_full_audit.json
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/run_09.log

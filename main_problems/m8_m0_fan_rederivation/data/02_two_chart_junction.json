@@ -1,0 +1,164 @@
+{
+  "J1.1 投影冪等 π∘π = π（20001 點，精確有理比較）": {
+    "pass": true,
+    "detail": "例外 = 0"
+  },
+  "J1.2 im(π) = Fix(π) = 44 rung（投影像即不動點集）": {
+    "pass": true,
+    "detail": "|im| = 44"
+  },
+  "J1.3 微觀端所有譜量有界（γ ≤ 4；s ≤ cot(π/88) ≈ 28）": {
+    "pass": true,
+    "detail": "γ_max = 4.0, s_max = 27.999369"
+  },
+  "_J1_data": {
+    "idempotent_exceptions": 0,
+    "n_grid": 20001,
+    "gamma_range": [
+      0.005095770779492918,
+      4.0
+    ],
+    "slope_range": [
+      0.0357150905783552,
+      27.999369000789844
+    ]
+  },
+  "J2.1 交比恆等：CR(tan θ_i) ≡ CR(sin(θ_i−θ_j))（符號化簡 = 0）": {
+    "pass": true,
+    "detail": "trigsimp = 0"
+  },
+  "J2.2 三點歸一化 (0, π/4, π/2) ↦ (0, 1, ∞)": {
+    "pass": true,
+    "detail": "tan0 = 0, tan(π/4) = 1, lim→π/2⁻ = oo"
+  },
+  "J2.3 反向 = 鏡射：tan(π/2 − θ) ≡ 1/tan θ（符號）": {
+    "pass": true,
+    "detail": ""
+  },
+  "_J2_crossratio_identity": true,
+  "J3.1 鏡射不動點唯一：θ* = π/4": {
+    "pass": true,
+    "detail": "θ* = [pi/4]"
+  },
+  "J3.2 鏈上唯一不動 rung：n* = 22 = N_d/4": {
+    "pass": true,
+    "detail": "n* = [22]"
+  },
+  "J3.3 γ₂₂ = 2（唯一非平凡有理 rung）；γ₄₄ = 4": {
+    "pass": true,
+    "detail": "γ₂₂ = 2, γ₄₄ = 4"
+  },
+  "J3.4 dγ/dθ = 4 sin 2θ；於 θ=π/4 極大且值 = 4 = γ₄₄": {
+    "pass": true,
+    "detail": "dγ/dθ|π/4 = 4, 臨界點 [pi/4]…"
+  },
+  "J3.5 dt/dθ = 1/(sinθcosθ) = 2/sin 2θ；於 θ=π/4 極小且值 = 2 = γ₂₂": {
+    "pass": true,
+    "detail": "dt/dθ|π/4 = 2"
+  },
+  "_J3_junction": {
+    "theta_star": "π/4",
+    "n_star": 22,
+    "gamma_22": 2,
+    "gamma_44": 4,
+    "dgamma_dtheta_at_junction": 4,
+    "dt_dtheta_at_junction": 2
+  },
+  "J4.1 仿射 + 鏡射奇對稱 ⟹ t_a = a(θ − π/4)（唯一，1 參數）": {
+    "pass": true,
+    "detail": ""
+  },
+  "J4.2 仿射解違反乘法性 t(s₁s₂) ≠ t(s₁)+t(s₂)（θ₁=π/8, θ₂=π/6）": {
+    "pass": true,
+    "detail": "t(s₁s₂) = -0.5506605328, t(s₁)+t(s₂) = -0.654498469498, |Δ| = 0.103838"
+  },
+  "J4.3 乘法解 t = λ·ln tan θ 自動滿足鏡射奇對稱（⟺ tan(π/2−θ)·tanθ = 1 ⟹ ln 相加 = ln 1 = 0；兩因子皆 >0）": {
+    "pass": true,
+    "detail": "tan(π/2−θ)·tanθ = 1"
+  },
+  "J4.4 兩膠合唯一共同歸一點 = π/4（t_a = t_λ = 0）": {
+    "pass": true,
+    "detail": ""
+  },
+  "J4.5 判決：非線性交接 = 兩膠合互斥（唔存在同時仿射且乘法嘅膠合）": {
+    "pass": true,
+    "detail": "⟹ 標度只可住在乘法圖卡，且必帶非線性 (ln tan) 交接"
+  },
+  "_J4": {
+    "affine_gluing": "t = a(θ − π/4)",
+    "multiplicative_gluing": "t = λ·ln tan θ",
+    "mutually_exclusive": true,
+    "affine_multiplicativity_defect": 0.10383793669790045
+  },
+  "J5.1 圖卡內最大比值 784 ≪ 10^38.6（差 35.7 decade）": {
+    "pass": true,
+    "detail": "span = 2.8943 dex vs T₁ = 38.6123 dex"
+  },
+  "J5.2 T₁/T₂ 需非整數次圖卡迭代 ⟹ 唔係圖卡內『標度』，只係座標差（no-go）": {
+    "pass": true,
+    "detail": "need₁ = 13.340815, need₂ = 7.1316322（皆非整數）"
+  },
+  "J5.3 89 = F₁₁ 近命中重算 dev ≈ 1.033e−3 ⟹ 沿用 O38 scripts/45 判 REJECTED（log-normalize 假象）": {
+    "pass": true,
+    "detail": "dev(89) = 1.033196e-03 → REJECTED（非本輪新命中）"
+  },
+  "_J5": {
+    "chain_span_efolds": 6.664363948470389,
+    "chain_span_decades": 2.8942964882156574,
+    "T1_decades": 38.6122735894247,
+    "T2_decades": 20.641058099140814,
+    "chart_iterations_needed_T1": 13.340814856611075,
+    "chart_iterations_needed_T2": 7.1316322232993095,
+    "posthoc_efold_devs": {
+      "44 (rung)": 1.0206373994003866,
+      "88 (N_d)": 0.010318699700193302,
+      "89 (F₁₁)": 0.0010331958020560613
+    }
+  },
+  "J6.1 λ 只以整體縮放出現在 t = λ·ln tan θ ⟹ 比值結構 λ-free": {
+    "pass": true,
+    "detail": "t = λ·L(θ)，L 固定 ⟹ 唯一自由參數 = λ（單位）"
+  },
+  "J6.2 γ_n = 4sin²(πn/88) 不含 λ ⟹ 全質量譜比值 λ-free（與 M6 T1 一致）": {
+    "pass": true,
+    "detail": ""
+  },
+  "J6.3 ⟹ 標度 dof 計數 = 1（λ），位置在**映射層**，唔在微觀層，亦唔係『10^38 嘅大小』": {
+    "pass": true,
+    "detail": "M6 dof_scale = 1 之重新解讀：一個『單位』，非一個『量值』"
+  },
+  "_J6": {
+    "scale_dof": 1,
+    "locus": "mapping layer (λ)",
+    "gamma_lambda_free": true
+  },
+  "J7.1 tan²(πn/88) ≡ γ_n/(4−γ_n)（odds／logit 恆等，符號 = 0）": {
+    "pass": true,
+    "detail": "diff = 0"
+  },
+  "J7.2 43 rung 全部吻合（max|Δ| < 1e−55）且 t_n + t_{44−n} = 0（max|Δ| < 1e−55）": {
+    "pass": true,
+    "detail": "max|Δ_odds| = 2.947e-56, max|Δ_mirror| = 2.489e-60"
+  },
+  "J7.3 dt/dγ = 2/(γ(4−γ))；於 γ=2 極小 = 1/2 ⟹ 交接點 = 最平緩（非線性最強）之點": {
+    "pass": true,
+    "detail": "dt/dγ|γ=2 = 1/2, 臨界 = [2]"
+  },
+  "J7.4 T₁ 在 odds 圖卡上落於 rung 之間（t = 44.454，非整數；跨距倍數 6.67 非整數）": {
+    "pass": true,
+    "detail": "t = 44.454023, t/Δ = 6.6704074"
+  },
+  "_J7": {
+    "odds_identity": "tan²θ = γ/(4−γ)",
+    "mirror": "γ ↦ 4−γ ⟺ n ↦ 44−n（已證 M6）",
+    "dt_dgamma_min_at_junction": 0.5,
+    "t_target_odds_chart": 44.45402278680851,
+    "t_target_over_chain_span": 6.670407428305538,
+    "max_odds_dev": 2.9472200355950367e-56,
+    "max_mirror_dev": 2.4892061111444567e-60
+  },
+  "_summary": {
+    "checks": 26,
+    "fail": 0
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "C.02_r1_results..Σtan² = 1247": {
+    "pass": true,
+    "detail": "期望 1247 ↔ 文檔 1247（rel 0.0e+00；O246 交叉核）"
+  },
+  "C.04_r2prime_two.cot²(π/88)": {
+    "pass": true,
+    "detail": "期望 783.965 ↔ 文檔 783.965（rel 5.6e-10；圖卡最大比值）"
+  },
+  "C.04_r2prime_two.Δt (ln)": {
+    "pass": true,
+    "detail": "期望 6.66436 ↔ 文檔 6.66436（rel 7.7e-09；跨距）"
+  },
+  "C.04_r2prime_two.Δt (decade)": {
+    "pass": true,
+    "detail": "期望 2.8943 ↔ 文檔 2.8943（rel 1.7e-07；跨距）"
+  },
+  "C.04_r2prime_two.log₁₀T₁": {
+    "pass": true,
+    "detail": "期望 38.6123 ↔ 文檔 38.6123（rel 1.1e-08；目標）"
+  },
+  "C.04_r2prime_two.缺口 (decade)": {
+    "pass": true,
+    "detail": "期望 35.718 ↔ 文檔 35.718（rel 2.8e-09；缺口）"
+  },
+  "C.04_r2prime_two.缺口因子（★更正後）": {
+    "pass": true,
+    "detail": "期望 5.22369e+35 ↔ 文檔 5.22369e+35（rel 8.7e-08；5.223686e35）"
+  },
+  "C.04_r2prime_two.迭代數 13.34": {
+    "pass": true,
+    "detail": "期望 13.3408 ↔ 文檔 13.3408（rel 1.1e-08；非整數）"
+  },
+  "C.05_r3prime_r4p.f_M0 = M₀/M_Pl": {
+    "pass": true,
+    "detail": "期望 2.28529e-21 ↔ 文檔 2.28529e-21（rel 1.6e-16；dof=1 錨）"
+  },
+  "C.05_r3prime_r4p.f_R = N_IDCM 級": {
+    "pass": true,
+    "detail": "期望 7.8846e+60 ↔ 文檔 7.88463e+60（rel 3.4e-06；O212 表列）"
+  },
+  "C.06_r5prime_hie.X₀ = M₀/E_kchain": {
+    "pass": true,
+    "detail": "期望 6.417e+09 ↔ 文檔 6.417e+09（rel 7.0e-07；層級歸約）"
+  },
+  "C.06_r5prime_hie.p 必需指數": {
+    "pass": true,
+    "detail": "期望 0.338952 ↔ 文檔 0.338952（rel 2.0e-10；μ = r^p）"
+  },
+  "C.06_r5prime_hie.p dev vs 1/3": {
+    "pass": true,
+    "detail": "期望 0.016855 ↔ 文檔 0.0169（rel 2.7e-03；|p−q|/q）"
+  },
+  "C.06_r5prime_hie.N_O38 = 44·T₁": {
+    "pass": true,
+    "detail": "期望 1.80187e+40 ↔ 文檔 1.80187e+40（rel 1.3e-16；恆等）"
+  },
+  "C.06_r5prime_hie.E_kchain (meV)": {
+    "pass": true,
+    "detail": "期望 4.348 ↔ 文檔 4.348（rel 0.0e+00；錨交接點）"
+  },
+  "C.07_r6prime_thr.S* = ln(1/μ)": {
+    "pass": true,
+    "detail": "期望 47.5278 ↔ 文檔 47.5278（rel 1.2e-13；指數族）"
+  },
+  "C.07_r6prime_thr.隨機基準 1/(2q²)": {
+    "pass": true,
+    "detail": "期望 2.21607e-06 ↔ 文檔 2.216e-06（rel 3.0e-05；q=475）"
+  },
+  "C.08_r7prime_pow.ρ(F1)": {
+    "pass": true,
+    "detail": "期望 0.025 ↔ 文檔 0.025（rel 0.0e+00；功率）"
+  },
+  "C.08_r7prime_pow.ρ(F2)": {
+    "pass": true,
+    "detail": "期望 0.07 ↔ 文檔 0.07（rel 0.0e+00；功率）"
+  },
+  "C.08_r7prime_pow.ρ(前因子族)": {
+    "pass": true,
+    "detail": "期望 4.015 ↔ 文檔 4.015（rel 0.0e+00；唯一有效 null）"
+  },
+  "C.09_r8prime_for.det'(1−K/2)": {
+    "pass": true,
+    "detail": "期望 5.00222e-12 ↔ 文檔 5.00222e-12（rel 0.0e+00；精確恆等式 1）"
+  },
+  "C.09_r8prime_for.Πcos(πn/88)": {
+    "pass": true,
+    "detail": "期望 7.54113e-13 ↔ 文檔 7.54113e-13（rel 0.0e+00；精確恆等式 2）"
+  },
+  "C.09_r8prime_for.det(1+K)": {
+    "pass": true,
+    "detail": "期望 5.50044e+18 ↔ 文檔 5.50044e+18（rel 9.3e-14；上限基準）"
+  },
+  "C.09_r8prime_for.1/det(1+K)": {
+    "pass": true,
+    "detail": "期望 1.81804e-19 ↔ 文檔 1.818e-19（rel 2.0e-05；最接近之強迫量）"
+  },
+  "C.09_r8prime_for.log₁₀ 1/det": {
+    "pass": true,
+    "detail": "期望 -18.7404 ↔ 文檔 18.7404（rel 1.4e-07；dex）"
+  },
+  "C.09_r8prime_for.缺口 dex": {
+    "pass": true,
+    "detail": "期望 -1.90066 ↔ 文檔 1.90066（rel 2.4e-08；dex）"
+  },
+  "C.09_r8prime_for.缺口倍數（★79.5538）": {
+    "pass": true,
+    "detail": "期望 79.5538 ↔ 文檔 79.5538（rel 1.4e-11；1/det 比 μ 大）"
+  },
+  "C.README.md.缺口倍數": {
+    "pass": true,
+    "detail": "期望 79.5538 ↔ 文檔 79.5538（rel 4.0e-07；★79.5538）"
+  },
+  "C.README.md.X₀": {
+    "pass": true,
+    "detail": "期望 6.417e+09 ↔ 文檔 6.41701e+09（rel 1.7e-06；層級歸約）"
+  },
+  "C.README.md.p 必需指數": {
+    "pass": true,
+    "detail": "期望 0.338952 ↔ 文檔 0.338952（rel 2.0e-10；冪律橋）"
+  },
+  "C.README.md.det'(1−K/2)": {
+    "pass": true,
+    "detail": "期望 5.00222e-12 ↔ 文檔 5.00222e-12（rel 1.2e-08；R8′ 新恆等式）"
+  },
+  "C.01_problem_rec.缺口倍數": {
+    "pass": true,
+    "detail": "期望 79.5538 ↔ 文檔 79.5538（rel 1.4e-11；★79.5538）"
+  },
+  "C.01_problem_rec.S*": {
+    "pass": true,
+    "detail": "期望 47.5278 ↔ 文檔 47.5278（rel 1.2e-13；指數族）"
+  },
+  "C.01_problem_rec.det'(1−K/2)": {
+    "pass": true,
+    "detail": "期望 5.00222e-12 ↔ 文檔 5.00222e-12（rel 0.0e+00；R8′）"
+  },
+  "C2.1 docs/09 載 79.5538（★二輪更正）": {
+    "pass": true,
+    "detail": "舊 78.55 只可留於更正欄"
+  },
+  "C2.2 docs/09 後見 dev 已改 1.33%（★二輪更正）": {
+    "pass": true,
+    "detail": "舊 0.068% 須作廢"
+  },
+  "C2.3 docs/04 載 5.223686e35 且附註更正在場（★一輪更正）": {
+    "pass": true,
+    "detail": ""
+  },
+  "C2.4 README 缺口倍數 = 79.55（★）": {
+    "pass": true,
+    "detail": "非 78.55"
+  },
+  "C2.5 01_problem_record 缺口倍數 = 79.55（★）": {
+    "pass": true,
+    "detail": "非 78.55"
+  },
+  "_summary": {
+    "checks": 39,
+    "fail": 0,
+    "by_doc": {
+      "docs/02_r1_results.md": [
+        1,
+        1
+      ],
+      "docs/04_r2prime_two_chart_results.md": [
+        7,
+        7
+      ],
+      "docs/05_r3prime_r4prime_audit.md": [
+        2,
+        2
+      ],
+      "docs/06_r5prime_hierarchy_reduction.md": [
+        5,
+        5
+      ],
+      "docs/07_r6prime_three_input_falsifiability.md": [
+        2,
+        2
+      ],
+      "docs/08_r7prime_power_audit_selfcorrection.md": [
+        3,
+        3
+      ],
+      "docs/09_r8prime_forcing_candidates.md": [
+        7,
+        7
+      ],
+      "README.md": [
+        4,
+        4
+      ],
+      "01_problem_record.md": [
+        3,
+        3
+      ]
+    },
+    "ratio": 79.55376809110884
+  }
+}

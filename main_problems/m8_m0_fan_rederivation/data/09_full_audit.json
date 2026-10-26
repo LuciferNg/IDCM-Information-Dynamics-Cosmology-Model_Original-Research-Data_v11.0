@@ -1,0 +1,596 @@
+{
+  "A1 腳本數 = 8（01–08）": {
+    "pass": true,
+    "warn": false,
+    "detail": "['01_fan_geometry.py', '02_two_chart_junction.py', '03_m0_absolute_usage_audit.py', '04_two_factor_decomposition.py', '05_hierarchy_reduction.py', '06_three_input_falsifiability.py', '07_target_shift_discriminating_power.py', '08_forcing_candidates.py']"
+  },
+  "A2.01 01_fan_geometry.py: exit=0 且 JSON 逐位元一致（11 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha 0dd87158c768bcd4→0dd87158c768bcd4"
+  },
+  "A2.02 02_two_chart_junction.py: exit=0 且 JSON 逐位元一致（26 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha 2bf675e8b4b3355d→2bf675e8b4b3355d"
+  },
+  "A2.03 03_m0_absolute_usage_audit.py: exit=0 且 JSON 逐位元一致（20 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha 36705ba133e0a83d→36705ba133e0a83d"
+  },
+  "A2.04 04_two_factor_decomposition.py: exit=0 且 JSON 逐位元一致（14 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha d8853af6c28f86a0→d8853af6c28f86a0"
+  },
+  "A2.05 05_hierarchy_reduction.py: exit=0 且 JSON 逐位元一致（22 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha d0ab0fbdb201ebc7→d0ab0fbdb201ebc7"
+  },
+  "A2.06 06_three_input_falsifiability.py: exit=0 且 JSON 逐位元一致（14 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha b3f490f3a75e082e→b3f490f3a75e082e"
+  },
+  "A2.07 07_target_shift_discriminating_power.py: exit=0 且 JSON 逐位元一致（19 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha 1ef1b0714e2e554e→1ef1b0714e2e554e"
+  },
+  "A2.08 08_forcing_candidates.py: exit=0 且 JSON 逐位元一致（19 PASS / 0 FAIL）": {
+    "pass": true,
+    "warn": false,
+    "detail": "sha 880171ec54d5bef9→880171ec54d5bef9"
+  },
+  "_A": {
+    "01": {
+      "exit": 0,
+      "json": "01_fan_geometry.json",
+      "sha_before": "0dd87158c768bcd4",
+      "sha_after": "0dd87158c768bcd4",
+      "deterministic": true,
+      "stdout_pass": 11,
+      "stdout_fail": 0
+    },
+    "02": {
+      "exit": 0,
+      "json": "02_two_chart_junction.json",
+      "sha_before": "2bf675e8b4b3355d",
+      "sha_after": "2bf675e8b4b3355d",
+      "deterministic": true,
+      "stdout_pass": 26,
+      "stdout_fail": 0
+    },
+    "03": {
+      "exit": 0,
+      "json": "03_m0_absolute_usage_audit.json",
+      "sha_before": "36705ba133e0a83d",
+      "sha_after": "36705ba133e0a83d",
+      "deterministic": true,
+      "stdout_pass": 20,
+      "stdout_fail": 0
+    },
+    "04": {
+      "exit": 0,
+      "json": "04_two_factor_decomposition.json",
+      "sha_before": "d8853af6c28f86a0",
+      "sha_after": "d8853af6c28f86a0",
+      "deterministic": true,
+      "stdout_pass": 14,
+      "stdout_fail": 0
+    },
+    "05": {
+      "exit": 0,
+      "json": "05_hierarchy_reduction.json",
+      "sha_before": "d0ab0fbdb201ebc7",
+      "sha_after": "d0ab0fbdb201ebc7",
+      "deterministic": true,
+      "stdout_pass": 22,
+      "stdout_fail": 0
+    },
+    "06": {
+      "exit": 0,
+      "json": "06_three_input_falsifiability.json",
+      "sha_before": "b3f490f3a75e082e",
+      "sha_after": "b3f490f3a75e082e",
+      "deterministic": true,
+      "stdout_pass": 14,
+      "stdout_fail": 0
+    },
+    "07": {
+      "exit": 0,
+      "json": "07_target_shift_discriminating_power.json",
+      "sha_before": "1ef1b0714e2e554e",
+      "sha_after": "1ef1b0714e2e554e",
+      "deterministic": true,
+      "stdout_pass": 19,
+      "stdout_fail": 0
+    },
+    "08": {
+      "exit": 0,
+      "json": "08_forcing_candidates.json",
+      "sha_before": "880171ec54d5bef9",
+      "sha_after": "880171ec54d5bef9",
+      "deterministic": true,
+      "stdout_pass": 19,
+      "stdout_fail": 0
+    }
+  },
+  "B1 全部 8 個腳本 FAIL 總和 = 0": {
+    "pass": true,
+    "warn": false,
+    "detail": "checks 總計 = 134，fail = 0"
+  },
+  "B2 檢查項總計 ≥ 120（本 M 迄今驗證密度）": {
+    "pass": true,
+    "warn": false,
+    "detail": "tot = 134"
+  },
+  "_B": {
+    "per": {
+      "01_fan_geometry.json": {
+        "checks": 0,
+        "fail": 0
+      },
+      "02_two_chart_junction.json": {
+        "checks": 26,
+        "fail": 0
+      },
+      "03_m0_absolute_usage_audit.json": {
+        "checks": 20,
+        "fail": 0
+      },
+      "04_two_factor_decomposition.json": {
+        "checks": 14,
+        "fail": 0
+      },
+      "05_hierarchy_reduction.json": {
+        "checks": 22,
+        "fail": 0
+      },
+      "06_three_input_falsifiability.json": {
+        "checks": 14,
+        "fail": 0
+      },
+      "07_target_shift_discriminating_power.json": {
+        "checks": 19,
+        "fail": 0
+      },
+      "08_forcing_candidates.json": {
+        "checks": 19,
+        "fail": 0
+      }
+    },
+    "total_checks": 134,
+    "total_fail": 0
+  },
+  "C1 文檔引用之全部標籤皆有對應已執行檢查（無幽靈引用）": {
+    "pass": true,
+    "warn": false,
+    "detail": "幽靈 = []"
+  },
+  "C2 被引用之檢查全部 pass=True": {
+    "pass": true,
+    "warn": false,
+    "detail": "失敗 = []"
+  },
+  "_C": {
+    "tags_per_doc": {
+      "01_fan_geometry_prereg.md": [],
+      "02_r1_results.md": [],
+      "03_calibrator_correction_two_chart.md": [
+        "J2.3",
+        "J3.1",
+        "J3.2",
+        "J5.1",
+        "J7.4"
+      ],
+      "04_r2prime_two_chart_results.md": [
+        "D2.3",
+        "J1.1",
+        "J1.2",
+        "J1.3",
+        "J2.1",
+        "J2.2",
+        "J2.3",
+        "J3.1",
+        "J3.2",
+        "J3.3",
+        "J3.4",
+        "J3.5",
+        "J4.1",
+        "J4.2",
+        "J4.3",
+        "J4.4",
+        "J4.5",
+        "J5.1",
+        "J5.2",
+        "J5.3",
+        "J6.1",
+        "J7.1",
+        "J7.2",
+        "J7.3",
+        "J7.4"
+      ],
+      "05_r3prime_r4prime_audit.md": [
+        "A1.2",
+        "D1.2",
+        "J6.1"
+      ],
+      "06_r5prime_hierarchy_reduction.md": [
+        "E2.4"
+      ],
+      "07_r6prime_three_input_falsifiability.md": [
+        "G4.1",
+        "G4.2"
+      ],
+      "08_r7prime_power_audit_selfcorrection.md": [],
+      "09_r8prime_forcing_candidates.md": [
+        "J2.1",
+        "J2.2",
+        "J2.3",
+        "J2.4",
+        "J2.5"
+      ]
+    },
+    "unresolved": []
+  },
+  "D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）": {
+    "pass": true,
+    "warn": false,
+    "detail": "未申報 = []"
+  },
+  "_D": {
+    "traced": 164,
+    "untraced": [
+      {
+        "doc": "04_r2prime_two_chart_results.md",
+        "num": "2.3e35",
+        "reason": "❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）"
+      },
+      {
+        "doc": "04_r2prime_two_chart_results.md",
+        "num": "2.3e35",
+        "reason": "❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）"
+      },
+      {
+        "doc": "04_r2prime_two_chart_results.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "04_r2prime_two_chart_results.md",
+        "num": "5.2237e35",
+        "reason": "D2.3 重算值（更正後，4 s.f.）"
+      },
+      {
+        "doc": "05_r3prime_r4prime_audit.md",
+        "num": "6.871698e9",
+        "reason": "同上：X₀ convention-free"
+      },
+      {
+        "doc": "06_r5prime_hierarchy_reduction.md",
+        "num": "6.38e28",
+        "reason": "文內 decade 縮減（D2.6 重算）"
+      },
+      {
+        "doc": "06_r5prime_hierarchy_reduction.md",
+        "num": "6.875e9",
+        "reason": "約定變體：O34 (1−CY₃/45²)（docs/06 E2.4 披露）"
+      },
+      {
+        "doc": "06_r5prime_hierarchy_reduction.md",
+        "num": "5.9e-2",
+        "reason": "文內 dev 界（docs/06 E5 次佳）"
+      },
+      {
+        "doc": "06_r5prime_hierarchy_reduction.md",
+        "num": "3.08e-3",
+        "reason": "D2.4 重算值（17/50 vs p）"
+      },
+      {
+        "doc": "06_r5prime_hierarchy_reduction.md",
+        "num": "1.40e-2",
+        "reason": "D2.4 重算值（11/32 vs p）"
+      },
+      {
+        "doc": "07_r6prime_three_input_falsifiability.md",
+        "num": "2.216e-06",
+        "reason": "D2.5 重算值（1/(2q²)，q=475）"
+      },
+      {
+        "doc": "README.md",
+        "num": "2.3e35",
+        "reason": "❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）"
+      },
+      {
+        "doc": "README.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.3e35",
+        "reason": "❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "6.875e9",
+        "reason": "約定變體：O34 (1−CY₃/45²)（docs/06 E2.4 披露）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.22e-06",
+        "reason": "D2.5 重算值（3 s.f.）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.3e35",
+        "reason": "❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      }
+    ]
+  },
+  "D2.1 cot²(π/88) = 783.964664（docs/04 §4）": {
+    "pass": true,
+    "warn": false,
+    "detail": "783.964664442"
+  },
+  "D2.2 Δt = 6.664364 e-folds = 2.894296 decade（docs/04 §4）": {
+    "pass": true,
+    "warn": false,
+    "detail": "6.6643639 / 2.8942965"
+  },
+  "D2.3 缺口 = 35.717977 decade ⟹ 因子 = 5.223686e35（docs/04 原寫 2.3e35 ✗ 已附註更正）": {
+    "pass": true,
+    "warn": false,
+    "detail": "factor = 5.2236865e+35"
+  },
+  "D2.4 有理數 dev 表（docs/06 §G，約定 |p−q|/q）逐項重算一致（rel < 1%）": {
+    "pass": true,
+    "warn": false,
+    "detail": "4/4"
+  },
+  "D2.5 隨機基準 1/(2q²) = 2.21607e−06（docs/07 §G2）": {
+    "pass": true,
+    "warn": false,
+    "detail": "2.216066e-06"
+  },
+  "D2.6 log₁₀(6.38e28) = 28.8048 ⟹ 文檔 −28.805 一致（docs/06 §E2.3）": {
+    "pass": true,
+    "warn": false,
+    "detail": "28.804821"
+  },
+  "D2.7 44·T₁ vs N_O38 = 1.801868e40 ⟹ dev 7.4e−6（docs/06 §E3.1）": {
+    "pass": true,
+    "warn": false,
+    "detail": "dev = 7.583e-06"
+  },
+  "E1 每個 docs/*.md 皆列於 README": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 = []"
+  },
+  "E2 每個 scripts/*.py 皆列於 README": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 = []"
+  },
+  "E3 README 引用之檔案路徑全部存在（無斷鏈；已剔模板／裸前綴）": {
+    "pass": true,
+    "warn": false,
+    "detail": "斷鏈 = []"
+  },
+  "E4 docs 編號連續 01–09": {
+    "pass": true,
+    "warn": false,
+    "detail": "9 個檔案"
+  },
+  "_E": {
+    "docs": [
+      "01_fan_geometry_prereg.md",
+      "02_r1_results.md",
+      "03_calibrator_correction_two_chart.md",
+      "04_r2prime_two_chart_results.md",
+      "05_r3prime_r4prime_audit.md",
+      "06_r5prime_hierarchy_reduction.md",
+      "07_r6prime_three_input_falsifiability.md",
+      "08_r7prime_power_audit_selfcorrection.md",
+      "09_r8prime_forcing_candidates.md"
+    ],
+    "scripts": [
+      "01_fan_geometry.py",
+      "02_two_chart_junction.py",
+      "03_m0_absolute_usage_audit.py",
+      "04_two_factor_decomposition.py",
+      "05_hierarchy_reduction.py",
+      "06_three_input_falsifiability.py",
+      "07_target_shift_discriminating_power.py",
+      "08_forcing_candidates.py",
+      "09_full_audit.py",
+      "10_independent_verifier.py",
+      "11_doc_crosscheck.py"
+    ],
+    "dangling": [],
+    "missing_readme": []
+  },
+  "F1 每個 docs/01–09 至少被時序表或結果節引用一次": {
+    "pass": true,
+    "warn": false,
+    "detail": "未引用 = []"
+  },
+  "F2 時序 row 數 = 9（R1／R2′／R3′+R4′／R5′／R6′／R7′／R8′／審計一輪／audit-verify 全鏈）": {
+    "pass": true,
+    "warn": false,
+    "detail": "rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9']"
+  },
+  "F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）": {
+    "pass": true,
+    "warn": false,
+    "detail": "推翻=2 撤回=2 撤銷=5"
+  },
+  "_F": {
+    "rows": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "cited_docs": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09"
+    ]
+  },
+  "G1 兩檔 block state 一致且 = partial": {
+    "pass": true,
+    "warn": false,
+    "detail": "partial / partial"
+  },
+  "G2 兩檔 block updated = 2026-10-26": {
+    "pass": true,
+    "warn": false,
+    "detail": "ok"
+  },
+  "G3 register check: HARD DRIFT = 0": {
+    "pass": true,
+    "warn": false,
+    "detail": "HARD DRIFT = 0"
+  },
+  "G4 register check 內無 M8 相關漂移": {
+    "pass": true,
+    "warn": false,
+    "detail": "M8 零命中"
+  },
+  "_G": {
+    "blocks": {
+      "01_problem_record.md": {
+        "pid": "M8",
+        "title": "M₀ 重新推導（脫 O38 框架）：標度 = 江恩角度線反向交疊（fan／tan 譜）",
+        "state": "partial",
+        "verdict": "-",
+        "flags": "r1-object-mismatch; r3-retracted; r2p-r8p-pass; mu-underived-no-candidate; consistency-route-closed; determinant-route-closed",
+        "owner": "M8",
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "prereq": "M6, O38(G2), O246, O211, O81, O124",
+        "source": "調律者 2026-10-26"
+      },
+      "SESSION_START.md": {
+        "pid": "M8",
+        "title": "M₀ 重新推導（脫 O38 框架）：標度 = 江恩角度線反向交疊（fan／tan 譜）",
+        "state": "partial",
+        "verdict": "-",
+        "flags": "r1-object-mismatch; r3-retracted; r2p-r8p-pass; mu-underived-no-candidate; consistency-route-closed; determinant-route-closed",
+        "owner": "M8",
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "prereq": "M6, O38(G2), O246, O211, O81, O124",
+        "source": "調律者 2026-10-26「v11.0 不逆交接回 v10.0，而且 M_0 可能並不符合 O38 的框架，開 M8 重新推 M_0，標度可能並非一個個點，而是江恩角度線反向交疊三角函數？」"
+      }
+    },
+    "hard_drift": 0
+  },
+  "H1 docs/02_r1_results.md 含更正標記 ['docs/08', '無判別力']": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "H1 docs/04_r2prime_two_chart_results.md 含更正標記 ['更正']": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "H1 docs/06_r5prime_hierarchy_reduction.md 含更正標記 ['更正']": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "H1 docs/07_r6prime_three_input_falsifiability.md 含更正標記 ['更正']": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "H1 docs/08_r7prime_power_audit_selfcorrection.md 含更正標記 ['推翻']": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "H1b R3 撤銷標記留存（docs/04 含『撤銷』）": {
+    "pass": true,
+    "warn": false,
+    "detail": "撤銷 出現 3 次"
+  },
+  "H2 README 之『23/68』舊宣稱已標記為被 161/475 取代": {
+    "pass": true,
+    "warn": false,
+    "detail": "檢查 161/475 或『已取代』字樣"
+  },
+  "K1 腳本集對稱（磁碟 ↔ 記錄）：兩側差集空": {
+    "pass": true,
+    "warn": false,
+    "detail": "僅磁碟=[]；僅記錄=[]"
+  },
+  "K2 逆向綁定：10 個 headline 數字皆有 producer（data 全部／腳本輸入）": {
+    "pass": true,
+    "warn": false,
+    "detail": "無 producer = []"
+  },
+  "K3 路徑衛生：scripts/*.py 內 `/tmp/` **寫入**模式 = 0": {
+    "pass": true,
+    "warn": false,
+    "detail": "命中 = []"
+  },
+  "K4 產物綁定：無孤兒 JSON、無無輸出腳本": {
+    "pass": true,
+    "warn": false,
+    "detail": "孤兒=[]；無輸出=[]"
+  },
+  "K5 無 inline 幽靈推導：session 內算過之關鍵值全部已入 script": {
+    "pass": true,
+    "warn": false,
+    "detail": "幽靈 = []"
+  },
+  "K6 driver 存在（scripts/run_chain.sh，預設 dry-run）": {
+    "pass": true,
+    "warn": false,
+    "detail": "skill §3.1 ⑥"
+  },
+  "K6b driver dry-run 可執行且列出 11 步": {
+    "pass": true,
+    "warn": false,
+    "detail": "exit=0，[dry] 行數=11"
+  },
+  "_summary": {
+    "warn": 0,
+    "fail": 0,
+    "findings": []
+  }
+}

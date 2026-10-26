@@ -1,0 +1,166 @@
+{
+  "H1.1 8/8 無量綱預測之積木只有『譜值』與『計數』兩類，皆無質量單位 ⟹ 結構上 μ-免疫": {
+    "pass": true,
+    "detail": "類別分佈 = {'計數比': 4, '譜跡': 4}"
+  },
+  "H1.2 ⟹ 任何由結構積木構造之函數 f(γ, 計數) 皆為 μ-免疫；μ 只能經 M₀ 進入": {
+    "pass": true,
+    "detail": "scripts/03 A3 實測：無量綱側 0/8 依賴 M₀"
+  },
+  "_H1": {
+    "predictions": [
+      "Ω_Λ",
+      "Ω_m",
+      "Ω_b",
+      "Ω_dm/Ω_b",
+      "Σγ",
+      "γ₂₂",
+      "γ₄₄",
+      "Σtan²(nπ/88)"
+    ],
+    "kinds": {
+      "計數比": 4,
+      "譜跡": 4
+    }
+  },
+  "H2.1 錨 dof = 1（O212 步驟1：{c, ω_ring, R_world, T_ring} 三恆等式）": {
+    "pass": true,
+    "detail": "c = R·ω_ring 恆等 ⟹ 三量只帶 1 個標度"
+  },
+  "H2.2 無量綱原料 = μ（唯一）：其餘無量綱預測皆 μ-免疫（H1）⟹ 不可用於定 μ": {
+    "pass": true,
+    "detail": "質量 ∝ M₀（A3：指數 +1，單一均勻）⟹ 量一個質量即定 μ，其餘為預言"
+  },
+  "H2.3 ⟹「推導 μ」≡「令模型零自由無量綱參數」；兩者係同一件事": {
+    "pass": true,
+    "detail": "本 M 之最終目標即此"
+  },
+  "_H2": {
+    "anchor_dof": 1,
+    "dimensionless_params": [
+      "mu"
+    ],
+    "equivalent": "derive_mu == zero_free_dimensionless"
+  },
+  "H3.1 任何內部一致性條件皆由結構積木構成 ⟹ 對 μ 鈍感 ⟹ 不能『解出』μ": {
+    "pass": true,
+    "detail": "H1 之推論；此即 7 類橋樑全失敗之一般原因"
+  },
+  "H3.2 唯一能定 μ 之形式 = identity：μ = f(結構)，f 完全被強迫（無自由係數）": {
+    "pass": true,
+    "detail": "docs/07 §7 規格"
+  },
+  "H3.3 ⟹「一致性檢驗」路線永久封閉（立禁區）": {
+    "pass": true,
+    "detail": "只剩 identity 路線"
+  },
+  "_H3": {
+    "consistency_can_fix_mu": false
+  },
+  "H4.1 F1 ρ = 0.03 ≪ 1（稀疏）⟹ E5 之 null **無資訊**（之前當『空集』使用係過度解讀）": {
+    "pass": true,
+    "detail": "ρ = 0.025；0 命中若隨機之機率 = 0.97"
+  },
+  "H4.2 F2 ρ = 0.07 ≪ 1（稀疏）⟹ **撤回 docs/06 之『有效否證』claim**": {
+    "pass": true,
+    "detail": "ρ = 0.070；0 命中若隨機之機率 = 0.99"
+  },
+  "H4.3 F3 ρ ≈ 4 ≥ 3（稠密）且目標 0 命中 ⟹ 前因子族**被排除**（本輪唯一有效之 null）": {
+    "pass": true,
+    "detail": "ρ = 4.01；p(Poisson) = 0.018"
+  },
+  "H4.4 ★ 功率判準：null 可作證據 ⟺ ρ ≥ 3；命中可作證據 ⟺ ρ ≤ 0.1（稀疏族）": {
+    "pass": true,
+    "detail": "兩者不可兼得 ⟹ 一族只能回答一個方向"
+  },
+  "_H4": {
+    "F1": {
+      "label": "F1 半整數冪族（E5）→ X₀",
+      "n_family": 126,
+      "hits_true": 0,
+      "rho_ctrl": 0.025,
+      "ctrl_nonzero_frac": 0.025,
+      "ctrl_max": 1,
+      "p_zero_if_random": 0.975,
+      "power": "稀疏族：**命中**才具判別力；0 命中近乎必然 ⟹ null 無資訊"
+    },
+    "F2": {
+      "label": "F2 指數族（G4）→ μ",
+      "n_family": 153,
+      "hits_true": 0,
+      "rho_ctrl": 0.07,
+      "ctrl_nonzero_frac": 0.01,
+      "ctrl_max": 10,
+      "p_zero_if_random": 0.99,
+      "power": "稀疏族：**命中**才具判別力；0 命中近乎必然 ⟹ null 無資訊"
+    },
+    "F3": {
+      "label": "F3 前因子族（μ = A·e^{−S}）→ μ",
+      "n_family": 22704,
+      "hits_true": 0,
+      "rho_ctrl": 4.015,
+      "ctrl_nonzero_frac": 0.91,
+      "ctrl_max": 29,
+      "p_zero_if_random": 0.09,
+      "power": "稠密族：0 命中具判別力（排除）；命中則無意義"
+    },
+    "controls": 200,
+    "tol": "0.1%",
+    "power_rule": "null needs rho>=3; hit needs rho<=0.1"
+  },
+  "H5.1 累計候選數 ≥ 2000（量級）": {
+    "pass": true,
+    "detail": "合計 = 23078"
+  },
+  "H5.2 ★ 功率審計：R1/F1/F2 皆稀疏族（ρ ≪ 1）⟹ 其 null **不得**作為否證引用": {
+    "pass": true,
+    "detail": "ρ: F1=0.025, F2=0.070；R1 同型（20 候選）"
+  },
+  "H5.3 ★ 唯一具功率之 null = F3 前因子族（ρ≈4，0 命中）⟹ 只可宣稱『前因子族不含 μ』": {
+    "pass": true,
+    "detail": "ρ = 4.01"
+  },
+  "_H5": {
+    "coverage": {
+      "R1 扇幾何盲測（docs/02）": 20,
+      "O38 生成器掃描（v10.0 docs/33）": 75,
+      "E7 兩標度半整數冪（scripts/05）": 126,
+      "G4 指數族（scripts/06）": 153,
+      "F3 前因子族（本輪）": 22704
+    },
+    "total": 23078,
+    "power_audit": {
+      "sparse": [
+        "R1",
+        "F1(E5)",
+        "F2(G4)"
+      ],
+      "dense": [
+        "F3"
+      ]
+    }
+  },
+  "H6.1 μ 係模型唯一自由無量綱參數（H2）⟹「推導 μ」= 零參數化": {
+    "pass": true,
+    "detail": ""
+  },
+  "H6.2 一致性路線永久封閉（H3）；只剩 identity 路線": {
+    "pass": true,
+    "detail": ""
+  },
+  "H6.3 ★ 但 identity 路線之既有掃描**全部功率不足**（ρ ≪ 1）⟹ 現狀 =『無候選』而非『已否證』": {
+    "pass": true,
+    "detail": "撤回 docs/06 §5/§9 與 docs/07 §5 之『有效否證』措辭"
+  },
+  "H6.4 維持 🟡，不 close；下一步須『強迫型 identity』（零自由係數）＝單一候選，命中即成立": {
+    "pass": true,
+    "detail": "O238 教訓 ＋ docs/07 §7 規格"
+  },
+  "_H6": {
+    "verdict": "mu = sole free dimensionless param; consistency route closed; prior scans underpowered; need forced identity (single candidate)"
+  },
+  "_summary": {
+    "checks": 19,
+    "fail": 0
+  }
+}

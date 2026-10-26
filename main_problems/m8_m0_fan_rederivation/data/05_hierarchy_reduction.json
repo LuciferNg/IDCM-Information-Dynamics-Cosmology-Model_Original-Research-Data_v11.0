@@ -1,0 +1,124 @@
+{
+  "E1.1 E_kchain = exp[(ln M_Pl + ln ħω_ring)/2]（符號 = 0）": {
+    "pass": true,
+    "detail": "diff = 0"
+  },
+  "E1.2 E_kchain 落喺 meV 量級（1–100 meV）⟹ 遠低於 M₀（27.9 MeV），高於 ħω_ring（1.5e−33 eV）": {
+    "pass": true,
+    "detail": "4.34796 meV"
+  },
+  "E1.3 兩錨相距 60.9 dex，交接點恰在中點（相差各半）": {
+    "pass": true,
+    "detail": "M_Pl/E_k = 2.8079578e+30；E_k/ħω = 2.8079578e+30"
+  },
+  "E2.1 由定義可證 X₀/√N ≡ M₀/M_Pl（符號化簡 = 0）": {
+    "pass": true,
+    "detail": "simplify = 0"
+  },
+  "E2.2 數值：X₀/√N_IDCM = f_M0（dev < 1e−25）": {
+    "pass": true,
+    "detail": "X₀/√N_IDCM = 2.28529306049737e-21, f_M0 = 2.28529306049737e-21"
+  },
+  "E2.3 歸約後目標量級 = O(10^9.8)（比 10^38.6 細 28.8 dex）": {
+    "pass": true,
+    "detail": "log₁₀X₀ = 9.8073325"
+  },
+  "E2.4 約定依賴披露：X 之數值隨 CY₃ 約定變（6.42e9 ↔ 6.88e9）⟹ X₀ 為 convention-free 版本": {
+    "pass": true,
+    "detail": "X₀ = 幾何平均歸一（無約定）；X 含 CY₃ 修正"
+  },
+  "_E2": {
+    "E_kchain_MeV": 4.347964327414457e-09,
+    "X0": 6417006419.321625,
+    "log10_X0": 9.80733247374258,
+    "reduction_dex": 28.804941115682123
+  },
+  "E3.1 N_O38 = f_M0·N_IDCM（恆等；且 = 44·T₁）": {
+    "pass": true,
+    "detail": "N_O38/(44T₁) = 0.9999925874"
+  },
+  "E3.2 三個數、一條關係 ⟹ 獨立未解數 = 2（f_M0 與 N_IDCM）": {
+    "pass": true,
+    "detail": "⟹ 唔可以宣稱「只剩一個數」；scripts/04 之『兩因子』正是此二數"
+  },
+  "E3.3 N_IDCM 之身份：O212 錨定理表列為 R_world 之無量綱因子 7.88e60（未閉合）": {
+    "pass": true,
+    "detail": "N_IDCM = 7.884626871e+60"
+  },
+  "E3.4 f_M0 之身份：O212 表列為 M₀ 之無量綱因子 2.29e−21（未閉合）": {
+    "pass": true,
+    "detail": "f_M0 = 2.28529306e-21"
+  },
+  "E4.1 全模型標度 dof = 1（M6 T2）⟹ λ（圖卡）與 f_M0（層級）係同一 dof": {
+    "pass": true,
+    "detail": "scripts/03 A6 唯一性論證"
+  },
+  "E4.2 ⟹ README『下一步』第 1 項與第 3 項係同一問題（合併，非兩項）": {
+    "pass": true,
+    "detail": "殘餘紅項：f_M0（≡λ）、N_IDCM（≡N，O212）——共 2 項"
+  },
+  "E4.3 第 2 項（f_R / N_IDCM）已由 O212 判非結構，本 M 不重推": {
+    "pass": true,
+    "detail": "禁區：O212 null P=0.875"
+  },
+  "_E3": {
+    "N_O38": 1.8018683072819073e+40,
+    "independent_unknowns": 2,
+    "targets": [
+      "f_M0 ≡ λ",
+      "N_IDCM ≡ N"
+    ]
+  },
+  "E5.1 無任何鏈不變量之半整數冪給出 X₀（最佳 dev ≥ 1e−6）": {
+    "pass": true,
+    "detail": "最佳 = k=2, m=32.5, dev=0.05345"
+  },
+  "E5.2 註：半整數冪族只係『最起碼』之檢查，非結構證明；本輪零擬合、無候選升格": {
+    "pass": true,
+    "detail": "禁區：0.1% 級命中一律視隨機（M4/M5 操作規則）"
+  },
+  "_E5": {
+    "best_base": "2",
+    "best_m": 32.5,
+    "best_dev": 0.05345255980058479
+  },
+  "E6.1 G = c⁵/(ħω_ring²N²) 與 N 之定義等價（恆等，零結構內容）": {
+    "pass": true,
+    "detail": "diff = 0"
+  },
+  "E6.2 ⟹ 該式只係 N 之定義改寫，唔構成「鏈↔重力」橋樑（冇自由結構係數）": {
+    "pass": true,
+    "detail": "橋樑需一個非恆等之無量綱係數 κ_b，本輪 corpus 掃描未見（O212 已判 N 非結構）"
+  },
+  "E6.3 ⟹ f_M0 = N_O38/N_IDCM：兩因子皆未閉合，故 f_M0 需 2 個結構（或 1 個 + 1 個量測）": {
+    "pass": true,
+    "detail": "M8 無法在此層面再歸約"
+  },
+  "_E6": {
+    "G_identity": "tautology",
+    "bridge_exists": false
+  },
+  "E7.1 兩標度、無第三輸入 ⟹ 唯一形式 μ = r^p（齊次性強迫；p 為唯一自由）": {
+    "pass": true,
+    "detail": "定義即恆等；本檢定確認類之參數化正確"
+  },
+  "E7.2 必需指數 p 唔等於 1/3（dev = 1.7% ≫ 0.1% 隨機門檻）⟹ 最簡兩標度橋樑被排除": {
+    "pass": true,
+    "detail": "p = 0.33895155 vs 1/3，dev = 1.6855e-02"
+  },
+  "E7.3 最近之小分母有理數亦 ≥0.1% ⟹ 依 M4/M5 操作規則一律視隨機，不得升格": {
+    "pass": true,
+    "detail": "最近 = 23/68，dev = 2.12e-03"
+  },
+  "_E7": {
+    "p_required": 0.3389515457267427,
+    "r_scale": 1.268290835274586e-61,
+    "best_rational": "23/68",
+    "best_rational_dev": 0.0021176134529783397,
+    "verdict": "two-scale bridge excluded (p != 1/3)"
+  },
+  "_summary": {
+    "checks": 22,
+    "fail": 0
+  }
+}
