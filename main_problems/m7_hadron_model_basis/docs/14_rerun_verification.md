@@ -74,3 +74,20 @@ JSON 新增 `corpus_scope` 與 `fingerprint`（每版本 HEAD ＋ 掃描檔數�
 
 **核**：修後 11 詞 × 3 版本全部計數與原記錄**逐格相同**（只多出 fingerprint 欄），`docs/11` 表**無需改動**；`04` 重跑回 **88/88 PASS**。
 ⚠️ 副作用（正面）：`m6_scale_dof_theorem/docs/01_t1_composite_additivity.md` 之出現，顯示並行 session 正處理本 M 所 register 之 **M2 加性適用範圍** 交接項。
+
+## 七、可重現性定案（03 v3）
+
+再修兩點，令 `03` 之 JSON **跨 commit byte-stable**：
+
+1. 語料身份 = `corpus_sha256` = sha256(sorted 「path\0blob_sha」 from `git ls-tree -r HEAD`) ⟹ 只隨語料**內容**變，不隨 commit 變。
+2. **host repo（本 M 所屬 v11）之 head 不入指紋**（每 commit 自變）；v9/v10（外部 repo）保留 head 作 provenance。
+
+最終指紋：
+
+| 版本 | head | files | corpus_sha256（前12） |
+|:--|:--|--:|:--|
+| v9.0 | `60d67ae` | 407 | `299a36d3848a` |
+| v10.0 | `151ec75a` | 10247 | `f71f6d39776e` |
+| v11.0（host） | — | 229 | `d5050c59304f` |
+
+**定案核**：commit 後再重跑 ⟹ **5/5 JSON 全部 == HEAD**（`01`／`02`／`02b`／`03`／`04`）；`04` 仍 **88/88 PASS**。
