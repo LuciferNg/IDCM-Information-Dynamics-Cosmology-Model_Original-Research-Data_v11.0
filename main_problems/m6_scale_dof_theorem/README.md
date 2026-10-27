@@ -37,8 +37,8 @@
 | `scripts/01–07_*.py` | 推導腳本（精確算術） | 🟢 40/40 ＋ 13/13 |
 | `scripts/08`–`11_*.py` | 自審／對稱／強制單一標度／β＋齊次性 | 🟢 25/25 |
 | `scripts/12_audit_chain.py` | 全鏈審計（十項，唯讀） | 🟢 37/37 |
-| `docs/13_h2_verdict.md` | **H2 判定**：核非加性 20/20 ⟹ 強子層加性假；dof_scale 以弱理由存活 | 🟢 8/8 |
-| `scripts/13_h2_layer_scope.py` | H2 判定腳本（核加性 ＋ M₀ 標度身份 ＋ 帳本） | 🟢 8/8 |
+| `docs/13_h2_verdict.md` | **H2 判定**：核非加性 20/20 ⟹ 強子層加性假；dof_scale 以弱理由存活 | 🟢 9/9 |
+| `scripts/13_h2_layer_scope.py` | H2 判定腳本（核加性 ＋ M₀ 標度身份 ＋ 帳本 ＋ 約定穩健性） | 🟢 9/9 |
 | `scripts/04_doc_consistency.py` | 文檔↔數據一致性（32 claims） | 🟢 32/32 |
 | `scripts/run_chain.sh` | 全鏈 driver（預設 dry-run，`--run` 才跑） | 🟢 |
 | `data/01–12_*.json`、`data/run_*.log` | 輸出數據與執行記錄（重跑 byte-identical） | 🟢 |

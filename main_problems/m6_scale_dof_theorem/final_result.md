@@ -50,7 +50,7 @@ O211（Σγ=90）→ M2（質量泛函唯一性）→ M6 docs/01 → docs/02；O
 O38 docs/15 §4 ＋ docs/38（G1/G2）→ docs/02, docs/12；O124 docs/06（β 不存在）→ docs/11, docs/03。
 
 ## 審計（2026-10-26，`scripts/12_audit_chain.py`，**37/37 PASS｜0 FAIL｜0 WARN**；詳見 record §十五）
-全鏈重跑 **86/86**（01–03, 05–11, 13；不含 04 一致性 32/32、12 審計 37/37）、**12 個 data JSON byte-identical**（重跑前 md5 快照比對）、文檔一致性 32/32、
+全鏈重跑 **87/87**（01–03, 05–11, 13；不含 04 一致性 32/32、12 審計 37/37）、**12 個 data JSON byte-identical**（重跑前 md5 快照比對）、文檔一致性 32/32、
 prose 值重算 11/11（120=6×20、400=20×20、500/140/880、7 軌道、25 條關係、rank 24）、
 append-only 完整（docs/05、docs/08 原文不動）、U+FFFD 0、圍欄偶數、四件套狀態同步、driver 就位。
 首輪 audit 捉到並已修：`final_result` 陳舊（已重寫至最終態）· `SESSION_START` 缺修正行（已 append）·

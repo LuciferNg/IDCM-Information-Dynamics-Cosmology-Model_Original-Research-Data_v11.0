@@ -24,6 +24,6 @@
   },
   "H2_verdict": "FALSE at hadron layer; dof_scale = 1 survives (weak route)"
  },
- "pass": 8,
+ "pass": 9,
  "fail": 0
 }

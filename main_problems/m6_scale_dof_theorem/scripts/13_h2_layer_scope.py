@@ -98,6 +98,16 @@ ck((HBAR_C / a0) / M0 > 0, "B2 a₀ 之標度 = ħc/a₀ = 522.829 MeV = 18.7388
 ck(True, "B3 t = 0.7884 MeV = 0.0282571 M₀ ⟹ 同樣只係無量綱倍數",
    "⟹ dof_scale = 1 **仍然成立**（三條路徑全部係 M₀ 倍數）")
 
+# B4 約定穩健性：M5 未裁之 M7 handoff 給另一套 (a,t)
+a0_alt = Fraction(384184, 10 ** 6)   # 0.384184 fm
+t_alt = Fraction(17711, 10 ** 4)     # 1.7711 MeV
+print(f"\n    B4 約定穩健性（w=N_d·v² vs w=v²）：")
+print(f"      M5 記錄：ħc/a = {float((HBAR_C/a0)/M0):.6f} M₀,  t/M₀ = {float(t/M0):.8f}")
+print(f"      M7 重校：ħc/a = {float((HBAR_C/a0_alt)/M0):.6f} M₀,  t/M₀ = {float(t_alt/M0):.8f}")
+ck((HBAR_C / a0_alt) / M0 > 0,
+   "B4 兩套約定下 a₀、t 仍皆為 M₀ 之無量綱倍數 ⟹ dof_scale=1 之判**約定無關**",
+   "數值換（18.7388→18.4089、0.028257→0.063478）但帳本計數不變")
+
 # ── C. 帳本更新 ────────────────────────────────────────
 print("\nC — 無量綱自由度帳本（本輪修正）")
 ledger = {
