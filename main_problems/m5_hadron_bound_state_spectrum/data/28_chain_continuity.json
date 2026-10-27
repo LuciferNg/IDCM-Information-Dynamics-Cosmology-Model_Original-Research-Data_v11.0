@@ -124,6 +124,12 @@
         "23",
         "24",
         "25"
+      ],
+      "27_weight_convention.md": [
+        "01",
+        "13",
+        "24",
+        "25"
       ]
     },
     "edges_out": {
@@ -175,7 +181,10 @@
       "25_rederivation_theorem.md": [
         "19"
       ],
-      "26_chain_audit.md": []
+      "26_chain_audit.md": [],
+      "27_weight_convention.md": [
+        "19"
+      ]
     },
     "forward_violations": [],
     "mutual": [],
@@ -185,11 +194,9 @@
       "03_ultrametric_nogo.md",
       "09_contact_term_derivation.md",
       "10_tree_two_body.md",
-      "11_full_audit.md",
       "12_layer_pin_a3.md",
       "13_normalisation_fix_and_d1.md",
       "14_contact_term_corrected.md",
-      "15_independent_verification.md",
       "23_family_resolution.md",
       "24_downstream_recompute.md",
       "25_rederivation_theorem.md"
@@ -200,13 +207,16 @@
       "06_state_sign_reachability.md",
       "07_sign_structure_audit.md",
       "08_sampleout_spin_test.md",
+      "11_full_audit.md",
+      "15_independent_verification.md",
       "16_d2_strong_ib.md",
       "17_g_kernel_first_pass.md",
       "18_two_sector.md",
       "19_shape_ratio_ceiling.md",
       "20_registered_family.md",
       "21_sign_theorem.md",
-      "22_assignment_scope.md"
+      "22_assignment_scope.md",
+      "26_chain_audit.md"
     ]
   },
   "K2": [],

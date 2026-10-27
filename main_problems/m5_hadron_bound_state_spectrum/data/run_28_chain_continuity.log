@@ -2,7 +2,7 @@
 M5 docs/26 — 全鏈正確性＋連續性審計（依賴圖／撤回污染／溯源／狀態一致）
 ============================================================================================================
 
-[載入] docs = 26 份（01–26）
+[載入] docs = 27 份（01–27）
 
 ============================================================================================================
 K1 依賴圖：`←` 輸入須為較細編號；不得循環；`→` 以外之前向引用 = 違規
@@ -33,12 +33,13 @@ K1 依賴圖：`←` 輸入須為較細編號；不得循環；`→` 以外之�
   24  ← ['13', '23']    → ['19', '25']
   25  ← ['23', '24']    → ['19']
   26  ← ['11', '15', '23', '24', '25']    → —
+  27  ← ['01', '13', '24', '25']    → ['19']
 
   前向輸入（違規）：0
   相互引用（循環風險）：0
-  由 26 反向可達 13／25 份（不含自身）
-  由 docs/25 反向可達 9／24 份（不含 25 與本審計檔）
-  未被主鏈引用（葉）：['04_signed_kernel_nogo.md', '05_state_kernel_probe.md', '06_state_sign_reachability.md', '07_sign_structure_audit.md', '08_sampleout_spin_test.md', '16_d2_strong_ib.md', '17_g_kernel_first_pass.md', '18_two_sector.md', '19_shape_ratio_ceiling.md', '20_registered_family.md', '21_sign_theorem.md', '22_assignment_scope.md']
+  由 27 反向可達 11／26 份（不含自身）
+  由 docs/25 反向可達 9／25 份（不含 25 與本審計檔）
+  未被主鏈引用（葉）：['04_signed_kernel_nogo.md', '05_state_kernel_probe.md', '06_state_sign_reachability.md', '07_sign_structure_audit.md', '08_sampleout_spin_test.md', '11_full_audit.md', '15_independent_verification.md', '16_d2_strong_ib.md', '17_g_kernel_first_pass.md', '18_two_sector.md', '19_shape_ratio_ceiling.md', '20_registered_family.md', '21_sign_theorem.md', '22_assignment_scope.md', '26_chain_audit.md']
 
 ============================================================================================================
 K2 撤回值污染：只可出現於撤回語境（±3 行內含 作廢/撤回/錯誤/前附註/v1/假象/漏項/更正）
