@@ -1,0 +1,201 @@
+{
+ "script": "scripts/35_v9_table_audit.py",
+ "date": "2026-10-26",
+ "tables": {
+  "T1_sector_D1": {
+   "c": 1,
+   "t": 1,
+   "s": 4,
+   "b": 4,
+   "e": 5,
+   "mu": 5,
+   "tau": 5
+  },
+  "T2_generation_5_5": {
+   "t": 0,
+   "b": 0,
+   "tau": 0,
+   "c": 1,
+   "s": 3,
+   "mu": 8,
+   "u": 5,
+   "d": 8,
+   "e": 9
+  },
+  "T3_massform_5_6": {
+   "e": 5,
+   "d": 8,
+   "u": 9
+  },
+  "T0_ruled": {
+   "e": 1,
+   "u": 2,
+   "d": 3,
+   "s": 4,
+   "mu": 5,
+   "c": 7,
+   "tau": 9,
+   "b": 11,
+   "t": 13
+  }
+ },
+ "coverage": {
+  "T1": "7/9",
+  "T0": "9/9"
+ },
+ "collisions_T2": {
+  "0": [
+   "t",
+   "b",
+   "tau"
+  ],
+  "8": [
+   "mu",
+   "d"
+  ]
+ },
+ "pairwise": [
+  {
+   "a": "T1",
+   "b": "T2",
+   "shared": 7,
+   "agree": 1,
+   "same": [
+    "c"
+   ]
+  },
+  {
+   "a": "T1",
+   "b": "T3",
+   "shared": 1,
+   "agree": 1,
+   "same": [
+    "e"
+   ]
+  },
+  {
+   "a": "T1",
+   "b": "T0",
+   "shared": 7,
+   "agree": 2,
+   "same": [
+    "mu",
+    "s"
+   ]
+  },
+  {
+   "a": "T2",
+   "b": "T0",
+   "shared": 9,
+   "agree": 0,
+   "same": []
+  },
+  {
+   "a": "T3",
+   "b": "T0",
+   "shared": 3,
+   "agree": 0,
+   "same": []
+  }
+ ],
+ "checks": [
+  {
+   "label": "C1a T1 covers 7 of 9 charged fermions",
+   "ok": true,
+   "got": "7/9",
+   "expect": "7/9"
+  },
+  {
+   "label": "C1b T1 is missing exactly {u, d}",
+   "ok": true,
+   "got": "['d', 'u']",
+   "expect": "['d', 'u']"
+  },
+  {
+   "label": "C1c T1 sector sets are disjoint (a partition)",
+   "ok": true,
+   "got": "{'Up': ['c', 't'], 'Down': ['b', 's'], 'Lepton': ['e', 'mu', 'tau']}",
+   "expect": "disjoint"
+  },
+  {
+   "label": "C2a T2 is NOT injective",
+   "ok": true,
+   "got": "{0: ['t', 'b', 'tau'], 8: ['mu', 'd']}",
+   "expect": "non-empty"
+  },
+  {
+   "label": "C2b k=8 is shared by mu and d",
+   "ok": true,
+   "got": "['mu', 'd']",
+   "expect": "['d', 'mu']"
+  },
+  {
+   "label": "C2c T2 mode-count 6 < 9 particles",
+   "ok": true,
+   "got": "6",
+   "expect": "6"
+  },
+  {
+   "label": "C3a T1 puts k=5 in the Lepton sector",
+   "ok": true,
+   "got": "Lepton",
+   "expect": "Lepton"
+  },
+  {
+   "label": "C3b T3 puts the electron at k=5",
+   "ok": true,
+   "got": "5",
+   "expect": "5"
+  },
+  {
+   "label": "C3c T1 puts the DOWN-quark sector at k=4, T3 puts d at k=8",
+   "ok": true,
+   "got": "('Down', 8)",
+   "expect": "('Down', 8)"
+  },
+  {
+   "label": "C3d T2 puts u at k=5 and d at k=8 -- third distinct convention",
+   "ok": true,
+   "got": "(5, 8)",
+   "expect": "(5, 8)"
+  },
+  {
+   "label": "C4a T0 covers 9 of 9",
+   "ok": true,
+   "got": "9/9",
+   "expect": "9/9"
+  },
+  {
+   "label": "C4b T0 is injective",
+   "ok": true,
+   "got": "injective",
+   "expect": "injective"
+  },
+  {
+   "label": "C5a T1 vs T3 agree on the electron only",
+   "ok": true,
+   "got": "['e']",
+   "expect": "['e']"
+  },
+  {
+   "label": "C5b T1 vs T2 agree on exactly one particle (c, k=1)",
+   "ok": true,
+   "got": "['c']",
+   "expect": "['c']"
+  },
+  {
+   "label": "C5c T3 vs T0 agree on nothing",
+   "ok": true,
+   "got": "[]",
+   "expect": "[]"
+  },
+  {
+   "label": "C5d T2 vs T0 agree on nothing",
+   "ok": true,
+   "got": "[]",
+   "expect": "[]"
+  }
+ ],
+ "n_pass": 16,
+ "n_checks": 16
+}
