@@ -40,10 +40,19 @@ PASS 04-g holdout p/e dev = −57.2495 %（json）
 PASS 04-h docs/04 記 −57.25 %
 PASS 04-i O209 讀值差 1314×（json）
 PASS 04-j docs/04 記 1 314×
-PASS X-a 四份 JSON pass == total（無 FAIL）  12/12; 12/12; 3/3; 2/2
+PASS 06-a μ/e 整數級 428.37σ（json）  428.37
+PASS 06-b τ/μ 整數級 2.63σ（json）  2.6336
+PASS 06-c τ/e 整數級 2.71σ（json）  2.7145
+PASS 06-d docs/06 記 2.63σ / 2.71σ
+PASS 06-e 表達式覆蓋率 = 100 %（json）
+PASS 06-f docs/06 記 100.0 %
+PASS 06-g 單階梯 13 592σ（json）  13591.8
+PASS 06-h docs/06 記 13 592
+PASS 06-i docs/06 記域分離定理＋域判別式 5
+PASS X-a 五份 JSON pass == total（無 FAIL）  12/12; 12/12; 3/3; 2/2; 18/18
 PASS X-b final_result 記 29/29
 PASS X-c final_result 記 428.4σ
 PASS X-d final_result 記 CAP 784.9646644
 ----------------------------------------------------------------------
-PASS 43/43
+PASS 52/52
 -> /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m9_lepton_sector_audit/data/05_doc_crosscheck.json

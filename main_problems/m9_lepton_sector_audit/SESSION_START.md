@@ -83,7 +83,8 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 | R4 | 譜語法唯一化 ＋ dof 階梯 ＋ holdout | `docs/04`、`scripts/04` | 🔴 L0 全落空；L2 P_MC(1e−5) = 52 %；holdout p/e、n/e 同樣落空 |
 | R5 | 預註冊預言 | `docs/05` | ✅ CAP 預言（`784.9646644`）＋ φ-ladder 永久否證 |
 | 收 | register `close --verdict negative` | register | ✅ |
-| 核 | `scripts/05` 文檔 × 數據交叉核（43 項 headline 數字） | `data/05_doc_crosscheck.json` | ✅ 43/43 PASS |
+| 核 | `scripts/05` 文檔 × 數據交叉核（52 項 headline 數字） | `data/05_doc_crosscheck.json` | ✅ 52/52 PASS |
+| **R6** | **分子推導攻堅（調律者裁決：不交 O35，在 M9 推）** | `docs/06`、`scripts/06` | ✅ 18/18 PASS：域分離定理 ＋ 整數級 σ ＋ 選擇律 no-go ＋ 表達式空間 100 % ＋ 單階梯 13 592σ |
 
 **判決**：T1 ✅（零個係結構身份，比原命題更強）；T2 ❌（φ-lock FAIL）；T3 ✅（無同語言伙伴 → φ 式作廢）；T4 🟡（否定式成立、肯定式不成立，誠實報）。
 

@@ -3,17 +3,17 @@ pid:     M9
 title:   輕子扇區獨立攻：比值算子身份唯一化（譜讀數 vs φ-冪）
 state:   closed
 verdict: negative
-flags:   sigma-not-percent; phi-lock-gate; primary-source-audit; density-gate; no-lepton-ratio-structure
+flags:   sigma-not-percent; phi-lock-gate; primary-source-audit; density-gate; field-separation-theorem; no-lepton-ratio-structure
 owner:   M9
 created: 2026-10-27
 updated: 2026-10-27
 prereq:  M4(docs/04,19), O34, O35, O120, O209, M6
-source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
+source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」；同日「不需 handoff O35, 在 M9 推」
 -->
 
 # M9 — 輕子扇區獨立攻：比值算子身份唯一化
 
-## 狀態: 🔴 closed（negative，2026-10-27）｜P1–P5 完成｜scripts 01–04 **29/29 PASS** ＋ `scripts/05` 交叉核 **43/43 PASS**
+## 狀態: 🔴 closed（negative，2026-10-27）｜P1–P5 ＋ R6 完成｜scripts 01–04 **29/29**、06 **18/18**、`scripts/05` 交叉核 **52/52 PASS**
 
 **問題**：同一個觀測量 `m_μ/m_e = 206.7682827`，三個互斥聲稱同時掛住 🟢。
 
@@ -37,6 +37,7 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 1. **事前性**：參數須在見目標前凍結（φ-lock）。
 2. **可證偽性／族密度**：族必須有能力落空。φ-ladder 係**插值族**（528 半格 0.0456 % ⟹ 任何目標都「命中」⟹ 每次檢定 0 bit）；γ-ratio 係**離散族**（1 892 值，可落空）。
 3. **dof 成本**：每反解因子／每取整 = 1 dof（L2 雙 γ 比 P_MC(1e−5) = 52 %）。
+4. **域論（R6 追加）**：兩族**唔同域** ⟹ 「同時成立」係不可能，唔止無證據。
 
 ## 主要結果
 
@@ -46,19 +47,33 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 - holdout `m_p/m_e`、`m_n/m_e` 同樣 −57 % ⟹ 譜比語言整體無法達 σ 級。
 - 上游 `o34/scripts/21` primary source：先算目標後硬編 `(11,7)`、1800 點網格反搜、反解打印、`m_e = 0.511` —— 記載 `0.0003 %`／`0.0015 %` 由此圓整重現，真值 `0.000953 %`。
 
+## R6（追加：分子 7／71／29 攻堅 —— 在 M9 內推，不交 O35）
+
+| 項 | 結果 |
+|:--|:--|
+| **域分離定理** | ✅ `∀x∈ℚ\{0}: φ^x ∉ ℚ(ζ₈₈)`；`γ_a/γ_b ∈ ℚ(ζ₈₈)` ⟹ **φ-冪 ≠ 譜讀數（恆真）**；φ 階梯**唔可能**係 K_chain 輸出（`disc(ℚ(√5)) = 5`、`88 = 2³·11` ⟹ 交集 = ℚ） |
+| 整數級 σ | μ/e `b* = 41.989543` 距整數 **428.37σ** ⟹ rung 本身死；μ/τ **2.63σ**、e/τ **2.71σ** ⟹ 數值相容 |
+| 選擇律 | 🔴 同一 `(lepton, gap=1)` 給 `a = 11` vs `6`、`b = +42` vs `−71`、`D = 88` vs `528` ⟹ 無 `f(sector, gap)` |
+| dof | 每比值 ≥3 自由整數（10.6 bit）；2 個獨立躍遷 ⟹ **預言 = 0**（第三個自動，非測試） |
+| 表達式空間 | 🔴 23 個文檔化結構數 ＋ `{±,×,÷}`，**2 步已覆蓋 [1,528] 100 %**（MC 10⁷）⟹ 「搵到 71 = 16+55」= **0 bit** |
+| 單階梯 | 🔴 幾何級數 ⟹ 等步 ⟹ 偏離 **13 592σ** |
+
+⟹ **φ 階梯 = 逐比值後驗編碼（每比值 3 自由整數），唔係理論；其語言與譜層域論上不相容。**
+
 ## 檔案
 
 | 檔案 | 描述 | 狀態 |
 |:--|:--|:--:|
-| `01_problem_record.md` | 問題 ＋ fence ＋ 禁區 ＋ 判據 ＋ 執行記錄 | ✅ |
+| `01_problem_record.md` | 問題 ＋ fence ＋ 禁區 ＋ 判據 ＋ 執行記錄（含 §十·5 R6） | ✅ |
 | `SESSION_START.md` | 接手起點（已更新為已執行） | ✅ |
 | `docs/01_sigma_table.md` | P1/P2 權威精度 ＋ σ 表 | ✅ |
 | `docs/02_phi_lock_gate.md` | R2 K_φ ＋ 密度 ＋ primary-source 審計 | ✅ |
 | `docs/03_language_consistency.md` | R3 可證偽性判準（含 Q3 更正） | ✅ |
 | `docs/04_spectral_uniqueness.md` | R4 語法 ＋ dof 階梯 ＋ holdout | ✅ |
 | `docs/05_preregistered_predictions.md` | R5 預註冊預言 | ✅ |
-| `scripts/01…05` | 零 import 獨立重建（29/29）＋ 文檔×數據交叉核（43/43） | ✅ |
-| `data/run_01…04.log` ＋ 4 JSON | 執行記錄 | ✅ |
+| `docs/06_numerator_derivation.md` | **R6 域分離定理 ＋ 分子攻堅** | ✅ |
+| `scripts/01…06` | 零 import 獨立重建（29/29 ＋ 18/18）＋ 文檔×數據交叉核（52/52） | ✅ |
+| `data/run_01…06.log` ＋ 6 JSON | 執行記錄 | ✅ |
 | `final_result.md` | 結論摘要 | ✅ |
 
 ## 依賴
@@ -67,4 +82,4 @@ M4（docs/04,19）｜O34（scripts/21 審計）｜O35（docs/02 階梯）｜O209
 
 ## 註冊
 
-register pid **M9**｜2026-10-27｜`close --verdict negative`｜本 M 未寫入任何其他 M/O 目錄
+register pid **M9**｜2026-10-27 `close --verdict negative`｜同日 handoff O35 按調律者裁決 **retract** → `reopen` → R6 完成後再 `close`｜本 M 未寫入任何其他 M/O 目錄

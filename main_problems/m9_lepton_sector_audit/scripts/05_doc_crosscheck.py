@@ -36,8 +36,10 @@ d1 = load("01_p1_p2_sigma.json")
 d2 = load("02_phi_lock.json")
 d3 = load("03_language.json")
 d4 = load("04_spectral.json")
+d6 = load("06_numerator_derivation.json")
 m1, m2, m3, m4 = (doc("01_sigma_table.md"), doc("02_phi_lock_gate.md"),
                   doc("03_language_consistency.md"), doc("04_spectral_uniqueness.md"))
+m6 = doc("06_numerator_derivation.md")
 
 print("=" * 70)
 print("M9 scripts/05 — 文檔 × 數據 交叉核對")
@@ -117,10 +119,27 @@ chk("04-i O209 讀值差 1314×（json）",
     abs(float(d4["assignment_reading"][0]["factor_off"]) - 1314.0) < 1.0)
 chk("04-j docs/04 記 1 314×", "1 314" in m4)
 
+# ── 06 ───────────────────────────────────────────────────────────
+sig = {r["ratio"]: float(r["sigma_from_integer"]) for r in d6["b_table"]}
+chk("06-a μ/e 整數級 428.37σ（json）", abs(sig["mu/e"] - 428.37) < 0.1, f"{sig['mu/e']:.2f}")
+chk("06-b τ/μ 整數級 2.63σ（json）", abs(sig["tau/mu"] - 2.6336) < 1e-3, f"{sig['tau/mu']:.4f}")
+chk("06-c τ/e 整數級 2.71σ（json）", abs(sig["tau/e"] - 2.7145) < 1e-3, f"{sig['tau/e']:.4f}")
+chk("06-d docs/06 記 2.63σ / 2.71σ", "2.63σ" in m6 and "2.71σ" in m6)
+chk("06-e 表達式覆蓋率 = 100 %（json）",
+    abs(d6["expression_space"]["coverage"] - 1.0) < 1e-12 and
+    d6["expression_space"]["n_2step"] == 528)
+chk("06-f docs/06 記 100.0 %", "100.0 %" in m6)
+chk("06-g 單階梯 13 592σ（json）",
+    abs(float(d6["single_cascade"]["sigma"]) - 13592.0) < 5,
+    d6["single_cascade"]["sigma"])
+chk("06-h docs/06 記 13 592", "13 592" in m6)
+chk("06-i docs/06 記域分離定理＋域判別式 5",
+    "ℚ(√5) ∩ ℚ(ζ₈₈) = ℚ" in m6 and "disc(ℚ(√5)) = 5" in m6)
+
 # ── 交叉檔 ───────────────────────────────────────────────────────
-chk("X-a 四份 JSON pass == total（無 FAIL）",
-    all(d["pass"] == d["total"] for d in (d1, d2, d3, d4)),
-    "; ".join(f"{d['pass']}/{d['total']}" for d in (d1, d2, d3, d4)))
+chk("X-a 五份 JSON pass == total（無 FAIL）",
+    all(d["pass"] == d["total"] for d in (d1, d2, d3, d4, d6)),
+    "; ".join(f"{d['pass']}/{d['total']}" for d in (d1, d2, d3, d4, d6)))
 fr = open(os.path.join(ROOT, "final_result.md"), encoding="utf-8").read()
 chk("X-b final_result 記 29/29",
     bool(re.search(r"29/29", fr)) and (d1["pass"] + d2["pass"] + d3["pass"] + d4["pass"]) == 29)

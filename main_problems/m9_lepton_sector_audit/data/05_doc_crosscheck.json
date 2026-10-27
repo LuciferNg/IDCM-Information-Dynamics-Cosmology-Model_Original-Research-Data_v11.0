@@ -196,9 +196,54 @@
       "detail": ""
     },
     {
-      "check": "X-a 四份 JSON pass == total（無 FAIL）",
+      "check": "06-a μ/e 整數級 428.37σ（json）",
       "pass": true,
-      "detail": "12/12; 12/12; 3/3; 2/2"
+      "detail": "428.37"
+    },
+    {
+      "check": "06-b τ/μ 整數級 2.63σ（json）",
+      "pass": true,
+      "detail": "2.6336"
+    },
+    {
+      "check": "06-c τ/e 整數級 2.71σ（json）",
+      "pass": true,
+      "detail": "2.7145"
+    },
+    {
+      "check": "06-d docs/06 記 2.63σ / 2.71σ",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "06-e 表達式覆蓋率 = 100 %（json）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "06-f docs/06 記 100.0 %",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "06-g 單階梯 13 592σ（json）",
+      "pass": true,
+      "detail": "13591.8"
+    },
+    {
+      "check": "06-h docs/06 記 13 592",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "06-i docs/06 記域分離定理＋域判別式 5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "X-a 五份 JSON pass == total（無 FAIL）",
+      "pass": true,
+      "detail": "12/12; 12/12; 3/3; 2/2; 18/18"
     },
     {
       "check": "X-b final_result 記 29/29",
@@ -216,6 +261,6 @@
       "detail": ""
     }
   ],
-  "pass": 43,
-  "total": 43
+  "pass": 52,
+  "total": 52
 }
