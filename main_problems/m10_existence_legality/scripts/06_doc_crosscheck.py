@@ -46,7 +46,8 @@ def e_(v, dp):
 J = {}
 for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "04_topology_gate", "05_blind_prediction", "07_environment",
-          "08_nuclide_chart", "09_sphaleron"):
+          "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
+          "11_falsification_nubase", "12_definition_d5", "13_primordial_test"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -54,7 +55,9 @@ DOC = {}
 for f in ("01_criteria_freeze", "02_three_layer_classification",
           "03_precision_wall_correction", "04_topology_gate", "05_preregistration",
           "06_environment_completeness", "07_nuclide_chart",
-          "08_sphaleron_relaxation"):
+          "08_sphaleron_relaxation", "09_channel_completion",
+          "10_falsification_nubase", "11_definition_d5",
+          "12_primordial_label"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -197,6 +200,93 @@ cl("08_sphaleron_relaxation", f"{j8['B_minus_L_required']:.4e}", "(B−L) 需求
 cl("08_sphaleron_relaxation", f"{j8['S_inst']:.1f}", "S_inst")
 cl("08_sphaleron_relaxation", f"{j8['inst_rate']:.2e}", "e^-2S")
 
+
+# ---------------- docs/09 ← 10_channel_completion
+j9c = J["10_channel_completion"]
+cl("09_channel_completion", f"{j9c['n_measured']}", "實測池條數")
+cl("09_channel_completion", f"{j9c['baseline']['n_legal']}", "基線合法數")
+cl("09_channel_completion", f"{j9c['baseline']['A_max']}", "基線 A_max")
+cl("09_channel_completion", f"{j9c['final']['n_legal']}", "𝒞_v2 合法數")
+cl("09_channel_completion", f"{j9c['final']['A_max']}", "𝒞_v2 A_max")
+cl("09_channel_completion",
+   f"{100*(1-j9c['final']['n_legal']/j9c['baseline']['n_legal']):.1f}%", "總收縮率")
+for r in j9c["marginal"]:
+    cl("09_channel_completion", f"{r['legal_after']}", f"加入 {r['added']} 後之合法數")
+    cl("09_channel_completion", f"{r['killed']}", f"{r['added']} 之殺數")
+    cl("09_channel_completion", f"{100*r['contraction']:.1f}%", f"{r['added']} 之收縮率")
+kc = j9c["kill_count_on_baseline"]
+for name in ("SF_opt", "cluster", "2β⁻", "2β⁺/ECEC"):
+    cl("09_channel_completion", f"{100*kc[name]/j9c['baseline']['n_legal']:.1f}%",
+       f"{name} 之獨立殺傷率")
+cl("09_channel_completion", f"{j9c['kill_count_on_baseline']['SF_opt']}", "SF_opt 獨立殺數")
+cl("09_channel_completion", f"{j9c['kill_count_on_baseline']['cluster']}", "cluster 獨立殺數")
+cl("09_channel_completion", f"{j9c['kill_count_on_baseline']['2β⁻']}", "2β⁻ 獨立殺數")
+cl("09_channel_completion", f"{j9c['kill_count_on_baseline']['2β⁺/ECEC']}", "2β⁺ 獨立殺數")
+
+# ---------------- docs/10 ← 11_falsification_nubase
+j10c = J["11_falsification_nubase"]
+tb = j10c["test_B"]
+cl("10_falsification_nubase", f"{j10c['n_nubase']}", "NUBASE 基態條數")
+cl("10_falsification_nubase", f"{j10c['n_parse_fail']}", "NUBASE 解析失敗數")
+cl("10_falsification_nubase", f"{j10c['anchors']['3H']:.2f}", "³H T½ (yr)")
+cl("10_falsification_nubase", e_(j10c["anchors"]["209Bi"], 3), "²⁰⁹Bi T½ (yr)")
+cl("10_falsification_nubase", f"{j10c['anchors']['14C']/1000:.2f}", "¹⁴C T½ (ky)")
+cl("10_falsification_nubase", f"{j10c['P_size']}", "P 條數")
+cl("10_falsification_nubase", f"{tb['S_size']}", "S(1e15) 條數")
+cl("10_falsification_nubase", f"{tb['SP_size']}", "S\\P 條數")
+cl("10_falsification_nubase", f"{tb['tier3']}", "Tier III 條數")
+cl("10_falsification_nubase", f"{100*tb['tier3_frac']:.1f}%", "Tier III 佔比")
+cl("10_falsification_nubase", f"{tb['n_non_tier3']}", "Tier II 例外條數")
+cl("10_falsification_nubase", f"{100*(1-tb['tier3_frac']):.1f}%", "Tier II 佔比")
+cl("10_falsification_nubase", f"{tb['non_tier3_A_range'][0]}", "例外 A 下限")
+cl("10_falsification_nubase", f"{tb['non_tier3_A_range'][1]}", "例外 A 上限")
+cl("10_falsification_nubase", f"{tb['SP_stbl']}", "S\\P 中 stbl 條數")
+cl("10_falsification_nubase", f"{tb['SP_finite']}", "S\\P 中有限 T½ 條數")
+cl("10_falsification_nubase", e_(tb["max_rel"], 2), "失效半徑 max rel")
+cl("10_falsification_nubase", f"{tb['n_tier1']}", "Tier I 條數")
+for nm in ("α", "SF_opt", "2β⁺/ECEC", "2β⁻", "β⁻", "β⁺/EC"):
+    cl("10_falsification_nubase", f"{tb['SP_channel_dist'][nm]}", f"S\\P 之 {nm} 條數")
+cl("10_falsification_nubase", f"{tb['III_channel_dist']['SF_opt']}", "Tier III 內 SF_opt 條數")
+_nt = [t for t in tb["items"] if t["tier"] != "III"]
+cl("10_falsification_nubase", e_(min(t["rel"] for t in _nt), 2), "例外 rel 下限")
+cl("10_falsification_nubase", e_(max(t["rel"] for t in _nt), 2), "例外 rel 上限")
+tc = j10c["test_C"]
+cl("10_falsification_nubase", f"{tc['n_ill']}", "不合法集（有限 T½）條數")
+cl("10_falsification_nubase", e_(tc["min_yr"], 1), "最短 T½")
+cl("10_falsification_nubase", e_(tc["max_yr"], 2), "最長 T½")
+cl("10_falsification_nubase", e_(tc["span"], 1), "T½ 跨度")
+
+
+# ---------------- docs/11 ← 12_definition_d5 (+ 11)
+j12 = J["12_definition_d5"]
+cl("11_definition_d5", j12["seal"], "D5 封印（逐字）")
+cl("11_definition_d5", f"{j10c['P_size']}", "合法集條數")
+cl("11_definition_d5", f"{tb['S_size']}", "S(1e15) 條數")
+cl("11_definition_d5", f"{tb['SP_size']}", "S\\P 條數")
+cl("11_definition_d5", f"{tb['tier3']}", "Tier III 條數")
+cl("11_definition_d5", f"{100*tb['tier3_frac']:.1f}%", "Tier III 佔比")
+cl("11_definition_d5", f"{tb['n_non_tier3']}", "Tier II 例外條數")
+cl("11_definition_d5", f"{tb['non_tier3_A_range'][0]}", "例外 A 下限")
+cl("11_definition_d5", f"{tb['non_tier3_A_range'][1]}", "例外 A 上限")
+cl("11_definition_d5", f"{tb['max_rel']:.2e}", "失效半徑（doc 格式）")
+cl("11_definition_d5", f"{j10c['test_C']['span']:.1e}", "時間盲跨度（doc 格式）")
+cl("11_definition_d5", f"{len(j9c['final']['channels'])}", "𝒞_v2 通道類數")
+cl("11_definition_d5", f"{j9c['final']['n_legal']}", "𝒞_v2 合法集條數")
+
+
+# ---------------- docs/12 ← 13_primordial_test
+j13 = J["13_primordial_test"]
+cl("12_primordial_label", f"{j13['n_nat']}", "天然存在集條數")
+cl("12_primordial_label", f"{j13['n_P']}", "P 條數")
+cl("12_primordial_label", f"{j13['n_P_and_nat']}", "P∩Nat 條數")
+cl("12_primordial_label", f"{j13['n_Nat_not_P']}", "Nat\\P 條數")
+cl("12_primordial_label", f"{j13['tier_dist']['III']}", "Nat\\P 之 Tier III")
+cl("12_primordial_label", f"{j13['tier_dist']['II']}", "Nat\\P 之 Tier II")
+cl("12_primordial_label", f"{j13['max_rel']:.2e}", "失效半徑（丰度標籤）")
+cl("12_primordial_label", f"{j13['n_mono']}", "單一同位素元素個數")
+for r in j13["mono"]:
+    cl("12_primordial_label", f"{r['rel']:.2e}", f"單一同位素 Z={r['Z']} 之 rel")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -215,11 +305,12 @@ ck("C2.3 三佔比之和 ≈ 5.44（= (X+em+m_e)/|x|）", abs(
    "恆等式 self-consistent（佔比係相對 |x| 之和，非 100%）")
 
 print("\n[C3] 封印完備性：")
-seals = {j1["C5_seal"]["sha256"], j5["L_seal"]}
+seals = {j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"]}
 found = set(re.findall(r"\b[0-9a-f]{64}\b", " ".join(DOC.values())))
 ck("C3.1 doc 中 64-hex 皆為 data 內封印", found <= seals,
    f"doc {len(found)} 個 / data {len(seals)} 個；多出 {sorted(found-seals)}")
-ck("C3.2 兩個封印互異（判據 ≠ 預言）", j1["C5_seal"]["sha256"] != j5["L_seal"],
+ck("C3.2 封印互異（判據 ≠ 預言；D5 亦互異）",
+   len({j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"]}) == 3,
    f"判據 {j1['C5_seal']['sha256'][:12]}… / 預言 {j5['L_seal'][:12]}…")
 
 print("\n[C4] 覆蓋度：")
@@ -228,7 +319,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 8,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 12,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

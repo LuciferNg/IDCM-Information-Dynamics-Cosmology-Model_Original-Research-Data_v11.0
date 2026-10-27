@@ -1,0 +1,98 @@
+==============================================================================
+M10 R10 — 真證偽測試：判準 vs NUBASE2020 半衰期（獨立標籤）
+==============================================================================
+  NUBASE2020：3474 條基態（解析失敗 84）
+  [PASS] P.1 NUBASE 解析 ≥ 3000 條  3474 條
+     錨點 ³H: T = 12.32 y = 1.232e+01 yr
+     錨點 ²⁰⁹Bi: T = 20.1 Ey = 2.010e+19 yr
+     錨點 ¹⁴C: T = 5.70 ky = 5.700e+03 yr
+     錨點 ⁴He: T = stbl = inf yr
+  [PASS] P.2 錨點合理（³H ~12.3 yr；²⁰⁹Bi ~2e19 yr；⁴He 穩定）  NUBASE 與文獻一致 ⟹ 獨立標籤可用
+
+  判準合法集 P = 90 條（𝒞_v2 = 11 通道；實測池 2550 條）
+
+[A] 證偽檢定：P 中不得有 T½ < 1e15 yr 者
+     P 中有 NUBASE 數據者 90/90
+  [PASS] A.1【事前預期：P 中無 T½ < 1e15 yr 者】  反例 0 條 ⟹ 判準未被證偽
+
+[B] Tier 驗證：S\P（觀測穩定卻判不合法）是否全落 Tier III
+     觀測穩定集 S(1e15 yr) = 272 條；S∩實測池中不在 P 者 = 182 條
+     其中 Tier III = 131/182（72.0%）
+       ⚠️  98 Z44  A=98  T½=   stbl rel=1.28e-04 tier=II ch=SF_opt
+       ⚠️  99 Z44  A=99  T½=   stbl rel=1.34e-04 tier=II ch=SF_opt
+       ⚠️ 100 Z44  A=100 T½=   stbl rel=1.47e-04 tier=II ch=SF_opt
+       ⚠️ 101 Z44  A=101 T½=   stbl rel=1.41e-04 tier=II ch=SF_opt
+       ⚠️ 102 Z44  A=102 T½=   stbl rel=1.27e-04 tier=II ch=SF_opt
+       ⚠️ 103 Z45  A=103 T½=   stbl rel=1.61e-04 tier=II ch=SF_opt
+       ⚠️ 104 Z46  A=104 T½=   stbl rel=1.96e-04 tier=II ch=SF_opt
+       ⚠️ 105 Z46  A=105 T½=   stbl rel=1.87e-04 tier=II ch=SF_opt
+       ⚠️ 106 Z46  A=106 T½=   stbl rel=1.70e-04 tier=II ch=SF_opt
+       ⚠️ 107 Z47  A=107 T½=   stbl rel=2.06e-04 tier=II ch=SF_opt
+       ⚠️ 108 Z46  A=108 T½=   stbl rel=1.60e-04 tier=II ch=SF_opt
+       ⚠️ 109 Z47  A=109 T½=   stbl rel=1.90e-04 tier=II ch=SF_opt
+       ⚠️ 110 Z48  A=110 T½=   stbl rel=2.20e-04 tier=II ch=SF_opt
+       ⚠️ 111 Z48  A=111 T½=   stbl rel=2.12e-04 tier=II ch=SF_opt
+       ⚠️ 112 Z48  A=112 T½=   stbl rel=1.99e-04 tier=II ch=SF_opt
+       ⚠️ 113 Z49  A=113 T½=   stbl rel=2.31e-04 tier=II ch=SF_opt
+       ⚠️ 114 Z50  A=114 T½=   stbl rel=2.64e-04 tier=II ch=SF_opt
+       ⚠️ 115 Z50  A=115 T½=   stbl rel=2.50e-04 tier=II ch=SF_opt
+       ⚠️ 116 Z50  A=116 T½=   stbl rel=2.40e-04 tier=II ch=SF_opt
+       ⚠️ 117 Z50  A=117 T½=   stbl rel=2.33e-04 tier=II ch=SF_opt
+       ⚠️ 118 Z50  A=118 T½=   stbl rel=2.17e-04 tier=II ch=SF_opt
+       ⚠️ 119 Z50  A=119 T½=   stbl rel=2.09e-04 tier=II ch=SF_opt
+       ⚠️ 120 Z50  A=120 T½=   stbl rel=1.96e-04 tier=II ch=SF_opt
+       ⚠️ 121 Z51  A=121 T½=   stbl rel=2.28e-04 tier=II ch=SF_opt
+       ⚠️ 122 Z52  A=122 T½=   stbl rel=2.73e-04 tier=II ch=SF_opt
+       ⚠️ 123 Z51  A=123 T½=   stbl rel=2.05e-04 tier=II ch=SF_opt
+       ⚠️ 124 Z52  A=124 T½=   stbl rel=2.45e-04 tier=II ch=SF_opt
+       ⚠️ 125 Z52  A=125 T½=   stbl rel=2.32e-04 tier=II ch=SF_opt
+       ⚠️ 126 Z52  A=126 T½=   stbl rel=2.22e-04 tier=II ch=SF_opt
+       ⚠️ 127 Z53  A=127 T½=   stbl rel=2.54e-04 tier=II ch=SF_opt
+       ⚠️ 128 Z54  A=128 T½=   stbl rel=2.94e-04 tier=II ch=SF_opt
+       ⚠️ 129 Z54  A=129 T½=   stbl rel=2.83e-04 tier=II ch=SF_opt
+       ⚠️ 130 Z54  A=130 T½=   stbl rel=2.68e-04 tier=II ch=SF_opt
+       ⚠️ 131 Z54  A=131 T½=   stbl rel=2.55e-04 tier=II ch=SF_opt
+       ⚠️ 132 Z54  A=132 T½=   stbl rel=2.51e-04 tier=II ch=SF_opt
+       ⚠️ 133 Z55  A=133 T½=   stbl rel=2.81e-04 tier=II ch=SF_opt
+       ⚠️ 134 Z56  A=134 T½=   stbl rel=3.25e-04 tier=II ch=SF_opt
+       ⚠️ 135 Z56  A=135 T½=   stbl rel=3.13e-04 tier=II ch=SF_opt
+       ⚠️ 136 Z56  A=136 T½=   stbl rel=3.00e-04 tier=II ch=SF_opt
+       ⚠️ 137 Z56  A=137 T½=   stbl rel=2.80e-04 tier=II ch=SF_opt
+       ⚠️ 138 Z56  A=138 T½=   stbl rel=2.68e-04 tier=II ch=SF_opt
+       ⚠️ 139 Z57  A=139 T½=   stbl rel=3.01e-04 tier=II ch=SF_opt
+       ⚠️ 140 Z58  A=140 T½=   stbl rel=3.35e-04 tier=II ch=SF_opt
+       ⚠️ 141 Z59  A=141 T½=   stbl rel=3.69e-04 tier=II ch=SF_opt
+       ⚠️ 142 Z60  A=142 T½=   stbl rel=4.03e-04 tier=II ch=SF_opt
+       ⚠️ 156 Z64  A=156 T½=   stbl rel=4.93e-04 tier=II ch=SF_opt
+       ⚠️ 157 Z64  A=157 T½=   stbl rel=4.84e-04 tier=II ch=SF_opt
+       ⚠️ 158 Z64  A=158 T½=   stbl rel=4.83e-04 tier=II ch=SF_opt
+       ⚠️ 159 Z65  A=159 T½=   stbl rel=5.06e-04 tier=II ch=SF_opt
+       ⚠️ 163 Z66  A=163 T½=   stbl rel=5.21e-04 tier=II ch=SF_opt
+       ⚠️ 164 Z66  A=164 T½=   stbl rel=5.21e-04 tier=II ch=SF_opt
+  [FAIL] B.1【事前預期：S\P 中 ≥90% 落 Tier III】  131/182 = 72.0% ⟹ **落空**（門檻不調）
+  [PASS] B.2【後驗】非 Tier III 之例外全部出自**同一通道**（單一機制）  51/51 條皆為 SF_opt（最優二元裂變）⟹ 失效非發散，係**裂變屏障**一種物理機制
+  [PASS] B.3【後驗】例外皆為實測穩定（stbl）⟹ 判準之 ⟹ 方向對其**不可測**、非被證偽  51/51 條 T½ = stbl；A ∈ [98,164]、rel ∈ [1.3e-04,5.2e-04]（皆 Tier II）⟹ Q_SF > 0 但液滴裂變屏障 ~30–40 MeV ≫ Q ⟹ 衰變不可觀測
+     S\P 分解：stbl 163 條／有限 T½ 19 條
+     通道分佈：{'2β⁺/ECEC': 28, '2β⁻': 24, 'β⁻': 4, 'SF_opt': 58, 'β⁺/EC': 1, 'α': 67}
+     Tier 分佈：{'III': 131, 'II': 51}
+  [PASS] B.5【後驗】失效半徑有界：S\P 全落 rel ≤ 5.3e−4，且**無 Tier I**  max rel = 5.21e-04；Tier I 個案 = 0 ⟹ 凡「不合法」而觀測穩定者，其最小正 Q 之相對裕度皆 ≤ 5.21e-04；rel > 5.2e-04 之區間**零偽陰性**
+  [PASS] B.6【後驗】Tier II 之 51 條係**單一通道**（屏障帶），Tier III 之 130 條係混合通道  Tier II 通道 = {'SF_opt': 51}；Tier III 通道 = {'2β⁺/ECEC': 28, '2β⁻': 24, 'β⁻': 4, 'SF_opt': 7, 'β⁺/EC': 1, 'α': 67}
+  [PASS] B.4【事後】⟸ 方向（∀c x<0 ⟹ 永久）可測且通過：P 中全數觀測穩定  P 之 90 條有 NUBASE 數據者中 90 條為 stbl，其餘皆 T½ ≥ 1e15 yr ⟹ 判準之**必要條件**方向零反例
+
+[C] 時間盲：不合法集內 T½ 之跨度
+     不合法集（有 NUBASE T½ 且非 stbl）2292 條
+     最短 2.73e-30 yr ／ 最長 2.25e+24 yr ⟹ 跨度 8.3e+53×
+  [PASS] C.1【事前預期：跨度 ≥ 1e30】  跨度 8.3e+53× ⟹ 判準對時間尺度**零解析度**（禁區①之實證）
+     最短：Z=1 A=5（2.7e-30 yr）；最長：Z=52 A=128（2.3e+24 yr）
+
+[判詞]
+     判準之合法集 P = 90 條 ⟹ 未證偽（在 𝒞_v2 11 通道下）
+     觀測穩定但判不合法者 182 條：Tier III 131 條（72.0%）、非 Tier III 51 條
+     ⟹ 失效有**兩類**：① 近臨界（Tier III 內，精度極限）；② 屏障類（51 條全為 SF_opt、全 stbl）
+     ⟹ 判準係**單向證書**（可證永久），非雙向判別器（不可證衰變）
+
+==============================================================================
+CHECK 合計: PASS 9 / FAIL 1  → 9/10
+FAIL 清單: ['B.1【事前預期：S\\P 中 ≥90% 落 Tier III】']
+==============================================================================
+data/11_falsification_nubase.json 已寫

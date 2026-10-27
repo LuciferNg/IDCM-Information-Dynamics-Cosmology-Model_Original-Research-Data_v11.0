@@ -1,0 +1,1530 @@
+{
+  "script": "11_falsification_nubase.py",
+  "role": "R10 真證偽測試（NUBASE2020 標籤）",
+  "n_nubase": 3474,
+  "n_parse_fail": 84,
+  "n_measured": 2550,
+  "P_size": 90,
+  "anchors": {
+    "3H": 12.32,
+    "209Bi": 2.01e+19,
+    "14C": 5700.0,
+    "4He": Infinity
+  },
+  "cut_yr": 1000000000000000.0,
+  "test_A": {
+    "falsified": false,
+    "counterexamples": []
+  },
+  "test_B": {
+    "S_size": 272,
+    "SP_size": 182,
+    "tier3": 131,
+    "tier3_frac": 0.7197802197802198,
+    "n_non_tier3": 51,
+    "non_tier3_all_SF_opt": true,
+    "non_tier3_all_stbl": true,
+    "non_tier3_A_range": [
+      98,
+      164
+    ],
+    "SP_stbl": 163,
+    "SP_finite": 19,
+    "max_rel": 0.0005211539448161078,
+    "n_tier1": 0,
+    "SP_channel_dist": {
+      "2β⁺/ECEC": 28,
+      "2β⁻": 24,
+      "β⁻": 4,
+      "SF_opt": 58,
+      "β⁺/EC": 1,
+      "α": 67
+    },
+    "SP_tier_dist": {
+      "III": 131,
+      "II": 51
+    },
+    "III_channel_dist": {
+      "2β⁺/ECEC": 28,
+      "2β⁻": 24,
+      "β⁻": 4,
+      "SF_opt": 7,
+      "β⁺/EC": 1,
+      "α": 67
+    },
+    "items": [
+      {
+        "Z": 18,
+        "A": 36,
+        "T_yr": Infinity,
+        "rel": 1.2912032326544856e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 20,
+        "A": 40,
+        "T_yr": Infinity,
+        "rel": 5.198076503122262e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 20,
+        "A": 46,
+        "T_yr": Infinity,
+        "rel": 2.3096493256052692e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 20,
+        "A": 48,
+        "T_yr": 5.599999999999999e+19,
+        "rel": 6.250966579877676e-06,
+        "tier": "III",
+        "channel": "β⁻"
+      },
+      {
+        "Z": 23,
+        "A": 50,
+        "T_yr": 2.71e+17,
+        "rel": 2.2313019834061027e-05,
+        "tier": "III",
+        "channel": "β⁻"
+      },
+      {
+        "Z": 24,
+        "A": 50,
+        "T_yr": Infinity,
+        "rel": 2.5158882202087324e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 26,
+        "A": 54,
+        "T_yr": Infinity,
+        "rel": 1.3549044974529325e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 28,
+        "A": 58,
+        "T_yr": Infinity,
+        "rel": 3.5696265867880695e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 30,
+        "A": 64,
+        "T_yr": Infinity,
+        "rel": 1.8388295792723503e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 30,
+        "A": 70,
+        "T_yr": Infinity,
+        "rel": 1.5311087076134063e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 34,
+        "A": 74,
+        "T_yr": Infinity,
+        "rel": 1.7561283323205995e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 32,
+        "A": 76,
+        "T_yr": 1.8799999999999997e+21,
+        "rel": 2.883273796650266e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 36,
+        "A": 78,
+        "T_yr": Infinity,
+        "rel": 3.9233622784886794e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 34,
+        "A": 80,
+        "T_yr": Infinity,
+        "rel": 1.7996348330735243e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 34,
+        "A": 82,
+        "T_yr": 8.759999999999998e+19,
+        "rel": 3.9288423231998534e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 38,
+        "A": 84,
+        "T_yr": Infinity,
+        "rel": 9.195449793720335e-06,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 36,
+        "A": 86,
+        "T_yr": Infinity,
+        "rel": 1.5712843125367446e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 42,
+        "A": 92,
+        "T_yr": Infinity,
+        "rel": 1.9278407796775366e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 41,
+        "A": 93,
+        "T_yr": Infinity,
+        "rel": 1.0833847508102557e-05,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 40,
+        "A": 94,
+        "T_yr": Infinity,
+        "rel": 1.0877163037798191e-06,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 42,
+        "A": 94,
+        "T_yr": Infinity,
+        "rel": 5.129088601896045e-05,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 42,
+        "A": 95,
+        "T_yr": Infinity,
+        "rel": 5.126706165326221e-05,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 40,
+        "A": 96,
+        "T_yr": 2.34e+19,
+        "rel": 1.8353892993770856e-06,
+        "tier": "III",
+        "channel": "β⁻"
+      },
+      {
+        "Z": 42,
+        "A": 96,
+        "T_yr": Infinity,
+        "rel": 6.466235346476368e-05,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 44,
+        "A": 96,
+        "T_yr": Infinity,
+        "rel": 3.03848714479848e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 42,
+        "A": 97,
+        "T_yr": Infinity,
+        "rel": 6.903747263609208e-05,
+        "tier": "III",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 42,
+        "A": 98,
+        "T_yr": Infinity,
+        "rel": 1.194002440481195e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 44,
+        "A": 98,
+        "T_yr": Infinity,
+        "rel": 0.00012829143956303318,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 44,
+        "A": 99,
+        "T_yr": Infinity,
+        "rel": 0.0001342717351555198,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 42,
+        "A": 100,
+        "T_yr": 7.07e+18,
+        "rel": 3.260538471451135e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 44,
+        "A": 100,
+        "T_yr": Infinity,
+        "rel": 0.0001465325188736556,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 44,
+        "A": 101,
+        "T_yr": Infinity,
+        "rel": 0.00014050755433800044,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 44,
+        "A": 102,
+        "T_yr": Infinity,
+        "rel": 0.00012698476574639342,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 46,
+        "A": 102,
+        "T_yr": Infinity,
+        "rel": 1.2678202753312286e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 45,
+        "A": 103,
+        "T_yr": Infinity,
+        "rel": 0.00016134768248681516,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 44,
+        "A": 104,
+        "T_yr": Infinity,
+        "rel": 1.342490308458432e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 46,
+        "A": 104,
+        "T_yr": Infinity,
+        "rel": 0.00019602137355154446,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 46,
+        "A": 105,
+        "T_yr": Infinity,
+        "rel": 0.00018676551460068417,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 46,
+        "A": 106,
+        "T_yr": Infinity,
+        "rel": 0.00017039749788080313,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 106,
+        "T_yr": Infinity,
+        "rel": 2.8133350619221045e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 47,
+        "A": 107,
+        "T_yr": Infinity,
+        "rel": 0.00020597654959779996,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 46,
+        "A": 108,
+        "T_yr": Infinity,
+        "rel": 0.00016031770172498,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 108,
+        "T_yr": Infinity,
+        "rel": 2.7040721588058245e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 47,
+        "A": 109,
+        "T_yr": Infinity,
+        "rel": 0.00018982062867667986,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 46,
+        "A": 110,
+        "T_yr": Infinity,
+        "rel": 1.9702514249564978e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 48,
+        "A": 110,
+        "T_yr": Infinity,
+        "rel": 0.00021975375852685162,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 111,
+        "T_yr": Infinity,
+        "rel": 0.00021193121695751717,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 112,
+        "T_yr": Infinity,
+        "rel": 0.00019905687860543247,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 112,
+        "T_yr": Infinity,
+        "rel": 1.8417423537571815e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 48,
+        "A": 113,
+        "T_yr": 8040000000000000.0,
+        "rel": 3.0791827112601265e-06,
+        "tier": "III",
+        "channel": "β⁻"
+      },
+      {
+        "Z": 49,
+        "A": 113,
+        "T_yr": Infinity,
+        "rel": 0.00023100200866231304,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 114,
+        "T_yr": Infinity,
+        "rel": 5.134772800579651e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 50,
+        "A": 114,
+        "T_yr": Infinity,
+        "rel": 0.00026363079338293985,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 115,
+        "T_yr": Infinity,
+        "rel": 0.00025037564556943054,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 48,
+        "A": 116,
+        "T_yr": 2.69e+19,
+        "rel": 2.6059374198708646e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 50,
+        "A": 116,
+        "T_yr": Infinity,
+        "rel": 0.00024001251761005844,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 117,
+        "T_yr": Infinity,
+        "rel": 0.00023271640370198948,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 118,
+        "T_yr": Infinity,
+        "rel": 0.00021699270364507008,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 119,
+        "T_yr": Infinity,
+        "rel": 0.00020906351484789137,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 120,
+        "T_yr": Infinity,
+        "rel": 0.00019557822640188204,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 52,
+        "A": 120,
+        "T_yr": Infinity,
+        "rel": 1.5539279127255948e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 51,
+        "A": 121,
+        "T_yr": Infinity,
+        "rel": 0.00022834371250368712,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 50,
+        "A": 122,
+        "T_yr": Infinity,
+        "rel": 3.28772615533298e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 52,
+        "A": 122,
+        "T_yr": Infinity,
+        "rel": 0.0002728102362315392,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 51,
+        "A": 123,
+        "T_yr": Infinity,
+        "rel": 0.0002049413361892926,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 52,
+        "A": 123,
+        "T_yr": Infinity,
+        "rel": 4.534408851382471e-07,
+        "tier": "III",
+        "channel": "β⁺/EC"
+      },
+      {
+        "Z": 50,
+        "A": 124,
+        "T_yr": Infinity,
+        "rel": 1.9864199039600765e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 52,
+        "A": 124,
+        "T_yr": Infinity,
+        "rel": 0.00024455114559298333,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 124,
+        "T_yr": Infinity,
+        "rel": 2.4751311480615362e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 52,
+        "A": 125,
+        "T_yr": Infinity,
+        "rel": 0.00023177942920292604,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 52,
+        "A": 126,
+        "T_yr": Infinity,
+        "rel": 0.00022188914573721815,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 126,
+        "T_yr": Infinity,
+        "rel": 7.82561468914575e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 53,
+        "A": 127,
+        "T_yr": Infinity,
+        "rel": 0.0002538341773840677,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 52,
+        "A": 128,
+        "T_yr": 2.25e+24,
+        "rel": 7.274835420919637e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 54,
+        "A": 128,
+        "T_yr": Infinity,
+        "rel": 0.0002939685135840294,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 129,
+        "T_yr": Infinity,
+        "rel": 0.0002825312978739216,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 52,
+        "A": 130,
+        "T_yr": 7.91e+20,
+        "rel": 2.08873577485292e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 54,
+        "A": 130,
+        "T_yr": Infinity,
+        "rel": 0.0002682664237935446,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 56,
+        "A": 130,
+        "T_yr": Infinity,
+        "rel": 2.1682204407140665e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 54,
+        "A": 131,
+        "T_yr": Infinity,
+        "rel": 0.00025547418668201414,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 132,
+        "T_yr": Infinity,
+        "rel": 0.0002514376317378547,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 56,
+        "A": 132,
+        "T_yr": Infinity,
+        "rel": 6.869698425808839e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 55,
+        "A": 133,
+        "T_yr": Infinity,
+        "rel": 0.00028052683481647763,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 134,
+        "T_yr": Infinity,
+        "rel": 6.607502611179145e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 56,
+        "A": 134,
+        "T_yr": Infinity,
+        "rel": 0.0003248593262845251,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 56,
+        "A": 135,
+        "T_yr": Infinity,
+        "rel": 0.00031318357671419146,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 54,
+        "A": 136,
+        "T_yr": 2.18e+21,
+        "rel": 1.9415258573279602e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 56,
+        "A": 136,
+        "T_yr": Infinity,
+        "rel": 0.0003004919000273063,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 58,
+        "A": 136,
+        "T_yr": Infinity,
+        "rel": 1.878824013222812e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 56,
+        "A": 137,
+        "T_yr": Infinity,
+        "rel": 0.00028010605774905436,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 56,
+        "A": 138,
+        "T_yr": Infinity,
+        "rel": 0.0002679156165728974,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 58,
+        "A": 138,
+        "T_yr": Infinity,
+        "rel": 5.417612290663828e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 57,
+        "A": 139,
+        "T_yr": Infinity,
+        "rel": 0.00030104673594661346,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 58,
+        "A": 140,
+        "T_yr": Infinity,
+        "rel": 0.0003352395426567165,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 59,
+        "A": 141,
+        "T_yr": Infinity,
+        "rel": 0.0003691480458580951,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 58,
+        "A": 142,
+        "T_yr": Infinity,
+        "rel": 9.864721331912322e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 60,
+        "A": 142,
+        "T_yr": Infinity,
+        "rel": 0.00040298556859383436,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 60,
+        "A": 143,
+        "T_yr": Infinity,
+        "rel": 3.985250207010881e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 60,
+        "A": 144,
+        "T_yr": 2290000000000000.0,
+        "rel": 1.4183239350090943e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 62,
+        "A": 144,
+        "T_yr": Infinity,
+        "rel": 1.3296230137101761e-05,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 60,
+        "A": 145,
+        "T_yr": Infinity,
+        "rel": 1.1661559787184874e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 60,
+        "A": 146,
+        "T_yr": Infinity,
+        "rel": 5.182860833135062e-07,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 60,
+        "A": 148,
+        "T_yr": Infinity,
+        "rel": 4.347103808392419e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 62,
+        "A": 148,
+        "T_yr": 6300000000000000.0,
+        "rel": 1.442168166245799e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 62,
+        "A": 149,
+        "T_yr": Infinity,
+        "rel": 1.3489410537756541e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 60,
+        "A": 150,
+        "T_yr": 9.3e+18,
+        "rel": 2.4141600346992552e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 62,
+        "A": 150,
+        "T_yr": Infinity,
+        "rel": 1.0380913770730728e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 63,
+        "A": 151,
+        "T_yr": 4.5999999999999995e+18,
+        "rel": 1.3970385326352462e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 62,
+        "A": 152,
+        "T_yr": Infinity,
+        "rel": 1.5558581610673442e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 63,
+        "A": 153,
+        "T_yr": Infinity,
+        "rel": 1.909661205292256e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 62,
+        "A": 154,
+        "T_yr": Infinity,
+        "rel": 8.723773337841357e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 64,
+        "A": 154,
+        "T_yr": Infinity,
+        "rel": 6.417110651373673e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 64,
+        "A": 155,
+        "T_yr": Infinity,
+        "rel": 5.631377090763088e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 64,
+        "A": 156,
+        "T_yr": Infinity,
+        "rel": 0.0004926853804847662,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 66,
+        "A": 156,
+        "T_yr": Infinity,
+        "rel": 1.2069480485303108e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 64,
+        "A": 157,
+        "T_yr": Infinity,
+        "rel": 0.0004837889560267275,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 64,
+        "A": 158,
+        "T_yr": Infinity,
+        "rel": 0.00048274565391485133,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 66,
+        "A": 158,
+        "T_yr": Infinity,
+        "rel": 1.922543279565778e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 65,
+        "A": 159,
+        "T_yr": Infinity,
+        "rel": 0.0005057875206143324,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 64,
+        "A": 160,
+        "T_yr": Infinity,
+        "rel": 1.1615439730144114e-05,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 66,
+        "A": 160,
+        "T_yr": Infinity,
+        "rel": 2.940148628869524e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 66,
+        "A": 161,
+        "T_yr": Infinity,
+        "rel": 2.2913970178417397e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 66,
+        "A": 162,
+        "T_yr": Infinity,
+        "rel": 5.561359239651129e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 68,
+        "A": 162,
+        "T_yr": Infinity,
+        "rel": 1.0925967901273798e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 66,
+        "A": 163,
+        "T_yr": Infinity,
+        "rel": 0.0005211539448161078,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 66,
+        "A": 164,
+        "T_yr": Infinity,
+        "rel": 0.0005207326968439135,
+        "tier": "II",
+        "channel": "SF_opt"
+      },
+      {
+        "Z": 68,
+        "A": 164,
+        "T_yr": Infinity,
+        "rel": 1.6421839817928703e-07,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 67,
+        "A": 165,
+        "T_yr": Infinity,
+        "rel": 9.037535500347509e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 68,
+        "A": 166,
+        "T_yr": Infinity,
+        "rel": 5.383614503864168e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 68,
+        "A": 167,
+        "T_yr": Infinity,
+        "rel": 4.287474672543473e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 68,
+        "A": 168,
+        "T_yr": Infinity,
+        "rel": 3.538382254576118e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 168,
+        "T_yr": Infinity,
+        "rel": 9.009583464890777e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 69,
+        "A": 169,
+        "T_yr": Infinity,
+        "rel": 7.6158984029518305e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 68,
+        "A": 170,
+        "T_yr": Infinity,
+        "rel": 3.2876272125052366e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 170,
+        "T_yr": Infinity,
+        "rel": 1.0962566698676613e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 171,
+        "T_yr": Infinity,
+        "rel": 9.78182158277192e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 172,
+        "T_yr": Infinity,
+        "rel": 8.172313185822928e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 173,
+        "T_yr": Infinity,
+        "rel": 5.866333622193937e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 174,
+        "T_yr": Infinity,
+        "rel": 4.55538409069627e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 174,
+        "T_yr": 2000000000000000.0,
+        "rel": 6.788729587206972e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 71,
+        "A": 175,
+        "T_yr": Infinity,
+        "rel": 9.939334089453585e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 70,
+        "A": 176,
+        "T_yr": Infinity,
+        "rel": 3.4556224238660252e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 176,
+        "T_yr": Infinity,
+        "rel": 1.3753946759413367e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 177,
+        "T_yr": Infinity,
+        "rel": 1.3624266876331412e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 178,
+        "T_yr": Infinity,
+        "rel": 1.2574328403838388e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 179,
+        "T_yr": Infinity,
+        "rel": 1.0844302991949264e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 72,
+        "A": 180,
+        "T_yr": Infinity,
+        "rel": 7.67770306203588e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 74,
+        "A": 180,
+        "T_yr": 1.59e+18,
+        "rel": 8.545137590145832e-07,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 73,
+        "A": 181,
+        "T_yr": Infinity,
+        "rel": 9.017532802032837e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 74,
+        "A": 182,
+        "T_yr": Infinity,
+        "rel": 1.0409887989404733e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 74,
+        "A": 183,
+        "T_yr": Infinity,
+        "rel": 9.813907001363574e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 74,
+        "A": 184,
+        "T_yr": Infinity,
+        "rel": 9.624247090773558e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 75,
+        "A": 185,
+        "T_yr": Infinity,
+        "rel": 1.2741282396934068e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 74,
+        "A": 186,
+        "T_yr": Infinity,
+        "rel": 2.837103489362136e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 76,
+        "A": 186,
+        "T_yr": 2000000000000000.0,
+        "rel": 1.6287259819121193e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 76,
+        "A": 187,
+        "T_yr": Infinity,
+        "rel": 1.562882919079642e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 76,
+        "A": 188,
+        "T_yr": Infinity,
+        "rel": 1.2241484703957249e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 76,
+        "A": 189,
+        "T_yr": Infinity,
+        "rel": 1.1227288071358003e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 76,
+        "A": 190,
+        "T_yr": Infinity,
+        "rel": 7.775635341096857e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 77,
+        "A": 191,
+        "T_yr": Infinity,
+        "rel": 1.1709139671633115e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 76,
+        "A": 192,
+        "T_yr": Infinity,
+        "rel": 2.016996490850791e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 78,
+        "A": 192,
+        "T_yr": Infinity,
+        "rel": 1.3555462667044521e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 77,
+        "A": 193,
+        "T_yr": Infinity,
+        "rel": 5.662926820342162e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 78,
+        "A": 194,
+        "T_yr": Infinity,
+        "rel": 8.428434054637784e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 78,
+        "A": 195,
+        "T_yr": Infinity,
+        "rel": 6.477916874091128e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 78,
+        "A": 196,
+        "T_yr": Infinity,
+        "rel": 4.4529869698004114e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 196,
+        "T_yr": Infinity,
+        "rel": 4.484438666906021e-06,
+        "tier": "III",
+        "channel": "2β⁺/ECEC"
+      },
+      {
+        "Z": 79,
+        "A": 197,
+        "T_yr": Infinity,
+        "rel": 5.29580417378109e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 78,
+        "A": 198,
+        "T_yr": Infinity,
+        "rel": 5.761318575915705e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 198,
+        "T_yr": Infinity,
+        "rel": 7.488251640872423e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 199,
+        "T_yr": Infinity,
+        "rel": 4.4399804972242085e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 200,
+        "T_yr": Infinity,
+        "rel": 3.845803166634581e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 201,
+        "T_yr": Infinity,
+        "rel": 1.7752426386463027e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 202,
+        "T_yr": Infinity,
+        "rel": 7.111516284530353e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 81,
+        "A": 203,
+        "T_yr": Infinity,
+        "rel": 4.800015501789091e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 80,
+        "A": 204,
+        "T_yr": Infinity,
+        "rel": 2.208772443279387e-06,
+        "tier": "III",
+        "channel": "2β⁻"
+      },
+      {
+        "Z": 82,
+        "A": 204,
+        "T_yr": Infinity,
+        "rel": 1.0360733537339024e-05,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 81,
+        "A": 205,
+        "T_yr": Infinity,
+        "rel": 8.117379398194642e-07,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 82,
+        "A": 206,
+        "T_yr": Infinity,
+        "rel": 5.915065527718962e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 82,
+        "A": 207,
+        "T_yr": Infinity,
+        "rel": 2.0348837459134852e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 82,
+        "A": 208,
+        "T_yr": Infinity,
+        "rel": 2.6671952257807213e-06,
+        "tier": "III",
+        "channel": "α"
+      },
+      {
+        "Z": 83,
+        "A": 209,
+        "T_yr": 2.01e+19,
+        "rel": 1.611647242378975e-05,
+        "tier": "III",
+        "channel": "α"
+      }
+    ]
+  },
+  "direction_pm": {
+    "implication_iff_forall_closed_yields_permanent": "可測，通過（P⊆S）",
+    "implication_any_open_yields_impermanent": "不可測（屏障通道）"
+  },
+  "test_C": {
+    "n_ill": 2292,
+    "min_yr": 2.7251755520064893e-30,
+    "max_yr": 2.25e+24,
+    "span": 8.256348837209303e+53
+  },
+  "verdict": "未證偽（在 𝒞_v2 11 通道下）",
+  "checks_passed": 9,
+  "checks_total": 10,
+  "failures": [
+    "B.1【事前預期：S\\P 中 ≥90% 落 Tier III】"
+  ]
+}
