@@ -132,7 +132,7 @@
           true
         ]
       ],
-      "docstring_match": false,
+      "docstring_match": true,
       "t3": {
         "meta": 2,
         "external": 0,
@@ -1973,12 +1973,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [],
-      "rerun_identical": false,
-      "diff": {
-        "canon_lines": 89,
-        "rerun_lines": 89,
-        "first_diff": 81
-      },
+      "rerun_identical": true,
       "json": [
         [
           "01_chain_green_function.json",
@@ -2042,7 +2037,7 @@
         ],
         [
           "16_verification.json",
-          false
+          true
         ],
         [
           "17_d2_strong_ib.json",
@@ -2538,7 +2533,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_t49q2fga/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_bzcmxq2p/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -2681,7 +2676,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_t49q2fga/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_bzcmxq2p/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -3953,11 +3948,7 @@
       "log_json": []
     }
   },
-  "violations": [
-    "01: docstring ≠ docs §一",
-    "16: 重跑非 byte-identical (diff={'canon_lines': 89, 'rerun_lines': 89, 'first_diff': 81})",
-    "16: JSON 16_verification.json 不一致（False）"
-  ],
+  "violations": [],
   "info": [],
   "integrity": {
     "I1_tmp_write": [],
