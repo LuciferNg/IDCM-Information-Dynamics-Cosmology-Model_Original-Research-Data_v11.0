@@ -20,13 +20,16 @@ L3 — 文檔交叉核（通用模板；idcm-audit-verify §2.4；所有 M/O 記
      5.223686e35 vs 2.3e35 = 56% ⟹ 必須 FAIL。若某個 claim 用預設容差捉唔到，
      改 `tol=` 顯式收緊，**唔准**放寬吞數。
 """
+import io
 import json
 import re
 import sys
+from contextlib import redirect_stdout
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
+# 審計隔離時腳本落在 work/ 根（非 work/scripts/）⟹ ROOT 須自適應
+ROOT = HERE.parent if HERE.name == "scripts" else HERE
 DATA = ROOT / "data"
 L2PATH = DATA / "l2_independent_verify.json"
 
@@ -162,7 +165,7 @@ def main():
     (DATA / "l3_doc_crosscheck.json").write_text(
         json.dumps(RES, ensure_ascii=False, indent=2), encoding="utf-8")
     (DATA / "run_l3.log").write_text("\n".join(LOG) + "\n", encoding="utf-8")
-    print(f"\n寫出: {DATA / 'l3_doc_crosscheck.json'}\n寫出: {DATA / 'run_l3.log'}")
+    print("\n寫出: data/l3_doc_crosscheck.json\n寫出: data/run_l3.log")
     return 0 if NFAIL == 0 else 1
 
 

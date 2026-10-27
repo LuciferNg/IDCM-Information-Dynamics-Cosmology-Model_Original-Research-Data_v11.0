@@ -14,8 +14,10 @@
 
 輸出：`data/l2_independent_verify.json`、`data/run_l2.log`
 """
+import io
 import json
 import sys
+from contextlib import redirect_stdout
 from pathlib import Path
 
 import mpmath as mp
@@ -23,7 +25,8 @@ import mpmath as mp
 mp.mp.dps = 40
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
+# 審計隔離時腳本落在 work/ 根（非 work/scripts/）⟹ ROOT 須自適應
+ROOT = HERE.parent if HERE.name == "scripts" else HERE
 DATA = ROOT / "data"
 LOG = []
 RES = {}
@@ -55,7 +58,7 @@ def ser(x):
 PDG = ROOT / "data" / "pdg_mass_width_2024.mcd"
 
 INPUTS = {
-    "pdg_file": str(PDG),          # 原始測量檔（唔經 L1）
+    "pdg_file": "data/pdg_mass_width_2024.mcd",   # 相對路徑（隔離重跑須 byte-identical）
     "m_l": "0.30",                 # GeV（PDG 組分，R5 寫死）
     "m_s": "0.495",
     "m_c": "1.27",
@@ -80,7 +83,7 @@ FAM = {"K": ((311, 321), (313, 323), "q_s", "m_s"),
 def load_pdg():
     """由 PDG 原始檔重解析（唔用 L1 之解析結果）。"""
     mass, err = {}, {}
-    for line in Path(INPUTS["pdg_file"]).read_text().splitlines():
+    for line in (ROOT / INPUTS["pdg_file"]).read_text().splitlines():
         if line.startswith("*") or len(line) < 60:
             continue
         ids = [line[i:i + 8].strip() for i in (0, 8, 16, 24)]
@@ -127,6 +130,19 @@ def derive(I):
 
 
 # ── ③ IDENTITIES ────────────────────────────────────────────────────────────
+class _Tee:
+    def __init__(self, *ws):
+        self.ws = ws
+
+    def write(self, x):
+        for w in self.ws:
+            w.write(x)
+
+    def flush(self):
+        for w in self.ws:
+            w.flush()
+
+
 def main():
     print("=" * 78 + "\n§0 輸入\n" + "=" * 78)
     for k, v in INPUTS.items():

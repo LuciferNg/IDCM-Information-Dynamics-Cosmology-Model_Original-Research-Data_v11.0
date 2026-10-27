@@ -177,6 +177,11 @@
       ],
       "36_k_anomaly_significance.md": [
         "35"
+      ],
+      "37_sigma_propagation.md": [
+        "09",
+        "28",
+        "36"
       ]
     },
     "edges_out": {
@@ -253,7 +258,8 @@
       "35_third_family.md": [],
       "36_k_anomaly_significance.md": [
         "28"
-      ]
+      ],
+      "37_sigma_propagation.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -281,7 +287,8 @@
       "30_dimension_attack.md",
       "31_scale_identifiability.md",
       "32_metric_decay.md",
-      "35_third_family.md"
+      "35_third_family.md",
+      "36_k_anomaly_significance.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",

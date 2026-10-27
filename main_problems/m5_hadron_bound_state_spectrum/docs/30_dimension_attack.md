@@ -88,3 +88,9 @@ $$\frac{r_K}{r_D}=\underbrace{\frac{m_s}{m_c}}_{0.3898}\cdot\Lambda,\qquad \Lamb
 
 - ← `docs/25` §二（分解恆等式）、`docs/28` §五（天花板）、`docs/29` §五（S6）、`docs/27`（權重裁決）
 - → `docs/23`（D5 缺口定位）、`final_result.md`、register（下一個前線）
+## 附註（append-only，2026-10-27）：σ 傳播總審（`docs/37`／`scripts/39`）
+
+由 `docs/36`（外部 session）指出 K 族 `σ_c/|c| = 6.09` 觸發。以 PDG 2024 原始誤差傳播：
+`r_K` 相對誤差 **608.9%**、`R = r_K/r_D` 相對誤差 **609.0%**。
+
+本檔 §五「差 17.6×」由 `r_K` 驅動 ⟹ z = 0.15σ；§三/§四 之幾何結論（模型側、`R` 不敏感）不受影響。

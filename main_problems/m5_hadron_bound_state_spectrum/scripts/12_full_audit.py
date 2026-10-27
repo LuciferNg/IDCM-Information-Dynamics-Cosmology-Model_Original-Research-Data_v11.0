@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS, SCRIPTS, DATA = ROOT / "docs", ROOT / "scripts", ROOT / "data"
 PY = "/usr/bin/python3"
 NUM = re.compile(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
-PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13", "15": "14", "16": "15", "17": "16", "18": "17", "19": "18", "20": "19", "21": "19", "22": "20", "23": "21", "24": "22", "25": "23", "26": "24", "27": "25", "28": "26", "29": "27", "30": "28", "31": "29", "32": "30", "33": "31", "34": "32", "35": "33", "36": "34", "37": "35"}
+PAIR_OVERRIDE = {"11": "10", "13": "12", "14": "13", "15": "14", "16": "15", "17": "16", "18": "17", "19": "18", "20": "19", "21": "19", "22": "20", "23": "21", "24": "22", "25": "23", "26": "24", "27": "25", "28": "26", "29": "27", "30": "28", "31": "29", "32": "30", "33": "31", "34": "32", "35": "33", "36": "34", "37": "35", "38": "36", "39": "37"}
 #   11→10（同 doc 兩腳本）；13→12；14→13；15→14；16→15（docs 比 scripts 少 1）
 
 
@@ -73,6 +73,13 @@ for sc in sorted(SCRIPTS.glob("[0-9][0-9]_*.py")):
     target = PAIR_OVERRIDE.get(nn, nn)
     doc = next(iter(sorted(DOCS.glob(f"{target}_*.md"))), None)
     pairs.append((nn, sc, doc, DATA / f"run_{sc.stem}.log"))
+
+# L2／L3 閘：非 NN_ 命名，上方 glob 不會納入 ⟹ 顯式加入（2026-10-27）
+for _extra in ("l2_independent_verify.py", "l3_doc_crosscheck.py"):
+    _p = SCRIPTS / _extra
+    if _p.exists():
+        pairs.append(("L2" if "l2" in _extra else "L3", _p, None,
+                      DATA / f"run_{_p.stem}.log"))
 
 dep = sorted((SCRIPTS / "deprecated").glob("*.py")) if (SCRIPTS / "deprecated").is_dir() else []
 print(f"\n配對 {len(pairs)} 組；deprecated（按設計排除，只列 INFO）={[p.name for p in dep]}")
