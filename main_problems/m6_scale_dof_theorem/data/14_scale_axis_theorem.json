@@ -1,0 +1,127 @@
+{
+ "checks": {
+  "A1_ring_identities": true,
+  "A2_exact_determinacy": true,
+  "A3_transcendental_bad": true,
+  "A4_adequacy": true
+ },
+ "summary": {
+  "pass": 4,
+  "total": 4
+ },
+ "phi88": "x^40 - x^36 + ... (Φ11(−x^4))",
+ "functionals": {
+  "F1  Σγ_n": {
+   "value": "90.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F2  γ_44": {
+   "value": "4.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F3  γ_22": {
+   "value": "2.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F4  γ_11+γ_33": {
+   "value": "4.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F5  γ_7·γ_37": {
+   "value": "0.91871836508880483578",
+   "ring_terms": 3,
+   "rational": false,
+   "dev": "5.976e-51"
+  },
+  "F6  γ_1²−γ_43²": {
+   "value": "-15.959233833764056662",
+   "ring_terms": 11,
+   "rational": false,
+   "dev": "5.266e-50"
+  },
+  "F7  Σn·γ_n/44": {
+   "value": "63.840106010054345234",
+   "ring_terms": 39,
+   "rational": false,
+   "dev": "1.066e-49"
+  },
+  "F8  γ_0·γ_44/4": {
+   "value": "0.0",
+   "ring_terms": 0,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F9  (γ_0+γ_44)/2": {
+   "value": "2.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "0.0"
+  },
+  "F10 γ_2³/8": {
+   "value": "1.0545296187455722781e-6",
+   "ring_terms": 19,
+   "rational": false,
+   "dev": "1.181e-50"
+  },
+  "F11 3γ_5−2γ_40+1/7": {
+   "value": "-7.3168131015994171173",
+   "ring_terms": 11,
+   "rational": false,
+   "dev": "3.635e-50"
+  },
+  "F12 Σ(−1)^n γ_n": {
+   "value": "2.0",
+   "ring_terms": 1,
+   "rational": true,
+   "dev": "1.604e-50"
+  },
+  "X1 γ_1·π": {
+   "value": "0.01600883604523248",
+   "relation_found": false
+  },
+  "X2 γ_1^(√2)": {
+   "value": "0.0005721437029651197",
+   "relation_found": false
+  },
+  "X3 Γ(γ_1+3)": {
+   "value": "2.009437037947254",
+   "relation_found": false
+  }
+ },
+ "calibration": [
+  {
+   "tag": "v1（作廢）",
+   "u": 18.738758425035037,
+   "v": 0.028257137803545152
+  },
+  {
+   "tag": "v2（現行）",
+   "u": 18.4089386395414,
+   "v": 0.06347820492625421
+  }
+ ],
+ "kappa_over_M0": [
+  2.4576111571968156,
+  2.5294654315100416
+ ],
+ "H0": {
+  "pred": 67.4071,
+  "planck": 67.36,
+  "sigma": 0.54,
+  "z": 0.08722222222222223
+ },
+ "ledger": {
+  "scale": 1,
+  "rate_slots": "<=6",
+  "hadron_shape_slots": 2,
+  "total_dimensionless_upper": 9
+ }
+}
