@@ -1,0 +1,41 @@
+========================================================================================
+M4 scripts/36 -- R5 K-channel external judgement (MILC epsilon) 
+========================================================================================
+PASS S1 pi+ - pi0 = 4.59359 MeV (PDG 2024)                          | 4.59359 | expect 4.59359
+PASS S2 M_pi+^2 - M_pi0^2 = 1261.2 MeV^2                            | 1261.16 | expect 1261.2
+PASS S3 M_K+^2 - M_K0^2 = -3899.8 MeV^2 (negative: K0 heavier)      | -3899.7 | expect -3899.8
+
+[A linear] em(K+ - K0) = 1.0106 MeV   68% range [0.6431, 1.5159]   sigma_sym = 0.4364
+      naive Dashen (eps=0): 4.5936 MeV
+
+[B squared] em(K+ - K0) = 0.2799 MeV   68% range [0.1781, 0.4198]   sigma_sym = 0.1209
+      naive Dashen (eps=0): 1.2722 MeV
+
+A_linear: em = 1.0106 +- 0.4364 MeV | pre-registered pred +0.3327 -> z = +1.553
+    envelope test: -em = -1.0106 vs [-0.52, +0.55] -> OUTSIDE (z_edge = 1.124)
+
+B_squared: em = 0.2799 +- 0.1209 MeV | pre-registered pred +0.3327 -> z = -0.437
+    envelope test: -em = -0.2799 vs [-0.52, +0.55] -> inside (z_edge = 0.000)
+
+----------------------------------------------------------------------------------------
+PRE-REGISTERED category per branch:
+   A_linear   prediction: TENSION  (z=+1.553) | envelope: TENSION  (z_edge=1.124)
+   B_squared  prediction: PASS     (z=-0.437) | envelope: PASS     (z_edge=0.000)
+
+Branches agree: False -> joint verdict on the pre-registered single-form prediction: CONV
+Interpretation guide:
+  PASS  -> the <O> line's sharpest prediction is CONFIRMED by external lattice QED
+  CONV  -> the answer turns on the epsilon definition; must be pinned from the
+           primary source before any claim (no claim allowed now)
+  TENSION/KILL -> see magnitude
+PASS V1 branch A gives em(K+-K0) near 1.01 MeV                      | 1.0106 | expect 1.0106
+PASS V2 branch B gives em(K+-K0) near 0.281 MeV                     | 0.2799 | expect 0.2806
+PASS V3 prediction 0.3327 lies INSIDE branch B 68% range            | (0.1781, 0.4198) | expect 0.179 .. 0.422
+PASS V4 prediction 0.3327 lies OUTSIDE branch A 68% range           | (0.6431, 1.5159) | expect 0.643 .. 1.516
+PASS V5 branches disagree -> verdict must be CONV                   | CONV | expect CONV
+PASS V6 naive Dashen is excluded by the lattice anchor in BOTH branches | (-8.21, -8.21) | expect >3 both
+
+========================================================================================
+SUMMARY: 9/9 PASS
+========================================================================================
+wrote data/36_em_kaon_external.json
