@@ -1,7 +1,7 @@
 {
   "script": "06_doc_crosscheck.py",
   "role": "docs ↔ data 交叉核",
-  "claims": 221,
+  "claims": 244,
   "per_doc": {
     "01_criteria_freeze": 8,
     "02_three_layer_classification": 31,
@@ -14,7 +14,8 @@
     "09_channel_completion": 29,
     "10_falsification_nubase": 31,
     "11_definition_d5": 13,
-    "12_primordial_label": 19
+    "12_primordial_label": 19,
+    "13_barrier_gate": 23
   },
   "seals_data": [
     "78ff1774eb99d84b3d14ffdc0e4879e364da7d00457bb59391df35921d4b34ac",

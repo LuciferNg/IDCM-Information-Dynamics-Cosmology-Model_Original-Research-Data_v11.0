@@ -47,7 +47,8 @@ J = {}
 for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "04_topology_gate", "05_blind_prediction", "07_environment",
           "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
-          "11_falsification_nubase", "12_definition_d5", "13_primordial_test"):
+          "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
+          "14_barrier_gate"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -57,7 +58,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "06_environment_completeness", "07_nuclide_chart",
           "08_sphaleron_relaxation", "09_channel_completion",
           "10_falsification_nubase", "11_definition_d5",
-          "12_primordial_label"):
+          "12_primordial_label", "13_barrier_gate"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -287,6 +288,36 @@ cl("12_primordial_label", f"{j13['n_mono']}", "單一同位素元素個數")
 for r in j13["mono"]:
     cl("12_primordial_label", f"{r['rel']:.2e}", f"單一同位素 Z={r['Z']} 之 rel")
 
+
+# ---------------- docs/13 ← 14_barrier_gate
+j14 = J["14_barrier_gate"]
+cl("13_barrier_gate", f"{j14['ldm']['a_s']:.2f}", "a_s")
+cl("13_barrier_gate", f"{j14['ldm']['kappa']:.4f}", "κ")
+cl("13_barrier_gate", f"{j14['ldm']['coeff_Bf']:.2f}", "B_f 係數")
+cl("13_barrier_gate", f"{j14['n_sf_observed']}", "觀測 SF 條數")
+cl("13_barrier_gate", f"{j14['n_band']}", "屏障帶條數")
+cl("13_barrier_gate", f"{j14['n_P']}", "𝒞_v2 合法集")
+cl("13_barrier_gate", f"{j14['G1']['n_violations']} 條違反", "G1 違反數")
+_v = max(j14["G1"]["violations"], key=lambda r: r["Q"] or 0)
+cl("13_barrier_gate", f"{_v['Q']:.1f}", "最大 Q_SF")
+cl("13_barrier_gate", f"{_v['Bf']:.1f}", "該核素 B_f")
+cl("13_barrier_gate", f"{_v['ratio']:.2f}", "該核素 Q/B_f")
+g2 = j14["G2"]
+cl("13_barrier_gate", f"{g2['bf_sf_min']:.1f}", "SF 集 B_f min")
+cl("13_barrier_gate", f"{g2['bf_sf_med']:.1f}", "SF 集 B_f 中位")
+cl("13_barrier_gate", f"{g2['bf_sf_max']:.1f}", "SF 集 B_f max")
+cl("13_barrier_gate", f"{g2['bf_band_min']:.1f}", "屏障帶 B_f min")
+cl("13_barrier_gate", f"{g2['bf_band_med']:.1f}", "屏障帶 B_f 中位")
+cl("13_barrier_gate", f"{g2['bf_band_max']:.1f}", "屏障帶 B_f max")
+cl("13_barrier_gate", f"{g2['gap']:.1f}", "兩集 B_f 間隙")
+cl("13_barrier_gate", f"{g2['B_star']:.2f}", "B* 門檻")
+g3 = j14["G3"]
+cl("13_barrier_gate", f"{g3['P_gated']}", "P_gated 條數")
+cl("13_barrier_gate", f"{g3['n_nonpermanent']}", "P_gated 中非永久者")
+cl("13_barrier_gate", f"{100*g3['frac']:.1f}%", "非永久者佔比")
+cl("13_barrier_gate", f"{g3['SP_gated']}", "S\\P_gated 條數")
+cl("13_barrier_gate", f"{100*g3['tier3_frac_gated']:.1f}%", "gated 之 Tier III 佔比")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -319,7 +350,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 12,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 13,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

@@ -68,8 +68,9 @@
 | `docs/10_falsification_nubase.md` | R10 真證偽（NUBASE2020；⟸ 零反例、⟹ 不可測） | ✅ |
 | `docs/11_definition_d5.md` | R11 D5 修訂定義（封印 `c7fecc02…`，腳本生成） | ✅ |
 | `docs/12_primordial_label.md` | R12 第二獨立標籤（天然丰度 IS>0；11 個單一同位素元素） | ✅ |
+| `docs/13_barrier_gate.md` | R13 障壘閘 ⟹ 單向性之證明（G1 破、G2 破 ⟸） | ✅ |
 | `final_result.md` | 結論摘要（RESULT_TEMPLATE 格式） | ✅ |
-| `scripts/01`–`13` | **129 check：123 PASS ／ 6 FAIL（誠實負結果）**，全 exit 0（06 = 交叉核 221 claim／12 份 doc） | ✅ |
+| `scripts/01`–`14` | **134 check：127 PASS ／ 7 FAIL（誠實負結果）**，全 exit 0（06 = 交叉核 244 claim／13 份 doc） | ✅ |
 | `data/*.log`／`*.json` | 執行記錄 ＋ 數值 | ✅ |
 
 ## 依賴
