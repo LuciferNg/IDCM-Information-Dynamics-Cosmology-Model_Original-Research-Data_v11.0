@@ -152,6 +152,23 @@
       "31_scale_identifiability.md": [
         "26",
         "30"
+      ],
+      "32_metric_decay.md": [
+        "09",
+        "29",
+        "30",
+        "31"
+      ],
+      "33_two_lengths.md": [
+        "30",
+        "31",
+        "32"
+      ],
+      "34_A_bound.md": [
+        "28",
+        "29",
+        "32",
+        "33"
       ]
     },
     "edges_out": {
@@ -217,7 +234,14 @@
       "30_dimension_attack.md": [
         "23"
       ],
-      "31_scale_identifiability.md": []
+      "31_scale_identifiability.md": [],
+      "32_metric_decay.md": [
+        "18"
+      ],
+      "33_two_lengths.md": [
+        "34"
+      ],
+      "34_A_bound.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -242,7 +266,10 @@
       "27_weight_convention.md",
       "28_v2_full_recompute.md",
       "29_v2_d2_s6.md",
-      "30_dimension_attack.md"
+      "30_dimension_attack.md",
+      "31_scale_identifiability.md",
+      "32_metric_decay.md",
+      "33_two_lengths.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
