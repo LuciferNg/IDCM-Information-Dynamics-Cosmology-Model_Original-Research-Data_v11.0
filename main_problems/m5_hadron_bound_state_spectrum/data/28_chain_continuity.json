@@ -148,6 +148,10 @@
         "27",
         "28",
         "29"
+      ],
+      "31_scale_identifiability.md": [
+        "26",
+        "30"
       ]
     },
     "edges_out": {
@@ -212,7 +216,8 @@
       ],
       "30_dimension_attack.md": [
         "23"
-      ]
+      ],
+      "31_scale_identifiability.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -233,9 +238,11 @@
       "23_family_resolution.md",
       "24_downstream_recompute.md",
       "25_rederivation_theorem.md",
+      "26_chain_audit.md",
       "27_weight_convention.md",
       "28_v2_full_recompute.md",
-      "29_v2_d2_s6.md"
+      "29_v2_d2_s6.md",
+      "30_dimension_attack.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
@@ -246,8 +253,7 @@
       "19_shape_ratio_ceiling.md",
       "20_registered_family.md",
       "21_sign_theorem.md",
-      "22_assignment_scope.md",
-      "26_chain_audit.md"
+      "22_assignment_scope.md"
     ]
   },
   "K2": [],
