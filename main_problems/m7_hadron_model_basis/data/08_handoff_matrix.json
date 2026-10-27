@@ -82,15 +82,17 @@
   },
   {
    "target": "O209",
-   "n_out": 1,
+   "n_out": 2,
    "n_reply": 0,
    "reply_ts": [],
    "prior_incoming": [],
    "ts": [
-    "2026-10-27T10:45:51+08:00"
+    "2026-10-27T10:45:51+08:00",
+    "2026-10-27T11:22:07+08:00"
    ],
    "refs": [
-    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/19_o120_import.md"
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/19_o120_import.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/20_o209_assignment.md"
    ],
    "target_activity_after": 0,
    "status": "⏳ 未閉環（無回覆）"
@@ -99,7 +101,7 @@
  "notes_out": [],
  "npass": 3,
  "ntotal": 3,
- "n_out": 7,
+ "n_out": 8,
  "n_in": 2,
  "targets": [
   "M2",

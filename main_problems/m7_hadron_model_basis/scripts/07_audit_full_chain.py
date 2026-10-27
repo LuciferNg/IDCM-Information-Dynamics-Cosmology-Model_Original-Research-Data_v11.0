@@ -114,7 +114,17 @@ scripts = {f: open(os.path.join(M7, "scripts", f), encoding="utf-8").read()
            for f in os.listdir(os.path.join(M7, "scripts")) if f.endswith(".py")}
 jsons = [f for f in os.listdir(os.path.join(M7, "data")) if f.endswith(".json")]
 HIST = {"02_r5_mode_content_nogo.v1.json": "02 之 v1 歷史快照（原 run 改名保存；docs/17 已記）"}
-orphan_json, orphan_out, hist_unref = [], [], []
+from collections import defaultdict
+CROSS = defaultdict(list)
+for root, dirs, fs in os.walk(REPO):
+    if root.count(os.sep) - REPO.count(os.sep) > 4:
+        dirs[:] = []
+        continue
+    if os.path.basename(root) == "data":
+        for f in fs:
+            if f.endswith(".json"):
+                CROSS[f].append(root)
+orphan_json, orphan_out, hist_unref, cross_out = [], [], [], []
 for j in jsons:
     if j in HIST:
         hist_unref.append(j)
@@ -127,8 +137,12 @@ for f, src in scripts.items():
         if m.startswith("07_") and f.startswith("07_"):
             continue   # 自身輸出（執行尾才寫）
         if not os.path.exists(os.path.join(M7, "data", m)):
-            orphan_out.append(f"{f} -> data/{m}")
+            if m in CROSS:            # 跨 O／M 之 data 輸入（合法，需標明來源）
+                cross_out.append(f"{f} -> {CROSS[m][0]}/{m}")
+            else:
+                orphan_out.append(f"{f} -> data/{m}")
 print(f"    JSON {len(jsons)} 個；無 producer 者：{orphan_json or '無'}；歷史快照（白名單）：{hist_unref or '無'}")
+print(f"    跨 O data 輸入（合法）：{len(cross_out)} 項：{cross_out[:3]}")
 print(f"    script 宣告但缺檔：{orphan_out or '無'}")
 ok("A2 無孤兒 JSON", not orphan_json, orphan_json or "0", "0")
 ok("A2 無宣告缺檔", not orphan_out, orphan_out or "0", "0")

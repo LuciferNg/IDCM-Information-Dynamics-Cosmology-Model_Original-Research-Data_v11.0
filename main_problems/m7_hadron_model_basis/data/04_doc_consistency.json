@@ -1,6 +1,6 @@
 {
- "npass": 142,
- "ntotal": 142,
+ "npass": 154,
+ "ntotal": 154,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -870,6 +870,78 @@
    "doc": "19_o120_import.md",
    "status": "✅",
    "detail": "doc=103.564975 art=103.564975227 |Δ|=2.27e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§20 npass",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=13 art=13（整數須全等）"
+  },
+  {
+   "name": "§20 ntotal",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=13 art=13（整數須全等）"
+  },
+  {
+   "name": "§20 RMS",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=0.587228131 art=0.587228130772 |Δ|=2.28e-10 ≤ 5.0e-10"
+  },
+  {
+   "name": "§20 n_tie",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=1 art=1（整數須全等）"
+  },
+  {
+   "name": "§20 corr",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=0.988353123 art=0.988353123458 |Δ|=4.58e-10 ≤ 5.0e-10"
+  },
+  {
+   "name": "§20 α",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=2.6332541 art=2.63325408475 |Δ|=1.53e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§20 ratio_pl",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=3.2615304 art=3.26153037076 |Δ|=2.92e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§20 z_pl",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=8.07 art=8.06930761712 |Δ|=6.92e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§20 z_g209",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=-22.28 art=-22.2797761796 |Δ|=2.24e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§20 z_dl120",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=11.78 art=11.7804167543 |Δ|=4.17e-04 ≤ 5.0e-03"
+  },
+  {
+   "name": "§20 X_o120",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=2.5461523 art=2.54615230886 |Δ|=8.86e-09 ≤ 5.0e-08"
+  },
+  {
+   "name": "§20 X_o209",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=-18.76973 art=-18.7697298184 |Δ|=1.82e-07 ≤ 5.0e-06"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

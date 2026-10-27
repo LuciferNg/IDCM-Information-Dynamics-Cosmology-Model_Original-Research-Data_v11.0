@@ -36,6 +36,7 @@ J06 = load("06_gap_closure.json")
 J07 = load("07_audit_full_chain.json")
 J09 = load("09_m4_receipt.json")
 J11 = load("11_o120_import.json")
+J12 = load("12_o209_assignment.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -332,6 +333,21 @@ claim("§19 X 預言", "19_o120_import.md", J11["metrics"]["X_pred"], "| X 預�
 claim("§19 z(X)", "19_o120_import.md", J11["metrics"]["z_X"], "| z(X) |", cell=2, kth=0)
 claim("§19 χ²_inj", "19_o120_import.md", J11["metrics"]["chi2_M7"], "| χ²（全單射） |", cell=2, kth=0)
 claim("§19 χ²_v9", "19_o120_import.md", J11["metrics"]["chi2_v9_shared"], "| χ²（v9 共享） |", cell=2, kth=0)
+
+# ══════════ docs/20（O209 唯一分配） ══════════
+M12 = J12["metrics"]
+claim("§20 npass", "20_o209_assignment.md", J12["npass"], "| 檢定 npass |", cell=2, kth=0, integer=True)
+claim("§20 ntotal", "20_o209_assignment.md", J12["ntotal"], "| 檢定 ntotal |", cell=2, kth=0, integer=True)
+claim("§20 RMS", "20_o209_assignment.md", M12["min_rms"], "| 最小 RMS（重算） |", cell=2, kth=0)
+claim("§20 n_tie", "20_o209_assignment.md", M12["n_tie"], "| 達最小配對數 |", cell=2, kth=0, integer=True)
+claim("§20 corr", "20_o209_assignment.md", M12["corr"], "| corr（重算） |", cell=2, kth=0)
+claim("§20 α", "20_o209_assignment.md", M12["alpha"], "| α（斜率） |", cell=2, kth=0)
+claim("§20 ratio_pl", "20_o209_assignment.md", M12["ratio_pl_ud"], "| 冪律載體 u/d 比 |", cell=2, kth=0)
+claim("§20 z_pl", "20_o209_assignment.md", M12["z_pl_ud"], "| z（冪律載體 u/d） |", cell=2, kth=0)
+claim("§20 z_g209", "20_o209_assignment.md", M12["z_gamma_o209"], "| z（γ 載體 + O209 指派） |", cell=2, kth=0)
+claim("§20 z_dl120", "20_o209_assignment.md", M12["z_dl_o120"], "| z（冪律載體 + O120 指派） |", cell=2, kth=0)
+claim("§20 X_o120", "20_o209_assignment.md", M12["X_o120"], "| X（O120 分支） |", cell=2, kth=0)
+claim("§20 X_o209", "20_o209_assignment.md", M12["X_o209"], "| X（O209 分支） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",
