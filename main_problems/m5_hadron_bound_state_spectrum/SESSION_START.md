@@ -221,3 +221,12 @@
 - v2 判決：結構定理（`r` 只依 `m_h·m_l`）成立；模型對 4/6 族**無束縛態 ⟹ 無預言**；`c_ud` χ² = 0.13
 - 連帶：`docs/19` 天花板 13.40、`docs/20` 目標 66.99 降級／停用（append-only 附註）
 - 審計覆蓋：24 腳本 × 22 文檔（`docs/11` 為審計器自身），重跑 byte-identical
+
+## 2026-10-27 接手（本 session，調律者授權「(A) 轉 M5 專用」）
+
+- **接手時既存狀態（非本 session 產出，只讀核對）**：`docs/27`–`docs/35`、`scripts/29`–`scripts/37` 已由前一個 session 於本日 12:33–19:47 完成並 register（18:33 note、19:14 progress）。本 session **未改動**該批檔案任何內容。
+  - `docs/27` weight 裁決：**w = |v|²**（層基結構證明，樹投影 8.9e−16），M7 重校值逐位確認；`docs/09`–`26` 數值受污染 ⟹ `docs/28` 已全重算。
+  - `docs/31`：`(a₀, t)` 封閉式 **no-go**（u = ħc/(a₀M₀) = 18.408939、v = t/M₀ = 0.0634782；25 atoms × 30,125 式；signif 1.91σ／0.68σ）。
+  - `docs/35`：D／B 結構閉合；K 偏離 17.0× ⟹ 失敗局部於輕區（Goldstone）。
+- **記錄缺陷（本 session 發現，未擅自補寫）**：`SESSION_START` 自 2026-10-25 後未更新 ⟹ `docs/27`–`docs/35` 無 SESSION_START 條目（僅 register 有）。依 append-only 規矩，本條只登記事實，補寫歷史條目須原作者或調律者指示。
+- **本 session 前線**：`docs/35` §6 之①（K 側輕區算子）—— 以既存可識別性 harness（`scripts/33`）判 17.0× 增強因子可否由 IDCM 文法表達；唔重做 `docs/27`–`35` 已封死之路。
