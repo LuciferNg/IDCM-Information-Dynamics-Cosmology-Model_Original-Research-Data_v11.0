@@ -232,3 +232,12 @@ $$A_K \le \frac{q_K}{q_D}\cdot\frac{A_D}{\langle B\rangle_D}=\frac12\cdot\frac{1
 - B 0.03σ、D 0.00σ ⟹ 重-輕區「結構閉合」判**不受影響**。
 - ⚠️ 未做（下一輪）：`docs/28`–`34` 之 `17.58×`／`74.3×`／`r_K ≤ 12.4774` 皆 K 驅動，其目標值須同樣做誤差傳播（`r_K` 分母 `E1 − E2 = 0.0540 MeV` 係細差）。
 - 方法教訓（`docs/36` §6）：P1 細差比值必做 z；P2 定義恆等式兩向 assert（本輪 R4 原文與本輪第一版各犯一次方向 bug）；P3「無鑑別力」≠「被排除」。
+
+### L2／L3 閘（2026-10-27 用戶拍板後首次補齊；M5 原本兩個都冇）
+
+| 層 | 檔 | 結果 |
+|:--|:--|:--|
+| L2 | `scripts/l2_independent_verify.py` | **15/15 PASS** — 由 `data/pdg_mass_width_2024.mcd` **直接重解析**重算 Δ／σ_c／c／ψ²／dev／z（唔經 `scripts/37`）；`z_K = 2.626619σ`、`gain = 1.903587×`、`u = 18.4089393`、`v = 0.0634782072` |
+| L3 | `scripts/l3_doc_crosscheck.py` | **15/15 PASS**（`docs/36` 10/10、`docs/31` 2/2；期望值全取 L2 `_derived`） |
+
+⟹ 三層報數：**L1 37/37（`scripts/16`）｜L2 15/15｜L3 15/15｜audit 待重跑**（新增檔已令 README 計數與 canonical 更新）。

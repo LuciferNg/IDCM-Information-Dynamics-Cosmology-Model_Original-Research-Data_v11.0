@@ -1,0 +1,76 @@
+{
+  "E1 L2 有 _derived 且非空": {
+    "pass": true,
+    "detail": "keys = ['c_B', 'c_D', 'c_K', 'c_model_B', 'c_model_D', 'c_model_K', 'd0_B', 'd0_D']..."
+  },
+  "C.36_k_anomaly_sig.K z = 2.627σ": {
+    "pass": true,
+    "detail": "L2 2.62662 ↔ 文檔 2.62662（rel 1.9e-07）"
+  },
+  "C.36_k_anomaly_sig.B z = 0.0279σ": {
+    "pass": true,
+    "detail": "L2 0.0278485 ↔ 文檔 0.0279（rel 1.8e-03）"
+  },
+  "C.36_k_anomaly_sig.c_model(K) = −0.229293": {
+    "pass": true,
+    "detail": "L2 -0.229293 ↔ 文檔 0.229293（rel 8.0e-07）"
+  },
+  "C.36_k_anomaly_sig.c_data(K) = −0.0135": {
+    "pass": true,
+    "detail": "L2 -0.0135 ↔ 文檔 0.0135（rel 0.0e+00）"
+  },
+  "C.36_k_anomaly_sig.σ_c(K) = 0.08216": {
+    "pass": true,
+    "detail": "L2 0.0821561 ↔ 文檔 0.0821561（rel 1.7e-08）"
+  },
+  "C.36_k_anomaly_sig.|Δc| = 0.215793": {
+    "pass": true,
+    "detail": "L2 0.215793 ↔ 文檔 0.215793（rel 8.5e-07）"
+  },
+  "C.36_k_anomaly_sig.精度改善 1.904×": {
+    "pass": true,
+    "detail": "L2 1.90359 ↔ 文檔 1.90359（rel 2.6e-07）"
+  },
+  "C.36_k_anomaly_sig.鑑別力 279.1%": {
+    "pass": true,
+    "detail": "L2 279.094 ↔ 文檔 279.1（rel 2.1e-05）"
+  },
+  "C.36_k_anomaly_sig.u = 18.4089393": {
+    "pass": true,
+    "detail": "L2 18.4089 ↔ 文檔 18.4089（rel 3.6e-11）"
+  },
+  "C.36_k_anomaly_sig.v = 0.0634782072": {
+    "pass": true,
+    "detail": "L2 0.0634782 ↔ 文檔 0.0634782（rel 2.2e-11）"
+  },
+  "C.31_scale_identif.docs/31 U = 18.408939": {
+    "pass": true,
+    "detail": "L2 18.4089 ↔ 文檔 18.4089（rel 1.8e-11）"
+  },
+  "C.31_scale_identif.docs/31 V = 0.0634782": {
+    "pass": true,
+    "detail": "L2 0.0634782 ↔ 文檔 0.0634782（rel 3.2e-09）"
+  },
+  "F.docs/36_k_anomaly_significance.md 全命中（10/10）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/31_scale_identifiability.md 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "_summary": {
+    "checks": 15,
+    "fail": 0,
+    "by_doc": {
+      "docs/36_k_anomaly_significance.md": [
+        10,
+        10
+      ],
+      "docs/31_scale_identifiability.md": [
+        2,
+        2
+      ]
+    }
+  }
+}
