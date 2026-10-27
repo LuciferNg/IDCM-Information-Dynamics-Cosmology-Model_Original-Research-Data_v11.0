@@ -1,0 +1,132 @@
+{
+ "script": "scripts/38_g3_decay_constant_precheck.py",
+ "date": "2026-10-27",
+ "round": "G3 pre-check (model-free; no M5 parameters used, no fitting)",
+ "why_not_circular": "f_P and DeltaE_hfs are independent observables; only one overall constant cancels",
+ "pre_registered": {
+  "statistic": "spread = max(R)/min(R)",
+  "cut_consistent": 1.3,
+  "cut_marginal": 3.0,
+  "K_exclusion": "pi excluded as pseudo-Goldstone"
+ },
+ "data": {
+  "m_P_GeV": {
+   "pi": 0.13957039,
+   "K": 0.493677,
+   "D": 1.86966,
+   "Ds": 1.96835
+  },
+  "m_V_GeV": {
+   "pi": 0.77526,
+   "K": 0.89167,
+   "D": 2.01026,
+   "Ds": 2.1122
+  },
+  "f_P_GeV": {
+   "pi": 0.1302,
+   "K": 0.1557,
+   "D": 0.212,
+   "Ds": 0.2499
+  },
+  "m_h_GeV": {
+   "K": 0.495,
+   "D": 1.27,
+   "Ds": 1.27
+  },
+  "m_l_GeV": {
+   "K": 0.3,
+   "D": 0.3,
+   "Ds": 0.495
+  }
+ },
+ "psi2_from_decay": {
+  "pi": 0.00019716690284130001,
+  "K": 0.0009973299779775,
+  "D": 0.0070024999199999995,
+  "Ds": 0.010243623098625
+ },
+ "psi2_from_hfs": {
+  "K": 0.9456313679999999,
+  "D": 0.8570976000000003,
+  "Ds": 1.4469008400000003,
+  "pi": 0.9153930384
+ },
+ "R": {
+  "K": 948.1629840483283,
+  "D": 122.39880182676252,
+  "Ds": 141.24893370922808
+ },
+ "spread": 7.746505438756773,
+ "verdict": "INCONSISTENT",
+ "pi_reference_R": 4642.73174254201,
+ "checks": [
+  {
+   "label": "C1a f_pi = 130.2 MeV (FLAG convention)",
+   "ok": true,
+   "got": "0.1302",
+   "expect": "0.1302"
+  },
+  {
+   "label": "C1b m_K - m_pi > 0 and m_Ds > m_D",
+   "ok": true,
+   "got": "(0.493677, 1.96835)",
+   "expect": "ordering"
+  },
+  {
+   "label": "C1c hyperfine splittings all positive",
+   "ok": true,
+   "got": "{'K': 0.398, 'D': 0.1406, 'Ds': 0.1439}",
+   "expect": "all > 0"
+  },
+  {
+   "label": "C2a fK/fpi = 1.1959",
+   "ok": true,
+   "got": "1.1959",
+   "expect": "1.1959"
+  },
+  {
+   "label": "C2b fDs/fD = 1.1788",
+   "ok": true,
+   "got": "1.1788",
+   "expect": "1.1788"
+  },
+  {
+   "label": "C3a DeltaE(D*-D) = 140.60 MeV",
+   "ok": true,
+   "got": "140.6",
+   "expect": "140.6"
+  },
+  {
+   "label": "C3b DeltaE(Ds*-Ds) = 143.85 MeV",
+   "ok": true,
+   "got": "143.85",
+   "expect": "143.85"
+  },
+  {
+   "label": "C3c DeltaE(K*-K) = 397.99 MeV",
+   "ok": true,
+   "got": "397.99",
+   "expect": "397.99"
+  },
+  {
+   "label": "C4a heavy sector (D vs Ds) agrees within 30%",
+   "ok": true,
+   "got": "1.154",
+   "expect": "1.00 +- 0.30"
+  },
+  {
+   "label": "C4b K channel deviates by more than 3x from the heavy sector",
+   "ok": true,
+   "got": "7.75",
+   "expect": "> 3"
+  },
+  {
+   "label": "C4c overall spread > 3 -> INCONSISTENT",
+   "ok": true,
+   "got": "INCONSISTENT",
+   "expect": "INCONSISTENT"
+  }
+ ],
+ "n_pass": 11,
+ "n_checks": 11
+}

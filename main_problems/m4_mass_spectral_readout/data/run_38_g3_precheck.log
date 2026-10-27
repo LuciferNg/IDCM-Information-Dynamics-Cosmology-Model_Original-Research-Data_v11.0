@@ -1,0 +1,46 @@
+========================================================================================
+M4 scripts/38 -- G3 pre-check: single psi(0) for f_P AND hyperfine?
+========================================================================================
+PASS C1a f_pi = 130.2 MeV (FLAG convention)                         | 0.1302 | expect 0.1302
+PASS C1b m_K - m_pi > 0 and m_Ds > m_D                              | (0.493677, 1.96835) | expect ordering
+PASS C1c hyperfine splittings all positive                          | {'K': 0.398, 'D': 0.1406, 'Ds': 0.1439} | expect all > 0
+
+[C2] psi^2 from decay constants  (GeV^3):
+   pi  f=0.1302  m=0.13957  ->  psi^2 = 1.971669e-04
+   K   f=0.1557  m=0.49368  ->  psi^2 = 9.973300e-04
+   D   f=0.2120  m=1.86966  ->  psi^2 = 7.002500e-03
+   Ds  f=0.2499  m=1.96835  ->  psi^2 = 1.024362e-02
+   f-ratios:  fK/fpi=1.1959  fD/fpi=1.6283  fDs/fpi=1.9194  fDs/fD=1.1788
+   psi-ratios (sqrt of psi^2 ratio):  psiK/psiD=0.3774  psiDs/psiD=1.2095
+PASS C2a fK/fpi = 1.1959                                            | 1.1959 | expect 1.1959
+PASS C2b fDs/fD = 1.1788                                            | 1.1788 | expect 1.1788
+
+[C3] psi^2 from spin-spin splittings (arbitrary common normalisation):
+   K   dE=0.39799  m_h*m_l=0.14850  ->  (8pi/3)a_s*psi^2 = 0.945631
+   D   dE=0.14060  m_h*m_l=0.38100  ->  (8pi/3)a_s*psi^2 = 0.857098
+   Ds  dE=0.14385  m_h*m_l=0.62865  ->  (8pi/3)a_s*psi^2 = 1.446901
+PASS C3a DeltaE(D*-D) = 140.60 MeV                                  | 140.6 | expect 140.6
+PASS C3b DeltaE(Ds*-Ds) = 143.85 MeV                                | 143.85 | expect 143.85
+PASS C3c DeltaE(K*-K) = 397.99 MeV                                  | 397.99 | expect 397.99
+
+[C4] R = psi2_hfs / psi2_dec (must be ONE constant; alpha_s cancels):
+   K   R = 948.163
+   D   R = 122.399
+   Ds  R = 141.249
+   spread = max/min = 7.747
+   PRE-REGISTERED verdict: INCONSISTENT
+PASS C4a heavy sector (D vs Ds) agrees within 30%                   | 1.154 | expect 1.00 +- 0.30
+PASS C4b K channel deviates by more than 3x from the heavy sector   | 7.75 | expect > 3
+PASS C4c overall spread > 3 -> INCONSISTENT                         | INCONSISTENT | expect INCONSISTENT
+
+[C5] pi (reported only; pseudo-Goldstone, contact term not applicable):
+   R_pi = 4642.732  (35.22x the heavy-sector mean 131.824)
+
+========================================================================================
+SUMMARY: 11/11 PASS
+========================================================================================
+Reading: the heavy sector (D, Ds) is compatible with ONE psi, but K is off by
+7.7x -- so a single per-meson |psi(0)|^2 cannot serve f_P and the hyperfine
+splitting across the light sector.  The K channel is exactly where the M4 em
+anchor (em(K+-K0) = 2.2646 +- 0.1209 MeV) sits, so this closes the same door.
+wrote data/38_g3_decay_constant_precheck.json
