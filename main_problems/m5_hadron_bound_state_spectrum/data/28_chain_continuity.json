@@ -142,6 +142,12 @@
         "18",
         "27",
         "28"
+      ],
+      "30_dimension_attack.md": [
+        "25",
+        "27",
+        "28",
+        "29"
       ]
     },
     "edges_out": {
@@ -203,6 +209,9 @@
       ],
       "29_v2_d2_s6.md": [
         "12"
+      ],
+      "30_dimension_attack.md": [
+        "23"
       ]
     },
     "forward_violations": [],
@@ -225,7 +234,8 @@
       "24_downstream_recompute.md",
       "25_rederivation_theorem.md",
       "27_weight_convention.md",
-      "28_v2_full_recompute.md"
+      "28_v2_full_recompute.md",
+      "29_v2_d2_s6.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
