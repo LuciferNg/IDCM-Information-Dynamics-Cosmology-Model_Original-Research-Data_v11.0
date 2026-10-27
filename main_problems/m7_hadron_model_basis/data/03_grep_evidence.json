@@ -248,10 +248,10 @@
    "corpus_sha256": "299a36d3848a393552f14c0f599040979875e75eeceae4c09f9d2374cb968b4f"
   },
   "IDCM-v10.0--It-From-Beat": {
-   "head": "151ec75a",
+   "head": "6be96800",
    "nfiles": 10247,
    "mode": "git-tracked",
-   "corpus_sha256": "f71f6d39776e93876a66bbe065834c60837d410140d70d0adc9ab8bb98299a63"
+   "corpus_sha256": "5125c685e7393b3b87f928c5834655f94fe5ef48213079c373a7af21e69860db"
   },
   "IDCM-v11.0--Reality-Architecture": {
    "head": null,

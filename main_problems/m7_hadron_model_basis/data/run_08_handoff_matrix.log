@@ -1,7 +1,7 @@
-register 事件 3304 條（/home/wsl/Projects/IDCM-Original/problem_register/register.jsonl）
-kind 值域：note=1587, registered=547, progress=386, handed_off=305, conclusion=199, closed=154, alias=41, tombstone=19, merged=19, reopened=16, unreserve=9, posthoc=7, retracted=6, collision=4, collision_resolved=3, assigned=2
+register 事件 3322 條（/home/wsl/Projects/IDCM-Original/problem_register/register.jsonl）
+kind 值域：note=1601, registered=547, progress=386, handed_off=309, conclusion=199, closed=154, alias=41, tombstone=19, merged=19, reopened=16, unreserve=9, posthoc=7, retracted=6, collision=4, collision_resolved=3, assigned=2
 
-M7 outgoing handoff = 6；incoming = 2
+M7 outgoing handoff = 7；incoming = 2
 
 §2 送達矩陣（送達 = 記錄唯一 ＋ ref 存在；回覆 = 對方 pid 回本 M 之記錄）
   M2   outs=2  回覆(發出後)=0  其後活動=0  ⏳ 未閉環（無回覆）
@@ -12,17 +12,19 @@ M7 outgoing handoff = 6；incoming = 2
        2026-10-26T14:45:43+08:00  15_additivity_scope_verdict.md
        2026-10-26T18:38:10+08:00  16_gap_closure.md
        ← 2026-10-27T00:43:11+08:00  33_handoff_intake_20261026.md
-  M5   outs=1  回覆(發出後)=0  其後活動=1  ⏳ 未閉環（無回覆）
+  M5   outs=1  回覆(發出後)=0  其後活動=5  ⏳ 未閉環（無回覆）
        2026-10-26T12:59:17+08:00  10_reproduction_gate.md
+  O209 outs=1  回覆(發出後)=0  其後活動=0  ⏳ 未閉環（無回覆）
+       2026-10-27T10:45:51+08:00  19_o120_import.md
   ✅ §2 handoff 記錄無重複（每封一條）                       0 | want 0
-    回覆覆蓋：1/3 目標（M4）—— 屬對方責任，不作本 M PASS 判據
+    回覆覆蓋：1/4 目標（M4）—— 屬對方責任，不作本 M PASS 判據
 
 §3 閉環判定：incoming 之後本 M 有無動作
   ← 2026-10-26T08:07:43+08:00  from M4  REF=32_flavour_structure_scout.md
-       其後 M7 事件 14 條 ⟹ 已回應
+       其後 M7 事件 16 條 ⟹ 已回應
        note: 正式發還（M7 已開）：強子多夸克態在 K_chain⊗K_tree 模基之展開 w_k(h)（ūu−d̄d ⟶ P_{k=1}−P_{k=4}）。驗收：零參數給 w_1−w_4 …
   ← 2026-10-27T00:43:11+08:00  from M4  REF=33_handoff_intake_20261026.md
-       其後 M7 事件 1 條 ⟹ 已回應
+       其後 M7 事件 3 條 ⟹ 已回應
        note: M4 回覆 M7 三封（2026-10-26）：全部收到並處理，獨立重建 29/29 PASS（M4 scripts/33；10⁷ MC 用獨立種子重現 p=2.790e−5）。已…
   ✅ §3 incoming 已回應                              2 條 incoming | want 全部有後續事件
 

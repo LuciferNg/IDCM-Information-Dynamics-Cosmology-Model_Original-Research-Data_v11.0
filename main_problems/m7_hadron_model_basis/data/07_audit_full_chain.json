@@ -180,6 +180,7 @@
    "docs/16_gap_closure.md",
    "docs/17_audit_full_chain.md",
    "docs/18_m4_intake_receipt.md",
+   "docs/19_o120_import.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -188,6 +189,7 @@
    "scripts/08_handoff_matrix.py",
    "scripts/09_m4_receipt.py",
    "scripts/10_watermark.py",
+   "scripts/11_o120_import_verify.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -199,6 +201,7 @@
    "data/07_audit_full_chain.json",
    "data/08_handoff_matrix.json",
    "data/09_m4_receipt.json",
+   "data/11_o120_import.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -211,6 +214,7 @@
    "data/run_08_handoff_matrix.log",
    "data/run_09_m4_receipt.log",
    "data/run_10_watermark.log",
+   "data/run_11_o120_import_verify.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -232,6 +236,7 @@
    "data/07_audit_full_chain.json",
    "data/08_handoff_matrix.json",
    "data/09_m4_receipt.json",
+   "data/11_o120_import.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -244,6 +249,7 @@
    "data/run_08_handoff_matrix.log",
    "data/run_09_m4_receipt.log",
    "data/run_10_watermark.log",
+   "data/run_11_o120_import_verify.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -254,6 +260,7 @@
    "docs/16_gap_closure.md",
    "docs/17_audit_full_chain.md",
    "docs/18_m4_intake_receipt.md",
+   "docs/19_o120_import.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -266,12 +273,27 @@
    "scripts/08_handoff_matrix.py",
    "scripts/09_m4_receipt.py",
    "scripts/10_watermark.py",
+   "scripts/11_o120_import_verify.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "97cd0bf",
+    "file": "01_problem_record.md",
+    "n_del": 28,
+    "n_live": 28,
+    "n_lost": 0
+   },
+   {
+    "commit": "97cd0bf",
+    "file": "18_m4_intake_receipt.md",
+    "n_del": 1,
+    "n_live": 0,
+    "n_lost": 0
+   },
    {
     "commit": "64b65b7",
     "file": "01_problem_record.md",

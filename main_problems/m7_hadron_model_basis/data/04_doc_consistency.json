@@ -1,6 +1,6 @@
 {
- "npass": 128,
- "ntotal": 128,
+ "npass": 142,
+ "ntotal": 142,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -786,6 +786,90 @@
    "doc": "18_m4_intake_receipt.md",
    "status": "✅",
    "detail": "doc=90 art=90（整數須全等）"
+  },
+  {
+   "name": "§19 npass",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=29 art=29（整數須全等）"
+  },
+  {
+   "name": "§19 ntotal",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=29 art=29（整數須全等）"
+  },
+  {
+   "name": "§19 合法模式數",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=9 art=9（整數須全等）"
+  },
+  {
+   "name": "§19 γ₃/γ₂",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=2.245223 art=2.24522312114 |Δ|=1.21e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§19 z(u/d)",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=0.835 art=0.834811180508 |Δ|=1.89e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§19 z(t/b)",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=14.648 art=14.6483693785 |Δ|=3.69e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§19 全局解數",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=0 art=0（整數須全等）"
+  },
+  {
+   "name": "§19 V9 χ²",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=5.430974 art=5.4309738032 |Δ|=1.97e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§19 V9 p",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=0.066173 art=0.0661727255558 |Δ|=2.74e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§19 m_ud 預言",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=3.317812 art=3.31781196573 |Δ|=3.43e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§19 X 預言",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=2.5461523 art=2.54615230886 |Δ|=8.86e-09 ≤ 5.0e-08"
+  },
+  {
+   "name": "§19 z(X)",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=-0.147 art=-0.147315863177 |Δ|=3.16e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§19 χ²_inj",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=18.220727 art=18.2207266744 |Δ|=3.26e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§19 χ²_v9",
+   "doc": "19_o120_import.md",
+   "status": "✅",
+   "detail": "doc=103.564975 art=103.564975227 |Δ|=2.27e-07 ≤ 5.0e-07"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

@@ -77,19 +77,35 @@
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/10_reproduction_gate.md"
    ],
-   "target_activity_after": 1,
+   "target_activity_after": 5,
+   "status": "⏳ 未閉環（無回覆）"
+  },
+  {
+   "target": "O209",
+   "n_out": 1,
+   "n_reply": 0,
+   "reply_ts": [],
+   "prior_incoming": [],
+   "ts": [
+    "2026-10-27T10:45:51+08:00"
+   ],
+   "refs": [
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/19_o120_import.md"
+   ],
+   "target_activity_after": 0,
    "status": "⏳ 未閉環（無回覆）"
   }
  ],
  "notes_out": [],
  "npass": 3,
  "ntotal": 3,
- "n_out": 6,
+ "n_out": 7,
  "n_in": 2,
  "targets": [
   "M2",
   "M4",
-  "M5"
+  "M5",
+  "O209"
  ],
  "stale": []
 }

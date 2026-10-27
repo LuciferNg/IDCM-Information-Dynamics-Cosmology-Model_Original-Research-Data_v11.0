@@ -5,6 +5,7 @@
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 1
 DRY=1; [ "${1:-}" = "--run" ] && DRY=0
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1   # 防 BLAS 線程互搶（02 由 >300s 降至 7.6s）
 CHAIN=(
   01_reproduction_gate
   02_r5_mode_content_nogo
@@ -15,6 +16,7 @@ CHAIN=(
   10_watermark          # 水位重生（07 C2 之輸入）
   08_handoff_matrix     # register 收訖矩陣（唯讀）
   09_m4_receipt         # M4 交付收據核實
+  11_o120_import_verify # O120 docs/06 引入驗證（29/29）
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )

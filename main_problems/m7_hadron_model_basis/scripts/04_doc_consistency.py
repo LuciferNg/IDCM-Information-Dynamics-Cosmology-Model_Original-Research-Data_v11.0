@@ -35,6 +35,7 @@ J05 = load("05_additivity_scope.json")
 J06 = load("06_gap_closure.json")
 J07 = load("07_audit_full_chain.json")
 J09 = load("09_m4_receipt.json")
+J11 = load("11_o120_import.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -315,6 +316,22 @@ claim("§18 R3", "18_m4_intake_receipt.md", J09["metrics"]["ident_e"], "| R3 值
 claim("§18 χ²_min", "18_m4_intake_receipt.md", J09["metrics"]["chi2_min"], "| 反推 χ²_min |", cell=2, kth=0)
 claim("§18 R4", "18_m4_intake_receipt.md", J09["metrics"]["z_eq"], "| R4 z 等效 |", cell=2, kth=0)
 claim("§18 R5", "18_m4_intake_receipt.md", J09["metrics"]["sum_gamma_struct"], "| R5 Σγ 結構 |", cell=2, kth=0, integer=True)
+
+# ══════════ docs/19（O120 引入） ══════════
+claim("§19 npass", "19_o120_import.md", J11["npass"], "| 引入檢定 npass |", cell=2, kth=0, integer=True)
+claim("§19 ntotal", "19_o120_import.md", J11["ntotal"], "| 引入檢定 ntotal |", cell=2, kth=0, integer=True)
+claim("§19 合法模式數", "19_o120_import.md", len(J11["parts"]["A"]["legal"]), "| 合法模式數 |", cell=2, kth=0, integer=True)
+claim("§19 γ₃/γ₂", "19_o120_import.md", J11["parts"]["A"]["pairs_ud"][0][1], "| γ₃/γ₂ |", cell=2, kth=0)
+claim("§19 z(u/d)", "19_o120_import.md", J11["parts"]["A"]["pairs_ud"][0][2], "| z(u/d) |", cell=2, kth=0)
+claim("§19 z(t/b)", "19_o120_import.md", J11["parts"]["A"]["z_tb"], "| z(t/b) |", cell=2, kth=0)
+claim("§19 全局解數", "19_o120_import.md", J11["parts"]["A"]["global_solutions"], "| 全局解數 |", cell=2, kth=0, integer=True)
+claim("§19 V9 χ²", "19_o120_import.md", J11["parts"]["A"]["chi2"], "| V9 χ² |", cell=2, kth=0)
+claim("§19 V9 p", "19_o120_import.md", J11["parts"]["A"]["p"], "| V9 p |", cell=2, kth=0)
+claim("§19 m_ud 預言", "19_o120_import.md", J11["parts"]["A"]["m_ud_pred"], "| m_ud 預言 |", cell=2, kth=0)
+claim("§19 X 預言", "19_o120_import.md", J11["metrics"]["X_pred"], "| X 預言 |", cell=2, kth=0)
+claim("§19 z(X)", "19_o120_import.md", J11["metrics"]["z_X"], "| z(X) |", cell=2, kth=0)
+claim("§19 χ²_inj", "19_o120_import.md", J11["metrics"]["chi2_M7"], "| χ²（全單射） |", cell=2, kth=0)
+claim("§19 χ²_v9", "19_o120_import.md", J11["metrics"]["chi2_v9_shared"], "| χ²（v9 共享） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

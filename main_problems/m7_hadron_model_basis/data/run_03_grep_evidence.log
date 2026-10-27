@@ -1,7 +1,7 @@
 ====================================================================================================
 E0 語料指紋（git HEAD tracked files，排除本 M）
   IDCM-v9.0--W-Field-Lattice             HEAD=60d67ae  files=407  mode=git-tracked  corpus_sha=299a36d3848a
-  IDCM-v10.0--It-From-Beat               HEAD=151ec75a  files=10247  mode=git-tracked  corpus_sha=f71f6d39776e
+  IDCM-v10.0--It-From-Beat               HEAD=6be96800  files=10247  mode=git-tracked  corpus_sha=5125c685e739
   IDCM-v11.0--Reality-Architecture       HEAD=—(host,不入指紋)  files=1  mode=git-tracked  corpus_sha=869cf8389e19
 
 E1 概念詞語料命中（排除本 M 目錄）
