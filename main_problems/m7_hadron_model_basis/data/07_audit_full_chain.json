@@ -192,6 +192,7 @@
    "scripts/10_watermark.py",
    "scripts/11_o120_import_verify.py",
    "scripts/12_o209_assignment.py",
+   "scripts/13_ud_verdict.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -205,6 +206,7 @@
    "data/09_m4_receipt.json",
    "data/11_o120_import.json",
    "data/12_o209_assignment.json",
+   "data/13_ud_verdict.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -219,6 +221,7 @@
    "data/run_10_watermark.log",
    "data/run_11_o120_import_verify.log",
    "data/run_12_o209_assignment.log",
+   "data/run_13_ud_verdict.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -242,6 +245,7 @@
    "data/09_m4_receipt.json",
    "data/11_o120_import.json",
    "data/12_o209_assignment.json",
+   "data/13_ud_verdict.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -256,6 +260,7 @@
    "data/run_10_watermark.log",
    "data/run_11_o120_import_verify.log",
    "data/run_12_o209_assignment.log",
+   "data/run_13_ud_verdict.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -282,12 +287,20 @@
    "scripts/10_watermark.py",
    "scripts/11_o120_import_verify.py",
    "scripts/12_o209_assignment.py",
+   "scripts/13_ud_verdict.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "2a3e313",
+    "file": "01_problem_record.md",
+    "n_del": 44,
+    "n_live": 44,
+    "n_lost": 0
+   },
    {
     "commit": "18a9109",
     "file": "01_problem_record.md",

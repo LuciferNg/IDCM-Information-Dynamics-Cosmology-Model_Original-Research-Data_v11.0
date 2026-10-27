@@ -1,0 +1,70 @@
+{
+ "module": "M7",
+ "script": "13_ud_verdict.py",
+ "checks": [
+  {
+   "item": "B1 在 α>0 可行域內，單調配對恆為唯一最大 corr（rearrangement）⟹ 排序定理，非經驗",
+   "pass_": true,
+   "got": "單調 20/20、唯一 20/20",
+   "want": "20/20",
+   "note": "⟹ 對任何質量集皆得 N=1 ⟹ O209 之『唯一』係排序必然，非 IDCM 結構所選"
+  },
+  {
+   "item": "B1b 故『唯一』唔可以作為 u/d 指派之證據",
+   "pass_": true,
+   "got": "0 bit",
+   "want": "0 bit",
+   "note": "真正內容 = 相關 0.988（ordering 一致），並非模式身份"
+  },
+  {
+   "item": "B2 樣本外預言被否證（|z| > 5）⟹ 載體 B 死（非循環判據）",
+   "pass_": true,
+   "got": "z = +7.56",
+   "want": "|z|>5",
+   "note": "α 只由 7 個非 u/d 質量定 ⟹ 無循環；u/d 比值差 +48%"
+  },
+  {
+   "item": "A1 H1（共用 C_f）已於 t/b 以 14.65σ 否證 ⟹ A 之『共用 ⟹ 比值 = γ 比』前提死",
+   "pass_": true,
+   "got": "z=+14.65, 0/60480",
+   "want": "H1 死",
+   "note": "承 O120 §4；本 M 已於 scripts/11 V7/V8 重建"
+  },
+  {
+   "item": "A1' 故 A 之 u/d『命中 0.83σ』失去結構依據（O120 自判）",
+   "pass_": true,
+   "got": "池效應",
+   "want": "池效應",
+   "note": "2σ 內 3 對 = 13 個合法對中有一個近 2.15 之必然"
+  },
+  {
+   "item": "A2 候選指派間 X 跨度 ≫ σ_X ⟹ X 不可由 u/d 指派預言",
+   "pass_": true,
+   "got": "37.885 MeV = 403.0σ_X",
+   "want": "> 2σ_X",
+   "note": "⟹ 就算 A 生，X 仍不可預言（指派歧義）"
+  }
+ ],
+ "verdict": {
+  "A": "dead(H1 refuted; 3 pairs within 2σ; X spread 3.1σ)",
+  "B": "dead(ordering tautology; out-of-sample alpha z=+7.56)",
+  "ud_assignment": "NO-GO",
+  "X": "not predictable (spread 403.0 sigma_X)"
+ },
+ "npass": 6,
+ "ntotal": 6,
+ "metrics": {
+  "alpha_out": 2.5749221121845585,
+  "ratio_b": 3.1772258734174197,
+  "z_b": 7.561911335992902,
+  "X_cands": {
+   "(2,3)": 2.5461523088613367,
+   "(9,13)": 40.43115275251438,
+   "(5,7)": 11.906695809286859
+  },
+  "X_spread": 37.88500044365304,
+  "X_spread_over_sigma": 403.0319196133302,
+  "tautology_runs": 20,
+  "tautology_unique": 20
+ }
+}

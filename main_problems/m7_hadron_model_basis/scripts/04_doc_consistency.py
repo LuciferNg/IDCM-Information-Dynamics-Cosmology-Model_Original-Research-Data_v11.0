@@ -37,6 +37,7 @@ J07 = load("07_audit_full_chain.json")
 J09 = load("09_m4_receipt.json")
 J11 = load("11_o120_import.json")
 J12 = load("12_o209_assignment.json")
+J13 = load("13_ud_verdict.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -348,6 +349,17 @@ claim("§20 z_g209", "20_o209_assignment.md", M12["z_gamma_o209"], "| z（γ 載
 claim("§20 z_dl120", "20_o209_assignment.md", M12["z_dl_o120"], "| z（冪律載體 + O120 指派） |", cell=2, kth=0)
 claim("§20 X_o120", "20_o209_assignment.md", M12["X_o120"], "| X（O120 分支） |", cell=2, kth=0)
 claim("§20 X_o209", "20_o209_assignment.md", M12["X_o209"], "| X（O209 分支） |", cell=2, kth=0)
+
+# ══════════ docs/20 §七（生死判定） ══════════
+M13 = J13["metrics"]
+claim("§7 npass", "20_o209_assignment.md", J13["npass"], "| §七 npass |", cell=2, kth=0, integer=True)
+claim("§7 隨機組數", "20_o209_assignment.md", M13["tautology_runs"], "| 隨機組數 |", cell=2, kth=0, integer=True)
+claim("§7 α_out", "20_o209_assignment.md", M13["alpha_out"], "| α_out（剔除 u,d） |", cell=2, kth=0)
+claim("§7 z_b", "20_o209_assignment.md", M13["z_b"], "| 載體 B 樣本外 z |", cell=2, kth=0)
+claim("§7 X23", "20_o209_assignment.md", M13["X_cands"]["(2,3)"], "| X（(2,3)） |", cell=2, kth=0)
+claim("§7 X57", "20_o209_assignment.md", M13["X_cands"]["(5,7)"], "| X（(5,7)） |", cell=2, kth=0)
+claim("§7 X913", "20_o209_assignment.md", M13["X_cands"]["(9,13)"], "| X（(9,13)） |", cell=2, kth=0)
+claim("§7 Xspread", "20_o209_assignment.md", M13["X_spread_over_sigma"], "| X 跨度／σ_X |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

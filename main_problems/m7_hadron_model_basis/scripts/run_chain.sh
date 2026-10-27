@@ -18,6 +18,7 @@ CHAIN=(
   09_m4_receipt         # M4 交付收據核實
   11_o120_import_verify # O120 docs/06 引入驗證（29/29）
   12_o209_assignment    # O209 唯一分配重建（13/13）
+  13_ud_verdict         # u/d 指派生死判定（6/6）
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )

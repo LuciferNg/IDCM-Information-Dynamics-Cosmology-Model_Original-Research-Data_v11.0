@@ -32,6 +32,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/13_ud_verdict.py` | u/d 指派生死判定（6/6）：兩載體各自處決 ⟹ NO-GO；X 不可預言 | ✅ |
 | `scripts/12_o209_assignment.py` | O209 唯一分配重建（13/13）＋ 載體衝突 ＋ 對 M7 影響 | ✅ |
 | `scripts/11_o120_import_verify.py` | O120 `docs/06` 引入驗證（29/29）＋ M7 應用（Part B） | ✅ |
 | `scripts/10_watermark.py` | 檔案閉合水位生成器（live field；寫 `data/watermark.json`） | ✅ |

@@ -1,6 +1,6 @@
 {
- "npass": 154,
- "ntotal": 154,
+ "npass": 162,
+ "ntotal": 162,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -942,6 +942,54 @@
    "doc": "20_o209_assignment.md",
    "status": "✅",
    "detail": "doc=-18.76973 art=-18.7697298184 |Δ|=1.82e-07 ≤ 5.0e-06"
+  },
+  {
+   "name": "§7 npass",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§7 隨機組數",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=20 art=20（整數須全等）"
+  },
+  {
+   "name": "§7 α_out",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=2.5749221 art=2.57492211218 |Δ|=1.22e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§7 z_b",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=7.56 art=7.56191133599 |Δ|=1.91e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§7 X23",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=2.5461523 art=2.54615230886 |Δ|=8.86e-09 ≤ 5.0e-08"
+  },
+  {
+   "name": "§7 X57",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=11.9066958 art=11.9066958093 |Δ|=9.29e-09 ≤ 5.0e-08"
+  },
+  {
+   "name": "§7 X913",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=40.4311528 art=40.4311527525 |Δ|=4.75e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§7 Xspread",
+   "doc": "20_o209_assignment.md",
+   "status": "✅",
+   "detail": "doc=403.03192 art=403.031919613 |Δ|=3.87e-07 ≤ 5.0e-06"
   },
   {
    "name": "v1 vs v2 K1 max_dev",
