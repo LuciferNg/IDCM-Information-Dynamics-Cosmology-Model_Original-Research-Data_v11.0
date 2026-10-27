@@ -1,0 +1,106 @@
+{
+  "additivity_b": {
+    "mu/e": 42,
+    "tau/mu": 457,
+    "tau/e": 499
+  },
+  "cap": "784.9646644",
+  "l0_best": {
+    "mu/e": {
+      "pair": [
+        15,
+        1
+      ],
+      "value": "204.3855722",
+      "dev_rel": "0.0115236",
+      "dev_pct": "1.15236",
+      "sigma": "517981.0"
+    },
+    "tau/mu": {
+      "pair": [
+        23,
+        5
+      ],
+      "value": "16.99182411",
+      "dev_rel": "0.0103957",
+      "dev_pct": "1.03957",
+      "sigma": "158.931"
+    },
+    "tau/e": {
+      "pair": [
+        44,
+        1
+      ],
+      "value": "784.9646644",
+      "dev_rel": "0.774256",
+      "dev_pct": "77.4256",
+      "sigma": "11705.5"
+    }
+  },
+  "gamma_ratio_n": 1892,
+  "neighbour_median_log": 0.0028259547759044157,
+  "resolution_table": [
+    {
+      "language": "φ-ladder 88 格（半格）",
+      "resolution_rel": 0.0027378993160969323,
+      "note": "插值族；任何目標 ≤ 0.274%"
+    },
+    {
+      "language": "φ-ladder 132 格（半格）",
+      "resolution_rel": 0.001824434323439038,
+      "note": "插值族"
+    },
+    {
+      "language": "φ-ladder 528 格（半格）",
+      "resolution_rel": 0.00045579685999045153,
+      "note": "插值族；任何目標 ≤ 0.0456%"
+    },
+    {
+      "language": "γ-ratio 族（鄰居中位）",
+      "resolution_rel": 0.0028259547759044157,
+      "note": "離散族；可完全錯開（可證偽）"
+    },
+    {
+      "language": "觀測 μ/e",
+      "resolution_rel": 2.224712581607179e-08,
+      "note": "權威相對 u"
+    },
+    {
+      "language": "觀測 τ/μ",
+      "resolution_rel": 6.541000178390913e-05,
+      "note": "權威相對 u"
+    }
+  ],
+  "criteria": {
+    "插值族 (φ-ladder)": {
+      "coverage": "任何目標都在半格內 ⟹ 命中率 100%（τ ≥ 半格）",
+      "falsifiability": "零 —— 冇任何觀測值可以否證（除精確度 < 半格時全部否證）",
+      "info_per_test_bits": "0（構造上必然命中）"
+    },
+    "離散族 (γ-ratio L0)": {
+      "coverage": "1892 值，log 空間中位間距 2.826e-03",
+      "falsifiability": "有 —— 目標可以完全落空（實測：三個比值全部落空 ≥1%）",
+      "info_per_test_bits": "13.85 之 log₂ 折減（見 scripts/04）"
+    },
+    "verdict": "T3 判：φ-ladder 對三個輕子比值『全部命中』係插值族之必然（P=1），不構成同語言證據；γ-ratio 離散族對三個比值全部落空（≥1%）⟹ 輕子扇區在 σ 級無結構比值。『同一扇區兩種語言』之真正判準唔係一致性，而係可證偽性：插值族無資格做身份。"
+  },
+  "checks": [
+    {
+      "check": "A1 格點加法恆等 b(μ/e)+b(τ/μ) = b(τ/e)（整數算術 ⟹ 自動）",
+      "pass": true,
+      "detail": "499 vs 499"
+    },
+    {
+      "check": "B1 τ/e 超出單模 γ-ratio 上限（結構上不可表示）",
+      "pass": true,
+      "detail": "4.4298× CAP"
+    },
+    {
+      "check": "B2 φ-ladder 528 半格粗於 μ/e 精度 >1e4×",
+      "pass": true,
+      "detail": "2.049e+04×"
+    }
+  ],
+  "pass": 3,
+  "total": 3
+}

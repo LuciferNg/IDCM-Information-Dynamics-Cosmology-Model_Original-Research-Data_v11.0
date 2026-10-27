@@ -1,0 +1,202 @@
+{
+  "source": {
+    "name": "CODATA 2022 (NIST allascii.txt)",
+    "sha256": "77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+    "lines": {
+      "m_e": 109,
+      "mu/e direct": 215,
+      "m_mu": 223,
+      "m_tau": 338,
+      "tau/mu": 342,
+      "tau/e": 336
+    }
+  },
+  "observables": {
+    "m_e_MeV": [
+      "0.51099895069",
+      "1.6e-10"
+    ],
+    "m_mu_MeV": [
+      "105.6583755",
+      "2.3e-6"
+    ],
+    "m_tau_MeV": [
+      "1776.85962861",
+      "0.1178"
+    ],
+    "mu_e_direct": [
+      "206.7682827",
+      "4.6e-6"
+    ],
+    "mu_e_ratio_of_masses": [
+      "206.768282708",
+      "4.5e-6"
+    ],
+    "tau_mu_direct": [
+      "16.817",
+      "0.0011"
+    ],
+    "tau_e_direct": [
+      "3477.23",
+      "0.23"
+    ]
+  },
+  "sigma_criterion": {
+    "abs_u": "4.6e-6",
+    "rel_u": "2.22471e-8",
+    "rel_u_5sigma_need": "1.11236e-7"
+  },
+  "claims": [
+    {
+      "label": "C1 phi^(11+7/88)",
+      "value": "206.770253211",
+      "target": "206.7682827",
+      "dev_abs": "0.001970510692",
+      "dev_rel": "9.530043321e-6",
+      "dev_pct": "0.0009530043321",
+      "sigma": "428.3718895"
+    },
+    {
+      "label": "C2 (g7/g1)(F_mu/F_e) quoted 4.3069",
+      "value": "206.769253418",
+      "target": "206.7682827",
+      "dev_abs": "0.0009707181105",
+      "dev_rel": "4.694714769e-6",
+      "dev_pct": "0.0004694714769",
+      "sigma": "211.0256762"
+    },
+    {
+      "label": "C2' (g7/g1)(F_mu/F_e) exact-def",
+      "value": "206.7682827",
+      "target": "206.7682827",
+      "dev_abs": "0.0",
+      "dev_rel": "0.0",
+      "dev_pct": "0.0",
+      "sigma": "0.0"
+    },
+    {
+      "label": "C3 integer 207",
+      "value": "207.0",
+      "target": "206.7682827",
+      "dev_abs": "0.2317173",
+      "dev_rel": "0.001120661723",
+      "dev_pct": "0.1120661723",
+      "sigma": "50373.32609"
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "claim": "C1 phi^(11+7/88)",
+      "min_pct_threshold": "0.000953004",
+      "sigma": "428.3718895"
+    },
+    {
+      "claim": "C2 (g7/g1)(F_mu/F_e) quoted 4.3069",
+      "min_pct_threshold": "0.000469471",
+      "sigma": "211.0256762"
+    },
+    {
+      "claim": "C3 integer 207",
+      "min_pct_threshold": "0.112066",
+      "sigma": "50373.32609"
+    }
+  ],
+  "reproduction": {
+    "m_mu/m_e (CODATA direct)": [
+      "206.7682827",
+      "206.7682827"
+    ],
+    "m_tau/m_mu (CODATA direct)": [
+      "16.817",
+      "16.8170"
+    ],
+    "phi^(11+7/88)": [
+      "206.770253211",
+      "206.770253211"
+    ],
+    "dev_rel": [
+      "9.530043321e-6",
+      "9.53e-6"
+    ],
+    "log_phi(obs)": [
+      "11.07952565",
+      "11.07952565"
+    ],
+    "11+7/88": [
+      "11.07954545",
+      "11.07954545"
+    ],
+    "x residual": [
+      "-1.98042e-5",
+      "1.98e-5"
+    ],
+    "gamma7/gamma1": [
+      "48.0088355",
+      "48.008835"
+    ]
+  },
+  "checks": [
+    {
+      "check": "P1-a 兩路徑 μ/e 一致 (<1σ)",
+      "pass": true,
+      "detail": "0.00132σ"
+    },
+    {
+      "check": "P1-b record 用值與 direct entry 相容 (<=1σ)",
+      "pass": true,
+      "detail": "0.0626σ"
+    },
+    {
+      "check": "P2-a C2 exact-def 版本 dev = 0（= 定義，1 dof 消耗，非預言）",
+      "pass": true,
+      "detail": "|Δ| = 0.0"
+    },
+    {
+      "check": "P2-b C1 排除 (>5σ)",
+      "pass": true,
+      "detail": "428.372σ"
+    },
+    {
+      "check": "P2-c C3 排除 (>5σ)",
+      "pass": true,
+      "detail": "50373.3σ"
+    },
+    {
+      "check": "重現-a φ^(11+7/88) = 206.770253211",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "重現-b dev_rel = 9.53e-6",
+      "pass": true,
+      "detail": "9.530043321e-6"
+    },
+    {
+      "check": "重現-c log_φ(obs) = 11.07952565",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "重現-d γ7/γ1 = 48.008835",
+      "pass": true,
+      "detail": "48.0088354543"
+    },
+    {
+      "check": "重現-e log_φ(m_τ/m_μ) = 5.865175951（用 record 輸入 16.8170293324）",
+      "pass": true,
+      "detail": "5.86517595115"
+    },
+    {
+      "check": "重現-f record τ/μ 值與 CODATA 直接比在 1σ 內",
+      "pass": true,
+      "detail": "0.0267σ"
+    },
+    {
+      "check": "重現-g C2 記載 206.705 不可由 (γ₇/γ₁)·4.306880 重現",
+      "pass": true,
+      "detail": "206.7682932 vs 206.705"
+    }
+  ],
+  "pass": 12,
+  "total": 12
+}

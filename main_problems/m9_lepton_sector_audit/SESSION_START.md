@@ -1,9 +1,9 @@
 ﻿<!-- registry
 pid:     M9
 title:   輕子扇區獨立攻：比值算子身份唯一化（譜讀數 vs φ-冪）
-state:   registered
-verdict: -
-flags:   only-open-no-push; phi-lock-gate; three-competing-claims; sigma-not-percent
+state:   closed
+verdict: negative
+flags:   sigma-not-percent; phi-lock-gate; primary-source-audit; density-gate; no-lepton-ratio-structure
 owner:   M9
 created: 2026-10-27
 updated: 2026-10-27
@@ -11,9 +11,10 @@ prereq:  M4(docs/04,19), O34, O35, O120, O209, M6
 source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 -->
 
-> **Session**: v11.0 Reality-Architecture｜**2026-10-27 開檔**
-> **狀態**: 🔴 registered（**只開不推**：零 scripts／零 docs／零 data）
-> **來源裁決**: 調律者原話「開M9 + M10，但本session不直接推」⟹ 開檔 session **禁止**任何推導
+> **Session**: v11.0 Reality-Architecture｜**2026-10-27 執行完成**
+> **狀態**: 🔴 **closed（negative）** —— P1–P5 全部執行；scripts 01–04 **29/29 PASS**
+> **開檔裁決**: 「開M9 + M10，但本session不直接推」⟹ 開檔 session 零推導；**本 session（接手）已按 §二 次序全部執行**
+> **結論**: 三聲稱全滅（428σ／tautology／50 373σ）；輕子扇區在 σ 級無結構比值 → `final_result.md`
 
 ---
 
@@ -64,7 +65,26 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 
 ## §六 交接
 
-- 下一 session 由此檔起：**先 P1 再 P2**，然後 R2/R3/R4 順序推。
-- 任何結論要能回答：「**結構強迫咗咩？定係只係數值容許咗咩？**」
-- 檔案：`01_problem_record.md` → `docs/01…`（未開）→ `final_result.md`（未開）
+- ~~下一 session 由此檔起：**先 P1 再 P2**，然後 R2/R3/R4 順序推。~~ **已全部執行**（見 §七）。
+- 任何結論要能回答：「**結構強迫咗咩？定係只係數值容許咗咩？**」⟹ 答：三聲稱**零結構強迫**，全部只係數值容許（且係 % 級門檻下嘅容許）。
+- 檔案：`01_problem_record.md` → `docs/01…05` → `final_result.md`（**全部已建**）
 - 註冊：register pid **M9**（大寫），folder `m9_lepton_sector_audit`（細寫）。
+
+---
+
+## §七 本 session 執行記錄（2026-10-27，接手 session）
+
+| 步 | 動作 | 產出 | 結果 |
+|:-:|:--|:--|:--|
+| P1 | CODATA 2022 權威不確定度（NIST ascii，sha256 `77fb90e6…`） | `docs/01` §一、`scripts/01` | ✅ `u_rel(μ/e) = 2.225e−8`；原 🟡「~430σ」核實成立 |
+| P2 | 三聲稱 σ 重判 | `docs/01` §三、`scripts/01` | 🔴 428.4σ／恆等 tautology／50 373σ |
+| R2 | φ-lock 閘 ＋ 密度 ＋ **上游 primary-source 審計** | `docs/02`、`scripts/02` | 🔴 `11+7/88 ∉ K_φ`；上游先算目標後硬編 `(11,7)`、1800 點反搜、`m_e = 0.511` |
+| R3 | 語言一致性 | `docs/03`、`scripts/03` | ✅ 加法一致性 = 取整 artifact；**Q3 前提更正**（τ/μ 有 528 分母條目） |
+| R4 | 譜語法唯一化 ＋ dof 階梯 ＋ holdout | `docs/04`、`scripts/04` | 🔴 L0 全落空；L2 P_MC(1e−5) = 52 %；holdout p/e、n/e 同樣落空 |
+| R5 | 預註冊預言 | `docs/05` | ✅ CAP 預言（`784.9646644`）＋ φ-ladder 永久否證 |
+| 收 | register `close --verdict negative` | register | ✅ |
+| 核 | `scripts/05` 文檔 × 數據交叉核（43 項 headline 數字） | `data/05_doc_crosscheck.json` | ✅ 43/43 PASS |
+
+**判決**：T1 ✅（零個係結構身份，比原命題更強）；T2 ❌（φ-lock FAIL）；T3 ✅（無同語言伙伴 → φ 式作廢）；T4 🟡（否定式成立、肯定式不成立，誠實報）。
+
+**未閉**：`μ/τ`、`e/τ` 之 ladder 命中 P = 0.38（無證據亦無否證）→ handoff **O35**；分子 7／71／29 無推導出處。

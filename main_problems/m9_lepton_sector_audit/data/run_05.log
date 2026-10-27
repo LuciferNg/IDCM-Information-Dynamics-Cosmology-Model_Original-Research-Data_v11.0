@@ -1,0 +1,49 @@
+======================================================================
+M9 scripts/05 — 文檔 × 數據 交叉核對
+======================================================================
+PASS 01-a C1 σ = 428.4（json）  428.371890
+PASS 01-b docs/01 記 428.4σ
+PASS 01-c C3 σ = 50 373（json）  50373.3261
+PASS 01-d docs/01 記 50 373σ
+PASS 01-e u_rel = 2.225e−8（json）  2.2247e-08
+PASS 01-f docs/01 記 2.225e−8
+PASS 01-g C2 exact-def σ = 0（json）
+PASS 01-h docs/01 記 tautology
+PASS 02-a 三個指數全部 ∉ K_φ（json）
+PASS 02-b docs/02 記 ∉ K_φ
+PASS 02-c 528 格 P(1e−5) = 0.0219（json）  0.021907
+PASS 02-d docs/02 記 0.0219
+PASS 02-e 528 半格 = 0.04558 %（json density）
+PASS 02-f docs/02 記 0.0456 %
+PASS 02-g 上游 sha256 一致（json ↔ docs/02）
+PASS 02-h 記載 0.0003 % 由 m_e=0.511 重現（json）
+PASS 02-i 記載 0.0015 % 由 m_e=0.511 重現（json）
+PASS 02-j docs/02 記 0.0015137
+PASS 02-k 真值 0.000953 %（json）
+PASS 02-l docs/02 記 0.000953
+PASS 02-m 殘差 1.05 % 格（json）
+PASS 02-n docs/02 記 1.05 %
+PASS 03-a 加法恆等 42+457=499（json）
+PASS 03-b docs/03 記 42/457/499
+PASS 03-c CAP = 784.9646644（json）  784.9646644
+PASS 03-d docs/03 記 CAP
+PASS 03-e τ/e = 4.43× CAP（json best dev 77.4 %）
+PASS 03-f docs/03 記 4.43× CAP
+PASS 03-g 528 半格粗 μ/e 精度 >1e4×
+PASS 04-a L0 μ/e dev = −1.1524 %（json）
+PASS 04-b docs/04 記 1.1524 %
+PASS 04-c L2 P_MC(1e−5) = 0.524（json）  0.5240
+PASS 04-d docs/04 記 52 %
+PASS 04-e 位元預算全負（json）
+PASS 04-f docs/04 記負位元
+PASS 04-g holdout p/e dev = −57.2495 %（json）
+PASS 04-h docs/04 記 −57.25 %
+PASS 04-i O209 讀值差 1314×（json）
+PASS 04-j docs/04 記 1 314×
+PASS X-a 四份 JSON pass == total（無 FAIL）  12/12; 12/12; 3/3; 2/2
+PASS X-b final_result 記 29/29
+PASS X-c final_result 記 428.4σ
+PASS X-d final_result 記 CAP 784.9646644
+----------------------------------------------------------------------
+PASS 43/43
+-> /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m9_lepton_sector_audit/data/05_doc_crosscheck.json
