@@ -5,9 +5,9 @@
  "fail": 0,
  "warn": 0,
  "files": {
-  "docs": 13,
-  "scripts": 13,
-  "data": 12,
-  "logs": 13
+  "docs": 14,
+  "scripts": 14,
+  "data": 13,
+  "logs": 16
  }
 }
