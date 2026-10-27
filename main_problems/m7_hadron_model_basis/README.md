@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/21_incoming_triage.md` | register incoming 處置（3 封）：M4 KILL 之 M7 後果、N3 活口作廢、M10 兩封無新增供給 | ✅ |
 | `docs/20_o209_assignment.md` | O209 唯一分配定理重建：唯一性真（1/362,880）但 u/d 內容 z=+8.07 被否證；與 O120 載體互斥 | ✅ |
 | `docs/19_o120_import.md` | 引入 O120 `docs/06` u/d 扇區：獨立重建 29/29；落 M7 `⟨O⟩` 承重前提（單射性）＋ 反凑數閘（look-elsewhere p=0.336） | ✅ |
 | `docs/18_m4_intake_receipt.md` | M4 `docs/33` 收件收據（三件式，7/7）；指正 N2 stale 引用、補 Σγ 結構證明 | ✅ |

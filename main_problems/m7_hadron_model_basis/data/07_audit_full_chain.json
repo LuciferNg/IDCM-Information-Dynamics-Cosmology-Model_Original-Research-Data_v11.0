@@ -182,6 +182,7 @@
    "docs/18_m4_intake_receipt.md",
    "docs/19_o120_import.md",
    "docs/20_o209_assignment.md",
+   "docs/21_incoming_triage.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -273,6 +274,7 @@
    "docs/18_m4_intake_receipt.md",
    "docs/19_o120_import.md",
    "docs/20_o209_assignment.md",
+   "docs/21_incoming_triage.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -294,6 +296,20 @@
  },
  "C3": {
   "rows": [
+   {
+    "commit": "b41bd47",
+    "file": "01_problem_record.md",
+    "n_del": 36,
+    "n_live": 36,
+    "n_lost": 0
+   },
+   {
+    "commit": "b41bd47",
+    "file": "20_o209_assignment.md",
+    "n_del": 1,
+    "n_live": 0,
+    "n_lost": 0
+   },
    {
     "commit": "2a3e313",
     "file": "01_problem_record.md",
@@ -332,13 +348,6 @@
    {
     "commit": "78fe123",
     "file": "15_additivity_scope_verdict.md",
-    "n_del": 1,
-    "n_live": 0,
-    "n_lost": 0
-   },
-   {
-    "commit": "913714b",
-    "file": "11_definition_freeze.md",
     "n_del": 1,
     "n_live": 0,
     "n_lost": 0
