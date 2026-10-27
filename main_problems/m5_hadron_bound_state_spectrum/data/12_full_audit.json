@@ -130,6 +130,14 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -269,6 +277,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -410,6 +426,14 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -549,6 +573,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -690,6 +722,14 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -829,6 +869,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -970,6 +1018,14 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1109,6 +1165,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -1250,6 +1314,14 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
@@ -1390,13 +1462,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
-        "derived": 52,
+        "derived": 56,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -1530,13 +1610,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
-        "derived": 45,
+        "derived": 49,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -1670,13 +1758,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 4,
+        "meta": 5,
         "external": 0,
-        "derived": 13,
+        "derived": 16,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -1810,13 +1906,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
         "meta": 0,
         "external": 0,
-        "derived": 13,
+        "derived": 15,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -1950,11 +2054,19 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
         "derived": 6,
         "pending": 0,
@@ -2089,6 +2201,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -2230,13 +2350,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 3,
+        "meta": 4,
         "external": 0,
-        "derived": 12,
+        "derived": 15,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2369,6 +2497,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -2510,13 +2646,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 4,
+        "derived": 10,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2533,7 +2677,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_bzcmxq2p/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_m37kb6bc/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -2653,13 +2797,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 5,
+        "meta": 6,
         "external": 0,
-        "derived": 117,
+        "derived": 123,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2676,7 +2828,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_bzcmxq2p/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_m37kb6bc/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -2796,13 +2948,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 5,
+        "meta": 6,
         "external": 0,
-        "derived": 53,
+        "derived": 59,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -2936,13 +3096,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 5,
+        "meta": 6,
         "external": 0,
-        "derived": 9,
+        "derived": 13,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3076,11 +3244,19 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
+        "meta": 3,
         "external": 0,
         "derived": 3,
         "pending": 0,
@@ -3216,13 +3392,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 3,
+        "meta": 5,
         "external": 0,
-        "derived": 16,
+        "derived": 23,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3356,13 +3540,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
         "meta": 0,
         "external": 0,
-        "derived": 11,
+        "derived": 13,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3496,13 +3688,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 27,
+        "derived": 34,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3636,13 +3836,21 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 1,
+        "meta": 2,
         "external": 0,
-        "derived": 15,
+        "derived": 17,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3775,6 +3983,14 @@
         ],
         [
           "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
           true
         ]
       ],
@@ -3916,13 +4132,317 @@
         [
           "29_weight_convention.json",
           true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
         ]
       ],
       "docstring_match": true,
       "t3": {
         "meta": 1,
         "external": 0,
-        "derived": 17,
+        "derived": 15,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "30": {
+      "script": "30_v2_full_recompute.py",
+      "doc": "28_v2_full_recompute.md",
+      "log": "run_30_v2_full_recompute.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 15,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "31": {
+      "script": "31_v2_d2_s6.py",
+      "doc": "29_v2_d2_s6.md",
+      "log": "run_31_v2_d2_s6.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 5,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -3934,16 +4454,16 @@
     }
   },
   "counts": {
-    "docs": 27,
-    "scripts": 29,
-    "logs": 31,
-    "json": 29,
+    "docs": 29,
+    "scripts": 31,
+    "logs": 33,
+    "json": 31,
     "claims": {
       "docs": [
-        "27"
+        "29"
       ],
       "scripts": [
-        "29"
+        "31"
       ],
       "log_json": []
     }

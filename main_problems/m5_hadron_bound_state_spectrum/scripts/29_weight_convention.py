@@ -145,9 +145,9 @@ def calib(kappa, conv):
     return None
 
 
-print("\n[B] 以 w = v² 重校 D 兩數（κ = 0.2150）並與 M7 交接值對照")
-sol2 = calib(KAPPA, "v2")
-sol1 = calib(KAPPA, "v1")
+print("\n[B] 以 w = v² 重校 D 兩數（κ = 0 —— M7 交接值之同一校準點）並對照")
+sol2 = calib(0.0, "v2")
+sol1 = calib(0.0, "v1")
 M7 = {"a": 0.384184, "t": 1.7711, "rB": 0.4812, "P0": 0.3891}
 for tag, sol in (("w = v²（新）", sol2), ("w = N_d v²（記錄）", sol1)):
     if sol is None:
@@ -161,7 +161,7 @@ for tag, sol in (("w = v²（新）", sol2), ("w = N_d v²（記錄）", sol1)):
         print(f"      vs M7 交接 (0.384184, 1.7711)：相對差 a {d_a:.2e}、t {d_t:.2e} ⟹ {'✅ 獨立確認' if max(d_a,d_t) < 1e-3 else '🟡 未吻合'}")
         print(f"      vs M7 ⟨B⟩ 0.4812 / P₀ 0.3891：差 {abs(rA-M7['rB']):.2e} / {abs(P0-M7['P0']):.2e}")
 
-# ---------------- B2 根枚舉（多值性） ----------------
+# ---------------- B2 根枚舉（多值性；κ = 0.2150 之兩約定根） ----------------
 print("\n[B2] 根枚舉（κ = 0.2150，兩種約定各自全部根）—— 校準多值，必須先定位分支")
 def all_roots(kappa, conv, ngrid=400):
     chd = kappa * G7 * Q_C
@@ -191,8 +191,8 @@ r1, r2 = all_roots(KAPPA, "v1"), all_roots(KAPPA, "v2")
 print(f"    w = N_d v²（記錄）：{len(r1)} 個根 ⟹ " + "；".join(f"({a:.6f} fm, {t*1000:.4f} MeV)" for a, t in r1))
 print(f"    w = v²（新）    ：{len(r2)} 個根 ⟹ " + "；".join(f"({a:.6f} fm, {t*1000:.4f} MeV)" for a, t in r2))
 hit = [q for q in r2 if abs(q[0] - M7["a"]) / M7["a"] < 1e-3 and abs(q[1] * 1000 - M7["t"]) / M7["t"] < 1e-3]
-print(f"    與 M7 交接 (0.384184 fm, 1.7711 MeV) 吻合之 w=v² 根：{len(hit)} 個" +
-      ("" if not hit else f" ⟹ ({hit[0][0]:.6f} fm, {hit[0][1]*1000:.4f} MeV) ✅ 獨立確認 M7"))
+print(f"    與 M7 交接值吻合之 w=v² 根：{len(hit)} 個（預期 0 —— M7 之 (0.384184, 1.7711) 係 κ=0 點，見 §B；"
+      f"此處為 κ={KAPPA} 分支，兩個 κ 之 (a,t) 不可互比）")
 print(f"    記錄值 (0.377422 fm, 0.7884 MeV) 落在：w=v² 根 {[i for i,q in enumerate(r2) if abs(q[0]-0.377422)<1e-3]}；w=N_d v² 根 {[i for i,q in enumerate(r1) if abs(q[0]-0.377422)<1e-3]}")
 
 # ---------------- C 下游重算 ----------------
