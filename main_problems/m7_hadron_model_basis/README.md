@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/22_external_recompute.md` | 外部 em(K⁺−K⁰) 獨立重算（11/11）：KILL 確認；預言 ≡ (1−ϵ) 符號錯；⟨O⟩=a+b·n_s 亦死 | ✅ |
 | `docs/21_incoming_triage.md` | register incoming 處置（3 封）：M4 KILL 之 M7 後果、N3 活口作廢、M10 兩封無新增供給 | ✅ |
 | `docs/20_o209_assignment.md` | O209 唯一分配定理重建：唯一性真（1/362,880）但 u/d 內容 z=+8.07 被否證；與 O120 載體互斥 | ✅ |
 | `docs/19_o120_import.md` | 引入 O120 `docs/06` u/d 扇區：獨立重建 29/29；落 M7 `⟨O⟩` 承重前提（單射性）＋ 反凑數閘（look-elsewhere p=0.336） | ✅ |
@@ -33,6 +34,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/14_external_recompute.py` | 外部 lattice QED em(K⁺−K⁰) 獨立重算＋判決（11/11） | ✅ |
 | `scripts/13_ud_verdict.py` | u/d 指派生死判定（6/6）：兩載體各自處決 ⟹ NO-GO；X 不可預言 | ✅ |
 | `scripts/12_o209_assignment.py` | O209 唯一分配重建（13/13）＋ 載體衝突 ＋ 對 M7 影響 | ✅ |
 | `scripts/11_o120_import_verify.py` | O120 `docs/06` 引入驗證（29/29）＋ M7 應用（Part B） | ✅ |

@@ -38,6 +38,7 @@ J09 = load("09_m4_receipt.json")
 J11 = load("11_o120_import.json")
 J12 = load("12_o209_assignment.json")
 J13 = load("13_ud_verdict.json")
+J14 = load("14_external_recompute.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -360,6 +361,23 @@ claim("§7 X23", "20_o209_assignment.md", M13["X_cands"]["(2,3)"], "| X（(2,3)�
 claim("§7 X57", "20_o209_assignment.md", M13["X_cands"]["(5,7)"], "| X（(5,7)） |", cell=2, kth=0)
 claim("§7 X913", "20_o209_assignment.md", M13["X_cands"]["(9,13)"], "| X（(9,13)） |", cell=2, kth=0)
 claim("§7 Xspread", "20_o209_assignment.md", M13["X_spread_over_sigma"], "| X 跨度／σ_X |", cell=2, kth=0)
+
+# ══════════ docs/22（外部重算） ══════════
+M14 = J14["metrics"]
+claim("§22 npass", "22_external_recompute.md", J14["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§22 ntotal", "22_external_recompute.md", J14["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§22 dM2pi", "22_external_recompute.md", M14["dM2_pi"], "| ΔM²_π |", cell=2, kth=0)
+claim("§22 dM2K", "22_external_recompute.md", M14["dM2_K"], "| ΔM²_K |", cell=2, kth=0)
+claim("§22 em", "22_external_recompute.md", M14["em"], "| `em`（中心值） |", cell=2, kth=0)
+claim("§22 em_lo", "22_external_recompute.md", M14["em_lo"], "| `em_lo` |", cell=2, kth=0)
+claim("§22 em_hi", "22_external_recompute.md", M14["em_hi"], "| `em_hi` |", cell=2, kth=0)
+claim("§22 sigma", "22_external_recompute.md", M14["sigma"], "| `σ`（帶半寬） |", cell=2, kth=0)
+claim("§22 z", "22_external_recompute.md", M14["z"], "| `z`（主判） |", cell=2, kth=0)
+claim("§22 z_band", "22_external_recompute.md", M14["z_band"], "| `z`（帶內最保守） |", cell=2, kth=0)
+claim("§22 em_wrong", "22_external_recompute.md", M14["em_wrong_1meps"], "| `em`（(1−ϵ) 誤讀） |", cell=2, kth=0)
+claim("§22 O_pred", "22_external_recompute.md", M14["O_pred"], "| `O`（預言用） |", cell=2, kth=0)
+claim("§22 O_req", "22_external_recompute.md", M14["O_req"], "| `O`（外部要求） |", cell=2, kth=0)
+claim("§22 O_off", "22_external_recompute.md", M14["O_req_sigma_off"], "| `O` 距 `Σ` 錨（σ） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

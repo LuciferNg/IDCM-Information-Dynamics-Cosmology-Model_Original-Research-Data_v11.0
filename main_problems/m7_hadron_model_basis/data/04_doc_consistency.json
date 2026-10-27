@@ -1,6 +1,6 @@
 {
- "npass": 162,
- "ntotal": 162,
+ "npass": 176,
+ "ntotal": 176,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -990,6 +990,90 @@
    "doc": "20_o209_assignment.md",
    "status": "✅",
    "detail": "doc=403.03192 art=403.031919613 |Δ|=3.87e-07 ≤ 5.0e-06"
+  },
+  {
+   "name": "§22 npass",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=11 art=11（整數須全等）"
+  },
+  {
+   "name": "§22 ntotal",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=11 art=11（整數須全等）"
+  },
+  {
+   "name": "§22 dM2pi",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=1261.157227 art=1261.15722651 |Δ|=4.88e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 dM2K",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-3899.726992 art=-3899.726992 |Δ|=0.00e+00 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 em",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=2.264589 art=2.26458896223 |Δ|=3.78e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 em_lo",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=2.124642 art=2.12464245333 |Δ|=4.53e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 em_hi",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=2.366368 art=2.36636824143 |Δ|=2.41e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 sigma",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=0.120863 art=0.120862894052 |Δ|=1.06e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 z",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-15.98 art=-15.9841362181 |Δ|=4.14e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§22 z_band",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-14.83 art=-14.8262414812 |Δ|=3.76e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§22 em_wrong",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=0.279893 art=0.279893017804 |Δ|=1.78e-08 ≤ 5.0e-07"
+  },
+  {
+   "name": "§22 O_pred",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=1.66668 art=1.6666796875 |Δ|=3.12e-07 ≤ 5.0e-06"
+  },
+  {
+   "name": "§22 O_req",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=2.42132 art=2.42132381337 |Δ|=3.81e-06 ≤ 5.0e-06"
+  },
+  {
+   "name": "§22 O_off",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=3.52 art=3.52413669226 |Δ|=4.14e-03 ≤ 5.0e-03"
   },
   {
    "name": "v1 vs v2 K1 max_dev",
