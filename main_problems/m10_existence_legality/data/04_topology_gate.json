@@ -1,0 +1,69 @@
+{
+  "script": "04_topology_gate.py",
+  "role": "R4 拓撲閘三層判",
+  "H1_spectral_no_go": {
+    "c_u": "1/3",
+    "c_d": "1/3",
+    "gamma9": 0.3989175181512792,
+    "gamma11": 0.585786437626905,
+    "affine_b_forced_zero": true,
+    "distinct_quark_gammas": 6,
+    "conclusion": "B 唔可能由 γ_n 導出；可導出者只有佔用數分級"
+  },
+  "H2_operator_audit": [
+    {
+      "op": "M2 質量泛函 m = M₀Σσ_nγ_n",
+      "form": "對角於佔用數 σ_n",
+      "verdict": "✅ 守 N",
+      "src": "M2 docs/01 §2"
+    },
+    {
+      "op": "M5 兩體核 V_ij = κq_iq_jB^{−d}",
+      "form": "密度×密度（bilinear·bilinear）",
+      "verdict": "✅ 守 N",
+      "src": "M5 docs/02"
+    },
+    {
+      "op": "Yukawa y_f ψ̄ψ（O120/M4）",
+      "form": "雙線性",
+      "verdict": "✅ 守 N",
+      "src": "M4 docs/17／O120"
+    },
+    {
+      "op": "規範流 current·current",
+      "form": "雙線性×雙線性",
+      "verdict": "✅ 守 N",
+      "src": "O124/O85"
+    },
+    {
+      "op": "味非對角項（破口候選）",
+      "form": "—",
+      "verdict": "🔴 語料 0 命中",
+      "src": "M7 docs/12 §3.1"
+    }
+  ],
+  "H3": {
+    "N_d": 88,
+    "N_gen": 3,
+    "N_d_mod_N_gen": 1,
+    "anomaly_coefficient": 3,
+    "note": "無動力學 YM ⟹ 無 π₃ ⟹ B 精確；屬 gap-driven"
+  },
+  "H4_verdict": {
+    "T2a 荷守恆（B 為 U(1)_F 量子數）": {
+      "verdict": "✅ 導出",
+      "why": "算子清單全部守 N；但平凡（generic）"
+    },
+    "T2b 一面 = 3 夸克 ∧ 色單態": {
+      "verdict": "🔴 未導出",
+      "why": "色 = 嵌入標籤（O216）；3 ∤ 88 ⟹ 無色繞數"
+    },
+    "T2c 精確性（無 sphaleron）": {
+      "verdict": "🟡 條件",
+      "why": "已註冊結構無規範動能項 ⟹ 精確，但係 gap-driven"
+    }
+  },
+  "checks_passed": 10,
+  "checks_total": 10,
+  "failures": []
+}

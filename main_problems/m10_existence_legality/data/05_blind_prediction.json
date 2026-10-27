@@ -1,0 +1,212 @@
+{
+  "script": "05_blind_prediction.py",
+  "role": "R5 預註冊 ＋ 數據完整性審計",
+  "J_drift_MeV": {
+    "d2H": 1.35275846049496e-05,
+    "t3H": -0.5301198317605215,
+    "a4He": -0.0003276491955079946,
+    "Be8": -0.000492922748342
+  },
+  "J_t3H": {
+    "frozen": 2808.391,
+    "correct": 2808.9211198317607,
+    "x_frozen": -9.0119292,
+    "x_correct": -8.481809368239478,
+    "identity_of_frozen": "³He 核質量"
+  },
+  "K_out_of_sample": [
+    {
+      "channel": "Λ→pπ⁻",
+      "x": 37.84052184,
+      "rel": 0.03391691173926644,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Λ→nπ⁰",
+      "x": 41.14077948,
+      "rel": 0.036874972084364466,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Σ⁺→pπ⁰",
+      "x": 116.12111184,
+      "rel": 0.09763245402187713,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Σ⁺→nπ⁺",
+      "x": 110.23418948,
+      "rel": 0.09268284005818206,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Σ⁻→nπ⁻",
+      "x": 118.31318948,
+      "rel": 0.09880436618177475,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Ξ⁰→Λπ⁰",
+      "x": 64.2002,
+      "rel": 0.0488266431407146,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Ξ⁻→Λπ⁻",
+      "x": 66.45661,
+      "rel": 0.05028078020140576,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Ω⁻→Ξ⁰π⁻",
+      "x": 218.01961,
+      "rel": 0.13035941881670604,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "Ω⁻→ΛK⁻",
+      "x": 63.09,
+      "rel": 0.03772310084008491,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "K⁺→π⁺π⁰",
+      "x": 219.12981,
+      "rel": 0.443872835882571,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "K⁰→π⁺π⁻",
+      "x": 218.47022,
+      "rel": 0.4390381643492608,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "η→γγ",
+      "x": 547.862,
+      "rel": 1.0,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "ρ⁰→π⁺π⁻",
+      "x": 496.11922,
+      "rel": 0.639939142997188,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "φ→K⁺K⁻",
+      "x": 32.107,
+      "rel": 0.03149409344741976,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "J/ψ→e⁺e⁻",
+      "x": 3095.8780021,
+      "rel": 0.9996699932513158,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "D⁰→K⁻π⁺",
+      "x": 1231.59261,
+      "rel": 0.6604280313592586,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "B⁰→D⁻π⁺",
+      "x": 3270.42961,
+      "rel": 0.6194394354939523,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "n→peν",
+      "x": 0.78233341,
+      "rel": 0.0008326545367825688,
+      "gate": true,
+      "verdict": "可達"
+    },
+    {
+      "channel": "²H→pn",
+      "x": -2.22456611,
+      "rel": 0.0011860475365199057,
+      "gate": true,
+      "verdict": "禁（能量）"
+    },
+    {
+      "channel": "p→e⁺γγ (ΔB)",
+      "x": 937.76108921,
+      "rel": 0.999455382978511,
+      "gate": false,
+      "verdict": "禁（拓撲）"
+    }
+  ],
+  "K_min_rel": 0.03149409344741976,
+  "L_preregistered": [
+    {
+      "id": "P1",
+      "claim": "ΔB≠0 之所有過程速率 = 0（精確）",
+      "targets": "p→e⁺π⁰ (Hyper-K)、p→K⁺ν̄、pp→π⁺π⁺ / nn→π⁰π⁰ (Super-K dinucleon)、¹⁶O→¹⁴C+…、n→n̄ (ESS)",
+      "kill": "任何一個通道之 90% CL 上限被突破 ⟹ M10 閘判死"
+    },
+    {
+      "id": "P2",
+      "claim": "面型守恆 ⟹ η_B 係初始條件（冇 sphaleron 洗白）",
+      "targets": "結構判詞，非直接可測；後果 = 唔需要 (B−L) 生成機制",
+      "kill": "若量到電弱重子生成 signature ⟹ 閘精確性判死（目前 EW 相變係 crossover，不可測）"
+    },
+    {
+      "id": "P3",
+      "claim": "合法集 = {各超選擇類之最輕元} ⟹ 新發現之 B=1,Q=1 態必須衰變到 p",
+      "targets": "LHC 穩定 R-hadron／fractional charge／dark baryon 搜索",
+      "kill": "發現任何穩定 B=1,Q=1 態（m > m_p）⟹ 最輕態定理判死"
+    },
+    {
+      "id": "P4",
+      "claim": "n 之合法性只可條件成立 ⟹ 自由中子必衰變（無例外）",
+      "targets": "任何「自由中子穩定」之聲稱",
+      "kill": "自由中子穩定 ⟹ 判據判死"
+    }
+  ],
+  "L_seal": "78ff1774eb99d84b3d14ffdc0e4879e364da7d00457bb59391df35921d4b34ac",
+  "M_blocks": [
+    {
+      "wall": "W1 em 自能算子",
+      "why": "M5 三界封死（A_max 1.2494 vs 需求 1.2667–1.3963）",
+      "hits": "所有含帶電粒子之質量差"
+    },
+    {
+      "wall": "W2 複合態質量槽",
+      "why": "M7 ⟨O⟩≡1 ⟹ 加性 ⟹ 無束縛槽",
+      "hits": "所有強子通道"
+    },
+    {
+      "wall": "W3 核束縛槽",
+      "why": "M5 兩參數模型；M7 加束縛即違 M2 唯一性",
+      "hits": "所有核通道（含 ⁸Be、diproton）"
+    },
+    {
+      "wall": "W5 質量值層 dof=0",
+      "why": "O120：9 方程 9 未知 ⟹ 9! 精確解",
+      "hits": "所有絕對質量預言"
+    }
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "failures": []
+}

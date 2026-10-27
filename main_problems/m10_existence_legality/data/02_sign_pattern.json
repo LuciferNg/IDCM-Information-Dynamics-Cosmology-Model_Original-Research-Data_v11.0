@@ -1,0 +1,250 @@
+{
+  "script": "02_sign_pattern.py",
+  "role": "R2 三層分類 + 重現閘",
+  "A_reproduction": {
+    "rows": [
+      {
+        "channel": "Z→ee",
+        "x_MeV": "911865780021/10000000",
+        "x_str": "91186.5780",
+        "abs_x_over_m": 0.9999887923588295,
+        "ratio_str": "1.000e+00",
+        "match": true
+      },
+      {
+        "channel": "t→Wb",
+        "x_MeV": "88133",
+        "x_str": "88133.0000",
+        "abs_x_over_m": 0.5103538131912676,
+        "ratio_str": "5.104e-01",
+        "match": true
+      },
+      {
+        "channel": "μ→eνν",
+        "x_MeV": "2102947531/20000000",
+        "x_str": "105.1474",
+        "abs_x_over_m": 0.9951636683075825,
+        "ratio_str": "9.952e-01",
+        "match": true
+      },
+      {
+        "channel": "p→π⁰e⁺",
+        "x_MeV": "80278428921/100000000",
+        "x_str": "802.7843",
+        "abs_x_over_m": 0.8555986044349901,
+        "ratio_str": "8.556e-01",
+        "match": true
+      },
+      {
+        "channel": "n→peν",
+        "x_MeV": "78233341/100000000",
+        "x_str": "0.7823",
+        "abs_x_over_m": 0.0008326545367825688,
+        "ratio_str": "8.327e-04",
+        "match": true
+      },
+      {
+        "channel": "²H→pn",
+        "x_MeV": "-222456611/100000000",
+        "x_str": "-2.2246",
+        "abs_x_over_m": 0.0011860475365199057,
+        "ratio_str": "1.186e-03",
+        "match": true
+      },
+      {
+        "channel": "³H(p+2n)",
+        "x_MeV": "-22529823/2500000",
+        "x_str": "-9.0119",
+        "abs_x_over_m": 0.0032089296682691264,
+        "ratio_str": "3.209e-03",
+        "match": true
+      },
+      {
+        "channel": "⁸Be→2α",
+        "x_MeV": "23/250",
+        "x_str": "0.0920",
+        "abs_x_over_m": 1.2340959241299289e-05,
+        "ratio_str": "1.234e-05",
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "B_three_layers": {
+    "t": {
+      "slot": "O209 n=1",
+      "ctau_over_fm": 0.13896266228453596,
+      "layer2": "❌ 未及成面",
+      "layer3_note": "β 衰變（Γ=1.42 GeV）"
+    },
+    "b": {
+      "slot": "O209 n=2",
+      "ctau_over_fm": 455384743702.0,
+      "layer2": "✅ 成面",
+      "layer3_note": "B 介子衰變"
+    },
+    "τ": {
+      "slot": "O209 n=3",
+      "ctau_over_fm": 87029750557.4,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "輕子衰變"
+    },
+    "c": {
+      "slot": "O209 n=4",
+      "ctau_over_fm": 309685609113.99994,
+      "layer2": "✅ 成面",
+      "layer3_note": "D 衰變"
+    },
+    "μ": {
+      "slot": "O209 n=5",
+      "ctau_over_fm": 6.586383641485437e+17,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "μ→eνν"
+    },
+    "s": {
+      "slot": "O209 n=7",
+      "ctau_over_fm": 26843416689319.996,
+      "layer2": "✅ 成面",
+      "layer3_note": "K 衰變"
+    },
+    "d": {
+      "slot": "O209 n=9",
+      "ctau_over_fm": 2.6333769510719995e+26,
+      "layer2": "✅ 成面",
+      "layer3_note": "n 內 β 衰變"
+    },
+    "u": {
+      "slot": "O209 n=11",
+      "ctau_over_fm": null,
+      "layer2": "—（穩定夸克）",
+      "layer3_note": "無開放通道（若 n<p）"
+    },
+    "e": {
+      "slot": "O209 n=13",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "最輕帶電輕子 ⟹ 合法"
+    },
+    "ν_e/μ/τ": {
+      "slot": "O206 塔",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "最輕 L≠0 ⟹ 合法"
+    },
+    "γ": {
+      "slot": "O206 塔",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "m=0 ⟹ 合法"
+    },
+    "g": {
+      "slot": "O206 塔",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "色禁閉 ⟹ 無自由態"
+    },
+    "W": {
+      "slot": "O206 塔",
+      "ctau_over_fm": 0.09464123762304126,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "極寬"
+    },
+    "Z": {
+      "slot": "O206 塔",
+      "ctau_over_fm": 0.07908263082880772,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "極寬"
+    },
+    "p": {
+      "slot": "面(複合)",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "B=Q=1 最輕 ⟹ 合法"
+    },
+    "n": {
+      "slot": "面(複合)",
+      "ctau_over_fm": 8.783999999999999e+17,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "真空不合法；核內條件合法"
+    },
+    "²H": {
+      "slot": "面(複合)",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "真空合法；T≳2.6e10 K 解離"
+    },
+    "³H": {
+      "slot": "面(複合)",
+      "ctau_over_fm": 3.8879999999999995e+23,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "β 衰變 x=+18.6 keV"
+    },
+    "⁴He": {
+      "slot": "面(複合)",
+      "ctau_over_fm": null,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "B=2,Q=2 最輕 ⟹ 合法"
+    },
+    "⁸Be": {
+      "slot": "面(複合)",
+      "ctau_over_fm": 0.08189999999999999,
+      "layer2": "N/A（非強子化判別）",
+      "layer3_note": "x=+0.092 MeV（極邊界）"
+    }
+  },
+  "C_minima": {
+    "(B,Q,L)=(1,1,0)": {
+      "state": "p",
+      "mass_MeV": 938.27208816
+    },
+    "(B,Q,L)=(1,0,0)": {
+      "state": "n",
+      "mass_MeV": 939.56542052
+    },
+    "(B,Q,L)=(0,±1,0)": {
+      "state": "e",
+      "mass_MeV": 0.51099895
+    },
+    "(B,Q,L)=(0,0,±1)": {
+      "state": "ν",
+      "mass_MeV": 0.0
+    },
+    "(B,Q,L)=(0,0,0)": {
+      "state": "γ",
+      "mass_MeV": 0.0
+    },
+    "(B,Q,L)=(2,1,0)": {
+      "state": "²H",
+      "mass_MeV": 1875.61294257
+    },
+    "(B,Q,L)=(2,2,0)": {
+      "state": "⁴He",
+      "mass_MeV": 3727.379
+    }
+  },
+  "D_single_bit": {
+    "X_real": 2.51,
+    "x_n": 1.99900105,
+    "X_swap": -2.51,
+    "x_p_swap": 1.99900105
+  },
+  "E_mc_null": {
+    "q_n_illegal_within_10pct_error": 0.999958,
+    "q_p_legal_unconstrained_random": 0.44113,
+    "N": 1000000,
+    "N_unconstrained": 100000,
+    "seed": 20261027
+  },
+  "F_idcm_side": {
+    "gamma3_over_gamma2": 2.245223121144262,
+    "z_vs_data": 0.8530575354228754,
+    "X_pred_MeV": 2.689681941671606,
+    "X_flag_MeV": 2.56,
+    "em_needed_pred": 1.3963499416716059,
+    "em_needed_flag": 1.2666680000000001,
+    "A_max_v2": 1.2494
+  },
+  "checks_passed": 12,
+  "checks_total": 12,
+  "failures": []
+}

@@ -1,0 +1,128 @@
+{
+  "script": "03_precision_wall.py",
+  "role": "R3 精度牆量化 + 原診斷更正",
+  "G1_channels": [
+    {
+      "channel": "Z→ee",
+      "x": "911865780021/10000000",
+      "cancel_factor": 1.0000224155335662,
+      "need_rel_precision": 0.9999775849688786
+    },
+    {
+      "channel": "t→Wb",
+      "x": "88133",
+      "cancel_factor": 2.9188499200072617,
+      "need_rel_precision": 0.3426006911645228
+    },
+    {
+      "channel": "μ→eνν",
+      "x": "2102947531/20000000",
+      "cancel_factor": 1.0097196709374296,
+      "need_rel_precision": 0.9903738916679659
+    },
+    {
+      "channel": "p→π⁰e⁺",
+      "x": "80278428921/100000000",
+      "cancel_factor": 1.337544719723726,
+      "need_rel_precision": 0.7476385538769523
+    },
+    {
+      "channel": "n→peν",
+      "x": "78233341/100000000",
+      "cancel_factor": 2400.956527767362,
+      "need_rel_precision": 0.00041650066897708275
+    },
+    {
+      "channel": "²H→pn",
+      "x": "-222456611/100000000",
+      "cancel_factor": 1687.2730526538498,
+      "need_rel_precision": 0.0005926722994995604
+    },
+    {
+      "channel": "³H(2n+p)",
+      "x": "-22529823/2500000",
+      "cancel_factor": 624.260777503667,
+      "need_rel_precision": 0.001601894650499848
+    },
+    {
+      "channel": "⁸Be→2α",
+      "x": "23/250",
+      "cancel_factor": 162060.95652173914,
+      "need_rel_precision": 6.170517695703335e-06
+    }
+  ],
+  "G2_two_precisions": {
+    "delta_star": {
+      "F1 γ_a/γ_b": 4e-06,
+      "F2 deg≤2": 2e-06,
+      "F3 deg≤4": 6e-07,
+      "F4 n·γ^k": 8.1e-05
+    },
+    "idcm_achieved": {
+      "quark ratio (FLAG)": 0.001,
+      "X = m_d−m_u": 0.037,
+      "E_ch (em 殘餘)": 0.074,
+      "Δπ": 3e-05
+    },
+    "sign_needs_for_n": 0.00041650066897708275
+  },
+  "G3_walls": {
+    "W1 em 自能無算子": "M5 docs/16/29：A_max(v2)=1.2494 MeV 硬上限；K 系需 1.3335 超界 6.7%",
+    "W2 複合態質量無槽": "M7 docs/12 ①：σ 容量 6>N_q=3 ⟹ 加性 ⟹ ⟨O⟩≡1 ⟹ 無束縛槽",
+    "W3 核束縛無槽": "M5 兩參數模型（docs/31 定位更正）；M7 判定加束縛項即違 M2 唯一性",
+    "W4 比值精度 1e-3": "M4 docs/20：F4 差 12×、F1 差 243×",
+    "W5 質量值層 dof=0": "O120 docs/06：9 方程 9 未知 ⟹ 解空間 9! = 362880 ⟹ 零預言力",
+    "W6 池密度": "M4 docs/20 §四：F1 於 0.1% 帶 coverage 20.61% ⟹ 1/5 純隨機"
+  },
+  "G3_hit_matrix": {
+    "Z→ee": [
+      "W5"
+    ],
+    "t→Wb": [
+      "W2",
+      "W5"
+    ],
+    "μ→eνν": [
+      "W5"
+    ],
+    "p→π⁰e⁺": [
+      "W2",
+      "W5"
+    ],
+    "n→peν": [
+      "W1",
+      "W2"
+    ],
+    "²H→pn": [
+      "W3",
+      "W2"
+    ],
+    "³H(2n+p)": [
+      "W3",
+      "W2"
+    ],
+    "⁸Be→2α": [
+      "W3",
+      "W2",
+      "W4"
+    ]
+  },
+  "G4_neutron_budget": {
+    "X": 2.56,
+    "sigma_X": 0.094,
+    "em_needed": 1.2667,
+    "m_e": 0.51099895,
+    "x_n": 0.78230105,
+    "share_X": 3.27239749965822,
+    "share_em": 1.6191976221941669,
+    "share_me": 0.653199877464053,
+    "em_precision_needed": 0.6175898397410594,
+    "X_precision_needed": 0.30558634765625,
+    "X_pred_gamma": 2.6896819416624003,
+    "em_needed_gamma": 1.3963499416624003,
+    "A_max_v2": 1.2494
+  },
+  "checks_passed": 8,
+  "checks_total": 8,
+  "failures": []
+}

@@ -1,0 +1,31 @@
+==============================================================================
+M10 — 文檔數字交叉核（docs ← data，單向）
+==============================================================================
+
+[C1] 逐條核 129 條 claim：
+  [PASS] C1 全部 claim 字串在 doc 出現  129/129
+
+[C2] 由 JSON 重算之合成量：
+  [PASS] C2.1 x_n 可由 X − em − m_e 重算  0.78230 vs JSON 0.78230
+  [PASS] C2.2 重算之 x_n 在 doc 出現  「0.7823」
+  [PASS] C2.3 三佔比之和 ≈ 5.44（= (X+em+m_e)/|x|）  恆等式 self-consistent（佔比係相對 |x| 之和，非 100%）
+
+[C3] 封印完備性：
+  [PASS] C3.1 doc 中 64-hex 皆為 data 內封印  doc 1 個 / data 2 個；多出 []
+  [PASS] C3.2 兩個封印互異（判據 ≠ 預言）  判據 fe49c14d91f5… / 預言 78ff1774eb99…
+
+[C4] 覆蓋度：
+    01_criteria_freeze                   8 條
+    02_three_layer_classification       31 條
+    03_precision_wall_correction        29 條
+    04_topology_gate                     5 條
+    05_preregistration                   9 條
+    06_environment_completeness         12 條
+    07_nuclide_chart                    22 條
+    08_sphaleron_relaxation             13 條
+  [PASS] C4 每份 doc 至少 5 條  8 份 doc，最少 5 條
+
+==============================================================================
+CHECK 合計: PASS 7 / FAIL 0  → 7/7
+==============================================================================
+data/06_doc_crosscheck.json 已寫

@@ -1,0 +1,25 @@
+{
+  "script": "06_doc_crosscheck.py",
+  "role": "docs ↔ data 交叉核",
+  "claims": 129,
+  "per_doc": {
+    "01_criteria_freeze": 8,
+    "02_three_layer_classification": 31,
+    "03_precision_wall_correction": 29,
+    "04_topology_gate": 5,
+    "05_preregistration": 9,
+    "06_environment_completeness": 12,
+    "07_nuclide_chart": 22,
+    "08_sphaleron_relaxation": 13
+  },
+  "seals_data": [
+    "78ff1774eb99d84b3d14ffdc0e4879e364da7d00457bb59391df35921d4b34ac",
+    "fe49c14d91f587d0d7cd545915fbd78a59e92955c7a3b3f9bd825c15e49bb858"
+  ],
+  "seals_in_docs": [
+    "78ff1774eb99d84b3d14ffdc0e4879e364da7d00457bb59391df35921d4b34ac"
+  ],
+  "checks_passed": 7,
+  "checks_total": 7,
+  "failures": []
+}
