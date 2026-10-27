@@ -1,0 +1,136 @@
+{
+ "script": "scripts/34_u_d_role_citation_verify.py",
+ "date": "2026-10-26",
+ "purpose": "verify O209/O120 documents' own arithmetic before M4 cites them",
+ "orderings": {
+  "3": [
+   "up",
+   "dn",
+   "lp"
+  ],
+  "2": [
+   "up",
+   "lp",
+   "dn"
+  ],
+  "1": [
+   "dn",
+   "up",
+   "lp"
+  ]
+ },
+ "mass_chain": [
+  "t",
+  "b",
+  "tau",
+  "c",
+  "mu",
+  "s",
+  "d",
+  "u",
+  "e"
+ ],
+ "assignment": {
+  "mode_to_particle": {
+   "1": "e",
+   "2": "u",
+   "3": "d",
+   "4": "s",
+   "5": "mu",
+   "7": "c",
+   "9": "tau",
+   "11": "b",
+   "13": "t"
+  },
+  "u_mode": 2,
+  "d_mode": 3
+ },
+ "checks": [
+  {
+   "label": "V1 three blocks carry different role orderings (role != position)",
+   "ok": true,
+   "got": "3",
+   "expect": "3 distinct"
+  },
+  {
+   "label": "V2a Gen3 == [up, dn, lp]",
+   "ok": true,
+   "got": "['up', 'dn', 'lp']",
+   "expect": "[up, dn, lp]"
+  },
+  {
+   "label": "V2b Gen2 == [up, lp, dn]",
+   "ok": true,
+   "got": "['up', 'lp', 'dn']",
+   "expect": "[up, lp, dn]"
+  },
+  {
+   "label": "V2c Gen1 == [dn, up, lp]",
+   "ok": true,
+   "got": "['dn', 'up', 'lp']",
+   "expect": "[dn, up, lp]"
+  },
+  {
+   "label": "V3 quoted chain t>b>tau>c>mu>s>d>u>e reproduces",
+   "ok": true,
+   "got": "True",
+   "expect": "True"
+  },
+  {
+   "label": "V4 Gen3 role multiset == [dn, lp, up]",
+   "ok": true,
+   "got": "['dn', 'lp', 'up']",
+   "expect": "[dn, lp, up]"
+  },
+  {
+   "label": "V4 Gen2 role multiset == [dn, lp, up]",
+   "ok": true,
+   "got": "['dn', 'lp', 'up']",
+   "expect": "[dn, lp, up]"
+  },
+  {
+   "label": "V4 Gen1 role multiset == [dn, lp, up]",
+   "ok": true,
+   "got": "['dn', 'lp', 'up']",
+   "expect": "[dn, lp, up]"
+  },
+  {
+   "label": "V5a lightest three modes == (e, u, d)",
+   "ok": true,
+   "got": "['e', 'u', 'd']",
+   "expect": "['e', 'u', 'd']"
+  },
+  {
+   "label": "V5b assignment e->1, u->2, d->3",
+   "ok": true,
+   "got": "{1: 'e', 2: 'u', 3: 'd'}",
+   "expect": "{'1': 'e', '2': 'u', '3': 'd'}"
+  },
+  {
+   "label": "V5c legal mode set == {1,2,3,4,5,7,9,11,13}",
+   "ok": true,
+   "got": "[1, 2, 3, 4, 5, 7, 9, 11, 13]",
+   "expect": "[1, 2, 3, 4, 5, 7, 9, 11, 13]"
+  },
+  {
+   "label": "V6a u sits at n=2 (not k=1)",
+   "ok": true,
+   "got": "2",
+   "expect": "2"
+  },
+  {
+   "label": "V6b d sits at n=3 (not k=4)",
+   "ok": true,
+   "got": "3",
+   "expect": "3"
+  },
+  {
+   "label": "V6c the two schemes disagree on both quarks",
+   "ok": true,
+   "got": "(2, 3)",
+   "expect": "(1, 4)"
+  }
+ ],
+ "n_pass": 14,
+ "n_checks": 14
+}
