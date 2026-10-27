@@ -376,3 +376,18 @@ A3 之 15 成員表／層釘／`a₀`／`t` 全部建基於現指派 ⟹ 擅改�
 - `scripts/l2_independent_verify.py`：由 PDG 原始檔獨立重算 **15/15 PASS**（`Z1` 硬標準 z<3、`Z5` D 校準 9.9e−5σ、`Z8/Z9` v2 校準自洽）。
 - `scripts/l3_doc_crosscheck.py`：期望值只取自 L2，**15/15 PASS**（`docs/36` 10/10、`docs/31` 2/2 …）。
 - 🔴 **審計範圍漏洞（已修）**：`scripts/12_full_audit.py` 只 glob `[0-9][0-9]_*.py` ⟹ L2／L3 **完全不在審計範圍**（「違規 0」只覆蓋 38 支 NN 腳本）。已加 EXTRA 配對（40 組），並修正 L2 之絕對路徑輸出（隔離重跑必 byte-identical）。
+
+### 20.5 全鏈審計結果（2026-10-27，第二次重跑，含 L2／L3 配對）
+
+```
+配對 40 組（38 NN 腳本 ＋ L2 ＋ L3）；deprecated 按設計排除（10_v1_minE_bug.py）
+[違規] 0        I1_tmp_write 0 · I2_ghost_path 0 · I3_vacuous_check 0
+                I4_orphan_json 0 · I5_nondocumented_script 0 · I6_missing_root_files 0
+計數：docs=37 scripts=39 logs=45 json=41；README 宣稱 docs 37／scripts 41
+L2 exit=0 重跑 byte-identical；L3 exit=0 重跑 byte-identical
+```
+
+★ 兩次失敗診斷（保留，供下次參考）：
+1. 首跑 L2 exit=1、log 只得 17 行 ⟹ 審計把腳本複製到 `work/` **根目錄**（非 `work/scripts/`），而 L2／L3 以 `HERE.parent` 當 ROOT ⟹ ROOT 指向 `tmp/` 而非 `work/`，讀唔到 `data/pdg_mass_width_2024.mcd`。修法：`ROOT = HERE.parent if HERE.name == "scripts" else HERE`（自適應隔離佈局）。
+2. L2 曾輸出絕對路徑（`pdg_file = /home/wsl/...`）⟹ 隔離重跑必不 byte-identical。修法：輸出相對路徑 `data/pdg_mass_width_2024.mcd`。
+3. 首次以 `terminal background` 啟動之審計被 SIGTERM（exit 143，13/40 對）⟹ 改用 `setsid nohup` 脫離工具 process group 後完成。
