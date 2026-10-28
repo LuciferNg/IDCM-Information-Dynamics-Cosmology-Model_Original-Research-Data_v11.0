@@ -1,0 +1,197 @@
+{
+  "checks": [
+    {
+      "expect": ">0.04",
+      "got": "ΔX=-0.0455",
+      "label": "R0.1 X 兩種形式差 > 0.04 MeV（達 σ_E 之 48%）",
+      "ok": true
+    },
+    {
+      "expect": "σ_new > σ_old",
+      "got": "min σ_new=0.1159",
+      "label": "R1.1 全部通道 σ_E 增大（無一例外）",
+      "ok": true
+    },
+    {
+      "expect": "<1e-12",
+      "got": "max|殘差|=0.00e+00",
+      "label": "R1.2 E 之平移與 coeff 成正比（ΔE = coeff·(X_old−X_new)）",
+      "ok": true
+    },
+    {
+      "expect": "<0.2",
+      "got": "R²old=-0.4642 R²new=-0.4864",
+      "label": "R2.1 電荷加性（零擬合 κ_s=κ_x=1）仍被排除（R² < 0.2）",
+      "ok": true
+    },
+    {
+      "expect": "<0.5",
+      "got": "R²old=0.3783 R²new=0.3928",
+      "label": "R2.2 substitution-count 線性仍被排除（R² < 0.5）",
+      "ok": true
+    },
+    {
+      "expect": ">3.0",
+      "got": "spread_new=5.557",
+      "label": "R2.3 spectator 獨立仍被排除（spread > 3 MeV）",
+      "ok": true
+    },
+    {
+      "expect": "<2σ",
+      "got": "1.21σ",
+      "label": "R2.4 K/N 一致性結論不變（<2σ）",
+      "ok": true
+    },
+    {
+      "expect": "<2σ",
+      "got": "0.28σ",
+      "label": "R3.1 ε=0.79(6) 與 docs/36 錨一致（<2σ）",
+      "ok": true
+    },
+    {
+      "expect": "0.79±0.12",
+      "got": "ε_req=0.773",
+      "label": "R3.2 由 ε 反解所需值落在 FLAG 誤差內",
+      "ok": true
+    },
+    {
+      "expect": "<1.0",
+      "got": "factor=0.814",
+      "label": "R4.1 σ_X 增大 ⟹ 依賴 σ_X 之顯著度一律下修（因子 0.814）",
+      "ok": true
+    }
+  ],
+  "data": {
+    "R2": {
+      "KN_delta_new": -0.1983,
+      "KN_delta_old": -0.1073,
+      "KN_sigma_new": 1.21,
+      "KN_sigma_old": 0.804,
+      "charge_additive_n_channels": 7,
+      "charge_additive_r2_new": 0.7666,
+      "charge_additive_r2_old": 0.761,
+      "charge_additive_r2_unit_new": -0.4864,
+      "charge_additive_r2_unit_old": -0.4642,
+      "spectator_spread_new": 5.5567,
+      "spectator_spread_old": 5.5567,
+      "subst_count_r2_new": 0.3928,
+      "subst_count_r2_old": 0.3783
+    },
+    "R3": {
+      "anchor": 2.2645889622304956,
+      "dMK2_gamma": 2257.47,
+      "dMpi2": 1261.157,
+      "dev_pct": 0.96,
+      "emK": 2.2864,
+      "s_emK": 0.0766
+    },
+    "R4": {
+      "sigma_factor": 0.8138
+    },
+    "X_new": {
+      "sigma": 0.11593,
+      "value": 2.5145
+    },
+    "X_old": {
+      "sigma": 0.09434,
+      "value": 2.56
+    },
+    "channels": {
+      "D+−D0": {
+        "E_new": 2.3055,
+        "E_old": 2.26,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 4.82,
+        "kind": "meson，spectator c",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "K+−K0": {
+        "E_new": -1.4195,
+        "E_old": -1.374,
+        "coeff": -1,
+        "dE": -0.0455,
+        "dm": -3.934,
+        "kind": "meson u→d，spectator s̄",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "n−p": {
+        "E_new": -1.22117,
+        "E_old": -1.26667,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 1.29333,
+        "kind": "baryon u↔d，spectators {u,d}",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "Ξ−−Ξ0": {
+        "E_new": 4.3355,
+        "E_old": 4.29,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 6.85,
+        "kind": "baryon，spectators {s,s}",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "Σ0−Σ+": {
+        "E_new": 0.7575,
+        "E_old": 0.712,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 3.272,
+        "kind": "baryon，spectators {u,s}",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "Σ−−Σ+": {
+        "E_new": 3.05,
+        "E_old": 2.959,
+        "coeff": 2,
+        "dE": 0.091,
+        "dm": 8.079,
+        "kind": "baryon 2×u↔d",
+        "s_new": 0.23186,
+        "s_old": 0.18868
+      },
+      "Σ−−Σ0": {
+        "E_new": 2.2925,
+        "E_old": 2.247,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 4.807,
+        "kind": "baryon，spectators {d,s}",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      },
+      "π+−π0": {
+        "E_new": 2.07909,
+        "E_old": 2.03359,
+        "coeff": 1,
+        "dE": 0.0455,
+        "dm": 4.59359,
+        "kind": "annihilation",
+        "s_new": 0.11593,
+        "s_old": 0.09434
+      }
+    },
+    "flag2024": {
+      "arxiv": "2411.04268v3",
+      "eps": 0.79,
+      "md": 4.7,
+      "ms": 93.46,
+      "mu": 2.14,
+      "mu_over_md": 0.465,
+      "s_eps": 0.06,
+      "s_md": 0.05,
+      "s_ms": 0.58,
+      "s_mu": 0.08,
+      "s_ratio": 0.024
+    },
+    "n_pass": 10,
+    "n_total": 10
+  }
+}
