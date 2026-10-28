@@ -1,6 +1,6 @@
 {
- "npass": 185,
- "ntotal": 185,
+ "npass": 199,
+ "ntotal": 199,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1128,6 +1128,90 @@
    "doc": "23_m4_intake_recheck.md",
    "status": "✅",
    "detail": "doc=0.332667 art=0.332666666667 |Δ|=3.33e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§25 npass",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=9 art=9（整數須全等）"
+  },
+  {
+   "name": "§25 ntotal",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=9 art=9（整數須全等）"
+  },
+  {
+   "name": "§25 W",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=43.48888889 art=43.4888888889 |Δ|=1.11e-09 ≤ 5.0e-09"
+  },
+  {
+   "name": "§25 lam_min",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=-2.0694941 art=-2.06949412366 |Δ|=2.37e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§25 C2_2",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=4.9538437 art=4.95384370367 |Δ|=3.67e-09 ≤ 5.0e-08"
+  },
+  {
+   "name": "§25 C2_full",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=1213.3798 art=1213.37979233 |Δ|=7.67e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§25 dev_id",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=1.469e-39 art=1.46936793853e-39 |Δ|=3.68e-43 ≤ 5.0e-43"
+  },
+  {
+   "name": "§25 dev_ex",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=668.31877 art=668.318771915 |Δ|=1.91e-06 ≤ 5.0e-06"
+  },
+  {
+   "name": "§25 glast",
+   "doc": "25_m2_m10_replies.md",
+   "status": "✅",
+   "detail": "doc=18 art=18（整數須全等）"
+  },
+  {
+   "name": "§八 sigma s_pred",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=0.15666667 art=0.156666666667 |Δ|=3.33e-09 ≤ 5.0e-09"
+  },
+  {
+   "name": "§八 sigma s_tot",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=0.19786942 art=0.197869424655 |Δ|=4.66e-09 ≤ 5.0e-09"
+  },
+  {
+   "name": "§八 sigma z_tot",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-9.764 art=-9.76362064713 |Δ|=3.79e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§八 sigma z_econv",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-15.98 art=-15.9843955553 |Δ|=4.40e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§八 sigma z_band",
+   "doc": "22_external_recompute.md",
+   "status": "✅",
+   "detail": "doc=-9.06 art=-9.05635119282 |Δ|=3.65e-03 ≤ 5.0e-03"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

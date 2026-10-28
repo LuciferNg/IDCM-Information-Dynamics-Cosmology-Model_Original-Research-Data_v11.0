@@ -1,0 +1,67 @@
+{
+ "module": "M7",
+ "script": "17_sigma_budget.py",
+ "checks": [
+  {
+   "item": "σ_pred = 0.156667（M4 值）",
+   "pass_": true,
+   "got": "0.15666667",
+   "want": "0.156667",
+   "note": ""
+  },
+  {
+   "item": "σ_tot = 0.197869（M4 值）",
+   "pass_": true,
+   "got": "0.197869425",
+   "want": "0.197869",
+   "note": ""
+  },
+  {
+   "item": "z 含 σ_X = −9.76（M4 宣稱）",
+   "pass_": true,
+   "got": "-9.764",
+   "want": "-9.76",
+   "note": ""
+  },
+  {
+   "item": "判決仍 KILL（|z| ≫ 3）",
+   "pass_": true,
+   "got": "-9.76",
+   "want": "|z|>3",
+   "note": "誤差預算不救預言"
+  },
+  {
+   "item": "帶內最保守仍 KILL",
+   "pass_": true,
+   "got": "-9.06",
+   "want": "|z|>3",
+   "note": ""
+  },
+  {
+   "item": "(1−ε) 退化診斷在含 σ_X 後仍成立（<1σ）",
+   "pass_": true,
+   "got": "+0.27σ",
+   "want": "<1σ",
+   "note": "⟹ 符號層診斷不受誤差預算影響"
+  },
+  {
+   "item": "γ 載體 X 分支給 z ≈ −16（但該分支已 NO-GO ⟹ 不得引用）",
+   "pass_": true,
+   "got": "-16.18",
+   "want": "≈ −16",
+   "note": "docs/20 §七：u/d 指派 NO-GO ⟹ 外部 X 為唯一可用 ⟹ canonical z = −9.76"
+  }
+ ],
+ "npass": 7,
+ "ntotal": 7,
+ "metrics": {
+  "s_pred": 0.15666666666666668,
+  "s_tot": 0.19786942465536317,
+  "z_tot": -9.763620647125766,
+  "z_econv": -15.984395555298148,
+  "z_band_tot": -9.056351192818962,
+  "d_wrong_tot": 0.2667112419815164,
+  "z_gamma": -16.17535418890259
+ },
+ "verdict": "accept M4 ④: canonical z=-9.76 (with sigma_X); -15.98 kept as X-exact convention"
+}

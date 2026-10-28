@@ -12,7 +12,7 @@
   {
    "item": "§3 incoming 已回應",
    "pass_": true,
-   "got": "7 條 incoming",
+   "got": "10 條 incoming",
    "want": "全部有後續事件",
    "note": ""
   },
@@ -28,9 +28,10 @@
   {
    "target": "M10",
    "n_out": 1,
-   "n_reply": 1,
+   "n_reply": 2,
    "reply_ts": [
-    "2026-10-28T07:35:06+08:00"
+    "2026-10-28T07:35:06+08:00",
+    "2026-10-28T09:36:51+08:00"
    ],
    "prior_incoming": [
     "2026-10-27T19:10:41+08:00",
@@ -42,36 +43,41 @@
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/21_incoming_triage.md"
    ],
-   "target_activity_after": 5,
+   "target_activity_after": 10,
    "status": "✅ 已閉環"
   },
   {
    "target": "M2",
-   "n_out": 3,
-   "n_reply": 0,
-   "reply_ts": [],
+   "n_out": 4,
+   "n_reply": 1,
+   "reply_ts": [
+    "2026-10-28T10:08:46+08:00"
+   ],
    "prior_incoming": [],
    "ts": [
     "2026-10-26T12:59:16+08:00",
     "2026-10-26T18:38:39+08:00",
-    "2026-10-28T09:35:13+08:00"
+    "2026-10-28T09:35:13+08:00",
+    "2026-10-28T10:26:18+08:00"
    ],
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/12_r5_verdict.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/15_additivity_scope_verdict.md",
-    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/24_session_handoff.md"
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/24_session_handoff.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/25_m2_m10_replies.md"
    ],
    "target_activity_after": 0,
-   "status": "⏳ 未閉環（無回覆）"
+   "status": "✅ 已閉環"
   },
   {
    "target": "M4",
-   "n_out": 6,
-   "n_reply": 3,
+   "n_out": 7,
+   "n_reply": 4,
    "reply_ts": [
     "2026-10-27T00:43:11+08:00",
     "2026-10-27T14:19:27+08:00",
-    "2026-10-28T09:13:33+08:00"
+    "2026-10-28T09:13:33+08:00",
+    "2026-10-28T10:16:10+08:00"
    ],
    "prior_incoming": [
     "2026-10-26T08:07:43+08:00"
@@ -82,7 +88,8 @@
     "2026-10-26T18:38:10+08:00",
     "2026-10-27T21:16:39+08:00",
     "2026-10-27T22:59:39+08:00",
-    "2026-10-28T09:23:48+08:00"
+    "2026-10-28T09:23:48+08:00",
+    "2026-10-28T10:27:39+08:00"
    ],
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/12_r5_verdict.md",
@@ -90,7 +97,8 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/16_gap_closure.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/21_incoming_triage.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/22_external_recompute.md",
-    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/23_m4_intake_recheck.md"
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/23_m4_intake_recheck.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/22_external_recompute.md"
    ],
    "target_activity_after": 0,
    "status": "✅ 已閉環"
@@ -109,7 +117,7 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/10_reproduction_gate.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/24_session_handoff.md"
    ],
-   "target_activity_after": 0,
+   "target_activity_after": 4,
    "status": "⏳ 未閉環（無回覆）"
   },
   {
@@ -135,8 +143,8 @@
  "notes_out": [],
  "npass": 3,
  "ntotal": 3,
- "n_out": 15,
- "n_in": 7,
+ "n_out": 17,
+ "n_in": 10,
  "targets": [
   "M10",
   "M2",

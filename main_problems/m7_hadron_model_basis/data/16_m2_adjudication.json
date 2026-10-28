@@ -1,0 +1,91 @@
+{
+ "module": "M7",
+ "script": "16_m2_adjudication_verify.py",
+ "checks": [
+  {
+   "item": "Σγ = 90（已註冊）",
+   "pass_": true,
+   "got": "90.0",
+   "want": "90",
+   "note": ""
+  },
+  {
+   "item": "λ_min = −2.0695（M2 C3）",
+   "pass_": true,
+   "got": "-2.0694941",
+   "want": "-2.0695",
+   "note": ""
+  },
+  {
+   "item": "C2 兩模 = 4.9538 MeV（M2 C2）",
+   "pass_": true,
+   "got": "4.9538437",
+   "want": "4.9538",
+   "note": ""
+  },
+  {
+   "item": "C2 全 44 模 ≈ 1213.4 MeV（M2 C2）",
+   "pass_": true,
+   "got": "1213.38",
+   "want": "1213.4",
+   "note": ""
+  },
+  {
+   "item": "C4 在事後定義讀法下恆真 ⟹ 該『檢定』零信息（非五項約束之一）",
+   "pass_": true,
+   "got": "max|dev| = 1.469e-39",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "★在字面讀法下，λ=−1 之族 200/200 違反互換律 ⟹ R2 之相容性依讀法而定",
+   "pass_": true,
+   "got": "200/200",
+   "want": "200/200",
+   "note": "⟹ 『p 族不完備』並非無條件成立，而係依『互換律』之定義選擇"
+  },
+  {
+   "item": "λ 項之可證偽偏差為 O(10²) MeV 級 ⟹ 字面讀法下 λ 族被強烈排除",
+   "pass_": true,
+   "got": "668.319 MeV",
+   "want": ">100 MeV",
+   "note": ""
+  },
+  {
+   "item": "M6 g(1)+g(1) = 13.676136 且 g(2) = 6.355114（非加性）",
+   "pass_": true,
+   "got": "13.676136 vs 6.355114",
+   "want": "13.676136 vs 6.355114",
+   "note": ""
+  },
+  {
+   "item": "g 在 d ≤ 44 單調減、零交叉於 d≈18.6（最後正值整數 d = 18）",
+   "pass_": true,
+   "got": "18",
+   "want": "18",
+   "note": "g(d)=g(N−d) 對稱 ⟹ 全域非單調；M2 之『零交叉 d=18』= 單調段最後正值"
+  }
+ ],
+ "verdict": {
+  "R1": "accepted",
+  "R2": "reading-dependent (C4 vacuous; literal reading kills lambda-family)",
+  "R3": "accepted (conditional theorem)",
+  "R4": "closed-moot"
+ },
+ "npass": 9,
+ "ntotal": 9,
+ "metrics": {
+  "SG": 90.0,
+  "SG2": 272.0,
+  "W": 43.48888888888889,
+  "lam_min": -2.0694941236586613,
+  "C2_2mode": 4.953843703672084,
+  "C2_full": 1213.3797923333334,
+  "dev_identity_max": 1.4693679385278594e-39,
+  "dev_literal_max": 26.635111162446254,
+  "n_violate_literal": 200,
+  "example_dev": 668.3187719148086,
+  "g_add_viol": 22,
+  "g_last_pos": 18
+ }
+}

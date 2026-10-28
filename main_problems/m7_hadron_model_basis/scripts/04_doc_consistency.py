@@ -40,6 +40,8 @@ J12 = load("12_o209_assignment.json")
 J13 = load("13_ud_verdict.json")
 J14 = load("14_external_recompute.json")
 J15 = load("15_m4_intake_recheck.json")
+J16 = load("16_m2_adjudication.json")
+J17 = load("17_sigma_budget.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -391,6 +393,26 @@ claim("§23 offcanon", "23_m4_intake_recheck.md", M15["off_Xcanon"], "| σ 偏�
 claim("§23 ns256", "23_m4_intake_recheck.md", M15["ns_req_256"], "| n_s 所需（X=2.56） |", cell=2, kth=0)
 claim("§23 nscanon", "23_m4_intake_recheck.md", M15["ns_req_canon"], "| n_s 所需（X canonical） |", cell=2, kth=0)
 claim("§23 emM1", "23_m4_intake_recheck.md", M15["em_M1"], "| em（M1 @ n_s=1） |", cell=2, kth=0)
+
+# ══════════ docs/25（M2 裁定回核） ══════════
+M16 = J16["metrics"]
+claim("§25 npass", "25_m2_m10_replies.md", J16["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§25 ntotal", "25_m2_m10_replies.md", J16["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§25 W", "25_m2_m10_replies.md", M16["W"], "| `W` |", cell=2, kth=0)
+claim("§25 lam_min", "25_m2_m10_replies.md", M16["lam_min"], "| `λ_min` |", cell=2, kth=0)
+claim("§25 C2_2", "25_m2_m10_replies.md", M16["C2_2mode"], "| C2 兩模 |", cell=2, kth=0)
+claim("§25 C2_full", "25_m2_m10_replies.md", M16["C2_full"], "| C2 全模 |", cell=2, kth=0)
+claim("§25 dev_id", "25_m2_m10_replies.md", M16["dev_identity_max"], "| 事後讀法最大偏差 |", cell=2, kth=0)
+claim("§25 dev_ex", "25_m2_m10_replies.md", M16["example_dev"], "| 例偏差（λ=−1） |", cell=2, kth=0)
+claim("§25 glast", "25_m2_m10_replies.md", M16["g_last_pos"], "| `g` 最後正值 d |", cell=2, kth=0, integer=True)
+
+# ══════════ docs/22 §八（誤差預算） ══════════
+M17 = J17["metrics"]
+claim("§八 sigma s_pred", "22_external_recompute.md", M17["s_pred"], "| `σ_pred = (5/3)·σ_X` |", cell=2, kth=0)
+claim("§八 sigma s_tot", "22_external_recompute.md", M17["s_tot"], "| `σ_tot = √(σ_em² + σ_pred²)` |", cell=2, kth=0)
+claim("§八 sigma z_tot", "22_external_recompute.md", M17["z_tot"], "| **`z`（含 `σ_X`，canonical）** |", cell=2, kth=0)
+claim("§八 sigma z_econv", "22_external_recompute.md", M17["z_econv"], "| `z`（`X` 視作精確，約定值） |", cell=2, kth=0)
+claim("§八 sigma z_band", "22_external_recompute.md", M17["z_band_tot"], "| `ε` 帶內最保守（`em = 2.124642`） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

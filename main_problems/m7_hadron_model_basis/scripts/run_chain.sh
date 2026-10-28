@@ -21,6 +21,8 @@ CHAIN=(
   13_ud_verdict         # u/d 指派生死判定（6/6）
   14_external_recompute # 外部 em(K) 重算＋判決（11/11）
   15_m4_intake_recheck  # M4 docs/39 回核（7/7）
+  16_m2_adjudication_verify # M2 裁定回核（9/9）
+  17_sigma_budget       # 誤差預算回核（7/7）
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )
