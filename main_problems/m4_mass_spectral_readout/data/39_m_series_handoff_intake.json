@@ -1,0 +1,159 @@
+{
+  "dof": 0,
+  "m5_deltaI0": {
+    "B_s/B": {
+      "data": "2691/2500",
+      "implied_ml_exponent": "6364430587549847/29907197317304470",
+      "model": "356/625",
+      "ratio": "2691/1424",
+      "sigma": "79/2500",
+      "z": "1267/79"
+    },
+    "D_s/D": {
+      "data": "1013/1000",
+      "implied_ml_exponent": "3345765259031973/14953598658652235",
+      "model": "1297/2500",
+      "ratio": "5065/2594",
+      "sigma": "29/10000",
+      "z": "4942/29"
+    }
+  },
+  "m7_recompute": {
+    "O_K_backsolved": "5121513143802146923/2114764254800000000",
+    "X_K": "42667/16670",
+    "band": [
+      "2106132568275207/991288000000000",
+      "1172876220656253/495644000000000"
+    ],
+    "dM2_K": "-243732937/62500",
+    "dM2_pi": "12611572265121/10000000000",
+    "em_central": "1122429931595769/495644000000000",
+    "em_misread": "138727294916331/495644000000000",
+    "ns_required_for_M1": "9020246667006440769/4229528509600000000",
+    "sigma": "239619873037299/1982576000000000",
+    "z_O_vs_BMW": "1953596290111746923/554068234757600000",
+    "z_central": "-1276705563727692/79873291012433",
+    "z_conservative": "-1184220700450138/79873291012433",
+    "z_vs_misread": "34897951844892/79873291012433"
+  },
+  "summary": {
+    "checks": [
+      {
+        "expect": "1261.157227",
+        "got": "1261.1572265121",
+        "label": "B1 dM2_pi  = 1261.157227 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "-3899.726992",
+        "got": "-3899.726992",
+        "label": "B2 dM2_K   = -3899.726992 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "2.264589",
+        "got": "2.26458896223049",
+        "label": "B3 em(K+-K0) central rounds to +2.264589 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "2.124642",
+        "got": "2.124642453328606",
+        "label": "B4 band lower rounds to 2.124642 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "2.366368",
+        "got": "2.3663682414318603",
+        "label": "B5 band upper rounds to 2.366368 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "0.120863",
+        "got": "0.12086289405162727",
+        "label": "B6 sigma_sym rounds to 0.120863 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "-15.98",
+        "got": "-15.984136218062696",
+        "label": "B7 z central = -15.98 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "-14.83",
+        "got": "-14.826241481220592",
+        "label": "B8 z conservative edge = -14.83 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "0.279893",
+        "got": "0.2798930178037684",
+        "label": "B9 (1-eps) misread = 0.279893 (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "0.44",
+        "got": "0.4369164135162506",
+        "label": "B10 prediction vs misread = +0.44 sigma (M7 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "2.42132",
+        "got": "2.421323813371285",
+        "label": "B11a M7 back-solve reproduced with X=2.56 -> 2.42132",
+        "ok": true
+      },
+      {
+        "expect": "2.421789",
+        "got": "2.4217891579061632",
+        "label": "B11b EXACT X=42667/16670 -> <O>_K = 2.421789 (M4 canonical)",
+        "ok": true
+      },
+      {
+        "expect": "3.52",
+        "got": "3.5241366922568136",
+        "label": "B12a M7 sigma-distance with X=2.56 -> +3.52",
+        "ok": true
+      },
+      {
+        "expect": "3.526",
+        "got": "3.5259128164357376",
+        "label": "B12b EXACT X -> +3.526 sigma (verdict unchanged: >3 KILL)",
+        "ok": true
+      },
+      {
+        "expect": ">1 (outside admitted range)",
+        "got": "2.132683736859245",
+        "label": "B13 M1 law would need n_s = +2.132 at K (|s|<=1 admitted)",
+        "ok": true
+      },
+      {
+        "expect": "0",
+        "got": "0",
+        "label": "B14 dof = 3 anchors x 1 prediction - 3 params = 0",
+        "ok": true
+      },
+      {
+        "expect": "170.0",
+        "got": "170.41379310344828",
+        "label": "D1 D_s/D |z| = 170 sigma (M5 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "16.0",
+        "got": "16.037974683544302",
+        "label": "D2 B_s/B |z| = 16 sigma (M5 quoted)",
+        "ok": true
+      },
+      {
+        "expect": "609.0",
+        "got": "609.0",
+        "label": "C1 sigma_c/|c|_K = 6.09 -> 609% relative error",
+        "ok": true
+      }
+    ],
+    "pass": 19,
+    "total": 19
+  }
+}
