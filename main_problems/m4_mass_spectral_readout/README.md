@@ -1,6 +1,6 @@
 # M4 — 質量 = 譜讀數差值：全費米子譜差閉合
 
-## 狀態: 部分閉合（partial, 2026-10-24）｜審計雙軌：`docs/23`（全量）＋`docs/24`（增量，違規 0）
+## 狀態: 部分閉合（partial, 2026-10-24）｜**三層審計 2026-10-28**：`docs/41`（L1 40/40 ＋ L2 33/33 ＋ L3 25/25 ＋ audit 12/12）
 
 > **2026-10-27 更新**：`⟨O⟩`／`em` 線**外部否證**（`docs/36`，R5：K 通道 **−15.98σ**、包絡 **14.43σ**；FLAG Eq.38–39 ＋ MILC 18 `ε=0.78`）。`⟨O⟩` 線全線退役；**唯一活預言 = `Q1`（`m_u = 2.1498 MeV`）**。收尾準備見 `docs/37`（維持 `partial`）。
 
@@ -55,9 +55,9 @@
 |:----|:-----|:----:|
 | `01_problem_record.md` | 問題陳述 + 已確立結構 + R1–R4 結果（§八）＋ append-only 更正（§九）＋ 逐腳本文檔登記（§十）＋ **開放問題整理（§十一）** ＋ **審計記錄（§十二）** | 部分閉合 |
 | `SESSION_START.md` | 起手式 + 接手起點 + 2026-10-24 執行記錄（§七） | 部分閉合 |
-| `docs/` | 23 檔（`01–23`）：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告（2026-10-24 全文重寫，輪次報告內容已融入正文） | 部分閉合 |
-| `scripts/` | 計算腳本（23 檔：01–08 遷入、09–23 新增；含 G5 `14_double_probe`、Q7 `15_exponent8`、Q6 `16_scale_operator`、Q8 `17_em_decomposition`、Q2/Q3 `18_em_constraints`、交付處理 `19_delivery_processing`、可辨識性 `20_identifiability`、上游核實 `21_upstream_verification`、O216/O86 核實 `22_o216_o86_verification`、全量審計 `23_full_audit`） | 部分閉合 |
-| `data/` | stdout log ＋ JSON（24 log ＋ 14 JSON，另 `audit_20261024/` 13 檔對照） | 部分閉合 |
+| `docs/` | **40 檔（`01–41`）**：逐腳本記錄＝前設問題＋事前判準＋執行＋結論報告；`docs/39–41` 為 2026-10-28 收件審計 ／ 三層審計 | 部分閉合 |
+| `scripts/` | **43 支 `.py`（NN 41 支 ＋ `l2_independent_verify`、`l3_doc_crosscheck`）＋ `run_chain.sh`（L1 全鏈 driver，鎖 BLAS 單線程）** | 部分閉合 |
+| `data/` | **44 log ＋ 33 JSON**，另 `audit_20261024/`（舊）與 `audit_20261028/`（本輪 40 支 L1 log ＋ exit_codes） | 部分閉合 |
 
 ## 編號規則
 
@@ -78,4 +78,4 @@ O257 (R7 docs/07 定案) + O66 (M_comp 降級) + O89 (γ₁ 冪階梯，2026-10-
 
 ## 註冊
 
-pid `M4`（created 2026-10-21；state partial 2026-10-24；handoff → P6 A 身份、O140 selection rule）
+pid `M4`（created 2026-10-21；state partial；2026-10-28 三層審計全綠；handoff → P6 A 身份、O140 selection rule、M5/B3、M7）

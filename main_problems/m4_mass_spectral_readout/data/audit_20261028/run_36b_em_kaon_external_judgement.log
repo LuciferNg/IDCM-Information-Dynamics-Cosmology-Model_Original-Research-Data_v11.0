@@ -1,0 +1,29 @@
+==========================================================================================
+M4 scripts/36b -- R5 K-channel external judgement (FLAG Eq.39 definition pinned)
+==========================================================================================
+PASS S1 dM2_pi = 1261.15 MeV^2                                        | 1261.157 | expect 1261.15
+PASS S2 dM2_K total = -3899.7 MeV^2 (K0 heavier)                      | -3899.73 | expect -3899.7
+PASS S3 M_K+ - M_K0 = -3.934 MeV                                      | -3.934 | expect -3.934
+
+(dM2_K)_gamma = (1+eps) dM2_pi = 1.78 x 1261.16 = 2244.86 MeV^2
+em(K+ - K0)   = 2.2646 MeV   68% range [2.1246, 2.3664]   sigma_sym = 0.1209
+reference: Dashen (eps=0) -> em(K+ - K0) = 1.2722 MeV
+
+pre-registered prediction +0.3327 MeV -> z = -15.98 sigma ; ratio pred/em = 0.147
+envelope: -em = -2.2646 vs [-0.52, +0.55] -> OUTSIDE (z_edge = 14.43)
+
+CATEGORY  prediction: KILL     (z=-15.98)   envelope: KILL     (z_edge=14.43)
+PASS V1 em(K+ - K0) from MILC eps = 2.2646 MeV                        | 2.2646 | expect 2.2646
+PASS V2 pre-registered prediction KILLED (|z| >= 3)                   | KILL | expect KILL
+PASS V3 docs/30 envelope KILLED as well                               | KILL | expect KILL
+PASS V4 prediction is ~6.8x too small                                 | 0.1469 | expect 0.1469
+PASS V5 Dashen-scale value 1.2722 MeV reproduced                      | 1.2722 | expect 1.2722
+
+==========================================================================================
+SUMMARY: 8/8 PASS
+==========================================================================================
+Reading: the <O>-corrected kaon prediction (+0.333 MeV) is excluded by lattice
+QCD+QED at ~16 sigma, and so is the type-independent envelope of docs/30.
+The lattice confirms instead the plain Dashen-scale splitting 2.26 MeV -- exactly
+the number the <O> line was introduced to remove.
+wrote data/36_em_kaon_external.json

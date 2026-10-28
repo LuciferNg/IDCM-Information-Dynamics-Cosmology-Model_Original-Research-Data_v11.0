@@ -1,0 +1,45 @@
+====================================================================================================
+M4 L2 獨立重推導（零 L1 import；零 docs 讀取）
+====================================================================================================
+PASS A1 gamma1 == 4 sin^2(pi/88)                          got=0.00509577077949       dev=3.976e-46
+PASS A2 4/gamma1 = 784.96 (docs/37 A4)                    got=784.964664442          dev=5.942e-06
+PASS A3 γn + γ(44-n) = 4 for all n=1..43 (violations)     got=0.0                    dev=0.000e+00
+PASS A4 minpoly(2cos(2π/88)) degree = 20                  got=20.0                   dev=0.000e+00
+PASS A5 minpoly residual/scale < 1e−40 (pslq 精確回復核實)      got=1.0                    dev=0.000e+00
+  [A5] |resid| = 9.876e-33  scale = 1.277e+08
+PASS A6 minpoly_u(γ1) = 0 (|殘差|/scale < 1e−30)            got=1.0                    dev=0.000e+00
+  [A6] |p(γ1)| = 9.876e-33  scale = 1.059e+06
+PASS A7 rank_Q span{γ1..γ43} = 20 (exact rational elimination) got=20.0                   dev=0.000e+00
+PASS A8 deg_Q(γ1) = φ(88)/2 = 20                          got=20.0                   dev=0.000e+00
+PASS B1 hop_max = 88 − L9 = 12                            got=12.0                   dev=0.000e+00
+  [note] R = 12.004861873  （docs/11 報 12.005533; 見 L3 之 over-precision 檢查）
+PASS B2 m_u(span=12) = 2.1498 MeV (docs/37 A2)            got=2.1498146081           dev=6.795e-06
+PASS B3 m_u(span=12) vs FLAG 2.14±0.08 = +0.12σ           got=0.122682601202         dev=2.236e-02
+PASS C1 X = m_d − m_u = 2.56 MeV                          got=2.56                   dev=0.000e+00
+PASS C2 sigma_X(quadrature) = 0.0943 (docs/18 報 0.094)    got=0.0943398113206        dev=4.222e-04
+PASS D1 ΔM²_π = 1261.157 MeV²                             got=1261.15722651          dev=1.796e-07
+PASS D2 ΔM²_K = −3899.727 MeV²                            got=-3899.726992           dev=2.051e-09
+PASS D3 (ΔM²_K)_γ = 2244.86 MeV²                          got=2244.85986319          dev=6.094e-08
+PASS D4 em(K+−K0) = +2.2646 MeV                           got=2.26458896223          dev=4.874e-06
+PASS D5 68% band = [2.1246, 2.3664]                       got=1.0                    dev=0.000e+00
+  [band] 2.124642 .. 2.366368
+PASS D6 sigma_em(sym) = 0.1209                            got=0.120862894052         dev=3.069e-04
+PASS D7 Dashen (ε=0) = +1.2722 MeV                        got=1.27224099002          dev=3.222e-05
+PASS E1 |M_K0 − M_K+| = 3.934 GeV 級（PDG→表列 3.9340）        got=3.934                  dev=1.019e-49
+PASS E2 single-form em_pred = +0.3327 MeV (docs/29, 4 s.f. 捨入) got=0.332666666667         dev=1.002e-04
+PASS E3 z(docs/29 pred) = −15.98σ                         got=-15.9844120127         dev=2.761e-04
+PASS E4 z(docs/30 envelope, 距最近邊界) = 14.43σ               got=14.4344463693          dev=3.081e-04
+PASS E5 ⟨O⟩(n_s=1) = 5/3 exactly                          got=1.66666666667          dev=0.000e+00
+PASS E6 docs/29 表列 ⟨O⟩_pred = 1.667 即 5/3 之捨入（零插值）        got=1.66666666667          dev=2.000e-04
+PASS E7 z(含 σ_X=0.094 約定) = −9.76σ                        got=-9.76362533417         dev=3.714e-04
+PASS E8 z(含 σ_X=0.0943 四捨五入前) = −9.74σ                    got=-9.74153381602         dev=1.575e-04
+PASS E9 ⟨O⟩_K(外部) = 2.421324                              got=2.42132381337          dev=7.708e-08
+PASS E10 required n_s = 2.131986 > max reachable 2        got=2.13198572006          dev=1.313e-07
+PASS E11 required n_s exceeds domain max (2)              got=1.0                    dev=0.000e+00
+PASS E12 z(⟨O⟩_K vs BMW 1.498±0.262) = +3.524σ            got=3.52413669226          dev=3.879e-05
+PASS F1 x(n→peν) = 0.7823 MeV                             got=0.782333               dev=4.218e-05
+
+====================================================================================================
+L2 RESULT: 33/33 PASS   (FAIL 0)
+====================================================================================================
+JSON -> data/l2_independent_verify.json

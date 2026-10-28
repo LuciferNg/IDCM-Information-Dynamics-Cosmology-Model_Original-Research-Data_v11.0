@@ -8,12 +8,12 @@ verdict: -
 flags:   running; r1-gate-pass; r2-bridge-exact; r3-lattice-rejudge; r4-negative
 owner:   M4
 created: 2026-10-21
-updated: 2026-10-24
+updated: 2026-10-28
 prereq:  O257 (R7 docs/07 定案) + O66 (M_comp 降級) + O89 (γ₁ 冪階梯, O85 污染通報後更新版) + O57 (m_ν 盲測) + P6 (§10 差值閉合) + O73 (c=Goldstone) + O212 (dof=1)
 source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新session重建推導鏈及報告文檔
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始（只開不推；推導鏈＋報告文檔由新 session 完成）**
+> **狀態**: 🟡 **partial（live field，2026-10-28）** —— 已推多輪；三層審計全綠（見 §二十八）。下行保留首輪「已註冊—未開始」歷史（append-only）
 > **2026-10-24 追加**: 🟡 **partial — R1 閘通過、R2 橋精確、R3 lattice 重判、R4 A 攻堅（negative）；未 close（見 §八／docs/13_mdmu_second_instance.md）**
 > **建立**: 2026-10-21（v11 Reality-Architecture）
 > **位置**: `main_problems/m4_mass_spectral_readout/`
@@ -733,3 +733,23 @@ close 觸發器 = `Q1` 被外部判決（`m_u` 獨立量度 <0.5%），唔係內
 **M10（09:36×2）：**
 - `W4` 判號精度需求係**表示依賴**（M 表示 `4.17e−4` vs X 表示 `3.06e−1`，差 **733.8×**，獨立核吻合）⟹ 採納為約束：任何 sign 判詞須標表示；X 表示誤差棒放大 734× 方可比；**「精度牆」不可作通道屬性**。`em/|x| = 161.9%` 亦核（缺口由 `em` 算子缺失主宰）。
 - `W6` 池密度 `20.61%` 係**通道不完備**（每漏一類收縮 ~30%）非槽密度 ⟹ 採納為約束：池密度計算須分因，不得以 20.61% 作譜側診斷。`20.61%`／`90`／池大小屬 M10 產權，M4 未重建、不引用。
+
+## 二十八、推導鏈審計（2026-10-28，Audit-Verify，`docs/41`）
+
+**三層驗證四個數：L1 40/40 ｜ L2 33/33 ｜ L3 25/25（MISS 0）｜ audit 12/12**
+（`scripts/run_chain.sh`＋`scripts/41_chain_audit.py`＋`scripts/l2_independent_verify.py`＋`scripts/l3_doc_crosscheck.py`；三支新腳本各跑兩次 byte-identical）
+
+**新建立之閘（可繼承）**
+- `run_chain.sh`：L1 40 支全鏈，鎖 `OMP/OPENBLAS/MKL_NUM_THREADS=1`；`data/audit_20261028/exit_codes.txt` 全 `rc=0`。
+- `l2_independent_verify.py`：**零 L1 import、零 docs 讀**，由原始輸入（FLAG24／PDG／O257 R7／`N_d=88`／`L9=76`）重推 33 項；其中譜代數由 **pslq 精確最小多項式 ＋ Fraction 精確消元** 得出 `rank_ℚ = 20`（此前只係 doc 宣稱，L1 無 producer）。
+- `l3_doc_crosscheck.py`：唯讀，25 claims，期望值**只來自 L2**；7 條 `EXCLUDED` 明文申報（pool 枚舉／上游產權）。
+
+**發現（詳 `docs/41` §五）**
+- 🔴 **F4**：`docs/37` C 欄「`⟨O⟩` 線 16σ」與正式值 **−9.76σ** 不一致 ⟹ 已 append 更正（§八），判決 KILL 不變。
+- 🟡 **F3**：`σ_R = 0.039896`（L1 MC）vs 解析 **0.039714**（差 0.46%）⟹ 不可逐位重現；判決 0.14σ 不變，`docs/11` 已加精度附註。
+- 🟡 **F1**：`docs/26–38` 缺 §一 三節（19 處歷史結構債）⟹ 本輪補 `docs/39/40/41`，其餘待裁定。
+- 🟡 **F2/F5/F6/F7/F8/F9**：36/36b 撞檔、`__pycache__`、README 檔數、`rank_ℚ` 無 L1 producer、L2 覆蓋缺口（6 pool 型＋3 上游產權）、`24` 之恆真 FAIL。
+
+**確定性**：`data/*.json` 30 個中 **28 個**與審計前 md5 一致；差異 2 個為檔案計數型審計器（`23`、`24`）之預期變化。
+
+**未處理（待授權）**：① `docs/26–38` 補三節 ② `36b` 另寫 JSON ③ 獨立 pool 枚舉器 ④ `24` exit 語義 ⑤ `.gitignore`。

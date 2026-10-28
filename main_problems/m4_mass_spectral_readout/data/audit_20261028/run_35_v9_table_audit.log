@@ -1,0 +1,35 @@
+==================================================================================
+M4 scripts/35 -- v9 table audit: coverage / injectivity / cross-table conflict
+==================================================================================
+PASS C1a T1 covers 7 of 9 charged fermions                    | 7/9 | expect 7/9
+PASS C1b T1 is missing exactly {u, d}                         | ['d', 'u'] | expect ['d', 'u']
+PASS C1c T1 sector sets are disjoint (a partition)            | {'Up': ['c', 't'], 'Down': ['b', 's'], 'Lepton': ['e', 'mu', 'tau']} | expect disjoint
+PASS C2a T2 is NOT injective                                  | {0: ['t', 'b', 'tau'], 8: ['mu', 'd']} | expect non-empty
+PASS C2b k=8 is shared by mu and d                            | ['mu', 'd'] | expect ['d', 'mu']
+PASS C2c T2 mode-count 6 < 9 particles                        | 6 | expect 6
+PASS C3a T1 puts k=5 in the Lepton sector                     | Lepton | expect Lepton
+PASS C3b T3 puts the electron at k=5                          | 5 | expect 5
+PASS C3c T1 puts the DOWN-quark sector at k=4, T3 puts d at k=8 | ('Down', 8) | expect ('Down', 8)
+PASS C3d T2 puts u at k=5 and d at k=8 -- third distinct convention | (5, 8) | expect (5, 8)
+PASS C4a T0 covers 9 of 9                                     | 9/9 | expect 9/9
+PASS C4b T0 is injective                                      | injective | expect injective
+
+[C5] pairwise agreement on shared particles:
+   T1 vs T2: shared=7  agree=1  -> ['c']
+   T1 vs T3: shared=1  agree=1  -> ['e']
+   T1 vs T0: shared=7  agree=2  -> ['mu', 's']
+   T2 vs T0: shared=9  agree=0  -> []
+   T3 vs T0: shared=3  agree=0  -> []
+PASS C5a T1 vs T3 agree on the electron only                  | ['e'] | expect ['e']
+PASS C5b T1 vs T2 agree on exactly one particle (c, k=1)      | ['c'] | expect ['c']
+PASS C5c T3 vs T0 agree on nothing                            | [] | expect []
+PASS C5d T2 vs T0 agree on nothing                            | [] | expect []
+
+==================================================================================
+SUMMARY: 16/16 PASS
+==================================================================================
+Reading: T1 is a 7/9 partial enumeration; T2 is non-injective (k=8 hosts mu and d,
+k=0 hosts t,b,tau); T3 is a third convention that contradicts T1 on k=5/k=4;
+and none of T1/T2/T3 agrees with the ruled T0.  The 'u/d exception' is therefore
+not a property of u/d -- it is a symptom of three mutually inconsistent tables.
+wrote data/35_v9_table_audit.json

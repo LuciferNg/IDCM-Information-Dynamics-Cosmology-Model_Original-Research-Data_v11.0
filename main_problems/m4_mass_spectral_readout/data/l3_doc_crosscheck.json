@@ -1,0 +1,303 @@
+{
+  "claims": [
+    {
+      "dev": 5.942231811462335e-06,
+      "doc": "37_closeout_readiness.md",
+      "doc_value": 784.96,
+      "l2_key": "four_over_gamma1",
+      "l2_value": 784.964664442,
+      "literal": "784.96",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 6.795004529925732e-06,
+      "doc": "37_closeout_readiness.md",
+      "doc_value": 2.1498,
+      "l2_key": "m_u_pred_MeV",
+      "l2_value": 2.149814608,
+      "literal": "2.1498",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 5.315573863047828e-05,
+      "doc": "37_closeout_readiness.md",
+      "doc_value": 12.0055,
+      "l2_key": "R_span",
+      "l2_value": 12.0048618727,
+      "literal": "12.0055",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 5.590462490256579e-05,
+      "doc": "11_lattice_flag_span.md",
+      "doc_value": 12.005533,
+      "l2_key": "R_span",
+      "l2_value": 12.0048618727,
+      "literal": "12.005533",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 6.795004529925732e-06,
+      "doc": "11_lattice_flag_span.md",
+      "doc_value": 2.1498,
+      "l2_key": "m_u_pred_MeV",
+      "l2_value": 2.149814608,
+      "literal": "2.1498",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 1.796048862217289e-07,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 1261.157,
+      "l2_key": "dM2_pi",
+      "l2_value": 1261.15722651,
+      "literal": "1261.157",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 7.713360464224607e-07,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": -3899.73,
+      "l2_key": "dM2_K",
+      "l2_value": -3899.726992,
+      "literal": "-3899.73",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 6.094367066240616e-08,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 2244.86,
+      "l2_key": "dM2_K_gamma",
+      "l2_value": 2244.85986319,
+      "literal": "2244.86",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 4.874072153629411e-06,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 2.2646,
+      "l2_key": "em_lat_MeV",
+      "l2_value": 2.26458896223,
+      "literal": "2.2646",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.00030700820360371304,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 0.1209,
+      "l2_key": "sigma_em",
+      "l2_value": 0.1208628941,
+      "literal": "0.1209",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 3.222659857680875e-05,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 1.2722,
+      "l2_key": "dashen_MeV",
+      "l2_value": 1.272241,
+      "literal": "1.2722",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.00027526838667703534,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 15.98,
+      "l2_key": "z_single",
+      "l2_value": -15.9844,
+      "literal": "15.98",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.00030482735686972813,
+      "doc": "36_r5_em_kaon_external_verdict.md",
+      "doc_value": 14.43,
+      "l2_key": "z_envelope",
+      "l2_value": 14.4344,
+      "literal": "14.43",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.00010020030059114297,
+      "doc": "29_operator_structure.md",
+      "doc_value": 0.3327,
+      "l2_key": "em_pred_single",
+      "l2_value": 0.3326666667,
+      "literal": "0.3327",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.0,
+      "doc": "29_operator_structure.md",
+      "doc_value": 3.934,
+      "l2_key": "M_K0_minus_Kplus",
+      "l2_value": 3.934,
+      "literal": "3.9340",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 7.723047984137057e-08,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 2.421324,
+      "l2_key": "O_K_backsolved",
+      "l2_value": 2.421323813,
+      "literal": "2.421324",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 3.972600407476122e-05,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 3.524,
+      "l2_key": "z_O_K",
+      "l2_value": 3.52414,
+      "literal": "3.524",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 1.3133296224641927e-07,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 2.131986,
+      "l2_key": "n_s_required",
+      "l2_value": 2.13198572,
+      "literal": "2.131986",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 1.0019038074797396e-06,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 0.332667,
+      "l2_key": "em_pred_single",
+      "l2_value": 0.3326666667,
+      "literal": "0.332667",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 2.1063829338610184e-06,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 0.156667,
+      "l2_key": "sigma_pred_X",
+      "l2_value": 0.15666667,
+      "literal": "0.156667",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 1.8193822429344337e-06,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 0.197869,
+      "l2_key": "sigma_tot",
+      "l2_value": 0.19786936,
+      "literal": "0.197869",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 0.0003717879518170349,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 9.76,
+      "l2_key": "z_with_X_budget",
+      "l2_value": -9.76363,
+      "literal": "9.76",
+      "pass": true,
+      "tol": 0.005
+    },
+    {
+      "dev": 0.0,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 2.56,
+      "l2_key": "X_MeV",
+      "l2_value": 2.56,
+      "literal": "2.560",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.0,
+      "doc": "40_recheck_m7_m10_20261028.md",
+      "doc_value": 0.094,
+      "l2_key": "sigma_X_convention",
+      "l2_value": 0.094,
+      "literal": "0.094",
+      "pass": true,
+      "tol": 0.0005
+    },
+    {
+      "dev": 0.0,
+      "doc": "18_em_constraints.md",
+      "doc_value": 2.56,
+      "l2_key": "X_MeV",
+      "l2_value": 2.56,
+      "literal": "2.56",
+      "pass": true,
+      "tol": 0.005
+    }
+  ],
+  "excluded": [
+    {
+      "doc": "docs/37 A4",
+      "item": "density 97.9% / 1.97% / 5.59% / 17 identity",
+      "reason": "pool 枚舉（L1 scripts/03,09,16）；L2 未重建"
+    },
+    {
+      "doc": "docs/37 C",
+      "item": "MC null p = 0.550 / 斜率 7.2× / 108 模型",
+      "reason": "pool + MC（L1 scripts/31）；L2 未重建"
+    },
+    {
+      "doc": "docs/37 A5",
+      "item": "O124 41.2σ / O85 R² = 0.310001 / a ≤ 0.9729 fm",
+      "reason": "上游產權（O124/O85）— M4 只引用，不重建"
+    },
+    {
+      "doc": "docs/37 C",
+      "item": "A = 1.64337 / 87γ₁⁴",
+      "reason": "pool 枚舉（L1 scripts/09）"
+    },
+    {
+      "doc": "docs/40 §4",
+      "item": "20.61% / 90 條",
+      "reason": "M10 產權（docs/40 已明文：M4 未重建、不引用）"
+    },
+    {
+      "doc": "docs/40 §4",
+      "item": "733.8× / 161.9%",
+      "reason": "M10 W4 產權（M4 只獨立核比值，L2 未列 input）"
+    },
+    {
+      "doc": "docs/36 §四",
+      "item": "1.78 / ε = 0.78(1)(+8/−11) / [0.67,0.86]",
+      "reason": "外部錨（MILC18 → FLAG Eq.38），已作 L2 INPUT"
+    },
+    {
+      "doc": "docs/11 / 37",
+      "item": "σ_R = 0.039896",
+      "reason": "L1 之 2e5 樣本 MC 值；L2 解析傳播給 0.039714（相差 0.46%，超 5e−4 容差）⟹ 不可逐位重現，判決 0.14σ 不受影響；已列入審計發現 F3"
+    }
+  ],
+  "missing": [],
+  "summary": {
+    "fail": 0,
+    "miss": 0,
+    "pass": 25,
+    "total": 25
+  }
+}

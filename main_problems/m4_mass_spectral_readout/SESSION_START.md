@@ -111,3 +111,6 @@ source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新se
 3. **🔴 A 身份**：已 handoff P6（需 σ 橋算子化 O142 或 Λ_eff 通道 O86）
 4. **selection rule**（為何選某個 ℤ[γ₁] 元素）：已 handoff O140
 5. 本 M **唔 close**（partial；剩餘項屬觀測精度 + 他 O 產權）
+
+---
+> ⚠️ **2026-10-28 審計輪（append；第 1 輪快照不動）**：推導鏈三層審計 —— L1 40/40、L2 33/33、L3 25/25、audit 12/12；發現 `docs/37` 之「16σ」應為 **−9.76σ**（已更正）、`σ_R` 屬 MC 值（解析 0.039714）、`docs/26–38` 缺 §一 三節（歷史結構債）。詳 `docs/41_chain_audit.md`、`01_problem_record.md` §二十八。

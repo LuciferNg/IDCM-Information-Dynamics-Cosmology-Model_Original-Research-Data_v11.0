@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "check": "1a 每支 NN 腳本都有 doc（或已申報共用）",
+      "detail": "script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）'}",
+      "ok": true
+    },
+    {
+      "check": "1b doc-only 已申報",
+      "detail": "doc-only = {'32': 'docs/32_flavour_structure_scout.md — 純設計/scout 文檔，無腳本（宣告式）', '37': 'docs/37_closeout_readiness.md — 收尾準備文檔，無腳本（宣告式）'}",
+      "ok": true
+    },
+    {
+      "check": "1c 非 NN 腳本（L2/L3/driver）入審計範圍",
+      "detail": "pycache=無",
+      "ok": true
+    },
+    {
+      "check": "3 路徑衛生（scripts 無真 /tmp 寫入）",
+      "detail": "hits = 0",
+      "ok": true
+    },
+    {
+      "check": "4a 每個 data/*.json 有 producer",
+      "detail": "orphans = 0",
+      "ok": true
+    },
+    {
+      "check": "4b 一產物一 producer（多產者須已申報）",
+      "detail": "multi-producer = {'l2_independent_verify.json': ('L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）', ['l2_independent_verify.py', 'l3_doc_crosscheck.py']), '36_em_kaon_external.json': ('36 v1 與 36b v2 同寫（v2 取代，已申報）', ['36_em_kaon_external_judgement.py', '36b_em_kaon_external_judgement.py']), '23_full_audit.json': ('23 產出、24 讀寫加註（已申報）', ['23_full_audit.py', '24_audit_round2.py'])}",
+      "ok": true
+    },
+    {
+      "check": "4c 腳本宣告輸出全部存在",
+      "detail": "missing = 0（自身輸出 41_chain_audit.json 已申報）",
+      "ok": true
+    },
+    {
+      "check": "2 headline 數字 → data → producer（三重反查）",
+      "detail": "gaps = 0",
+      "ok": true
+    },
+    {
+      "check": "6 driver 存在且鎖 BLAS 單線程",
+      "detail": "run_chain.sh=True, OMP=1=True",
+      "ok": true
+    },
+    {
+      "check": "7a L2 全 PASS",
+      "detail": "L2 = 33/33",
+      "ok": true
+    },
+    {
+      "check": "7b L3 全 PASS 且零 MISS",
+      "detail": "L3 = 25/25 (miss 0)",
+      "ok": true
+    },
+    {
+      "check": "7c L1 全鏈重跑零非零退出",
+      "detail": "nonzero = 0（log dir=data/audit_20261028）",
+      "ok": true
+    }
+  ],
+  "inventory": {
+    "data_json": 33,
+    "docs": 40,
+    "nn_scripts": 41,
+    "scripts": 43
+  },
+  "l2": {
+    "fail": 0,
+    "pass": 33,
+    "total": 33
+  },
+  "l3": {
+    "fail": 0,
+    "miss": 0,
+    "pass": 25,
+    "total": 25
+  },
+  "summary": {
+    "pass": 12,
+    "total": 12
+  }
+}

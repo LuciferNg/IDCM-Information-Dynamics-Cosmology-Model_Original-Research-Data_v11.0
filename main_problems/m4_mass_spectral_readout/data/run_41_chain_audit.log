@@ -1,0 +1,21 @@
+====================================================================================================
+M4 scripts/41 -- 推導鏈審計（六項核對 ＋ L2/L3）
+scripts=43（NN 前綴 41）｜docs=40｜data json=33
+====================================================================================================
+PASS 1a 每支 NN 腳本都有 doc（或已申報共用）                      script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）'}
+PASS 1b doc-only 已申報                                doc-only = {'32': 'docs/32_flavour_structure_scout.md — 純設計/scout 文檔，無腳本（宣告式）', '37': 'docs/37_closeout_readiness.md — 收尾準備文檔，無腳本（宣告式）'}
+PASS 1c 非 NN 腳本（L2/L3/driver）入審計範圍                  pycache=無
+PASS 3 路徑衛生（scripts 無真 /tmp 寫入）                     hits = 0
+PASS 4a 每個 data/*.json 有 producer                   orphans = 0
+PASS 4b 一產物一 producer（多產者須已申報）                      multi-producer = {'l2_independent_verify.json': ('L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）', ['l2_independent_verify.py', 'l3_doc_crosscheck.py']), '36_em_kaon_external.json': ('36 v1 與 36b v2 同寫（v2 取代，已申報）', ['36_em_kaon_external_judgement.py', '36b_em_kaon_external_judgement.py']), '23_full_audit.json': ('23 產出、24 讀寫加註（已申報）', ['23_full_audit.py', '24_audit_round2.py'])}
+PASS 4c 腳本宣告輸出全部存在                                  missing = 0（自身輸出 41_chain_audit.json 已申報）
+PASS 2 headline 數字 → data → producer（三重反查）          gaps = 0
+PASS 6 driver 存在且鎖 BLAS 單線程                         run_chain.sh=True, OMP=1=True
+PASS 7a L2 全 PASS                                   L2 = 33/33
+PASS 7b L3 全 PASS 且零 MISS                           L3 = 25/25 (miss 0)
+PASS 7c L1 全鏈重跑零非零退出                                nonzero = 0（log dir=data/audit_20261028）
+
+====================================================================================================
+AUDIT RESULT: 12/12 PASS
+====================================================================================================
+JSON -> data/41_chain_audit.json

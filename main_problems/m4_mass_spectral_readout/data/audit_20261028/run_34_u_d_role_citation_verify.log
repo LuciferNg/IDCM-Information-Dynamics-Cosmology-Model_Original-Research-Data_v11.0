@@ -1,0 +1,33 @@
+====================================================================================
+M4 scripts/34 -- citation verification: u/d role & assignment (O209 / O120)
+====================================================================================
+
+[V1/V2] in-block orderings (heavy -> light):
+   Gen3 ['t', 'b', 'tau']      -> ['up', 'dn', 'lp']
+   Gen2 ['c', 'mu', 's']       -> ['up', 'lp', 'dn']
+   Gen1 ['d', 'u', 'e']        -> ['dn', 'up', 'lp']
+PASS V1 three blocks carry different role orderings (role != position) | 3 | expect 3 distinct
+PASS V2a Gen3 == [up, dn, lp]                                   | ['up', 'dn', 'lp'] | expect [up, dn, lp]
+PASS V2b Gen2 == [up, lp, dn]                                   | ['up', 'lp', 'dn'] | expect [up, lp, dn]
+PASS V2c Gen1 == [dn, up, lp]                                   | ['dn', 'up', 'lp'] | expect [dn, up, lp]
+
+[V3] mass chain: ['t', 'b', 'tau', 'c', 'mu', 's', 'd', 'u', 'e']
+PASS V3 quoted chain t>b>tau>c>mu>s>d>u>e reproduces            | True | expect True
+PASS V4 Gen3 role multiset == [dn, lp, up]                      | ['dn', 'lp', 'up'] | expect [dn, lp, up]
+PASS V4 Gen2 role multiset == [dn, lp, up]                      | ['dn', 'lp', 'up'] | expect [dn, lp, up]
+PASS V4 Gen1 role multiset == [dn, lp, up]                      | ['dn', 'lp', 'up'] | expect [dn, lp, up]
+
+[V5] modes sorted by mass ascending: [(1, 'e'), (2, 'u'), (3, 'd'), (4, 's'), (5, 'mu'), (7, 'c'), (9, 'tau'), (11, 'b'), (13, 't')]
+PASS V5a lightest three modes == (e, u, d)                      | ['e', 'u', 'd'] | expect ['e', 'u', 'd']
+PASS V5b assignment e->1, u->2, d->3                            | {1: 'e', 2: 'u', 3: 'd'} | expect {'1': 'e', '2': 'u', '3': 'd'}
+PASS V5c legal mode set == {1,2,3,4,5,7,9,11,13}                | [1, 2, 3, 4, 5, 7, 9, 11, 13] | expect [1, 2, 3, 4, 5, 7, 9, 11, 13]
+
+[V6] ruled assignment: u -> n=2, d -> n=3 ; v9 section D.1 sector reading: u->k=1, d->k=4
+PASS V6a u sits at n=2 (not k=1)                                | 2 | expect 2
+PASS V6b d sits at n=3 (not k=4)                                | 3 | expect 3
+PASS V6c the two schemes disagree on both quarks                | (2, 3) | expect (1, 4)
+
+====================================================================================
+SUMMARY: 14/14 PASS
+====================================================================================
+wrote data/34_u_d_role.json

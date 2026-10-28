@@ -1,0 +1,43 @@
+====================================================================================================
+M4 L3 doc 交叉核對（唯讀；期望值只來自 L2）
+====================================================================================================
+PASS 37_closeout_readiness.md                   784.96       L2(four_over_gamma1      )=784.9646644          dev=5.94e-06 tol=5e-04
+PASS 37_closeout_readiness.md                   2.1498       L2(m_u_pred_MeV          )=2.149814608          dev=6.80e-06 tol=5e-04
+PASS 37_closeout_readiness.md                   12.0055      L2(R_span                )=12.00486187          dev=5.32e-05 tol=1e-04
+PASS 11_lattice_flag_span.md                    12.005533    L2(R_span                )=12.00486187          dev=5.59e-05 tol=1e-04
+PASS 11_lattice_flag_span.md                    2.1498       L2(m_u_pred_MeV          )=2.149814608          dev=6.80e-06 tol=5e-04
+PASS 36_r5_em_kaon_external_verdict.md          1261.157     L2(dM2_pi                )=1261.157227          dev=1.80e-07 tol=1e-04
+PASS 36_r5_em_kaon_external_verdict.md          -3899.73     L2(dM2_K                 )=-3899.726992         dev=7.71e-07 tol=1e-04
+PASS 36_r5_em_kaon_external_verdict.md          2244.86      L2(dM2_K_gamma           )=2244.859863          dev=6.09e-08 tol=1e-04
+PASS 36_r5_em_kaon_external_verdict.md          2.2646       L2(em_lat_MeV            )=2.264588962          dev=4.87e-06 tol=5e-04
+PASS 36_r5_em_kaon_external_verdict.md          0.1209       L2(sigma_em              )=0.1208628941         dev=3.07e-04 tol=5e-04
+PASS 36_r5_em_kaon_external_verdict.md          1.2722       L2(dashen_MeV            )=1.272241             dev=3.22e-05 tol=5e-04
+PASS 36_r5_em_kaon_external_verdict.md          15.98        L2(z_single              )=-15.9844             dev=2.75e-04 tol=5e-04
+PASS 36_r5_em_kaon_external_verdict.md          14.43        L2(z_envelope            )=14.4344              dev=3.05e-04 tol=5e-04
+PASS 29_operator_structure.md                   0.3327       L2(em_pred_single        )=0.3326666667         dev=1.00e-04 tol=5e-04
+PASS 29_operator_structure.md                   3.9340       L2(M_K0_minus_Kplus      )=3.934                dev=0.00e+00 tol=5e-04
+PASS 40_recheck_m7_m10_20261028.md              2.421324     L2(O_K_backsolved        )=2.421323813          dev=7.72e-08 tol=1e-04
+PASS 40_recheck_m7_m10_20261028.md              3.524        L2(z_O_K                 )=3.52414              dev=3.97e-05 tol=5e-04
+PASS 40_recheck_m7_m10_20261028.md              2.131986     L2(n_s_required          )=2.13198572           dev=1.31e-07 tol=1e-04
+PASS 40_recheck_m7_m10_20261028.md              0.332667     L2(em_pred_single        )=0.3326666667         dev=1.00e-06 tol=1e-04
+PASS 40_recheck_m7_m10_20261028.md              0.156667     L2(sigma_pred_X          )=0.15666667           dev=2.11e-06 tol=1e-04
+PASS 40_recheck_m7_m10_20261028.md              0.197869     L2(sigma_tot             )=0.19786936           dev=1.82e-06 tol=1e-04
+PASS 40_recheck_m7_m10_20261028.md              9.76         L2(z_with_X_budget       )=-9.76363             dev=3.72e-04 tol=5e-03
+PASS 40_recheck_m7_m10_20261028.md              2.560        L2(X_MeV                 )=2.56                 dev=0.00e+00 tol=5e-04
+PASS 40_recheck_m7_m10_20261028.md              0.094        L2(sigma_X_convention    )=0.094                dev=0.00e+00 tol=5e-04
+PASS 18_em_constraints.md                       2.56         L2(X_MeV                 )=2.56                 dev=0.00e+00 tol=5e-03
+
+----------------------------------------------------------------------------------------------------
+L3 RESULT: 25/25 PASS（FAIL 0；MISS 0）
+
+[EXCLUDED — L2 未覆蓋，已申報]
+  docs/37 A4     density 97.9% / 1.97% / 5.59% / 17 identity          pool 枚舉（L1 scripts/03,09,16）；L2 未重建
+  docs/37 C      MC null p = 0.550 / 斜率 7.2× / 108 模型                 pool + MC（L1 scripts/31）；L2 未重建
+  docs/37 A5     O124 41.2σ / O85 R² = 0.310001 / a ≤ 0.9729 fm       上游產權（O124/O85）— M4 只引用，不重建
+  docs/37 C      A = 1.64337 / 87γ₁⁴                                  pool 枚舉（L1 scripts/09）
+  docs/40 §4     20.61% / 90 條                                        M10 產權（docs/40 已明文：M4 未重建、不引用）
+  docs/40 §4     733.8× / 161.9%                                      M10 W4 產權（M4 只獨立核比值，L2 未列 input）
+  docs/36 §四     1.78 / ε = 0.78(1)(+8/−11) / [0.67,0.86]             外部錨（MILC18 → FLAG Eq.38），已作 L2 INPUT
+  docs/11 / 37   σ_R = 0.039896                                       L1 之 2e5 樣本 MC 值；L2 解析傳播給 0.039714（相差 0.46%，超 5e−4 容差）⟹ 不可逐位重現，判決 0.14σ 不受影響；已列入審計發現 F3
+
+JSON -> data/l3_doc_crosscheck.json

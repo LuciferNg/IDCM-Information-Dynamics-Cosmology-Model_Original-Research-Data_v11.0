@@ -1,0 +1,30 @@
+============================================================================================
+M4 scripts/39 -- M-series handoff intake #2 (2026-10-28), exact-rational rebuild
+============================================================================================
+X (docs/29 K row, solved exactly) = 42667/16670 = 2.559508098380324
+PASS B1 dM2_pi  = 1261.157227 (M7 quoted)                               | 1261.1572265121 | expect 1261.157227
+PASS B2 dM2_K   = -3899.726992 (M7 quoted)                              | -3899.726992 | expect -3899.726992
+PASS B3 em(K+-K0) central rounds to +2.264589 (M7 quoted)               | 2.26458896223049 | expect 2.264589
+PASS B4 band lower rounds to 2.124642 (M7 quoted)                       | 2.124642453328606 | expect 2.124642
+PASS B5 band upper rounds to 2.366368 (M7 quoted)                       | 2.3663682414318603 | expect 2.366368
+PASS B6 sigma_sym rounds to 0.120863 (M7 quoted)                        | 0.12086289405162727 | expect 0.120863
+PASS B7 z central = -15.98 (M7 quoted)                                  | -15.984136218062696 | expect -15.98
+PASS B8 z conservative edge = -14.83 (M7 quoted)                        | -14.826241481220592 | expect -14.83
+PASS B9 (1-eps) misread = 0.279893 (M7 quoted)                          | 0.2798930178037684 | expect 0.279893
+PASS B10 prediction vs misread = +0.44 sigma (M7 quoted)                | 0.4369164135162506 | expect 0.44
+PASS B11a M7 back-solve reproduced with X=2.56 -> 2.42132               | 2.421323813371285 | expect 2.42132
+PASS B11b EXACT X=42667/16670 -> <O>_K = 2.421789 (M4 canonical)        | 2.4217891579061632 | expect 2.421789
+PASS B12a M7 sigma-distance with X=2.56 -> +3.52                        | 3.5241366922568136 | expect 3.52
+PASS B12b EXACT X -> +3.526 sigma (verdict unchanged: >3 KILL)          | 3.5259128164357376 | expect 3.526
+PASS B13 M1 law would need n_s = +2.132 at K (|s|<=1 admitted)          | 2.132683736859245 | expect >1 (outside admitted range)
+PASS B14 dof = 3 anchors x 1 prediction - 3 params = 0                  | 0 | expect 0
+PASS D1 D_s/D |z| = 170 sigma (M5 quoted)                               | 170.41379310344828 | expect 170.0
+      D_s/D: data/model = 1.9526 -> implied extra m_l exponent 0.2237 (vs m_s/m_d = 19.9)
+PASS D2 B_s/B |z| = 16 sigma (M5 quoted)                                | 16.037974683544302 | expect 16.0
+      B_s/B: data/model = 1.8897 -> implied extra m_l exponent 0.2128 (vs m_s/m_d = 19.9)
+PASS C1 sigma_c/|c|_K = 6.09 -> 609% relative error                     | 609.0 | expect 609.0
+
+============================================================================================
+RESULT: 19/19 PASS
+============================================================================================
+JSON -> /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout/data/39_m_series_handoff_intake.json
