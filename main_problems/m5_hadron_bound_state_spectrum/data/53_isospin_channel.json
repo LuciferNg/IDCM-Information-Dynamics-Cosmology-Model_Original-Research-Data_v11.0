@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "fam": "K",
+      "c": 0.0135,
+      "d0": 3.934,
+      "delta_req_GeV": 29.14074074074074,
+      "ratio_to_phys": 11656.296296296296
+    },
+    {
+      "fam": "D",
+      "c": 0.3525,
+      "d0": 4.82,
+      "delta_req_GeV": 1.367375886524823,
+      "ratio_to_phys": 546.9503546099291
+    },
+    {
+      "fam": "B",
+      "c": 0.0775,
+      "d0": 0.31,
+      "delta_req_GeV": 0.4,
+      "ratio_to_phys": 160.0
+    }
+  ],
+  "delta_phys": 0.0025,
+  "max_ratio": 11656.296296296296,
+  "verdict": "isospin_channel_dead"
+}

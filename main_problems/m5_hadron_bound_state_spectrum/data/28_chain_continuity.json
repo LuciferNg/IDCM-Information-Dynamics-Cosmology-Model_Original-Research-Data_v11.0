@@ -233,6 +233,39 @@
         "42",
         "43",
         "46"
+      ],
+      "48_fractal_34_law_test.md": [
+        "47"
+      ],
+      "49_em_sector_2amp.md": [
+        "01",
+        "04",
+        "12",
+        "43",
+        "45",
+        "46",
+        "47"
+      ],
+      "50_lightflavour_law.md": [
+        "42",
+        "43",
+        "46",
+        "47",
+        "49"
+      ],
+      "51_isospin_channel_dead.md": [
+        "41",
+        "43",
+        "47",
+        "49",
+        "50"
+      ],
+      "52_closed_form_scan.md": [
+        "12",
+        "43",
+        "49",
+        "50",
+        "51"
       ]
     },
     "edges_out": {
@@ -336,7 +369,12 @@
       "46_sign_structure.md": [],
       "47_B_anomaly.md": [
         "46"
-      ]
+      ],
+      "48_fractal_34_law_test.md": [],
+      "49_em_sector_2amp.md": [],
+      "50_lightflavour_law.md": [],
+      "51_isospin_channel_dead.md": [],
+      "52_closed_form_scan.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -344,6 +382,7 @@
       "01_chain_coulomb_kernel.md",
       "02_ktree_radial_kernel.md",
       "03_ultrametric_nogo.md",
+      "04_signed_kernel_nogo.md",
       "09_contact_term_derivation.md",
       "10_tree_two_body.md",
       "11_full_audit.md",
@@ -375,10 +414,13 @@
       "42_em_decomposition_retraction.md",
       "43_one_body_em_necessary.md",
       "45_vself_class_isospin.md",
-      "46_sign_structure.md"
+      "46_sign_structure.md",
+      "47_B_anomaly.md",
+      "49_em_sector_2amp.md",
+      "50_lightflavour_law.md",
+      "51_isospin_channel_dead.md"
     ],
     "leaves": [
-      "04_signed_kernel_nogo.md",
       "05_state_kernel_probe.md",
       "06_state_sign_reachability.md",
       "07_sign_structure_audit.md",
@@ -388,7 +430,8 @@
       "21_sign_theorem.md",
       "22_assignment_scope.md",
       "40_scale_pair_operator.md",
-      "44_ml_exponent_stability.md"
+      "44_ml_exponent_stability.md",
+      "48_fractal_34_law_test.md"
     ]
   },
   "K2": [],
