@@ -39,6 +39,7 @@ J11 = load("11_o120_import.json")
 J12 = load("12_o209_assignment.json")
 J13 = load("13_ud_verdict.json")
 J14 = load("14_external_recompute.json")
+J15 = load("15_m4_intake_recheck.json")
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -378,6 +379,18 @@ claim("§22 em_wrong", "22_external_recompute.md", M14["em_wrong_1meps"], "| `em
 claim("§22 O_pred", "22_external_recompute.md", M14["O_pred"], "| `O`（預言用） |", cell=2, kth=0)
 claim("§22 O_req", "22_external_recompute.md", M14["O_req"], "| `O`（外部要求） |", cell=2, kth=0)
 claim("§22 O_off", "22_external_recompute.md", M14["O_req_sigma_off"], "| `O` 距 `Σ` 錨（σ） |", cell=2, kth=0)
+
+# ══════════ docs/23（M4 docs/39 回核） ══════════
+M15 = J15["metrics"]
+claim("§23 npass", "23_m4_intake_recheck.md", J15["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§23 ntotal", "23_m4_intake_recheck.md", J15["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§23 OK256", "23_m4_intake_recheck.md", M15["O_K_X256"], "| O_K（X=2.56） |", cell=2, kth=0)
+claim("§23 OKcanon", "23_m4_intake_recheck.md", M15["O_K_Xcanon"], "| O_K（X canonical） |", cell=2, kth=0)
+claim("§23 off256", "23_m4_intake_recheck.md", M15["off_X256"], "| σ 偏移（X=2.56） |", cell=2, kth=0)
+claim("§23 offcanon", "23_m4_intake_recheck.md", M15["off_Xcanon"], "| σ 偏移（X canonical） |", cell=2, kth=0)
+claim("§23 ns256", "23_m4_intake_recheck.md", M15["ns_req_256"], "| n_s 所需（X=2.56） |", cell=2, kth=0)
+claim("§23 nscanon", "23_m4_intake_recheck.md", M15["ns_req_canon"], "| n_s 所需（X canonical） |", cell=2, kth=0)
+claim("§23 emM1", "23_m4_intake_recheck.md", M15["em_M1"], "| em（M1 @ n_s=1） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

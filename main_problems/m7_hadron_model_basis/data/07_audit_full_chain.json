@@ -184,6 +184,7 @@
    "docs/20_o209_assignment.md",
    "docs/21_incoming_triage.md",
    "docs/22_external_recompute.md",
+   "docs/23_m4_intake_recheck.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -196,6 +197,7 @@
    "scripts/12_o209_assignment.py",
    "scripts/13_ud_verdict.py",
    "scripts/14_external_recompute.py",
+   "scripts/15_m4_intake_recheck.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -211,6 +213,7 @@
    "data/12_o209_assignment.json",
    "data/13_ud_verdict.json",
    "data/14_external_recompute.json",
+   "data/15_m4_intake_recheck.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -227,6 +230,7 @@
    "data/run_12_o209_assignment.log",
    "data/run_13_ud_verdict.log",
    "data/run_14_external_recompute.log",
+   "data/run_15_m4_intake_recheck.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -252,6 +256,7 @@
    "data/12_o209_assignment.json",
    "data/13_ud_verdict.json",
    "data/14_external_recompute.json",
+   "data/15_m4_intake_recheck.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -268,6 +273,7 @@
    "data/run_12_o209_assignment.log",
    "data/run_13_ud_verdict.log",
    "data/run_14_external_recompute.log",
+   "data/run_15_m4_intake_recheck.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -282,6 +288,7 @@
    "docs/20_o209_assignment.md",
    "docs/21_incoming_triage.md",
    "docs/22_external_recompute.md",
+   "docs/23_m4_intake_recheck.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -298,12 +305,20 @@
    "scripts/12_o209_assignment.py",
    "scripts/13_ud_verdict.py",
    "scripts/14_external_recompute.py",
+   "scripts/15_m4_intake_recheck.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "1ed8eb8",
+    "file": "01_problem_record.md",
+    "n_del": 50,
+    "n_live": 50,
+    "n_lost": 0
+   },
    {
     "commit": "63cbdab",
     "file": "01_problem_record.md",

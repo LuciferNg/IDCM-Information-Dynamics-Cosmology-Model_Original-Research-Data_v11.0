@@ -1,6 +1,6 @@
 {
- "npass": 176,
- "ntotal": 176,
+ "npass": 185,
+ "ntotal": 185,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1074,6 +1074,60 @@
    "doc": "22_external_recompute.md",
    "status": "✅",
    "detail": "doc=3.52 art=3.52413669226 |Δ|=4.14e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§23 npass",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§23 ntotal",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§23 OK256",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=2.421324 art=2.42132382812 |Δ|=1.72e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§23 OKcanon",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=2.421789 art=2.42178917266 |Δ|=1.73e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§23 off256",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=3.524 art=3.52413674857 |Δ|=1.37e-04 ≤ 5.0e-04"
+  },
+  {
+   "name": "§23 offcanon",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=3.526 art=3.52591287276 |Δ|=8.71e-05 ≤ 5.0e-04"
+  },
+  {
+   "name": "§23 ns256",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=2.131986 art=2.13198574219 |Δ|=2.58e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§23 nscanon",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=2.132684 art=2.13268375899 |Δ|=2.41e-07 ≤ 5.0e-07"
+  },
+  {
+   "name": "§23 emM1",
+   "doc": "23_m4_intake_recheck.md",
+   "status": "✅",
+   "detail": "doc=0.332667 art=0.332666666667 |Δ|=3.33e-07 ≤ 5.0e-07"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

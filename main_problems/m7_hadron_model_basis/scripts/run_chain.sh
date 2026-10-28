@@ -20,6 +20,7 @@ CHAIN=(
   12_o209_assignment    # O209 唯一分配重建（13/13）
   13_ud_verdict         # u/d 指派生死判定（6/6）
   14_external_recompute # 外部 em(K) 重算＋判決（11/11）
+  15_m4_intake_recheck  # M4 docs/39 回核（7/7）
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )
