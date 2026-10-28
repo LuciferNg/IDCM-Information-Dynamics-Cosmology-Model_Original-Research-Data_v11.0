@@ -1,4 +1,4 @@
-﻿<!-- registry
+<!-- registry
 pid:     M9
 title:   輕子扇區獨立攻：比值算子身份唯一化（譜讀數 vs φ-冪）
 state:   closed
@@ -82,4 +82,4 @@ M4（docs/04,19）｜O34（scripts/21 審計）｜O35（docs/02 階梯）｜O209
 
 ## 註冊
 
-register pid **M9**｜2026-10-27 `close --verdict negative`｜同日 handoff O35 按調律者裁決 **retract** → `reopen` → R6 完成後再 `close`｜本 M 未寫入任何其他 M/O 目錄
+register pid **M9**｜2026-10-27 `close --verdict negative`｜handoff O35 兩度處理：先按 10-27 裁決 retract（改在 M9 推）→ 10-28 再判為**跨版本逆向推送**（v11.0→v10.0），已發 `handoff_withdrawn` append-only 事件（原 handed_off 保留；O35 incoming 轉「已撤回」）＋ M9／O35 note｜`reopen` → R6 → `close`｜本 M 未寫入任何其他 M/O 目錄（v10 `o34`/`o35` git clean、mtime 未變）｜**禁區 15**：新→舊逆向推送全禁

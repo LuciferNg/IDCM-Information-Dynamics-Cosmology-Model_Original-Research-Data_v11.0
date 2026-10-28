@@ -1,4 +1,4 @@
-﻿<!-- registry
+<!-- registry
 pid:     M9
 title:   輕子扇區獨立攻：比值算子身份唯一化（譜讀數 vs φ-冪）
 state:   closed
@@ -85,6 +85,7 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」
 | 收 | register `close --verdict negative` | register | ✅ |
 | 核 | `scripts/05` 文檔 × 數據交叉核（52 項 headline 數字） | `data/05_doc_crosscheck.json` | ✅ 52/52 PASS |
 | **R6** | **分子推導攻堅（調律者裁決：不交 O35，在 M9 推）** | `docs/06`、`scripts/06` | ✅ 18/18 PASS：域分離定理 ＋ 整數級 σ ＋ 選擇律 no-go ＋ 表達式空間 100 % ＋ 單階梯 13 592σ |
+| 撤 | 跨版本推送撤回（v11.0→v10.0 逆向，2026-10-28 裁決） | `register.py withdraw`（`handoff_withdrawn` 事件）＋ M9／O35 note | ✅ 閘門實測拒寫（jsonl 3447→3447）；v10 檔案零污染（git clean、mtime 未變） |
 
 **判決**：T1 ✅（零個係結構身份，比原命題更強）；T2 ❌（φ-lock FAIL）；T3 ✅（無同語言伙伴 → φ 式作廢）；T4 🟡（否定式成立、肯定式不成立，誠實報）。
 
