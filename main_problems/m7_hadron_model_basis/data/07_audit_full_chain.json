@@ -185,6 +185,7 @@
    "docs/21_incoming_triage.md",
    "docs/22_external_recompute.md",
    "docs/23_m4_intake_recheck.md",
+   "docs/24_session_handoff.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -289,6 +290,7 @@
    "docs/21_incoming_triage.md",
    "docs/22_external_recompute.md",
    "docs/23_m4_intake_recheck.md",
+   "docs/24_session_handoff.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -312,6 +314,13 @@
  },
  "C3": {
   "rows": [
+   {
+    "commit": "0aad4b4",
+    "file": "01_problem_record.md",
+    "n_del": 53,
+    "n_live": 53,
+    "n_lost": 0
+   },
    {
     "commit": "1ed8eb8",
     "file": "01_problem_record.md",
