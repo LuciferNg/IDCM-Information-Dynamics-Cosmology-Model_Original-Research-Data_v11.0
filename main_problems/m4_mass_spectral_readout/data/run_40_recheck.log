@@ -1,0 +1,28 @@
+================================================================================================
+M4 scripts/40 -- M7/M10 recheck + self-correction of X provenance and error budget
+================================================================================================
+PASS E1 X back-solved from docs/29 rounded row = 42667/16670                | 42667/16670 | expect 42667/16670
+PASS E2 |X_back - X_FLAG|/X_FLAG < 0.05% => back-solve is a rounding artifact, NOT canonical | 0.0001921490701859628 | expect <5e-4
+PASS E3 X_BACK < X_FLAG (artifact sits below the FLAG value)                | 2.559508098380324 | expect 2.56
+PASS E4 <O>_K (X=2.560, canonical) = 2.421324 (M7 quoted 2.421324)          | 2.421323813371285 | expect 2.421324
+PASS E5 z (X=2.560) = +3.524 (M7 quoted +3.524)                             | 3.5241366922568136 | expect 3.524
+PASS E6 <O>_K (X back) = 2.421789 (M4 docs/39 value; now DEMOTED to consistency check) | 2.4217891579061632 | expect 2.421789
+PASS E7 relative difference between the two X <O>_K values = 0.019% (M7 quoted 0.019%) | 0.019218599854688635 | expect 0.019
+PASS E8 n_s required (X=2.560) = 2.131986 (M7 quoted 2.131986)              | 2.1319857200569277 | expect 2.131986
+PASS E9 n_s required (X back) = 2.132684 (M7 quoted 2.132684)               | 2.132683736859245 | expect 2.132684
+PASS E10 both required n_s exceed max reachable n_s = 2 (domain {0,1,2})    | 2.1320 / 2.1327 vs max 2 | expect both > 2
+PASS E11 M1 at n_s(K)=1 gives <O>_K = 5/3 exactly                           | 5/3 | expect 5/3
+PASS E12 docs/29 K row <O>_pred = 1.667 == 5/3 rounded (no interpolation used) | 1.667 | expect 1.667
+PASS E13 M1@n_s=1 reproduces the frozen prediction: em = 0.332667 -> 0.3327 | 0.33266666666666667 | expect 0.3327
+PASS E14 direct z at n_s=1 = -15.98 (M7: no n_s extrapolation or bound needed) | -15.984412012661155 | expect -15.98
+PASS E15 sigma_pred from sigma_X: (5/3)*0.094 = 0.156667 MeV                | 0.15666666666666668 | expect 0.156667
+PASS E16 combined sigma = 0.197869 MeV (pred + eps band)                    | 0.197869 | expect 0.197869
+PASS E17 z WITH X error budget = -9.76 (docs/36 quoted -15.98 ignored sigma_X) | -9.763625334168774 | expect -9.76
+PASS E18 verdict unchanged: |z| = 9.76 >> 3 => still KILL                   | 9.763625334168774 | expect >3
+PASS E19 M10 W4 ratio X/M representation = 733.8x (M10 quoted 734x)         | 733.8 | expect 733.8
+PASS E20 M10 W4 em/|x| = 161.9% (M10 quoted 162%)                           | 161.9 | expect 161.9
+
+================================================================================================
+RESULT: 20/20 PASS
+================================================================================================
+JSON -> /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout/data/40_recheck_m7_m10.json

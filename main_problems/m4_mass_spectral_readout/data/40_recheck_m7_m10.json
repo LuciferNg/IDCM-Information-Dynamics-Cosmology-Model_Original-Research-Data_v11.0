@@ -1,0 +1,167 @@
+{
+  "O_K": {
+    "back": "1033304780003822683/426670000000000000",
+    "flag": "619858896223049/256000000000000",
+    "z_back": "394153120003822683/111787540000000000",
+    "z_flag": "236370896223049/67072000000000"
+  },
+  "X": {
+    "back": "42667/16670",
+    "back_minus_flag_rel": "41/213376",
+    "flag": "64/25",
+    "sigma": "47/500",
+    "verdict": "X=2.560 (FLAG24) canonical; 42667/16670 = rounding artifact"
+  },
+  "m10_w4": {
+    "em_over_x": "12667/7823",
+    "ratio": "102000/139"
+  },
+  "m10_w6": {
+    "claim": "legal set 90 = 20.61% of F1 pool; channel incompleteness not slot density",
+    "note": "M10-internal (F1 pool size not in M4 corpus) -> recorded, NOT cited",
+    "verifiable_by_M4": false
+  },
+  "ns": {
+    "O_M1_K": "5/3",
+    "domain": [
+      0,
+      1,
+      2
+    ],
+    "n_s_K": "1",
+    "required_back": "1819904340011468049/853340000000000000",
+    "required_flag": "1091576688669147/512000000000000"
+  },
+  "summary": {
+    "checks": [
+      {
+        "expect": "42667/16670",
+        "got": "42667/16670",
+        "label": "E1 X back-solved from docs/29 rounded row = 42667/16670",
+        "ok": true
+      },
+      {
+        "expect": "<5e-4",
+        "got": "0.0001921490701859628",
+        "label": "E2 |X_back - X_FLAG|/X_FLAG < 0.05% => back-solve is a rounding artifact, NOT canonical",
+        "ok": true
+      },
+      {
+        "expect": "2.56",
+        "got": "2.559508098380324",
+        "label": "E3 X_BACK < X_FLAG (artifact sits below the FLAG value)",
+        "ok": true
+      },
+      {
+        "expect": "2.421324",
+        "got": "2.421323813371285",
+        "label": "E4 <O>_K (X=2.560, canonical) = 2.421324 (M7 quoted 2.421324)",
+        "ok": true
+      },
+      {
+        "expect": "3.524",
+        "got": "3.5241366922568136",
+        "label": "E5 z (X=2.560) = +3.524 (M7 quoted +3.524)",
+        "ok": true
+      },
+      {
+        "expect": "2.421789",
+        "got": "2.4217891579061632",
+        "label": "E6 <O>_K (X back) = 2.421789 (M4 docs/39 value; now DEMOTED to consistency check)",
+        "ok": true
+      },
+      {
+        "expect": "0.019",
+        "got": "0.019218599854688635",
+        "label": "E7 relative difference between the two X <O>_K values = 0.019% (M7 quoted 0.019%)",
+        "ok": true
+      },
+      {
+        "expect": "2.131986",
+        "got": "2.1319857200569277",
+        "label": "E8 n_s required (X=2.560) = 2.131986 (M7 quoted 2.131986)",
+        "ok": true
+      },
+      {
+        "expect": "2.132684",
+        "got": "2.132683736859245",
+        "label": "E9 n_s required (X back) = 2.132684 (M7 quoted 2.132684)",
+        "ok": true
+      },
+      {
+        "expect": "both > 2",
+        "got": "2.1320 / 2.1327 vs max 2",
+        "label": "E10 both required n_s exceed max reachable n_s = 2 (domain {0,1,2})",
+        "ok": true
+      },
+      {
+        "expect": "5/3",
+        "got": "5/3",
+        "label": "E11 M1 at n_s(K)=1 gives <O>_K = 5/3 exactly",
+        "ok": true
+      },
+      {
+        "expect": "1.667",
+        "got": "1.667",
+        "label": "E12 docs/29 K row <O>_pred = 1.667 == 5/3 rounded (no interpolation used)",
+        "ok": true
+      },
+      {
+        "expect": "0.3327",
+        "got": "0.33266666666666667",
+        "label": "E13 M1@n_s=1 reproduces the frozen prediction: em = 0.332667 -> 0.3327",
+        "ok": true
+      },
+      {
+        "expect": "-15.98",
+        "got": "-15.984412012661155",
+        "label": "E14 direct z at n_s=1 = -15.98 (M7: no n_s extrapolation or bound needed)",
+        "ok": true
+      },
+      {
+        "expect": "0.156667",
+        "got": "0.15666666666666668",
+        "label": "E15 sigma_pred from sigma_X: (5/3)*0.094 = 0.156667 MeV",
+        "ok": true
+      },
+      {
+        "expect": "0.197869",
+        "got": "0.197869",
+        "label": "E16 combined sigma = 0.197869 MeV (pred + eps band)",
+        "ok": true
+      },
+      {
+        "expect": "-9.76",
+        "got": "-9.763625334168774",
+        "label": "E17 z WITH X error budget = -9.76 (docs/36 quoted -15.98 ignored sigma_X)",
+        "ok": true
+      },
+      {
+        "expect": ">3",
+        "got": "9.763625334168774",
+        "label": "E18 verdict unchanged: |z| = 9.76 >> 3 => still KILL",
+        "ok": true
+      },
+      {
+        "expect": "733.8",
+        "got": "733.8",
+        "label": "E19 M10 W4 ratio X/M representation = 733.8x (M10 quoted 734x)",
+        "ok": true
+      },
+      {
+        "expect": "161.9",
+        "got": "161.9",
+        "label": "E20 M10 W4 em/|x| = 161.9% (M10 quoted 162%)",
+        "ok": true
+      }
+    ],
+    "pass": 20,
+    "total": 20
+  },
+  "z": {
+    "direct_ns1": "-579576688669147000/36258868215488181",
+    "sigma_pred": "47/300",
+    "sigma_tot": "0.19786935993978283",
+    "z_with_X_err": "-9.763625334168774"
+  }
+}
