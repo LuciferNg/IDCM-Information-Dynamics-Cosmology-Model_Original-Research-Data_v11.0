@@ -34,6 +34,9 @@ CLAIMS = [
     ("37_closeout_readiness.md", "12.0055", "R_span", None),
     # ---- docs/11 FLAG 重判
     ("11_lattice_flag_span.md", "12.005533", "R_span", None),
+    # σ_R 終局（2026-10-28）：canonical = 精確二階，由 L2 R_span_sigma_exact 生成
+    ("11_lattice_flag_span.md", "0.039833", "R_span_sigma_exact", None),
+    ("37_closeout_readiness.md", "0.039833", "R_span_sigma_exact", None),
     ("11_lattice_flag_span.md", "2.1498", "m_u_pred_MeV", None),
     # ---- docs/36 外部錨與判決
     ("36_r5_em_kaon_external_verdict.md", "1261.157", "dM2_pi", None),
@@ -70,8 +73,6 @@ EXCLUDED = [
     ("docs/40 §4", "20.61% / 90 條", "M10 產權（docs/40 已明文：M4 未重建、不引用）"),
     ("docs/40 §4", "733.8× / 161.9%", "M10 W4 產權（M4 只獨立核比值，L2 未列 input）"),
     ("docs/36 §四", "1.78 / ε = 0.78(1)(+8/−11) / [0.67,0.86]", "外部錨（MILC18 → FLAG Eq.38），已作 L2 INPUT"),
-    ("docs/11 / 37", "σ_R = 0.039896", "L1 之 2e5 樣本 MC 值；L2 解析傳播給 0.039714（相差 0.46%，超 5e−4 容差）⟹ "
-                                            "不可逐位重現，判決 0.14σ 不受影響；已列入審計發現 F3"),
 ]
 
 

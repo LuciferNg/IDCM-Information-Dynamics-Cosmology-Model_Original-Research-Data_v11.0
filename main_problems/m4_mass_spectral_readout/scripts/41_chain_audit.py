@@ -61,7 +61,8 @@ DECLARED_SHARED = {"31b": "docs/31_flavour_insertion_negative.md（enum 附於�
                    "35": "docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）",
                    "36b": "docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）",
                    "41": "docs/41_chain_audit.md（本審計自身）",
-                   "43": "docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）"}
+                   "43": "docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）",
+                   "44": "docs/11_lattice_flag_span.md（σ_R 終局，附註二）"}
 add("1a 每支 NN 腳本都有 doc（或已申報共用）",
     all(n in DECLARED_DOC_ONLY or n in DECLARED_SHARED or n in doc_nums for n in script_no_doc),
     "script-only = %s" % {n: DECLARED_SHARED.get(n, "未申報") for n in script_no_doc})
@@ -92,7 +93,7 @@ for p in glob.glob(os.path.join(SCRIPTS, "*.py")):
 orphans = [j for j in js if j not in producers]
 add("4a 每個 data/*.json 有 producer", not orphans, "orphans = %s" % (orphans or "0"))
 DECLARED_MULTI = {"l2_independent_verify.json": "L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）",
-                  "36_em_kaon_external.json": "36 v1 與 36b v2 同寫（v2 取代，已申報）",
+                  "36_em_kaon_external.json": "只 v1 寫（36b 已於 2026-10-28 分檔至 36b_*.json）",
                   "23_full_audit.json": "23 產出、24 讀寫加註（已申報）"}
 multi = {j: sorted(v - {"41_chain_audit.py"}) for j, v in producers.items()
          if j in js and len(v - {"41_chain_audit.py"}) > 1}
@@ -113,7 +114,8 @@ add("4c 腳本宣告輸出全部存在", not _miss, "missing = %s（自身輸出
 HEADLINE = [
     ("4/γ1 = 784.96（負結果總表 A4）", "784.9", "09_density_gate.json"),
     ("span = 12.005533 / m_u = 2.1498", "12.005533", "11_lattice_flag.json"),
-    ("em(K+−K0) = 2.264589 / z = −15.98", "2.264588", "36_em_kaon_external.json"),
+    # 2026-10-28：36b 已分檔（v2 → data/36b_*.json），canonical 之 em(K) 值在 36b
+    ("em(K+−K0) = 2.264589 / z = −15.98", "2.264588", "36b_em_kaon_external.json"),
     ("⟨O⟩_K = 2.421324 / z = −9.76", "2.421323", "40_recheck_m7_m10.json"),
     ("rank_Q = 20（譜代數 A1；L1 無 JSON，由 L2 精確提供）", "rank_Q", "l2_independent_verify.json"),
 ]

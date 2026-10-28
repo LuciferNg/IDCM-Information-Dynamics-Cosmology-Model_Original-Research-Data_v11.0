@@ -26,4 +26,4 @@ Reading: the <O>-corrected kaon prediction (+0.333 MeV) is excluded by lattice
 QCD+QED at ~16 sigma, and so is the type-independent envelope of docs/30.
 The lattice confirms instead the plain Dashen-scale splitting 2.26 MeV -- exactly
 the number the <O> line was introduced to remove.
-wrote data/36_em_kaon_external.json
+wrote data/36b_em_kaon_external.json

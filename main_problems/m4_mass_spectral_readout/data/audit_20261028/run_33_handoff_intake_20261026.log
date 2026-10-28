@@ -39,7 +39,7 @@ PASS A4b Delta chi2(M1 vs 1+n*P0 sea) == 2.32 (M7 K5) | 2.3167 | expect 2.32
 PASS A4c sqrt(Delta chi2) == 1.52 sigma             | 1.522 | expect 1.52
 PASS A4d no registered-structure form beats M1 by >4 in chi2 (indistinguishable) | Mhalf 1+0.5n D=0.269 | expect >-4
 
-[A5] MC null 1e7 under <O>==1: |b| >= 0.675330 in 279 draws -> p = 2.790e-05 (0.9s)
+[A5] MC null 1e7 under <O>==1: |b| >= 0.675330 in 279 draws -> p = 2.790e-05 (1.3s)
 PASS A5a MC p in [1e-5, 6e-5] (M7 quote 2.79e-5)    | 2.790e-05 | expect 2.79e-5
 PASS A5b MC sigma equivalent >= 4.0                 | 4.03 | expect >= 4.0 (M7: 4.19)
 PASS A5c analytic z_b == 4.186                      | 4.186 | expect 4.186

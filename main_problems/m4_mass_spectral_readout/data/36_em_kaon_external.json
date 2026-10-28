@@ -1,13 +1,25 @@
 {
- "script": "scripts/36b_em_kaon_external_judgement.py (v2)",
+ "script": "scripts/36_em_kaon_external_judgement.py",
  "date": "2026-10-27",
- "round": "M4 R5 (external judgement, no fitting)",
- "definition_source": "FLAG Review 2024, arXiv:2411.04268, Sec.4.1.3 Eqs.(38)-(39)",
- "definition": "eps = (dM2_K)_gamma/dM2_pi - 1 => (dM2_K)_gamma = (1+eps) dM2_pi",
- "v1_note": "scripts/36 v1 guessed two readings (linear; 1-eps) -- both wrong, eps sign inverted",
+ "round": "M4 R5 (external judgement; no fitting)",
+ "pre_registered": {
+  "prediction_MeV": 0.3327,
+  "envelope_MeV": [
+   -0.52,
+   0.55
+  ],
+  "source": "docs/29 (2026-10-25), docs/30 (2026-10-25)",
+  "criteria": {
+   "<1": "PASS",
+   "1-2": "TENSION",
+   "2-3": "STRAIN",
+   ">=3": "KILL",
+   "disagree": "CONV"
+  }
+ },
  "external_anchor": {
-  "paper": "MILC 18, PRD 99 034503 (arXiv:1807.05556)",
-  "eps": 0.78,
+  "paper": "MILC, Phys.Rev.D 99, 034503 (2019), arXiv:1807.05556",
+  "epsilon": 0.78,
   "stat": 0.01,
   "syst_up": 0.08,
   "syst_dn": 0.11,
@@ -22,79 +34,95 @@
   "mK_p": 493.677,
   "mK_0": 497.611
  },
- "dM2_pi": 1261.157226512103,
- "dM2_K_total": -3899.7269919999817,
- "em_K": {
-  "central": 2.2645889622304956,
-  "lo": 2.1246424533286112,
-  "hi": 2.366368241431866,
-  "sigma_sym": 0.12086289405162742,
-  "dashen_eps0": 1.2722409900171323
+ "branches": {
+  "A_linear": {
+   "em": 1.0105898000000013,
+   "lo": 0.6431026000000009,
+   "hi": 1.5158847000000018,
+   "sig": 0.43639105000000045,
+   "z_pred": 1.5533998692228006,
+   "z_env": 1.1241976662903623,
+   "z_dashen_vs_lattice": -8.210526315789476,
+   "em_dashen": 4.593590000000006
+  },
+  "B_squared": {
+   "em": 0.2798930178037691,
+   "lo": 0.17811373860239854,
+   "hi": 0.4198395267056536,
+   "sig": 0.12086289405162753,
+   "z_pred": -0.43691641351624433,
+   "z_env": 0.0,
+   "z_dashen_vs_lattice": -8.210526315789476,
+   "em_dashen": 1.2722409900171323
+  }
  },
- "pre_registered": {
-  "prediction": 0.3327,
-  "envelope": [
-   -0.52,
-   0.55
+ "categories": {
+  "A_linear": [
+   "TENSION",
+   "TENSION"
   ],
-  "source": "docs/29, docs/30 (2026-10-25)"
+  "B_squared": [
+   "PASS",
+   "PASS"
+  ]
  },
- "verdict": {
-  "prediction": "KILL",
-  "z_pred": -15.984136218062723,
-  "envelope": "KILL",
-  "z_env": 14.434446369332198
- },
+ "verdict": "CONV",
  "checks": [
   {
-   "label": "S1 dM2_pi = 1261.15 MeV^2",
+   "label": "S1 pi+ - pi0 = 4.59359 MeV (PDG 2024)",
    "ok": true,
-   "got": "1261.157",
-   "expect": "1261.15"
+   "got": "4.59359",
+   "expect": "4.59359"
   },
   {
-   "label": "S2 dM2_K total = -3899.7 MeV^2 (K0 heavier)",
+   "label": "S2 M_pi+^2 - M_pi0^2 = 1261.2 MeV^2",
    "ok": true,
-   "got": "-3899.73",
-   "expect": "-3899.7"
+   "got": "1261.16",
+   "expect": "1261.2"
   },
   {
-   "label": "S3 M_K+ - M_K0 = -3.934 MeV",
+   "label": "S3 M_K+^2 - M_K0^2 = -3899.8 MeV^2 (negative: K0 heavier)",
    "ok": true,
-   "got": "-3.934",
-   "expect": "-3.934"
+   "got": "-3899.7",
+   "expect": "-3899.8"
   },
   {
-   "label": "V1 em(K+ - K0) from MILC eps = 2.2646 MeV",
+   "label": "V1 branch A gives em(K+-K0) near 1.01 MeV",
    "ok": true,
-   "got": "2.2646",
-   "expect": "2.2646"
+   "got": "1.0106",
+   "expect": "1.0106"
   },
   {
-   "label": "V2 pre-registered prediction KILLED (|z| >= 3)",
+   "label": "V2 branch B gives em(K+-K0) near 0.281 MeV",
    "ok": true,
-   "got": "KILL",
-   "expect": "KILL"
+   "got": "0.2799",
+   "expect": "0.2806"
   },
   {
-   "label": "V3 docs/30 envelope KILLED as well",
+   "label": "V3 prediction 0.3327 lies INSIDE branch B 68% range",
    "ok": true,
-   "got": "KILL",
-   "expect": "KILL"
+   "got": "(0.1781, 0.4198)",
+   "expect": "0.179 .. 0.422"
   },
   {
-   "label": "V4 prediction is ~6.8x too small",
+   "label": "V4 prediction 0.3327 lies OUTSIDE branch A 68% range",
    "ok": true,
-   "got": "0.1469",
-   "expect": "0.1469"
+   "got": "(0.6431, 1.5159)",
+   "expect": "0.643 .. 1.516"
   },
   {
-   "label": "V5 Dashen-scale value 1.2722 MeV reproduced",
+   "label": "V5 branches disagree -> verdict must be CONV",
    "ok": true,
-   "got": "1.2722",
-   "expect": "1.2722"
+   "got": "CONV",
+   "expect": "CONV"
+  },
+  {
+   "label": "V6 naive Dashen is excluded by the lattice anchor in BOTH branches",
+   "ok": true,
+   "got": "(-8.21, -8.21)",
+   "expect": ">3 both"
   }
  ],
- "n_pass": 8,
- "n_checks": 8
+ "n_pass": 9,
+ "n_checks": 9
 }

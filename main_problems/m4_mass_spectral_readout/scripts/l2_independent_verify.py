@@ -206,7 +206,29 @@ rep("span_nu", mp.nstr(span_nu, 12))
 rep("span_Q", mp.nstr(span_q, 12))
 rep("R_span", mp.nstr(R_span, 12))
 sig_spanQ = D_MU / (MU * mp.log(10))
-rep("R_span_sigma", mp.nstr(sig_spanQ / span_nu, 10), note="解析傳播（只計 m_u 誤差）")
+rep("R_span_sigma", mp.nstr(sig_spanQ / span_nu, 10), note="一階解析傳播（只計 m_u 誤差）")
+
+# ★ 精確（二階）：Var[log10(M_T/MU_rand)] = Var[log10 MU] + Var[log10 M_T]（兩者獨立）
+#   一階低估 0.28%（log10 非線性）⟹ canonical 用精確值；另由 scripts/44 之 3×10⁷ MC 交叉核。
+D_MT = mp.mpf("300")          # PDG m_t(pole) 誤差 [MeV]（相對 0.17%，對 σ_R 貢獻 <0.01%）
+
+
+def _log10_normal_var(m, s, dps=30):
+    """Var[log10 X]，X ~ N(m, s)。積分域取 x ∈ [−12, 12]（正態尾 <1e−32，可忽略）；
+    此域內 m + s·x > 0 對 m_u（2.14 − 0.08·12 = 1.18）與 m_t 皆成立 ⟹ g 實值。"""
+    with mp.workdps(dps):
+        w = lambda x: mp.e ** (-x * x / 2) / mp.sqrt(2 * mp.pi)
+        g = lambda x: mp.log10(m + s * x)
+        A = mp.quad(lambda x: w(x) * g(x), [-12, 12])
+        B = mp.quad(lambda x: w(x) * g(x) ** 2, [-12, 12])
+        return B - A * A
+
+
+var_q = _log10_normal_var(MU, D_MU) + _log10_normal_var(M_T, D_MT)
+sig_R_exact = mp.sqrt(var_q) / span_nu
+rep("R_span_sigma_exact", mp.nstr(sig_R_exact, 10), note="精確二階（Gauss 期望積分，mpmath dps=30）")
+ok("B4 σ_R 精確/一階 = 1.002825（二階項 0.28%，非噪聲）",
+   sig_R_exact / (sig_spanQ / span_nu), mp.mpf("1.002825"), mp.mpf("1e-4"))
 print("  [note] R = %.9f  （docs/11 報 12.005533; 見 L3 之 over-precision 檢查）" % float(R_span))
 
 m_u_pred = M_T / mp.power(10, 12 * span_nu)

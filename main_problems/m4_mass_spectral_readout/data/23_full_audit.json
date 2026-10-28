@@ -239,9 +239,11 @@
       "t3": {
         "meta": 2,
         "external": 19,
-        "pending": 14,
-        "unexplained": [],
-        "unexplained_n": 0
+        "pending": 22,
+        "unexplained": [
+          "0.000004585"
+        ],
+        "unexplained_n": 1
       },
       "sections_ok": true,
       "h1_ok": true
@@ -613,13 +615,13 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 5,
+        "meta": 6,
         "external": 17,
         "pending": 11,
         "unexplained": [],
         "unexplained_n": 0
       },
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "27": {
@@ -663,7 +665,7 @@
         ]
       ],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "29": {
@@ -681,7 +683,7 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 7,
+        "meta": 8,
         "external": 3,
         "pending": 15,
         "unexplained": [
@@ -690,7 +692,7 @@
         ],
         "unexplained_n": 2
       },
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "30": {
@@ -708,13 +710,13 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 5,
+        "meta": 6,
         "external": 8,
         "pending": 2,
         "unexplained": [],
         "unexplained_n": 0
       },
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "31": {
@@ -732,15 +734,15 @@
       ],
       "docstring_match": null,
       "t3": {
-        "meta": 3,
+        "meta": 4,
         "external": 5,
-        "pending": 29,
+        "pending": 32,
         "unexplained": [
           "21.13"
         ],
         "unexplained_n": 1
       },
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "33": {
@@ -752,7 +754,7 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "34": {
@@ -769,7 +771,7 @@
         ]
       ],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "35": {
@@ -797,7 +799,7 @@
       "json": [
         [
           "36_em_kaon_external.json",
-          true
+          false
         ]
       ],
       "docstring_match": false,
@@ -818,7 +820,7 @@
         ]
       ],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "39": {
@@ -858,7 +860,7 @@
       "t3": {
         "meta": 0,
         "external": 8,
-        "pending": 9,
+        "pending": 15,
         "unexplained": [
           "-314",
           "97.9",
@@ -868,9 +870,15 @@
           "41.2",
           "0.310001",
           "0.9729",
-          "2.1498"
+          "2.1498",
+          "0.039833",
+          "0.039833024",
+          "0.0398356",
+          "0.039896",
+          "0.039714",
+          "0.2825"
         ],
-        "unexplained_n": 9
+        "unexplained_n": 15
       },
       "sections_ok": true,
       "h1_ok": true
@@ -896,14 +904,24 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null
+    },
+    "44": {
+      "script": "44_sigma_R_resolution.py",
+      "doc": null,
+      "log": "run_44_sigma_R_resolution.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null
     }
   },
   "counts": {
     "docs": 41,
-    "scripts": 41,
-    "scripts_audited": 40,
+    "scripts": 42,
+    "scripts_audited": 41,
     "logs": 44,
-    "json": 35,
+    "json": 36,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
@@ -918,21 +936,14 @@
     "24: exit 1",
     "24: 重跑非 byte-identical",
     "26: docstring 與 docs §一 不一致",
-    "26: 缺 前設問題/事前判準/結論報告",
     "27: docstring 與 docs §一 不一致",
     "27: 缺 前設問題/事前判準/結論報告",
-    "28: 缺 前設問題/事前判準/結論報告",
     "29: docstring 與 docs §一 不一致",
-    "29: 缺 前設問題/事前判準/結論報告",
     "30: docstring 與 docs §一 不一致",
-    "30: 缺 前設問題/事前判準/結論報告",
-    "31: 缺 前設問題/事前判準/結論報告",
     "33: exit 1",
-    "33: 缺 前設問題/事前判準/結論報告",
-    "34: 缺 前設問題/事前判準/結論報告",
     "36: docstring 與 docs §一 不一致",
     "36: 缺 前設問題/事前判準/結論報告",
-    "38: 缺 前設問題/事前判準/結論報告",
+    "36: JSON 36_em_kaon_external.json 不一致",
     "41: exit 1",
     "41: 重跑非 byte-identical",
     "41: docstring 與 docs §一 不一致",

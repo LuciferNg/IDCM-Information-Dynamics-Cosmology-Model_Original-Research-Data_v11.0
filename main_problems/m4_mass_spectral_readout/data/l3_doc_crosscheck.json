@@ -41,6 +41,26 @@
       "tol": 0.0001
     },
     {
+      "dev": 6.140633388819116e-07,
+      "doc": "11_lattice_flag_span.md",
+      "doc_value": 0.039833,
+      "l2_key": "R_span_sigma_exact",
+      "l2_value": 0.03983302446,
+      "literal": "0.039833",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
+      "dev": 6.140633388819116e-07,
+      "doc": "37_closeout_readiness.md",
+      "doc_value": 0.039833,
+      "l2_key": "R_span_sigma_exact",
+      "l2_value": 0.03983302446,
+      "literal": "0.039833",
+      "pass": true,
+      "tol": 0.0001
+    },
+    {
       "dev": 6.795004529925732e-06,
       "doc": "11_lattice_flag_span.md",
       "doc_value": 2.1498,
@@ -286,18 +306,13 @@
       "doc": "docs/36 §四",
       "item": "1.78 / ε = 0.78(1)(+8/−11) / [0.67,0.86]",
       "reason": "外部錨（MILC18 → FLAG Eq.38），已作 L2 INPUT"
-    },
-    {
-      "doc": "docs/11 / 37",
-      "item": "σ_R = 0.039896",
-      "reason": "L1 之 2e5 樣本 MC 值；L2 解析傳播給 0.039714（相差 0.46%，超 5e−4 容差）⟹ 不可逐位重現，判決 0.14σ 不受影響；已列入審計發現 F3"
     }
   ],
   "missing": [],
   "summary": {
     "fail": 0,
     "miss": 0,
-    "pass": 25,
-    "total": 25
+    "pass": 27,
+    "total": 27
   }
 }

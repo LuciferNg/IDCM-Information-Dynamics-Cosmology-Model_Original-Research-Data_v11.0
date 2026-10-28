@@ -1,0 +1,100 @@
+{
+ "script": "scripts/36b_em_kaon_external_judgement.py (v2)",
+ "date": "2026-10-27",
+ "round": "M4 R5 (external judgement, no fitting)",
+ "definition_source": "FLAG Review 2024, arXiv:2411.04268, Sec.4.1.3 Eqs.(38)-(39)",
+ "definition": "eps = (dM2_K)_gamma/dM2_pi - 1 => (dM2_K)_gamma = (1+eps) dM2_pi",
+ "v1_note": "scripts/36 v1 guessed two readings (linear; 1-eps) -- both wrong, eps sign inverted",
+ "external_anchor": {
+  "paper": "MILC 18, PRD 99 034503 (arXiv:1807.05556)",
+  "eps": 0.78,
+  "stat": 0.01,
+  "syst_up": 0.08,
+  "syst_dn": 0.11,
+  "range": [
+   0.67,
+   0.86
+  ]
+ },
+ "masses_MeV": {
+  "mpi_p": 139.57039,
+  "mpi_0": 134.9768,
+  "mK_p": 493.677,
+  "mK_0": 497.611
+ },
+ "dM2_pi": 1261.157226512103,
+ "dM2_K_total": -3899.7269919999817,
+ "em_K": {
+  "central": 2.2645889622304956,
+  "lo": 2.1246424533286112,
+  "hi": 2.366368241431866,
+  "sigma_sym": 0.12086289405162742,
+  "dashen_eps0": 1.2722409900171323
+ },
+ "pre_registered": {
+  "prediction": 0.3327,
+  "envelope": [
+   -0.52,
+   0.55
+  ],
+  "source": "docs/29, docs/30 (2026-10-25)"
+ },
+ "verdict": {
+  "prediction": "KILL",
+  "z_pred": -15.984136218062723,
+  "envelope": "KILL",
+  "z_env": 14.434446369332198
+ },
+ "checks": [
+  {
+   "label": "S1 dM2_pi = 1261.15 MeV^2",
+   "ok": true,
+   "got": "1261.157",
+   "expect": "1261.15"
+  },
+  {
+   "label": "S2 dM2_K total = -3899.7 MeV^2 (K0 heavier)",
+   "ok": true,
+   "got": "-3899.73",
+   "expect": "-3899.7"
+  },
+  {
+   "label": "S3 M_K+ - M_K0 = -3.934 MeV",
+   "ok": true,
+   "got": "-3.934",
+   "expect": "-3.934"
+  },
+  {
+   "label": "V1 em(K+ - K0) from MILC eps = 2.2646 MeV",
+   "ok": true,
+   "got": "2.2646",
+   "expect": "2.2646"
+  },
+  {
+   "label": "V2 pre-registered prediction KILLED (|z| >= 3)",
+   "ok": true,
+   "got": "KILL",
+   "expect": "KILL"
+  },
+  {
+   "label": "V3 docs/30 envelope KILLED as well",
+   "ok": true,
+   "got": "KILL",
+   "expect": "KILL"
+  },
+  {
+   "label": "V4 prediction is ~6.8x too small",
+   "ok": true,
+   "got": "0.1469",
+   "expect": "0.1469"
+  },
+  {
+   "label": "V5 Dashen-scale value 1.2722 MeV reproduced",
+   "ok": true,
+   "got": "1.2722",
+   "expect": "1.2722"
+  }
+ ],
+ "n_pass": 8,
+ "n_checks": 8
+}

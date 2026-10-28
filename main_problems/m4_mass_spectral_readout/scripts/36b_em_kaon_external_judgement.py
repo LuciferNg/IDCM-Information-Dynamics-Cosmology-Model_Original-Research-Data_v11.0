@@ -130,7 +130,7 @@ out = {
     "checks": CHECKS, "n_pass": npass, "n_checks": len(CHECKS),
 }
 os.makedirs("data", exist_ok=True)
-with open("data/36_em_kaon_external.json", "w", encoding="utf-8") as f:
+with open("data/36b_em_kaon_external.json", "w", encoding="utf-8") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
-print("wrote data/36_em_kaon_external.json")
+print("wrote data/36b_em_kaon_external.json")
 raise SystemExit(0 if npass == len(CHECKS) else 1)

@@ -2,7 +2,7 @@
   "checks": [
     {
       "check": "1a 每支 NN 腳本都有 doc（或已申報共用）",
-      "detail": "script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）', '43': 'docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）'}",
+      "detail": "script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）', '43': 'docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）', '44': 'docs/11_lattice_flag_span.md（σ_R 終局，附註二）'}",
       "ok": true
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "check": "4b 一產物一 producer（多產者須已申報）",
-      "detail": "multi-producer = {'l2_independent_verify.json': ('L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）', ['l2_independent_verify.py', 'l3_doc_crosscheck.py']), '36_em_kaon_external.json': ('36 v1 與 36b v2 同寫（v2 取代，已申報）', ['36_em_kaon_external_judgement.py', '36b_em_kaon_external_judgement.py']), '23_full_audit.json': ('23 產出、24 讀寫加註（已申報）', ['23_full_audit.py', '24_audit_round2.py'])}",
+      "detail": "multi-producer = {'l2_independent_verify.json': ('L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）', ['l2_independent_verify.py', 'l3_doc_crosscheck.py']), '23_full_audit.json': ('23 產出、24 讀寫加註（已申報）', ['23_full_audit.py', '24_audit_round2.py'])}",
       "ok": true
     },
     {
@@ -47,12 +47,12 @@
     },
     {
       "check": "7a L2 全 PASS",
-      "detail": "L2 = 33/33",
+      "detail": "L2 = 34/34",
       "ok": true
     },
     {
       "check": "7b L3 全 PASS 且零 MISS",
-      "detail": "L3 = 25/25 (miss 0)",
+      "detail": "L3 = 27/27 (miss 0)",
       "ok": true
     },
     {
@@ -62,21 +62,21 @@
     }
   ],
   "inventory": {
-    "data_json": 35,
+    "data_json": 37,
     "docs": 41,
-    "nn_scripts": 43,
-    "scripts": 45
+    "nn_scripts": 44,
+    "scripts": 46
   },
   "l2": {
     "fail": 0,
-    "pass": 33,
-    "total": 33
+    "pass": 34,
+    "total": 34
   },
   "l3": {
     "fail": 0,
     "miss": 0,
-    "pass": 25,
-    "total": 25
+    "pass": 27,
+    "total": 27
   },
   "summary": {
     "pass": 12,
