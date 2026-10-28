@@ -48,7 +48,8 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "04_topology_gate", "05_blind_prediction", "07_environment",
           "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
           "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
-          "14_barrier_gate"):
+          "14_barrier_gate", "15_mechanism_classification",
+          "16_definition_d6"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -59,7 +60,8 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "08_sphaleron_relaxation", "09_channel_completion",
           "10_falsification_nubase", "11_definition_d5",
           "12_primordial_label", "13_barrier_gate",
-          "14_m10_consolidation"):
+          "14_m10_consolidation", "15_mechanism_axis",
+          "16_definition_d6"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -333,6 +335,45 @@ cl("14_m10_consolidation", f"{j14b['G2']['bf_band_min']:.1f}", "屏障帶 B_f �
 cl("14_m10_consolidation", f"{j14b['G2']['bf_sf_max']:.1f}", "觀測 SF B_f 上限")
 cl("14_m10_consolidation", f"{j14b['G3']['n_nonpermanent']}", "G2 之非永久條數")
 
+
+# ---------------- docs/15 ← 15_mechanism_classification
+j08n = J["08_nuclide_chart"]
+j15 = J["15_mechanism_classification"]
+lab = j15["labels"]
+cl("15_mechanism_axis", f"{j15['n_exceptions']}", "例外總數")
+cl("15_mechanism_axis", f"{j15['qos_median']:.0f}", "Q/σ 中位")
+cl("15_mechanism_axis", f"{j15['qos_min']:.2f}", "Q/σ 最小")
+cl("15_mechanism_axis", f"{j15['n_qos']}/{j15['n_exceptions']}", "Q/σ 可算比例")
+cl("15_mechanism_axis", f"{lab.get('C3 位壘', 0)}", "𝒞3 條數")
+cl("15_mechanism_axis", f"{lab.get('C2 二階弱', 0)}", "𝒞2 條數")
+cl("15_mechanism_axis", f"{lab.get('C1 選擇定則禁戒', 0)}", "𝒞1-禁戒條數")
+cl("15_mechanism_axis", f"{j15['n_explained']}/{j15['n_exceptions']}", "explained 比例")
+_b5 = [it for it in j15["items"] if it["ctrl"] in ("β⁻", "β⁺/EC")]
+for it in _b5:
+    cl("15_mechanism_axis", f"{it['Q']:.1f}", f"β 例外 {it['A']} 之 Q")
+    cl("15_mechanism_axis", f"{it['dJ']:.0f}", f"β 例外 {it['A']} 之 ΔJ")
+cl("15_mechanism_axis", f"{len(j15['E4b_violations'])}", "長壽而開放 𝒞1 之條數")
+cl("15_mechanism_axis", f"{j15['tier3_frac_all']*100:.1f}%", "全表 Tier III 覆蓋")
+cl("15_mechanism_axis", str(j08n["tier_bins"]["III (<1e-4)"]), "全表 Tier III 條數")
+cl("15_mechanism_axis", str(j08n["n_nuclides"]), "全表核素數")
+for k, v in j15["old_tier_dist"].items():
+    cl("15_mechanism_axis", f"{v}", f"182 條之舊 Tier {k}")
+_r = [v["Q"] for v in j15["E4_violations"]]
+if _r:
+    cl("15_mechanism_axis", f"{_r[0]:.1f}", "¹⁸⁷Re 之 Q")
+
+# ---------------- docs/16 ← 16_definition_d6
+j16 = J["16_definition_d6"]
+cl("16_definition_d6", j16["seal"], "D6 封印（逐字）")
+cl("16_definition_d6", f"{j15['n_exceptions']}", "例外總數")
+cl("16_definition_d6", f"{lab.get('C3 位壘', 0)}", "𝒞3 條數")
+cl("16_definition_d6", f"{lab.get('C2 二階弱', 0)}", "𝒞2 條數")
+cl("16_definition_d6", f"{lab.get('C1 選擇定則禁戒', 0)}", "𝒞1-禁戒條數")
+cl("16_definition_d6", f"{len(j15['E4b_violations'])}", "長壽而開放 𝒞1 條數")
+cl("16_definition_d6", f"{j15['qos_min']:.2f}", "Q/σ 最小")
+cl("16_definition_d6", f"{j15['qos_median']:.0f}", "Q/σ 中位")
+cl("16_definition_d6", f"{100*j15['tier3_frac_all']:.1f}%", "舊軸 Tier III 覆蓋")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -351,12 +392,14 @@ ck("C2.3 三佔比之和 ≈ 5.44（= (X+em+m_e)/|x|）", abs(
    "恆等式 self-consistent（佔比係相對 |x| 之和，非 100%）")
 
 print("\n[C3] 封印完備性：")
-seals = {j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"]}
+seals = {j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"],
+         J["16_definition_d6"]["seal"]}
 found = set(re.findall(r"\b[0-9a-f]{64}\b", " ".join(DOC.values())))
 ck("C3.1 doc 中 64-hex 皆為 data 內封印", found <= seals,
    f"doc {len(found)} 個 / data {len(seals)} 個；多出 {sorted(found-seals)}")
-ck("C3.2 封印互異（判據 ≠ 預言；D5 亦互異）",
-   len({j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"]}) == 3,
+ck("C3.2 四封印互異",
+   len({j1["C5_seal"]["sha256"], j5["L_seal"], J["12_definition_d5"]["seal"],
+        J["16_definition_d6"]["seal"]}) == 4,
    f"判據 {j1['C5_seal']['sha256'][:12]}… / 預言 {j5['L_seal'][:12]}…")
 
 print("\n[C4] 覆蓋度：")
@@ -365,7 +408,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 14,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 16,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)
