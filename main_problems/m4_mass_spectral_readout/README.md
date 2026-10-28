@@ -78,4 +78,4 @@ O257 (R7 docs/07 定案) + O66 (M_comp 降級) + O89 (γ₁ 冪階梯，2026-10-
 
 ## 註冊
 
-pid `M4`（created 2026-10-21；state partial；2026-10-28 三層審計全綠；handoff → P6 A 身份、O140 selection rule、M5/B3、M7）
+pid `M4`（created 2026-10-21；state partial；2026-10-28 三層審計全綠）。**handoff 只限 v11 同版本**（M5 / M7 / M10）；2026-10-28 裁決後 **v10 反向推送全數撤回**（`01_problem_record §二十九`；`register.py withdraw`），`check` 之 `CROSS-VER-BACKPUSH = 0`。
