@@ -227,6 +227,12 @@
         "42",
         "43",
         "45"
+      ],
+      "47_B_anomaly.md": [
+        "39",
+        "42",
+        "43",
+        "46"
       ]
     },
     "edges_out": {
@@ -327,7 +333,10 @@
         "43"
       ],
       "45_vself_class_isospin.md": [],
-      "46_sign_structure.md": []
+      "46_sign_structure.md": [],
+      "47_B_anomaly.md": [
+        "46"
+      ]
     },
     "forward_violations": [],
     "mutual": [],
@@ -365,7 +374,8 @@
       "41_contact_ml_v3.md",
       "42_em_decomposition_retraction.md",
       "43_one_body_em_necessary.md",
-      "45_vself_class_isospin.md"
+      "45_vself_class_isospin.md",
+      "46_sign_structure.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
