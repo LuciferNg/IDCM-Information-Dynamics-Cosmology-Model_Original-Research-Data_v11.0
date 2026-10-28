@@ -1,0 +1,9 @@
+{
+  "k": 2.236145324235038,
+  "k_vs_sqrt5_pct": 0.003459051157062021,
+  "verdict_A1": "M7 對（+0.0034%）",
+  "pred_K_k2": 15.864050607080912,
+  "pred_K_sqrt5": 19.81585219000189,
+  "monotone": true,
+  "model_has_flavour_species": false
+}

@@ -1,0 +1,11 @@
+{
+  "sumq2_p": 1.0,
+  "sumq2_n": 0.6666666666666666,
+  "delta_q2": 0.33333333333333337,
+  "A_max": 1.2493705684524032,
+  "need_flag": 1.2667,
+  "need_gamma": 1.3963,
+  "gap_pct": 1.387052967724589,
+  "self_channel_sign_ok": false,
+  "verdict": "W1 blocked by both channels"
+}

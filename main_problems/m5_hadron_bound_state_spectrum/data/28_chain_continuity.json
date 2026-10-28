@@ -266,7 +266,9 @@
         "49",
         "50",
         "51"
-      ]
+      ],
+      "53_m7_handoff_adjudication.md": [],
+      "54_m10_w1_channels.md": []
     },
     "edges_out": {
       "01_chain_coulomb_kernel.md": [],
@@ -374,15 +376,22 @@
       "49_em_sector_2amp.md": [],
       "50_lightflavour_law.md": [],
       "51_isospin_channel_dead.md": [],
-      "52_closed_form_scan.md": []
+      "52_closed_form_scan.md": [],
+      "53_m7_handoff_adjudication.md": [],
+      "54_m10_w1_channels.md": []
     },
     "forward_violations": [],
     "mutual": [],
-    "reachable_from_last": [
+    "reachable_from_last": [],
+    "leaves": [
       "01_chain_coulomb_kernel.md",
       "02_ktree_radial_kernel.md",
       "03_ultrametric_nogo.md",
       "04_signed_kernel_nogo.md",
+      "05_state_kernel_probe.md",
+      "06_state_sign_reachability.md",
+      "07_sign_structure_audit.md",
+      "08_sampleout_spin_test.md",
       "09_contact_term_derivation.md",
       "10_tree_two_body.md",
       "11_full_audit.md",
@@ -393,6 +402,10 @@
       "16_d2_strong_ib.md",
       "17_g_kernel_first_pass.md",
       "18_two_sector.md",
+      "19_shape_ratio_ceiling.md",
+      "20_registered_family.md",
+      "21_sign_theorem.md",
+      "22_assignment_scope.md",
       "23_family_resolution.md",
       "24_downstream_recompute.md",
       "25_rederivation_theorem.md",
@@ -410,28 +423,20 @@
       "37_sigma_propagation.md",
       "38_heavy_hfs_kappa.md",
       "39_chiral_log_nogo.md",
+      "40_scale_pair_operator.md",
       "41_contact_ml_v3.md",
       "42_em_decomposition_retraction.md",
       "43_one_body_em_necessary.md",
+      "44_ml_exponent_stability.md",
       "45_vself_class_isospin.md",
       "46_sign_structure.md",
       "47_B_anomaly.md",
+      "48_fractal_34_law_test.md",
       "49_em_sector_2amp.md",
       "50_lightflavour_law.md",
-      "51_isospin_channel_dead.md"
-    ],
-    "leaves": [
-      "05_state_kernel_probe.md",
-      "06_state_sign_reachability.md",
-      "07_sign_structure_audit.md",
-      "08_sampleout_spin_test.md",
-      "19_shape_ratio_ceiling.md",
-      "20_registered_family.md",
-      "21_sign_theorem.md",
-      "22_assignment_scope.md",
-      "40_scale_pair_operator.md",
-      "44_ml_exponent_stability.md",
-      "48_fractal_34_law_test.md"
+      "51_isospin_channel_dead.md",
+      "52_closed_form_scan.md",
+      "53_m7_handoff_adjudication.md"
     ]
   },
   "K2": [],
