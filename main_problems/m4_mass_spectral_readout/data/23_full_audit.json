@@ -341,7 +341,7 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 3,
+        "meta": 4,
         "external": 5,
         "pending": 6,
         "unexplained": [
@@ -931,14 +931,31 @@
       "docstring_match": null,
       "sections_ok": true,
       "h1_ok": true
+    },
+    "46": {
+      "script": "46_handoff_adjudication_round4.py",
+      "doc": "46_handoff_adjudication_round4.md",
+      "log": "run_46_handoff_adjudication_round4.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [
+        [
+          "46_handoff_adjudication_round4.json",
+          false
+        ]
+      ],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 42,
-    "scripts": 43,
-    "scripts_audited": 42,
+    "docs": 43,
+    "scripts": 44,
+    "scripts_audited": 43,
     "logs": 44,
-    "json": 38,
+    "json": 39,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
@@ -963,6 +980,7 @@
     "41: exit 1",
     "41: 重跑非 byte-identical",
     "41: docstring 與 docs §一 不一致",
-    "42: 缺 前設問題/事前判準/結論報告"
+    "42: 缺 前設問題/事前判準/結論報告",
+    "46: JSON 46_handoff_adjudication_round4.json 不一致"
   ]
 }

@@ -62,10 +62,10 @@
     }
   ],
   "inventory": {
-    "data_json": 38,
-    "docs": 42,
-    "nn_scripts": 45,
-    "scripts": 47
+    "data_json": 39,
+    "docs": 43,
+    "nn_scripts": 46,
+    "scripts": 48
   },
   "l2": {
     "fail": 0,
