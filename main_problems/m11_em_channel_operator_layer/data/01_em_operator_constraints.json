@@ -1,0 +1,137 @@
+{
+  "E_ch_MeV": {
+    "D+−D0": 2.26,
+    "K+−K0": -1.374,
+    "n−p": -1.2667,
+    "Ξ−−Ξ0": 4.29,
+    "Σ0−Σ+": 0.712,
+    "Σ−−Σ+": 2.959,
+    "Σ−−Σ0": 2.247,
+    "π+−π0": 2.0336
+  },
+  "QN_rank": 2,
+  "R_over_X": {
+    "D+−D0": -0.8141,
+    "K+−K0": -1.3233,
+    "n−p": 0.4599,
+    "Ξ−−Ξ0": 0.1027,
+    "Σ0−Σ+": 1.3581,
+    "Σ−−Σ+": 0.5375,
+    "Σ−−Σ0": -0.8206
+  },
+  "R_strong_IB": {
+    "D+−D0": -2.0841,
+    "K+−K0": -3.3876,
+    "n−p": 1.1775,
+    "Ξ−−Ξ0": 0.2629,
+    "Σ0−Σ+": 3.4768,
+    "Σ−−Σ+": 1.376,
+    "Σ−−Σ0": -2.1009
+  },
+  "checks": [
+    {
+      "expect": "<0.005",
+      "got": "max|Δ|=0.00003",
+      "label": "A1 8 通道 E_ch 全部由 PDG 重算，與 M4 docs/18 一致（|Δ|<5e-3 MeV）",
+      "ok": true
+    },
+    {
+      "expect": "5.664",
+      "got": "span=5.664",
+      "label": "A2 E_ch 跨度 5.66 MeV（−1.374 … +4.290）",
+      "ok": true
+    },
+    {
+      "expect": "|.|>3",
+      "got": "strong-IB=-3.639",
+      "label": "A3 E_ch 混入強 IB 殘餘（|殘餘| > 3 MeV ⟹ 唔可當純 em 用）",
+      "ok": true
+    },
+    {
+      "expect": "True",
+      "got": "|-3.639| > 2.265",
+      "label": "A4 強 IB 殘餘大於 em 本身（K 通道：6.199 vs 2.265）",
+      "ok": true
+    },
+    {
+      "expect": "2",
+      "got": "rank=2",
+      "label": "B1 QN 差矩陣 rank = 2（僅 ΔQ、ΔI₃；B/S/C 全零）",
+      "ok": true
+    },
+    {
+      "expect": ">5.0",
+      "got": "max spread=5.664",
+      "label": "B2 QN-blindness：最壞群內 spread > 5 MeV ⟹ QN-only 算子不可能",
+      "ok": true
+    },
+    {
+      "expect": "0 wrong",
+      "got": "sign_ok=5, wrong=['K+−K0', 'Σ0−Σ+']",
+      "label": "C1 符號：7 通道中全部同號",
+      "ok": false
+    },
+    {
+      "expect": "<2.0",
+      "got": "RMS=1.684",
+      "label": "C2 1 參數模型 RMS < 2 MeV（量級可接受）",
+      "ok": true
+    },
+    {
+      "expect": "[] （要全部正確才可升格）",
+      "got": "wrong signs: ['K+−K0', 'Σ0−Σ+']",
+      "label": "C3 但符號結構不完全正確 ⟹ 不作算子升格",
+      "ok": false
+    },
+    {
+      "expect": "<15%",
+      "got": "pred=+2.0136 vs 2.2646 (dev -11.1%)",
+      "label": "C4 K 通道純 em 預測（單位耦合、零擬合）與 lattice 差 <15%",
+      "ok": true
+    },
+    {
+      "expect": ">1.5",
+      "got": "spread=2.681  [-1.32, 1.36]",
+      "label": "D1 R/X 非普適（spread > 1.5 ⟹ 單一 ⟨O⟩ 因子不可行，與 M4 docs/13 一致）",
+      "ok": true
+    },
+    {
+      "expect": ">0.5",
+      "got": "ratio=0.810",
+      "label": "D2 R 與 E_ch 同量級（|R|max/|E|max > 0.5 ⟹ 強 IB 不可忽略）",
+      "ok": true
+    }
+  ],
+  "em_K_dev_pct": -11.08,
+  "em_K_lattice": 2.2645889622304956,
+  "em_K_pred_unit_coupling": 2.0136,
+  "mode_assignment": {
+    "c": 4,
+    "d": 3,
+    "s": 5,
+    "u": 2
+  },
+  "n_pass": 10,
+  "n_total": 12,
+  "pairwise_ring": {
+    "chi2_7": 1184.09,
+    "pred_raw": {
+      "D+−D0": 4.3441,
+      "K+−K0": 2.0136,
+      "n−p": -2.4441,
+      "Ξ−−Ξ0": 4.0271,
+      "Σ0−Σ+": -2.7648,
+      "Σ−−Σ+": 1.583,
+      "Σ−−Σ0": 4.3479,
+      "π+−π0": null
+    },
+    "rms_MeV": 1.6836,
+    "scale_k": 0.53806,
+    "sign_wrong": [
+      "K+−K0",
+      "Σ0−Σ+"
+    ]
+  },
+  "qn_group_max_spread_MeV": 5.664,
+  "strong_IB_K": -3.6386
+}
