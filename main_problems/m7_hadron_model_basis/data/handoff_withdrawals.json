@@ -1,0 +1,29 @@
+{
+ "module": "M7",
+ "policy": "禁止反向推送（v11 → v10 O/P 系列）；2026-10-28 調律者指示",
+ "self_version": "v11.0",
+ "same_version_series": [
+  "M"
+ ],
+ "note": "v11 無 O/P 系列 ⟹ 跨版本推送無同版本收件人 ⟹ 內容在 M7 內消化（docs/19,20,24 即本 M 自有記錄）",
+ "withdrawn": [
+  {
+   "ts": "2026-10-27T10:45:51+08:00",
+   "target": "O209",
+   "ref": "docs/19_o120_import.md",
+   "reason": "反向推送（v11→v10）；v11 無 O 系列可消化 ⟹ 撤回，內容留在 M7 docs/19"
+  },
+  {
+   "ts": "2026-10-27T11:22:07+08:00",
+   "target": "O209",
+   "ref": "docs/20_o209_assignment.md",
+   "reason": "反向推送（v11→v10）；撤回，內容留在 M7 docs/20"
+  },
+  {
+   "ts": "2026-10-28T09:35:33+08:00",
+   "target": "O209",
+   "ref": "docs/24_session_handoff.md",
+   "reason": "反向推送（v11→v10）；撤回，內容留在 M7 docs/24 §三（改為單向交付記錄，不再對外）"
+  }
+ ]
+}

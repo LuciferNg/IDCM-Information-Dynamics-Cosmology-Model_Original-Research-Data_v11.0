@@ -1,6 +1,6 @@
 {
- "npass": 199,
- "ntotal": 199,
+ "npass": 202,
+ "ntotal": 202,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1212,6 +1212,24 @@
    "doc": "22_external_recompute.md",
    "status": "✅",
    "detail": "doc=-9.06 art=-9.05635119282 |Δ|=3.65e-03 ≤ 5.0e-03"
+  },
+  {
+   "name": "§26 npass",
+   "doc": "26_reverse_push_ban.md",
+   "status": "✅",
+   "detail": "doc=4 art=4（整數須全等）"
+  },
+  {
+   "name": "§26 ntotal",
+   "doc": "26_reverse_push_ban.md",
+   "status": "✅",
+   "detail": "doc=4 art=4（整數須全等）"
+  },
+  {
+   "name": "§26 n_withdrawn",
+   "doc": "26_reverse_push_ban.md",
+   "status": "✅",
+   "detail": "doc=3 art=3（整數須全等）"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

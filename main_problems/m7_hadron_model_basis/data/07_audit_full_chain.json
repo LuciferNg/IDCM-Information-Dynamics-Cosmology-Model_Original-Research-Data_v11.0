@@ -187,6 +187,7 @@
    "docs/23_m4_intake_recheck.md",
    "docs/24_session_handoff.md",
    "docs/25_m2_m10_replies.md",
+   "docs/26_reverse_push_ban.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -220,6 +221,7 @@
    "data/15_m4_intake_recheck.json",
    "data/16_m2_adjudication.json",
    "data/17_sigma_budget.json",
+   "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -267,6 +269,7 @@
    "data/15_m4_intake_recheck.json",
    "data/16_m2_adjudication.json",
    "data/17_sigma_budget.json",
+   "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
    "data/run_02_r5_mode_content_nogo.v1.log",
@@ -303,6 +306,7 @@
    "docs/23_m4_intake_recheck.md",
    "docs/24_session_handoff.md",
    "docs/25_m2_m10_replies.md",
+   "docs/26_reverse_push_ban.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -328,6 +332,20 @@
  },
  "C3": {
   "rows": [
+   {
+    "commit": "1059e75",
+    "file": "01_problem_record.md",
+    "n_del": 58,
+    "n_live": 58,
+    "n_lost": 0
+   },
+   {
+    "commit": "1059e75",
+    "file": "22_external_recompute.md",
+    "n_del": 1,
+    "n_live": 0,
+    "n_lost": 0
+   },
    {
     "commit": "2a57c5a",
     "file": "01_problem_record.md",

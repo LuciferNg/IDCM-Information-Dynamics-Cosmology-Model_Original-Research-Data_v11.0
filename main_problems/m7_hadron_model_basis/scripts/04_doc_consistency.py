@@ -42,6 +42,8 @@ J14 = load("14_external_recompute.json")
 J15 = load("15_m4_intake_recheck.json")
 J16 = load("16_m2_adjudication.json")
 J17 = load("17_sigma_budget.json")
+J08 = load("08_handoff_matrix.json")
+JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
 _doc = {}
@@ -413,6 +415,11 @@ claim("§八 sigma s_tot", "22_external_recompute.md", M17["s_tot"], "| `σ_tot 
 claim("§八 sigma z_tot", "22_external_recompute.md", M17["z_tot"], "| **`z`（含 `σ_X`，canonical）** |", cell=2, kth=0)
 claim("§八 sigma z_econv", "22_external_recompute.md", M17["z_econv"], "| `z`（`X` 視作精確，約定值） |", cell=2, kth=0)
 claim("§八 sigma z_band", "22_external_recompute.md", M17["z_band_tot"], "| `ε` 帶內最保守（`em = 2.124642`） |", cell=2, kth=0)
+
+# ══════════ docs/26（撤回反向推送） ══════════
+claim("§26 npass", "26_reverse_push_ban.md", J08["npass"], "| `08` PASS |", cell=2, kth=0, integer=True)
+claim("§26 ntotal", "26_reverse_push_ban.md", J08["ntotal"], "| `08` 檢查數 |", cell=2, kth=0, integer=True)
+claim("§26 n_withdrawn", "26_reverse_push_ban.md", len(JWD["withdrawn"]), "| 已撤回 |", cell=2, kth=0, integer=True)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

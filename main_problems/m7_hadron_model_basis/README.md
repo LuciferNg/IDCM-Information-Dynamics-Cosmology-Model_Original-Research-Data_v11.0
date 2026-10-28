@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/26_reverse_push_ban.md` | 撤回 3 封 v11→v10 反向推送；反向推送禁令＋同版本消化；08 §4 C4 閘 | ✅ |
 | `docs/25_m2_m10_replies.md` | 回覆 M2 docs/02 裁定（R1–R4）＋ M10 D6：C4 恆真、互換律兩讀法分叉 | ✅ |
 | `docs/24_session_handoff.md` | 本 session 結論之對外交付（M2／M5／O209 三封；含需求撤銷） | ✅ |
 | `docs/23_m4_intake_recheck.md` | 回核 M4 docs/39：X 兩值不改判、B13 措辭更正（域={0,1,2}）、主殺法=n_s(K)=1 | ✅ |

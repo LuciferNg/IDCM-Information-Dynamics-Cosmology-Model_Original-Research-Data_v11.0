@@ -106,9 +106,34 @@ print("\n附：目標是否已回覆本 M（incoming 明細）")
 for d in ins:
     print(f"  {d.get('kind')}  {d['ts']}  {d['pid']} → {d['target_pid']}")
 
+
+print("\n§4 反向推送禁令（v11 → v10 O/P 系列一律禁止；2026-10-28 調律者指示）")
+VERS = {"O": "v10.0", "P": "v10.0", "M": "v11.0"}
+SELF_VER = VERS[PID[0].upper()]
+vpath = os.path.join(M7, "data", "handoff_withdrawals.json")
+WD = json.load(open(vpath, encoding="utf-8")) if os.path.exists(vpath) else {"withdrawn": []}
+wkeys = {(w["ts"], w["target"]) for w in WD.get("withdrawn", [])}
+cross_all, cross_active = [], []
+for d in outs:
+    t = d.get("target_pid") or ""
+    tv = VERS.get(t[:1].upper())
+    if tv and tv != SELF_VER:
+        cross_all.append(d)
+        if (d["ts"], t) not in wkeys:
+            cross_active.append(d)
+print(f"    歷史反向推送（本 M）= {len(cross_all)} 封；其中已撤回 = {len(cross_all)-len(cross_active)}；未撤回 = {len(cross_active)}")
+for d in cross_all:
+    tag = "撤回" if (d["ts"], d["target_pid"]) in wkeys else "🔴 未撤回"
+    print(f"    {d['ts']}  → {d['target_pid']} ({VERS[d['target_pid'][:1].upper()]})  {os.path.basename(str(d.get('ref')))}  [{tag}]")
+ok("C4 無未撤回之反向推送（跨版本一律須撤回或同版本消化）", len(cross_active) == 0,
+   f"{len(cross_active)} 未撤回", "0",
+   "v11 無 O/P 系列 ⟹ 跨版本推送無收件人 ⟹ 內容在 M7 內消化")
+
 print("\n" + "=" * 100)
 print(f"結果：{NP[1]}/{NP[0]} PASS")
 OUT.update(npass=NP[1], ntotal=NP[0], n_out=len(outs), n_in=len(ins),
-           targets=targets, stale=stale)
+           targets=targets, stale=stale,
+           cross_version_all=[dict(ts=d["ts"], target=d["target_pid"]) for d in cross_all],
+           cross_version_withdrawn=len(cross_all) - len(cross_active))
 json.dump(OUT, open(os.path.join(M7, "data", "08_handoff_matrix.json"), "w"), ensure_ascii=False, indent=1)
 print("JSON → data/08_handoff_matrix.json")

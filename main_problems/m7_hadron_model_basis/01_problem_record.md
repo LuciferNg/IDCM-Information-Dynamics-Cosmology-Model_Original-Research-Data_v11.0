@@ -622,7 +622,34 @@ M4 接受本 M 三點（X 出處、B13 措辭、`n_s(K)=1` 主殺法升為其 B1
 
 **引用規則**：對外 canonical 用 `−9.76`（含誤差預算）；`−15.98` 標明為「`X` 視作精確」之約定值。本 M 之 γ 載體分支（`X=2.5461523`）給 `−16.18`，但該分支已 NO-GO ⟹ 不得引用。
 
-### §檔案閉合水位（自動生成 2026-10-28 10:30；close-out 基準 `2026-10-26T12:59:45+08:00`）
+## 二十八、撤回反向推送（v11 → v10）＋ 禁令（2026-10-28）
+
+**觸發**：調律者「M7 推送 v11 handoff 到 v10 O 系列，向前版本推送後期推導並不合理；禁止所有反向推送；撤回推送；如無法在相同版本找到相應的系列 session 消化」
+
+### 28.1 撤回 3 封（全部 → `O209` / v10.0）
+
+| ts | ref | 處置 |
+|:--|:--|:--|
+| `2026-10-27T10:45:51` | `docs/19_o120_import.md` | 撤回 |
+| `2026-10-27T11:22:07` | `docs/20_o209_assignment.md` | 撤回 |
+| `2026-10-28T09:35:33` | `docs/24_session_handoff.md` | 撤回 |
+
+append-only ⟹ 原事件永久保留；撤回記於 `docs/26`、`data/handoff_withdrawals.json`（3 筆）、register `note`。**O209 之 v10 記錄零改動**（本 M 從未寫其檔案）。
+
+### 28.2 同版本消化
+
+v11 只有 `m1…m10`（無 O/P 系列）⟹ 無同版本收件人 ⟹ 內容在本 session 消化：`docs/19`、`docs/20`、`docs/22`、`docs/24`（`docs/24` §三 改為內部索引，不再對外）。
+
+### 28.3 執行閘門
+
+- `scripts/08` 新增 **§4 C4**：掃 `pid=M7` 且有 `target_pid` 之事件；目標版本 ≠ `v11.0` ⟹ 若在撤回清單標「撤回」，否則 🔴 FAIL。現況：歷史 3、已撤回 3、未撤回 0 ⟹ `08` **4/4 PASS**。
+- register 內建版本閘門已實測：`M7 → O209` **被拒**（errs=1「版本隔離」）；`M7 → M4` 放行；`--force-cross-version` 記 WARN ⟹ 本 M 今後不使用該逃生門。
+
+### 28.4 全 register 現況（僅記錄，不代行）
+
+跨版本事件 **31** 筆：M7 3（本輪撤回）、M4 9、M10 5、M5 3、M2/M6/M9 各 1、v10→v11 反向 7。建議各 owner 自查撤回。
+
+### §檔案閉合水位（自動生成 2026-10-28 11:08；close-out 基準 `2026-10-26T12:59:45+08:00`）
 
 > live field：由 `scripts/10_watermark.py` 重生（非 append-only 範圍）。判「未變」不只用 mtime——本表另經 `scripts/07` B 層內容級核對。
 
@@ -644,64 +671,66 @@ M4 接受本 M 三點（X 出處、B13 措辭、`n_s(K)=1` 主殺法升為其 B1
 | 14 | `docs/23_m4_intake_recheck.md` | 2026-10-28 09:22 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
 | 15 | `docs/24_session_handoff.md` | 2026-10-28 09:35 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
 | 16 | `docs/25_m2_m10_replies.md` | 2026-10-28 10:20 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 17 | `scripts/01_reproduction_gate.py` | 2026-10-26 11:32 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
-| 18 | `scripts/02_r5_mode_content_nogo.py` | 2026-10-26 11:45 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
-| 19 | `scripts/02b_r5_mode_content_nogo.py` | 2026-10-26 12:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
-| 20 | `scripts/03_grep_evidence.py` | 2026-10-26 14:43 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 21 | `scripts/04_doc_consistency.py` | 2026-10-28 10:27 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 22 | `scripts/05_additivity_scope.py` | 2026-10-26 14:41 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 23 | `scripts/06_gap_closure.py` | 2026-10-26 15:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 24 | `scripts/07_audit_full_chain.py` | 2026-10-27 11:15 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 25 | `scripts/08_handoff_matrix.py` | 2026-10-27 01:12 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 26 | `scripts/09_m4_receipt.py` | 2026-10-27 01:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 27 | `scripts/10_watermark.py` | 2026-10-27 00:59 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 28 | `scripts/11_o120_import_verify.py` | 2026-10-27 10:26 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 29 | `scripts/12_o209_assignment.py` | 2026-10-27 11:10 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 30 | `scripts/13_ud_verdict.py` | 2026-10-27 11:52 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 31 | `scripts/14_external_recompute.py` | 2026-10-27 22:48 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 32 | `scripts/15_m4_intake_recheck.py` | 2026-10-28 09:20 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 33 | `scripts/16_m2_adjudication_verify.py` | 2026-10-28 10:17 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 34 | `scripts/17_sigma_budget.py` | 2026-10-28 10:26 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 35 | `scripts/run_chain.sh` | 2026-10-28 10:27 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 36 | `data/01_reproduction_gate.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 37 | `data/02_r5_mode_content_nogo.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 38 | `data/02_r5_mode_content_nogo.v1.json` | 2026-10-26 11:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
-| 39 | `data/02b_r5_mode_content_nogo.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 40 | `data/03_grep_evidence.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 41 | `data/04_doc_consistency.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 42 | `data/05_additivity_scope.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 43 | `data/06_gap_closure.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 44 | `data/07_audit_full_chain.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 45 | `data/08_handoff_matrix.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 46 | `data/09_m4_receipt.json` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 47 | `data/11_o120_import.json` | 2026-10-28 10:29 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 48 | `data/12_o209_assignment.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 49 | `data/13_ud_verdict.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 50 | `data/14_external_recompute.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 51 | `data/15_m4_intake_recheck.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 52 | `data/16_m2_adjudication.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 53 | `data/17_sigma_budget.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 54 | `data/run_01_reproduction_gate.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 55 | `data/run_02_r5_mode_content_nogo.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 56 | `data/run_02_r5_mode_content_nogo.v1.log` | 2026-10-26 14:15 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 57 | `data/run_02b_r5_mode_content_nogo.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 58 | `data/run_03_grep_evidence.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 59 | `data/run_04_doc_consistency.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 60 | `data/run_05_additivity_scope.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 61 | `data/run_06_gap_closure.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 62 | `data/run_07_audit_full_chain.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 63 | `data/run_08_handoff_matrix.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 64 | `data/run_09_m4_receipt.log` | 2026-10-28 10:28 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 65 | `data/run_10_watermark.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 66 | `data/run_11_o120_import_verify.log` | 2026-10-28 10:29 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 67 | `data/run_12_o209_assignment.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 68 | `data/run_13_ud_verdict.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 69 | `data/run_14_external_recompute.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 70 | `data/run_15_m4_intake_recheck.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 71 | `data/run_16_m2_adjudication_verify.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 72 | `data/run_17_sigma_budget.log` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 73 | `data/watermark.json` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 74 | `01_problem_record.md` | 2026-10-28 10:30 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 75 | `SESSION_START.md` | 2026-10-26 13:00 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 76 | `README.md` | 2026-10-28 10:27 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
-| 77 | `final_result.md` | 2026-10-26 15:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 17 | `docs/26_reverse_push_ban.md` | 2026-10-28 11:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 18 | `scripts/01_reproduction_gate.py` | 2026-10-26 11:32 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 19 | `scripts/02_r5_mode_content_nogo.py` | 2026-10-26 11:45 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 20 | `scripts/02b_r5_mode_content_nogo.py` | 2026-10-26 12:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 21 | `scripts/03_grep_evidence.py` | 2026-10-26 14:43 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 22 | `scripts/04_doc_consistency.py` | 2026-10-28 11:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 23 | `scripts/05_additivity_scope.py` | 2026-10-26 14:41 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 24 | `scripts/06_gap_closure.py` | 2026-10-26 15:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 25 | `scripts/07_audit_full_chain.py` | 2026-10-27 11:15 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 26 | `scripts/08_handoff_matrix.py` | 2026-10-28 11:04 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 27 | `scripts/09_m4_receipt.py` | 2026-10-27 01:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 28 | `scripts/10_watermark.py` | 2026-10-27 00:59 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 29 | `scripts/11_o120_import_verify.py` | 2026-10-27 10:26 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 30 | `scripts/12_o209_assignment.py` | 2026-10-27 11:10 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 31 | `scripts/13_ud_verdict.py` | 2026-10-27 11:52 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 32 | `scripts/14_external_recompute.py` | 2026-10-27 22:48 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 33 | `scripts/15_m4_intake_recheck.py` | 2026-10-28 09:20 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 34 | `scripts/16_m2_adjudication_verify.py` | 2026-10-28 10:17 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 35 | `scripts/17_sigma_budget.py` | 2026-10-28 10:26 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 36 | `scripts/run_chain.sh` | 2026-10-28 10:27 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 37 | `data/01_reproduction_gate.json` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 38 | `data/02_r5_mode_content_nogo.json` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 39 | `data/02_r5_mode_content_nogo.v1.json` | 2026-10-26 11:49 | 2026-10-26 12:59 | 全文 | ✅ 水位內（無變更） |
+| 40 | `data/02b_r5_mode_content_nogo.json` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 41 | `data/03_grep_evidence.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 42 | `data/04_doc_consistency.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 43 | `data/05_additivity_scope.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 44 | `data/06_gap_closure.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 45 | `data/07_audit_full_chain.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 46 | `data/08_handoff_matrix.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 47 | `data/09_m4_receipt.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 48 | `data/11_o120_import.json` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 49 | `data/12_o209_assignment.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 50 | `data/13_ud_verdict.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 51 | `data/14_external_recompute.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 52 | `data/15_m4_intake_recheck.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 53 | `data/16_m2_adjudication.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 54 | `data/17_sigma_budget.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 55 | `data/handoff_withdrawals.json` | 2026-10-28 11:04 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 56 | `data/run_01_reproduction_gate.log` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 57 | `data/run_02_r5_mode_content_nogo.log` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 58 | `data/run_02_r5_mode_content_nogo.v1.log` | 2026-10-26 14:15 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 59 | `data/run_02b_r5_mode_content_nogo.log` | 2026-10-28 11:06 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 60 | `data/run_03_grep_evidence.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 61 | `data/run_04_doc_consistency.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 62 | `data/run_05_additivity_scope.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 63 | `data/run_06_gap_closure.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 64 | `data/run_07_audit_full_chain.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 65 | `data/run_08_handoff_matrix.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 66 | `data/run_09_m4_receipt.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 67 | `data/run_10_watermark.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 68 | `data/run_11_o120_import_verify.log` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 69 | `data/run_12_o209_assignment.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 70 | `data/run_13_ud_verdict.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 71 | `data/run_14_external_recompute.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 72 | `data/run_15_m4_intake_recheck.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 73 | `data/run_16_m2_adjudication_verify.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 74 | `data/run_17_sigma_budget.log` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 75 | `data/watermark.json` | 2026-10-28 11:08 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 76 | `01_problem_record.md` | 2026-10-28 11:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 77 | `SESSION_START.md` | 2026-10-26 13:00 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 78 | `README.md` | 2026-10-28 11:05 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
+| 79 | `final_result.md` | 2026-10-26 15:07 | 2026-10-26 12:59 | 全文 | ⏳ close 後新增／改動 ⟹ 已驗（docs/17 §B/C） |
