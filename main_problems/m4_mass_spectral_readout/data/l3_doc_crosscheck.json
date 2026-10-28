@@ -275,22 +275,22 @@
     {
       "doc": "docs/37 A4",
       "item": "density 97.9% / 1.97% / 5.59% / 17 identity",
-      "reason": "pool 枚舉（L1 scripts/03,09,16）；L2 未重建"
+      "reason": "legacy protocol 不可復現（scripts/45 P1a/P1b 實證：精確枚舉 98.66% ≠ 97.9%）；canonical 改引統一 protocol（docs/45 §P2）"
     },
     {
       "doc": "docs/37 C",
       "item": "MC null p = 0.550 / 斜率 7.2× / 108 模型",
-      "reason": "pool + MC（L1 scripts/31）；L2 未重建"
+      "reason": "已由 scripts/45 P5 獨立重建（108 模型、12/108 單調、p = 0.554、7.15×）；L2 未重建"
     },
     {
       "doc": "docs/37 A5",
       "item": "O124 41.2σ / O85 R² = 0.310001 / a ≤ 0.9729 fm",
-      "reason": "上游產權（O124/O85）— M4 只引用，不重建"
+      "reason": "上游產權（O124/O85）＋ a ≤ 0.9729 fm 已由 scripts/45 P6 重建；L2 未重建"
     },
     {
       "doc": "docs/37 C",
       "item": "A = 1.64337 / 87γ₁⁴",
-      "reason": "pool 枚舉（L1 scripts/09）"
+      "reason": "已由 scripts/45 P3 重建（dev 0.4040%、87 = L₈−1）；L2 未重建"
     },
     {
       "doc": "docs/40 §4",

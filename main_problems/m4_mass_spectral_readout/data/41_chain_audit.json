@@ -12,7 +12,7 @@
     },
     {
       "check": "1c 非 NN 腳本（L2/L3/driver）入審計範圍",
-      "detail": "pycache=無",
+      "detail": "pycache=有",
       "ok": true
     },
     {
@@ -62,10 +62,10 @@
     }
   ],
   "inventory": {
-    "data_json": 37,
-    "docs": 41,
-    "nn_scripts": 44,
-    "scripts": 46
+    "data_json": 38,
+    "docs": 42,
+    "nn_scripts": 45,
+    "scripts": 47
   },
   "l2": {
     "fail": 0,

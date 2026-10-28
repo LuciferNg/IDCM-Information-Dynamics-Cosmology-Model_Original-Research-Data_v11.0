@@ -799,7 +799,7 @@
       "json": [
         [
           "36_em_kaon_external.json",
-          false
+          true
         ]
       ],
       "docstring_match": false,
@@ -914,14 +914,31 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null
+    },
+    "45": {
+      "script": "45_pool_enumerator.py",
+      "doc": "45_pool_enumerator.md",
+      "log": "run_45_pool_enumerator.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [
+        [
+          "45_pool_enumerator.json",
+          true
+        ]
+      ],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 41,
-    "scripts": 42,
-    "scripts_audited": 41,
+    "docs": 42,
+    "scripts": 43,
+    "scripts_audited": 42,
     "logs": 44,
-    "json": 36,
+    "json": 38,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
@@ -943,7 +960,6 @@
     "33: exit 1",
     "36: docstring 與 docs §一 不一致",
     "36: 缺 前設問題/事前判準/結論報告",
-    "36: JSON 36_em_kaon_external.json 不一致",
     "41: exit 1",
     "41: 重跑非 byte-identical",
     "41: docstring 與 docs §一 不一致",

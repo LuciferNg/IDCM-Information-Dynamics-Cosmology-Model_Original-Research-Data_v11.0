@@ -148,9 +148,30 @@ report["checks"]["C5_postaudit_numeric_drift"] = {"pass": c5, "numeric_tokens_in
                                                   "changed_lines": len(changed)}
 print(f"[C5] 審計後改動數值漂移：{'✅ 零' if c5 else '🔴 ' + str(nums_changed[:8])}（改動行 {len(changed)}）")
 
-viol = [k for k, v in report["checks"].items() if not v["pass"]]
+# ---- 歷史快照語義（2026-10-28 修正 F9）----
+# C1/C2/C5 皆係「以審計當時之 commit ea59cf9 為基準」之斷言：記錄一旦向前推進，三者必然為 False，
+# 呢個係**時間推移**而唔係失效。故引入第三態 `n/a-superseded`（不計入 violations），並記明原因；
+# 原 `pass` 欄保留（append-only 不改舊結論），新 `status` 欄為權威。
+HEAD = sh("git rev-parse --short HEAD")
+SNAPSHOT_REF = "ea59cf9"
+report["snapshot"] = {"ref": SNAPSHOT_REF, "head": HEAD, "moved": HEAD != SNAPSHOT_REF}
+for k in ("C1_scripts_unchanged_since_audit", "C2_doc23_claims_vs_json", "C5_postaudit_numeric_drift"):
+    c = report["checks"][k]
+    if c["pass"]:
+        c["status"] = "pass"
+    elif report["snapshot"]["moved"]:
+        c["status"] = "n/a-superseded"
+        c["superseded_reason"] = (f"斷言基準 = {SNAPSHOT_REF}（審計當時快照）；其後記錄已推進至 {HEAD} "
+                                 f"⟹ 該斷言按構造不可能再成立，屬時間推移而非檢測失效")
+    else:
+        c["status"] = "fail"
+
+for k, v in report["checks"].items():      # 其餘檢查：status 缺省 = pass/fail（只有 C1/C2/C5 有三態）
+    v.setdefault("status", "pass" if v["pass"] else "fail")
+viol = [k for k, v in report["checks"].items() if v["status"] == "fail"]
 report["violations"] = viol
-print(f"\n[違規] {len(viol)} {viol}")
+report["n_superseded"] = sum(1 for v in report["checks"].values() if v.get("status") == "n/a-superseded")
+print("\n[違規] fail=%d %s ｜ n/a-superseded=%d" % (len(viol), viol, report["n_superseded"]))
 with open(DATA / "24_audit_round2.json", "w") as f:
     json.dump(report, f, ensure_ascii=False, indent=2, default=str)
 print("\n→ data/24_audit_round2.json")

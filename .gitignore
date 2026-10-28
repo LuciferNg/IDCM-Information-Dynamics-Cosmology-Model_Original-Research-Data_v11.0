@@ -1,0 +1,7 @@
+# Python 位元碼與快取（F5：`docs/41` 審計發現）
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
