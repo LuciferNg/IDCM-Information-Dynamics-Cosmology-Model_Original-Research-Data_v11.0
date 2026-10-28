@@ -239,7 +239,7 @@
       "t3": {
         "meta": 2,
         "external": 19,
-        "pending": 13,
+        "pending": 14,
         "unexplained": [],
         "unexplained_n": 0
       },
@@ -499,8 +499,8 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 2,
-        "external": 18,
+        "meta": 3,
+        "external": 21,
         "pending": 5,
         "unexplained": [],
         "unexplained_n": 0
@@ -613,8 +613,8 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 4,
-        "external": 12,
+        "meta": 5,
+        "external": 17,
         "pending": 11,
         "unexplained": [],
         "unexplained_n": 0
@@ -637,9 +637,9 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 2,
-        "external": 2,
-        "pending": 6,
+        "meta": 3,
+        "external": 5,
+        "pending": 10,
         "unexplained": [
           "0.0940",
           "0.5630"
@@ -797,7 +797,7 @@
       "json": [
         [
           "36_em_kaon_external.json",
-          false
+          true
         ]
       ],
       "docstring_match": false,
@@ -830,7 +830,7 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "40": {
@@ -842,29 +842,75 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "41": {
+      "script": "41_chain_audit.py",
+      "doc": "41_chain_audit.md",
+      "log": "run_41_chain_audit.log",
+      "log_exists": true,
+      "exit": 1,
+      "rerun_identical": false,
+      "log_diff_head": [],
+      "json": [],
+      "docstring_match": false,
+      "t3": {
+        "meta": 0,
+        "external": 8,
+        "pending": 9,
+        "unexplained": [
+          "-314",
+          "97.9",
+          "1.97",
+          "5.59",
+          "0.550",
+          "41.2",
+          "0.310001",
+          "0.9729",
+          "2.1498"
+        ],
+        "unexplained_n": 9
+      },
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "42": {
+      "script": "42_flag2024_x_revision.py",
+      "doc": "42_flag2024_x_revision.md",
+      "log": "run_42_flag2024_x_revision.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null,
       "sections_ok": false,
       "h1_ok": true
+    },
+    "43": {
+      "script": "43_x_revision_propagation.py",
+      "doc": null,
+      "log": "run_43_x_revision_propagation.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null
     }
   },
   "counts": {
-    "docs": 39,
-    "scripts": 38,
-    "scripts_audited": 37,
-    "logs": 41,
-    "json": 30,
+    "docs": 41,
+    "scripts": 41,
+    "scripts_audited": 40,
+    "logs": 44,
+    "json": 35,
     "claims": {
-      "docs_claim": [
-        "23"
-      ],
-      "scripts_claim": [
-        "23"
-      ],
-      "log_claim": [
-        "24"
-      ],
+      "docs_claim": [],
+      "scripts_claim": [],
+      "log_claim": [],
       "json_claim": [
         "14",
-        "14"
+        "33"
       ]
     }
   },
@@ -886,9 +932,10 @@
     "34: 缺 前設問題/事前判準/結論報告",
     "36: docstring 與 docs §一 不一致",
     "36: 缺 前設問題/事前判準/結論報告",
-    "36: JSON 36_em_kaon_external.json 不一致",
     "38: 缺 前設問題/事前判準/結論報告",
-    "39: 缺 前設問題/事前判準/結論報告",
-    "40: 缺 前設問題/事前判準/結論報告"
+    "41: exit 1",
+    "41: 重跑非 byte-identical",
+    "41: docstring 與 docs §一 不一致",
+    "42: 缺 前設問題/事前判準/結論報告"
   ]
 }

@@ -2,7 +2,7 @@
   "checks": [
     {
       "check": "1a 每支 NN 腳本都有 doc（或已申報共用）",
-      "detail": "script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）'}",
+      "detail": "script-only = {'31b': 'docs/31_flavour_insertion_negative.md（enum 附於同一 doc）', '35': 'docs/34_u_d_sector_verdict_citation.md（v9 表審計併入判決 doc）', '36b': 'docs/36_r5_em_kaon_external_verdict.md（v2 取代 v1，同一 doc）', '43': 'docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）'}",
       "ok": true
     },
     {
@@ -62,10 +62,10 @@
     }
   ],
   "inventory": {
-    "data_json": 33,
-    "docs": 40,
-    "nn_scripts": 41,
-    "scripts": 43
+    "data_json": 35,
+    "docs": 41,
+    "nn_scripts": 43,
+    "scripts": 45
   },
   "l2": {
     "fail": 0,

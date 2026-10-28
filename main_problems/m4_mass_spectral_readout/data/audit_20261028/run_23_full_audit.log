@@ -2,8 +2,8 @@
 M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
 ================================================================================================
 
-配對：37 組（scripts 全部=38，含本審計腳本自身 → 排除），docs=39，logs=41）
-臨時工作目錄：/tmp/m4audit_w_cksus3
+配對：40 組（scripts 全部=41，含本審計腳本自身 → 排除），docs=41，logs=44）
+臨時工作目錄：/tmp/m4audit_8yja9orp
   [01] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/9/26 未解釋=1 結構=True json=—
   [02] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/8/2 未解釋=0 結構=True json=—
   [03] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/2/3 未解釋=0 結構=True json=—
@@ -14,7 +14,7 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   [08] exit=0 重跑一致=True docstring=True T3 meta/external/pending=7/7/3 未解釋=3 結構=True json=—
   [09] exit=0 重跑一致=True docstring=True T3 meta/external/pending=4/6/1 未解釋=0 結構=True json=[True]
   [10] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/6/0 未解釋=0 結構=True json=[True]
-  [11] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/19/13 未解釋=0 結構=True json=[True]
+  [11] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/19/14 未解釋=0 結構=True json=[True]
   [12] exit=0 重跑一致=True docstring=True T3 meta/external/pending=4/8/12 未解釋=8 結構=True json=[True]
   [13] exit=0 重跑一致=True docstring=True T3 meta/external/pending=5/22/10 未解釋=1 結構=True json=—
   [14] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/8/0 未解釋=0 結構=True json=[True]
@@ -24,12 +24,12 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   [18] exit=0 重跑一致=True docstring=True T3 meta/external/pending=6/13/1 未解釋=0 結構=True json=[True]
   [19] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/3/4 未解釋=3 結構=True json=[True]
   [20] exit=0 重跑一致=True docstring=True T3 meta/external/pending=9/42/9 未解釋=7 結構=True json=[True]
-  [21] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/18/5 未解釋=0 結構=True json=[True]
+  [21] exit=0 重跑一致=True docstring=True T3 meta/external/pending=3/21/5 未解釋=0 結構=True json=[True]
   [22] exit=0 重跑一致=True docstring=True T3 meta/external/pending=3/8/3 未解釋=0 結構=True json=[True]
   [24] exit=1 重跑一致=False docstring=None T3 meta/external/pending=1/5/18 未解釋=18 結構=True json=—
   [25] exit=0 重跑一致=True docstring=None T3 meta/external/pending=1/5/9 未解釋=2 結構=True json=[True]
-  [26] exit=0 重跑一致=True docstring=False T3 meta/external/pending=4/12/11 未解釋=0 結構=False json=[True]
-  [27] exit=0 重跑一致=True docstring=False T3 meta/external/pending=2/2/6 未解釋=2 結構=False json=[True]
+  [26] exit=0 重跑一致=True docstring=False T3 meta/external/pending=5/17/11 未解釋=0 結構=False json=[True]
+  [27] exit=0 重跑一致=True docstring=False T3 meta/external/pending=3/5/10 未解釋=2 結構=False json=[True]
   [28] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[True]
   [29] exit=0 重跑一致=True docstring=False T3 meta/external/pending=7/3/15 未解釋=2 結構=False json=[True]
   [30] exit=0 重跑一致=True docstring=False T3 meta/external/pending=5/8/2 未解釋=0 結構=False json=[True]
@@ -37,15 +37,18 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   [33] exit=1 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=—
   [34] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[True]
   [35] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=None json=[True]
-  [36] exit=0 重跑一致=None docstring=False T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[False]
+  [36] exit=0 重跑一致=None docstring=False T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[True]
   [38] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[True]
-  [39] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=—
-  [40] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=—
+  [39] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
+  [40] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
+  [41] exit=1 重跑一致=False docstring=False T3 meta/external/pending=0/8/9 未解釋=9 結構=True json=—
+  [42] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=—
+  [43] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=None json=—
 
-[計數] actual: docs=39 scripts=38 logs=41 json=30
-        README 宣稱: {'docs_claim': ['23'], 'scripts_claim': ['23'], 'log_claim': ['24'], 'json_claim': ['14', '14']}
+[計數] actual: docs=41 scripts=41 logs=44 json=35
+        README 宣稱: {'docs_claim': [], 'scripts_claim': [], 'log_claim': [], 'json_claim': ['14', '33']}
 
-[違規] 21
+[違規] 22
   - 24: exit 1
   - 24: 重跑非 byte-identical
   - 26: docstring 與 docs §一 不一致
@@ -63,9 +66,10 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   - 34: 缺 前設問題/事前判準/結論報告
   - 36: docstring 與 docs §一 不一致
   - 36: 缺 前設問題/事前判準/結論報告
-  - 36: JSON 36_em_kaon_external.json 不一致
   - 38: 缺 前設問題/事前判準/結論報告
-  - 39: 缺 前設問題/事前判準/結論報告
-  - 40: 缺 前設問題/事前判準/結論報告
+  - 41: exit 1
+  - 41: 重跑非 byte-identical
+  - 41: docstring 與 docs §一 不一致
+  - 42: 缺 前設問題/事前判準/結論報告
 
 → data/23_full_audit.json

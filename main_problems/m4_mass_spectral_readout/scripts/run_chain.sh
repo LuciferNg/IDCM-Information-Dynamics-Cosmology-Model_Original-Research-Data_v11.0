@@ -7,7 +7,21 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRIT
 OUT=data/audit_20261028
 mkdir -p "$OUT"
 
-ORDER="01_quark_scan 02_mc_mcs_judge 03_reading_strength 04_lepton_anchor 05_hadron_dm 06_hop_probe 07_hit_followup 08_span_12_judge 09_density_gate 10_gamma1_gamma6_bridge 11_lattice_flag_span 12_A_spectral_identity 13_mdmu_second_instance 14_double_probe 15_exponent8 16_scale_operator 17_em_decomposition 18_em_constraints 19_delivery_processing 20_identifiability 21_upstream_verification 22_o216_o86_verification 23_full_audit 24_audit_round2 25_import_verification 26_em_consistency_window 27_em_sign_theorem 28_matrix_element_resolution 29_operator_structure 30_prediction_envelope 31_flavour_insertion 31b_flavour_insertion_enum 33_handoff_intake_20261026 34_u_d_role_citation_verify 35_v9_table_audit 36_em_kaon_external_judgement 36b_em_kaon_external_judgement 38_g3_decay_constant_precheck 39_m_series_handoff_intake 40_recheck_m7_m10"
+# ★ 動態枚舉（2026-10-28 審計修正）：原本 ORDER 係硬編碼白名單，止於 40 ⟹ 新增之 42/43
+#   永遠唔會入 L1 全鏈 ⟹ 「L1 全鏈重跑」實為 40/43（覆蓋盲區）。改為自動枚舉，
+#   只排除審計自身（41_chain_audit.py，否則自我重跑覆蓋 exit codes）。
+EXCLUDE="41_chain_audit"
+# ★ 排序規則（2026-10-28 第二修正）：`sort -V` 會把 `36b_…` 排在 `36_…` **之前**，
+#   令已作廢之 v1 覆蓋 v2 之輸出（實測：data/36_em_kaon_external.json 被 v1 重寫）。
+#   改用 (num, suffix) 排序：`36` < `36b` ⟹ v2 永遠最後寫入。
+ORDER=$(cd scripts && /usr/bin/python3 -c "
+import glob, os, re
+fs = [f for f in glob.glob('[0-9][0-9]*.py') if not f.startswith('${EXCLUDE}')]
+def key(f):
+    m = re.match(r'(\d{2})([a-z]?)_', f)
+    return (int(m.group(1)), m.group(2), f)
+print(' '.join(os.path.splitext(f)[0] for f in sorted(fs, key=key)))
+")
 
 echo "chain start $(date -Iseconds)"
 : > "$OUT/exit_codes.txt"
@@ -19,8 +33,9 @@ for s in $ORDER; do
   /usr/bin/python3 "$f" > "$OUT/run_${s}.log" 2>&1
   rc=$?
   t1=$(date +%s.%N)
-  printf '%-42s rc=%d  %.1fs\n' "$s" "$rc" "$(echo "$t1 - $t0" | bc)" | tee -a "$OUT/exit_codes.txt"
-  echo "$s $(echo "$t1 - $t0" | bc)" >> "$OUT/timings.txt"
+  dt=$(awk -v a="$t0" -v b="$t1" 'BEGIN{printf "%.1f", b-a}')   # bc 未必安裝，改用 awk
+  printf '%-42s rc=%d  %ss\n' "$s" "$rc" "$dt" | tee -a "$OUT/exit_codes.txt"
+  echo "$s $dt" >> "$OUT/timings.txt"
 done
 echo "chain end $(date -Iseconds)"
 echo "--- nonzero exits ---"
