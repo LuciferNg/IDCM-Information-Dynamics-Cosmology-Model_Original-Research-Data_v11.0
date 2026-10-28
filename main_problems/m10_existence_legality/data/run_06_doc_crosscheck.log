@@ -2,8 +2,8 @@
 M10 — 文檔數字交叉核（docs ← data，單向）
 ==============================================================================
 
-[C1] 逐條核 288 條 claim：
-  [PASS] C1 全部 claim 字串在 doc 出現  288/288
+[C1] 逐條核 317 條 claim：
+  [PASS] C1 全部 claim 字串在 doc 出現  317/317
 
 [C2] 由 JSON 重算之合成量：
   [PASS] C2.1 x_n 可由 X − em − m_e 重算  0.78230 vs JSON 0.78230
@@ -31,7 +31,8 @@ M10 — 文檔數字交叉核（docs ← data，單向）
     14_m10_consolidation                10 條
     15_mechanism_axis                   25 條
     16_definition_d6                     9 條
-  [PASS] C4 每份 doc 至少 5 條  16 份 doc，最少 5 條
+    17_surviving_results                29 條
+  [PASS] C4 每份 doc 至少 5 條  17 份 doc，最少 5 條
 
 ==============================================================================
 CHECK 合計: PASS 7 / FAIL 0  → 7/7

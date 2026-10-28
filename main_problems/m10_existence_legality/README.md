@@ -50,6 +50,12 @@
 16. **`Tier-M` 取代裕度軸**：全表 Tier III = 1812/3558（**50.9%**）且層內 `Q/σ_Q` 中位 1510 ⟹ 對合法性零信息。
 17. **D6 封印 `6ca7a9d6…`**（定義不嵌入任何計數；可證偽三條）。
 
+## R16 追加：生存清單（`docs/17`）
+
+18. **三區劃分已立**：S1 結構定理 **7** 條（可獨立引用）／S2 經驗事實 **9** 條（引用須寫「以 AME 質量評估」，**非預言**）／S3 條件接口 **6** 條（必附 σ 與表示依賴）／S4 撤回 **11** 條（不得引用）。
+19. **一票否決規則**：任何結果若需「已觀測之值」作輸入（觀測窗、`B*`、`C_f` 校準），自動降 S3／S4，不得作 S1／S2。
+20. **手續完成**：六牆全部 register handoff —— W1→O124、W2→M7、W3→M5／M7、W4→M4、W5→O120、W6→M4；T2c→O85、P2→O168 早已登記。
+
 ## 待證（更新）
 
 - T1 `x(C)` 係 IDCM 內部量 —— 🔴 **判**：形式內部、內容外部（W5）
@@ -80,8 +86,9 @@
 | `docs/14_m10_consolidation.md` | **整理檔**：R1–R13 總表、derived/not-derived、路線 A–D | ✅ |
 | `docs/15_mechanism_axis.md` | R14 機制分類（7 check：4 PASS／3 FAIL）＋ Tier 軸重定義 | ✅ |
 | `docs/16_definition_d6.md` | R15 **D6 機制軸判定**（腳本生成，封印 `6ca7a9d6…`） | ✅ |
+| `docs/17_surviving_results.md` | **生存清單**：S1 結構定理 7／S2 經驗事實 9／S3 條件接口 6／S4 撤回 11，附證偽條件與引用規則 | ✅ |
 | `final_result.md` | 結論摘要（RESULT_TEMPLATE 格式） | ✅ |
-| `scripts/01`–`16` | **147 check：137 PASS ／ 10 FAIL（誠實負結果）**，全 exit 0（06 = 交叉核 288 claim／16 份 doc） | ✅ |
+| `scripts/01`–`16` | **147 check：137 PASS ／ 10 FAIL（誠實負結果）**，全 exit 0（06 = 交叉核 317 claim／17 份 doc） | ✅ |
 | `data/*.log`／`*.json` | 執行記錄 ＋ 數值 | ✅ |
 
 ## 依賴
@@ -95,4 +102,4 @@ M10 → M4（譜讀數／δ★）｜M5（`⟨1/r⟩`／A_max；本 M 只做 sign
 
 ## 註冊
 
-register pid **M10**｜2026-10-27 開檔｜state `partial`（R1–R15 完成；W1 已 handoff O124）｜owner M10
+register pid **M10**｜2026-10-27 開檔｜state `partial`（R1–R16 完成；六牆全部 handoff：O124／M7／M5／M4／O120）｜owner M10

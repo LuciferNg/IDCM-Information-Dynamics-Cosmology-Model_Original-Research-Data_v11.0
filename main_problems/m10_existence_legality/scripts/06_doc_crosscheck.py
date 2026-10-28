@@ -61,7 +61,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "10_falsification_nubase", "11_definition_d5",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
-          "16_definition_d6"):
+          "16_definition_d6", "17_surviving_results"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -374,6 +374,42 @@ cl("16_definition_d6", f"{j15['qos_min']:.2f}", "Q/σ 最小")
 cl("16_definition_d6", f"{j15['qos_median']:.0f}", "Q/σ 中位")
 cl("16_definition_d6", f"{100*j15['tier3_frac_all']:.1f}%", "舊軸 Tier III 覆蓋")
 
+
+# ---------------- docs/17 ← 生存清單（只核 S2／S3 之數值）
+j3p = J["03_precision_wall"]
+j10f = J["10_channel_completion"]["final"]
+cl("17_surviving_results", f"{j10f['n_legal']}", "合法集條數")
+cl("17_surviving_results", f"{j10f['A_max']}", "A_max")
+cl("17_surviving_results", f"{tb['SP_size']}", "S\\P 條數")
+cl("17_surviving_results", f"{tb['tier3']}", "舊 Tier III 條數")
+cl("17_surviving_results", f"{j13['tier_dist']['II']}", "舊 Tier II 條數")
+cl("17_surviving_results", e_(tb["max_rel"], 2), "失效半徑")
+cl("17_surviving_results", e_(j10c["test_C"]["span"], 1), "時間盲")
+cl("17_surviving_results", f"{j13['n_Nat_not_P']}", "Nat\\P 條數")
+cl("17_surviving_results", f"{j13['n_mono']}", "單一同位素元素數")
+cl("17_surviving_results", f"{j13['n_P_and_nat']}/{j13['n_P']}", "丰度標籤零反例")
+cl("17_surviving_results", f"{lab.get('C3 位壘', 0)}", "𝒞3 條數")
+cl("17_surviving_results", f"{lab.get('C2 二階弱', 0)}", "𝒞2 條數")
+cl("17_surviving_results", f"{lab.get('C1 選擇定則禁戒', 0)}", "𝒞1-禁戒條數")
+cl("17_surviving_results", f"{j15['qos_min']:.2f}", "Q/σ 最小")
+cl("17_surviving_results", f"{j15['qos_median']:.0f}", "Q/σ 中位")
+cl("17_surviving_results", f"{len(j15['E4b_violations'])}", "長壽而開放 𝒞1 條數")
+cl("17_surviving_results", f"{100*j15['tier3_frac_all']:.1f}%", "全表 Tier III 覆蓋")
+cl("17_surviving_results", f"{j08n['tier_bins']['III (<1e-4)']}/{j08n['n_nuclides']}", "全表 Tier III 分數")
+cl("17_surviving_results", f"{j14b['G2']['gap']:.1f}", "B_f 間隙")
+cl("17_surviving_results", f"{j14b['G2']['bf_band_min']:.1f}", "屏障帶 B_f 下限")
+cl("17_surviving_results", f"{j14b['G2']['bf_sf_max']:.1f}", "觀測 SF B_f 上限")
+cl("17_surviving_results", f"{J['07_environment']['M1']['T_D_MeV_idcm']*1e3:.2f}", "²H 熱翻轉 keV")
+cl("17_surviving_results", f"{J['07_environment']['M2']['gap_MeV']:.2f}", "W3 缺口 MeV")
+cl("17_surviving_results", e_(J['07_environment']['M2']['rho_th_gcm3'], 2), "ρ_th")
+cl("17_surviving_results", f"{j3p['G4_neutron_budget']['share_em']*100:.0f}", "em 佔比 %")
+cl("17_surviving_results", f"{j3p['G4_neutron_budget']['em_needed']:.4f}", "em 需求（FLAG）")
+cl("17_surviving_results", f"{j3p['G4_neutron_budget']['em_needed_gamma']:.4f}", "em 需求（γ 比值）")
+cl("17_surviving_results", f"{j3p['G4_neutron_budget']['A_max_v2']:.4f}", "A_max v2")
+_rv = j15["E4_violations"][0] if j15["E4_violations"] else None
+if _rv:
+    cl("17_surviving_results", f"{_rv['Q']:.1f}", "¹⁸⁷Re 之 Q")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -408,7 +444,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 16,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 17,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)
