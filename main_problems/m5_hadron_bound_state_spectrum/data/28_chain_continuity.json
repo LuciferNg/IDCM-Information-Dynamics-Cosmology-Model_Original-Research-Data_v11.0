@@ -197,6 +197,16 @@
         "01",
         "09",
         "31"
+      ],
+      "41_contact_ml_v3.md": [
+        "09",
+        "35",
+        "38"
+      ],
+      "42_em_decomposition_retraction.md": [
+        "37",
+        "39",
+        "41"
       ]
     },
     "edges_out": {
@@ -285,7 +295,11 @@
       "40_scale_pair_operator.md": [
         "38",
         "39"
-      ]
+      ],
+      "41_contact_ml_v3.md": [
+        "42"
+      ],
+      "42_em_decomposition_retraction.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -311,7 +325,14 @@
       "28_v2_full_recompute.md",
       "29_v2_d2_s6.md",
       "30_dimension_attack.md",
-      "31_scale_identifiability.md"
+      "31_scale_identifiability.md",
+      "32_metric_decay.md",
+      "35_third_family.md",
+      "36_k_anomaly_significance.md",
+      "37_sigma_propagation.md",
+      "38_heavy_hfs_kappa.md",
+      "39_chiral_log_nogo.md",
+      "41_contact_ml_v3.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
@@ -323,14 +344,9 @@
       "20_registered_family.md",
       "21_sign_theorem.md",
       "22_assignment_scope.md",
-      "32_metric_decay.md",
       "33_two_lengths.md",
       "34_A_bound.md",
-      "35_third_family.md",
-      "36_k_anomaly_significance.md",
-      "37_sigma_propagation.md",
-      "38_heavy_hfs_kappa.md",
-      "39_chiral_log_nogo.md"
+      "40_scale_pair_operator.md"
     ]
   },
   "K2": [],
