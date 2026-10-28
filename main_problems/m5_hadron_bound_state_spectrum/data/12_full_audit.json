@@ -192,6 +192,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -397,6 +405,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -608,6 +624,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -813,6 +837,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -1024,6 +1056,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -1229,6 +1269,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -1440,6 +1488,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -1645,6 +1701,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -1856,6 +1920,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -2061,6 +2133,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -2272,6 +2352,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -2477,6 +2565,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -2688,6 +2784,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -2893,6 +2997,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -3104,6 +3216,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3309,6 +3429,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -3520,6 +3648,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3728,6 +3864,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3757,7 +3901,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_96qfsysv/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_ek45r99i/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -3939,6 +4083,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3968,7 +4120,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_96qfsysv/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_ek45r99i/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -4147,6 +4299,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -4358,6 +4518,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -4563,6 +4731,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -4774,6 +4950,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -4979,6 +5163,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -5190,6 +5382,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -5395,6 +5595,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -5606,6 +5814,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -5811,6 +6027,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -6022,6 +6246,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -6227,6 +6459,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -6438,6 +6678,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -6643,6 +6891,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -6854,6 +7110,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -7059,6 +7323,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -7270,6 +7542,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -7475,6 +7755,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -7686,6 +7974,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -7891,6 +8187,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -8102,6 +8406,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -8307,6 +8619,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -8518,6 +8838,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -8723,6 +9051,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -8934,6 +9270,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -8947,6 +9291,438 @@
         "meta": 1,
         "external": 0,
         "derived": 15,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "45": {
+      "script": "45_two_body_delta0_bound.py",
+      "doc": "43_one_body_em_necessary.md",
+      "log": "run_45_two_body_delta0_bound.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ],
+        [
+          "32_dimension_attack.json",
+          true
+        ],
+        [
+          "33_scale_identifiability.json",
+          true
+        ],
+        [
+          "34_metric_decay.json",
+          true
+        ],
+        [
+          "35_two_lengths.json",
+          true
+        ],
+        [
+          "36_A_bound.json",
+          true
+        ],
+        [
+          "37_third_family.json",
+          true
+        ],
+        [
+          "38_k_anomaly_significance.json",
+          true
+        ],
+        [
+          "39_sigma_propagation.json",
+          true
+        ],
+        [
+          "40_heavy_hfs_kappa.json",
+          true
+        ],
+        [
+          "41_chiral_log_regime.json",
+          true
+        ],
+        [
+          "42_scale_pair_operator.json",
+          true
+        ],
+        [
+          "43_contact_ml_variant.json",
+          true
+        ],
+        [
+          "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
+          "l2_independent_verify.json",
+          true
+        ],
+        [
+          "l3_doc_crosscheck.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 20,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "46": {
+      "script": "46_ml_exponent_stability.py",
+      "doc": "44_ml_exponent_stability.md",
+      "log": "run_46_ml_exponent_stability.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ],
+        [
+          "32_dimension_attack.json",
+          true
+        ],
+        [
+          "33_scale_identifiability.json",
+          true
+        ],
+        [
+          "34_metric_decay.json",
+          true
+        ],
+        [
+          "35_two_lengths.json",
+          true
+        ],
+        [
+          "36_A_bound.json",
+          true
+        ],
+        [
+          "37_third_family.json",
+          true
+        ],
+        [
+          "38_k_anomaly_significance.json",
+          true
+        ],
+        [
+          "39_sigma_propagation.json",
+          true
+        ],
+        [
+          "40_heavy_hfs_kappa.json",
+          true
+        ],
+        [
+          "41_chiral_log_regime.json",
+          true
+        ],
+        [
+          "42_scale_pair_operator.json",
+          true
+        ],
+        [
+          "43_contact_ml_variant.json",
+          true
+        ],
+        [
+          "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
+          "l2_independent_verify.json",
+          true
+        ],
+        [
+          "l3_doc_crosscheck.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 1,
+        "external": 0,
+        "derived": 5,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -9139,6 +9915,14 @@
         ],
         [
           "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
           true
         ],
         [
@@ -9338,6 +10122,14 @@
           true
         ],
         [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -9350,16 +10142,16 @@
     }
   },
   "counts": {
-    "docs": 42,
-    "scripts": 44,
-    "logs": 50,
-    "json": 46,
+    "docs": 44,
+    "scripts": 46,
+    "logs": 52,
+    "json": 48,
     "claims": {
       "docs": [
-        "42"
+        "44"
       ],
       "scripts": [
-        "46"
+        "48"
       ],
       "log_json": []
     }
