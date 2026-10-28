@@ -1,0 +1,83 @@
+{
+ "module": "M7",
+ "script": "19_flavour_blind_theorem.py",
+ "checks": [
+  {
+   "item": "定理條件：𝒜 之生成元皆無味指標（結構事實）",
+   "pass_": true,
+   "got": "①②皆 label-blind",
+   "want": "≡0",
+   "note": "不需任何數值輸入 ⟹ 與 M₀、核之具體形式無關"
+  },
+  {
+   "item": "一體扇區：946 對全部 ΔE₁ = 0（精確）",
+   "pass_": true,
+   "got": "0.0",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "兩體扇區：整數多重集恆等 ⟹ ΔE₂ = 0（精確）",
+   "pass_": true,
+   "got": "0.0",
+   "want": "0",
+   "note": "以多重集恆等代替浮點求和次序比較"
+  },
+  {
+   "item": "MC 10⁷：一體扇區偏差恰 0（bit-identical，排序後求和）",
+   "pass_": true,
+   "got": "0.0e+00",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "MC 10⁷：兩體扇區偏差恰 0（bit-identical，排序後求和）",
+   "pass_": true,
+   "got": "0.0e+00",
+   "want": "0",
+   "note": ""
+  },
+  {
+   "item": "新常數成本 = 1 個有量綱常數 ⟹ 零預言力（非導出）",
+   "pass_": true,
+   "got": "dof +1",
+   "want": "0 dof",
+   "note": "違 M7 零參數立場；且 M2 唯一性禁止獨立新項（docs/15 §九）"
+  },
+  {
+   "item": "c 只可由數據反解（A_eff），不可由 𝒜 生成",
+   "pass_": true,
+   "got": "c ≡ 4.4492 MeV",
+   "want": "外部輸入",
+   "note": "與 X = m_d − m_u 之外部地位一致（docs/13/20）"
+  },
+  {
+   "item": "Δ0 在 M7 基底內 ≡ 0（已否證）⟹ 判死而非留白",
+   "pass_": true,
+   "got": "≡0 → REFUTED",
+   "want": "判死",
+   "note": "味分裂一律外部"
+  }
+ ],
+ "theorem": {
+  "statement": "𝒜 = {Σσ_nγ_n} ⊕ {g(|n_i−n_j|)} 之生成元皆 label-invariant ⟹ 味分裂 ≡ 0",
+  "pairs_tested": 946,
+  "max_dev_one_body": 0.0,
+  "max_dev_two_body": 0.0,
+  "mc": 10000000,
+  "mc_max_dev_one_body": 0.0,
+  "mc_max_dev_two_body": 0.0,
+  "symmetry_breaking_cost": "1 dimensionful constant c = Δ0 (no prediction)",
+  "consequence": "Δ0, s/d, u/c splittings are all external to M7; the flavour-blind sector is REFUTED as their source"
+ },
+ "npass": 8,
+ "ntotal": 8,
+ "metrics": {
+  "n_pair": 946,
+  "maxdev1": 0.0,
+  "maxdev2": 0.0,
+  "mc_maxdev1": 0.0,
+  "mc_maxdev2": 0.0,
+  "A_eff": 4.4492
+ }
+}

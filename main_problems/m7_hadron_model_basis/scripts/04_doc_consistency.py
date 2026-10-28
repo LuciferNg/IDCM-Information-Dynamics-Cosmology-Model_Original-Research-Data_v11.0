@@ -44,6 +44,7 @@ J16 = load("16_m2_adjudication.json")
 J17 = load("17_sigma_budget.json")
 J08 = load("08_handoff_matrix.json")
 J18 = load("18_m5_operator_slot.json")
+J19 = load("19_flavour_blind_theorem.json")
 JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
@@ -431,6 +432,14 @@ claim("§27 dev", "27_m5_operator_slot.md", M18["dev_sq5_pct"], "| 與 `√5` �
 claim("§27 r1", "27_m5_operator_slot.md", M18["A_eff_over_Xext"], "| `A_eff/X_ext` |", cell=2, kth=0)
 claim("§27 r2", "27_m5_operator_slot.md", M18["A_eff_over_Xgamma"], "| `A_eff/X_γ` |", cell=2, kth=0)
 claim("§27 t", "27_m5_operator_slot.md", M18["t_implied"], "| `t`（反推） |", cell=2, kth=0)
+
+# ══════════ docs/28（味盲定理） ══════════
+M19 = J19["metrics"]
+claim("§28 npass", "28_flavour_blind_theorem.md", J19["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§28 ntotal", "28_flavour_blind_theorem.md", J19["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§28 n_pair", "28_flavour_blind_theorem.md", M19["n_pair"], "| 對數 |", cell=2, kth=0, integer=True)
+claim("§28 mc", "28_flavour_blind_theorem.md", J19["theorem"]["mc"], "| MC |", cell=2, kth=0, integer=True)
+claim("§28 A_eff", "28_flavour_blind_theorem.md", M19["A_eff"], "| `A_eff`（外部，M5） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

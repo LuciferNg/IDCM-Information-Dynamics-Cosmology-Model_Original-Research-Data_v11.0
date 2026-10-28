@@ -189,6 +189,7 @@
    "docs/25_m2_m10_replies.md",
    "docs/26_reverse_push_ban.md",
    "docs/27_m5_operator_slot.md",
+   "docs/28_flavour_blind_theorem.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -205,6 +206,7 @@
    "scripts/16_m2_adjudication_verify.py",
    "scripts/17_sigma_budget.py",
    "scripts/18_m5_operator_slot.py",
+   "scripts/19_flavour_blind_theorem.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -224,6 +226,7 @@
    "data/16_m2_adjudication.json",
    "data/17_sigma_budget.json",
    "data/18_m5_operator_slot.json",
+   "data/19_flavour_blind_theorem.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
@@ -245,6 +248,7 @@
    "data/run_16_m2_adjudication_verify.log",
    "data/run_17_sigma_budget.log",
    "data/run_18_m5_operator_slot.log",
+   "data/run_19_flavour_blind_theorem.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -274,6 +278,7 @@
    "data/16_m2_adjudication.json",
    "data/17_sigma_budget.json",
    "data/18_m5_operator_slot.json",
+   "data/19_flavour_blind_theorem.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
@@ -295,6 +300,7 @@
    "data/run_16_m2_adjudication_verify.log",
    "data/run_17_sigma_budget.log",
    "data/run_18_m5_operator_slot.log",
+   "data/run_19_flavour_blind_theorem.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -314,6 +320,7 @@
    "docs/25_m2_m10_replies.md",
    "docs/26_reverse_push_ban.md",
    "docs/27_m5_operator_slot.md",
+   "docs/28_flavour_blind_theorem.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -334,12 +341,20 @@
    "scripts/16_m2_adjudication_verify.py",
    "scripts/17_sigma_budget.py",
    "scripts/18_m5_operator_slot.py",
+   "scripts/19_flavour_blind_theorem.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "8468525",
+    "file": "01_problem_record.md",
+    "n_del": 63,
+    "n_live": 63,
+    "n_lost": 0
+   },
    {
     "commit": "20e5dfb",
     "file": "01_problem_record.md",
@@ -415,20 +430,6 @@
     "file": "01_problem_record.md",
     "n_del": 41,
     "n_live": 41,
-    "n_lost": 0
-   },
-   {
-    "commit": "97cd0bf",
-    "file": "01_problem_record.md",
-    "n_del": 28,
-    "n_live": 28,
-    "n_lost": 0
-   },
-   {
-    "commit": "97cd0bf",
-    "file": "18_m4_intake_receipt.md",
-    "n_del": 1,
-    "n_live": 0,
     "n_lost": 0
    }
   ],

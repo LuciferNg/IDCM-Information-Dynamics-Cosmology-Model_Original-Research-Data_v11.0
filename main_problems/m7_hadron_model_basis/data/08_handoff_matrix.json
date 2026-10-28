@@ -107,7 +107,7 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/23_m4_intake_recheck.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/22_external_recompute.md"
    ],
-   "target_activity_after": 28,
+   "target_activity_after": 30,
    "status": "✅ 已閉環"
   },
   {
@@ -128,7 +128,7 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/24_session_handoff.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/27_m5_operator_slot.md"
    ],
-   "target_activity_after": 0,
+   "target_activity_after": 1,
    "status": "✅ 已閉環"
   },
   {

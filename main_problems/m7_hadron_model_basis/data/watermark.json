@@ -1,7 +1,7 @@
 {
  "close_out": "2026-10-26T12:59:45+08:00",
- "generated": "2026-10-28 16:20",
- "n": 83,
+ "generated": "2026-10-28 17:11",
+ "n": 87,
  "rows": [
   {
    "path": "docs/10_reproduction_gate.md",
@@ -94,6 +94,11 @@
    "after_close": true
   },
   {
+   "path": "docs/28_flavour_blind_theorem.md",
+   "mtime": "2026-10-28 17:10",
+   "after_close": true
+  },
+  {
    "path": "scripts/01_reproduction_gate.py",
    "mtime": "2026-10-26 11:32",
    "after_close": false
@@ -115,7 +120,7 @@
   },
   {
    "path": "scripts/04_doc_consistency.py",
-   "mtime": "2026-10-28 16:18",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {
@@ -189,8 +194,13 @@
    "after_close": true
   },
   {
+   "path": "scripts/19_flavour_blind_theorem.py",
+   "mtime": "2026-10-28 17:08",
+   "after_close": true
+  },
+  {
    "path": "scripts/run_chain.sh",
-   "mtime": "2026-10-28 16:18",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {
@@ -220,7 +230,7 @@
   },
   {
    "path": "data/04_doc_consistency.json",
-   "mtime": "2026-10-28 16:20",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {
@@ -235,7 +245,7 @@
   },
   {
    "path": "data/07_audit_full_chain.json",
-   "mtime": "2026-10-28 16:19",
+   "mtime": "2026-10-28 16:20",
    "after_close": true
   },
   {
@@ -289,6 +299,11 @@
    "after_close": true
   },
   {
+   "path": "data/19_flavour_blind_theorem.json",
+   "mtime": "2026-10-28 17:08",
+   "after_close": true
+  },
+  {
    "path": "data/handoff_withdrawals.json",
    "mtime": "2026-10-28 11:04",
    "after_close": true
@@ -320,7 +335,7 @@
   },
   {
    "path": "data/run_04_doc_consistency.log",
-   "mtime": "2026-10-28 16:20",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {
@@ -335,7 +350,7 @@
   },
   {
    "path": "data/run_07_audit_full_chain.log",
-   "mtime": "2026-10-28 16:19",
+   "mtime": "2026-10-28 16:20",
    "after_close": true
   },
   {
@@ -350,7 +365,7 @@
   },
   {
    "path": "data/run_10_watermark.log",
-   "mtime": "2026-10-28 16:20",
+   "mtime": "2026-10-28 17:11",
    "after_close": true
   },
   {
@@ -394,13 +409,18 @@
    "after_close": true
   },
   {
+   "path": "data/run_19_flavour_blind_theorem.log",
+   "mtime": "2026-10-28 17:08",
+   "after_close": true
+  },
+  {
    "path": "data/watermark.json",
-   "mtime": "2026-10-28 16:20",
+   "mtime": "2026-10-28 17:11",
    "after_close": true
   },
   {
    "path": "01_problem_record.md",
-   "mtime": "2026-10-28 16:19",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {
@@ -410,7 +430,7 @@
   },
   {
    "path": "README.md",
-   "mtime": "2026-10-28 16:18",
+   "mtime": "2026-10-28 17:10",
    "after_close": true
   },
   {

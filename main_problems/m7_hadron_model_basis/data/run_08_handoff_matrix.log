@@ -1,5 +1,5 @@
-register 事件 3529 條（/home/wsl/Projects/IDCM-Original/problem_register/register.jsonl）
-kind 值域：note=1680, registered=550, progress=416, handed_off=359, conclusion=202, closed=157, alias=41, handoff_withdrawn=36, tombstone=19, merged=19, reopened=18, unreserve=9, retracted=7, posthoc=7, collision=4, collision_resolved=3, assigned=2
+register 事件 3536 條（/home/wsl/Projects/IDCM-Original/problem_register/register.jsonl）
+kind 值域：note=1683, registered=551, progress=418, handed_off=360, conclusion=202, closed=157, alias=41, handoff_withdrawn=36, tombstone=19, merged=19, reopened=18, unreserve=9, retracted=7, posthoc=7, collision=4, collision_resolved=3, assigned=2
 
 M7 outgoing handoff = 20；incoming = 11
 
@@ -14,7 +14,7 @@ M7 outgoing handoff = 20；incoming = 11
        2026-10-28T09:35:13+08:00  24_session_handoff.md
        2026-10-28T10:26:18+08:00  25_m2_m10_replies.md
        ← 2026-10-28T10:08:46+08:00  02_m7_handoff_adjudication.md
-  M4   outs=7  回覆(發出後)=4  其後活動=28  ✅ 已閉環  [另有 1 條為發出前之對方來件]
+  M4   outs=7  回覆(發出後)=4  其後活動=30  ✅ 已閉環  [另有 1 條為發出前之對方來件]
        2026-10-26T12:59:17+08:00  12_r5_verdict.md
        2026-10-26T14:45:43+08:00  15_additivity_scope_verdict.md
        2026-10-26T18:38:10+08:00  16_gap_closure.md
@@ -26,7 +26,7 @@ M7 outgoing handoff = 20；incoming = 11
        ← 2026-10-27T14:19:27+08:00  36_r5_em_kaon_external_verdict.md
        ← 2026-10-28T09:13:33+08:00  39_m_series_handoff_intake_20261028.md
        ← 2026-10-28T10:16:10+08:00  40_recheck_m7_m10_20261028.md
-  M5   outs=3  回覆(發出後)=1  其後活動=0  ✅ 已閉環
+  M5   outs=3  回覆(發出後)=1  其後活動=1  ✅ 已閉環
        2026-10-26T12:59:17+08:00  10_reproduction_gate.md
        2026-10-28T09:35:21+08:00  24_session_handoff.md
        2026-10-28T16:18:20+08:00  27_m5_operator_slot.md

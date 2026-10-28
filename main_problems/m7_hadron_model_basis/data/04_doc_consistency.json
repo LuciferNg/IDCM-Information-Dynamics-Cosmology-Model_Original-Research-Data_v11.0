@@ -1,6 +1,6 @@
 {
- "npass": 209,
- "ntotal": 209,
+ "npass": 214,
+ "ntotal": 214,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1272,6 +1272,36 @@
    "doc": "27_m5_operator_slot.md",
    "status": "✅",
    "detail": "doc=1.77259 art=1.77258964143 |Δ|=3.59e-07 ≤ 5.0e-06"
+  },
+  {
+   "name": "§28 npass",
+   "doc": "28_flavour_blind_theorem.md",
+   "status": "✅",
+   "detail": "doc=8 art=8（整數須全等）"
+  },
+  {
+   "name": "§28 ntotal",
+   "doc": "28_flavour_blind_theorem.md",
+   "status": "✅",
+   "detail": "doc=8 art=8（整數須全等）"
+  },
+  {
+   "name": "§28 n_pair",
+   "doc": "28_flavour_blind_theorem.md",
+   "status": "✅",
+   "detail": "doc=946 art=946（整數須全等）"
+  },
+  {
+   "name": "§28 mc",
+   "doc": "28_flavour_blind_theorem.md",
+   "status": "✅",
+   "detail": "doc=10000000 art=1e+07（整數須全等）"
+  },
+  {
+   "name": "§28 A_eff",
+   "doc": "28_flavour_blind_theorem.md",
+   "status": "✅",
+   "detail": "doc=4.4492 art=4.4492 |Δ|=0.00e+00 ≤ 5.0e-05"
   },
   {
    "name": "v1 vs v2 K1 max_dev",
