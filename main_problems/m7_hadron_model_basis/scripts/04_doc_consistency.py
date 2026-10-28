@@ -43,6 +43,7 @@ J15 = load("15_m4_intake_recheck.json")
 J16 = load("16_m2_adjudication.json")
 J17 = load("17_sigma_budget.json")
 J08 = load("08_handoff_matrix.json")
+J18 = load("18_m5_operator_slot.json")
 JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
@@ -420,6 +421,16 @@ claim("§八 sigma z_band", "22_external_recompute.md", M17["z_band_tot"], "| `�
 claim("§26 npass", "26_reverse_push_ban.md", J08["npass"], "| `08` PASS |", cell=2, kth=0, integer=True)
 claim("§26 ntotal", "26_reverse_push_ban.md", J08["ntotal"], "| `08` 檢查數 |", cell=2, kth=0, integer=True)
 claim("§26 n_withdrawn", "26_reverse_push_ban.md", len(JWD["withdrawn"]), "| 已撤回 |", cell=2, kth=0, integer=True)
+
+# ══════════ docs/27（M5 算子槽位） ══════════
+M18 = J18["metrics"]
+claim("§27 npass", "27_m5_operator_slot.md", J18["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§27 ntotal", "27_m5_operator_slot.md", J18["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§27 k", "27_m5_operator_slot.md", M18["k"], "| `k`（反解） |", cell=2, kth=0)
+claim("§27 dev", "27_m5_operator_slot.md", M18["dev_sq5_pct"], "| 與 `√5` 相對差 |", cell=2, kth=0)
+claim("§27 r1", "27_m5_operator_slot.md", M18["A_eff_over_Xext"], "| `A_eff/X_ext` |", cell=2, kth=0)
+claim("§27 r2", "27_m5_operator_slot.md", M18["A_eff_over_Xgamma"], "| `A_eff/X_γ` |", cell=2, kth=0)
+claim("§27 t", "27_m5_operator_slot.md", M18["t_implied"], "| `t`（反推） |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

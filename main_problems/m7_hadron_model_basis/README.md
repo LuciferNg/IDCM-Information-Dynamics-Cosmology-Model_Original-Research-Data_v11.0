@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/27_m5_operator_slot.md` | 回覆 M5 docs/52：Δ0 算子槽位需求；√5 = B-only fit；M7 缺「標籤層→譜量」橋 | ✅ |
 | `docs/26_reverse_push_ban.md` | 撤回 3 封 v11→v10 反向推送；反向推送禁令＋同版本消化；08 §4 C4 閘 | ✅ |
 | `docs/25_m2_m10_replies.md` | 回覆 M2 docs/02 裁定（R1–R4）＋ M10 D6：C4 恆真、互換律兩讀法分叉 | ✅ |
 | `docs/24_session_handoff.md` | 本 session 結論之對外交付（M2／M5／O209 三封；含需求撤銷） | ✅ |
@@ -38,6 +39,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/18_m5_operator_slot.py` | M5 docs/52 回核（6/6）：√5 地位、A_eff 標度、基底可行性 | ✅ |
 | `scripts/17_sigma_budget.py` | 誤差預算回核（7/7）：σ_X 修正，canonical z=−9.76 | ✅ |
 | `scripts/16_m2_adjudication_verify.py` | M2 裁定回核（9/9）：λ 族、互換律兩讀法、M6 樹核 | ✅ |
 | `scripts/15_m4_intake_recheck.py` | M4 docs/39 回核（7/7）：X 兩值、n_s 定義域、M1@n_s=1 | ✅ |

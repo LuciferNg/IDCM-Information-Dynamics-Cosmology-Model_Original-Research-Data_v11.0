@@ -23,6 +23,7 @@ CHAIN=(
   15_m4_intake_recheck  # M4 docs/39 回核（7/7）
   16_m2_adjudication_verify # M2 裁定回核（9/9）
   17_sigma_budget       # 誤差預算回核（7/7）
+  18_m5_operator_slot   # M5 docs/52 回核（6/6）
   07_audit_full_chain
   04_doc_consistency   # 必須最後：核對全部 producer 之 data/*.json
 )

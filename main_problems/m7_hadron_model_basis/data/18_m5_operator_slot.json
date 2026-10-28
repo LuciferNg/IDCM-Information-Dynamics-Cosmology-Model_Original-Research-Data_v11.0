@@ -1,0 +1,66 @@
+{
+ "module": "M7",
+ "script": "18_m5_operator_slot.py",
+ "checks": [
+  {
+   "item": "k 反解 = 2.2361（M5 記載）",
+   "pass_": true,
+   "got": "2.2361451",
+   "want": "2.2361",
+   "note": ""
+  },
+  {
+   "item": "與 √5 之差 ≈ 0.001%（M5 記載）",
+   "pass_": true,
+   "got": "+0.0034%",
+   "want": "<0.01%",
+   "note": "單一質量比反解 ⟹ 0 dof"
+  },
+  {
+   "item": "√5 不可升格為定律（K 通道反證：k↑ ⟹ K σ↑ 單調）",
+   "pass_": true,
+   "got": "B-only fit",
+   "want": "0 dof",
+   "note": "與 M5 自判一致；本 M 只加一句：任何『√5 結構』主張須先在 K 通道盲測"
+  },
+  {
+   "item": "A_eff/X 與 √3 之接近屬凑數（0 dof、單點、兩個 X 值給出不同偏差）",
+   "pass_": true,
+   "got": "+0.34% / +0.89%",
+   "want": "拒絕升格",
+   "note": "依 φ-power 陷阱紀律：單點吻合不可作結構，且兩載體 X 給出不同偏差 ⟹ 無穩定性"
+  },
+  {
+   "item": "A_eff/2.51 = 1.7726 MeV（與其 t 尺度自洽；不作結構主張）",
+   "pass_": true,
+   "got": "1.77259 MeV",
+   "want": "1.77259",
+   "note": "M5 之 t 尺度屬其產權；本 M 只核算術"
+  },
+  {
+   "item": "M7 基底無現成一體/isospin-odd/非q² 算子 ⟹ 必為新成分（與 M5 一致）",
+   "pass_": true,
+   "got": "3 類庫存全部排除",
+   "want": "新成分",
+   "note": "①②③ 逐項排除；缺『標籤層→譜量』橋 ⟹ 需求升為 M7 之結構缺口"
+  }
+ ],
+ "requirement_for_M7": {
+  "one_body": true,
+  "isospin_odd": true,
+  "non_q2": true,
+  "scale_MeV": 4.4492,
+  "scale_sigma": 0.4603,
+  "missing_bridge": "嵌入層標籤（味）→ 譜量 之標度橋（未註冊）"
+ },
+ "npass": 6,
+ "ntotal": 6,
+ "metrics": {
+  "k": 2.2361450862331194,
+  "dev_sq5_pct": 0.00344840738768525,
+  "A_eff_over_Xext": 1.73796875,
+  "A_eff_over_Xgamma": 1.7474210006997617,
+  "t_implied": 1.772589641434263
+ },
+ "verdict": "√5 = B-only fit (0 dof), family dead in K; M7 basis lacks any one-body isospin-odd spectral operator; missing bridge = label→spectrum scale"
+}

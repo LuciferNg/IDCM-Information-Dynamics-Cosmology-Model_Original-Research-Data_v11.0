@@ -114,7 +114,13 @@ vpath = os.path.join(M7, "data", "handoff_withdrawals.json")
 WD = json.load(open(vpath, encoding="utf-8")) if os.path.exists(vpath) else {"withdrawn": []}
 wkeys = {(w["ts"], w["target"]) for w in WD.get("withdrawn", [])}
 cross_all, cross_active = [], []
+# register 自身之撤回事件（kind=handoff_withdrawn）只作資訊，不自動赦免任何推送
+n_reg_wd = sum(1 for r in recs if r.get("pid") == PID and r.get("kind") == "handoff_withdrawn")
+print(f"    register 內 handoff_withdrawn 事件 = {n_reg_wd}（只作資訊；赦免只認 data/handoff_withdrawals.json）")
+PUSH_KINDS = ("handed_off", "merge")
 for d in outs:
+    if d.get("kind") not in PUSH_KINDS:
+        continue
     t = d.get("target_pid") or ""
     tv = VERS.get(t[:1].upper())
     if tv and tv != SELF_VER:

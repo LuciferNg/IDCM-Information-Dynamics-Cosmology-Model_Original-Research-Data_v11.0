@@ -1,6 +1,6 @@
 {
- "npass": 202,
- "ntotal": 202,
+ "npass": 209,
+ "ntotal": 209,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1230,6 +1230,48 @@
    "doc": "26_reverse_push_ban.md",
    "status": "✅",
    "detail": "doc=3 art=3（整數須全等）"
+  },
+  {
+   "name": "§27 npass",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§27 ntotal",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§27 k",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=2.2361451 art=2.23614508623 |Δ|=1.38e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§27 dev",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=0.0034 art=0.00344840738769 |Δ|=4.84e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§27 r1",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=1.73796875 art=1.73796875 |Δ|=0.00e+00 ≤ 5.0e-09"
+  },
+  {
+   "name": "§27 r2",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=1.747421 art=1.7474210007 |Δ|=7.00e-10 ≤ 5.0e-07"
+  },
+  {
+   "name": "§27 t",
+   "doc": "27_m5_operator_slot.md",
+   "status": "✅",
+   "detail": "doc=1.77259 art=1.77258964143 |Δ|=3.59e-07 ≤ 5.0e-06"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

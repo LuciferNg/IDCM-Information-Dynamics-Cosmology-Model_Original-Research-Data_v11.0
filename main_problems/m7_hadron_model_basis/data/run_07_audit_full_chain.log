@@ -3,7 +3,7 @@ M7 全鏈審計（scripts/07）—— A 結構 / B 獨立重推導 / C 記錄層
 ====================================================================================================================
 
 A1 檔案對稱（README 所列 ↔ 磁碟）
-    README 提 47 項；磁碟 75 檔（含 log/版本檔）
+    README 提 49 項；磁碟 79 檔（含 log/版本檔）
     跨 M／O 引用（存在於他目錄，合法）：['docs/01', 'docs/06', 'docs/28', 'docs/29', 'docs/31', 'docs/32', 'docs/33']
     README 有而全樹各處都冇：無
     磁碟有而 README 冇（除 run log／.v1）：無
@@ -11,7 +11,7 @@ A1 檔案對稱（README 所列 ↔ 磁碟）
   ✅ A1 所有 scripts/*.py 與 docs/*.md 已列於 README          0 | want 0
 
 A2 產物綁定（data/*.json ↔ producer script）
-    JSON 20 個；無 producer 者：無；歷史快照（白名單）：['02_r5_mode_content_nogo.v1.json']
+    JSON 21 個；無 producer 者：無；歷史快照（白名單）：['02_r5_mode_content_nogo.v1.json']
     跨 O data 輸入（合法）：3 項：['13_ud_verdict.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json', '12_o209_assignment.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json', '12_o209_assignment.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json']
     script 宣告但缺檔：無
   ✅ A2 無孤兒 JSON                                        0 | want 0
@@ -79,11 +79,12 @@ C1 四件套狀態行 ＋ register state
   ✅ C1 registry block == register state（無 BLOCK-DRIFT） {'01_problem_record.md': ('closed', 'negative'), 'SESSION_START.md': ('closed', 'negative')} | want closed/negative
 
 C2 水位：register close（2026-10-26T12:59:45）之後被改嘅檔
-    75 檔：['docs/10_reproduction_gate.md', 'docs/11_definition_freeze.md', 'docs/12_r5_verdict.md', 'docs/13_file_deletion_audit.md', 'docs/14_rerun_verification.md', 'docs/15_additivity_scope_verdict.md', 'docs/16_gap_closure.md', 'docs/17_audit_full_chain.md', 'docs/18_m4_intake_receipt.md', 'docs/19_o120_import.md', 'docs/20_o209_assignment.md', 'docs/21_incoming_triage.md', 'docs/22_external_recompute.md', 'docs/23_m4_intake_recheck.md', 'docs/24_session_handoff.md', 'docs/25_m2_m10_replies.md', 'docs/26_reverse_push_ban.md', 'scripts/03_grep_evidence.py', 'scripts/04_doc_consistency.py', 'scripts/05_additivity_scope.py', 'scripts/06_gap_closure.py', 'scripts/07_audit_full_chain.py', 'scripts/08_handoff_matrix.py', 'scripts/09_m4_receipt.py', 'scripts/10_watermark.py', 'scripts/11_o120_import_verify.py', 'scripts/12_o209_assignment.py', 'scripts/13_ud_verdict.py', 'scripts/14_external_recompute.py', 'scripts/15_m4_intake_recheck.py', 'scripts/16_m2_adjudication_verify.py', 'scripts/17_sigma_budget.py', 'scripts/run_chain.sh', 'data/01_reproduction_gate.json', 'data/02_r5_mode_content_nogo.json', 'data/02b_r5_mode_content_nogo.json', 'data/03_grep_evidence.json', 'data/04_doc_consistency.json', 'data/05_additivity_scope.json', 'data/06_gap_closure.json', 'data/07_audit_full_chain.json', 'data/08_handoff_matrix.json', 'data/09_m4_receipt.json', 'data/11_o120_import.json', 'data/12_o209_assignment.json', 'data/13_ud_verdict.json', 'data/14_external_recompute.json', 'data/15_m4_intake_recheck.json', 'data/16_m2_adjudication.json', 'data/17_sigma_budget.json', 'data/handoff_withdrawals.json', 'data/run_01_reproduction_gate.log', 'data/run_02_r5_mode_content_nogo.log', 'data/run_02_r5_mode_content_nogo.v1.log', 'data/run_02b_r5_mode_content_nogo.log', 'data/run_03_grep_evidence.log', 'data/run_04_doc_consistency.log', 'data/run_05_additivity_scope.log', 'data/run_06_gap_closure.log', 'data/run_07_audit_full_chain.log', 'data/run_08_handoff_matrix.log', 'data/run_09_m4_receipt.log', 'data/run_10_watermark.log', 'data/run_11_o120_import_verify.log', 'data/run_12_o209_assignment.log', 'data/run_13_ud_verdict.log', 'data/run_14_external_recompute.log', 'data/run_15_m4_intake_recheck.log', 'data/run_16_m2_adjudication_verify.log', 'data/run_17_sigma_budget.log', 'data/watermark.json', '01_problem_record.md', 'SESSION_START.md', 'README.md', 'final_result.md']
-    水位（data/watermark.json，scripts/10 生成）列 79 檔；未覆蓋 0：[]
+    79 檔：['docs/10_reproduction_gate.md', 'docs/11_definition_freeze.md', 'docs/12_r5_verdict.md', 'docs/13_file_deletion_audit.md', 'docs/14_rerun_verification.md', 'docs/15_additivity_scope_verdict.md', 'docs/16_gap_closure.md', 'docs/17_audit_full_chain.md', 'docs/18_m4_intake_receipt.md', 'docs/19_o120_import.md', 'docs/20_o209_assignment.md', 'docs/21_incoming_triage.md', 'docs/22_external_recompute.md', 'docs/23_m4_intake_recheck.md', 'docs/24_session_handoff.md', 'docs/25_m2_m10_replies.md', 'docs/26_reverse_push_ban.md', 'docs/27_m5_operator_slot.md', 'scripts/03_grep_evidence.py', 'scripts/04_doc_consistency.py', 'scripts/05_additivity_scope.py', 'scripts/06_gap_closure.py', 'scripts/07_audit_full_chain.py', 'scripts/08_handoff_matrix.py', 'scripts/09_m4_receipt.py', 'scripts/10_watermark.py', 'scripts/11_o120_import_verify.py', 'scripts/12_o209_assignment.py', 'scripts/13_ud_verdict.py', 'scripts/14_external_recompute.py', 'scripts/15_m4_intake_recheck.py', 'scripts/16_m2_adjudication_verify.py', 'scripts/17_sigma_budget.py', 'scripts/18_m5_operator_slot.py', 'scripts/run_chain.sh', 'data/01_reproduction_gate.json', 'data/02_r5_mode_content_nogo.json', 'data/02b_r5_mode_content_nogo.json', 'data/03_grep_evidence.json', 'data/04_doc_consistency.json', 'data/05_additivity_scope.json', 'data/06_gap_closure.json', 'data/07_audit_full_chain.json', 'data/08_handoff_matrix.json', 'data/09_m4_receipt.json', 'data/11_o120_import.json', 'data/12_o209_assignment.json', 'data/13_ud_verdict.json', 'data/14_external_recompute.json', 'data/15_m4_intake_recheck.json', 'data/16_m2_adjudication.json', 'data/17_sigma_budget.json', 'data/18_m5_operator_slot.json', 'data/handoff_withdrawals.json', 'data/run_01_reproduction_gate.log', 'data/run_02_r5_mode_content_nogo.log', 'data/run_02_r5_mode_content_nogo.v1.log', 'data/run_02b_r5_mode_content_nogo.log', 'data/run_03_grep_evidence.log', 'data/run_04_doc_consistency.log', 'data/run_05_additivity_scope.log', 'data/run_06_gap_closure.log', 'data/run_07_audit_full_chain.log', 'data/run_08_handoff_matrix.log', 'data/run_09_m4_receipt.log', 'data/run_10_watermark.log', 'data/run_11_o120_import_verify.log', 'data/run_12_o209_assignment.log', 'data/run_13_ud_verdict.log', 'data/run_14_external_recompute.log', 'data/run_15_m4_intake_recheck.log', 'data/run_16_m2_adjudication_verify.log', 'data/run_17_sigma_budget.log', 'data/run_18_m5_operator_slot.log', 'data/watermark.json', '01_problem_record.md', 'SESSION_START.md', 'README.md', 'final_result.md']
+    水位（data/watermark.json，scripts/10 生成）列 83 檔；未覆蓋 0：[]
   ✅ C2 水位覆蓋全部 close 後變更檔                               0  水位屬 live field，由 scripts/10 重生；本檢查只核覆蓋性
 
 C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可接受；內容消失不可）
+    20e5dfb 01_problem_record.md               刪  62 行；其中水位 live-field 62；未重現 0
     1059e75 01_problem_record.md               刪  58 行；其中水位 live-field 58；未重現 0
     1059e75 22_external_recompute.md           刪   1 行；其中水位 live-field  0；未重現 0
     2a57c5a 01_problem_record.md               刪  56 行；其中水位 live-field 56；未重現 0
@@ -96,7 +97,6 @@ C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可
     18a9109 01_problem_record.md               刪  41 行；其中水位 live-field 41；未重現 0
     97cd0bf 01_problem_record.md               刪  28 行；其中水位 live-field 28；未重現 0
     97cd0bf 18_m4_intake_receipt.md            刪   1 行；其中水位 live-field  0；未重現 0
-    64b65b7 01_problem_record.md               刪  49 行；其中水位 live-field 45；未重現 0
     違規（內容消失）：無
   ✅ C3 歷史檔零內容消失（append-only）                           0  刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫
 
