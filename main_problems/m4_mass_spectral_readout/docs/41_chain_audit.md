@@ -119,3 +119,20 @@ F3（`σ_R` MC vs 解析，差 0.46%）**已結案**：canonical `σ_R = 0.03983
 舊 MC `0.039896` = 2×10⁵ 樣本漲落；L2 舊解析 `0.039714` = 一階近似（低估 0.2825%）。
 `scripts/l2` 已改為計算精確值（新增 `R_span_sigma_exact` ＋ check `B4`），`scripts/l3` 之 `σ_R` 例外項已移除並改為 claim。
 證據：`scripts/44`（4/5 PASS；A1 判準被否證＝爭議之解釋）、`data/44_sigma_R_resolution.json`。
+
+
+## 附註四（2026-10-29；新增 F10，append-only）
+
+**F10 `scripts/30` 之 `chi2_sf` 奇 `dof` 分支有 bug**：`sum(... for j in range(0))` ⟹ 第二項恆空，`k = 3` 返回 **1-dof 值**（與 M7 指出 `docs/29` 之同型錯誤相同）。
+- **影響**：`docs/30` 之 `p` 欄低估（判準用 `χ² < 3`，**判詞不受影響**）。
+- **處置**：`scripts/30` 屬凍結歷史腳本**不改**（避免回溯污染 `data/30`）；正確 `p(3 dof)` 表記於 `docs/47` §六、`docs/30` 附註；新腳本一律用 `mpmath` 正則化上不完全 gamma（`scripts/47` 之 `chi2_sf`）。
+- **狀態**：🟡 記錄性（無判詞影響）
+
+
+## 附註五（2026-10-29；新增 F11，append-only）
+
+**F11 產物綁定之 producer 判定過寬（假 multi-producer）**：舊規則「腳本內有 `json.dump`／`'w'` ⟹ 該檔所有 `.json` 名皆算產者」把**純讀取**誤判為寫入。
+- **實例**：`scripts/47` 讀 `data/42_flag2024_x_revision.json`，被報 `multi-producer`（`scripts/42` ＋ `scripts/47`）⟹ `4b FAIL`。
+- **根因修法（已落地）**：判**行 ＋ 上一行**之語境 —— 寫模式／`json.dump`／`write_text`（同行），或「路徑常量賦值」（同行或上一行，且該語境無 `json.load`／`read_text`）。不再以「檔案層」為單位。
+- **結果**：`4a orphans 0`、`4b multi-producer {}`（原本靠申報掩蓋嘅 `l2_independent_verify.json`／`23_full_audit.json` 假陽性一併消失）、`4c missing 0` ⟹ `12/12 PASS`。
+- **副作用**：`DECLARED_MULTI` 內三條申報保留為歷史（現時已無 multi 產者）。

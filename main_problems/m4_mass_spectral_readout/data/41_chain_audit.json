@@ -27,7 +27,7 @@
     },
     {
       "check": "4b 一產物一 producer（多產者須已申報）",
-      "detail": "multi-producer = {'l2_independent_verify.json': ('L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）', ['l2_independent_verify.py', 'l3_doc_crosscheck.py']), '23_full_audit.json': ('23 產出、24 讀寫加註（已申報）', ['23_full_audit.py', '24_audit_round2.py'])}",
+      "detail": "multi-producer = {}",
       "ok": true
     },
     {
@@ -62,10 +62,10 @@
     }
   ],
   "inventory": {
-    "data_json": 39,
-    "docs": 43,
-    "nn_scripts": 46,
-    "scripts": 48
+    "data_json": 40,
+    "docs": 44,
+    "nn_scripts": 47,
+    "scripts": 49
   },
   "l2": {
     "fail": 0,

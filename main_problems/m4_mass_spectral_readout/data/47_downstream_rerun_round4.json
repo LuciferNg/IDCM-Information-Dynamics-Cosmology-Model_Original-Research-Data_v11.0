@@ -1,0 +1,236 @@
+{
+ "checks": [
+  {
+   "label": "I1a ⟨O⟩_Σ_old = 1.4980（docs/28）",
+   "ok": true,
+   "got": "1.4980",
+   "expect": "1.4980"
+  },
+  {
+   "label": "I1b ⟨O⟩_Σ_new = 1.5469",
+   "ok": true,
+   "got": "1.5469",
+   "expect": "1.5469"
+  },
+  {
+   "label": "I1-P2a χ²_old ≈ 18.2207（本實現 18.2290，⟨O⟩_N 取位 0.891 vs 0.8906）",
+   "ok": true,
+   "got": "18.2290",
+   "expect": "18.2207 ± 0.02"
+  },
+  {
+   "label": "I1-P2a2 p(χ²_old, 3 dof) = 3.96e−4（M7/scripts33 之正確值；1 dof 為 1.97e−5）",
+   "ok": true,
+   "got": "3.945e-04",
+   "expect": "3.96e-4 ± 3%"
+  },
+  {
+   "label": "I1-P2b χ² 上升（更偏離 ⟨O⟩≡1）",
+   "ok": true,
+   "got": "18.229 → 18.972",
+   "expect": "上升"
+  },
+  {
+   "label": "I1-P2c 判詞不變：p 仍 < 0.01（p_old 應 ≈ 3.96e−4）",
+   "ok": true,
+   "got": "3.945e-04 → 2.770e-04",
+   "expect": "< 0.01"
+  },
+  {
+   "label": "I1-P3a 通過集 = 7/12（docs/30 所報）",
+   "ok": true,
+   "got": "7/12",
+   "expect": "7/12"
+  },
+  {
+   "label": "I1-P3b 新錨下通過集不變（逐個比對）",
+   "ok": true,
+   "got": "7/12 同集",
+   "expect": "同集"
+  },
+  {
+   "label": "I1-P4a best χ²_old ≈ 26.68（本實現 26.67，取位 0.01）",
+   "ok": true,
+   "got": "26.67",
+   "expect": "26.68 ± 0.02"
+  },
+  {
+   "label": "I1-P4b 單調數_old = 12/108",
+   "ok": true,
+   "got": "12/108",
+   "expect": "12/108"
+  },
+  {
+   "label": "I1-P4c 新錨下 p_null 仍 ≳ 0.05（掃描結論不變）",
+   "ok": true,
+   "got": "0.565",
+   "expect": "> 0.05"
+  },
+  {
+   "label": "I2a docs/42 之 1.21σ 可重現（獨立算法）",
+   "ok": true,
+   "got": "1.21σ",
+   "expect": "1.21σ"
+  },
+  {
+   "label": "I2b 協方差修正後 σ_Δ = 0.233（非 0.164）",
+   "ok": true,
+   "got": "0.2327",
+   "expect": "0.2328"
+  },
+  {
+   "label": "I2c 結論不反轉（協方差 z 仍 < 2σ）",
+   "ok": true,
+   "got": "0.85σ",
+   "expect": "< 2σ"
+  },
+  {
+   "label": "I3a 舊稱只餘『原文保留 ＋ 改名記錄』檔（無下游以舊稱為 live 標籤）",
+   "ok": false,
+   "got": "['01_problem_record.md', '15_exponent8.md', '15_exponent8.py', '46_handoff_adjudication_round4.md', '46_handoff_adjudication_round4.py', '47_downstream_rerun_round4.md', '47_downstream_rerun_round4.py']",
+   "expect": "⊆ 允許集 6 檔"
+  }
+ ],
+ "data": {
+  "I1_sigma_anchor": {
+   "O_old": 1.498,
+   "O_new": 1.5469,
+   "delta_sigma": 0.186
+  },
+  "I1_chi2_docs29": {
+   "chi2_old": 18.229,
+   "chi2_new": 18.9723,
+   "p_old": 0.0003945054119702918,
+   "p_new": 0.00027702616713920795
+  },
+  "I1_docs30": {
+   "n_pass_old": 7,
+   "n_pass_new": 7,
+   "dropped": [],
+   "added": [],
+   "table": {
+    "A1: 1 + n_s·2/N_q": {
+     "chi2_old": 1.4728,
+     "chi2_new": 1.2676,
+     "p3_old_correct": 0.688569,
+     "p3_new_correct": 0.736837,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A2: N_q(n_s+1)/B": {
+     "chi2_old": 1.7417,
+     "chi2_new": 1.7737,
+     "p3_old_correct": 0.627701,
+     "p3_new_correct": 0.620683,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A3: 1 + n_s·1/N_q": {
+     "chi2_old": 4.6248,
+     "chi2_new": 4.8938,
+     "p3_old_correct": 0.201427,
+     "p3_new_correct": 0.179738,
+     "pass_old": false,
+     "pass_new": false
+    },
+    "A4: 1 + n_s·(B−1)/B": {
+     "chi2_old": 2.3179,
+     "chi2_new": 1.9942,
+     "p3_old_correct": 0.509093,
+     "p3_new_correct": 0.573605,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A5: 1 + n_s/B": {
+     "chi2_old": 7.0459,
+     "chi2_new": 7.4336,
+     "p3_old_correct": 0.070448,
+     "p3_new_correct": 0.059291,
+     "pass_old": false,
+     "pass_new": false
+    },
+    "A6: 1 + n_s/2": {
+     "chi2_old": 1.7422,
+     "chi2_new": 1.7742,
+     "p3_old_correct": 0.627584,
+     "p3_new_correct": 0.620567,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A7: (1 + n_s/N_q)²": {
+     "chi2_old": 4.0928,
+     "chi2_new": 3.7296,
+     "p3_old_correct": 0.251614,
+     "p3_new_correct": 0.292182,
+     "pass_old": false,
+     "pass_new": false
+    },
+    "A8: B/(B − n_s)": {
+     "chi2_old": 2.1374,
+     "chi2_new": 2.4065,
+     "p3_old_correct": 0.54438,
+     "p3_new_correct": 0.492429,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A9: (N_q + n_s·NG)/N_q": {
+     "chi2_old": 8.773,
+     "chi2_new": 8.0937,
+     "p3_old_correct": 0.032466,
+     "p3_new_correct": 0.044115,
+     "pass_old": false,
+     "pass_new": false
+    },
+    "A10: 1 + n_s·(B−2)/(B−1)": {
+     "chi2_old": 1.4728,
+     "chi2_new": 1.2676,
+     "p3_old_correct": 0.688569,
+     "p3_new_correct": 0.736837,
+     "pass_old": true,
+     "pass_new": true
+    },
+    "A11: 1 + n_s·ND/(ND+NQ·B)": {
+     "chi2_old": 4.9408,
+     "chi2_new": 4.4322,
+     "p3_old_correct": 0.176181,
+     "p3_new_correct": 0.218419,
+     "pass_old": false,
+     "pass_new": false
+    },
+    "A12: 1 + n_s·2/B": {
+     "chi2_old": 1.7422,
+     "chi2_new": 1.7742,
+     "p3_old_correct": 0.627584,
+     "p3_new_correct": 0.620567,
+     "pass_old": true,
+     "pass_new": true
+    }
+   }
+  },
+  "I1_docs31": {
+   "chi2_old": 26.6691,
+   "chi2_new": 27.7257,
+   "mono_old": 12,
+   "mono_new": 12,
+   "pnull_old": 0.5576,
+   "pnull_new": 0.5654
+  },
+  "I2_KN": {
+   "s_indep": 0.1639,
+   "z_indep": 1.21,
+   "s_cov": 0.2327,
+   "z_cov": 0.852
+  },
+  "I3_rename_hits": {
+   "15_exponent8.md": 8,
+   "47_downstream_rerun_round4.md": 1,
+   "46_handoff_adjudication_round4.md": 3,
+   "46_handoff_adjudication_round4.py": 7,
+   "47_downstream_rerun_round4.py": 5,
+   "15_exponent8.py": 4,
+   "01_problem_record.md": 2
+  },
+  "n_pass": 14,
+  "n_total": 15
+ }
+}

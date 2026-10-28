@@ -417,8 +417,8 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 6,
-        "external": 13,
+        "meta": 7,
+        "external": 16,
         "pending": 1,
         "unexplained": [],
         "unexplained_n": 0
@@ -683,14 +683,15 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 8,
-        "external": 3,
-        "pending": 15,
+        "meta": 9,
+        "external": 5,
+        "pending": 21,
         "unexplained": [
           "3.96e-04",
-          "3.96e-04"
+          "3.96e-04",
+          "4.356"
         ],
-        "unexplained_n": 2
+        "unexplained_n": 3
       },
       "sections_ok": true,
       "h1_ok": true
@@ -710,8 +711,8 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 6,
-        "external": 8,
+        "meta": 7,
+        "external": 13,
         "pending": 2,
         "unexplained": [],
         "unexplained_n": 0
@@ -734,9 +735,9 @@
       ],
       "docstring_match": null,
       "t3": {
-        "meta": 4,
-        "external": 5,
-        "pending": 32,
+        "meta": 5,
+        "external": 7,
+        "pending": 37,
         "unexplained": [
           "21.13"
         ],
@@ -948,14 +949,26 @@
       "docstring_match": null,
       "sections_ok": true,
       "h1_ok": true
+    },
+    "47": {
+      "script": "47_downstream_rerun_round4.py",
+      "doc": "47_downstream_rerun_round4.md",
+      "log": "run_47_downstream_rerun_round4.log",
+      "log_exists": false,
+      "exit": 1,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 43,
-    "scripts": 44,
-    "scripts_audited": 43,
+    "docs": 44,
+    "scripts": 45,
+    "scripts_audited": 44,
     "logs": 44,
-    "json": 39,
+    "json": 40,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
@@ -981,6 +994,7 @@
     "41: 重跑非 byte-identical",
     "41: docstring 與 docs §一 不一致",
     "42: 缺 前設問題/事前判準/結論報告",
-    "46: JSON 46_handoff_adjudication_round4.json 不一致"
+    "46: JSON 46_handoff_adjudication_round4.json 不一致",
+    "47: exit 1"
   ]
 }

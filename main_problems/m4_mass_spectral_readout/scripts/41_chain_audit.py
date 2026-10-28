@@ -64,7 +64,8 @@ DECLARED_SHARED = {"31b": "docs/31_flavour_insertion_negative.md（enum 附於�
                    "43": "docs/42_flag2024_x_revision.md（X 修訂之傳播量化，併入同一 doc）",
                    "44": "docs/11_lattice_flag_span.md（σ_R 終局，附註二）",
                    "45": "docs/45_pool_enumerator.md（pool 型數字之獨立枚舉器，F8）",
-                   "46": "docs/46_handoff_adjudication_round4.md（第四輪入站裁定之計算支撐）"}
+                   "46": "docs/46_handoff_adjudication_round4.md（第四輪入站裁定之計算支撐）",
+                   "47": "docs/47_downstream_rerun_round4.md（第四輪裁定之下游重推）"}
 add("1a 每支 NN 腳本都有 doc（或已申報共用）",
     all(n in DECLARED_DOC_ONLY or n in DECLARED_SHARED or n in doc_nums for n in script_no_doc),
     "script-only = %s" % {n: DECLARED_SHARED.get(n, "未申報") for n in script_no_doc})
@@ -84,14 +85,30 @@ for p in glob.glob(os.path.join(SCRIPTS, "*.py")):
 add("3 路徑衛生（scripts 無真 /tmp 寫入）", not tmp_hits, "hits = %s" % (tmp_hits or "0"))
 
 # ---------------- ④ 產物綁定：每個 data/*.json 有生產者
+# 2026-10-29 收緊（F11）：「產者」判**行 ＋ 上一行**之語境，唔再用「檔案有 'w' ⟹ 全部 .json 都算」
+# （舊版把純讀取誤判為寫入，實例：47 讀 data/42 被誤報 multi-producer）。
+# 語境 = ①同行有寫模式／json.dump／write_text　②同行或上一行係「路徑常量賦值」（且該語境無讀取），
+#        ③滿足 ① 或 ② 但該語境出現 json.load／read_text 則不算（純讀）。
+JSONNAME = re.compile(r"([A-Za-z0-9_]+)\.json")
+WRITE_CTX = re.compile(r"[\"'](?:w|a|wb|ab|w\+|a\+)[\"']|json\.dump|write_text")
+READ_CTX = re.compile(r"json\.load|read_text|\.read\(|json\.loads")
+ASSIGN = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*")
 producers = {}
 for p in glob.glob(os.path.join(SCRIPTS, "*.py")):
-    txt = open(p, encoding="utf-8", errors="replace").read()
-    writes = ("json.dump" in txt) or ('"w"' in txt) or ("'w'" in txt)
-    if not writes:
-        continue
-    for m in re.finditer(r"([A-Za-z0-9_]+)\.json\"?", txt):
-        producers.setdefault(m.group(1) + ".json", set()).add(os.path.basename(p))
+    lines = open(p, encoding="utf-8", errors="replace").read().splitlines()
+    for i, line in enumerate(lines):
+        names = JSONNAME.findall(line)
+        if not names:
+            continue
+        ctx = line + "\n" + (lines[i - 1] if i else "")
+        if READ_CTX.search(ctx):
+            continue
+        if WRITE_CTX.search(line) or (ASSIGN.match(lines[i - 1] if i else "") and not READ_CTX.search(lines[i - 1] if i else "")):
+            for nm in names:
+                producers.setdefault(nm + ".json", set()).add(os.path.basename(p))
+        elif ASSIGN.match(line):
+            for nm in names:
+                producers.setdefault(nm + ".json", set()).add(os.path.basename(p))
 orphans = [j for j in js if j not in producers]
 add("4a 每個 data/*.json 有 producer", not orphans, "orphans = %s" % (orphans or "0"))
 DECLARED_MULTI = {"l2_independent_verify.json": "L2 產出、L3 只讀（正則誤判讀取為寫入，已申報）",

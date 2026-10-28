@@ -99,7 +99,7 @@
   {
    "label": "E3a 撞名只出現在 docs/15（docs/13 零命中 ⟹ M1 所述範圍過寬）",
    "ok": false,
-   "got": "['15_exponent8.md', '46_handoff_adjudication_round4.md']",
+   "got": "['15_exponent8.md', '46_handoff_adjudication_round4.md', '47_downstream_rerun_round4.md']",
    "expect": "{15}"
   }
  ],
@@ -235,7 +235,8 @@
   "E3_M1_rename": {
    "hits": {
     "15_exponent8.md": 8,
-    "46_handoff_adjudication_round4.md": 3
+    "46_handoff_adjudication_round4.md": 3,
+    "47_downstream_rerun_round4.md": 1
    }
   },
   "n_pass": 16,
