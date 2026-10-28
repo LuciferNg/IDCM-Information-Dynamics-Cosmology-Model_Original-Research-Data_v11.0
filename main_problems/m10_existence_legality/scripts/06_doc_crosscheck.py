@@ -58,7 +58,8 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "06_environment_completeness", "07_nuclide_chart",
           "08_sphaleron_relaxation", "09_channel_completion",
           "10_falsification_nubase", "11_definition_d5",
-          "12_primordial_label", "13_barrier_gate"):
+          "12_primordial_label", "13_barrier_gate",
+          "14_m10_consolidation"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -318,6 +319,20 @@ cl("13_barrier_gate", f"{100*g3['frac']:.1f}%", "非永久者佔比")
 cl("13_barrier_gate", f"{g3['SP_gated']}", "S\\P_gated 條數")
 cl("13_barrier_gate", f"{100*g3['tier3_frac_gated']:.1f}%", "gated 之 Tier III 佔比")
 
+
+# ---------------- docs/14 ← 10/11/12/13（只核 data 派生量；§五 之探測數字不入核）
+j14b = J["14_barrier_gate"]
+cl("14_m10_consolidation", f"{j10c['P_size']}", "合法集條數")
+cl("14_m10_consolidation", f"{tb['SP_size']}", "S\\P 條數")
+cl("14_m10_consolidation", f"{tb['tier3']}", "Tier III 條數")
+cl("14_m10_consolidation", f"{tb['n_non_tier3']}", "屏障帶條數")
+cl("14_m10_consolidation", e_(tb["max_rel"], 2), "失效半徑")
+cl("14_m10_consolidation", e_(j10c["test_C"]["span"], 1), "時間盲跨度")
+cl("14_m10_consolidation", f"{j14b['G2']['gap']:.1f}", "B_f 間隙")
+cl("14_m10_consolidation", f"{j14b['G2']['bf_band_min']:.1f}", "屏障帶 B_f 下限")
+cl("14_m10_consolidation", f"{j14b['G2']['bf_sf_max']:.1f}", "觀測 SF B_f 上限")
+cl("14_m10_consolidation", f"{j14b['G3']['n_nonpermanent']}", "G2 之非永久條數")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -350,7 +365,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 13,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 14,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)
