@@ -2,7 +2,7 @@
 M5 docs/26 — 全鏈正確性＋連續性審計（依賴圖／撤回污染／溯源／狀態一致）
 ============================================================================================================
 
-[載入] docs = 54 份（01–54）
+[載入] docs = 56 份（01–56）
 
 ============================================================================================================
 K1 依賴圖：`←` 輸入須為較細編號；不得循環；`→` 以外之前向引用 = 違規
@@ -61,12 +61,14 @@ K1 依賴圖：`←` 輸入須為較細編號；不得循環；`→` 以外之�
   52  ← ['12', '43', '49', '50', '51']    → —
   53  ← —    → —
   54  ← —    → —
+  55  ← —    → ['01', '27', '54']
+  56  ← ['27', '52', '54', '55']    → ['45']
 
   前向輸入（違規）：0
   相互引用（循環風險）：0
-  由 54 反向可達 0／53 份（不含自身）
-  由 docs/25 反向可達 9／52 份（不含 25 與本審計檔）
-  未被主鏈引用（葉）：['01_chain_coulomb_kernel.md', '02_ktree_radial_kernel.md', '03_ultrametric_nogo.md', '04_signed_kernel_nogo.md', '05_state_kernel_probe.md', '06_state_sign_reachability.md', '07_sign_structure_audit.md', '08_sampleout_spin_test.md', '09_contact_term_derivation.md', '10_tree_two_body.md', '11_full_audit.md', '12_layer_pin_a3.md', '13_normalisation_fix_and_d1.md', '14_contact_term_corrected.md', '15_independent_verification.md', '16_d2_strong_ib.md', '17_g_kernel_first_pass.md', '18_two_sector.md', '19_shape_ratio_ceiling.md', '20_registered_family.md', '21_sign_theorem.md', '22_assignment_scope.md', '23_family_resolution.md', '24_downstream_recompute.md', '25_rederivation_theorem.md', '26_chain_audit.md', '27_weight_convention.md', '28_v2_full_recompute.md', '29_v2_d2_s6.md', '30_dimension_attack.md', '31_scale_identifiability.md', '32_metric_decay.md', '33_two_lengths.md', '34_A_bound.md', '35_third_family.md', '36_k_anomaly_significance.md', '37_sigma_propagation.md', '38_heavy_hfs_kappa.md', '39_chiral_log_nogo.md', '40_scale_pair_operator.md', '41_contact_ml_v3.md', '42_em_decomposition_retraction.md', '43_one_body_em_necessary.md', '44_ml_exponent_stability.md', '45_vself_class_isospin.md', '46_sign_structure.md', '47_B_anomaly.md', '48_fractal_34_law_test.md', '49_em_sector_2amp.md', '50_lightflavour_law.md', '51_isospin_channel_dead.md', '52_closed_form_scan.md', '53_m7_handoff_adjudication.md']
+  由 56 反向可達 43／55 份（不含自身）
+  由 docs/25 反向可達 9／54 份（不含 25 與本審計檔）
+  未被主鏈引用（葉）：['05_state_kernel_probe.md', '06_state_sign_reachability.md', '07_sign_structure_audit.md', '08_sampleout_spin_test.md', '19_shape_ratio_ceiling.md', '20_registered_family.md', '21_sign_theorem.md', '22_assignment_scope.md', '40_scale_pair_operator.md', '44_ml_exponent_stability.md', '48_fractal_34_law_test.md', '53_m7_handoff_adjudication.md']
 
 ============================================================================================================
 K2 撤回值污染：只可出現於撤回語境（±3 行內含 作廢/撤回/錯誤/前附註/v1/假象/漏項/更正）

@@ -1,0 +1,28 @@
+{
+  "branches": [
+    {
+      "branch": "v1（w = N_d v²，已作廢）",
+      "a0_fm": 0.3774221681639186,
+      "hbarc_over_a0_MeV": 522.8282730713865,
+      "k0_MeV": 3.8152622417916953,
+      "A_max_MeV": 1.2717540805972318,
+      "gap_vs_need_pct": -0.39741021274006805,
+      "blocked": false
+    },
+    {
+      "branch": "v2（w = |v|²，正典）",
+      "a0_fm": 0.384184,
+      "hbarc_over_a0_MeV": 513.6262322220603,
+      "k0_MeV": 3.7481117053572097,
+      "A_max_MeV": 1.2493705684524032,
+      "gap_vs_need_pct": 1.387052967724589,
+      "blocked": true
+    }
+  ],
+  "branch_ratio": 1.0179158311473233,
+  "g_strictly_decreasing": true,
+  "g_last_positive_d": 18,
+  "w_convention": "w=|v|^2 (v2)",
+  "m11_rejected": true,
+  "m6_docs01_status": "fixed 2026-10-27"
+}
