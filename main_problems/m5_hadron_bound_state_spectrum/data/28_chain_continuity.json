@@ -217,6 +217,11 @@
         "38",
         "40",
         "41"
+      ],
+      "45_vself_class_isospin.md": [
+        "09",
+        "42",
+        "43"
       ]
     },
     "edges_out": {
@@ -315,7 +320,8 @@
       ],
       "44_ml_exponent_stability.md": [
         "43"
-      ]
+      ],
+      "45_vself_class_isospin.md": []
     },
     "forward_violations": [],
     "mutual": [],
@@ -343,12 +349,16 @@
       "30_dimension_attack.md",
       "31_scale_identifiability.md",
       "32_metric_decay.md",
+      "33_two_lengths.md",
+      "34_A_bound.md",
       "35_third_family.md",
       "36_k_anomaly_significance.md",
       "37_sigma_propagation.md",
       "38_heavy_hfs_kappa.md",
-      "40_scale_pair_operator.md",
-      "41_contact_ml_v3.md"
+      "39_chiral_log_nogo.md",
+      "41_contact_ml_v3.md",
+      "42_em_decomposition_retraction.md",
+      "43_one_body_em_necessary.md"
     ],
     "leaves": [
       "04_signed_kernel_nogo.md",
@@ -360,11 +370,8 @@
       "20_registered_family.md",
       "21_sign_theorem.md",
       "22_assignment_scope.md",
-      "33_two_lengths.md",
-      "34_A_bound.md",
-      "39_chiral_log_nogo.md",
-      "42_em_decomposition_retraction.md",
-      "43_one_body_em_necessary.md"
+      "40_scale_pair_operator.md",
+      "44_ml_exponent_stability.md"
     ]
   },
   "K2": [],
