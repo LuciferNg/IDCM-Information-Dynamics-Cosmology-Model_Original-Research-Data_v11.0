@@ -49,7 +49,7 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
           "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
           "14_barrier_gate", "15_mechanism_classification",
-          "16_definition_d6"):
+          "16_definition_d6", "17_em_sign"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -61,7 +61,8 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "10_falsification_nubase", "11_definition_d5",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
-          "16_definition_d6", "17_surviving_results", "18_incoming_triage"):
+          "16_definition_d6", "17_surviving_results", "18_incoming_triage",
+          "19_em_sign_downstream"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -421,6 +422,24 @@ cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['X']}", "X")
 cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['x_n']:.4f}", "x_n")
 cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['em_needed_gamma']:.4f}", "em 需求（γ 比值）")
 
+
+# ---------------- docs/19 ← 17_em_sign（方向重推）
+j17e = J["17_em_sign"]
+cl("19_em_sign_downstream", f"{j17e['em_pp_minus_pn']:.4f}", "em(p)−em(n)")
+cl("19_em_sign_downstream", f"{j17e['em_pn_minus_pp']:.4f}", "em(n)−em(p)")
+cl("19_em_sign_downstream", f"{j17e['gap_MeV']:.4f}", "缺口 MeV")
+cl("19_em_sign_downstream", f"{j17e['gap_over_sigma']:.3f}", "缺口 σ 數")
+cl("19_em_sign_downstream", f"{j17e['flip_threshold']:.4f}", "判號翻轉閾")
+cl("19_em_sign_downstream", f"{j17e['margin']:.4f}", "判號餘量")
+cl("19_em_sign_downstream", f"{j17e['em_gamma']:.4f}", "γ 路線 em")
+cl("19_em_sign_downstream", f"{j17e['em_gamma_over']*100:.2f}%", "γ 路線超界")
+cl("19_em_sign_downstream", f"{j17e['inputs']['sigma_X']}", "σ_X")
+cl("19_em_sign_downstream", f"{j17e['inputs']['X']}", "X")
+cl("19_em_sign_downstream", f"{j17e['sigma_band'][0]:.4f}", "1σ 下界")
+cl("19_em_sign_downstream", f"{j17e['sigma_band'][1]:.4f}", "1σ 上界")
+cl("19_em_sign_downstream", f"{j17e['checks_passed']}/{j17e['checks_total']}", "check 數")
+cl("19_em_sign_downstream", str(len(j17e["downstream"])), "下游項數")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -455,7 +474,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 18,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 19,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

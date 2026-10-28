@@ -1,0 +1,109 @@
+{
+  "script": "17_em_sign_rederivation.py",
+  "role": "R19 em 方向更正之全下游重推",
+  "inputs": {
+    "X": 2.56,
+    "sigma_X": 0.094,
+    "m_n_minus_m_p": 1.29333236,
+    "m_e": 0.51099895,
+    "A_max_v2": 1.2494,
+    "X_pred_gamma": 2.6897
+  },
+  "em_pp_minus_pn": 1.26666764,
+  "em_pn_minus_pp": -1.26666764,
+  "gap_MeV": 0.0173,
+  "gap_over_sigma": 0.18404255319148935,
+  "sigma_band": [
+    1.1727,
+    1.3607
+  ],
+  "flip_threshold": 2.04900105,
+  "margin": 0.78230105,
+  "em_gamma": 1.39636764,
+  "em_gamma_over": 0.10524996124946007,
+  "downstream": [
+    {
+      "item": "docs/03 表（62 列）標籤",
+      "verdict": "更正",
+      "why": "em(n)−em(p) → em(p)−em(n)"
+    },
+    {
+      "item": "docs/03 第 114 列",
+      "verdict": "更正",
+      "why": "同上"
+    },
+    {
+      "item": "docs/03 數值（1.2667/1.3963/0.7823/162%/61.8%）",
+      "verdict": "不變",
+      "why": "全為量值或比例"
+    },
+    {
+      "item": "docs/02「em 修正 1.3963」",
+      "verdict": "不變",
+      "why": "量值；已加方向註"
+    },
+    {
+      "item": "docs/05 牆表（W1 行）",
+      "verdict": "不變",
+      "why": "量值"
+    },
+    {
+      "item": "docs/05 §六 x_verdict 協議",
+      "verdict": "需加一步",
+      "why": "計 em 時須用 em(p)−em(n)"
+    },
+    {
+      "item": "docs/17 S3.1",
+      "verdict": "重推",
+      "why": "加 σ_X=0.094 ⟹ 缺口 0.18σ（非硬衝突）"
+    },
+    {
+      "item": "docs/17 S3.4（em/|x|=162%）",
+      "verdict": "不變",
+      "why": "量值"
+    },
+    {
+      "item": "README §三（em 主宰）",
+      "verdict": "不變",
+      "why": "量值"
+    },
+    {
+      "item": "final_result 關鍵公式",
+      "verdict": "需加方向與 σ",
+      "why": "x = X − em − m_e，em ≡ em(p)−em(n)"
+    },
+    {
+      "item": "scripts/02 輸出字串",
+      "verdict": "已更正",
+      "why": "前次已改"
+    },
+    {
+      "item": "scripts/03 G4 計算",
+      "verdict": "不變",
+      "why": "公式本已正確（x = X − em − m_e）"
+    },
+    {
+      "item": "01_problem_record P7 列",
+      "verdict": "需 append 更正",
+      "why": "原文保留，加方向註"
+    },
+    {
+      "item": "W1 狀態",
+      "verdict": "重推",
+      "why": "兩體封（結構）＋ 數值 0.18σ（不排除）"
+    },
+    {
+      "item": "M5 之 ②（自能反號）",
+      "verdict": "外部",
+      "why": "已回覆：同號"
+    },
+    {
+      "item": "M4 scripts/27",
+      "verdict": "獨立印證",
+      "why": "em(n)−em(p) = −1.2667 同值"
+    }
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "failures": []
+}
