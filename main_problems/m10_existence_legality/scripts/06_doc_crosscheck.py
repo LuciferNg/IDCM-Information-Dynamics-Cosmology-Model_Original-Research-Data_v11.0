@@ -61,7 +61,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "10_falsification_nubase", "11_definition_d5",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
-          "16_definition_d6", "17_surviving_results"):
+          "16_definition_d6", "17_surviving_results", "18_incoming_triage"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -410,6 +410,17 @@ _rv = j15["E4_violations"][0] if j15["E4_violations"] else None
 if _rv:
     cl("17_surviving_results", f"{_rv['Q']:.1f}", "¹⁸⁷Re 之 Q")
 
+
+# ---------------- docs/18 ← 03（incoming 裁決之數字自洽核）
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['em_needed']:.4f}", "em 需求")
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['A_max_v2']:.4f}", "A_max v2")
+cl("18_incoming_triage",
+   f"{j3p['G4_neutron_budget']['em_needed']-j3p['G4_neutron_budget']['A_max_v2']:.4f}", "缺口")
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['share_em']*100:.0f}", "em 佔比")
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['X']}", "X")
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['x_n']:.4f}", "x_n")
+cl("18_incoming_triage", f"{j3p['G4_neutron_budget']['em_needed_gamma']:.4f}", "em 需求（γ 比值）")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -444,7 +455,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 17,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 18,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

@@ -233,7 +233,7 @@ em_need_flag = X_flag - 1.293332
 A_MAX_V2 = 1.2494     # M5 docs/29（w=|v|² 公約）
 print(f"    X_pred = m_u(γ₃/γ₂−1) = {X_pred:.4f} MeV；X_FLAG = {X_flag:.2f} MeV；"
       f"觀測 Δm_np = 1.293332 MeV")
-print(f"    所需 em(n)−em(p)：pred {em_need_pred:.4f} ／ FLAG {em_need_flag:.4f} MeV；"
+print(f"    所需 em(p)−em(n)：pred {em_need_pred:.4f} ／ FLAG {em_need_flag:.4f} MeV；"
       f"M5 v2 硬上限 A_max = {A_MAX_V2} MeV")
 ck("F.3 n−p 所需 em 超 M5 v2 硬上限（兩條 X 皆超）",
    em_need_pred > A_MAX_V2 and em_need_flag > A_MAX_V2,
