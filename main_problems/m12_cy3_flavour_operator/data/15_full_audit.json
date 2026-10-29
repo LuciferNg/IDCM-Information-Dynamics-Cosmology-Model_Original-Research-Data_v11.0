@@ -42,7 +42,8 @@
       "39_allchain_audit.md",
       "40_propagation_audit.md",
       "41_stage_closeout.md",
-      "42_r27_precision_feasibility.md"
+      "42_r27_precision_feasibility.md",
+      "43_r28_support_bound.md"
     ],
     "scripts": [
       "01_r1_domain_additivity.py",
@@ -94,6 +95,7 @@
       "47_allchain_audit.py",
       "48_propagation_audit.py",
       "49_precision_feasibility.py",
+      "50_r28_support_dof_bound.py",
       "l2_independent_verify.py",
       "l3_doc_crosscheck.py"
     ],
@@ -116,6 +118,7 @@
       "28_continuity_audit.json",
       "47_allchain_audit.json",
       "49_precision_feasibility.json",
+      "50_r28_support_dof_bound.json",
       "l2_independent_verify.json",
       "l3_doc_crosscheck.json"
     ],
@@ -169,6 +172,7 @@
       "run_47_allchain_audit.log",
       "run_48_propagation_audit.log",
       "run_49_precision_feasibility.log",
+      "run_50_r28_support_dof_bound.log",
       "run_l2.log",
       "run_l2_independent_verify.log",
       "run_l3.log"
@@ -218,9 +222,9 @@
       "final_result.md.pre_patch_20261029_162942"
     ]
   },
-  "A2 NN 編號連續（1..49）": {
+  "A2 NN 編號連續（1..50）": {
     "status": "PASS",
-    "detail": "共 49 支"
+    "detail": "共 50 支"
   },
   "A3 01_r1_domain_additivity.py 重現 byte-identical": {
     "status": "PASS",
@@ -414,6 +418,10 @@
     "status": "PASS",
     "detail": "×2"
   },
+  "A3 50_r28_support_dof_bound.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
   "A4a 每個 data/*.json 有產者腳本": {
     "status": "PASS",
     "detail": ""
@@ -429,8 +437,8 @@
   "A6": {
     "01_problem_record.md": "| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |",
     "SESSION_START.md": "**狀態**：`(3,16,41)` 屬 🟡 未決（差 0.01σ），非判死；若 `ρ_u` 之 σ 稍寬或 `δ_u` 向負方移動即通過。",
-    "README.md": "## 狀態: 🟡 partial — **R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算（2026-10-29）；結構側於 v11 存貨內窮盡（五類 no-go ＋ 奇宇稱定理 ⟹ scoped no-go，見 `final_result.md §判詞`）；精度閘 `σ_ρd ÷ 半格 = 3.6724`（協方差更正：`σ_ρd` `0.03510 → 0.04478518`）；新算子路線已開 **M13** 承接建構層（判定權仍在本 M）",
-    "final_result.md": "**狀態**：🟡 partial（2026-10-29；**R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算；五類 no-go ＋ 奇宇稱定理 ⟹ 結構側於 v11 存貨內窮盡（scoped no-go，見 §判詞）；唯一未封 = 需**新註冊算子**（已開 M13 承接建構層）；精度閘 `σ_ρd ÷ 半格 = 3.6724`（協方差更正後）；**未 close、未裁決**）"
+    "README.md": "## 狀態: 🟡 partial — **R1–R28 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算＋支撐下界（2026-10-29）；結構側於 v11 存貨內窮盡：五類 no-go ＋ 奇宇稱定理 ＋ **單模/二模支撐定理**；殘餘收窄為「`K ≥ 5` 離散 或 3 模式 + 非 ±1 固定比」，v11 內無此物件（建構層交 M13）；精度閘 `σ_ρd ÷ 半格 = 3.6724`（協方差更正）",
+    "final_result.md": "**狀態**：🟡 partial（2026-10-29；**R1–R28 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算＋支撐下界；五類 no-go ＋ 奇宇稱定理 ＋ **單模／二模支撐定理** ⟹ 結構側於 v11 存貨內窮盡（scoped no-go，見 §判詞）；殘餘收窄為「`K ≥ 5` 離散 或 3 模式 + 非 ±1 固定比」，v11 內無此物件（建構層交 M13）；精度閘 `σ_ρd ÷ 半格 = 3.6724`；**未 close、未裁決**）"
   },
   "A7 01_problem_statement.md 圍欄偶數 & 無 U+FFFD": {
     "status": "PASS",
@@ -600,15 +608,19 @@
     "status": "PASS",
     "detail": "fences=2 fffd=0"
   },
+  "A7 43_r28_support_bound.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
   "A8 README 檔表覆蓋全部 docs": {
     "status": "PASS",
-    "detail": "README 提及 42 個 docs/ 條目 vs 實際 42 份"
+    "detail": "README 提及 43 個 docs/ 條目 vs 實際 43 份"
   },
   "_summary": {
     "fail": 0,
     "warn": 0,
-    "docs": 42,
-    "scripts_nn": 48,
+    "docs": 43,
+    "scripts_nn": 49,
     "runs": 2
   }
 }

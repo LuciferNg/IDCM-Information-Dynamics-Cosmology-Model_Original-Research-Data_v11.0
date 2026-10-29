@@ -3,13 +3,13 @@
 ================================================================================================
 
 [A1] 腳本集對稱 ↔ log 配對
-     docs = 42 份（01–42）｜scripts = 47 支（EXCL=[15, 28]）｜logs = 47 份
+     docs = 43 份（01–43）｜scripts = 48 支（EXCL=[15, 28]）｜logs = 48 份
   [PASS] A1 script 無 log                    []
   [PASS] A1 log 無 script                    []
   [PASS] A1 docs 缺號                         []
 
 [A2] docs ↔ README 表格
-  [PASS] A2 README 列數 == docs 檔數            42 vs 42
+  [PASS] A2 README 列數 == docs 檔數            43 vs 43
   [PASS] A2 README 無漏列                      []
   [PASS] A2 README 無多列                      []
 
@@ -20,17 +20,17 @@
   [PASS] A4 /tmp 寫入                         []
 
 [A5] 四件套狀態行輪次同步
-     01_problem_record.md     宣稱最高輪 = R27  ｜ | R26 | `docs/40` | 傳播審計（全鏈審計之下游影響）：首輪 14 FAIL ＝ 檢查器 1 ＋ 真缺陷
-     README.md                宣稱最高輪 = R27  ｜ ## 狀態: 🟡 partial — **R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-ou
-     final_result.md          宣稱最高輪 = R27  ｜ **狀態**：🟡 partial（2026-10-29；**R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性
-  [PASS] A5 三者皆 == 實際 R27                   {'01_problem_record.md': 27, 'README.md': 27, 'final_result.md': 27}
+     01_problem_record.md     宣稱最高輪 = R28  ｜ | R26 | `docs/40` | 傳播審計（全鏈審計之下游影響）：首輪 14 FAIL ＝ 檢查器 1 ＋ 真缺陷
+     README.md                宣稱最高輪 = R28  ｜ ## 狀態: 🟡 partial — **R1–R28 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-ou
+     final_result.md          宣稱最高輪 = R28  ｜ **狀態**：🟡 partial（2026-10-29；**R1–R28 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性
+  [PASS] A5 三者皆 == 實際 R28                   {'01_problem_record.md': 28, 'README.md': 28, 'final_result.md': 28}
   [INFO] A5 SESSION_START（快照，不計）            ## 狀態
 
 [A6] 時序索引覆蓋（01_problem_record）
-  [PASS] A6 覆蓋率 ≥ 95%                       41/42 = 97.6%（缺 [39]）
+  [PASS] A6 覆蓋率 ≥ 95%                       42/43 = 97.7%（缺 [39]）
 
 [A7] register ref 覆蓋（M12）
-  [PASS] A7 覆蓋 docs/01–42                   []
+  [PASS] A7 覆蓋 docs/01–43                   []
 
 [A8] 圍欄平衡 ＋ U+FFFD
   [PASS] A8 圍欄偶數且無 U+FFFD                   []
@@ -39,11 +39,11 @@
   [PASS] A9 撤回／更正標記                         []
 
 [A10] 覆蓋披露（§7.3）
-  [INFO] 15_full_audit 之 A3 glob            *.py ⟹ **含** L2／L3（全 51 支）
+  [INFO] 15_full_audit 之 A3 glob            *.py ⟹ **含** L2／L3（全 52 支）
   [INFO] 28_continuity 之 glob               [0-9][0-9]_*.py ⟹ 不含 L2／L3；但已以 AUX 收 run_l*.log
   [INFO] L2／L3 納入全鏈                         L2/L3 由 15 覆蓋重現性、由 28 AUX 覆蓋溯源 ⟹ 雙重覆蓋
 
 ================================================================================================
-[匯總] FAIL = 0 ／ INFO = 4 ／ docs 42 ／ scripts 47 ／ logs 47
+[匯總] FAIL = 0 ／ INFO = 4 ／ docs 43 ／ scripts 48 ／ logs 48
 ⟹ 全鏈審計 PASS
 ================================================================================================
