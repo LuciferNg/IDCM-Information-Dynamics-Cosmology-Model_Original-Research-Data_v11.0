@@ -1,0 +1,371 @@
+{
+  "01_problem_statement.md|1.1263": {
+    "status": "PASS",
+    "keys": [
+      "O_np"
+    ]
+  },
+  "01_problem_statement.md|1.9090": {
+    "status": "PASS",
+    "keys": [
+      "O_S"
+    ]
+  },
+  "01_problem_statement.md|2.1719": {
+    "status": "PASS",
+    "keys": [
+      "O_X"
+    ]
+  },
+  "01_problem_statement.md|2.4213": {
+    "status": "PASS",
+    "keys": [
+      "O_K"
+    ]
+  },
+  "02_r1_domain_additivity.md|1.1263": {
+    "status": "PASS",
+    "keys": [
+      "O_np"
+    ]
+  },
+  "02_r1_domain_additivity.md|1.9090": {
+    "status": "PASS",
+    "keys": [
+      "O_S"
+    ]
+  },
+  "02_r1_domain_additivity.md|2.1719": {
+    "status": "PASS",
+    "keys": [
+      "O_X"
+    ]
+  },
+  "02_r1_domain_additivity.md|2.4213": {
+    "status": "PASS",
+    "keys": [
+      "O_K"
+    ]
+  },
+  "02_r1_domain_additivity.md|14.11": {
+    "status": "PASS",
+    "keys": [
+      "z_K"
+    ]
+  },
+  "02_r1_domain_additivity.md|11.29": {
+    "status": "PASS",
+    "keys": [
+      "z_X"
+    ]
+  },
+  "02_r1_domain_additivity.md|5.77": {
+    "status": "PASS",
+    "keys": [
+      "z_S"
+    ]
+  },
+  "02_r1_domain_additivity.md|0.68": {
+    "status": "PASS",
+    "keys": [
+      "z_np"
+    ]
+  },
+  "02_r1_domain_additivity.md|0.1848": {
+    "status": "PASS",
+    "keys": [
+      "sigO_np"
+    ]
+  },
+  "02_r1_domain_additivity.md|0.1575": {
+    "status": "PASS",
+    "keys": [
+      "sigO_S"
+    ]
+  },
+  "02_r1_domain_additivity.md|0.1038": {
+    "status": "PASS",
+    "keys": [
+      "sigO_X"
+    ]
+  },
+  "02_r1_domain_additivity.md|0.1007": {
+    "status": "PASS",
+    "keys": [
+      "sigO_K"
+    ]
+  },
+  "03_r2_method_gate.md|3.223": {
+    "status": "PASS",
+    "keys": [
+      "z_decay"
+    ]
+  },
+  "03_r2_method_gate.md|0.683": {
+    "status": "PASS",
+    "keys": [
+      "seg_rel"
+    ]
+  },
+  "03_r2_method_gate.md|0.1848": {
+    "status": "PASS",
+    "keys": [
+      "sigO_np"
+    ]
+  },
+  "04_r2a_two_body_exhaustion.md|3.223": {
+    "status": "PASS",
+    "keys": [
+      "z_decay"
+    ]
+  },
+  "05_r2b_resolution_density.md|0.2640": {
+    "status": "PASS",
+    "keys": [
+      "sigT_3ch"
+    ]
+  },
+  "05_r2b_resolution_density.md|1.9090": {
+    "status": "PASS",
+    "keys": [
+      "O_S"
+    ]
+  },
+  "06_r2c_readout_sigma_budget.md|0.184766": {
+    "status": "PASS",
+    "keys": [
+      "sigO_np"
+    ]
+  },
+  "06_r2c_readout_sigma_budget.md|0.180078": {
+    "status": "PASS",
+    "keys": [
+      "sigEm_np"
+    ]
+  },
+  "06_r2c_readout_sigma_budget.md|0.041356": {
+    "status": "PASS",
+    "keys": [
+      "floorX_np"
+    ]
+  },
+  "06_r2c_readout_sigma_budget.md|0.1038": {
+    "status": "PASS",
+    "keys": [
+      "sigO_X"
+    ]
+  },
+  "06_r2c_readout_sigma_budget.md|2.1719": {
+    "status": "PASS",
+    "keys": [
+      "O_X"
+    ]
+  },
+  "07_r2d_pairtype_counting.md|14.11": {
+    "status": "PASS",
+    "keys": [
+      "z_K"
+    ]
+  },
+  "07_r2d_pairtype_counting.md|11.29": {
+    "status": "PASS",
+    "keys": [
+      "z_X"
+    ]
+  },
+  "07_r2d_pairtype_counting.md|5.77": {
+    "status": "PASS",
+    "keys": [
+      "z_S"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|3.041756": {
+    "status": "PASS",
+    "keys": [
+      "r_K"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|3.716756": {
+    "status": "PASS",
+    "keys": [
+      "r_S"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|5.296397": {
+    "status": "PASS",
+    "keys": [
+      "r_X"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|6.246656": {
+    "status": "PASS",
+    "keys": [
+      "r_SS"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|0.015940": {
+    "status": "PASS",
+    "keys": [
+      "sig_r_K"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|0.029705": {
+    "status": "PASS",
+    "keys": [
+      "sig_r_S"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|0.163837": {
+    "status": "PASS",
+    "keys": [
+      "sig_r_X"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|0.058885": {
+    "status": "PASS",
+    "keys": [
+      "sig_r_SS"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|1.5796": {
+    "status": "PASS",
+    "keys": [
+      "r_X_minus_r_S"
+    ]
+  },
+  "08_r2e_splitting_ratios.md|0.6750": {
+    "status": "PASS",
+    "keys": [
+      "r_S_plus_r_K"
+    ]
+  },
+  "09_r3p1_kappa_blindness.md|−8": {
+    "status": "PASS",
+    "keys": [
+      "kappa_T3"
+    ]
+  },
+  "09_r3p1_kappa_blindness.md|−380": {
+    "status": "PASS",
+    "keys": [
+      "kappa_T1"
+    ]
+  },
+  "09_r3p1_kappa_blindness.md|| 1341 |": {
+    "status": "PASS",
+    "keys": [
+      "kappa_nz_full"
+    ]
+  },
+  "09_r3p1_kappa_blindness.md|10 / 1296": {
+    "status": "PASS",
+    "keys": [
+      "kappa_K1_nonzero"
+    ]
+  },
+  "09_r3p1_kappa_blindness.md|{1, 3, 21, 34}": {
+    "status": "PASS",
+    "keys": [
+      "kappa_support"
+    ]
+  },
+  "10_r3p2_frustration_gauge.md|−88 + 32 = −56": {
+    "status": "PASS",
+    "keys": [
+      "rh_ising_H"
+    ]
+  },
+  "10_r3p2_frustration_gauge.md|54 / 60": {
+    "status": "PASS",
+    "keys": [
+      "rh_rank"
+    ]
+  },
+  "10_r3p2_frustration_gauge.md|8 / 40 / 12": {
+    "status": "PASS",
+    "keys": [
+      "rh_hist_0",
+      "rh_hist_1",
+      "rh_hist_2"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|Σn = 55": {
+    "status": "PASS",
+    "keys": [
+      "sum_matter_n"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|2.30906440147": {
+    "status": "PASS",
+    "keys": [
+      "sum_gamma_9"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|(14, 18, 23)": {
+    "status": "PASS",
+    "keys": [
+      "slot_col_1",
+      "slot_col_2",
+      "slot_col_3"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|−81.8": {
+    "status": "PASS",
+    "keys": [
+      "z_K1_slot2"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|−22.3": {
+    "status": "PASS",
+    "keys": [
+      "z_K1_slot3"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|−74.3": {
+    "status": "PASS",
+    "keys": [
+      "z_K2_slot2"
+    ]
+  },
+  "11_r3p3_canonical_incidence.md|−18.6": {
+    "status": "PASS",
+    "keys": [
+      "z_K2_slot3"
+    ]
+  },
+  "REFUTED|06_r2c_readout_sigma_budget.md|0.2076": {
+    "status": "PASS"
+  },
+  "_trace": {
+    "untraced_total": 0,
+    "by_doc": {},
+    "accepted": {
+      "(root)SESSION_START.md|0.0026": "轉引 docs/05（文內算術）",
+      "(root)SESSION_START.md|0.0798": "轉引 M11 §14.6 之 4dp 寫法",
+      "(root)SESSION_START.md|4.2257": "轉引 docs/02（inline 旁證，不作判據）",
+      "(root)final_result.md|0.0798": "M11 §14.6 之 0.079750 取 4dp 寫法（L2 floorX_Ξ = 0.079749）",
+      "02_r1_domain_additivity.md|-2.0695": "跨記錄引用 M2 docs/02 §三（λ 下界）",
+      "02_r1_domain_additivity.md|4.9538": "跨記錄引用 M2 docs/02 §三（兩模值）",
+      "02_r1_domain_additivity.md|4.2257": "★ R1 內 inline 枚舉（34³）結果，未落地腳本 ⟹ 僅旁證，非判據",
+      "05_r2b_resolution_density.md|0.0026": "文內算術 0.1263/48（由已落地數推得）",
+      "05_r2b_resolution_density.md|0.079750": "M11 §14.6 之 |⟨O⟩|·σ_X/X（上游值，6dp）",
+      "05_r2b_resolution_density.md|0.132744": "M11 §14.6 含 σ_Δm 之 σ_O(Ξ)（上游值）",
+      "05_r2b_resolution_density.md|0.0798": "M11 §14.6 之 0.079750 取 4dp 寫法",
+      "06_r2c_readout_sigma_budget.md|0.0798": "M11 §14.6 之 0.079750 取 4dp 寫法",
+      "12_full_chain_audit.md|-2.0695": "轉引 docs/02（M2 跨記錄）",
+      "12_full_chain_audit.md|4.9538": "轉引 docs/02（M2 跨記錄）",
+      "12_full_chain_audit.md|4.2257": "轉引 docs/02（inline 旁證）",
+      "12_full_chain_audit.md|0.0026": "轉引 docs/05（文內算術）",
+      "12_full_chain_audit.md|0.0798": "轉引 M11 §14.6 之 4dp 寫法",
+      "22_r1_r12_continuity_audit.md|4.2257": "轉引 docs/02 之 F6 已降級值（明文「旁證，不作判據」）⟹ 與 docs/02／SESSION_START 同類"
+    },
+    "blob_numbers": 1472
+  },
+  "_summary": {
+    "claims": 55,
+    "pass": 55,
+    "fail": 0,
+    "missing": 0,
+    "untraced": 0
+  }
+}

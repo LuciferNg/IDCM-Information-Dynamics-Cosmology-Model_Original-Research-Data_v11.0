@@ -1,0 +1,16 @@
+{
+  "B2": {
+    "product_hist": {
+      "120": 30,
+      "72": 210,
+      "88": 60,
+      "64": 480,
+      "96": 60,
+      "104": 60
+    },
+    "saturated_products": 0,
+    "extra_saturated": 0,
+    "max_label_bits": 1,
+    "gauge_only": true
+  }
+}

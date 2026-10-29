@@ -1,0 +1,30 @@
+M12 / R9 — 外部數據來源記錄（Ξcc 同位旋雙重態）
+====================================================
+記錄日期（擷取）: 2026-10-29
+用途: R9 檢定「二體對荷」在 (c,c) 雙重旁觀者扇區之預言（PDG 2024 mass_width 檔不含 Ξcc，MC-ID 未定）。
+
+[來源 1] CERN Courier — "A new doubly charmed baryon"
+URL: https://cerncourier.com/a-new-doubly-charmed-baryon/
+擷取原文（逐字）:
+  "The Ξ+cc mass was measured to be 3619.97 ± 0.83 (stat) ± 0.26 (syst)+1.90–1.30 (lifetime) MeV,
+   with a difference of –1.77 ± 0.84 (stat) ± 0.15 (syst)+1.90–1.30 (lifetime) MeV from that of the Ξ++cc,
+   compatible with theoretical predictions."
+  "The result completes the isospin doublet of the doubly charmed baryons, allowing the two states to be
+   compared directly in mass, lifetime and decay channel."
+  "The Ξ+cc contains two charm quarks and a down quark, and is the isospin partner to the Ξ++cc …"
+
+[來源 2] LHCb Outreach — "Observation of the doubly charmed heavy proton Ξcc+"
+URL: https://lhcb-outreach.web.cern.ch/2026/03/17/observation-of-the-doubly-charmed-heavy-proton-%CE%BEcc/
+擷取原文（逐字）:
+  "researchers observed a clear peak of about 915 events around 3620 MeV/c² – a signal exceeding 7 σ"
+  "A detailed fit measured the mass to be: 3619.97 ± 0.83 ± 0.26 (+1.90 / −1.30) MeV/c²."
+
+[採用數值]
+  m(Ξcc+)  = 3619.97 MeV, stat 0.83, syst 0.26, lifetime syst +1.90/−1.30
+  Δ ≡ m(Ξcc+) − m(Ξcc++) = −1.77 MeV, stat 0.84, syst 0.15, lifetime syst +1.90/−1.30
+  ⟹ 本文所用 Δm(Ξcc++ − Ξcc+) = +1.77 MeV,
+      σ(stat⊕syst) = sqrt(0.84² + 0.15²) = 0.8533 MeV
+      lifetime 系統誤差 +1.90/−1.30 MeV 另行列出（不對稱，不併入主 z）
+
+[夸克內容]
+  Ξcc++ = ucc ; Ξcc+ = dcc   （來源 1 明言 Ξ+cc 含 two charm + one down，為 Ξ++cc 之 isospin partner）

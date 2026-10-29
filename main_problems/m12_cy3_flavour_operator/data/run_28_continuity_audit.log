@@ -1,0 +1,102 @@
+====================================================================================================
+28 — R1–R12 連續性審計（計算結果 ＋ 記錄鏈）
+====================================================================================================
+
+[C1] 檔案鏈完整性
+   docs 01–41：41 份，缺號 無
+   scripts 01–48：46 支（EXCL=[15, 28] 另計），缺號 無
+   logs run_01–48：47 份（EXCL 另計），缺號 無
+   script ↔ log 配對：46 對（排除自身與 15 聚合器），不符 無
+
+[C2] 可重現性（逐支重跑，stdout vs canonical log）
+   01 01_r1_domain_additivity            ✓
+   02 02_reverse_gate                    ✓
+   03 03_paircount_gate                  ✓
+   04 04_boundary_vertex                 ✓
+   05 05_fault_tolerance                 ✓
+   06 06_fault_tolerance_bits            ✓
+   07 07_two_body_exhaustion             ✓
+   08 08_resolution_density              ✓
+   09 09_readout_sigma_budget            ✓
+   10 10_pairtype_counting               ✓
+   11 11_splitting_ratios                ✓
+   12 12_kappa_contraction               ✓
+   13 13_frustration_operator            ✓
+   14 14_canonical_incidence             ✓
+   16 16_r4p1_charge_order               ✓
+   17 17_r4p2_orientation                ✓
+   18 18_r5_isospin_scan                 ✓
+   19 19_r6_channel_type                 ✓
+   20 20_r7_zeroparam_probe              ✓
+   21 21_r8_sign_gate                    ✓
+   22 22_r9_cc_double_charm              ✓
+   23 23_posthoc_kernel_screen           ✓
+   24 24_r10_isovector_shape             ✓
+   25 25_r11_green_derivative            ✓
+   26 26_r12_dual_chain_diff             ✓
+   27 27_r12b_structure_checks           ✓
+   29 29_r13_tpipe_truncation            ✓
+   30 30_gemini_interference_adjudication ✓
+   31 31_s3_signed_kernels               ✓
+   32 32_g_amplitude_interference        ✓
+   33 33_e_bond_routes                   ✓
+   34 34_r15_psd_feasibility             ✓
+   35 35_r15b_entry_positive             ✓
+   36 36_r16_face_structure              ✓
+   37 37_r15c_entry_positive_lp          ✓
+   38 38_r17_registered_f                ✓
+   39 39_r18_frustrated_factor           ✓
+   40 40_r19_carrier_consistency         ✓
+   41 41_r20_spherical_triangles         ✓
+   42 42_r21_omega_identity              ✓
+   43 43_r22_z4_sector_kernels           ✓
+   44 44_r22_omega_ledger                ✓
+   45 45_r24_sign_anatomy                ✓
+   46 46_r25_half_integer_parity         ✓
+   47 47_allchain_audit                  ✓
+   48 48_propagation_audit               ✓
+
+[C3] 數值溯源（docs/NN 之 ≥3 位小數，須在**同輪或更早** log 命中）
+   檢查數值 776 個（docs 02–21）
+   C3d 白名單（導出值／外部輸入）：9 條規則，命中 4 tokens
+     docs/05 0.026      0.185/7 = 0.026428571 之保守取整：[E]
+     docs/05 0.026      0.185/7 = 0.026428571 之保守取整：[E]
+     docs/12 90.0000000000 Σγ=90 錨值之排版展開：[E] 得 Σγ(44-site)=90.0
+     docs/12 0.026      跨 doc 引用 docs/05 之導出閾值
+   附註區（可引更晚工作）未能溯源：0 
+   每 doc 孤兒數：{}
+   C3a 孤兒（任何 log／data 產物皆無）：0 
+   C3b 時光污染（只在更晚 log 出現）：0 
+
+[C4] 更正／撤回標記（append-only 留痕）
+   docs/14：✓ 更正(True)、z(True)
+   docs/15：✓ 撤回(True)
+   docs/16：✓ 後驗(True)、更正(True)
+   docs/17：✓ 發還(True)
+   docs/19：✓ 後驗(True)、誠實(True)
+   docs/21：✓ 撤回(True)、陷阱(True)
+
+[C5] register 連續性（M12 note/handoff ref 覆蓋 docs/13–docs/21）
+   audit-refs --pid M12：EXIT=0（非 0 即 ref 失效）
+   register 內 M12 相關記錄 52 條；ref 覆蓋 docs [13, 14, 15, 16, 17, 18, 19, 20, 21]
+   缺漏：無
+
+[E] 殘餘 9 項之機器核實（供 docs/22 §五 溯源）
+   √(0.184766²+0.157476²+0.103777²) = 0.2640205126  ⟹ docs/05 之 0.2640
+   0.185/7 = 0.026428571  ⟹ docs/05 之 ≲0.026（保守取整）
+   5.296397 − 3.716756 = 1.579641  ⟹ docs/08 之 r_Ξ−r_Σ
+   3.716756 + (−3.041756) = 0.675  ⟹ docs/08 之 r_Σ+r_K
+   Σγ(44-site) = 90.0  ⟹ docs/12 之 90.0000000000（排版展開）
+   0.4610 = σ_em：docs/06 §二 明示為 M11 正典外部輸入（本 O 無計算產物，屬外部）
+   0.0435／0.0386 = docs/05 σ 地板閾值（σ_em／σ_X），跨 doc 引用之導出值
+
+====================================================================================================
+[匯總]
+   C1 = 0 ✓
+   C2 = 0 ✓
+   C3 = 0 ✓
+   C4 = 0 ✓
+   C5 = 0 ✓
+   C3d = 4（白名單披露，不計 FAIL）
+   ⟹ 全綠 PASS
+====================================================================================================

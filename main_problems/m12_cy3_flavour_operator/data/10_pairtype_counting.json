@@ -1,0 +1,92 @@
+{
+  "D1": {
+    "n_types": 13,
+    "qq": [
+      "dd",
+      "ds",
+      "du",
+      "ss",
+      "su",
+      "uu"
+    ],
+    "qqbar": [
+      "Dc",
+      "Dd",
+      "Du",
+      "Sd",
+      "Su",
+      "Uc",
+      "Uu"
+    ],
+    "per_channel": {
+      "n-p": [
+        "dd",
+        "du",
+        "uu"
+      ],
+      "K+-K0": [
+        "Sd",
+        "Su"
+      ],
+      "pi+-pi0": [
+        "Du"
+      ],
+      "pi0-mix": [
+        "Dd",
+        "Uu"
+      ],
+      "S--S0": [
+        "dd",
+        "ds",
+        "du",
+        "su"
+      ],
+      "S0-S+": [
+        "ds",
+        "du",
+        "su",
+        "uu"
+      ],
+      "S--S+": [
+        "dd",
+        "ds",
+        "su",
+        "uu"
+      ],
+      "Xi--Xi0": [
+        "ds",
+        "ss",
+        "su"
+      ],
+      "D+-D0": [
+        "Dc",
+        "Uc"
+      ]
+    }
+  },
+  "D2": {
+    "n_types": 13,
+    "n_channels": 8,
+    "usable": 4,
+    "deficit_all": 5,
+    "deficit_anchors_only": 9
+  },
+  "D3": {
+    "heavy_new_types": 2,
+    "multiplet_channels": 9,
+    "new_types_from_multiplets": 0,
+    "equations_after": 17,
+    "over_determined_by": 4,
+    "closable": true
+  },
+  "D4": {
+    "merged_types": 8,
+    "isospin_limit_z": [
+      "0.68",
+      "5.77",
+      "11.29",
+      "14.11"
+    ],
+    "isospin_excluded": true
+  }
+}

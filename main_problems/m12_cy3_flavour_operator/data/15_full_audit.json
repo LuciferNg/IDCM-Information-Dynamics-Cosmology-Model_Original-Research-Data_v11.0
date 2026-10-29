@@ -1,0 +1,602 @@
+{
+  "A1": {
+    "docs": [
+      "01_problem_statement.md",
+      "02_r1_domain_additivity.md",
+      "03_r2_method_gate.md",
+      "04_r2a_two_body_exhaustion.md",
+      "05_r2b_resolution_density.md",
+      "06_r2c_readout_sigma_budget.md",
+      "07_r2d_pairtype_counting.md",
+      "08_r2e_splitting_ratios.md",
+      "09_r3p1_kappa_blindness.md",
+      "10_r3p2_frustration_gauge.md",
+      "11_r3p3_canonical_incidence.md",
+      "12_full_chain_audit.md",
+      "13_r4_charge_order_and_orientation.md",
+      "14_r5_isospin_scan.md",
+      "15_r6_channel_type.md",
+      "16_r7_zeroparam_and_labels.md",
+      "17_r8_sign_gate.md",
+      "18_r9_cc_double_charm.md",
+      "19_r10_isovector_shape.md",
+      "20_r11_green_derivative.md",
+      "21_r12_dual_chain_and_structure.md",
+      "22_r1_r12_continuity_audit.md",
+      "23_r13_tpipe_truncation.md",
+      "24_gemini_interference_adjudication.md",
+      "25_s3_signed_kernels.md",
+      "26_g_amplitude_interference.md",
+      "27_e_bond_routes.md",
+      "28_r15_feasibility_theorem.md",
+      "29_r16_face_structure.md",
+      "30_r17_registered_f.md",
+      "31_r18_frustrated_factor.md",
+      "32_r19_carrier_consistency.md",
+      "33_r20_spherical_triangles.md",
+      "34_r21_omega_identity.md",
+      "35_r22_omega_ledger.md",
+      "36_r23_z4_sector_kernels.md",
+      "37_r24_sign_anatomy.md",
+      "38_r25_half_integer_parity.md",
+      "39_allchain_audit.md",
+      "40_propagation_audit.md",
+      "41_stage_closeout.md"
+    ],
+    "scripts": [
+      "01_r1_domain_additivity.py",
+      "02_reverse_gate.py",
+      "03_paircount_gate.py",
+      "04_boundary_vertex.py",
+      "05_fault_tolerance.py",
+      "06_fault_tolerance_bits.py",
+      "07_two_body_exhaustion.py",
+      "08_resolution_density.py",
+      "09_readout_sigma_budget.py",
+      "10_pairtype_counting.py",
+      "11_splitting_ratios.py",
+      "12_kappa_contraction.py",
+      "13_frustration_operator.py",
+      "14_canonical_incidence.py",
+      "15_full_audit.py",
+      "16_r4p1_charge_order.py",
+      "17_r4p2_orientation.py",
+      "18_r5_isospin_scan.py",
+      "19_r6_channel_type.py",
+      "20_r7_zeroparam_probe.py",
+      "21_r8_sign_gate.py",
+      "22_r9_cc_double_charm.py",
+      "23_posthoc_kernel_screen.py",
+      "24_r10_isovector_shape.py",
+      "25_r11_green_derivative.py",
+      "26_r12_dual_chain_diff.py",
+      "27_r12b_structure_checks.py",
+      "28_continuity_audit.py",
+      "29_r13_tpipe_truncation.py",
+      "30_gemini_interference_adjudication.py",
+      "31_s3_signed_kernels.py",
+      "32_g_amplitude_interference.py",
+      "33_e_bond_routes.py",
+      "34_r15_psd_feasibility.py",
+      "35_r15b_entry_positive.py",
+      "36_r16_face_structure.py",
+      "37_r15c_entry_positive_lp.py",
+      "38_r17_registered_f.py",
+      "39_r18_frustrated_factor.py",
+      "40_r19_carrier_consistency.py",
+      "41_r20_spherical_triangles.py",
+      "42_r21_omega_identity.py",
+      "43_r22_z4_sector_kernels.py",
+      "44_r22_omega_ledger.py",
+      "45_r24_sign_anatomy.py",
+      "46_r25_half_integer_parity.py",
+      "47_allchain_audit.py",
+      "48_propagation_audit.py",
+      "l2_independent_verify.py",
+      "l3_doc_crosscheck.py"
+    ],
+    "data_json": [
+      "01_r1_domain_additivity.json",
+      "02_reverse_gate.json",
+      "03_paircount_gate.json",
+      "04_boundary_vertex.json",
+      "05_fault_tolerance.json",
+      "06_fault_tolerance_bits.json",
+      "07_two_body_exhaustion.json",
+      "08_resolution_density.json",
+      "09_readout_sigma_budget.json",
+      "10_pairtype_counting.json",
+      "11_splitting_ratios.json",
+      "12_kappa_contraction.json",
+      "13_frustration_operator.json",
+      "14_canonical_incidence.json",
+      "15_full_audit.json",
+      "28_continuity_audit.json",
+      "47_allchain_audit.json",
+      "l2_independent_verify.json",
+      "l3_doc_crosscheck.json"
+    ],
+    "data_log": [
+      "run_01_r1_domain_additivity.log",
+      "run_02_reverse_gate.log",
+      "run_03_paircount_gate.log",
+      "run_04_boundary_vertex.log",
+      "run_05_fault_tolerance.log",
+      "run_06_fault_tolerance_bits.log",
+      "run_07_two_body_exhaustion.log",
+      "run_08_resolution_density.log",
+      "run_09_readout_sigma_budget.log",
+      "run_10_pairtype_counting.log",
+      "run_11_splitting_ratios.log",
+      "run_12_kappa_contraction.log",
+      "run_13_frustration_operator.log",
+      "run_14_canonical_incidence.log",
+      "run_15_full_audit.log",
+      "run_16_r4p1_charge_order.log",
+      "run_17_r4p2_orientation.log",
+      "run_18_r5_isospin_scan.log",
+      "run_19_r6_channel_type.log",
+      "run_20_r7_zeroparam_probe.log",
+      "run_21_r8_sign_gate.log",
+      "run_22_r9_cc_double_charm.log",
+      "run_23_posthoc_kernel_screen.log",
+      "run_24_r10_isovector_shape.log",
+      "run_25_r11_green_derivative.log",
+      "run_26_r12_dual_chain_diff.log",
+      "run_27_r12b_structure_checks.log",
+      "run_28_continuity_audit.log",
+      "run_29_r13_tpipe_truncation.log",
+      "run_30_gemini_interference_adjudication.log",
+      "run_31_s3_signed_kernels.log",
+      "run_32_g_amplitude_interference.log",
+      "run_33_e_bond_routes.log",
+      "run_34_r15_psd_feasibility.log",
+      "run_35_r15b_entry_positive.log",
+      "run_36_r16_face_structure.log",
+      "run_37_r15c_entry_positive_lp.log",
+      "run_38_r17_registered_f.log",
+      "run_39_r18_frustrated_factor.log",
+      "run_40_r19_carrier_consistency.log",
+      "run_41_r20_spherical_triangles.log",
+      "run_42_r21_omega_identity.log",
+      "run_43_r22_z4_sector_kernels.log",
+      "run_44_r22_omega_ledger.log",
+      "run_45_r24_sign_anatomy.log",
+      "run_46_r25_half_integer_parity.log",
+      "run_47_allchain_audit.log",
+      "run_48_propagation_audit.log",
+      "run_l2.log",
+      "run_l2_independent_verify.log",
+      "run_l3.log"
+    ],
+    "root": [
+      "01_problem_record.md",
+      "01_problem_record.md.pre_patch_20261028_172635",
+      "01_problem_record.md.pre_patch_20261029_020145",
+      "README.md",
+      "README.md.pre_patch_20261028_172635",
+      "README.md.pre_patch_20261029_011446",
+      "README.md.pre_patch_20261029_014743",
+      "README.md.pre_patch_20261029_020145",
+      "README.md.pre_patch_20261029_084820",
+      "README.md.pre_patch_20261029_091414",
+      "README.md.pre_patch_20261029_093420",
+      "README.md.pre_patch_20261029_120418",
+      "README.md.pre_patch_20261029_131328",
+      "README.md.pre_patch_20261029_134012",
+      "README.md.pre_patch_20261029_140609",
+      "README.md.pre_patch_20261029_141651",
+      "README.md.pre_patch_20261029_142656",
+      "README.md.pre_patch_20261029_144603",
+      "README.md.pre_patch_20261029_145617",
+      "README.md.pre_patch_20261029_153539",
+      "README.md.pre_patch_20261029_162942",
+      "SESSION_START.md",
+      "SESSION_START.md.pre_patch_20261028_172635",
+      "SESSION_START.md.pre_patch_20261028_183029",
+      "SESSION_START.md.pre_patch_20261029_020145",
+      "SESSION_START.md.pre_patch_20261029_091300",
+      "SESSION_START.md.pre_patch_20261029_093420",
+      "final_result.md",
+      "final_result.md.pre_patch_20261029_103934",
+      "final_result.md.pre_patch_20261029_105308",
+      "final_result.md.pre_patch_20261029_111335",
+      "final_result.md.pre_patch_20261029_112820",
+      "final_result.md.pre_patch_20261029_121849",
+      "final_result.md.pre_patch_20261029_131328",
+      "final_result.md.pre_patch_20261029_134012",
+      "final_result.md.pre_patch_20261029_140609",
+      "final_result.md.pre_patch_20261029_141651",
+      "final_result.md.pre_patch_20261029_142656",
+      "final_result.md.pre_patch_20261029_144603",
+      "final_result.md.pre_patch_20261029_145617",
+      "final_result.md.pre_patch_20261029_153539",
+      "final_result.md.pre_patch_20261029_162942"
+    ]
+  },
+  "A2 NN 編號連續（1..48）": {
+    "status": "PASS",
+    "detail": "共 48 支"
+  },
+  "A3 01_r1_domain_additivity.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 02_reverse_gate.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 03_paircount_gate.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 04_boundary_vertex.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 05_fault_tolerance.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 06_fault_tolerance_bits.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 07_two_body_exhaustion.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 08_resolution_density.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 09_readout_sigma_budget.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 10_pairtype_counting.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 11_splitting_ratios.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 12_kappa_contraction.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 13_frustration_operator.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 14_canonical_incidence.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 16_r4p1_charge_order.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 17_r4p2_orientation.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 18_r5_isospin_scan.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 19_r6_channel_type.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 20_r7_zeroparam_probe.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 21_r8_sign_gate.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 22_r9_cc_double_charm.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 23_posthoc_kernel_screen.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 24_r10_isovector_shape.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 25_r11_green_derivative.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 26_r12_dual_chain_diff.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 27_r12b_structure_checks.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 28_continuity_audit.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 29_r13_tpipe_truncation.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 30_gemini_interference_adjudication.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 31_s3_signed_kernels.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 32_g_amplitude_interference.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 33_e_bond_routes.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 34_r15_psd_feasibility.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 35_r15b_entry_positive.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 36_r16_face_structure.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 37_r15c_entry_positive_lp.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 38_r17_registered_f.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 39_r18_frustrated_factor.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 40_r19_carrier_consistency.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 41_r20_spherical_triangles.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 42_r21_omega_identity.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 43_r22_z4_sector_kernels.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 44_r22_omega_ledger.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 45_r24_sign_anatomy.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 46_r25_half_integer_parity.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 47_allchain_audit.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A3 48_propagation_audit.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
+  "A4a 每個 data/*.json 有產者腳本": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "A4b 腳本宣告之輸出全部存在": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "A5 scripts 無 /tmp 寫入": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "A6": {
+    "01_problem_record.md": "| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |",
+    "SESSION_START.md": "**狀態**：`(3,16,41)` 屬 🟡 未決（差 0.01σ），非判死；若 `ρ_u` 之 σ 稍寬或 `δ_u` 向負方移動即通過。",
+    "README.md": "## 狀態: 🟡 partial — **R1–R26 完成**＋三層審計＋全鏈審計＋傳播審計＋**階段性 close-out**（2026-10-29）；結構側於 v11 內窮盡（五類 no-go）；卡**精度界限**（`σ_ρd ÷ (1/41) = 1.4391 > 1`）⟹ 不可裁決；新算子路線已開 **M13** 承接建構層（判定權仍在本 M）",
+    "final_result.md": "**狀態**：🟡 partial（2026-10-29；**R1–R26 完成**＋三層審計＋全鏈審計＋傳播審計＋**階段性 close-out**；五類 no-go 匯總，結構側於 v11 內窮盡；唯一未封 = 需**新註冊算子**（已開 M13 承接建構層），且**精度界限** `σ_ρd ÷ (1/41) = 1.4391 > 1`；**未 close、未裁決**）"
+  },
+  "A7 01_problem_statement.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 02_r1_domain_additivity.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=8 fffd=0"
+  },
+  "A7 03_r2_method_gate.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=10 fffd=0"
+  },
+  "A7 04_r2a_two_body_exhaustion.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 05_r2b_resolution_density.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 06_r2c_readout_sigma_budget.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 07_r2d_pairtype_counting.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 08_r2e_splitting_ratios.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 09_r3p1_kappa_blindness.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=6 fffd=0"
+  },
+  "A7 10_r3p2_frustration_gauge.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 11_r3p3_canonical_incidence.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 12_full_chain_audit.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 13_r4_charge_order_and_orientation.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 14_r5_isospin_scan.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 15_r6_channel_type.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 16_r7_zeroparam_and_labels.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 17_r8_sign_gate.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 18_r9_cc_double_charm.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 19_r10_isovector_shape.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 20_r11_green_derivative.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 21_r12_dual_chain_and_structure.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 22_r1_r12_continuity_audit.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 23_r13_tpipe_truncation.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 24_gemini_interference_adjudication.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 25_s3_signed_kernels.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 26_g_amplitude_interference.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 27_e_bond_routes.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=8 fffd=0"
+  },
+  "A7 28_r15_feasibility_theorem.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=8 fffd=0"
+  },
+  "A7 29_r16_face_structure.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 30_r17_registered_f.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 31_r18_frustrated_factor.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=4 fffd=0"
+  },
+  "A7 32_r19_carrier_consistency.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=6 fffd=0"
+  },
+  "A7 33_r20_spherical_triangles.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=8 fffd=0"
+  },
+  "A7 34_r21_omega_identity.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 35_r22_omega_ledger.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=8 fffd=0"
+  },
+  "A7 36_r23_z4_sector_kernels.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A7 37_r24_sign_anatomy.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=6 fffd=0"
+  },
+  "A7 38_r25_half_integer_parity.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=10 fffd=0"
+  },
+  "A7 39_allchain_audit.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 40_propagation_audit.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
+  "A7 41_stage_closeout.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
+  "A8 README 檔表覆蓋全部 docs": {
+    "status": "PASS",
+    "detail": "README 提及 41 個 docs/ 條目 vs 實際 41 份"
+  },
+  "_summary": {
+    "fail": 0,
+    "warn": 0,
+    "docs": 41,
+    "scripts_nn": 47,
+    "runs": 2
+  }
+}

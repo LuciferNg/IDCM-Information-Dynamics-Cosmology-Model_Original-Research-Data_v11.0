@@ -5,3 +5,10 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 .DS_Store
+
+# pre-patch 備份（本地留痕，不入庫）
+*.pre_patch*
+*.pre_patch2*
+*.pre_patch3*
+*.pre_patch4*
+*.pre_patch5*

@@ -1,0 +1,69 @@
+48 - M12 傳播審計（全鏈審計之後之下游影響）
+M12 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m12_cy3_flavour_operator
+V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
+
+[P1] 外部指針有效性：M1 docs/08 -> M12 docs/02
+[PASS] P1a M1 確有引用 M12 docs/02  hit lines=[32]
+[PASS] P1b M12 docs/02 內載體行存在  carrier lines=[162]
+[PASS] P1c 引用行號仍落載體 ±3 行內  cited L162, carrier L[162], dist=0
+
+[P2] 收件收據：target_pid=M12 之 handed_off 逐條
+    incoming handed_off 條數 = 2
+[PASS] P2 M11 @2026-10-28T16:47:31  收據事件 2 條
+[PASS] P2 M1 @2026-10-29T01:49:53  收據事件 2 條
+
+[P3/P6] 根 README M 系列表 vs register 最新 state
+    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13']
+    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+[PASS] P3 M1 在根 README M 表
+[PASS] P3 M2 在根 README M 表
+[PASS] P3 M3 在根 README M 表
+[PASS] P3 M4 在根 README M 表
+[PASS] P3 M5 在根 README M 表
+[PASS] P3 M6 在根 README M 表
+[PASS] P3 M7 在根 README M 表
+[PASS] P3 M8 在根 README M 表
+[PASS] P3 M9 在根 README M 表
+[PASS] P3 M10 在根 README M 表
+[PASS] P3 M11 在根 README M 表
+[PASS] P3 M12 在根 README M 表
+[PASS] P3 M13 在根 README M 表
+[PASS] P3b M1 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M2 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M3 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M4 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M5 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M6 狀態字串含「已閉合」  state=closed
+[PASS] P3b M7 狀態字串含「已閉合」  state=negative
+[PASS] P3b M8 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M9 狀態字串含「已閉合」  state=negative
+[PASS] P3b M10 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M11 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M12 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M13 狀態字串含「已註冊」  state=registered
+    快照 = {'total': 13, 'registered': ['M13'], 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'], 'closed': ['M6', 'M7', 'M9']}
+    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M13']}
+[PASS] P6a 總數相符  快照 13 vs 實算 13
+[PASS] P6b registered 分組相符  快照 ['M13'] vs 實算 ['M13']
+[PASS] P6b partial 分組相符  快照 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'] vs 實算 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12']
+[PASS] P6b closed 分組相符  快照 ['M6', 'M7', 'M9'] vs 實算 ['M6', 'M7', 'M9']
+
+[P4] 慣例分離：同名 γ 恆等之配對索引
+    (a) /90 配 45-n : 6.22302e-61
+    (b) /88 配 44-n : 6.22302e-61
+    (c) 交叉 /90 配 44-n : 0.139598 ；/88 配 45-n : 0.142678
+[PASS] P4a /90 x 45-n 精確
+[PASS] P4b /88 x 44-n 精確
+[PASS] P4c 交叉配對必須失效  cross dev 均 > 1e-3 ⟹ 配對不可互換
+
+[P5] 內部取代指針（五份被取代 doc）
+[PASS] P5 docs/17  17_r8_sign_gate.md
+[PASS] P5 docs/24  24_gemini_interference_adjudication.md
+[PASS] P5 docs/28  28_r15_feasibility_theorem.md
+[PASS] P5 docs/33  33_r20_spherical_triangles.md
+[PASS] P5 docs/34  34_r21_omega_identity.md
+
+[P7] 本輪記錄落碟
+[PASS] P7 docs/40 存在且非空  10517 bytes
+
+RESULT: 44/44 PASS

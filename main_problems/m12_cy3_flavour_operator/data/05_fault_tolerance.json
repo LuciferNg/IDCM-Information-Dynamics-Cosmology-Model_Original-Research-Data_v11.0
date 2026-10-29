@@ -1,0 +1,24 @@
+{
+  "F2": {
+    "family_size": 30,
+    "frustration_counts": {
+      "32": 30
+    },
+    "distinct_syndromes": 30
+  },
+  "F3": {
+    "I_order": 60,
+    "perms": 60,
+    "orbits": 1,
+    "orbit_sizes": [
+      30
+    ]
+  },
+  "F4": {
+    "planar": true,
+    "faces": 62,
+    "cycle_dim": 61,
+    "H1_trivial": true,
+    "logical_qubits": 0
+  }
+}
