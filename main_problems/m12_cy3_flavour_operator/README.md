@@ -1,6 +1,6 @@
 # M12 — CY₃ 投影層之 flavour index：⟨O⟩_ch 之算子身份
 
-## 狀態: 🟡 partial — **R1–R26 完成**＋三層審計＋全鏈審計＋傳播審計＋**階段性 close-out**（2026-10-29）；結構側於 v11 內窮盡（五類 no-go）；卡**精度界限**（`σ_ρd ÷ (1/41) = 1.4391 > 1`）⟹ 不可裁決；新算子路線已開 **M13** 承接建構層（判定權仍在本 M）
+## 狀態: 🟡 partial — **R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算（2026-10-29）；結構側於 v11 存貨內窮盡（五類 no-go ＋ 奇宇稱定理 ⟹ scoped no-go，見 `final_result.md §判詞`）；精度閘 `σ_ρd ÷ 半格 = 3.6724`（協方差更正：`σ_ρd` `0.03510 → 0.04478518`）；新算子路線已開 **M13** 承接建構層（判定權仍在本 M）
 
 ## 一句話
 
@@ -62,6 +62,7 @@ M11 `docs/10`／`docs/11`：iso-odd 算子在 v11 現有結構內**八處全封�
 | `docs/39_allchain_audit.md` | **全鏈審計**（`scripts/47`，A1–A10）：首輪 5 FAIL ⟹ 檢查器 bug 3（A1 logs 排除／A7 pid 過濾／A8 行首圍欄）＋**真缺陷 2**（四件套狀態行 R0/R3/R9 vs 實際 R25；時序索引 15/38 = 39.5%）；已修 ⟹ **A1–A10 FAIL 0**；`01_problem_record` 新增 §三.2 補錄 R4–R25（26 列）、三檔狀態同步至 R1–R25；四數 `L1 46/46 ｜ L2 14/14 ｜ L3 55/55 ｜ 全鏈 FAIL 0` | ✅ |
 | `docs/40_propagation_audit.md` | **傳播審計（R26 級）**（`scripts/48`，P1–P7）：全鏈審計修正之下游影響 —— 首輪 14 FAIL ＝ 檢查器 bug 1（快照解析 `M9（negative）`）＋**真缺陷 13**（2 條 incoming handoff 無收據；v11 根索引缺 M11/M12 且 M1 狀態過時；快照 5 項過時；5 份 doc 缺取代指針）；全部處置 ⟹ **44/44 PASS**。★ 意外收穫：同名譜恆等有**兩套慣例**（`/90×45−n` 與 `/88×44−n`，交叉配對偏差 `0.139598`／`0.142678` 必失效）⟹ 跨記錄引用必帶 `(慣例, 配對)`；★ M1 `coverage(k,ε)` 閘正式答覆（不觸發，三條理由）；★ R22 帳本對 M3 `P1` 之部分答覆已 `handoff → M3` | ✅ |
 | `docs/41_stage_closeout.md` | **階段性 close-out（T0–T6）**：T0 水位首建（4 根檔＋docs 40＋scripts 50）；T1 三層全綠（L1 FAIL 0／WARN 0、L2 14/14、L3 CLAIMS 55/55 未溯源 0）；★ 首輪 A5 真缺陷 = `final_result` 缺 R26 節（已補）；T2 修兩處（`final_result` 水位停留 R3 期、根 README 缺 M11/M12）；T3 時序零回溯（舊 doc 只加檔頭指針）；T4 register 4 事件，HARD DRIFT 0；T5 `final_result` 223→250 行；T6 scoped commit；**判定：維持 partial、不 close**（三條理由） | ✅ |
+| `docs/42_r27_precision_feasibility.md` | **R27 精度可行性**（`scripts/49`，P0–P5）：`σ_ρ` 來源釘死 = **PDG 質量誤差**（`m(Ξ⁰)` 佔 83.7%、`m(Ξ⁻)` 10.3%），非 em 錨；★ **協方差更正** `corr(δ_d,δ_s) = −0.942292` ⟹ `σ_ρd` `0.03510 → 0.04478518`、`σ_ρd ÷ 格距` `1.4391 → 1.8362`；★ **P1 FAIL 照實記錄**（83.7% < 90% ⟹ 非單一來源）；可達性：需 `m(Ξ⁰) ≤ 0.054461`、`m(Ξ⁻) ≤ 0.019061` MeV（**3.67×**）；`ρ_u` 5σ 判別 6.49×；close 觸發器 8.96× | ✅ |
 | `scripts/01`–`14` | L1 各輪腳本（`/usr/bin/python3`；`Fraction`＋`mpmath` dps=40–50） | ✅ |
 | `scripts/15_full_audit.py`、`l2_independent_verify.py`、`l3_doc_crosscheck.py` | 審計三件（機械／獨立重推／文檔交叉核） | ✅ |
 | `data/*.json`、`data/run_*.log` | 機讀輸出＋canonical log（全部重跑 byte-identical） | ✅ |

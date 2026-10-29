@@ -2,7 +2,7 @@
 ==================================================================================
 A1 檔案清單
 ==================================================================================
-  docs    = 41 份
+  docs    = 42 份
      01_problem_statement.md
      02_r1_domain_additivity.md
      03_r2_method_gate.md
@@ -44,7 +44,8 @@ A1 檔案清單
      39_allchain_audit.md
      40_propagation_audit.md
      41_stage_closeout.md
-  scripts = 50 支（NN 前綴 47）
+     42_r27_precision_feasibility.md
+  scripts = 51 支（NN 前綴 48）
      01_r1_domain_additivity.py
      02_reverse_gate.py
      03_paircount_gate.py
@@ -93,15 +94,16 @@ A1 檔案清單
      46_r25_half_integer_parity.py
      47_allchain_audit.py
      48_propagation_audit.py
+     49_precision_feasibility.py
      l2_independent_verify.py
      l3_doc_crosscheck.py
-  data    = 19 json / 51 log
+  data    = 20 json / 52 log
   root    = ['01_problem_record.md', '01_problem_record.md.pre_patch_20261028_172635', '01_problem_record.md.pre_patch_20261029_020145', 'README.md', 'README.md.pre_patch_20261028_172635', 'README.md.pre_patch_20261029_011446', 'README.md.pre_patch_20261029_014743', 'README.md.pre_patch_20261029_020145', 'README.md.pre_patch_20261029_084820', 'README.md.pre_patch_20261029_091414', 'README.md.pre_patch_20261029_093420', 'README.md.pre_patch_20261029_120418', 'README.md.pre_patch_20261029_131328', 'README.md.pre_patch_20261029_134012', 'README.md.pre_patch_20261029_140609', 'README.md.pre_patch_20261029_141651', 'README.md.pre_patch_20261029_142656', 'README.md.pre_patch_20261029_144603', 'README.md.pre_patch_20261029_145617', 'README.md.pre_patch_20261029_153539', 'README.md.pre_patch_20261029_162942', 'SESSION_START.md', 'SESSION_START.md.pre_patch_20261028_172635', 'SESSION_START.md.pre_patch_20261028_183029', 'SESSION_START.md.pre_patch_20261029_020145', 'SESSION_START.md.pre_patch_20261029_091300', 'SESSION_START.md.pre_patch_20261029_093420', 'final_result.md', 'final_result.md.pre_patch_20261029_103934', 'final_result.md.pre_patch_20261029_105308', 'final_result.md.pre_patch_20261029_111335', 'final_result.md.pre_patch_20261029_112820', 'final_result.md.pre_patch_20261029_121849', 'final_result.md.pre_patch_20261029_131328', 'final_result.md.pre_patch_20261029_134012', 'final_result.md.pre_patch_20261029_140609', 'final_result.md.pre_patch_20261029_141651', 'final_result.md.pre_patch_20261029_142656', 'final_result.md.pre_patch_20261029_144603', 'final_result.md.pre_patch_20261029_145617', 'final_result.md.pre_patch_20261029_153539', 'final_result.md.pre_patch_20261029_162942']
 
 ==================================================================================
 A2 腳本集對稱（NN 連續性）
 ==================================================================================
-[PASS] A2 NN 編號連續（1..48）  |  共 48 支
+[PASS] A2 NN 編號連續（1..49）  |  共 49 支
 
 ==================================================================================
 A3 可重現性（每支跑 2 次 → byte-identical vs canonical log）
@@ -153,6 +155,7 @@ A3 可重現性（每支跑 2 次 → byte-identical vs canonical log）
 [PASS] A3 46_r25_half_integer_parity.py 重現 byte-identical  |  ×2
 [PASS] A3 47_allchain_audit.py 重現 byte-identical  |  ×2
 [PASS] A3 48_propagation_audit.py 重現 byte-identical  |  ×2
+[PASS] A3 49_precision_feasibility.py 重現 byte-identical  |  ×2
 
 ==================================================================================
 A4 產物綁定
@@ -170,8 +173,8 @@ A6 四件套狀態行
 ==================================================================================
   01_problem_record.md     → | # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |
   SESSION_START.md         → **狀態**：`(3,16,41)` 屬 🟡 未決（差 0.01σ），非判死；若 `ρ_u` 之 σ 稍寬或 `δ_u` 向負方移動即通過。
-  README.md                → ## 狀態: 🟡 partial — **R1–R26 完成**＋三層審計＋全鏈審計＋傳播審計＋**階段性 close-out**（2026-10-29）；結構側於 v11 內窮盡（五類 no-go）；卡**精度界限**
-  final_result.md          → **狀態**：🟡 partial（2026-10-29；**R1–R26 完成**＋三層審計＋全鏈審計＋傳播審計＋**階段性 close-out**；五類 no-go 匯總，結構側於 v11 內窮盡；唯一未封 = 需**
+  README.md                → ## 狀態: 🟡 partial — **R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算（2026-10-29）；結構側於 v11 存貨內窮盡（五類 no-go ＋ 奇宇稱定理
+  final_result.md          → **狀態**：🟡 partial（2026-10-29；**R1–R27 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算；五類 no-go ＋ 奇宇稱定理 ⟹ 結構側於 v11 存貨內窮盡（
 
 ==================================================================================
 A7 文檔衛生（圍欄偶數 / U+FFFD）
@@ -217,11 +220,12 @@ A7 文檔衛生（圍欄偶數 / U+FFFD）
 [PASS] A7 39_allchain_audit.md 圍欄偶數 & 無 U+FFFD  |  fences=2 fffd=0
 [PASS] A7 40_propagation_audit.md 圍欄偶數 & 無 U+FFFD  |  fences=2 fffd=0
 [PASS] A7 41_stage_closeout.md 圍欄偶數 & 無 U+FFFD  |  fences=0 fffd=0
+[PASS] A7 42_r27_precision_feasibility.md 圍欄偶數 & 無 U+FFFD  |  fences=2 fffd=0
 
 ==================================================================================
 A8 README 宣稱 vs 實際
 ==================================================================================
-[PASS] A8 README 檔表覆蓋全部 docs  |  README 提及 41 個 docs/ 條目 vs 實際 41 份
+[PASS] A8 README 檔表覆蓋全部 docs  |  README 提及 42 個 docs/ 條目 vs 實際 42 份
 
 ==================================================================================
 匯總
