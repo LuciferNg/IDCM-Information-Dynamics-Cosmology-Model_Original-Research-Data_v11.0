@@ -479,6 +479,14 @@
   "geom_sum_4_3": "5592405/4194304",
   "geom_closed_4_3": "4/3",
   "nd_over_ktree_str": "4/3",
-  "gate_inter_gen": 1
+  "gate_inter_gen": 1,
+  "pdg_m_p": "0.93827208816",
+  "pdg_m_n": "0.9395654205",
+  "pdg_s_xi_minus": "0.00007",
+  "pdg_s_xi_zero": "0.00020",
+  "planck_ob_h2_s": "0.00015",
+  "planck_oc_h2_s": "0.0012",
+  "planck_oc_h2": "0.1200",
+  "planck_h0_s": "0.54"
  }
 }

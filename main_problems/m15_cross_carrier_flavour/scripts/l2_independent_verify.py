@@ -455,6 +455,16 @@ put("geom_closed_4_3", str(Fraction(4, 3)))
 put("nd_over_ktree_str", str(Fraction(44, 33)))
 put("gate_inter_gen", 1)
 
+# ── 8l. 原始輸入鍵（供反向覆蓋追溯；全部係 L2 已用之事實輸入）──
+put("pdg_m_p", "0.93827208816")
+put("pdg_m_n", "0.9395654205")
+put("pdg_s_xi_minus", "0.00007")
+put("pdg_s_xi_zero", "0.00020")
+put("planck_ob_h2_s", "0.00015")
+put("planck_oc_h2_s", "0.0012")
+put("planck_oc_h2", "0.1200")
+put("planck_h0_s", "0.54")
+
 print(f"L2 獨立重算完成：{len(D)} 個 _derived key")
 print(f"  Σγ(/88 ring) = {D['sum_gamma_88ring']}｜Σγ(/90 dir) = {D['sum_gamma_90dir']}")
 print(f"  A₅ 階 {D['A5_order']}；交換子階 {D['A5_commutator_order']}；共軛類 {D['A5_conjugacy_classes']}")

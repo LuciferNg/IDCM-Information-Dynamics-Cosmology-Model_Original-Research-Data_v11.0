@@ -48,6 +48,10 @@
    "status": "PASS",
    "detail": "孤兒 []"
   },
+  "⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文明示豁免）": {
+   "status": "PASS",
+   "detail": "未追溯 []"
+  },
   "⑪ 文件衛生（圍欄偶數、無 U+FFFD）": {
    "status": "PASS",
    "detail": "[]"

@@ -206,6 +206,44 @@ for j in DATA.glob("*.json"):
         json_orphan.append(j.name)
 chk("⑬ data/*.json ↔ producer script（無孤兒）", not json_orphan, f"孤兒 {json_orphan}")
 
+# ⑭ 反向覆蓋：docs 內 4+ 有效位小數 → 須可追溯至 data（容差 0.5%；跨記錄引文明示豁免）
+import bisect as _bisect
+SUP = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻", "0123456789-")
+ALLOW = {"02_reduction_theorem_status.md": {0.1657}}   # O137 (v10) 屏障曲線，跨記錄引用
+_pool = []
+for _f in list(DATA.glob("*.json")) + list(DATA.glob("run_*.log")):
+    _t = _f.read_text(errors="ignore")
+    for _m in re.finditer(r"([-+]?\d+(?:\.\d+)?)\s*[×x]\s*10([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)", _t):
+        _pool.append(float(_m.group(1)) * 10 ** int(_m.group(2).translate(SUP)))
+    _pool += [float(x) for x in re.findall(r"[-+]?\d+\.\d+", _t)]
+_pool.sort()
+
+
+def _hit(v, tol=5e-3):
+    i = _bisect.bisect_left(_pool, v)
+    return any(0 <= j < len(_pool) and abs(_pool[j] - v) <= tol * max(abs(v), 1e-12)
+               for j in (i - 1, i, i + 1))
+
+
+_untr = []
+for _f in sorted(DOCS.glob("*.md")):
+    _t = _f.read_text().replace("\u2212", "-")
+    _toks, _spans = set(), []
+    for _m in re.finditer(r"(\d+(?:\.\d+)?)\s*[×x]\s*10([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)", _t):
+        _toks.add(float(_m.group(1)) * 10 ** int(_m.group(2).translate(SUP)))
+        _spans.append(_m.span(1))
+    for _m in re.finditer(r"\d+\.\d{3,}", _t):
+        if any(a <= _m.start() < b for a, b in _spans):
+            continue
+        _toks.add(float(_m.group(0)))
+    for _v in _toks:
+        if _v in ALLOW.get(_f.name, set()):
+            continue
+        if not _hit(_v):
+            _untr.append(f"{_f.name}:{_v}")
+chk("⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文明示豁免）",
+    not _untr, f"未追溯 {_untr}")
+
 # ⑪ 文件衛生
 hyg = []
 for p in list(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "01_problem_record.md"]:

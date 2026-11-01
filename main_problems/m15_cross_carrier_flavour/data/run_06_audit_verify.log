@@ -13,8 +13,9 @@ M15 scripts/06 — 全鏈審計
 [PASS] ⑩ 四件套狀態一致（三活文檔 verdict 相同；SESSION_START 為快照只查存在）  |  {'01_problem_record.md': 'partial', 'final_result.md': 'partial', 'README.md': 'partial'}；SESSION_START 存在=True
 [PASS] ⑫ L2 衛生（零 import L1、零讀 docs、零 subprocess；註釋提及不計）  |  []
 [PASS] ⑬ data/*.json ↔ producer script（無孤兒）  |  孤兒 []
+[PASS] ⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文明示豁免）  |  未追溯 []
 [PASS] ⑪ 文件衛生（圍欄偶數、無 U+FFFD）  |  []
 
 ==============================================================================
-審計總結：檢查 13 項，FAIL 0、WARN 0
+審計總結：檢查 14 項，FAIL 0、WARN 0
 ==============================================================================
