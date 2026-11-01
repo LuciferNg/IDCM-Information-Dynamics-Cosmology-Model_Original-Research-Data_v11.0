@@ -185,7 +185,16 @@ check_str("09_tenth_candidate_ngen_equals_B_minus_1.md", "唯一整數 = 3", "3/
 check_str("09_tenth_candidate_ngen_equals_B_minus_1.md", "C7 集合", "V₄ \\ {e}")
 
 say("")
-say("§9  豁免（敘述／判定型）")
+say("§9  docs/10 — 第十候選降級")
+check_num("10_tenth_candidate_downgrade.md", "gate k=3 比值", l2["rational_gate"]["3"]["ratio"], 5e-3)
+check_num("10_tenth_candidate_downgrade.md", "gate k=2 比值", l2["rational_gate"]["2"]["ratio"], 5e-3)
+check_num("10_tenth_candidate_downgrade.md", "gate k=4 比值", l2["rational_gate"]["4"]["ratio"], 5e-3)
+check_num("10_tenth_candidate_downgrade.md", "B 反解", l2["B_hat"], 5e-4)
+check_str("10_tenth_candidate_downgrade.md", "回代差 0", "0.00e+00")
+check_bool("10_tenth_candidate_downgrade.md", "3/16 未過閘", l2["gate_k3_passes"] is False, "未過閘")
+
+say("")
+say("§10  豁免（敘述／判定型）")
 say("  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免")
 
 say("")

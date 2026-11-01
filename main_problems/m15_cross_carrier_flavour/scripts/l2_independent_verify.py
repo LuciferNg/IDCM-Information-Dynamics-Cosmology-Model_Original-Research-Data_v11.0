@@ -271,6 +271,19 @@ put("Ngen_hat", round(B_hat - 1, 5))
 put("z_integer", {k: round((k - (B_hat - 1)) / s_B, 2) for k in range(1, 6)})
 put("unique_integer_ngen", [k for k in range(1, 6) if abs((k - (B_hat - 1)) / s_B) < 1])
 
+# ── 8d. 有理身份閘（docs/10 J3）────────────────────────────────────────────
+r_now = float(r_tr)
+_g = {}
+for k in (2, 3, 4):
+    num, den = k, (k + 1) ** 2
+    g = Fraction(num, den)
+    dev = abs(float(g) - r_now) / float(g)
+    bench = 1.0 / (2 * g.denominator ** 2)
+    _g[k] = {"value": float(g), "q": g.denominator,
+             "dev": round(dev, 6), "bench": round(bench, 6), "ratio": round(dev / bench, 3)}
+put("rational_gate", _g)
+put("gate_k3_passes", _g[3]["ratio"] < 1.0)
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):
@@ -313,6 +326,7 @@ print(f"  S(9,3) = {D['stirling_S93']}；有標籤 = {D['labeled_3partitions_F']
 print(f"  剖面：/88 {D['profile_88']}、/90 {D['profile_90']}、/176 {D['profile_176']}")
 print(f"  |χ|/2 = {D['ng_chi_over_2']}；相對偏差 = {D['rel_dev_62_vs_3']}")
 print(f"  CY₃ 目錄覆蓋 = {D['cy3_catalogue_coverage_1_100']}/100；12 ∈ 目錄？{D['cy3_has_12']}")
+print(f"  有理身份閘：k=2 {D['rational_gate'][2]['ratio']}｜k=3 {D['rational_gate'][3]['ratio']}｜k=4 {D['rational_gate'][4]['ratio']}（<1 才過閘）")
 print(f"  Δ_N/Δ_Ξ = {D['ratio_DN_DXi']} ± {D['sigma_ratio']}；B = {D['B_hat']} ± {D['sigma_B']}；"
       f"N_gen = {D['Ngen_hat']}；z(整數) = {D['z_integer']}")
 print(f"  Lucas L1/L3/L5 = {D['lucas_L1_L3_L5']}；恆等式違例 {D['lucas_identity_3Ln_minus_Ln2_violations']}；"

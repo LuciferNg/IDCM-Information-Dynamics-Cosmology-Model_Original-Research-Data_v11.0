@@ -70,9 +70,17 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: 唯一整數 = 3 = 3/16
 [PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: C7 集合 = V₄ \ {e}
 
-§9  豁免（敘述／判定型）
+§9  docs/10 — 第十候選降級
+[PASS] 10_tenth_candidate_downgrade.md :: gate k=3 比值 ≈ 3.571（doc 命中 True）
+[PASS] 10_tenth_candidate_downgrade.md :: gate k=2 比值 ≈ 24.359（doc 命中 True）
+[PASS] 10_tenth_candidate_downgrade.md :: gate k=4 比值 ≈ 225.06（doc 命中 True）
+[PASS] 10_tenth_candidate_downgrade.md :: B 反解 ≈ 3.95837（doc 命中 True）
+[PASS] 10_tenth_candidate_downgrade.md :: 回代差 0 = 0.00e+00
+[PASS] 10_tenth_candidate_downgrade.md :: 3/16 未過閘（L2 = True；doc token = True）
+
+§10  豁免（敘述／判定型）
   docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免
 
 ==============================================================================
-L3 總結：PASS 52、FAIL 0
+L3 總結：PASS 58、FAIL 0
 ==============================================================================

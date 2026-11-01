@@ -389,6 +389,30 @@
   "unique_integer_ngen": [
    3
   ],
+  "rational_gate": {
+   "2": {
+    "value": 0.2222222222222222,
+    "q": 9,
+    "dev": 0.150366,
+    "bench": 0.006173,
+    "ratio": 24.359
+   },
+   "3": {
+    "value": 0.1875,
+    "q": 16,
+    "dev": 0.006974,
+    "bench": 0.001953,
+    "ratio": 3.571
+   },
+   "4": {
+    "value": 0.16,
+    "q": 25,
+    "dev": 0.180048,
+    "bench": 0.0008,
+    "ratio": 225.06
+   }
+  },
+  "gate_k3_passes": false,
   "lucas_L1_L3_L5": [
    1,
    4,
