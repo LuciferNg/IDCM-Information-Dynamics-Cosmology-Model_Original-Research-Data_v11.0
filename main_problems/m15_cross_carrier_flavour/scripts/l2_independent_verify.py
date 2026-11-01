@@ -406,6 +406,32 @@ put("omega_L_pred", round(float(Fraction(41, 60)), 6))
 _zL = (float(Fraction(41, 60)) - 0.6847) / 0.0073
 put("z_omega_L", round(_zL, 2))
 
+# ── 8j. FORCE_44 審計（獨立重算）──────────────────────────────
+import itertools as _it2
+_Lo = {1: 1, 3: 4, 5: 11, 7: 29, 9: 76, 11: 199, 13: 521}
+_vs, _ix = list(_Lo.values()), list(_Lo.keys())
+_Nset = set()
+_reps90 = 0
+for _c in _it2.combinations(range(len(_vs)), 4):
+    _b = [_vs[i] for i in _c]
+    for _sg in _it2.product([1, -1], repeat=4):
+        _S = sum(a * b for a, b in zip(_sg, _b))
+        if _S > 0 and _S % 2 == 0:
+            _n = _S // 2 - 1
+            if 3 <= _n <= 200:
+                _Nset.add(_n)
+                if _S == 90:
+                    _reps90 += 1
+put("lucas_expl_n", len(_Nset))
+put("lucas_expl_rate", round(len(_Nset) / 198 * 100, 1))
+put("reps_for_90", _reps90)
+_lem = 0
+for _N in range(2, 61):
+    _sm = sum(4 * mp.sin(mp.pi * n / (2 * _N)) ** 2 for n in range(1, _N + 1))
+    if abs(_sm - (2 * _N + 2)) > mp.mpf("1e-25"):
+        _lem += 1
+put("lemma1_violations", _lem)
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):

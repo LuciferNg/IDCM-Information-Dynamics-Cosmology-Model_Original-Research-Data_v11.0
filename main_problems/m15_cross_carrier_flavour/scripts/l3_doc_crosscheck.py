@@ -265,6 +265,14 @@ check_num("13_remaining_four_q1_q2_q3_q5.md", "預算和 60", l2["budget_sum"], 
 check_num("13_remaining_four_q1_q2_q3_q5.md", "Ω_Λ = 41/60", l2["omega_L_pred"], 1e-6)
 check_num("13_remaining_four_q1_q2_q3_q5.md", "z(Ω_Λ)", l2["z_omega_L"], 2e-3)
 
+say("")
+say("§13c  docs/14 — 上游 FORCE_44 審計")
+check_num("14_force44_audit_anchor.md", "可解釋 N 數", l2["lucas_expl_n"], 1e-9)
+check_num("14_force44_audit_anchor.md", "解釋率 31.8%", l2["lucas_expl_rate"], 1e-3)
+check_ctx("14_force44_audit_anchor.md", "之表示數=", "90 之同型表示數", l2["reps_for_90"], 2e-3, 30)
+check_num("14_force44_audit_anchor.md", "引理1 違例 0", l2["lemma1_violations"], 1e-9)
+check_ctx("14_force44_audit_anchor.md", "N_d = 44", "錨值兼硬編碼", 44, 1e-12, 40)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")
