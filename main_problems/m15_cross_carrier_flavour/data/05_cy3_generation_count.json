@@ -1,0 +1,33 @@
+{
+ "results": [
+  {
+   "tag": "C12 標準機制 |χ|/2 = 62 ≠ 3（數量級錯）",
+   "status": "PASS",
+   "detail": "ng = 62；相對偏差 19.667（20.67×）"
+  },
+  {
+   "tag": "C13 覆蓋率記錄（密度閘）",
+   "status": "PASS",
+   "detail": "覆蓋率 20.0%；得 3 之式 = 1"
+  },
+  {
+   "tag": "C3 之 3 須跨載體輸入（12 ∉ CY₃ primitive 且不可由 CY₃ 量合成）",
+   "status": "PASS",
+   "detail": "12 ∉ catalogue ⟹ 3 須由外部輸入 ⟹ CROSS-IMPORT"
+  },
+  {
+   "tag": "§4 3 只整除 h11（不對稱）",
+   "status": "PASS",
+   "detail": "v₃(h11)=2, v₃(h21)=0, v₃(|χ|)=0"
+  }
+ ],
+ "h11": 36,
+ "h21": 98,
+ "chi": -124,
+ "ng_chi2": 62,
+ "catalogue_coverage": 20,
+ "expr3": [
+  "(abs_chi+abs_diff)/abs_diff"
+ ],
+ "twelve_in_cat": false
+}

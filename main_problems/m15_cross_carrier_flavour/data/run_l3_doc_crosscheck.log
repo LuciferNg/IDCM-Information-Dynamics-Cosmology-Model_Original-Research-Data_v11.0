@@ -1,0 +1,58 @@
+==============================================================================
+M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
+==============================================================================
+§0  L1（Molien）↔ L2（character 內積）重數表：45×5 = 225 項，不一致 = 0
+
+§1  docs/02 — 歸約定理地位 ＋ A₅ 重數表
+[PASS] 02_reduction_theorem_status.md :: 最小相鄰間隙（/88） ≈ 0.00509577077949（doc 命中 True）
+[PASS] 02_reduction_theorem_status.md :: 9! 值 = 362880
+[PASS] 02_reduction_theorem_status.md :: P 內 max m_ρ ≈ 2（doc 命中 True）
+[PASS] 02_reduction_theorem_status.md :: 首個 m≥3 之 n ≈ 14（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: A₅ 44 維分解數 ≈ 1672（doc 命中 True）
+[PASS] 02_reduction_theorem_status.md :: n=44 行 = (1,4,4,6,8)
+[PASS] 02_reduction_theorem_status.md :: n=11 行 = (0,2,1,1,2)
+[PASS] 02_reduction_theorem_status.md :: Hironaka 級數 = (1+t¹⁵)/((1−t²)(1−t⁶)(1−t¹⁰))
+
+§2  docs/03 — 第二標籤不可能定理
+[PASS] 03_no_second_label_theorem.md :: A₅ 交換子階 ≈ 60（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: 簡併對數 ≈ 0（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: min gap（/90） ≈ 0.0145919630365（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: Σγ(/88 ring) ≈ 90（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: Σγ(/90 dir) ≈ 88（doc 命中 True）
+[PASS] 03_no_second_label_theorem.md :: 3²² 值 = 31381059609
+
+§3  docs/04 — 計數普查 ＋ 分割測試
+[PASS] 04_count_census_and_partition_test.md :: S(9,3) ≈ 3025（doc 命中 True）
+[PASS] 04_count_census_and_partition_test.md :: 有標籤分拆 ≈ 18150（doc 命中 True）
+[PASS] 04_count_census_and_partition_test.md :: 三元組模集 = 9,15,18,27,30,36
+[PASS] 04_count_census_and_partition_test.md :: ∩P = 1/9
+[PASS] 04_count_census_and_partition_test.md :: mod 3 類大小 = (2,4,3)
+[PASS] 04_count_census_and_partition_test.md :: 區塊類大小 = (3,3,3)
+
+§4  docs/05 — adic 剖面 ＋ 映射 no-go
+[PASS] 05_adic_profile_and_map_nogo.md :: /88 剖面 = (3, 1)
+[PASS] 05_adic_profile_and_map_nogo.md :: /90 剖面 = (2, 3)
+[PASS] 05_adic_profile_and_map_nogo.md :: /176 剖面 = (4, 1)
+[PASS] 05_adic_profile_and_map_nogo.md :: 合格 m 集 = {3, 5, 9}
+[PASS] 05_adic_profile_and_map_nogo.md :: γ-級 0 解 = 0解
+[PASS] 05_adic_profile_and_map_nogo.md :: γ-級解數 = 0（L2 = True；doc token = True）
+[PASS] 05_adic_profile_and_map_nogo.md :: 仿射窮舉數 ≈ 1936（doc 命中 True）
+[PASS] 05_adic_profile_and_map_nogo.md :: 保族 max|dev| < 10⁻⁴⁵（L2 = True；doc token = True）
+
+§5  docs/06 — CY₃ 判死
+[PASS] 06_cy3_verdict.md :: |χ|/2 ≈ 62（doc 命中 True）
+[PASS] 06_cy3_verdict.md :: χ 值 ≈ 124（doc 命中 True）
+[PASS] 06_cy3_verdict.md :: 相對偏差 19.667 ≈ 19.6667（doc 命中 True）
+[PASS] 06_cy3_verdict.md :: 目錄覆蓋 20 ≈ 20（doc 命中 True）
+[PASS] 06_cy3_verdict.md :: 20.67 倍 ≈ 20.6667（doc 命中 True）
+
+§6  docs/07 — 判詞關鍵字
+[PASS] 07_verdicts.md :: C7 通過數 = 0/8
+[PASS] 07_verdicts.md :: dof 9! = 9!=362880
+
+§7  豁免（敘述／判定型）
+  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免
+
+==============================================================================
+L3 總結：PASS 36、FAIL 0
+==============================================================================

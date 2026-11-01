@@ -30,23 +30,31 @@ v11.0 因此不做新物理，只做三件事：
 ```
 IDCM-v11.0--Reality-Architecture/
 ├── README.md
-└── main_problems/                     # M 系列 M1–M13
+└── main_problems/                     # M 系列 M1–M15
     ├── m1_mass_file_schema/
     ├── m2_sync_desync_exchange/
     ├── m3_omega_ratio_lock/
     ├── m4_mass_spectral_readout/
     ├── m5_hadron_bound_state_spectrum/
     ├── m6_scale_dof_theorem/
-    └── m7_hadron_model_basis/
+    ├── m7_hadron_model_basis/
+    ├── m8_m0_fan_rederivation/
+    ├── m9_lepton_sector_audit/
+    ├── m10_existence_legality/
+    ├── m11_em_channel_operator_layer/
+    ├── m12_cy3_flavour_operator/
+    ├── m13_flavour_orthogonality/
+    ├── m14_uds_assignment/
+    └── m15_cross_carrier_flavour/
 ```
 
 ## 狀態快照
 
 ```
-M 系列：13 個（register 2026-10-29 對齊）
-  registered : M13（只開不推）
-  partial    : M1, M2, M3, M4, M5, M8, M10, M11, M12
-  closed     : M6, M7, M9（negative）
+M 系列：15 個（register 2026-11-01 對齊）
+  registered : M13（只開不推；推導在另一 session）
+  partial    : M1, M2, M3, M4, M5, M8, M10, M11, M12, M14
+  closed     : M6（closed）, M7 / M9 / M15（negative）
 ```
 
 ## 已閉合關鍵結果（選錄）
@@ -83,3 +91,5 @@ M 系列：13 個（register 2026-10-29 對齊）
 | M11 | 電磁通道算子層：iso-odd 載體 `Ô` 之存在性（`⟨O⟩_ch ≡ ∂M_h/∂(m_d−m_u)`） | em 通道八處封閉 ＋ M7 味盲定理為第九處；路線 C 總量 `Δm` 死（`χ²/dof = 3154`，max`\|z\|` 128）；route A（CY₃ 投影層）移交 M12 | 部分閉合 |
 | M12 | CY₃ 投影層 flavour index 算子 `F̂` 之存在性（零新參數） | 五類 no-go：正數計數（`ρ_u>0` 定理）／均勻遞移幾何（`δ≡0`）／可分離 Kronecker（相消 ≤2e−31）／ℤ₄ 扇區核 0/6／帳本條目（顆粒 1.93×）；★奇宇稱定理 `ρ_u = −ρ_d` 精確；★精度界限 `σ_ρd ÷ (1/41) = 1.4391 > 1` ⟹ 現精度下結構上不可裁決 | 部分閉合 |
 | M13 | 味讀數之近正交性：零參數算子之建構與註冊（M12 殘餘類） | 只開不推；scope = 建構＋註冊＋可裁決性（判定權在 M12）；fence 三條：不宣稱 M12 閉合／產物須 handoff 回 M12／不重推五類 no-go；禁區八條（含 ℤ₂-odd 封死、`σ ÷ 格距` 閘） | 已註冊（只開不推） |
+| M14 | u,d,s 之味標籤與站指派：結構來源與可固定性（M13 殘餘） | 只開不推（推導在另一 session）；scope 四問：Q1 站指派可否固定（抑或 gauge）／Q2 `k∈{1,4,5}`、`d∈{3,2,0}` 之產生規則與 `3!` 唯一化／Q3 `δ_u<0` 非單調（結構解給 `δ_u=0` 精確）／Q4 `N_gen = rank(耦合塊)+1` 定理化（`δ_c≈0` 為唯一檢定）；起點：M13 站無關性定理 + 家族 `α=(1,x,x²)` `x=2` 唯一雙通（`p=0.607`）；禁區八條（禁重掃家族、禁反解 `δ`、禁第 4 槽擴充）；★承接後：味分類閉合（`\|Δ\|` 43 類）、單標籤定理、`/88↔/90` 相位差、`δ=Σγ−x` 三分律；Q2①/Q4 死、Q1 判 ill-posed ⟹ 「3」之身份發還 M15 | 部分閉合 |
+| M15 | 跨載體味結構：「3」之身份（M14 發還；C1 A₅ 幾何／C2 CY₃／C3 M45 帶／C4 T_pipe） | ★問題重定型：`N_gen` = 費米子 rep 空間中 (SM rep) 之**重數** ⟹ 須供給典範滿射 `τ:F→S`＋`dof=0`（判準 C7）；**四載體全滅（scoped no-go）**：C1 歸約定理恆真（零鑑別力）＋完美群定理（跨載體標籤不可能）＋`9!` dof＋重數盲測否證（`P` 內 max 2<3）；C2 `\|χ\|/2 = 62`（20.67×）＋`h11/12` 需 C1 之 12 ⟹ CROSS-IMPORT；C3 `(k,d)` 字面值（A1）；C4 NO-DOF。8 個 3 候選 **0/8** 過 C7；互斥性 0。★新陳述：adic 剖面互換 `/88 (3,1)⟷/90 (2,3)`、`/176 (4,1)`；`/88↔/90` 三層映射 no-go；A₅ 諧波重數表（ℚ(√5) 精確，L1/L2 兩法 225 項同）。⟹ `N_gen = 3` 維持**輸入**地位 | 已閉合（負；register 2026-11-01） |

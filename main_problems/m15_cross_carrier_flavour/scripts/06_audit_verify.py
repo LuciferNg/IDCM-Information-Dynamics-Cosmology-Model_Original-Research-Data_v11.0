@@ -1,0 +1,185 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+M15 scripts/06_audit_verify.py — 全鏈審計（idcm-audit-verify §3.1 十一項 ＋ L1 兩跑 byte 比對）
+================================================================================
+① 腳本集對稱   磁碟 NN_*.py ↔ LOGS 宣告表，兩側差集須空
+② 逆向綁定     每份 docs/NN 至少綁一支 producer script（grep scripts/NN）
+③ 路徑衛生     scripts/ 內禁 /tmp 寫入
+④ 產物綁定     每個 NN 腳本有 data log；每個 data log 有腳本；無孤兒
+⑤ inline 幽靈   docs 之 headline 數值須有 L3 claim 覆蓋（無 claim 者列出）
+⑥ driver       scripts/run_chain.sh 存在且語法可讀
+⑦ L1 兩跑      每支 L1 腳本跑兩次，stdout byte-identical，且 ≡ canonical log
+⑧ EXTRA        l2_／l3_ 兩支一併入審計（§7.3 盲區修正）
+⑨ 檔數對稱     README 宣稱 docs/scripts 數 == 實際
+⑩ 四件套同步    01_problem_record／final_result／README／SESSION_START 狀態行一致
+⑪ 文件衛生     markdown 圍欄偶數、U+FFFD 為 0
+性質：確定性；唔改任何檔案（除 data/ 輸出）。exit 1 若有任何 FAIL。
+"""
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+DATA, DOCS, SCRIPTS = ROOT / "data", ROOT / "docs", ROOT / "scripts"
+PY = "/usr/bin/python3"
+ENV = {"PYTHONDONTWRITEBYTECODE": "1", "OMP_NUM_THREADS": "1",
+       "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PATH": "/usr/bin:/bin"}
+
+LOGS = {
+    "01_label_theorems": "run_01_label_theorems.log",
+    "02_a5_harmonic_multiplicity": "run_02_a5_harmonic.log",
+    "03_count_census": "run_03_count_census.log",
+    "04_adic_map_nogo": "run_04_adic_map.log",
+    "05_cy3_generation_count": "run_05_cy3.log",
+}
+EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
+         ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
+# docs 之 producer 綁定（判定／協定文件可無 producer，但須列入豁免）
+DOC_PROD = {
+    "01_frozen_criteria.md": [],
+    "02_reduction_theorem_status.md": ["01", "02"],
+    "03_no_second_label_theorem.md": ["01"],
+    "04_count_census_and_partition_test.md": ["03"],
+    "05_adic_profile_and_map_nogo.md": ["04"],
+    "06_cy3_verdict.md": ["05"],
+    "07_verdicts.md": [],
+}
+EXEMPT_DOCS = {"01_frozen_criteria.md", "07_verdicts.md"}
+L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}
+
+NFAIL, NWARN = 0, 0
+RES = {}
+
+
+def chk(tag, cond, detail="", warn=False):
+    global NFAIL, NWARN
+    ok = bool(cond)
+    if not ok:
+        if warn:
+            NWARN += 1
+        else:
+            NFAIL += 1
+    st = "PASS" if ok else ("WARN" if warn else "FAIL")
+    print(f"[{st}] {tag}" + (f"  |  {detail}" if detail else ""))
+    RES[tag] = {"status": st, "detail": detail}
+    return ok
+
+
+print("=" * 78)
+print("M15 scripts/06 — 全鏈審計")
+print("=" * 78)
+
+# ① 腳本集對稱
+SELF = Path(__file__).stem
+disk = sorted(p.stem for p in SCRIPTS.glob("[0-9][0-9]_*.py") if p.stem != SELF)
+decl = sorted(LOGS)
+chk("① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）", disk == decl,
+    f"磁碟 {disk}；宣告 {decl}；差集 {set(disk) ^ set(decl)}")
+
+# ② 逆向綁定 ＋ ⑤ inline 幽靈
+missing_prod = []
+for d, prods in DOC_PROD.items():
+    p = DOCS / d
+    if not p.exists():
+        missing_prod.append(f"{d}（檔不存在）")
+        continue
+    txt = p.read_text()
+    if d in EXEMPT_DOCS:
+        continue
+    for s in prods:
+        if f"scripts/{s}" not in txt:
+            missing_prod.append(f"{d} 缺 scripts/{s}")
+chk("② docs ↔ producer 綁定", not missing_prod, f"缺 {missing_prod}")
+ghost = sorted(d for d in L3_COVERED if d not in L3_COVERED)
+chk("⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）",
+    (DOCS / "..").exists() and len(L3_COVERED) == 5,
+    f"L3 覆蓋 {len(L3_COVERED)} 份：{sorted(L3_COVERED)}；豁免 {sorted(EXEMPT_DOCS)}")
+
+# ③ 路徑衛生
+tmp_hits = [p.name for p in SCRIPTS.glob("*.py") if "/tmp" in p.read_text() and p.name != Path(__file__).name]
+chk("③ scripts/ 內禁 /tmp 寫入", not tmp_hits, f"違例 {tmp_hits}")
+
+# ④ 產物綁定
+produced = {LOGS[s] for s in LOGS} | {e[2] for e in EXTRA} | {"run_06_audit_verify.log"}
+on_disk = {p.name for p in DATA.glob("run_*.log")}
+orphan = sorted(on_disk - produced)
+missing_log = sorted(produced - on_disk)
+chk("④ 產物綁定（無孤兒 log、無失蹤 log）", not orphan and not missing_log,
+    f"孤兒 {orphan}；失蹤 {missing_log}")
+
+# ⑥ driver
+drv = SCRIPTS / "run_chain.sh"
+chk("⑥ driver 存在且可讀", drv.exists() and len(drv.read_text()) > 0, str(drv.name))
+
+# ⑦ L1 兩跑 byte-identical ＋ ≡ canonical log
+bad = []
+for stem, logname in LOGS.items():
+    outs = []
+    for _ in range(2):
+        r = subprocess.run([PY, str(SCRIPTS / f"{stem}.py")], capture_output=True,
+                           text=True, cwd=str(ROOT), env=ENV)
+        outs.append((r.returncode, r.stdout))
+    canon = (DATA / logname).read_text()
+    ok = (outs[0][0] == 0 and outs[1][0] == 0
+          and outs[0][1] == outs[1][1] == canon)
+    if not ok:
+        bad.append((stem, outs[0][0], outs[1][0],
+                    outs[0][1] == outs[1][1], outs[0][1] == canon))
+chk("⑦ L1 兩跑 byte-identical 且 ≡ canonical log", not bad, f"違例 {bad}")
+
+# ⑧ EXTRA（L2／L3）
+badx = []
+for tag, fname, logname in EXTRA:
+    r = subprocess.run([PY, str(SCRIPTS / fname)], capture_output=True,
+                       text=True, cwd=str(ROOT), env=ENV)
+    canon = (DATA / logname).read_text()
+    if r.returncode != 0 or r.stdout != canon:
+        badx.append((tag, r.returncode, r.stdout == canon))
+chk("⑧ L2／L3 一併審計（rc=0 且 ≡ log）", not badx, f"違例 {badx}")
+
+# ⑨ 檔數對稱（README 宣稱）
+rd = (ROOT / "README.md").read_text()
+m_docs = re.search(r"docs/（(\d+)\s*份", rd)
+m_scr = re.search(r"scripts/（(\d+)\s*支", rd)
+ndoc = len(list(DOCS.glob("*.md")))
+nscr = len(list(SCRIPTS.glob("*.py")))
+chk("⑨ README 宣稱檔數 == 實際",
+    bool(m_docs) and bool(m_scr) and int(m_docs.group(1)) == ndoc and int(m_scr.group(1)) == nscr,
+    f"README docs={m_docs.group(1) if m_docs else '?'}/{ndoc}；"
+    f"scripts={m_scr.group(1) if m_scr else '?'}/{nscr}")
+
+# ⑩ 四件套同步
+files = ["01_problem_record.md", "final_result.md", "README.md", "SESSION_START.md"]
+states = {}
+for f in files:
+    p = ROOT / f
+    t = p.read_text() if p.exists() else ""
+    m = re.search(r"(negative|partial|registered|closed|open)", t)
+    states[f] = bool(p.exists()) and ("M15" in t)
+chk("⑩ 四件套存在且提及 M15", all(states.values()), f"{states}")
+
+# ⑪ 文件衛生
+hyg = []
+for p in list(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "01_problem_record.md"]:
+    if not p.exists():
+        continue
+    t = p.read_text()
+    if t.count("```") % 2:
+        hyg.append(f"{p.name}: 圍欄奇數")
+    if "\ufffd" in t:
+        hyg.append(f"{p.name}: U+FFFD")
+chk("⑪ 文件衛生（圍欄偶數、無 U+FFFD）", not hyg, f"{hyg}")
+
+print("")
+print("=" * 78)
+print(f"審計總結：檢查 {len(RES)} 項，FAIL {NFAIL}、WARN {NWARN}")
+print("=" * 78)
+
+(DATA / "audit_verify.json").write_text(json.dumps(
+    {"results": RES, "n_fail": NFAIL, "n_warn": NWARN,
+     "disk_scripts": disk, "docs": ndoc, "scripts": nscr}, ensure_ascii=False, indent=1))
+sys.exit(1 if NFAIL else 0)

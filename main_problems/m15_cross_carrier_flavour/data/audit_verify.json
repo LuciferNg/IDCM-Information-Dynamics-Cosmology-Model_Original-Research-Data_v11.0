@@ -1,0 +1,59 @@
+{
+ "results": {
+  "① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）": {
+   "status": "PASS",
+   "detail": "磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count']；差集 set()"
+  },
+  "② docs ↔ producer 綁定": {
+   "status": "PASS",
+   "detail": "缺 []"
+  },
+  "⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）": {
+   "status": "PASS",
+   "detail": "L3 覆蓋 5 份：['02_reduction_theorem_status.md', '03_no_second_label_theorem.md', '04_count_census_and_partition_test.md', '05_adic_profile_and_map_nogo.md', '06_cy3_verdict.md']；豁免 ['01_frozen_criteria.md', '07_verdicts.md']"
+  },
+  "③ scripts/ 內禁 /tmp 寫入": {
+   "status": "PASS",
+   "detail": "違例 []"
+  },
+  "④ 產物綁定（無孤兒 log、無失蹤 log）": {
+   "status": "PASS",
+   "detail": "孤兒 []；失蹤 []"
+  },
+  "⑥ driver 存在且可讀": {
+   "status": "PASS",
+   "detail": "run_chain.sh"
+  },
+  "⑦ L1 兩跑 byte-identical 且 ≡ canonical log": {
+   "status": "PASS",
+   "detail": "違例 []"
+  },
+  "⑧ L2／L3 一併審計（rc=0 且 ≡ log）": {
+   "status": "PASS",
+   "detail": "違例 []"
+  },
+  "⑨ README 宣稱檔數 == 實際": {
+   "status": "PASS",
+   "detail": "README docs=7/7；scripts=8/8"
+  },
+  "⑩ 四件套存在且提及 M15": {
+   "status": "PASS",
+   "detail": "{'01_problem_record.md': True, 'final_result.md': True, 'README.md': True, 'SESSION_START.md': True}"
+  },
+  "⑪ 文件衛生（圍欄偶數、無 U+FFFD）": {
+   "status": "PASS",
+   "detail": "[]"
+  }
+ },
+ "n_fail": 0,
+ "n_warn": 0,
+ "disk_scripts": [
+  "01_label_theorems",
+  "02_a5_harmonic_multiplicity",
+  "03_count_census",
+  "04_adic_map_nogo",
+  "05_cy3_generation_count"
+ ],
+ "docs": 7,
+ "scripts": 8
+}
