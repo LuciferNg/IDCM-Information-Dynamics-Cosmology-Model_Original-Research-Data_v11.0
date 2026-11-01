@@ -2,7 +2,7 @@
 
 ## 狀態
 
-🟡 **`verdict partial`**（階段性收尾、**保留開放**），2026-11-02 03:18｜version v11.0｜scoped。
+🟡 **`verdict partial`**（階段性收尾 v2、**保留開放**），2026-11-02 05:39｜version v11.0｜scoped。
 沿革（append-only 於 `01_problem_record`）：⚪ → 🔴 negative → 🟡 partial → 🔴 negative → 🟡 partial。
 
 ## 結論（一句）
@@ -24,7 +24,7 @@ O215 `T7`，EXACT、dof = 0），並帶觀測錨（`Ω_DM/Ω_b` −0.48σ、`Ω_
 Ω_b : Ω_DM : Ω_Λ = 3 : 16 : 41 = (γ_max−1) : γ_max² : (Σγ_odd−γ_max+1)   /60
 樹層 ℓ 由觀測選出：Ω_DM(ℓ) = B^ℓ/(N_d+B^ℓ) ⟹ ℓ = 2（+0.44σ；ℓ=1 −36σ、ℓ=3 +66σ）
 觀測錨：Ω_DM/Ω_b = 16/3（−0.48σ）｜Ω_Λ = 41/60（−0.19σ）
-3 之非代數性：ln 16 超越（Lindemann）⟹ 3 係 ⌈·⌉ 跳變值，非多項式之根
+3 之身份：整數恆等（γ_max−1），**非**超越跳變 —— 舊「Lindemann / ⌈·⌉」論證已隨閘門判死失效
 ```
 
 ## 依賴
@@ -35,10 +35,10 @@ O215 `T7`，EXACT、dof = 0），並帶觀測錨（`Ω_DM/Ω_b` −0.48σ、`Ω_
 ## 審計（終態）
 
 ```
-L1 12/12（兩跑 byte-identical）｜L2 78 keys｜L3 90/90（13/13 doc）｜audit 13/13 FAIL 0 WARN 0
+L1 13/13（兩跑 byte-identical）｜L2 99 keys｜L3 98/98（14/14 doc）｜audit 14/14 FAIL 0 WARN 0
 ```
 
-## 保留開放（見 `01_problem_record §九`）
+## 保留開放（見 `01_problem_record §十一`）
 
 `Q5` 收窄為單一命題（預算層識別；閘門命名路線已判死）｜`Q1` 判死（dof = 44）｜
 `Q2` 🟢 已解（`Σ B^{−k} = N_d/K_tree = 4/3`）｜`Q3` 歸約至上游 `N_d = 44`（**範圍外**）。
