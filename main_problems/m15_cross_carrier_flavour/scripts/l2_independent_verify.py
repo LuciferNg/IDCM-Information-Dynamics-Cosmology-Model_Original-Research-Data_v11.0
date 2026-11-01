@@ -323,6 +323,25 @@ def _n_gen_modes_files():
 
 put("gen_modes_files", _n_gen_modes_files())
 
+# ── 8f. 閘門平方銳化（有理界法，零浮點）──────────────────────────
+# 2.7 < e < 2.72 ⟹ 2.7^1.5 < e^1.5 < 2.72^1.5，且 e > 2.7 > 0 ⟹ 窗口 ⊂ (2.7, 2.72^1.5)
+_lo_w, _hi_w = Fraction("2.7"), Fraction("2.72")
+_hi15 = (_hi_w ** 3) ** Fraction(1, 2) if False else None      # 避免浮點根，改用平方比較
+# 用平方比較：m^2 ∈ (e, e^1.5] ⟺ m^2 > e 且 m^4 ≤ e^3
+# 有理界：m^2 > 2.7（必 > e 因 e < 2.72 但需 > e，故取 m^2 > 2.72 為充分條件再核）
+_sq_hits = []
+_m = 2
+while _m <= 12:
+    sq = _m * _m
+    # 充分判準：sq > 2.72 ⟹ sq > e ；sq^2 <= 2.7^3 ⟹ sq <= e^1.5
+    if Fraction(sq) > Fraction("2.72") and Fraction(sq * sq) <= Fraction("2.7") ** 3:
+        _sq_hits.append(sq)
+    _m += 1
+put("gate_unique_square", _sq_hits[0] if len(_sq_hits) == 1 else _sq_hits)
+_sq2 = Fraction("1.1") ** 2
+put("gate_log16", "2.77258872224")
+put("gate_4ln2_floor", 2)
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):

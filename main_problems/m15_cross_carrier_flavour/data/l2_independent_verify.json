@@ -420,6 +420,9 @@
   ],
   "gate_conservative_note": "e>2.7, e<2.72 ⟹ n=0,1,2 通過（e^2<7.4<16）；n=3 不通過（e^3>19.6>16）",
   "gen_modes_files": 6,
+  "gate_unique_square": 4,
+  "gate_log16": "2.77258872224",
+  "gate_4ln2_floor": 2,
   "lucas_L1_L3_L5": [
    1,
    4,

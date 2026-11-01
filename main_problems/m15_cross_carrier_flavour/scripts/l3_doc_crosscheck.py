@@ -201,6 +201,9 @@ check_str("11_gate_candidate_and_provenance_scan.md", "⌈2 ln B⌉ = 3", "⌈2l
 check_str("11_gate_candidate_and_provenance_scan.md", "全序集", "{n=0,1,2}")
 check_str("11_gate_candidate_and_provenance_scan.md", "窗口寬", "64.87%")
 check_str("11_gate_candidate_and_provenance_scan.md", "掃描總數", "158")
+check_num("11_gate_candidate_and_provenance_scan.md", "窗口內唯一平方", l2["gate_unique_square"], 1e-9)
+check_str("11_gate_candidate_and_provenance_scan.md", "ln16 值", l2["gate_log16"])
+check_str("11_gate_candidate_and_provenance_scan.md", "⌈4 ln 2⌉ = 3", "⌈4 ln 2⌉ = 3")
 
 say("")
 say("§11  豁免（敘述／判定型）")
