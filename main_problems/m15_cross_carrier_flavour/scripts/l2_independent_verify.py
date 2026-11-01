@@ -342,6 +342,14 @@ _sq2 = Fraction("1.1") ** 2
 put("gate_log16", "2.77258872224")
 put("gate_4ln2_floor", 2)
 
+# ── 8g. Ω 預算觀測錨（Planck 2018，Fraction 精確）──────────────
+_obh2, _och2 = Fraction("0.02237"), Fraction("0.1200")
+_h0 = Fraction("67.36"); _h2 = (_h0 / 100) ** 2
+put("ratio_obs", round(float(_och2 / _obh2), 6))          # Ω_DM/Ω_b（h² 消去）
+put("ratio_pred_16_3", round(16 / 3, 6))
+put("n_gen_from_Ob", round(float(60 * _obh2 / _h2), 6))
+put("budget_sum", 3 + 16 + 41)
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):

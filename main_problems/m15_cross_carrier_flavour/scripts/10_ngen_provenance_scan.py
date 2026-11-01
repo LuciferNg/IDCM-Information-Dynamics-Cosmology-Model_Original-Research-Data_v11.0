@@ -51,6 +51,8 @@ say("=" * 78)
 rows = []
 for r in ROOTS:
     for p in (ROOT / r).rglob("*.py"):
+        if "m15_cross_carrier_flavour" in str(p):      # SELF 排除：本 O 目錄不入掃描
+            continue
         try:
             txt = p.read_text(errors="ignore")
         except Exception:

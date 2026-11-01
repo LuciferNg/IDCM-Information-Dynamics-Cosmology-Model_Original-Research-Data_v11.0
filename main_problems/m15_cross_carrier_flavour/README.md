@@ -11,7 +11,7 @@
 > **問題被重定型**（`docs/01 §一`）：`N_gen` 在 SM 之定義 = 費米子表示空間中 (SM rep) 之
 > **重數** ⟹ 任何「3 之來源」claim 必須供給**分割滿射** `τ : F → S`（`|S| = 3`，`F` = 9 模式受保護集）。
 > ⟹ 判準 **C7**（三條件：(i) 3 元素集、(ii) 典範 `τ`、(iii) `dof = 0`）。
-> **12 候選：11 死 ＋ #12（閘門層數）🟡 C7 全過**（見 `docs/08`–`docs/11`）。
+> **12 候選：11 死 ＋ #12（閘門層數）🟡 C7 全過**；且 **3 = γ_max − 1（T7 譜源）＋ `Ω_DM/Ω_b = 16/3`（−0.48σ）**（見 `docs/08`–`docs/12`）。
 >
 > ```
 > P1 歸約定理（O137 §一）= **恆真**（清單 ① 已含 n；④ γ_n 已對 n 單射）⟹ 零鑑別力；
@@ -120,6 +120,26 @@
 
 ---
 
+> ## ★★★★ 進展七（2026-11-01 驗證輪）：輸入全閉、自我撤回、觀測錨 −0.48σ
+>
+> **驗證**：#12 之三項輸入全部有非 M3 之獨立出處 ——
+> `e^{−n}` = v9 `kchain_cosmic_web/63` 之模態權重；`κ = 1/16` = `idcm_core.py:63` 之已註冊常數 `KAPPA`；
+> `γ_max = 4` = Nyquist 定理。⟹ 上輪兩缺口（κ 出處、銳度窗口）**皆閉**。
+>
+> **撤回**：`N_gen = 60·Ω_b` 只係 O215 `docs/01 §0` 之標籤重寫 ⟹ 恆真，不作證據。
+>
+> ★★ **但 O215 `docs/03 T7` 給出獨立譜源**：`(3:16:41) = (γ_max−1 : γ_max² : Σγ_odd−γ_max+1)/60 [EXACT]`
+> ⟹ 預算之 3 = **`γ_max − 1`**（Nyquist 減一），k-free、dof = 0。
+>
+> ★★★ **觀測錨**：`Ω_DM/Ω_b = γ_max²/(γ_max−1) = 16/3 = 5.3333`
+> vs Planck `5.3643 ± 0.0646` ⟹ **−0.48σ**。
+> 判別力：`N_gen = 2 ⟹ 8.0（+40.8σ）`、`N_gen = 4 ⟹ 4.0（−21.1σ）` ⟹ **只有 3 存活**。
+>
+> ⟹ `N_gen = γ_max − 1 = 3`，由 Nyquist（`γ_max = 4`）＋ 預算結構強制，**零自由參數**。
+> 殘餘唯一缺口：`Ω_b 分子 = 世代數` 之**識別**（識別題，非算術題）。
+
+---
+
 ## 一句話
 
 味之「3」若唔係本載體（44-站 Dirichlet `/90`）嘅量子數，則須由**另一載體**給出。
@@ -163,7 +183,7 @@
 
 ## 目錄
 
-檔案數：docs/（11 份）｜scripts/（13 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（12 份）｜scripts/（14 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -171,8 +191,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 11 份（01 判準 → 07 判詞 → 08–11 候選補測、降級、閘門）
-├── scripts/           ← 13 支（10 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 12 份（01 判準 → 07 判詞 → 08–12 候選補測、降級、閘門、驗證）
+├── scripts/           ← 14 支（11 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -193,7 +213,8 @@ m15_cross_carrier_flavour/
 | `docs/08_ninth_candidate_h11_minus_M.md` | ★ 第九候選 `N_gen = h11 − M`：**恆等／循環**（Lucas 恆等式）；3 = L₃ − 1 | 🔴 |
 | `docs/09_tenth_candidate_ngen_equals_B_minus_1.md` | ⚠ 第十候選 `N_gen = B − 1` 之初判（🟡）—— **已被 `docs/10` 推翻**，原文保留 | ⚠ |
 | `docs/10_tenth_candidate_downgrade.md` | ★★ 降級：後驗（M13 自認）＋ 反演恆真 ＋ 有理身份閘 ⟹ 第十候選 **🔴** | 🔴 |
-| `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（158 處，無 producer） | 🟡 |
+| `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（157 處，無 producer） | 🟡 |
+| `docs/12_verification_and_budget_anchor.md` | ★★★ 輸入驗證（`e`／`κ`／`B` 全有獨立出處）＋ **自我撤回**（`N_gen=60Ω_b` 恆真）＋ 觀測錨 `Ω_DM/Ω_b = 16/3`（**−0.48σ**） | 🟡 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -204,6 +225,7 @@ m15_cross_carrier_flavour/
 | `scripts/09_tenc_c_downgrade_audit.py` | 降級審計：M13 自認引文＋反演恆真＋有理身份閘（含 CONV-DIFF） | ✅ |
 | `scripts/10_ngen_provenance_scan.py` | 全 corpus `N_gen` 掃描（158 處；L/W/P/E 四類）＋安裝點定位 | ✅ |
 | `scripts/11_gate_count_candidate.py` | 閘門層數候選：`⌈2 ln B⌉`、C7 三條件、銳度窗口、κ 冪次敏感性 | ✅ |
+| `scripts/12_gate_budget_identity.py` | 輸入驗證 ＋ 預算同構 ＋ Planck 判別（16/2、16/3、16/4） | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

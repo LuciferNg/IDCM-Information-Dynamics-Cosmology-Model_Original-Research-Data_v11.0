@@ -423,6 +423,10 @@
   "gate_unique_square": 4,
   "gate_log16": "2.77258872224",
   "gate_4ln2_floor": 2,
+  "ratio_obs": 5.364327,
+  "ratio_pred_16_3": 5.333333,
+  "n_gen_from_Ob": 2.958102,
+  "budget_sum": 60,
   "lucas_L1_L3_L5": [
    1,
    4,
