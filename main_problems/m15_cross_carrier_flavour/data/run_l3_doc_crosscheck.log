@@ -120,14 +120,8 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 13_remaining_four_q1_q2_q3_q5.md :: Ω_Λ = 41/60 ≈ 0.683333（doc 命中 True）
 [PASS] 13_remaining_four_q1_q2_q3_q5.md :: z(Ω_Λ) ≈ -0.19（doc 命中 True）
 
-§13c  docs/14 — 上游 FORCE_44 審計
-[PASS] 14_force44_audit_anchor.md :: 可解釋 N 數 ≈ 63（doc 命中 True）
-[PASS] 14_force44_audit_anchor.md :: 解釋率 31.8% ≈ 31.8（doc 命中 True）
-[PASS] 14_force44_audit_anchor.md :: 90 之同型表示數 ≈ 3（錨點窗口）
-[PASS] 14_force44_audit_anchor.md :: 引理1 違例 0 ≈ 0（doc 命中 True）
-[PASS] 14_force44_audit_anchor.md :: 錨值兼硬編碼 ≈ 44（錨點窗口）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 95、FAIL 0
+L3 總結：PASS 90、FAIL 0
 ==============================================================================

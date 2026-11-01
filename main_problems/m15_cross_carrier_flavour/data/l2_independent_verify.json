@@ -437,10 +437,6 @@
   "ratio_Nd_Ktree": "4/3",
   "omega_L_pred": 0.683333,
   "z_omega_L": -0.19,
-  "lucas_expl_n": 63,
-  "lucas_expl_rate": 31.8,
-  "reps_for_90": 3,
-  "lemma1_violations": 0,
   "lucas_L1_L3_L5": [
    1,
    4,

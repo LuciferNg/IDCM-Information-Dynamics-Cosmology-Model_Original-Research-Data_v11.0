@@ -179,29 +179,19 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ---
 
-> ## ★★★★★★★ 上游審計（2026-11-01）：`N_d = 44` **係錨，非定理**
+> ## ⚠️ 範圍裁決（2026-11-01）：`N_d = 44` **不屬本 O 範圍**，越界物已撤出
+>
+> 曾對上游 `v10 p9` 之 `FORCE_44` 作審計並改判 `N_d = 44` 為錨。**調律者裁定：越界。**
+> 依 10-16 裁決「閉合 O 之剩餘項屬他 O 者 ⟹ 只 register 發還，本 O 內禁推」：
+>
+> - 檔案已移至 `out_of_scope/`（`docs/14`、`scripts/14`、其 log／JSON），**不計入產物、審計鏈與結論**；
+> - `Q3` 之記錄改回「歸約至上游 `N_d = 44`（**範圍外**）」，只保留歸約指針，不保留結論；
+> - 已以 `handoff M15 → M6` 發還（v10 p9 因跨版本不可推送）。
 >
 > ```
-> L1 13/13（兩跑 byte-identical ≡ canonical log；審計自身兩跑亦同）
-L2 82 keys｜L3 95/95（14/14 doc、零豁免）｜audit 13/13 PASS（FAIL 0、WARN 0）
+> L1 12/12（兩跑 byte-identical ≡ canonical log；審計自身兩跑亦同）
+L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、WARN 0）
 > ```
->
-> v10 `p9/05_structural_proof_FORCE_44` 宣稱「✅ 定理證明完成（7/7）」。四閘全中：
->
-> | 閘 | 實測 |
-> |:--|:--|
-> | F1 引理 1 | `Σγ = 2(N+1)` 對 `N = 2..120` **恆等**（違例 0）⟹ 零約束 |
-> | F2 引理 2 | odd-Lucas 4 項交錯和可解釋 **63/198 = 31.8%** 之 `N`；`90` 本身有 **3 條**相異表示 ⟹ 非強迫 |
-> | F3 檢查 3 | `C3 = (90 // 2 − 1 == 44)` —— 對兩個**字面值**做算術 ⟹ 以答案求答案 |
-> | F4 腳本 | `N_d = 44` **硬編碼**（第 18 行）⟹ 7 項檢查全部係「在答案上驗恆等」 |
->
-> ⟹ **`N_d = 44`（⟺ 88 site）= 錨（dof +1）**，不可由 corpus 推出。
-> ★ **dof 張力**：O212（v10）宣稱「錨 = `G ≡ ω_ring ≡ M_Pl`（唯一測量）」⟹ `dof = 1`；
-> 若 44 係第二錨 ⟹ `dof = 2`。跨版本禁推送 ⟹ 本 O 只記錄，並於 v11 通報 **M6**（dof 定理）。
->
-> ⟹ **M15 之最終鏈末端係錨**：`3 = rank(P_κ) = 60·Ω_b = γ_max − 1` ──上游── `N_d = 44`（錨）。
-
----
 
 ## 一句話
 
@@ -246,7 +236,7 @@ L2 82 keys｜L3 95/95（14/14 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（14 份）｜scripts/（16 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（13 份）｜scripts/（15 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -254,8 +244,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 14 份（01 判準 → 07 判詞 → 08–14 候選補測、降級、閘門、驗證、餘問、上游審計）
-├── scripts/           ← 16 支（13 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 13 份（01 判準 → 07 判詞 → 08–13 候選補測、降級、閘門、驗證、餘問）
+├── scripts/           ← 15 支（12 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -279,7 +269,6 @@ m15_cross_carrier_flavour/
 | `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（157 處，無 producer） | 🟡 |
 | `docs/12_verification_and_budget_anchor.md` | ★★★ 輸入驗證（`e`／`κ`／`B` 全有獨立出處）＋ **自我撤回**（`N_gen=60Ω_b` 恆真）＋ 觀測錨 `Ω_DM/Ω_b = 16/3`（**−0.48σ**） | 🟡 |
 | `docs/13_remaining_four_q1_q2_q3_q5.md` | ★★★★ 餘問攻堅：Q1 判死（dof=44）、Q2 定位（≡N_d/K_tree）、Q3 歸約、**Q5 結構側閉合**（預算三分 ≡ 算子分解三分；`Ω_Λ` −0.19σ） | ✅ |
-| `docs/14_force44_audit_anchor.md` | ★★★★★ 上游審計：`N_d = 44` **係錨非定理**（引理 1 恆等、級聯 31.8% 非選擇、腳本硬編碼 `90`／`44`）＋ **dof 張力**（O212 dof=1 vs 第二錨 ⟹ dof=2） | 🔴 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -292,7 +281,6 @@ m15_cross_carrier_flavour/
 | `scripts/11_gate_count_candidate.py` | 閘門層數候選：`⌈2 ln B⌉`、C7 三條件、銳度窗口、κ 冪次敏感性 | ✅ |
 | `scripts/12_gate_budget_identity.py` | 輸入驗證 ＋ 預算同構 ＋ Planck 判別（16/2、16/3、16/4） | ✅ |
 | `scripts/13_remaining_four.py` | Q1（2⁴⁴ 分級 ⟹ 判死）、Q2（≡N_d/K_tree）、Q3（歸約）、Q5（rank 同構） | ✅ |
-| `scripts/14_force44_audit.py` | ★ 上游 `FORCE_44` 審計：引理 1 恆等（N=2..120 違例 0）、級聯 31.8% 非選擇、`90`／`44` 字面 ⟹ 循環 | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |
