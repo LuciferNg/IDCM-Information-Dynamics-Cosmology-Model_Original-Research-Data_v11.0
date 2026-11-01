@@ -1,7 +1,7 @@
 # M15 — 01_problem_record（問題記錄）
 
 - pid `M15`｜slug `m15_cross_carrier_flavour`｜version v11.0｜created 2026-10-31
-- state 🔴 **closed / verdict `negative`**（scoped，十候選全滅），2026-11-01（沿革：⚪ registered → 🔴 negative → 🟡 partial → 🔴 negative（降級），見 §六）
+- state 🟡 **closed / verdict `partial`**，2026-11-01（12 候選：11 死 ＋ #12 存活；沿革：⚪ → 🔴 negative → 🟡 partial → 🔴 negative → 🟡 partial，見 §六）
 - 開檔依據：調律者 2026-10-31 指示「剩餘唯一出路係跨載體（A₅ 幾何／CY₃／M45 帶）—— 依紀律開新 M15，不在本 M14 內推」
 
 ---
@@ -65,6 +65,8 @@
 | 12 | `scripts/07`、`docs/08` | 補測（第九候選） | `N_gen = h11 − M`：來源層 5 處含字面 3 ⟹ 循環；一致性 ⟺ Lucas 恆等式 ⟹ 8 候選更正為 9（0/9） | 🔴 |
 | 13 | `scripts/08`、`docs/09` | 補測（第十候選初判） | `N_gen = B − 1`：`B` 反解 = 3.95837 ± 0.18517 ⟹ 整數唯一 3（k=2 −5.2σ／k=4 +5.6σ）；初判 🟡 | ⚠ |
 | 14 | `scripts/09`、`docs/10` | ★ 降級審計 | 三閘：① M13 `docs/13 §三` 自認後驗（三處引文）② 反演回代差 `0.00e+00`（恆真）③ `3/16` 之 dev/基準 = 3.571 ≥ 1（未識別）⟹ 第十候選 **🔴**；verdict 回復 `negative` | 🔴 |
+| 15 | `scripts/10`、`docs/11` | ★★ 全 corpus 掃描 | 158 處 `N_gen` 賦值：124 字面／包裝、23 散文、11 可解析（全化約為 `B−1` 或 `K_tree/L₅`）⟹ **無 producer**；安裝點唯一 = `gen_modes=[1,4,5]`（4 處）＋ if/elif | ✅ |
+| 16 | `scripts/11`、`docs/11` | ★★★ 第十二候選 | 閘門層數 `N_gen = ⌈2 ln B⌉ = 3`；**C7 三條件首個全過**（全序集 ⟹ 保序雙射唯一 ⟹ dof = 0）；缺口 = κ = B^{−2} 出處、銳度 64.9% | 🟡 |
 
 ## §七 檔案閉合水位
 
@@ -77,7 +79,7 @@
 | 5 | `scripts/01`–`06`＋`l2`／`l3`（8 支） | 2026-11-01 | L1 5/5 兩跑 byte-identical；L2／L3 rc=0 且 ≡ log | ✅ |
 | 6 | `data/`（logs ＋ JSON） | 2026-11-01 | 產物綁定零孤兒、零失蹤 | ✅ |
 | 7 | 四件套（`01_problem_record`／`final_result`／`README`／`SESSION_START`） | 2026-11-01 | 狀態行同步為 `closed / partial`（第十候選後改判；`SESSION_START` 原文不動） | ✅ |
-| 8 | 追加輪（`docs/08`–`10`、`scripts/07`–`09`） | 2026-11-01 | L1 8/8、L2 56 keys、L3 58/58、audit 11/11 FAIL 0 | ✅ |
+| 8 | 追加輪（`docs/08`–`11`、`scripts/07`–`11`） | 2026-11-01 | L1 10/10、L2 62 keys、L3 64/64、audit 11/11 FAIL 0 | ✅ |
 
 ## §八 解閘條件
 

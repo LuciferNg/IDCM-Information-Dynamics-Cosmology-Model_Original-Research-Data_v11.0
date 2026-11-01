@@ -194,7 +194,16 @@ check_str("10_tenth_candidate_downgrade.md", "回代差 0", "0.00e+00")
 check_bool("10_tenth_candidate_downgrade.md", "3/16 未過閘", l2["gate_k3_passes"] is False, "未過閘")
 
 say("")
-say("§10  豁免（敘述／判定型）")
+say("§10  docs/11 — 閘門候選 ＋ provenance 掃描")
+check_num("11_gate_candidate_and_provenance_scan.md", "閘門計數", l2["gate_count"], 1e-9)
+check_num("11_gate_candidate_and_provenance_scan.md", "gen_modes 檔數", l2["gen_modes_files"], 1e-9)
+check_str("11_gate_candidate_and_provenance_scan.md", "⌈2 ln B⌉ = 3", "⌈2lnB⌉=3")
+check_str("11_gate_candidate_and_provenance_scan.md", "全序集", "{n=0,1,2}")
+check_str("11_gate_candidate_and_provenance_scan.md", "窗口寬", "64.87%")
+check_str("11_gate_candidate_and_provenance_scan.md", "掃描總數", "158")
+
+say("")
+say("§11  豁免（敘述／判定型）")
 say("  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免")
 
 say("")

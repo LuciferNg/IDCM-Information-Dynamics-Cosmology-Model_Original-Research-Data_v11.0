@@ -1,6 +1,6 @@
 # M15 — 跨載體味結構：「3」之身份（M14 發還）
 
-**狀態**：🔴 `closed / verdict negative`（scoped，十候選全滅；2026-11-01）｜version v11.0
+**狀態**：🟡 `closed / verdict partial`（12 候選：11 死 ＋ **#12 閘門層數 C7 全過**；2026-11-01）｜version v11.0
 **來源**：M14（`closed / verdict partial`）之**唯一剩餘出路** —— M14 已證「3」不可能係本載體之量子數／扇區／對稱類（單標籤定理），只能係計數或跨載體。
 **承接**：`SESSION_START.md`（起手式原文保留）→ 本 session 執行 P1–P5（見 `docs/07`）
 
@@ -11,7 +11,7 @@
 > **問題被重定型**（`docs/01 §一`）：`N_gen` 在 SM 之定義 = 費米子表示空間中 (SM rep) 之
 > **重數** ⟹ 任何「3 之來源」claim 必須供給**分割滿射** `τ : F → S`（`|S| = 3`，`F` = 9 模式受保護集）。
 > ⟹ 判準 **C7**（三條件：(i) 3 元素集、(ii) 典範 `τ`、(iii) `dof = 0`）。
-> **10 候選全滅**（0/9 過 C7 ＋ 第十候選後驗／恆真，見 `docs/08`–`docs/10`）。
+> **12 候選：11 死 ＋ #12（閘門層數）🟡 C7 全過**（見 `docs/08`–`docs/11`）。
 >
 > ```
 > P1 歸約定理（O137 §一）= **恆真**（清單 ① 已含 n；④ γ_n 已對 n 單射）⟹ 零鑑別力；
@@ -97,6 +97,29 @@
 
 ---
 
+> ## ★★★★ 進展六（2026-11-01 收束）：**第十二候選首個通過 C7** —— 閘門能見層數
+>
+> 全 corpus 掃描（158 處 `N_gen` 賦值）證實：**`N_gen` 冇任何結構 producer**
+> （124 字面／包裝、23 散文、11 可解析表達式全部化約為 `B−1` 算術或 `K_tree/L₅` 定義重寫）。
+> 安裝點唯一：`gen_modes = [1, 4, 5]`（4 處）＋ `chiral_index` 之 if/elif 硬編碼。
+>
+> 掃描途中發現 v11 M3 已註冊但 M15 未檢之候選：
+>
+> ```
+> κ = B⁻² = 1/16 ;  N_gen = #{n ≥ 0 : e^{−n} > κ} = rank(P_κ) = 3
+> ⟹ N_gen = ⌈2 ln B⌉ = ⌈2.7726⌉ = 3      （B = 4）
+> ```
+>
+> **C7 三條件首個全過**：3 集 = `{n = 0,1,2}` **全序**（無 S₃ 對稱）⟹ 與世代質量序之間
+> **保序雙射唯一** ⟹ `dof = 0`。前十一候選全部死於「3 集 S₃ 對稱」或「非集合」。
+>
+> ⚠ 兩項缺口：① 銳度低（`⌈2 ln B⌉ = 3` 對 `B ∈ (e, e^{1.5}]` 全成立，寬 64.9% ⟹ 唔能反推 `B = 4`）；
+> ② 結果對 `κ` 之冪次敏感（`κ = B^{−1} ⟹ 2`），故需 `κ = B^{−2}` 之獨立出處。
+>
+> ⟹ verdict 由 `negative` 回復 **`partial`**（#12 存活）。詳 `docs/11`。
+
+---
+
 ## 一句話
 
 味之「3」若唔係本載體（44-站 Dirichlet `/90`）嘅量子數，則須由**另一載體**給出。
@@ -140,7 +163,7 @@
 
 ## 目錄
 
-檔案數：docs/（10 份）｜scripts/（11 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（11 份）｜scripts/（13 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -148,8 +171,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 10 份（01 判準 → 07 判詞 → 08/09/10 候選補測與降級）
-├── scripts/           ← 11 支（8 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 11 份（01 判準 → 07 判詞 → 08–11 候選補測、降級、閘門）
+├── scripts/           ← 13 支（10 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -170,6 +193,7 @@ m15_cross_carrier_flavour/
 | `docs/08_ninth_candidate_h11_minus_M.md` | ★ 第九候選 `N_gen = h11 − M`：**恆等／循環**（Lucas 恆等式）；3 = L₃ − 1 | 🔴 |
 | `docs/09_tenth_candidate_ngen_equals_B_minus_1.md` | ⚠ 第十候選 `N_gen = B − 1` 之初判（🟡）—— **已被 `docs/10` 推翻**，原文保留 | ⚠ |
 | `docs/10_tenth_candidate_downgrade.md` | ★★ 降級：後驗（M13 自認）＋ 反演恆真 ＋ 有理身份閘 ⟹ 第十候選 **🔴** | 🔴 |
+| `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（158 處，無 producer） | 🟡 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -178,6 +202,8 @@ m15_cross_carrier_flavour/
 | `scripts/07_h11_minus_M_candidate.py` | 第九候選：來源層 5 處實證＋Lucas 恆等式＋k-free 瓶頸定位 | ✅ |
 | `scripts/08_ngen_equals_B_minus_1.py` | 第十候選：PDG 原始質量＋`B` 反解＋整數階梯＋V₄ 結構 | ✅ |
 | `scripts/09_tenc_c_downgrade_audit.py` | 降級審計：M13 自認引文＋反演恆真＋有理身份閘（含 CONV-DIFF） | ✅ |
+| `scripts/10_ngen_provenance_scan.py` | 全 corpus `N_gen` 掃描（158 處；L/W/P/E 四類）＋安裝點定位 | ✅ |
+| `scripts/11_gate_count_candidate.py` | 閘門層數候選：`⌈2 ln B⌉`、C7 三條件、銳度窗口、κ 冪次敏感性 | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

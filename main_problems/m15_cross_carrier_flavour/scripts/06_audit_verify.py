@@ -38,6 +38,8 @@ LOGS = {
     "07_h11_minus_M_candidate": "run_07_h11_M.log",
     "08_ngen_equals_B_minus_1": "run_08_ngen_B1.log",
     "09_tenc_c_downgrade_audit": "run_09_downgrade.log",
+    "10_ngen_provenance_scan": "run_10_provenance.log",
+    "11_gate_count_candidate": "run_11_gate_count.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -53,6 +55,7 @@ DOC_PROD = {
     "08_ninth_candidate_h11_minus_M.md": ["07"],
     "09_tenth_candidate_ngen_equals_B_minus_1.md": ["08"],
     "10_tenth_candidate_downgrade.md": ["09"],
+    "11_gate_candidate_and_provenance_scan.md": ["10", "11"],
 }
 EXEMPT_DOCS = {"01_frozen_criteria.md", "07_verdicts.md"}
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}
@@ -102,7 +105,7 @@ for d, prods in DOC_PROD.items():
 chk("② docs ↔ producer 綁定", not missing_prod, f"缺 {missing_prod}")
 ghost = sorted(d for d in L3_COVERED if d not in L3_COVERED)
 chk("⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）",
-    (DOCS / "..").exists() and len(L3_COVERED) == 8,
+    (DOCS / "..").exists() and len(L3_COVERED) == 9,
     f"L3 覆蓋 {len(L3_COVERED)} 份：{sorted(L3_COVERED)}；豁免 {sorted(EXEMPT_DOCS)}")
 
 # ③ 路徑衛生

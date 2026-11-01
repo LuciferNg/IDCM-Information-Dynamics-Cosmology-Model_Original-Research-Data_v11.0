@@ -1,0 +1,71 @@
+==============================================================================
+M15 scripts/10 — 全 corpus `N_gen` provenance 掃描
+==============================================================================
+
+§1  掃描結果（v9／v10／v11 全部 .py）
+------------------------------------------------------------------------------
+  總賦值 158 處：L 類 113｜W 類 11｜P 類 23｜E 類 11
+    L = 字面純數｜W = 數值包裝（mp.mpf(3) 等）｜P = 散文／docstring（不可解析）｜E = 可解析之真表達式
+[PASS] §1-a 掃描完成  |  158 處
+
+  E 類（唯一可能係「由結構算出」者）逐條：
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o107_extra_u1_physical/scripts/03_causal_hierarchy.py:55  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o148_dual_scale_vacuum_budget/scripts/19_closeout_independent_audit.py:12  N_gen = 3  (代數簇生成元數)
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o103_ngen3_mechanism/scripts/01_analyze_ngen.py:81  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o231_super_ym_idcm_qft/scripts/06_q4_coupling_running.py:90  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o168_g_last_input/scripts/18_mp_absolute_scale.py:15  N_gen = 3; f_proj = 19
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/01_preverification.py:30  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/08_doc_crosscheck_06.py:23  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/07_beta_consistency.py:39  N_gen = B - 1
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o55_cf_sm_center_z3/scripts/07_hard_test_h3.py:71  n_gen = h11_test // 12
+    IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/scripts/10_vew_normalization_closure.py:33  N_gen = mpf(3)
+    IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock/scripts/05_round5_chain_length_origin.py:98  N_gen = F(e + o - 3, F5 + 1)
+
+§2  E 類之自變量分析（P2：含 N_gen／B／K_tree 即循環）
+------------------------------------------------------------------------------
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    3  (代數簇生成元數)                                   ⟹ 字面（散文後綴被解析為呼叫）：`N_gen = 3  (…)` ⟹ 值仍係字面 3
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    3; f_proj = 19                                 ⟹ 字面（複合語句）：`N_gen = 3; f_proj = 19` ⟹ 仍係字面
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
+    h11_test // 12                                 ⟹ 跨載體輸入：= 36/12；12 ∉ CY₃ primitive（M15 docs/06 判 CROSS-IMPORT）
+    mpf(3)                                         ⟹ 字面（數值包裝）：`mpf(3)` = mp.mpf(3)
+    F(e + o - 3, F5 + 1)                           ⟹ 含字面 3：(e+o−3)/(F₅+1) = (6+15−3)/6 = 3；分子含字面 −3
+
+  ⟹ 無一條 E 係「由非 N_gen 輸入算出 N_gen」：全部屬 (i) B − 1 之算術、
+     (ii) K_tree/L₅ 之定義重寫、或 (iii) 對任何 N_d 皆成立之恆等式。
+
+§3  P3 安裝點：世代索引之唯一實際使用處
+------------------------------------------------------------------------------
+    IDCM-v9.0--W-Field-Lattice/04_extended_verify.py:259  ← 字面列表 [1, 4, 5]
+    IDCM-v9.0--W-Field-Lattice/12_dirac_lattice_verify.py:213  ← 字面列表 [1, 4, 5]
+    IDCM-v9.0--W-Field-Lattice/14_full_sm_verify.py:315  ← 字面列表 [1, 4, 5]
+    main_problems/03_q2a_label_provenance.py:87  ← 字面列表 [1, 4, 5]
+  ⟹ 共 4 處（v9 三個 verify 腳本各一份 ＋ M14 之 AST 追溯腳本各一份）
+
+  恆真鏈（v9 12_dirac_lattice_verify.py）：
+    n_physical = len(gen_modes)                    # = len([1,4,5]) = 3
+    check(..., n_physical == 3, '3 generations')    # ⟹ 對字面列表算 len
+    check(..., len(set(z2_map.values())) == 3)      # ⟹ 對字面 dict {1:3,4:2,5:0} 算 len
+    chiral_index(k): if k==1→3 elif k==4→2 elif k==5→0 else −1   # if/elif 硬編碼
+[PASS] §3 安裝點唯一（字面列表 ＋ if/elif 硬編碼；全 corpus 僅此一類）  |  4 處 gen_modes=[1,4,5]；chiral_index 為字面分支；無任何由結構生成世代索引之處
+
+  （另）p10/07_structural_proof_force_cy3.py:44  `n_gen = 3  # 世代數 = 操作維度 2+1`
+  （另）p2/61_p7_tree_forcing.py:21            `N_d, N_gen, B, K_tree, mu2 = 44, 3, 4, 33, 2`
+        ⟹ P7 之「N_gen = K_tree/L₅，唯一 n=5」係以 N_gen = 3 為輸入，再除出 3。
+
+§4  判詞
+------------------------------------------------------------------------------
+  (1) P1 成立：全 corpus 158 處 `N_gen` 賦值中，124 處為字面／數值包裝、23 處為散文，11 處為可解析表達式，
+      而該 E 類全部化約為 B − 1 之算術或 K_tree/L₅ 之定義重寫 ⟹ **無 producer**。
+  (2) P3 成立：世代索引之唯一實際使用處 = 三個模式之字面列表 [1,4,5]（3 處）
+      ＋ `chiral_index` 之 if/elif 硬編碼 ⟹ **3 之安裝點唯一且係字面**。
+  (3) P7（v10 p2「樹密度 = 世代數」）不成立：其自身第 21 行已把 N_gen = 3 寫死；
+      「唯一 n=5」只係 33 ÷ 11 之除法（其餘 Lucas 除數不整除）。
+  (4) ⟹ **「3」之身份 = 三個字面模式索引之基數；全 corpus 無任何結構 producer。**
+      唯一未解之瓶頸不變：`K_tree = M = 33` 之 k-free 推導（docs/08 §未盡 Q1）。
+
+§5  總結：檢查 2 項，FAIL = 0

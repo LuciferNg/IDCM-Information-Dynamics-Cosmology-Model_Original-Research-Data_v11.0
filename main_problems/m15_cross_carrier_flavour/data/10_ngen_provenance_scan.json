@@ -1,0 +1,84 @@
+{
+ "results": [
+  {
+   "tag": "§1-a 掃描完成",
+   "status": "PASS",
+   "detail": "158 處"
+  },
+  {
+   "tag": "§3 安裝點唯一（字面列表 ＋ if/elif 硬編碼；全 corpus 僅此一類）",
+   "status": "PASS",
+   "detail": "4 處 gen_modes=[1,4,5]；chiral_index 為字面分支；無任何由結構生成世代索引之處"
+  }
+ ],
+ "counts": {
+  "L": 113,
+  "W": 11,
+  "P": 23,
+  "E": 11
+ },
+ "total": 158,
+ "install_points": [
+  "IDCM-v9.0--W-Field-Lattice/04_extended_verify.py:259",
+  "IDCM-v9.0--W-Field-Lattice/12_dirac_lattice_verify.py:213",
+  "IDCM-v9.0--W-Field-Lattice/14_full_sm_verify.py:315",
+  "main_problems/03_q2a_label_provenance.py:87"
+ ],
+ "E_class": [
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o107_extra_u1_physical/scripts/03_causal_hierarchy.py",
+   "line": 55,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o148_dual_scale_vacuum_budget/scripts/19_closeout_independent_audit.py",
+   "line": 12,
+   "rhs": "3  (代數簇生成元數)"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o103_ngen3_mechanism/scripts/01_analyze_ngen.py",
+   "line": 81,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o231_super_ym_idcm_qft/scripts/06_q4_coupling_running.py",
+   "line": 90,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o168_g_last_input/scripts/18_mp_absolute_scale.py",
+   "line": 15,
+   "rhs": "3; f_proj = 19"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/01_preverification.py",
+   "line": 30,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/08_doc_crosscheck_06.py",
+   "line": 23,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/07_beta_consistency.py",
+   "line": 39,
+   "rhs": "B - 1"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o55_cf_sm_center_z3/scripts/07_hard_test_h3.py",
+   "line": 71,
+   "rhs": "h11_test // 12"
+  },
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/scripts/10_vew_normalization_closure.py",
+   "line": 33,
+   "rhs": "mpf(3)"
+  },
+  {
+   "path": "IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock/scripts/05_round5_chain_length_origin.py",
+   "line": 98,
+   "rhs": "F(e + o - 3, F5 + 1)"
+  }
+ ]
+}

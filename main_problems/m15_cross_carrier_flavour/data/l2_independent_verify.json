@@ -413,6 +413,13 @@
    }
   },
   "gate_k3_passes": false,
+  "gate_count": 3,
+  "gate_window": [
+   2.72,
+   4.48229
+  ],
+  "gate_conservative_note": "e>2.7, e<2.72 ⟹ n=0,1,2 通過（e^2<7.4<16）；n=3 不通過（e^3>19.6>16）",
+  "gen_modes_files": 6,
   "lucas_L1_L3_L5": [
    1,
    4,

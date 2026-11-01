@@ -1,15 +1,15 @@
 ==============================================================================
 M15 scripts/06 — 全鏈審計
 ==============================================================================
-[PASS] ① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）  |  磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit']；差集 set()
+[PASS] ① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）  |  磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate']；差集 set()
 [PASS] ② docs ↔ producer 綁定  |  缺 []
-[PASS] ⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）  |  L3 覆蓋 8 份：['02_reduction_theorem_status.md', '03_no_second_label_theorem.md', '04_count_census_and_partition_test.md', '05_adic_profile_and_map_nogo.md', '06_cy3_verdict.md', '08_ninth_candidate_h11_minus_M.md', '09_tenth_candidate_ngen_equals_B_minus_1.md', '10_tenth_candidate_downgrade.md']；豁免 ['01_frozen_criteria.md', '07_verdicts.md']
+[PASS] ⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）  |  L3 覆蓋 9 份：['02_reduction_theorem_status.md', '03_no_second_label_theorem.md', '04_count_census_and_partition_test.md', '05_adic_profile_and_map_nogo.md', '06_cy3_verdict.md', '08_ninth_candidate_h11_minus_M.md', '09_tenth_candidate_ngen_equals_B_minus_1.md', '10_tenth_candidate_downgrade.md', '11_gate_candidate_and_provenance_scan.md']；豁免 ['01_frozen_criteria.md', '07_verdicts.md']
 [PASS] ③ scripts/ 內禁 /tmp 寫入  |  違例 []
 [PASS] ④ 產物綁定（無孤兒 log、無失蹤 log）  |  孤兒 []；失蹤 []
 [PASS] ⑥ driver 存在且可讀  |  run_chain.sh
 [PASS] ⑦ L1 兩跑 byte-identical 且 ≡ canonical log  |  違例 []
 [PASS] ⑧ L2／L3 一併審計（rc=0 且 ≡ log）  |  違例 []
-[PASS] ⑨ README 宣稱檔數 == 實際  |  README docs=10/10；scripts=11/11
+[PASS] ⑨ README 宣稱檔數 == 實際  |  README docs=11/11；scripts=13/13
 [PASS] ⑩ 四件套存在且提及 M15  |  {'01_problem_record.md': True, 'final_result.md': True, 'README.md': True, 'SESSION_START.md': True}
 [PASS] ⑪ 文件衛生（圍欄偶數、無 U+FFFD）  |  []
 

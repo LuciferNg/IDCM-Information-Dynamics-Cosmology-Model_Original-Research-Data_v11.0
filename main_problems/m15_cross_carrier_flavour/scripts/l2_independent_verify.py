@@ -284,6 +284,45 @@ for k in (2, 3, 4):
 put("rational_gate", _g)
 put("gate_k3_passes", _g[3]["ratio"] < 1.0)
 
+# ── 8e. 閘門計數（有理界法：e^2 < 7.5 < 16 < 19.9 < e^3，零超越數調用）──────
+# 32/… 已知 2.7 < e < 2.72 ⟹ e^2 < 7.4 < 16（n=2 通過）且 e^3 > 19.6 > 16（n=3 不通過）
+_gate = 0
+_n = 0
+_lo, _hi = Fraction("2.7"), Fraction("2.72")
+_pow_lo, _pow_hi = Fraction(1), Fraction(1)
+while True:
+    # e^{-n} > 1/16 ⟺ e^n < 16；用有理上下界夾
+    if _pow_hi < 16:            # 上界 < 16 ⟹ 必通過
+        _gate += 1
+    elif _pow_lo >= 16:         # 下界 ≥ 16 ⟹ 必不通過
+        break
+    else:                       # 夾中 ⟹ 需更細界（本題不會發生）
+        break
+    _pow_lo *= _lo
+    _pow_hi *= _hi
+    _n += 1
+put("gate_count", _gate)
+put("gate_window", [round(float(Fraction("2.72")), 5), round(float(Fraction("2.72") ** 1) * 1.6479, 5)])
+put("gate_conservative_note", "e>2.7, e<2.72 ⟹ n=0,1,2 通過（e^2<7.4<16）；n=3 不通過（e^3>19.6>16）")
+
+
+def _n_gen_modes_files():
+    import pathlib as _pl
+    root = _pl.Path("/home/wsl/Projects/IDCM-Original")
+    hit = 0
+    for r in ("IDCM-v9.0--W-Field-Lattice", "IDCM-v10.0--It-From-Beat",
+              "IDCM-v11.0--Reality-Architecture"):
+        for f in (root / r).rglob("*.py"):
+            try:
+                if "gen_modes = [1, 4, 5]" in f.read_text(errors="ignore"):
+                    hit += 1
+            except Exception:
+                pass
+    return hit
+
+
+put("gen_modes_files", _n_gen_modes_files())
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):
@@ -326,6 +365,7 @@ print(f"  S(9,3) = {D['stirling_S93']}；有標籤 = {D['labeled_3partitions_F']
 print(f"  剖面：/88 {D['profile_88']}、/90 {D['profile_90']}、/176 {D['profile_176']}")
 print(f"  |χ|/2 = {D['ng_chi_over_2']}；相對偏差 = {D['rel_dev_62_vs_3']}")
 print(f"  CY₃ 目錄覆蓋 = {D['cy3_catalogue_coverage_1_100']}/100；12 ∈ 目錄？{D['cy3_has_12']}")
+print(f"  閘門計數（有理界法）= {D['gate_count']}；gen_modes 字面列表檔數 = {D['gen_modes_files']}")
 print(f"  有理身份閘：k=2 {D['rational_gate'][2]['ratio']}｜k=3 {D['rational_gate'][3]['ratio']}｜k=4 {D['rational_gate'][4]['ratio']}（<1 才過閘）")
 print(f"  Δ_N/Δ_Ξ = {D['ratio_DN_DXi']} ± {D['sigma_ratio']}；B = {D['B_hat']} ± {D['sigma_B']}；"
       f"N_gen = {D['Ngen_hat']}；z(整數) = {D['z_integer']}")
