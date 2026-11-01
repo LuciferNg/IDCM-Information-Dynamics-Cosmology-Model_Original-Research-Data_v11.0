@@ -1,6 +1,6 @@
 # M15 — 跨載體味結構：「3」之身份（M14 發還）
 
-**狀態**：🟡 `closed / verdict partial`（階段性收尾、保留開放；13 候選：12 死 ＋ **#12 閘門層數**／**#13 預算譜源**存活；2026-11-02）｜version v11.0
+**狀態**：🟡 `closed / verdict partial`（階段性收尾、保留開放；13 候選：12 死 ＋ **#13 預算譜源**存活 —— #12 於 11-02 因零模污染判死；2026-11-02）｜version v11.0
 **來源**：M14（`closed / verdict partial`）之**唯一剩餘出路** —— M14 已證「3」不可能係本載體之量子數／扇區／對稱類（單標籤定理），只能係計數或跨載體。
 **承接**：`SESSION_START.md`（起手式原文保留）→ 本 session 執行 P1–P5（見 `docs/07`）
 
@@ -248,7 +248,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（13 份）｜scripts/（15 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（14 份）｜scripts/（16 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -256,8 +256,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 13 份（01 判準 → 07 判詞 → 08–13 候選補測、降級、閘門、驗證、餘問）
-├── scripts/           ← 15 支（12 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 14 份（01 判準 → 07 判詞 → 08–14 候選補測、降級、閘門、驗證、餘問、殘留攻堅）
+├── scripts/           ← 16 支（13 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -280,7 +280,8 @@ m15_cross_carrier_flavour/
 | `docs/10_tenth_candidate_downgrade.md` | ★★ 降級：後驗（M13 自認）＋ 反演恆真 ＋ 有理身份閘 ⟹ 第十候選 **🔴** | 🔴 |
 | `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（157 處，無 producer） | 🟡 |
 | `docs/12_verification_and_budget_anchor.md` | ★★★ 輸入驗證（`e`／`κ`／`B` 全有獨立出處）＋ **自我撤回**（`N_gen=60Ω_b` 恆真）＋ 觀測錨 `Ω_DM/Ω_b = 16/3`（**−0.48σ**） | 🟡 |
-| `docs/13_remaining_four_q1_q2_q3_q5.md` | ★★★★ 餘問攻堅：Q1 判死（dof=44）、Q2 定位（≡N_d/K_tree）、Q3 歸約、**Q5 結構側閉合**（預算三分 ≡ 算子分解三分；`Ω_Λ` −0.19σ） | ✅ |
+| `docs/13_remaining_four_q1_q2_q3_q5.md` | ★★★★ 餘問攻堅：Q1 判死（dof=44）、Q2 定位（≡N_d/K_tree）、Q3 歸約、Q5 結構側閉合（`Ω_Λ` −0.19σ） | ✅ |
+| `docs/14_residual_push.md` | ★★★★★ 殘留攻堅：**#12 判死（零模 γ₀ = 0 污染；物理 count = 2）**、冪次 ℓ=2、Q2 已解、Q5 閘門命名判死 | 🔴 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -293,6 +294,7 @@ m15_cross_carrier_flavour/
 | `scripts/11_gate_count_candidate.py` | 閘門層數候選：`⌈2 ln B⌉`、C7 三條件、銳度窗口、κ 冪次敏感性 | ✅ |
 | `scripts/12_gate_budget_identity.py` | 輸入驗證 ＋ 預算同構 ＋ Planck 判別（16/2、16/3、16/4） | ✅ |
 | `scripts/13_remaining_four.py` | Q1（2⁴⁴ 分級 ⟹ 判死）、Q2（≡N_d/K_tree）、Q3（歸約）、Q5（rank 同構） | ✅ |
+| `scripts/14_residual_push.py` | ★ 殘留三項：#12 零模污染判死（物理 count = 2）、冪次 ℓ=2（+0.44σ）、Q2 `Σ B^{−k}`、Q5 閘門命名判死 | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

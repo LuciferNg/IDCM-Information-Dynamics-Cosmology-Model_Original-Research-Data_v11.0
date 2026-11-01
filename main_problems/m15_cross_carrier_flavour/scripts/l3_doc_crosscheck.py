@@ -266,6 +266,17 @@ check_num("13_remaining_four_q1_q2_q3_q5.md", "Ω_Λ = 41/60", l2["omega_L_pred"
 check_num("13_remaining_four_q1_q2_q3_q5.md", "z(Ω_Λ)", l2["z_omega_L"], 2e-3)
 
 say("")
+say("")
+say("§13d  docs/14 — 殘留三項攻堅")
+check_num("14_residual_push.md", "Γ₀（零模）", 0, 1e-9)
+check_ctx("14_residual_push.md", "count(1..44) = [1,2]", "物理索引 count", l2["gate_count_phys"], 2e-3, 20)
+check_ctx("14_residual_push.md", "count(0..43) = [0,1,2]", "M3 索引 count", l2["gate_count_m3"], 2e-3, 20)
+check_num("14_residual_push.md", "Ω_DM(ℓ=2) 預言", l2["omega_dm_l2"], 1e-4)
+check_num("14_residual_push.md", "Ω_DM 實測", l2["omega_dm_obs"], 1e-5)
+check_num("14_residual_push.md", "z(ℓ=2)", l2["z_omega_dm_l2"], 5e-3)
+check_str("14_residual_push.md", "幾何級數 = 4/3", l2["geom_closed_4_3"])
+check_num("14_residual_push.md", "閘門 ∩ gen_modes", l2["gate_inter_gen"], 1e-9)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

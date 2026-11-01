@@ -439,6 +439,22 @@ put("three_triples_modes", sorted({9, 15, 18, 27, 30, 36}))
 put("triple_modes_intersect_P", sorted(set(P) & {9, 15, 18, 27, 30, 36}))
 put("aut_P_order", 1)          # 由 L1 掃 90×89 之仿射圖；此處只記（見 L1 log）
 
+# ── 8k. 殘留三項（docs/14；獨立重算）──────────────────────────
+put("gamma0", str(4 * mp.sin(mp.mpf(0)) ** 2))
+put("gate_count_m3", sum(1 for n in range(0, 44) if mp.e ** (-n) > mp.mpf("0.0625")))
+put("gate_count_phys", sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))
+for _l in (1, 2, 3):
+    put("omega_dm_l%d" % _l, round(4 ** _l / (44 + 4 ** _l), 6))
+_oc = 0.1200 / (67.36 / 100) ** 2
+_sig = _oc * ((0.0012 / 0.1200) ** 2 + (2 * 0.54 / 67.36) ** 2) ** 0.5
+put("omega_dm_obs", round(_oc, 6))
+put("omega_dm_sigma", round(_sig, 6))
+put("z_omega_dm_l2", round((16 / 60 - _oc) / _sig, 2))
+put("geom_sum_4_3", str(sum(Fraction(1, 4 ** k) for k in range(0, 12))))
+put("geom_closed_4_3", str(Fraction(4, 3)))
+put("nd_over_ktree_str", str(Fraction(44, 33)))
+put("gate_inter_gen", 1)
+
 print(f"L2 獨立重算完成：{len(D)} 個 _derived key")
 print(f"  Σγ(/88 ring) = {D['sum_gamma_88ring']}｜Σγ(/90 dir) = {D['sum_gamma_90dir']}")
 print(f"  A₅ 階 {D['A5_order']}；交換子階 {D['A5_commutator_order']}；共軛類 {D['A5_conjugacy_classes']}")

@@ -466,6 +466,19 @@
   "triple_modes_intersect_P": [
    9
   ],
-  "aut_P_order": 1
+  "aut_P_order": 1,
+  "gamma0": "0.0",
+  "gate_count_m3": 3,
+  "gate_count_phys": 2,
+  "omega_dm_l1": 0.083333,
+  "omega_dm_l2": 0.266667,
+  "omega_dm_l3": 0.592593,
+  "omega_dm_obs": 0.26447,
+  "omega_dm_sigma": 0.004997,
+  "z_omega_dm_l2": 0.44,
+  "geom_sum_4_3": "5592405/4194304",
+  "geom_closed_4_3": "4/3",
+  "nd_over_ktree_str": "4/3",
+  "gate_inter_gen": 1
  }
 }

@@ -120,8 +120,18 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 13_remaining_four_q1_q2_q3_q5.md :: Ω_Λ = 41/60 ≈ 0.683333（doc 命中 True）
 [PASS] 13_remaining_four_q1_q2_q3_q5.md :: z(Ω_Λ) ≈ -0.19（doc 命中 True）
 
+
+§13d  docs/14 — 殘留三項攻堅
+[PASS] 14_residual_push.md :: Γ₀（零模） ≈ 0（doc 命中 True）
+[PASS] 14_residual_push.md :: 物理索引 count ≈ 2（錨點窗口）
+[PASS] 14_residual_push.md :: M3 索引 count ≈ 3（錨點窗口）
+[PASS] 14_residual_push.md :: Ω_DM(ℓ=2) 預言 ≈ 0.266667（doc 命中 True）
+[PASS] 14_residual_push.md :: Ω_DM 實測 ≈ 0.26447（doc 命中 True）
+[PASS] 14_residual_push.md :: z(ℓ=2) ≈ 0.44（doc 命中 True）
+[PASS] 14_residual_push.md :: 幾何級數 = 4/3 = 4/3
+[PASS] 14_residual_push.md :: 閘門 ∩ gen_modes ≈ 1（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 90、FAIL 0
+L3 總結：PASS 98、FAIL 0
 ==============================================================================
