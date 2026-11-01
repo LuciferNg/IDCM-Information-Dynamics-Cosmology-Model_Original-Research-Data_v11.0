@@ -199,6 +199,28 @@ for f, what, st in fixes:
 
 print()
 print("=" * 78)
+print("§10  ★ 追問「2:16:42」：三分**本身**是否良定？（空間混用之檢查）")
+print("=" * 78)
+gate_scan = {}
+for k in range(1, 9):
+    kap = mp.mpf(4) ** (-2 * k)
+    gate_scan[k] = sum(1 for n in range(1, ND + 1) if mp.e ** (-n) > kap)
+    print(f"  κ = B^-{2*k:<2} = 4^-{2*k:<2} ⟹ rank(visible) = {gate_scan[k]:>2}")
+chk("閘門強度 κ = B^-2（k=1）⟹ rank = 2", gate_scan[1] == 2, f"{gate_scan[1]}")
+occ16 = [k for k, r in gate_scan.items() if r == 16]
+chk("要得 rank = 16 須 κ = B^-12（k = 6）—— **唔係**閘門之 κ = B^-2",
+    occ16 == [6], f"出現於 k = {occ16}")
+chk("k ≤ 3 皆不給 16 ⟹ 16 與 2 不同源",
+    all(gate_scan[k] != 16 for k in (1, 2, 3)), f"{[gate_scan[k] for k in (1,2,3)]}")
+chk("鏈空間（44 維）之真分割：2 + 42 = 44 = N_d",
+    rank_pk + rank_comp == ND, f"{rank_pk} + {rank_comp} = {rank_pk + rank_comp}")
+chk("★ 16 = B² 係樹 level-2 節點數（另一空間）⟹「三分」係跨空間相加（60 = 44 + 16），"
+    "唔係同一算子之分割",
+    rank_lvl2 == B ** 2 and rank_pk + rank_comp + rank_lvl2 == ND + B ** 2,
+    "2+42（鏈）＋ 16（樹）= 60")
+
+print()
+print("=" * 78)
 print(f"§9  自審：PASS {len(OK)}、FAIL {len(BAD)}")
 print("=" * 78)
 if BAD:
@@ -211,7 +233,7 @@ if BAD:
     "ob": str(ob), "odm": str(odm), "olam": str(olam),
     "z_ratio": round(z_ratio, 4), "z_lambda": round(z_lam, 4), "z_m": round(z_m, 4),
     "four_thirds": [str(geo_part + geo_tail), str(Fr(ND, 33))],
-    "ell": 2, "n_pass": len(OK), "n_fail": len(BAD),
+    "gate_scan": gate_scan, "ell": 2, "n_pass": len(OK), "n_fail": len(BAD),
 }, indent=1, ensure_ascii=False), encoding="utf-8")
 print(f"\n[data] 15_forced_recompute.json 已寫")
 print("== done rc=%d" % (0 if not BAD else 1))

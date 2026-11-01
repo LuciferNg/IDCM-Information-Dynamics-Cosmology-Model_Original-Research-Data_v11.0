@@ -35,7 +35,7 @@ O215 `T7`，EXACT、dof = 0），並帶觀測錨（`Ω_DM/Ω_b` −0.48σ、`Ω_
 ## 審計（終態）
 
 ```
-L1 14/14（每支兩跑 byte-identical ≡ canonical）｜L2 102 keys｜L3 101/101（14/14 doc、零豁免）｜audit 15/15（FAIL 0、WARN 0）
+L1 14/14｜L2 104 keys｜L3 102/102（14/14 doc、零豁免）｜audit 15/15（FAIL 0、WARN 0）
 ```
 
 ## 保留開放（見 `01_problem_record §十一`）

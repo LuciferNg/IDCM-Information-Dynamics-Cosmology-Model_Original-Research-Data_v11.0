@@ -283,6 +283,10 @@ check_ctx("13_remaining_four_q1_q2_q3_q5.md", "修正後算子秩          2 : 1
 check_ctx("13_remaining_four_q1_q2_q3_q5.md", "修正後算子秩          2 : 16 : 42", "rank 三分末項", 42, 2e-3, 26)
 check_ctx("13_remaining_four_q1_q2_q3_q5.md", "3 : 16 : 41        Σ = 60", "預算三分末項", 41, 2e-3, 20)
 
+say("")
+say("§13f  docs/13 §I — 三分框架否證")
+check_str("13_remaining_four_q1_q2_q3_q5.md", "κ 掃描序", l2["gate_scan_str"])
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")
