@@ -126,7 +126,8 @@ say("=" * 78)
 l1t, l2t = l1_h["table"], l2["harmonic_multiplicity"]
 mism = [(n, l1t[str(n)]) for n in range(0, 45)
         if l1t[str(n)] != [l2t[str(n)][k] for k in ("1", "3", "3p", "4", "5")]]
-say(f"§0  L1（Molien）↔ L2（character 內積）重數表：45×5 = 225 項，不一致 = {len(mism)}")
+_tag = "PASS" if not mism else "FAIL"
+say(f"[{_tag}] §0 L1（Molien）↔ L2（character 內積）重數表：45×5 = 225 項，不一致 = {len(mism)}")
 if mism:
     say(f"    不一致：{mism[:5]}")
     NFAIL += 1
