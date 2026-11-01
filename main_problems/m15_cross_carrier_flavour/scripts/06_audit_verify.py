@@ -43,6 +43,7 @@ LOGS = {
     "12_gate_budget_identity": "run_12_budget.log",
     "13_remaining_four": "run_13_remaining.log",
     "14_residual_push": "run_14_residual.log",
+    "15_forced_recompute": "run_15_forced_recompute.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -205,6 +206,18 @@ for j in DATA.glob("*.json"):
     if not (SCRIPTS / f"{stem}.py").exists():
         json_orphan.append(j.name)
 chk("⑬ data/*.json ↔ producer script（無孤兒）", not json_orphan, f"孤兒 {json_orphan}")
+
+# ⑮ driver ↔ 宣告一致（防 driver 漏跑：log 存在但從未由 driver 重生成）
+_drv = (SCRIPTS / "run_chain.sh").read_text()
+_pairs = re.findall(r"^run\s+(\S+\.py)\s+(\S+\.log)\s*$", _drv, re.M)
+_drv_map = {f[:-3]: lg for f, lg in _pairs}
+_decl = {k: v for k, v in LOGS.items()}
+_miss = sorted(k for k in _decl if k not in _drv_map)
+_extra = sorted(k for k in _drv_map if k not in _decl and k not in ("l2_independent_verify", "l3_doc_crosscheck"))
+_badlog = sorted(k for k in _decl if k in _drv_map and _drv_map[k] != _decl[k])
+chk("⑮ driver ↔ LOGS 宣告一致（漏跑／多跑／log 名不符）",
+    not _miss and not _extra and not _badlog,
+    f"漏跑 {_miss}；多跑 {_extra}；log 名不符 {_badlog}")
 
 # ⑭ 反向覆蓋：docs 內 4+ 有效位小數 → 須可追溯至 data（容差 0.5%；跨記錄引文明示豁免）
 import bisect as _bisect

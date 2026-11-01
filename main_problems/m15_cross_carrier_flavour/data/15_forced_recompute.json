@@ -1,0 +1,33 @@
+{
+ "gamma_max": "4.0",
+ "gate_m3": 3,
+ "gate_phys": 2,
+ "t7_triple": [
+  3,
+  16,
+  41
+ ],
+ "rank_triple": [
+  2,
+  16,
+  42
+ ],
+ "isomorphism": [
+  false,
+  true,
+  false
+ ],
+ "ob": "1/20",
+ "odm": "4/15",
+ "olam": "41/60",
+ "z_ratio": -0.4799,
+ "z_lambda": -0.1872,
+ "z_m": 0.1872,
+ "four_thirds": [
+  "4/3",
+  "4/3"
+ ],
+ "ell": 2,
+ "n_pass": 20,
+ "n_fail": 0
+}

@@ -1,7 +1,7 @@
 ==============================================================================
 M15 scripts/06 — 全鏈審計
 ==============================================================================
-[PASS] ① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）  |  磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push']；差集 set()
+[PASS] ① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）  |  磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute']；差集 set()
 [PASS] ② docs ↔ producer 綁定  |  缺 []
 [PASS] ⑤ inline 幽靈（每份 doc 皆須有 L3 claim 覆蓋）  |  L3 覆蓋 14/14；未被覆蓋 []；宣告而磁碟無 []
 [PASS] ③ scripts/ 內禁 /tmp 寫入  |  違例 []
@@ -9,13 +9,14 @@ M15 scripts/06 — 全鏈審計
 [PASS] ⑥ driver 存在且可讀  |  run_chain.sh
 [PASS] ⑦ L1 兩跑 byte-identical 且 ≡ canonical log  |  違例 []
 [PASS] ⑧ L2／L3 一併審計（rc=0 且 ≡ log）  |  違例 []
-[PASS] ⑨ README 宣稱檔數 == 實際  |  README docs=14/14；scripts=16/16
+[PASS] ⑨ README 宣稱檔數 == 實際  |  README docs=14/14；scripts=17/17
 [PASS] ⑩ 四件套狀態一致（三活文檔 verdict 相同；SESSION_START 為快照只查存在）  |  {'01_problem_record.md': 'partial', 'final_result.md': 'partial', 'README.md': 'partial'}；SESSION_START 存在=True
 [PASS] ⑫ L2 衛生（零 import L1、零讀 docs、零 subprocess；註釋提及不計）  |  []
 [PASS] ⑬ data/*.json ↔ producer script（無孤兒）  |  孤兒 []
+[PASS] ⑮ driver ↔ LOGS 宣告一致（漏跑／多跑／log 名不符）  |  漏跑 []；多跑 []；log 名不符 []
 [PASS] ⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文明示豁免）  |  未追溯 []
 [PASS] ⑪ 文件衛生（圍欄偶數、無 U+FFFD）  |  []
 
 ==============================================================================
-審計總結：檢查 14 項，FAIL 0、WARN 0
+審計總結：檢查 15 項，FAIL 0、WARN 0
 ==============================================================================

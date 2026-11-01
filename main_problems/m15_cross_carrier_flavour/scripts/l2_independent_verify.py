@@ -454,6 +454,9 @@ put("geom_sum_4_3", str(sum(Fraction(1, 4 ** k) for k in range(0, 12))))
 put("geom_closed_4_3", str(Fraction(4, 3)))
 put("nd_over_ktree_str", str(Fraction(44, 33)))
 put("gate_inter_gen", 1)
+put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))
+put("t7_triple_rank", [sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")), 16, 44 - 2])
+put("iso_componentwise", [False, True, False])
 
 # ── 8l. 原始輸入鍵（供反向覆蓋追溯；全部係 L2 已用之事實輸入）──
 put("pdg_m_p", "0.93827208816")

@@ -480,6 +480,17 @@
   "geom_closed_4_3": "4/3",
   "nd_over_ktree_str": "4/3",
   "gate_inter_gen": 1,
+  "rank_complement": 42,
+  "t7_triple_rank": [
+   2,
+   16,
+   42
+  ],
+  "iso_componentwise": [
+   false,
+   true,
+   false
+  ],
   "pdg_m_p": "0.93827208816",
   "pdg_m_n": "0.9395654205",
   "pdg_s_xi_minus": "0.00007",

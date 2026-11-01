@@ -277,6 +277,12 @@ check_num("14_residual_push.md", "z(ℓ=2)", l2["z_omega_dm_l2"], 5e-3)
 check_str("14_residual_push.md", "幾何級數 = 4/3", l2["geom_closed_4_3"])
 check_num("14_residual_push.md", "閘門 ∩ gen_modes", l2["gate_inter_gen"], 1e-9)
 
+say("")
+say("§13e  docs/13 §H — 同構否證")
+check_ctx("13_remaining_four_q1_q2_q3_q5.md", "修正後算子秩          2 : 16 : 42", "rank 三分首項", 2, 2e-3, 26)
+check_ctx("13_remaining_four_q1_q2_q3_q5.md", "修正後算子秩          2 : 16 : 42", "rank 三分末項", 42, 2e-3, 26)
+check_ctx("13_remaining_four_q1_q2_q3_q5.md", "3 : 16 : 41        Σ = 60", "預算三分末項", 41, 2e-3, 20)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")
