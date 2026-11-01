@@ -313,6 +313,8 @@ def _n_gen_modes_files():
     for r in ("IDCM-v9.0--W-Field-Lattice", "IDCM-v10.0--It-From-Beat",
               "IDCM-v11.0--Reality-Architecture"):
         for f in (root / r).rglob("*.py"):
+            if "m15_cross_carrier_flavour" in str(f):   # SELF 排除（陷阱 26）
+                continue
             try:
                 if "gen_modes = [1, 4, 5]" in f.read_text(errors="ignore"):
                     hit += 1
@@ -349,6 +351,48 @@ put("ratio_obs", round(float(_och2 / _obh2), 6))          # Ω_DM/Ω_b（h² 消
 put("ratio_pred_16_3", round(16 / 3, 6))
 put("n_gen_from_Ob", round(float(60 * _obh2 / _h2), 6))
 put("budget_sum", 3 + 16 + 41)
+
+# ── 8h. 結構常數（供 docs/01、docs/07 之 L3 期望值；全部由定義獨立算）──
+put("n_modes", 44)                     # 半譜 k=1..44
+# A₅ 交換子群之階（獨立：全排列 × 逆 × 交換子，生成閉包）
+import itertools as _it
+_A5 = [q for q in _it.permutations(range(5)) if sum(1 for i in range(5) for j in range(i + 1, 5) if q[i] > q[j]) % 2 == 0]
+_id = tuple(range(5))
+
+
+def _mul(a, b):
+    return tuple(a[b[i]] for i in range(5))
+
+
+def _inv(a):
+    r = [0] * 5
+    for i, v in enumerate(a):
+        r[v] = i
+    return tuple(r)
+
+
+_comm = {_mul(_mul(x, y), _mul(_inv(x), _inv(y))) for x in _A5 for y in _A5}
+_gen, _front = {_id}, [_id]
+while _front:
+    nxt = []
+    for g in _front:
+        for h in _comm:
+            gh = _mul(g, h)
+            if gh not in _gen:
+                _gen.add(gh); nxt.append(gh)
+    _front = nxt
+put("a5_commutator_order", len(_gen))
+# S(9,3)（第二類 Stirling，遞推）
+_s = [[0] * 10 for _ in range(10)]
+_s[0][0] = 1
+for _n in range(1, 10):
+    for _k in range(1, 10):
+        _s[_n][_k] = _k * _s[_n - 1][_k] + _s[_n - 1][_k - 1]
+put("s93", _s[9][3])
+_f = 1
+for _i in range(2, 10):
+    _f *= _i
+put("dof_9_fact", _f)
 
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}

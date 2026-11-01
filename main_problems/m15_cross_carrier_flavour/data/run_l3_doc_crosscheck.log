@@ -80,7 +80,7 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 
 §10  docs/11 — 閘門候選 ＋ provenance 掃描
 [PASS] 11_gate_candidate_and_provenance_scan.md :: 閘門計數 ≈ 3（doc 命中 True）
-[PASS] 11_gate_candidate_and_provenance_scan.md :: gen_modes 檔數 ≈ 6（doc 命中 True）
+[PASS] 11_gate_candidate_and_provenance_scan.md :: gen_modes 檔數 ≈ 4（doc 命中 True）
 [PASS] 11_gate_candidate_and_provenance_scan.md :: ⌈2 ln B⌉ = 3 = ⌈2lnB⌉=3
 [PASS] 11_gate_candidate_and_provenance_scan.md :: 全序集 = {n=0,1,2}
 [PASS] 11_gate_candidate_and_provenance_scan.md :: 窗口寬 = 64.87%
@@ -98,9 +98,19 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 12_verification_and_budget_anchor.md :: 鏈門檻 σ = −21.12σ
 [PASS] 12_verification_and_budget_anchor.md :: T7 譜源 = γ_max−1
 
-§11  豁免（敘述／判定型）
-  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免
+§12  docs/01 — 判準凍結表（錨點上下文核；期望值全部來自 L2）
+[PASS] 01_frozen_criteria.md :: 環 /88 之 Σγ ≈ 90（錨點窗口）
+[PASS] 01_frozen_criteria.md :: Dir /90 之 Σγ = 2N_d ≈ 88（錨點窗口）
+[PASS] 01_frozen_criteria.md :: 簡併對數 0/946 ≈ 0（錨點窗口）
+[PASS] 01_frozen_criteria.md :: [A₅,A₅] 之階 ≈ 60（錨點窗口）
+[PASS] 01_frozen_criteria.md :: C6 之 dof（= N_d） ≈ 44（錨點窗口）
+
+§13  docs/07 — 綜合判詞（敘述型文件；核其可算之數）
+[PASS] 07_verdicts.md :: dof = 9! ≈ 362880（錨點窗口）
+[PASS] 07_verdicts.md :: F 之 3 分拆 S(9,3) ≈ 3025（錨點窗口）
+[PASS] 07_verdicts.md :: 簡併對數 946 ≈ 0（錨點窗口）
+§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 74、FAIL 0
+L3 總結：PASS 82、FAIL 0
 ==============================================================================

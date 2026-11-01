@@ -59,7 +59,7 @@ DOC_PROD = {
     "11_gate_candidate_and_provenance_scan.md": ["10", "11"],
     "12_verification_and_budget_anchor.md": ["12"],
 }
-EXEMPT_DOCS = {"01_frozen_criteria.md", "07_verdicts.md"}
+EXEMPT_DOCS = set()      # 全部 doc 納入 L3（2026-11-01 全面審計）
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}
 
 NFAIL, NWARN = 0, 0
@@ -105,10 +105,12 @@ for d, prods in DOC_PROD.items():
         if f"scripts/{s}" not in txt:
             missing_prod.append(f"{d} 缺 scripts/{s}")
 chk("② docs ↔ producer 綁定", not missing_prod, f"缺 {missing_prod}")
-ghost = sorted(d for d in L3_COVERED if d not in L3_COVERED)
-chk("⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）",
-    (DOCS / "..").exists() and len(L3_COVERED) == 10,
-    f"L3 覆蓋 {len(L3_COVERED)} 份：{sorted(L3_COVERED)}；豁免 {sorted(EXEMPT_DOCS)}")
+disk_docs = {p.name for p in DOCS.glob("*.md")}
+uncovered = sorted(disk_docs - L3_COVERED)
+stale_decl = sorted(set(DOC_PROD) - disk_docs)
+chk("⑤ inline 幽靈（每份 doc 皆須有 L3 claim 覆蓋）",
+    not uncovered and not stale_decl,
+    f"L3 覆蓋 {len(L3_COVERED)}/{len(disk_docs)}；未被覆蓋 {uncovered}；宣告而磁碟無 {stale_decl}")
 
 # ③ 路徑衛生
 tmp_hits = [p.name for p in SCRIPTS.glob("*.py") if "/tmp" in p.read_text() and p.name != Path(__file__).name]
@@ -164,14 +166,41 @@ chk("⑨ README 宣稱檔數 == 實際",
     f"scripts={m_scr.group(1) if m_scr else '?'}/{nscr}")
 
 # ⑩ 四件套同步
-files = ["01_problem_record.md", "final_result.md", "README.md", "SESSION_START.md"]
+files = ["01_problem_record.md", "final_result.md", "README.md"]
 states = {}
 for f in files:
     p = ROOT / f
     t = p.read_text() if p.exists() else ""
-    m = re.search(r"(negative|partial|registered|closed|open)", t)
-    states[f] = bool(p.exists()) and ("M15" in t)
-chk("⑩ 四件套存在且提及 M15", all(states.values()), f"{states}")
+    # 只抽 verdict 詞（避開狀態行「closed / verdict partial」中的 closed）
+    m = re.search(r"verdict\s*`?\s*(negative|partial|registered|open)", t)
+    states[f] = m.group(1) if m else "MISSING"
+ss = set(states.values())
+snap = (ROOT / "SESSION_START.md")
+chk("⑩ 四件套狀態一致（三活文檔 verdict 相同；SESSION_START 為快照只查存在）",
+    len(ss) == 1 and "MISSING" not in ss and snap.exists(),
+    f"{states}；SESSION_START 存在={snap.exists()}")
+
+# ⑫ L2 衛生：零 import L1、零讀 docs
+l2src = (SCRIPTS / "l2_independent_verify.py").read_text()
+l2_bad = []
+if re.search(r"^\s*(import|from)\s+\d\d_", l2src, re.M):
+    l2_bad.append("import L1")
+_code = "\n".join(ln.split("#")[0] for ln in l2src.splitlines())     # 去註釋
+if re.search(r"(open|read_text|read_bytes)\([^)]*docs", _code) or re.search(r"DOCS\s*=", _code):
+    l2_bad.append("讀 docs")
+if "subprocess" in l2src:
+    l2_bad.append("呼叫外部腳本")
+chk("⑫ L2 衛生（零 import L1、零讀 docs、零 subprocess；註釋提及不計）", not l2_bad, f"{l2_bad}")
+
+# ⑬ data/*.json 綁定（非 l2／audit 之 JSON 須有同名 producer script）
+json_orphan = []
+for j in DATA.glob("*.json"):
+    stem = j.stem
+    if stem in ("l2_independent_verify", "audit_verify"):
+        continue
+    if not (SCRIPTS / f"{stem}.py").exists():
+        json_orphan.append(j.name)
+chk("⑬ data/*.json ↔ producer script（無孤兒）", not json_orphan, f"孤兒 {json_orphan}")
 
 # ⑪ 文件衛生
 hyg = []

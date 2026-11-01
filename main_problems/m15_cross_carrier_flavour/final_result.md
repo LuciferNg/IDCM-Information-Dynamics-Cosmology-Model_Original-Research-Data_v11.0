@@ -139,6 +139,18 @@ C7：(i) 3 集 = {n = 0,1,2} **全序**（無 S₃ 對稱）✅
 殘餘唯一缺口：Ω_b 分子 = 世代數 之識別（Q5）。
 ```
 
+## ★★★ 追加六（2026-11-01，append-only）：全面審計終態
+
+```
+L1 11/11（每支跑兩次 byte-identical ≡ canonical log；審計自身兩跑亦 byte-identical）
+L2 72 keys（零 import L1、零讀 docs、零 subprocess）
+L3 82/82 claims（12/12 份 doc 全覆蓋，零豁免）
+audit 13/13 PASS（FAIL 0、WARN 0）
+```
+
+審計器自身之 4 項真錯已修（⑤ 死代碼、⑩ 錯 token、driver 漏 6 支、L2 自我污染），
+另修 L3 小整數零鑑別力（加 `check_ctx` 錨點窗口）並清零 docs/01、docs/07 之豁免。
+
 ## 已否證（禁重推）
 
 1. **A₅ 幾何由重數供 3** —— 盲測 B1 否證（`P` 內 max = 2）。

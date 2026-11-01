@@ -140,6 +140,25 @@
 
 ---
 
+> ## ★★★★★ 全面審計（2026-11-01）：13 項 audit ＋ 67 項驗證，捉到 6 個真錯（4 個係審計器自身）
+>
+> ```
+> L1 11/11（每支跑兩次 byte-identical ≡ canonical log；審計自身兩跑亦 byte-identical）
+L2 72 keys（零 import L1、零讀 docs、零 subprocess）
+L3 82/82 claims（12/12 份 doc 全覆蓋，零豁免）
+audit 13/13 PASS（FAIL 0、WARN 0）
+> ```
+>
+> **捉到並修正之真錯**：
+> ① audit ⑤ 係**死代碼**（`ghost = sorted(d for d in C if d not in C)` 恒空；通過條件係硬編碼 `== 10`）⟹ 改真覆蓋檢查；
+> ② audit ⑩ 抽錯 token（從「closed / verdict `partial`」抽到 `closed`，**無法分辨 partial 與 negative**）⟹ 改 verdict 專用 regex；
+> ③ `run_chain.sh` **只跑 01–05**，07–12 六支從未入 driver ⟹ 補全；
+> ④ L2 `gen_modes_files` 因新腳本提及該字面而由 4 變 6（**自我污染**，陷阱 26）⟹ 加 SELF 排除 ⟹ 4；
+> ⑤ L3 `check_num` 對小整數**零鑑別力**（doc 任何處出現即 PASS）⟹ 新增 `check_ctx` 錨點窗口（負控制 91 → FAIL 實測）；
+> ⑥ `docs/01`、`docs/07` 原為 L3 豁免 ⟹ 現全覆蓋，豁免清零。
+
+---
+
 ## 一句話
 
 味之「3」若唔係本載體（44-站 Dirichlet `/90`）嘅量子數，則須由**另一載體**給出。

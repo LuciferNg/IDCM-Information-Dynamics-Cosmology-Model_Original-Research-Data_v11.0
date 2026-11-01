@@ -86,3 +86,23 @@
 
 承接 session 明示（調律者指示或新 session 明確承接）⟹ 方可寫 `docs/`／`scripts/`／`data/`。
 未解閘前**不得**寫任何推導腳本；本記錄只作起手式與 register 介面。
+
+### §審計終態（2026-11-01，全面審計輪）
+
+```
+L1 11/11（每支跑兩次 byte-identical ≡ canonical log；審計自身兩跑亦 byte-identical）
+L2 72 keys（零 import L1、零讀 docs、零 subprocess）
+L3 82/82 claims（12/12 份 doc 全覆蓋，零豁免）
+audit 13/13 PASS（FAIL 0、WARN 0）
+```
+
+| # | 審計器缺陷 | 症狀 | 修正 |
+|:-:|:--|:--|:--|
+| 1 | ⑤ 死代碼 | `ghost = sorted(d for d in C if d not in C)` 恒空；通過條件硬編碼 `len==10` | 改真覆蓋檢查（磁碟 12/12、無宣告孤兒） |
+| 2 | ⑩ 抽錯 token | 從「closed / verdict `partial`」抽到 `closed` ⟹ 不能分辨 partial／negative | verdict 專用 regex ⟹ 三活文檔皆 `partial` |
+| 3 | driver 漏支 | `run_chain.sh` 只跑 01–05，07–12 從未入鏈 | 補齊 6 支 |
+| 4 | L2 自我污染 | 新腳本提及 `gen_modes = [1,4,5]` ⟹ 計數 4→6 | SELF 排除 ⟹ 4 |
+| 5 | L3 小整數 | `check_num` 對 3／4／44／60 零鑑別力（doc 任何處出現即 PASS） | 新增 `check_ctx` 錨點窗口；負控制 91→FAIL |
+| 6 | L3 豁免 | `docs/01`、`docs/07` 未入 L3 | 加錨點 claim，豁免清零 |
+
+★ 新增 ⑫（L2 衛生：零 import L1／零讀 docs／零 subprocess，註釋提及不計）、⑬（`data/*.json` ↔ producer 無孤兒）。

@@ -82,6 +82,30 @@ def check_num(doc, label, value, tol=2e-3):
     return ok
 
 
+def check_ctx(doc, anchor, label, value, tol=2e-3, span=70):
+    """錨點上下文核：只喺 anchor 出現處之 ±span 窗口內抽數值 ⟹ 小整數亦有鑑別力。"""
+    global NFAIL, NPASS
+    t = _txt(doc)
+    if t is None:
+        say(f"[FAIL] {doc} :: {label} —— 檔案不存在")
+        NFAIL += 1
+        return False
+    flat = re.sub(r"[\s\u00a0]+", "", t)
+    a = re.sub(r"[\s\u00a0]+", "", str(anchor))
+    i = flat.find(a)
+    if i < 0:
+        say(f"[FAIL] {doc} :: {label} —— 錨點「{anchor}」不存在")
+        NFAIL += 1
+        return False
+    win = flat[max(0, i - 12): i + len(a) + span]
+    v = float(value)
+    ok = any(abs(x - v) <= tol * max(abs(v), 1e-300) for x in _numbers(win))
+    say(f"[{'PASS' if ok else 'FAIL'}] {doc} :: {label} ≈ {value}（錨點窗口）")
+    NPASS += ok
+    NFAIL += (not ok)
+    return ok
+
+
 def check_bool(doc, label, cond, token):
     """布林判據：L2 之條件成立 **且** doc 含指定 token。"""
     global NFAIL, NPASS
@@ -216,8 +240,20 @@ check_str("12_verification_and_budget_anchor.md", "鏈門檻 σ", "−21.12σ")
 check_str("12_verification_and_budget_anchor.md", "T7 譜源", "γ_max−1")
 
 say("")
-say("§11  豁免（敘述／判定型）")
-say("  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免")
+say("§12  docs/01 — 判準凍結表（錨點上下文核；期望值全部來自 L2）")
+check_ctx("01_frozen_criteria.md", "Σγ=90", "環 /88 之 Σγ", l2["sum_gamma_88ring"])
+check_ctx("01_frozen_criteria.md", "Σγ=88=2N_d", "Dir /90 之 Σγ = 2N_d", l2["sum_gamma_90dir"])
+check_ctx("01_frozen_criteria.md", "簡併0/946", "簡併對數 0/946", l2["degenerate_pairs_both"])
+check_ctx("01_frozen_criteria.md", "之階=60", "[A₅,A₅] 之階", l2["a5_commutator_order"])
+check_ctx("01_frozen_criteria.md", "dof=44", "C6 之 dof（= N_d）", l2["n_modes"])
+
+say("")
+say("§13  docs/07 — 綜合判詞（敘述型文件；核其可算之數）")
+check_ctx("07_verdicts.md", "dof=9!=362880", "dof = 9!", l2["dof_9_fact"])
+check_ctx("07_verdicts.md", "S(9,3)=3025", "F 之 3 分拆 S(9,3)", l2["s93"])
+check_ctx("07_verdicts.md", "946對0簡併", "簡併對數 946", l2["degenerate_pairs_both"])
+
+say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")
 say("=" * 78)

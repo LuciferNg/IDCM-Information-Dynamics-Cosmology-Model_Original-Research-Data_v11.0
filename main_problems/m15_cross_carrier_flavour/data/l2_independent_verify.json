@@ -419,7 +419,7 @@
    4.48229
   ],
   "gate_conservative_note": "e>2.7, e<2.72 ⟹ n=0,1,2 通過（e^2<7.4<16）；n=3 不通過（e^3>19.6>16）",
-  "gen_modes_files": 6,
+  "gen_modes_files": 4,
   "gate_unique_square": 4,
   "gate_log16": "2.77258872224",
   "gate_4ln2_floor": 2,
@@ -427,6 +427,10 @@
   "ratio_pred_16_3": 5.333333,
   "n_gen_from_Ob": 2.958102,
   "budget_sum": 60,
+  "n_modes": 44,
+  "a5_commutator_order": 60,
+  "s93": 3025,
+  "dof_9_fact": 362880,
   "lucas_L1_L3_L5": [
    1,
    4,
