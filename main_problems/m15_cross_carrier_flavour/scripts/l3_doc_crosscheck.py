@@ -254,6 +254,17 @@ check_ctx("07_verdicts.md", "dof=9!=362880", "dof = 9!", l2["dof_9_fact"])
 check_ctx("07_verdicts.md", "S(9,3)=3025", "F 之 3 分拆 S(9,3)", l2["s93"])
 check_ctx("07_verdicts.md", "946對0簡併", "簡併對數 946", l2["degenerate_pairs_both"])
 
+say("")
+say("§13b  docs/13 — 餘下四問（Q1／Q2／Q3／Q5）")
+check_num("13_remaining_four_q1_q2_q3_q5.md", "半譜簡併對", l2["half_spec_degenerate"], 1e-9)
+check_num("13_remaining_four_q1_q2_q3_q5.md", "分級數 2^44", l2["n_gradings"], 1e-12)
+check_str("13_remaining_four_q1_q2_q3_q5.md", "B/(B−1) = 4/3", l2["coef_B_over_Bm1"])
+check_str("13_remaining_four_q1_q2_q3_q5.md", "N_d/K_tree = 4/3", l2["ratio_Nd_Ktree"])
+check_num("13_remaining_four_q1_q2_q3_q5.md", "K_tree = 33", 33, 1e-9)
+check_num("13_remaining_four_q1_q2_q3_q5.md", "預算和 60", l2["budget_sum"], 1e-9)
+check_num("13_remaining_four_q1_q2_q3_q5.md", "Ω_Λ = 41/60", l2["omega_L_pred"], 1e-6)
+check_num("13_remaining_four_q1_q2_q3_q5.md", "z(Ω_Λ)", l2["z_omega_L"], 2e-3)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

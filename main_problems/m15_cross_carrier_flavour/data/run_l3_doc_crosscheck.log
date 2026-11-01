@@ -109,8 +109,18 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 07_verdicts.md :: dof = 9! ≈ 362880（錨點窗口）
 [PASS] 07_verdicts.md :: F 之 3 分拆 S(9,3) ≈ 3025（錨點窗口）
 [PASS] 07_verdicts.md :: 簡併對數 946 ≈ 0（錨點窗口）
+
+§13b  docs/13 — 餘下四問（Q1／Q2／Q3／Q5）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: 半譜簡併對 ≈ 0（doc 命中 True）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: 分級數 2^44 ≈ 17592186044416（doc 命中 True）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: B/(B−1) = 4/3 = 4/3
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: N_d/K_tree = 4/3 = 4/3
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: K_tree = 33 ≈ 33（doc 命中 True）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: 預算和 60 ≈ 60（doc 命中 True）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: Ω_Λ = 41/60 ≈ 0.683333（doc 命中 True）
+[PASS] 13_remaining_four_q1_q2_q3_q5.md :: z(Ω_Λ) ≈ -0.19（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 82、FAIL 0
+L3 總結：PASS 90、FAIL 0
 ==============================================================================

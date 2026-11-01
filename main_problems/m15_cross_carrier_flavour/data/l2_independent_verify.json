@@ -431,6 +431,12 @@
   "a5_commutator_order": 60,
   "s93": 3025,
   "dof_9_fact": 362880,
+  "half_spec_degenerate": 0,
+  "n_gradings": 17592186044416,
+  "coef_B_over_Bm1": "4/3",
+  "ratio_Nd_Ktree": "4/3",
+  "omega_L_pred": 0.683333,
+  "z_omega_L": -0.19,
   "lucas_L1_L3_L5": [
    1,
    4,

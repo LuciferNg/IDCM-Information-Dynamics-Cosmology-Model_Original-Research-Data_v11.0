@@ -1,0 +1,48 @@
+{
+ "results": [
+  {
+   "tag": "Q1-B  Aut(H) = {e}（無非平凡對稱可分級）",
+   "status": "PASS",
+   "detail": "簡併對 0"
+  },
+  {
+   "tag": "Q1   V₄ 需兩個獨立『命名』ℤ₂；g₂ 實際為 3 值字面 ⟹ V₄ 不可註冊（dof = 44）",
+   "status": "PASS",
+   "detail": "g₁ 已有名；g₂ 無（字面 d 有 3 值）⟹ V₄ 缺第二因子"
+  },
+  {
+   "tag": "Q2   B/(B−1) ≡ N_d/K_tree（精確有理相等）",
+   "status": "PASS",
+   "detail": "4/3 == 4/3"
+  },
+  {
+   "tag": "Q3   存在 ≥ 2 條 k-free 之 33 表達式 ⟹ 目錄不唯一",
+   "status": "PASS",
+   "detail": "命中 ['2B² + 1', 'B² + L₅ + B + 2', 'L₃ + L₇', 'N_d − B − 7', 'N_d − L₅']"
+  },
+  {
+   "tag": "Q5-A 算子分解三分之和 = N_d + B² = 60",
+   "status": "PASS",
+   "detail": "3+16+41 = 60"
+  },
+  {
+   "tag": "Q5-B Ω_Λ = 41/60 與 Planck 相容（|z| ≤ 2）",
+   "status": "PASS",
+   "detail": "z = -0.19σ"
+  }
+ ],
+ "degenerate_pairs": 0,
+ "n_gradings": 17592186044416,
+ "coef_B_over_Bm1": "4/3",
+ "N_d_over_K_tree": "4/3",
+ "kfree_33": {
+  "N_d − L₅": 33,
+  "2B² + 1": 33,
+  "L₃ + L₇": 33,
+  "N_d − B − 7": 33,
+  "B² + L₅ + B + 2": 33
+ },
+ "budget_sum": 60,
+ "omega_Lambda_pred": "41/60",
+ "z_omega_Lambda": -0.1872146118721461
+}

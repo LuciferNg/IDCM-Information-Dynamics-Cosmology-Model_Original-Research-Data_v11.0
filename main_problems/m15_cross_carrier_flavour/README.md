@@ -159,6 +159,26 @@ audit 13/13 PASS（FAIL 0、WARN 0）
 
 ---
 
+> ## ★★★★★★ 餘問攻堅（2026-11-01）：Q5 結構側閉合、Q1 永久判死
+>
+> ```
+> L1 12/12（兩跑 byte-identical ≡ canonical log；審計自身兩跑亦同）
+L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、WARN 0）
+> ```
+>
+> | 問 | 判 | 關鍵數 |
+> |:-:|:--:|:--|
+> | Q1 `V₄` 第二個 ℤ₂ | 🔴 **判死（永久）** | 分級空間 `2⁴⁴ = 17,592,186,044,416`（dof=44）；`Aut(H)={e}`；`g₂` 實為 3 值字面 |
+> | Q2 `B/(B−1)` 出處 | 🟡 定位 | `≡ N_d/K_tree = 4/3`（精確）⟹ 非獨立常數；仍後驗 |
+> | Q3 `K_tree = 33` k-free | 🔴 歸約 | k-free 式 ≥ 5 條不唯一；唯一可延續者 `N_d−L₅` ⟹ 上游 `N_d = L₃L₅` |
+> | **Q5 `Ω_b` 分子 = 世代數** | ✅ **結構側閉合** | `3/16/41 = rank(P_κ)/rank(P_level2)/rank(1−P_κ)`；`Ω_Λ = 41/60`（**−0.19σ**） |
+>
+> ★ **Q5 之要點**：預算三分並非額外假設 —— 佢同 v11 M3 之算子分解三分係**同一組三個整數**，
+> 逐項對應 `rank(P_κ)`／`rank(P_level2)`／`rank(1−P_κ)`。故「世代數 = Ω_b 分子」係 `rank` 恆等，
+> 殘餘僅為物理命名步（可見模 ↔ 費米子世代），依本項目原則屬另一步。
+
+---
+
 ## 一句話
 
 味之「3」若唔係本載體（44-站 Dirichlet `/90`）嘅量子數，則須由**另一載體**給出。
@@ -202,7 +222,7 @@ audit 13/13 PASS（FAIL 0、WARN 0）
 
 ## 目錄
 
-檔案數：docs/（12 份）｜scripts/（14 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（13 份）｜scripts/（15 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -210,8 +230,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 12 份（01 判準 → 07 判詞 → 08–12 候選補測、降級、閘門、驗證）
-├── scripts/           ← 14 支（11 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 13 份（01 判準 → 07 判詞 → 08–13 候選補測、降級、閘門、驗證、餘問）
+├── scripts/           ← 15 支（12 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -234,6 +254,7 @@ m15_cross_carrier_flavour/
 | `docs/10_tenth_candidate_downgrade.md` | ★★ 降級：後驗（M13 自認）＋ 反演恆真 ＋ 有理身份閘 ⟹ 第十候選 **🔴** | 🔴 |
 | `docs/11_gate_candidate_and_provenance_scan.md` | ★★★ 第十二候選（閘門層數 `⌈2 ln B⌉ = 3`）**首個 C7 全過** ＋ 全 corpus provenance 掃描（157 處，無 producer） | 🟡 |
 | `docs/12_verification_and_budget_anchor.md` | ★★★ 輸入驗證（`e`／`κ`／`B` 全有獨立出處）＋ **自我撤回**（`N_gen=60Ω_b` 恆真）＋ 觀測錨 `Ω_DM/Ω_b = 16/3`（**−0.48σ**） | 🟡 |
+| `docs/13_remaining_four_q1_q2_q3_q5.md` | ★★★★ 餘問攻堅：Q1 判死（dof=44）、Q2 定位（≡N_d/K_tree）、Q3 歸約、**Q5 結構側閉合**（預算三分 ≡ 算子分解三分；`Ω_Λ` −0.19σ） | ✅ |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -245,6 +266,7 @@ m15_cross_carrier_flavour/
 | `scripts/10_ngen_provenance_scan.py` | 全 corpus `N_gen` 掃描（158 處；L/W/P/E 四類）＋安裝點定位 | ✅ |
 | `scripts/11_gate_count_candidate.py` | 閘門層數候選：`⌈2 ln B⌉`、C7 三條件、銳度窗口、κ 冪次敏感性 | ✅ |
 | `scripts/12_gate_budget_identity.py` | 輸入驗證 ＋ 預算同構 ＋ Planck 判別（16/2、16/3、16/4） | ✅ |
+| `scripts/13_remaining_four.py` | Q1（2⁴⁴ 分級 ⟹ 判死）、Q2（≡N_d/K_tree）、Q3（歸約）、Q5（rank 同構） | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

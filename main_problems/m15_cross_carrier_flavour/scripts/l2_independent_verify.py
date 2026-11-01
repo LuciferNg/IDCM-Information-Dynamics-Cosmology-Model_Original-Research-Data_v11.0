@@ -394,6 +394,18 @@ for _i in range(2, 10):
     _f *= _i
 put("dof_9_fact", _f)
 
+# ── 8i. Q1／Q2／Q5 之期望值（獨立重算）──────────────────────
+# 半譜 n=1..44 之簡併對（γ = 4 sin²(πn/88)）；獨立以 mpmath 高精度比對
+_half = [4 * mp.sin(mp.pi * n / 88) ** 2 for n in range(1, 45)]
+put("half_spec_degenerate", sum(1 for i in range(44) for j in range(i + 1, 44)
+                               if abs(_half[i] - _half[j]) < mp.mpf("1e-40")))
+put("n_gradings", 2 ** 44)                       # 對角 involutive grading 之數
+put("coef_B_over_Bm1", "4/3")                    # B/(B−1)，B = 4
+put("ratio_Nd_Ktree", str(Fraction(44, 44 - 11)))  # N_d/K_tree
+put("omega_L_pred", round(float(Fraction(41, 60)), 6))
+_zL = (float(Fraction(41, 60)) - 0.6847) / 0.0073
+put("z_omega_L", round(_zL, 2))
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):

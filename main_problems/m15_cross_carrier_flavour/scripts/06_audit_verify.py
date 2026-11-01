@@ -41,6 +41,7 @@ LOGS = {
     "10_ngen_provenance_scan": "run_10_provenance.log",
     "11_gate_count_candidate": "run_11_gate_count.log",
     "12_gate_budget_identity": "run_12_budget.log",
+    "13_remaining_four": "run_13_remaining.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -58,6 +59,7 @@ DOC_PROD = {
     "10_tenth_candidate_downgrade.md": ["09"],
     "11_gate_candidate_and_provenance_scan.md": ["10", "11"],
     "12_verification_and_budget_anchor.md": ["12"],
+    "13_remaining_four_q1_q2_q3_q5.md": ["13"],
 }
 EXEMPT_DOCS = set()      # 全部 doc 納入 L3（2026-11-01 全面審計）
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}
