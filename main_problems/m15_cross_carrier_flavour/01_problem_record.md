@@ -1,7 +1,7 @@
 # M15 — 01_problem_record（問題記錄）
 
 - pid `M15`｜slug `m15_cross_carrier_flavour`｜version v11.0｜created 2026-10-31
-- state 🔴 **closed / verdict `negative`（scoped，四載體）**，2026-11-01（原 `⚪ registered（只開不推）`；沿革見 §六）
+- state 🟡 **closed / verdict `partial`**，2026-11-01（四載體 scoped no-go ＋ 第十候選存活；沿革：⚪ registered → 🔴 negative → 🟡 partial，見 §六）
 - 開檔依據：調律者 2026-10-31 指示「剩餘唯一出路係跨載體（A₅ 幾何／CY₃／M45 帶）—— 依紀律開新 M15，不在本 M14 內推」
 
 ---
@@ -62,6 +62,8 @@
 | 9 | `scripts/05`、`docs/06` | 機制判死 | CY₃ `\|χ\|/2 = 62`（20.67×）；唯一「3」= `h11/12` 需 `12 ∈ C1` ⟹ **CROSS-IMPORT** | 🔴 |
 | 10 | `docs/07`、`final_result.md` | 判詞 | 四載體全滅（scoped）；`N_gen = 3` 維持**輸入**地位 | 🔴 |
 | 11 | `scripts/l2`、`scripts/l3`、`scripts/06`、`scripts/run_chain.sh` | 審計閘 | L1 5/5（兩跑 byte-identical）｜L2 42 keys｜L3 36/36｜audit 11/11 FAIL 0 | ✅ |
+| 12 | `scripts/07`、`docs/08` | 補測（第九候選） | `N_gen = h11 − M`：來源層 5 處含字面 3 ⟹ 循環；一致性 ⟺ Lucas 恆等式 ⟹ 8 候選更正為 9（0/9） | 🔴 |
+| 13 | `scripts/08`、`docs/09` | ★ 補測（第十候選） | `N_gen = B − 1`：`B` 由 `Δ_N/Δ_Ξ` 反解 = 3.95837 ± 0.18517 ⟹ `N_gen = 2.958 ± 0.185` ⟹ 整數唯一 3（k=2 −5.2σ／k=4 +5.6σ）；C7 集合 ✅、τ 🟡 | 🟡 |
 
 ## §七 檔案閉合水位
 
@@ -73,7 +75,8 @@
 | 4 | `docs/01`–`07`（7 份） | 2026-11-01 | L3 覆蓋 6 份（36/36 命中）；`docs/01` 豁免（協定文件） | ✅ |
 | 5 | `scripts/01`–`06`＋`l2`／`l3`（8 支） | 2026-11-01 | L1 5/5 兩跑 byte-identical；L2／L3 rc=0 且 ≡ log | ✅ |
 | 6 | `data/`（logs ＋ JSON） | 2026-11-01 | 產物綁定零孤兒、零失蹤 | ✅ |
-| 7 | 四件套（`01_problem_record`／`final_result`／`README`／`SESSION_START`） | 2026-11-01 | 狀態行同步為 `closed / negative`（`SESSION_START` 原文不動） | ✅ |
+| 7 | 四件套（`01_problem_record`／`final_result`／`README`／`SESSION_START`） | 2026-11-01 | 狀態行同步為 `closed / partial`（第十候選後改判；`SESSION_START` 原文不動） | ✅ |
+| 8 | 追加輪（`docs/08`–`09`、`scripts/07`–`08`） | 2026-11-01 | L1 7/7、L2 50 keys、L3 52/52、audit 11/11 FAIL 0 | ✅ |
 
 ## §八 解閘條件
 

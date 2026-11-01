@@ -374,6 +374,21 @@
   "cy3_has_3": true,
   "cy3_has_12": false,
   "vacuous_expr_value": 3,
+  "ratio_DN_DXi": "0.1888076409",
+  "sigma_ratio": 0.005841,
+  "B_hat": 3.95837,
+  "sigma_B": 0.18517,
+  "Ngen_hat": 2.95837,
+  "z_integer": {
+   "1": -10.58,
+   "2": -5.18,
+   "3": 0.22,
+   "4": 5.63,
+   "5": 11.03
+  },
+  "unique_integer_ngen": [
+   3
+  ],
   "lucas_L1_L3_L5": [
    1,
    4,
@@ -387,7 +402,7 @@
    3
   ],
   "three_as_L3_minus_1": 3,
-  "kfree_33_families": 2,
+  "kfree_33_expressions": 4,
   "v2_88": 3,
   "v3_90": 2,
   "B_minus_1": 3,

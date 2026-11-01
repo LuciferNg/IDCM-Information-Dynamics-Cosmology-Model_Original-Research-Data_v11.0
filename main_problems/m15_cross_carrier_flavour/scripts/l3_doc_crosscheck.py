@@ -55,7 +55,7 @@ def check_str(doc, label, token):
 
 def _numbers(txt):
     """由 doc 掃出數值：支援 1.23×10⁻⁴、4.36e-60、千分位逗號、整數。"""
-    t = re.sub(r"(?<=\d),(?=\d{3})", "", txt)          # 去千分位
+    t = re.sub(r"(?<=\d),(?=\d{3})", "", txt.replace("\u2212", "-"))   # 去千分位＋U+2212 歸一
     out = []
     for m in re.finditer(r"([-+]?\d+(?:\.\d+)?)\s*[×x]\s*10([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)", t):
         out.append(float(m.group(1)) * 10.0 ** int(m.group(2).translate(SUPMAP)))
@@ -169,12 +169,23 @@ check_str("08_ninth_candidate_h11_minus_M.md", "Lucas L₃", "L₃ − 1")
 check_num("08_ninth_candidate_h11_minus_M.md", "L₃ = 4", l2["lucas_L1_L3_L5"][1], 1e-9)
 check_num("08_ninth_candidate_h11_minus_M.md", "L₅ = 11", l2["lucas_L1_L3_L5"][2], 1e-9)
 check_num("08_ninth_candidate_h11_minus_M.md", "k 三路皆 3", l2["k_routes"][0], 1e-9)
-check_num("08_ninth_candidate_h11_minus_M.md", "33 之 k-free 族數", l2["kfree_33_families"], 1e-9)
+check_num("08_ninth_candidate_h11_minus_M.md", "33 之 k-free 式數", l2["kfree_33_expressions"], 1e-9)
 check_str("08_ninth_candidate_h11_minus_M.md", "通用恆等式", "3L_n − L_{n+2} = L_{n−2}")
 check_str("08_ninth_candidate_h11_minus_M.md", "9 候選 0/9", "0/9")
 
 say("")
-say("§8  豁免（敘述／判定型）")
+say("§8  docs/09 — 第十候選 N_gen = B − 1")
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "Δ_N/Δ_Ξ", l2["ratio_DN_DXi"], 1e-6)
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "σ 比值", l2["sigma_ratio"], 5e-3)
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "B 反解", l2["B_hat"], 5e-4)
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "σ_B", l2["sigma_B"], 5e-3)
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "z(k=2)", l2["z_integer"]["2"], 5e-2)
+check_num("09_tenth_candidate_ngen_equals_B_minus_1.md", "z(k=4)", l2["z_integer"]["4"], 5e-2)
+check_str("09_tenth_candidate_ngen_equals_B_minus_1.md", "唯一整數 = 3", "3/16")
+check_str("09_tenth_candidate_ngen_equals_B_minus_1.md", "C7 集合", "V₄ \\ {e}")
+
+say("")
+say("§9  豁免（敘述／判定型）")
 say("  docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免")
 
 say("")

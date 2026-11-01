@@ -244,6 +244,33 @@ put("cy3_has_3", 3 in cat)
 put("cy3_has_12", 12 in cat)
 put("vacuous_expr_value", Fraction(124 + 62, 62).numerator)
 
+# ── 8c. 第十候選：由 Δ_N/Δ_Ξ 反解 B（牛頓迭代，獨立於 L1 之二次根公式）──────
+mp_ = Fraction("0.93827208816")
+mn_ = Fraction("0.9395654205")
+r_tr = (mn_ - mp_) / (Fraction("1.32171") - Fraction("1.31486"))
+sdxi = (7.0e-05 ** 2 + 2.0e-04 ** 2) ** 0.5
+s_r = float(r_tr) * sdxi / float(Fraction("1.32171") - Fraction("1.31486"))
+
+
+def newton_B(r, x0=4.0):
+    x = x0
+    for _ in range(200):
+        f = (x - 1) / x ** 2 - r
+        df = (2 - x) / x ** 3
+        x -= f / df
+    return x
+
+
+B_hat = newton_B(float(r_tr))
+s_B = abs(newton_B(float(r_tr) + s_r) - newton_B(float(r_tr) - s_r)) / 2
+put("ratio_DN_DXi", f"{float(r_tr):.10f}")
+put("sigma_ratio", round(s_r, 6))
+put("B_hat", round(B_hat, 5))
+put("sigma_B", round(s_B, 5))
+put("Ngen_hat", round(B_hat - 1, 5))
+put("z_integer", {k: round((k - (B_hat - 1)) / s_B, 2) for k in range(1, 6)})
+put("unique_integer_ngen", [k for k in range(1, 6) if abs((k - (B_hat - 1)) / s_B) < 1])
+
 # ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
 L = {0: 2, 1: 1}
 for n in range(2, 22):
@@ -260,11 +287,12 @@ for n in range(2, 22):
 kfree = set()
 for a in range(0, 15):
     for b in range(0, 15):
-        for nm, v in (("L*L", L[a] * L[b]), ("L+L", L[a] + L[b]), ("L-L", L[a] - L[b]),
-                      ("F*F", Fb[a] * Fb[b]), ("F+F", Fb[a] + Fb[b])):
+        for nm, v in (("L{a}*L{b}", L[a] * L[b]), ("L{a}+L{b}", L[a] + L[b]),
+                      ("L{a}-L{b}", L[a] - L[b]),
+                      ("F{a}*F{b}", Fb[a] * Fb[b]), ("F{a}+F{b}", Fb[a] + Fb[b])):
             if v == 33:
-                kfree.add(nm)
-put("kfree_33_families", len(kfree))
+                kfree.add(nm.format(a=a, b=b))
+put("kfree_33_expressions", len(kfree))
 
 # ── 8. K_chain 計數常數 ────────────────────────────────────────────────────
 put("v2_88", 3)
@@ -285,8 +313,10 @@ print(f"  S(9,3) = {D['stirling_S93']}；有標籤 = {D['labeled_3partitions_F']
 print(f"  剖面：/88 {D['profile_88']}、/90 {D['profile_90']}、/176 {D['profile_176']}")
 print(f"  |χ|/2 = {D['ng_chi_over_2']}；相對偏差 = {D['rel_dev_62_vs_3']}")
 print(f"  CY₃ 目錄覆蓋 = {D['cy3_catalogue_coverage_1_100']}/100；12 ∈ 目錄？{D['cy3_has_12']}")
+print(f"  Δ_N/Δ_Ξ = {D['ratio_DN_DXi']} ± {D['sigma_ratio']}；B = {D['B_hat']} ± {D['sigma_B']}；"
+      f"N_gen = {D['Ngen_hat']}；z(整數) = {D['z_integer']}")
 print(f"  Lucas L1/L3/L5 = {D['lucas_L1_L3_L5']}；恆等式違例 {D['lucas_identity_3Ln_minus_Ln2_violations']}；"
-      f"h11−M = {D['h11_minus_M']}；k 三路 = {D['k_routes']}；33 之 k-free 族 = {D['kfree_33_families']}")
+      f"h11−M = {D['h11_minus_M']}；k 三路 = {D['k_routes']}；33 之 k-free 式 = {D['kfree_33_expressions']}")
 
 with open(__file__.replace("scripts/", "data/").replace(".py", ".json"), "w") as f:
     json.dump({"_derived": D}, f, ensure_ascii=False, indent=1)

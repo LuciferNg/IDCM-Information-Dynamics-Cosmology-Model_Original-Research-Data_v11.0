@@ -56,13 +56,23 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 08_ninth_candidate_h11_minus_M.md :: L₃ = 4 ≈ 4（doc 命中 True）
 [PASS] 08_ninth_candidate_h11_minus_M.md :: L₅ = 11 ≈ 11（doc 命中 True）
 [PASS] 08_ninth_candidate_h11_minus_M.md :: k 三路皆 3 ≈ 3（doc 命中 True）
-[PASS] 08_ninth_candidate_h11_minus_M.md :: 33 之 k-free 族數 ≈ 2（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: 33 之 k-free 式數 ≈ 4（doc 命中 True）
 [PASS] 08_ninth_candidate_h11_minus_M.md :: 通用恆等式 = 3L_n − L_{n+2} = L_{n−2}
 [PASS] 08_ninth_candidate_h11_minus_M.md :: 9 候選 0/9 = 0/9
 
-§8  豁免（敘述／判定型）
+§8  docs/09 — 第十候選 N_gen = B − 1
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: Δ_N/Δ_Ξ ≈ 0.1888076409（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: σ 比值 ≈ 0.005841（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: B 反解 ≈ 3.95837（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: σ_B ≈ 0.18517（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: z(k=2) ≈ -5.18（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: z(k=4) ≈ 5.63（doc 命中 True）
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: 唯一整數 = 3 = 3/16
+[PASS] 09_tenth_candidate_ngen_equals_B_minus_1.md :: C7 集合 = V₄ \ {e}
+
+§9  豁免（敘述／判定型）
   docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免
 
 ==============================================================================
-L3 總結：PASS 44、FAIL 0
+L3 總結：PASS 52、FAIL 0
 ==============================================================================
