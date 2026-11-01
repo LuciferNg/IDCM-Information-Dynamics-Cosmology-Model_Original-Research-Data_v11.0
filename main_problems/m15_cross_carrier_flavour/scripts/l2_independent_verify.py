@@ -244,6 +244,28 @@ put("cy3_has_3", 3 in cat)
 put("cy3_has_12", 12 in cat)
 put("vacuous_expr_value", Fraction(124 + 62, 62).numerator)
 
+# ── 8b. Lucas ＋ 第九候選（整數遞推，獨立於 L1 之 ℚ(√5) 冪）────────────────
+L = {0: 2, 1: 1}
+for n in range(2, 22):
+    L[n] = L[n - 1] + L[n - 2]
+put("lucas_L1_L3_L5", [L[1], L[3], L[5]])
+put("lucas_identity_3Ln_minus_Ln2_violations",
+    sum(1 for n in range(3, 19) if 3 * L[n] - L[n + 2] != L[n - 2]))
+put("h11_minus_M", 36 - 33)
+put("k_routes", [int(round((36 / L[3]) ** 0.5)), 33 // L[5], (134 - 2) // 44])
+put("three_as_L3_minus_1", L[3] - 1)
+Fb = {0: 0, 1: 1}
+for n in range(2, 22):
+    Fb[n] = Fb[n - 1] + Fb[n - 2]
+kfree = set()
+for a in range(0, 15):
+    for b in range(0, 15):
+        for nm, v in (("L*L", L[a] * L[b]), ("L+L", L[a] + L[b]), ("L-L", L[a] - L[b]),
+                      ("F*F", Fb[a] * Fb[b]), ("F+F", Fb[a] + Fb[b])):
+            if v == 33:
+                kfree.add(nm)
+put("kfree_33_families", len(kfree))
+
 # ── 8. K_chain 計數常數 ────────────────────────────────────────────────────
 put("v2_88", 3)
 put("v3_90", 2)
@@ -263,6 +285,8 @@ print(f"  S(9,3) = {D['stirling_S93']}；有標籤 = {D['labeled_3partitions_F']
 print(f"  剖面：/88 {D['profile_88']}、/90 {D['profile_90']}、/176 {D['profile_176']}")
 print(f"  |χ|/2 = {D['ng_chi_over_2']}；相對偏差 = {D['rel_dev_62_vs_3']}")
 print(f"  CY₃ 目錄覆蓋 = {D['cy3_catalogue_coverage_1_100']}/100；12 ∈ 目錄？{D['cy3_has_12']}")
+print(f"  Lucas L1/L3/L5 = {D['lucas_L1_L3_L5']}；恆等式違例 {D['lucas_identity_3Ln_minus_Ln2_violations']}；"
+      f"h11−M = {D['h11_minus_M']}；k 三路 = {D['k_routes']}；33 之 k-free 族 = {D['kfree_33_families']}")
 
 with open(__file__.replace("scripts/", "data/").replace(".py", ".json"), "w") as f:
     json.dump({"_derived": D}, f, ensure_ascii=False, indent=1)

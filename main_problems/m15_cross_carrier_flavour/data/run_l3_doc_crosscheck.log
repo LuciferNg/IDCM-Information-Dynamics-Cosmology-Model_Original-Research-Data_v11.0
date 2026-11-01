@@ -50,9 +50,19 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 07_verdicts.md :: C7 通過數 = 0/8
 [PASS] 07_verdicts.md :: dof 9! = 9!=362880
 
-§7  豁免（敘述／判定型）
+§7  docs/08 — 第九候選 h11 − M
+[PASS] 08_ninth_candidate_h11_minus_M.md :: h11 − M ≈ 3（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: Lucas L₃ = L₃ − 1
+[PASS] 08_ninth_candidate_h11_minus_M.md :: L₃ = 4 ≈ 4（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: L₅ = 11 ≈ 11（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: k 三路皆 3 ≈ 3（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: 33 之 k-free 族數 ≈ 2（doc 命中 True）
+[PASS] 08_ninth_candidate_h11_minus_M.md :: 通用恆等式 = 3L_n − L_{n+2} = L_{n−2}
+[PASS] 08_ninth_candidate_h11_minus_M.md :: 9 候選 0/9 = 0/9
+
+§8  豁免（敘述／判定型）
   docs/01（判準凍結表，跑前文件；數值屬常數定義而非計算結果）—— 豁免
 
 ==============================================================================
-L3 總結：PASS 36、FAIL 0
+L3 總結：PASS 44、FAIL 0
 ==============================================================================

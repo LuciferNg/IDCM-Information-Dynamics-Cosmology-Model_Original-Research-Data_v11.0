@@ -2,7 +2,7 @@
  "results": {
   "① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）": {
    "status": "PASS",
-   "detail": "磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count']；差集 set()"
+   "detail": "磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate']；差集 set()"
   },
   "② docs ↔ producer 綁定": {
    "status": "PASS",
@@ -10,7 +10,7 @@
   },
   "⑤ inline 幽靈（docs 數值須有 L3 claim 覆蓋）": {
    "status": "PASS",
-   "detail": "L3 覆蓋 5 份：['02_reduction_theorem_status.md', '03_no_second_label_theorem.md', '04_count_census_and_partition_test.md', '05_adic_profile_and_map_nogo.md', '06_cy3_verdict.md']；豁免 ['01_frozen_criteria.md', '07_verdicts.md']"
+   "detail": "L3 覆蓋 6 份：['02_reduction_theorem_status.md', '03_no_second_label_theorem.md', '04_count_census_and_partition_test.md', '05_adic_profile_and_map_nogo.md', '06_cy3_verdict.md', '08_ninth_candidate_h11_minus_M.md']；豁免 ['01_frozen_criteria.md', '07_verdicts.md']"
   },
   "③ scripts/ 內禁 /tmp 寫入": {
    "status": "PASS",
@@ -34,7 +34,7 @@
   },
   "⑨ README 宣稱檔數 == 實際": {
    "status": "PASS",
-   "detail": "README docs=7/7；scripts=8/8"
+   "detail": "README docs=8/8；scripts=9/9"
   },
   "⑩ 四件套存在且提及 M15": {
    "status": "PASS",
@@ -52,8 +52,9 @@
   "02_a5_harmonic_multiplicity",
   "03_count_census",
   "04_adic_map_nogo",
-  "05_cy3_generation_count"
+  "05_cy3_generation_count",
+  "07_h11_minus_M_candidate"
  ],
- "docs": 7,
- "scripts": 8
+ "docs": 8,
+ "scripts": 9
 }

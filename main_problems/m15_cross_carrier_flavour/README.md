@@ -11,7 +11,7 @@
 > **問題被重定型**（`docs/01 §一`）：`N_gen` 在 SM 之定義 = 費米子表示空間中 (SM rep) 之
 > **重數** ⟹ 任何「3 之來源」claim 必須供給**分割滿射** `τ : F → S`（`|S| = 3`，`F` = 9 模式受保護集）。
 > ⟹ 判準 **C7**（三條件：(i) 3 元素集、(ii) 典範 `τ`、(iii) `dof = 0`）。
-> **四載體之八個 3 候選：0/8 通過。**
+> **3 候選 0/9 通過**（原 8 個 ＋ 2026-11-01 追加之第九候選 `h11 − M`，見 `docs/08`）。
 >
 > ```
 > P1 歸約定理（O137 §一）= **恆真**（清單 ① 已含 n；④ γ_n 已對 n 單射）⟹ 零鑑別力；
@@ -54,6 +54,28 @@
 
 > ⚠ 本檔為**狀態頁**（live field），2026-11-01 已重寫：原 §一句話／§為何唔喺 M14 內推／§依賴／§硬閘
 > **逐字保留**；§開放子問題 表原有五行不動，只加「裁決」欄；§目錄／§前作 結構保留。
+
+> ## ★★ 進展四（2026-11-01 追加；觸發：調律者問「「3」之身份？」）：**第九候選亦死**
+>
+> 回查 corpus 發現首輪目錄**結構上漏測**一個跨載體差值候選：
+> v10 `o72 §2.2` 明寫「33 = h¹¹ − N_gen」、`p10` 宣稱 `M=33` 與 `h11=36` 皆已結構證明
+> ⟹ `N_gen = h11 − M = 36 − 33 = 3` 係 corpus 內最強之 3 候選。
+>
+> - **§1 來源層（5 處實證）**：`p10/06` 路徑 A 直接寫 `M = h11 − 3`；`M = 3×(φ⁵−φ⁻⁵)`；
+>   `χ = 3N_d + 2`（⟹ `M = (χ−2)/4`）；`p10/07` `n_gen = 3` 字面輸入。⟹ **M 以 3 定義** ⟹ 循環（A2）。
+> - **§2 代數層**：令 `N_gen = k` ⟹ `h11 = L₃k²`、`M = kL₅`、`χ = kN_d+2`；一致性條件
+>   `k = (L₅+1)/L₃ = 12/4 = 3` ⟺ **通用 Lucas 恆等式 `3L_n − L_{n+2} = L_{n−2}`**（n=3..18 違例 0）
+>   ⟹ **對 k 零約束**；三路徑「一致」只係該恆等式之投影。
+> - **§3 瓶頸**：`h11` 有 k-free 路線（`8+3+1+24`，其中 3 = `dim SU(2)`）；**`M` 無**（三路全含 3）。
+>   33 之純 Lucas 表達式只有 4 條（`L₂L₅`、`L₃+L₇`）⟹ 非唯一 ⟹ 純算術。
+> - **§4** `S = h11 \ M` 非典範 ⟹ C7 不通過。
+>
+> ⟹ 「8 候選 0/8」更正為 **9 候選 0/9**（append-only）。
+> ⟹ **`3` 之身份定論：`3 = L₃ − 1 = φ³ − φ⁻³ − 1`** —— φ 幾何常數，與 CY₃／A₅／K_tree 無關；
+>    corpus 之「閉合逼出 3」實為**循環**（以 3 定義 M，再以 h11−M 反推 3）。
+> ⟹ 唯一可續之路 = **`M = 33` 之 k-free 推導**（見 `docs/08 §未盡`）。
+
+---
 
 ## 一句話
 
@@ -98,7 +120,7 @@
 
 ## 目錄
 
-檔案數：docs/（7 份）｜scripts/（8 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（8 份）｜scripts/（9 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -106,8 +128,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 7 份（01 判準凍結 → 07 綜合判詞）
-├── scripts/           ← 8 支（5 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 8 份（01 判準凍結 → 07 綜合判詞 → 08 第九候選）
+├── scripts/           ← 9 支（6 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -125,11 +147,13 @@ m15_cross_carrier_flavour/
 | `docs/05_adic_profile_and_map_nogo.md` | ★ P4：映射三層 no-go＋**剖面互換** `(3,1)↔(2,3)` | 🔴 |
 | `docs/06_cy3_verdict.md` | C2：`\|χ\|/2 = 62` 判死；`h11/12` = CROSS-IMPORT | 🔴 |
 | `docs/07_verdicts.md` | 綜合判詞＋五問逐答＋發還清單 | ✅ |
+| `docs/08_ninth_candidate_h11_minus_M.md` | ★ 第九候選 `N_gen = h11 − M`：**恆等／循環**（Lucas 恆等式）；3 = L₃ − 1 | 🔴 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
 | `scripts/04_adic_map_nogo.py` | 保族判準＋剖面＋三層映射 no-go | ✅ |
 | `scripts/05_cy3_generation_count.py` | `χ/2` 判死＋密度閘＋跨載體輸入審計 | ✅ |
+| `scripts/07_h11_minus_M_candidate.py` | 第九候選：來源層 5 處實證＋Lucas 恆等式＋k-free 瓶頸定位 | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

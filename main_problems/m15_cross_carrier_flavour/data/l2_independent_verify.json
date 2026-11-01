@@ -374,6 +374,20 @@
   "cy3_has_3": true,
   "cy3_has_12": false,
   "vacuous_expr_value": 3,
+  "lucas_L1_L3_L5": [
+   1,
+   4,
+   11
+  ],
+  "lucas_identity_3Ln_minus_Ln2_violations": 0,
+  "h11_minus_M": 3,
+  "k_routes": [
+   3,
+   3,
+   3
+  ],
+  "three_as_L3_minus_1": 3,
+  "kfree_33_families": 2,
   "v2_88": 3,
   "v3_90": 2,
   "B_minus_1": 3,
