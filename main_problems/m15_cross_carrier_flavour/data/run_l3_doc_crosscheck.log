@@ -138,8 +138,15 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 
 §13f  docs/13 §I — 三分框架否證
 [PASS] 13_remaining_four_q1_q2_q3_q5.md :: κ 掃描序 = 2 5 8 11 13 16 19 22
+
+§13g  docs/16 — 零模仲裁
+[PASS] 16_zero_mode_arbitration.md :: 相異半譜值 ≈ 45（錨點窗口）
+[PASS] 16_zero_mode_arbitration.md :: 含零模 count ≈ 3（錨點窗口）
+[PASS] 16_zero_mode_arbitration.md :: 物理 count ≈ 2（錨點窗口）
+[PASS] 16_zero_mode_arbitration.md :: z(3/60) ≈ 0.82（doc 命中 True）
+[PASS] 16_zero_mode_arbitration.md :: z(2/60) ≈ -18.64（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 102、FAIL 0
+L3 總結：PASS 107、FAIL 0
 ==============================================================================

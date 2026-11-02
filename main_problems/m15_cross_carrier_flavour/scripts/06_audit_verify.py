@@ -44,6 +44,7 @@ LOGS = {
     "13_remaining_four": "run_13_remaining.log",
     "14_residual_push": "run_14_residual.log",
     "15_forced_recompute": "run_15_forced_recompute.log",
+    "16_zero_mode_arbitration": "run_16_zero_mode.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -63,6 +64,7 @@ DOC_PROD = {
     "12_verification_and_budget_anchor.md": ["12"],
     "13_remaining_four_q1_q2_q3_q5.md": ["13"],
     "14_residual_push.md": ["14"],
+    "16_zero_mode_arbitration.md": ["16"],
 }
 EXEMPT_DOCS = set()      # 全部 doc 納入 L3（2026-11-01 全面審計）
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}

@@ -460,6 +460,28 @@ put("iso_componentwise", [False, True, False])
 put("gate_scan_k1_8", [sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf(4) ** (-2 * k))
                        for k in range(1, 9)])
 put("gate_scan_str", "2 5 8 11 13 16 19 22")
+# ── 8m. 零模仲裁（docs/16；獨立重算，Planck 原始值）
+_half = sorted({round(float(4 * mp.sin(mp.pi * k / 88) ** 2), 40) for k in range(88)})
+put("distinct_half", len(_half))
+_Ob = float(_obh2) / float(_h2)
+_Ob_s = _Ob * ((0.00015 / 0.02237) ** 2 + (2 * 0.54 / 67.36) ** 2) ** 0.5
+put("omega_b_obs", round(_Ob, 6))
+put("omega_b_sigma", round(_Ob_s, 6))
+put("z_3_60", round((3 / 60 - _Ob) / _Ob_s, 2))
+put("z_2_60", round((2 / 60 - _Ob) / _Ob_s, 2))
+put("vis_with_zero", sum(1 for n in range(0, 45) if mp.e ** (-n) > mp.mpf(1) / 16))
+put("vis_phys_count", sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf(1) / 16))
+put("norm_z_90", round((3 / 90 - _Ob) / _Ob_s, 2))
+put("norm_z_180", round((3 / 180 - _Ob) / _Ob_s, 2))
+put("norm_z_45", round((3 / 45 - _Ob) / _Ob_s, 2))
+
+put("gate_inter_gen", 1)
+put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))
+put("t7_triple_rank", [sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")), 16, 44 - 2])
+put("iso_componentwise", [False, True, False])
+put("gate_scan_k1_8", [sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf(4) ** (-2 * k))
+                       for k in range(1, 9)])
+put("gate_scan_str", "2 5 8 11 13 16 19 22")
 
 # ── 8l. 原始輸入鍵（供反向覆蓋追溯；全部係 L2 已用之事實輸入）──
 put("pdg_m_p", "0.93827208816")

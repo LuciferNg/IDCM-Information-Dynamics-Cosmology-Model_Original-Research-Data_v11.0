@@ -1,0 +1,26 @@
+{
+ "distinct_half": 45,
+ "N_d": 44,
+ "vis_with_zero": [
+  0,
+  1,
+  2
+ ],
+ "vis_phys": [
+  1,
+  2
+ ],
+ "omega_b_obs": 0.049302,
+ "sigma": 0.000857,
+ "z_3_60": 0.815,
+ "z_2_60": -18.637,
+ "norm_z": {
+  "60": 0.815,
+  "90": -18.637,
+  "180": -38.089,
+  "45": 20.267
+ },
+ "verdict": "3 = gamma_max - 1 (branch count); rank(P_kappa) = 2; zero mode not a dof",
+ "n_pass": 14,
+ "n_fail": 0
+}

@@ -209,7 +209,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 > 錨 `Ω_DM/Ω_b = 16/3`（−0.48σ）、`Ω_Λ = 41/60`（−0.19σ）、樹層 `ℓ = 2`（+0.44σ）。
 > ⚠ **v2 撤回**：`3 = rank(P_κ)`（零模 ⟹ 物理 count = 2）；「⌈·⌉ 跳變／非代數」論證（載體已判死）；
 > **「預算三分 ≡ 算子三分」同構**（強制重算：算子秩 `2:16:42` ≠ `3:16:41`，僅和 60 巧合 ⟹ Q5 降 🔴）。
-> **保留開放**：`Q5` 預算層識別｜`Q1` 判死（dof=44）｜`Q2` 🟢 已解｜`Q3` 歸約至上游（範圍外）。
+> **Q5 ✅ 已關閉**（`3 = γ_max−1 = B−1`；`rank(P_κ)=2` 作廢；`÷60` 唯一）｜`Q1` 判死（dof=44）｜`Q2` 🟢 已解｜`Q3` 範圍外。
 > 觸發器與完整清單見 `01_problem_record §十一`。邊界：**不判定** `N_d = 44`／`88`／`Σγ = 90`。
 
 ---
@@ -257,7 +257,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（14 份）｜scripts/（17 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（15 份）｜scripts/（18 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -265,8 +265,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 14 份（01 判準 → 07 判詞 → 08–14 候選補測、降級、閘門、驗證、餘問、殘留攻堅）
-├── scripts/           ← 17 支（14 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 15 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、餘問、殘留 → 16 零模仲裁）
+├── scripts/           ← 18 支（15 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -291,6 +291,7 @@ m15_cross_carrier_flavour/
 | `docs/12_verification_and_budget_anchor.md` | ★★★ 輸入驗證（`e`／`κ`／`B` 全有獨立出處）＋ **自我撤回**（`N_gen=60Ω_b` 恆真）＋ 觀測錨 `Ω_DM/Ω_b = 16/3`（**−0.48σ**） | 🟡 |
 | `docs/13_remaining_four_q1_q2_q3_q5.md` | ★★★★ 餘問攻堅：Q1 判死（dof=44）、Q2 定位（≡N_d/K_tree）、Q3 歸約、Q5 結構側閉合（`Ω_Λ` −0.19σ） | ✅ |
 | `docs/14_residual_push.md` | ★★★★★ 殘留攻堅：**#12 判死（零模 γ₀ = 0 污染；物理 count = 2）**、冪次 ℓ=2、Q2 已解、Q5 閘門命名判死 | 🔴 |
+| `docs/16_zero_mode_arbitration.md` | ★★★★★ **零模仲裁：`3` = 分支計數（`B−1`），非模計數；`rank(P_κ)=2` 永久作廢；`/60` 唯一歸一化 ⟹ Q5 關閉** | ✅ |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -305,6 +306,7 @@ m15_cross_carrier_flavour/
 | `scripts/13_remaining_four.py` | Q1（2⁴⁴ 分級 ⟹ 判死）、Q2（≡N_d/K_tree）、Q3（歸約）、Q5（rank 同構） | ✅ |
 | `scripts/14_residual_push.py` | ★ 殘留三項：#12 零模污染判死（物理 count = 2）、冪次 ℓ=2（+0.44σ）、Q2 `Σ B^{−k}`、Q5 閘門命名判死 | ✅ |
 | `scripts/15_forced_recompute.py` | ★★★ **強制重算**：受 audit 修正影響之下游全部由存活產者重算；★ 揭發 `3:16:41 ≠ 2:16:42` ⟹ Q5 同構**否證** | ✅ |
+| `scripts/16_zero_mode_arbitration.py` | ★★★★ **零模仲裁**：模式集 = `k=1..44`（`γ₀=0` 屬真空）；`rank(P_κ)=2`（−18.64σ）；`3 = γ_max−1 = B−1`（分支計數）；歸一化唯一 `÷60` | ✅ |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

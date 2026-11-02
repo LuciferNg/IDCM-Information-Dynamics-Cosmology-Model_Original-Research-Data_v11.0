@@ -287,6 +287,14 @@ say("")
 say("§13f  docs/13 §I — 三分框架否證")
 check_str("13_remaining_four_q1_q2_q3_q5.md", "κ 掃描序", l2["gate_scan_str"])
 
+say("")
+say("§13g  docs/16 — 零模仲裁")
+check_ctx("16_zero_mode_arbitration.md", "相異半譜值 = k = 0,1,…,44", "相異半譜值", l2["distinct_half"], 2e-3, 14)
+check_ctx("16_zero_mode_arbitration.md", "含零模（n = 0..44）", "含零模 count", l2["vis_with_zero"], 2e-3, 20)
+check_ctx("16_zero_mode_arbitration.md", "物理（n = 1..44）", "物理 count", l2["vis_phys_count"], 2e-3, 18)
+check_num("16_zero_mode_arbitration.md", "z(3/60)", l2["z_3_60"], 5e-3)
+check_num("16_zero_mode_arbitration.md", "z(2/60)", l2["z_2_60"], 5e-3)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

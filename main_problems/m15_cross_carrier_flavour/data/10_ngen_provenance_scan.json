@@ -3,7 +3,7 @@
   {
    "tag": "§1-a 掃描完成",
    "status": "PASS",
-   "detail": "157 處"
+   "detail": "161 處"
   },
   {
    "tag": "§3 安裝點唯一（字面列表 ＋ if/elif 硬編碼；全 corpus 僅此一類）",
@@ -12,12 +12,12 @@
   }
  ],
  "counts": {
-  "L": 113,
+  "L": 116,
   "W": 11,
-  "P": 22,
+  "P": 23,
   "E": 11
  },
- "total": 157,
+ "total": 161,
  "install_points": [
   "IDCM-v9.0--W-Field-Lattice/04_extended_verify.py:259",
   "IDCM-v9.0--W-Field-Lattice/12_dirac_lattice_verify.py:213",
