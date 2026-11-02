@@ -482,6 +482,18 @@ put("v4_characters", len(_chars))
 put("v4_nontrivial", _nontriv)
 put("z_4_60", round((4 / 60 - _Ob) / _Ob_s, 2))
 put("omega_b_by_n", {str(n): round(((n - 1) / 60 - _Ob) / _Ob_s, 2) for n in (2, 3, 4, 5)})
+# ── 8o. Q2 重核（docs/18；獨立重算）
+put("ktree_33", 44 - 11)
+put("L5_times_B", 11 * 4)
+_mn2, _mp2 = Fraction("0.9395654205"), Fraction("0.93827208816")
+_dXi2 = Fraction("1.32171") - Fraction("1.31486")
+_r2 = (_mn2 - _mp2) / _dXi2
+_s2 = float(_r2) * float(((Fraction("0.00007")**2 + Fraction("0.00020")**2) ** Fraction(1,2)) / _dXi2)
+put("trace_ratio", round(float(_r2), 10))
+put("trace_z_B4", round((3/16 - float(_r2)) / _s2, 2))
+put("trace_z_B3", round((2/9 - float(_r2)) / _s2, 2))
+put("trace_z_B5", round((4/25 - float(_r2)) / _s2, 2))
+put("geo_4_3_only_B4", str(Fraction(4,3)) == str(Fraction(4, 4-1)))
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

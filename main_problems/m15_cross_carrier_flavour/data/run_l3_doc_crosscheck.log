@@ -150,8 +150,13 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 17_minus_one_derivation.md :: 非平凡數 ≈ 3（錨點窗口）
 [PASS] 17_minus_one_derivation.md :: 群種類數 ≈ 2（錨點窗口）
 [PASS] 17_minus_one_derivation.md :: z(4/60 證偽) ≈ 20.27（doc 命中 True）
+
+§13i  docs/18 — Q2 重核
+[PASS] 18_q2_provenance_recheck.md :: z(B=3) ≈ 5.72（錨點窗口）
+[PASS] 18_q2_provenance_recheck.md :: z(B=4) ≈ -0.22（doc 命中 True）
+[PASS] 18_q2_provenance_recheck.md :: z(B=5) ≈ -4.93（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 110、FAIL 0
+L3 總結：PASS 113、FAIL 0
 ==============================================================================

@@ -301,6 +301,12 @@ check_ctx("17_minus_one_derivation.md", "平凡 1 個、非平凡", "非平凡�
 check_ctx("17_minus_one_derivation.md", "階 4 之群只有兩種", "群種類數", 2, 2e-3, 8)
 check_num("17_minus_one_derivation.md", "z(4/60 證偽)", l2["z_4_60"], 5e-3)
 
+say("")
+say("§13i  docs/18 — Q2 重核")
+check_ctx("18_q2_provenance_recheck.md", "`B=2 +10.48σ`、`B=3 +5.72σ`", "z(B=3)", l2["trace_z_B3"], 5e-3, 16)
+check_num("18_q2_provenance_recheck.md", "z(B=4)", l2["trace_z_B4"], 5e-3)
+check_num("18_q2_provenance_recheck.md", "z(B=5)", l2["trace_z_B5"], 5e-3)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

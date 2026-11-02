@@ -1,0 +1,26 @@
+{
+ "geo_by_B": {
+  "2": "2",
+  "3": "3/2",
+  "4": "4/3",
+  "5": "5/4",
+  "6": "6/5",
+  "7": "7/6",
+  "8": "8/7"
+ },
+ "ktree": 33,
+ "L5_times_B": 44,
+ "ratio_obs": 0.1888076409,
+ "ratio_sigma": 0.0058405287,
+ "z_by_B": {
+  "2": 10.48,
+  "3": 5.72,
+  "4": -0.22,
+  "5": -4.93,
+  "6": -8.55,
+  "7": -11.36
+ },
+ "verdict": "Q2 downgraded: geometric series is B-agnostic; 44/33 is the same identity; B=4 from trace channel",
+ "n_pass": 8,
+ "n_fail": 0
+}
