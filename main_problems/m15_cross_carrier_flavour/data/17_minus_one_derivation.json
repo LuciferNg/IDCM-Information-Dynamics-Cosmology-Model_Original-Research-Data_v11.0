@@ -1,0 +1,21 @@
+{
+ "group_order": 4,
+ "characters": 4,
+ "trivial": 1,
+ "nontrivial": 3,
+ "z4_nontrivial": 3,
+ "omega_b_by_n": {
+  "2": -38.09,
+  "3": -18.64,
+  "4": 0.82,
+  "5": 20.27,
+  "6": 39.72
+ },
+ "passing_n": [
+  4
+ ],
+ "z_if_no_minus_one": 20.27,
+ "verdict": "3 = B-1 = number of non-trivial characters of the order-4 branch group",
+ "n_pass": 11,
+ "n_fail": 0
+}

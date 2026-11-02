@@ -295,6 +295,12 @@ check_ctx("16_zero_mode_arbitration.md", "物理（n = 1..44）", "物理 count"
 check_num("16_zero_mode_arbitration.md", "z(3/60)", l2["z_3_60"], 5e-3)
 check_num("16_zero_mode_arbitration.md", "z(2/60)", l2["z_2_60"], 5e-3)
 
+say("")
+say("§13h  docs/17 — 減一導出")
+check_ctx("17_minus_one_derivation.md", "平凡 1 個、非平凡", "非平凡數", l2["v4_nontrivial"], 2e-3, 6)
+check_ctx("17_minus_one_derivation.md", "階 4 之群只有兩種", "群種類數", 2, 2e-3, 8)
+check_num("17_minus_one_derivation.md", "z(4/60 證偽)", l2["z_4_60"], 5e-3)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

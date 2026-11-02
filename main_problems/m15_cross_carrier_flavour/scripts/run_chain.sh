@@ -28,6 +28,7 @@ run 13_remaining_four.py            run_13_remaining.log
 run 14_residual_push.py             run_14_residual.log
 run 15_forced_recompute.py          run_15_forced_recompute.log
 run 16_zero_mode_arbitration.py     run_16_zero_mode.log
+run 17_minus_one_derivation.py      run_17_minus_one.log
 run l2_independent_verify.py        run_l2_independent_verify.log
 run l3_doc_crosscheck.py            run_l3_doc_crosscheck.log
 

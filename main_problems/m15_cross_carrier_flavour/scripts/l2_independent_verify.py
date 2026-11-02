@@ -474,6 +474,14 @@ put("vis_phys_count", sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf(1) / 
 put("norm_z_90", round((3 / 90 - _Ob) / _Ob_s, 2))
 put("norm_z_180", round((3 / 180 - _Ob) / _Ob_s, 2))
 put("norm_z_45", round((3 / 45 - _Ob) / _Ob_s, 2))
+# ── 8n. 減一導出（docs/17；獨立重算）
+_chars = [((a, b), tuple((-1) ** (x * a + y * b) for x, y in ((0,0),(0,1),(1,0),(1,1))))
+          for a in (0, 1) for b in (0, 1)]
+_nontriv = sum(1 for _, v in _chars if not all(q == 1 for q in v))
+put("v4_characters", len(_chars))
+put("v4_nontrivial", _nontriv)
+put("z_4_60", round((4 / 60 - _Ob) / _Ob_s, 2))
+put("omega_b_by_n", {str(n): round(((n - 1) / 60 - _Ob) / _Ob_s, 2) for n in (2, 3, 4, 5)})
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

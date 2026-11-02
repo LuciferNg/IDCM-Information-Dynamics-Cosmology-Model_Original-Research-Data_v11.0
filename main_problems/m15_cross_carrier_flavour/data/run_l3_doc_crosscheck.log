@@ -145,8 +145,13 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 16_zero_mode_arbitration.md :: 物理 count ≈ 2（錨點窗口）
 [PASS] 16_zero_mode_arbitration.md :: z(3/60) ≈ 0.82（doc 命中 True）
 [PASS] 16_zero_mode_arbitration.md :: z(2/60) ≈ -18.64（doc 命中 True）
+
+§13h  docs/17 — 減一導出
+[PASS] 17_minus_one_derivation.md :: 非平凡數 ≈ 3（錨點窗口）
+[PASS] 17_minus_one_derivation.md :: 群種類數 ≈ 2（錨點窗口）
+[PASS] 17_minus_one_derivation.md :: z(4/60 證偽) ≈ 20.27（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 107、FAIL 0
+L3 總結：PASS 110、FAIL 0
 ==============================================================================
