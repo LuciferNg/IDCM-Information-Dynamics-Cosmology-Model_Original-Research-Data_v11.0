@@ -49,7 +49,7 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
           "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
           "14_barrier_gate", "15_mechanism_classification",
-          "16_definition_d6", "17_em_sign"):
+          "16_definition_d6", "17_em_sign", "18_w1_convention"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -62,7 +62,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
           "16_definition_d6", "17_surviving_results", "18_incoming_triage",
-          "19_em_sign_downstream"):
+          "19_em_sign_downstream", "20_status_audit"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -440,6 +440,21 @@ cl("19_em_sign_downstream", f"{j17e['sigma_band'][1]:.4f}", "1σ 上界")
 cl("19_em_sign_downstream", f"{j17e['checks_passed']}/{j17e['checks_total']}", "check 數")
 cl("19_em_sign_downstream", str(len(j17e["downstream"])), "下游項數")
 
+
+# ---------------- docs/20 ← 18_w1_convention（W1 約定閘）
+j18c = J["18_w1_convention"]
+cl("20_status_audit", f"{j18c['A_max_v1']:.5f}", "A_max v1")
+cl("20_status_audit", f"{j18c['A_max_v2']:.5f}", "A_max v2")
+cl("20_status_audit", f"{j18c['margin_v1']:.5f}", "v1 裕量")
+cl("20_status_audit", f"{j18c['gap_v2']:.5f}", "v2 缺口")
+cl("20_status_audit", f"{j18c['sigma_v1']:.3f}", "v1 σ")
+cl("20_status_audit", f"{j18c['sigma_v2']:.3f}", "v2 σ")
+cl("20_status_audit", f"{j18c['branch_diff']:.5f}", "兩支差")
+cl("20_status_audit", f"{j18c['gap_over_branch']*100:.1f}%", "缺口佔兩支差")
+cl("20_status_audit", f"{j18c['gamma_over_v1_pct']:.2f}%", "γ 超 v1")
+cl("20_status_audit", f"{j18c['gamma_over_v2_pct']:.2f}%", "γ 超 v2")
+cl("20_status_audit", f"{j18c['checks_passed']}/{j18c['checks_total']}", "check 數")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -474,7 +489,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 19,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 20,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

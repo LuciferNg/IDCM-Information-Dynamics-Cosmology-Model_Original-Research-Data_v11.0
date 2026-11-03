@@ -1,7 +1,7 @@
 {
   "script": "06_doc_crosscheck.py",
   "role": "docs ↔ data 交叉核",
-  "claims": 338,
+  "claims": 349,
   "per_doc": {
     "01_criteria_freeze": 8,
     "02_three_layer_classification": 31,
@@ -21,7 +21,8 @@
     "16_definition_d6": 9,
     "17_surviving_results": 29,
     "18_incoming_triage": 7,
-    "19_em_sign_downstream": 14
+    "19_em_sign_downstream": 14,
+    "20_status_audit": 11
   },
   "seals_data": [
     "6ca7a9d655bc04d076c1995be74a95abf4edf53d6337f713c6481ddcf0ef1115",
