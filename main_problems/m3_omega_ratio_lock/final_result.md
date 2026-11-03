@@ -27,9 +27,10 @@
 ## 審計（終態 2026-11-03）
 
 ```
-L1 17/17（兩跑 byte-identical 且 == canonical） ｜ L2 45 keys ＋ 10 恆等式 ｜
+L1 17/17（兩跑 byte-identical 且 == canonical） ｜ L2 47 keys ＋ 10 恆等式 ｜
 L3 27/27（19/19 檔有 claim） ｜ audit 14/14（FAIL 0、WARN 0；含 2 負控制）
 ※ 2026-11-03：補建 docs/13、docs/18、final_result；docs/03／11 加撤回指針
+階段性收尾 v1（2026-11-03）：開放項全保留；見 `01_problem_record §三十`
 ```
 
 ## 保留開放
