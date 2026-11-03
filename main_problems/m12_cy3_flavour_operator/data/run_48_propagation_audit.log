@@ -8,13 +8,23 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P1c 引用行號仍落載體 ±3 行內  cited L162, carrier L[162], dist=0
 
 [P2] 收件收據：target_pid=M12 之 handed_off 逐條
-    incoming handed_off 條數 = 2
+    incoming handed_off 條數 = 12
 [PASS] P2 M11 @2026-10-28T16:47:31  收據事件 2 條
 [PASS] P2 M1 @2026-10-29T01:49:53  收據事件 2 條
+[PASS] P2 M13 @2026-10-30T14:03:37  收據事件 1 條
+[PASS] P2 M13 @2026-10-30T21:12:20  收據事件 1 條
+[PASS] P2 M14 @2026-10-30T23:05:42  收據事件 1 條
+[PASS] P2 M13 @2026-10-30T23:12:48  收據事件 1 條
+[PASS] P2 M13 @2026-10-31T22:42:30  收據事件 1 條
+[PASS] P2 M13 @2026-11-01T05:56:27  收據事件 1 條
+[PASS] P2 M15 @2026-11-02T02:52:11  收據事件 1 條
+[PASS] P2 M13 @2026-11-02T06:53:33  收據事件 1 條
+[PASS] P2 M13 @2026-11-03T00:35:25  收據事件 1 條
+[PASS] P2 M3 @2026-11-03T16:28:10  收據事件 1 條
 
 [P3/P6] 根 README M 系列表 vs register 最新 state
-    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13']
-    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15']
+    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 [PASS] P3 M1 在根 README M 表
 [PASS] P3 M2 在根 README M 表
 [PASS] P3 M3 在根 README M 表
@@ -28,6 +38,8 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P3 M11 在根 README M 表
 [PASS] P3 M12 在根 README M 表
 [PASS] P3 M13 在根 README M 表
+[PASS] P3 M14 在根 README M 表
+[PASS] P3 M15 在根 README M 表
 [PASS] P3b M1 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M2 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M3 狀態字串含「部分閉合」  state=partial
@@ -41,11 +53,13 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P3b M11 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M12 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M13 狀態字串含「已註冊」  state=registered
-    快照 = {'total': 13, 'registered': ['M13'], 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'], 'closed': ['M6', 'M7', 'M9']}
-    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M13']}
-[PASS] P6a 總數相符  快照 13 vs 實算 13
+[PASS] P3b M14 狀態字串含「部分閉合」  state=partial
+[PASS] P3b M15 狀態字串含「部分閉合」  state=partial
+    快照 = {'total': 15, 'registered': ['M13'], 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9']}
+    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M13']}
+[PASS] P6a 總數相符  快照 15 vs 實算 15
 [PASS] P6b registered 分組相符  快照 ['M13'] vs 實算 ['M13']
-[PASS] P6b partial 分組相符  快照 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12'] vs 實算 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12']
+[PASS] P6b partial 分組相符  快照 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M14', 'M15'] vs 實算 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M14', 'M15']
 [PASS] P6b closed 分組相符  快照 ['M6', 'M7', 'M9'] vs 實算 ['M6', 'M7', 'M9']
 
 [P4] 慣例分離：同名 γ 恆等之配對索引
@@ -66,4 +80,4 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [P7] 本輪記錄落碟
 [PASS] P7 docs/40 存在且非空  10517 bytes
 
-RESULT: 44/44 PASS
+RESULT: 58/58 PASS

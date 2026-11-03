@@ -43,7 +43,8 @@
       "40_propagation_audit.md",
       "41_stage_closeout.md",
       "42_r27_precision_feasibility.md",
-      "43_r28_support_bound.md"
+      "43_r28_support_bound.md",
+      "44_inter_m_handoff_audit.md"
     ],
     "scripts": [
       "01_r1_domain_additivity.py",
@@ -96,6 +97,7 @@
       "48_propagation_audit.py",
       "49_precision_feasibility.py",
       "50_r28_support_dof_bound.py",
+      "51_inter_m_handoff_audit.py",
       "l2_independent_verify.py",
       "l3_doc_crosscheck.py"
     ],
@@ -119,6 +121,7 @@
       "47_allchain_audit.json",
       "49_precision_feasibility.json",
       "50_r28_support_dof_bound.json",
+      "51_inter_m_handoff_audit.json",
       "l2_independent_verify.json",
       "l3_doc_crosscheck.json"
     ],
@@ -173,6 +176,7 @@
       "run_48_propagation_audit.log",
       "run_49_precision_feasibility.log",
       "run_50_r28_support_dof_bound.log",
+      "run_51_inter_m_handoff_audit.log",
       "run_l2.log",
       "run_l2_independent_verify.log",
       "run_l3.log"
@@ -222,9 +226,9 @@
       "final_result.md.pre_patch_20261029_162942"
     ]
   },
-  "A2 NN 編號連續（1..50）": {
+  "A2 NN 編號連續（1..51）": {
     "status": "PASS",
-    "detail": "共 50 支"
+    "detail": "共 51 支"
   },
   "A3 01_r1_domain_additivity.py 重現 byte-identical": {
     "status": "PASS",
@@ -422,6 +426,10 @@
     "status": "PASS",
     "detail": "×2"
   },
+  "A3 51_inter_m_handoff_audit.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
   "A4a 每個 data/*.json 有產者腳本": {
     "status": "PASS",
     "detail": ""
@@ -612,15 +620,19 @@
     "status": "PASS",
     "detail": "fences=2 fffd=0"
   },
+  "A7 44_inter_m_handoff_audit.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=0 fffd=0"
+  },
   "A8 README 檔表覆蓋全部 docs": {
     "status": "PASS",
-    "detail": "README 提及 43 個 docs/ 條目 vs 實際 43 份"
+    "detail": "README 提及 44 個 docs/ 條目 vs 實際 44 份"
   },
   "_summary": {
     "fail": 0,
     "warn": 0,
-    "docs": 43,
-    "scripts_nn": 49,
+    "docs": 44,
+    "scripts_nn": 50,
     "runs": 2
   }
 }

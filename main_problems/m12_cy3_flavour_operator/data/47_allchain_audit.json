@@ -3,13 +3,13 @@
  "info": 4,
  "res": {
   "A1": {
-   "docs": 43,
-   "scripts": 48,
-   "logs": 48
+   "docs": 44,
+   "scripts": 49,
+   "logs": 49
   },
-  "A2": 43,
+  "A2": 44,
   "A3": {
-   "json": 21,
+   "json": 22,
    "orphan": 0
   },
   "A4": 0,
@@ -22,8 +22,8 @@
    }
   },
   "A6": {
-   "covered": 42,
-   "total": 43,
+   "covered": 43,
+   "total": 44,
    "missing": [
     39
    ]
@@ -73,6 +73,7 @@
     41,
     42,
     43,
+    44,
     52
    ],
    "missing": []
