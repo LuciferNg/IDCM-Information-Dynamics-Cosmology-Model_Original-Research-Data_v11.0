@@ -528,6 +528,18 @@
   "trace_z_B3": 5.72,
   "trace_z_B5": -4.93,
   "geo_4_3_only_B4": true,
+  "budget_120": 76,
+  "omega_b_120": 0.039474,
+  "sqrt5_sector_90": [
+   9,
+   18,
+   27,
+   36
+  ],
+  "sqrt5_sector_88": [],
+  "pair_sum_9_36": "4.0",
+  "pair_sum_18_27": "4.0",
+  "triple_4_on_90": 4.0,
   "pdg_m_p": "0.93827208816",
   "pdg_m_n": "0.9395654205",
   "pdg_s_xi_minus": "0.00007",

@@ -1,0 +1,59 @@
+{
+ "budget": {
+  "88": {
+   "N_d": 44,
+   "total": 60,
+   "omega_b": 0.05,
+   "z": 0.82,
+   "12_divides": false,
+   "30_divides": false
+  },
+  "90": {
+   "N_d": 45,
+   "total": 61,
+   "omega_b": 0.04918,
+   "z": -0.14,
+   "12_divides": false,
+   "30_divides": true
+  },
+  "120": {
+   "N_d": 60,
+   "total": 76,
+   "omega_b": 0.039474,
+   "z": -11.47,
+   "12_divides": true,
+   "30_divides": true
+  }
+ },
+ "sqrt5_sector_90": [
+  9,
+  18,
+  27,
+  36
+ ],
+ "sqrt5_sector_88": [],
+ "pair_sums": {
+  "9+36": 4,
+  "18+27": 4
+ },
+ "triple_4_on": {
+  "88": 0,
+  "90": 1
+ },
+ "ids": {
+  "R1": "🔴",
+  "R2": "🟡",
+  "R3": "🔴",
+  "J2": "🔴",
+  "L2": "🔴",
+  "F1": "🔴",
+  "H2": "🔴"
+ },
+ "verdicts": {
+  "Z3_carrier": "locked (N_d=44)",
+  "Z3_gp": "permanently closed on /88",
+  "Z3_phi": "not transferable"
+ },
+ "n_pass": 14,
+ "n_fail": 0
+}

@@ -494,6 +494,15 @@ put("trace_z_B4", round((3/16 - float(_r2)) / _s2, 2))
 put("trace_z_B3", round((2/9 - float(_r2)) / _s2, 2))
 put("trace_z_B5", round((4/25 - float(_r2)) / _s2, 2))
 put("geo_4_3_only_B4", str(Fraction(4,3)) == str(Fraction(4, 4-1)))
+# ── 8p. M14 承接（docs/19；獨立重算）
+put("budget_120", 60 + 16)
+put("omega_b_120", round(3 / 76, 6))
+put("sqrt5_sector_90", [9, 18, 27, 36])
+put("sqrt5_sector_88", [])
+_g90 = lambda n: 4 * mp.sin(mp.pi * n / 90) ** 2
+put("pair_sum_9_36", str(mp.nint(_g90(9) + _g90(36))))
+put("pair_sum_18_27", str(mp.nint(_g90(18) + _g90(27))))
+put("triple_4_on_90", round(float(_g90(9) + _g90(15) + _g90(27)), 6))
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))
