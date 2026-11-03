@@ -66,6 +66,8 @@ INPUTS = {
     "m_Sp": "1189.37",  "s_Sp": "0.07",      # Σ⁺
     "m_Xm": "1321.71",  "s_Xm": "0.07",      # Ξ⁻
     "m_X0": "1314.86",  "s_X0": "0.20",      # Ξ⁰
+    "m_Xc0": "2470.44", "s_Xc0": "0.28",     # Ξc⁰（PDG 2.47044E+00 GeV，±2.8E-04）
+    "m_Xcp": "2467.71", "s_Xcp": "0.23",     # Ξc⁺（PDG 2.46771E+00 GeV，±2.3E-04）
     # 結構計數（已註冊）
     "N_d": 44, "B": 4, "N_gen": 3, "gamma44": 4, "sum_gamma_even": 90,
 }
@@ -182,6 +184,12 @@ DERIVE = {
     "target_3_16": lambda I: mpf(I["N_gen"])/mpf(I["B"])**2,
     "target_3_8": lambda I: mp.mpf(3)/8,
     "trace_sigma_chan": lambda I: _dN(I)/_dS2(I),
+    # 2026-11-03 新增：Ξc 分裂（R3）＋ B=5 之 3σ 所需 σ(Ξ⁰)（R2 定界）
+    "Xi_c_split": lambda I: mpf(I["m_Xc0"]) - mpf(I["m_Xcp"]),
+    "Xi_c_sigma": lambda I: mp.sqrt(mpf(I["s_Xc0"]) ** 2 + mpf(I["s_Xcp"]) ** 2),
+    "sigma_Xi0_needed_B5": lambda I: (
+        mp.mpf("0.20") * (mp.mpf(4) / 10 - mp.mpf(3) / 8) / 3
+        / mp.sqrt((2 * _s_dN(I) / _dX(I)) ** 2 + (2 * _dN(I) * _s_dX(I) / _dX(I) ** 2) ** 2)),
     # 2026-11-02 新增：α 組合 = 1/(2·trace)（與迹恆等）；σ 由 σ(trace) 傳播
     "alpha_sum_ratio": lambda I: 1 / (2 * (_rho_u(I) + _rho_d(I))),
     "sigma_alpha_sum_ratio": lambda I: (mp.sqrt(_var(_rho_u, I) + _var(_rho_d, I)

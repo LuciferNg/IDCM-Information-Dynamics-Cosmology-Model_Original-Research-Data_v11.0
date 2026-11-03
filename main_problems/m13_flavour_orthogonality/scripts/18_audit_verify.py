@@ -51,7 +51,7 @@ def hdr(s):
     LOG.append("\n" + "=" * 78 + f"\n{s}\n" + "=" * 78)
 
 
-L1 = sorted(p for p in SCRIPTS.glob("[01][0-9]_*.py"))
+L1 = sorted(p for p in SCRIPTS.glob("[0-2][0-9]_*.py"))
 EXTRA = [SCRIPTS / "l2_independent_verify.py", SCRIPTS / "l3_doc_crosscheck.py"]
 
 # 正典映射（2026-10-30 審計建立）：腳本 stem → log stem
@@ -76,6 +76,8 @@ LOGMAP = {
     "17_hypothesis_verification": "run_17_verification",
     "18_audit_verify": "run_18_audit_verify",
     "19_handoff_replies": "run_19_handoff_replies",
+    "20_channel_optimization": "run_20_channel",
+    "21_r1_r3_push": "run_21_r1_r3",
 }
 CANON = {p: DATA / f"{LOGMAP[p.stem]}.log" for p in L1 if p.stem in LOGMAP}
 # A4 排除本檔自身（否則 18→18 無限遞歸）；本檔之可重現性由「跑兩次 cmp」外部驗證
@@ -108,7 +110,7 @@ def main():
     on_disk = {p.stem for p in L1}
     declared = {LOGMAP[s] for s in on_disk if s in LOGMAP}
     actual = {p.stem for p in DATA.glob("run_*.log")}
-    actual_l1 = {s for s in actual if re.match(r"^run_[01][0-9]_", s)}
+    actual_l1 = {s for s in actual if re.match(r"^run_[0-2][0-9]_", s)}
     missing_log = sorted(s for s in declared if s not in actual_l1)
     orphan_log = sorted(actual_l1 - declared)
     undeclared = sorted(s for s in on_disk if s not in LOGMAP)
@@ -183,7 +185,7 @@ def main():
         chk("A7c3 final_result 保留判死／禁區段",
             all(k in ftxt for k in ("判死", "禁區", "已否證")) or ("判死／禁區" in ftxt))
         chk("A7c4 final_result 四數與 audit 一致",
-            all(k in ftxt for k in ("19/19", "104/104", "35/35")))
+            all(k in ftxt for k in ("20/20", "109/109", "35/35")))
     txt = pr.read_text(encoding="utf-8")
     chk("A7d 問題記錄載明 🟡 狀態", "🟡" in txt)
 

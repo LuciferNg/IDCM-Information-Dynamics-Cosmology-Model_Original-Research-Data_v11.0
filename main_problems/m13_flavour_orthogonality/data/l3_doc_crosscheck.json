@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "66 keys"
+    "detail": "69 keys"
   },
   "C.01_reproduction_.ρ_d": {
     "pass": true,
@@ -343,6 +343,22 @@
     "pass": true,
     "detail": "L2 0.0116811 ↔ 文檔 0.0116811（rel 4.0e-08）"
   },
+  "C.18_full_push.迹（Ξ 通道）": {
+    "pass": true,
+    "detail": "L2 0.377615 ↔ 文檔 0.377615（rel 1.3e-10）"
+  },
+  "C.18_full_push.Ξc⁰−Ξc⁺": {
+    "pass": true,
+    "detail": "L2 2.73 ↔ 文檔 2.73（rel 0.0e+00）"
+  },
+  "C.18_full_push.σ(Ξc 分裂)": {
+    "pass": true,
+    "detail": "L2 0.362353 ↔ 文檔 0.3624（rel 1.3e-04）"
+  },
+  "C.18_full_push.σ(Ξ⁰) 需 ≤（vs B=5）": {
+    "pass": true,
+    "detail": "L2 0.142681 ↔ 文檔 0.1427（rel 1.3e-04）"
+  },
   "F.01_reproduction_gate 全命中（5/5）": {
     "pass": true,
     "detail": ""
@@ -411,12 +427,16 @@
     "pass": true,
     "detail": ""
   },
+  "F.18_full_push 全命中（4/4）": {
+    "pass": true,
+    "detail": ""
+  },
   "F.final_result 全命中（8/8）": {
     "pass": true,
     "detail": ""
   },
   "_summary": {
-    "checks": 104,
+    "checks": 109,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": "5/5",
@@ -436,7 +456,8 @@
       "docs/15_audit_report.md": "6/6",
       "docs/16_propagation_audit.md": "5/5",
       "docs/17_handoff_replies.md": "9/9",
-      "final_result.md": "8/8"
+      "final_result.md": "8/8",
+      "docs/18_full_push.md": "4/4"
     }
   }
 }

@@ -5,7 +5,7 @@
 [PASS] A1a 每個 L1 腳本都有 canonical log（顯式 LOGMAP）  |  缺 []
 [PASS] A1b 無孤兒 log  |  孤兒 []
 [PASS] A1c 所有腳本已入 LOGMAP  |  未宣告 []
-[PASS] A1d 腳本數 = log 數（19）  |  19 vs 19
+[PASS] A1d 腳本數 = log 數（21）  |  21 vs 21
 
 ==============================================================================
 §A2 逆向綁定（headline → producer log）
@@ -31,7 +31,7 @@
 ==============================================================================
 §A4 重跑 byte-identical（canonical log 比對）
 ==============================================================================
-[PASS] A4 全部 L1（18 支，排除本檔）重跑 byte-identical  |  []
+[PASS] A4 全部 L1（20 支，排除本檔）重跑 byte-identical  |  []
 
 ==============================================================================
 §A5 產物綁定（L2／L3 納入審計；trap §7.3）
@@ -44,7 +44,7 @@
 ==============================================================================
 §A6 文檔核（引用 L3 結果）
 ==============================================================================
-[PASS] A6 全部 18 份 doc 命中率 100%  |  {'docs/01_reproduction_gate.md': '5/5', 'docs/02_null_capacity.md': '5/5', 'docs/03_closure_scan.md': '2/2', 'docs/04_carry_by_2_candidate.md': '6/6', 'docs/05_universality.md': '3/3', 'docs/06_ktree_alpha_probe.md': '2/2', 'docs/07_alpha_source.md': '1/1', 'docs/08_precision_budget.md': '5/5', 'docs/09_completeness_audit.md': '6/6', 'docs/10_sector_extension.md': '2/2', 'docs/11_t1_provenance_theorem.md': '2/2', 'docs/12_rival_lattice_audit.md': '4/4', 'docs/13_symmetric_trace_closure.md': '8/8', 'docs/14_hypothesis_verification.md': '6/6', 'docs/15_audit_report.md': '6/6', 'docs/16_propagation_audit.md': '5/5', 'docs/17_handoff_replies.md': '9/9', 'final_result.md': '8/8'}
+[PASS] A6 全部 19 份 doc 命中率 100%  |  {'docs/01_reproduction_gate.md': '5/5', 'docs/02_null_capacity.md': '5/5', 'docs/03_closure_scan.md': '2/2', 'docs/04_carry_by_2_candidate.md': '6/6', 'docs/05_universality.md': '3/3', 'docs/06_ktree_alpha_probe.md': '2/2', 'docs/07_alpha_source.md': '1/1', 'docs/08_precision_budget.md': '5/5', 'docs/09_completeness_audit.md': '6/6', 'docs/10_sector_extension.md': '2/2', 'docs/11_t1_provenance_theorem.md': '2/2', 'docs/12_rival_lattice_audit.md': '4/4', 'docs/13_symmetric_trace_closure.md': '8/8', 'docs/14_hypothesis_verification.md': '6/6', 'docs/15_audit_report.md': '6/6', 'docs/16_propagation_audit.md': '5/5', 'docs/17_handoff_replies.md': '9/9', 'final_result.md': '8/8', 'docs/18_full_push.md': '4/4'}
 [PASS] A6b L3 FAIL = 0
 
 ==============================================================================
@@ -67,7 +67,7 @@
 ==============================================================================
 §A9 跨記錄引用掃描（v11 main_problems，排除 venv／其他版本）
 ==============================================================================
-[PASS] A9 跨記錄引用已列舉（供傳播表）  |  32 處: ['main_problems/m14_uds_assignment/final_result.md:20', 'main_problems/m14_uds_assignment/SESSION_START.md:35', 'main_problems/m14_uds_assignment/01_problem_record.md:40', 'main_problems/m12_cy3_flavour_operator/final_result.md:186', 'main_problems/m12_cy3_flavour_operator/SESSION_START.md:369', 'main_problems/m12_cy3_flavour_operator/01_problem_record.md:56']
+[PASS] A9 跨記錄引用已列舉（供傳播表）  |  44 處: ['main_problems/m14_uds_assignment/final_result.md:20', 'main_problems/m14_uds_assignment/SESSION_START.md:35', 'main_problems/m14_uds_assignment/01_problem_record.md:40', 'main_problems/m12_cy3_flavour_operator/final_result.md:186', 'main_problems/m12_cy3_flavour_operator/final_result.md:311', 'main_problems/m12_cy3_flavour_operator/SESSION_START.md:369']
 
 ==============================================================================
 §A10 時序閘（修正後下游必須重算）

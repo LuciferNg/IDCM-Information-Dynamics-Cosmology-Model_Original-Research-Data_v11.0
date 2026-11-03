@@ -181,6 +181,11 @@ CLAIMS = [
     {"doc": "final_result.md", "key": "sigma_alpha_sum_ratio", "label": "σ(α 組合)"},
     {"doc": "final_result.md", "key": "sigma_rho_d", "label": "σ_ρd"},
     {"doc": "final_result.md", "key": "sigma_trace", "label": "σ_迹"},
+    # docs/18 全推（R1／R2／R3）
+    {"doc": "docs/18_full_push.md", "key": "trace", "label": "迹（Ξ 通道）"},
+    {"doc": "docs/18_full_push.md", "key": "Xi_c_split", "label": "Ξc⁰−Ξc⁺"},
+    {"doc": "docs/18_full_push.md", "key": "Xi_c_sigma", "label": "σ(Ξc 分裂)"},
+    {"doc": "docs/18_full_push.md", "key": "sigma_Xi0_needed_B5", "label": "σ(Ξ⁰) 需 ≤（vs B=5）"},
 ]
 
 
