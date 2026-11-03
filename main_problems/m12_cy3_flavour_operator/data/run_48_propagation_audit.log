@@ -23,8 +23,8 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P2 M3 @2026-11-03T16:28:10  收據事件 1 條
 
 [P3/P6] 根 README M 系列表 vs register 最新 state
-    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15']
-    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M16']
+    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 [PASS] P3 M1 在根 README M 表
 [PASS] P3 M2 在根 README M 表
 [PASS] P3 M3 在根 README M 表
@@ -40,6 +40,7 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P3 M13 在根 README M 表
 [PASS] P3 M14 在根 README M 表
 [PASS] P3 M15 在根 README M 表
+[PASS] P3 M16 在根 README M 表
 [PASS] P3b M1 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M2 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M3 狀態字串含「部分閉合」  state=partial
@@ -55,10 +56,11 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P3b M13 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M14 狀態字串含「部分閉合」  state=partial
 [PASS] P3b M15 狀態字串含「部分閉合」  state=partial
-    快照 = {'total': 15, 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9']}
-    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9']}
-[PASS] P6a 總數相符  快照 15 vs 實算 15
-[PASS] P6b registered 分組相符  快照 [] vs 實算 []
+[PASS] P3b M16 狀態字串含「已註冊」  state=registered
+    快照 = {'total': 16, 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M16']}
+    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M16']}
+[PASS] P6a 總數相符  快照 16 vs 實算 16
+[PASS] P6b registered 分組相符  快照 ['M16'] vs 實算 ['M16']
 [PASS] P6b partial 分組相符  快照 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'] vs 實算 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15']
 [PASS] P6b closed 分組相符  快照 ['M6', 'M7', 'M9'] vs 實算 ['M6', 'M7', 'M9']
 
@@ -80,4 +82,4 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [P7] 本輪記錄落碟
 [PASS] P7 docs/40 存在且非空  10517 bytes
 
-RESULT: 58/58 PASS
+RESULT: 60/60 PASS

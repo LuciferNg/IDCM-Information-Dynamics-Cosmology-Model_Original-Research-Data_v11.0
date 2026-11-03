@@ -46,7 +46,8 @@
       "43_r28_support_bound.md",
       "44_inter_m_handoff_audit.md",
       "45_r29_m13_receipt.md",
-      "46_r30_recompute_affected.md"
+      "46_r30_recompute_affected.md",
+      "47_r31_m14_reply.md"
     ],
     "scripts": [
       "01_r1_domain_additivity.py",
@@ -102,6 +103,7 @@
       "51_inter_m_handoff_audit.py",
       "52_r29_m13_receipt.py",
       "53_r30_recompute_affected.py",
+      "54_r31_m14_reply.py",
       "l2_independent_verify.py",
       "l3_doc_crosscheck.py"
     ],
@@ -128,6 +130,7 @@
       "51_inter_m_handoff_audit.json",
       "52_r29_m13_receipt.json",
       "53_r30_recompute_affected.json",
+      "54_r31_m14_reply.json",
       "l2_independent_verify.json",
       "l3_doc_crosscheck.json"
     ],
@@ -185,6 +188,7 @@
       "run_51_inter_m_handoff_audit.log",
       "run_52_r29_m13_receipt.log",
       "run_53_r30_recompute_affected.log",
+      "run_54_r31_m14_reply.log",
       "run_l2.log",
       "run_l2_independent_verify.log",
       "run_l3.log"
@@ -234,9 +238,9 @@
       "final_result.md.pre_patch_20261029_162942"
     ]
   },
-  "A2 NN 編號連續（1..53）": {
+  "A2 NN 編號連續（1..54）": {
     "status": "PASS",
-    "detail": "共 53 支"
+    "detail": "共 54 支"
   },
   "A3 01_r1_domain_additivity.py 重現 byte-identical": {
     "status": "PASS",
@@ -446,6 +450,10 @@
     "status": "PASS",
     "detail": "×2"
   },
+  "A3 54_r31_m14_reply.py 重現 byte-identical": {
+    "status": "PASS",
+    "detail": "×2"
+  },
   "A4a 每個 data/*.json 有產者腳本": {
     "status": "PASS",
     "detail": ""
@@ -461,8 +469,8 @@
   "A6": {
     "01_problem_record.md": "| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |",
     "SESSION_START.md": "**狀態**：`(3,16,41)` 屬 🟡 未決（差 0.01σ），非判死；若 `ρ_u` 之 σ 稍寬或 `δ_u` 向負方移動即通過。",
-    "README.md": "## 狀態: 🟡 partial — **R1–R30 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算＋支撐下界＋跨 M 裁決＋**受影響重算**（2026-11-03）；★ R30 更正：`Ξc` 符號真機制＝ROW 硬編碼（非 `CONTENT`）；`B2`／`C2` 預言式同源錯 ⟹ R5 tally **通 7／死 1**（判死 2→0）、R6 Ξ-型 **3 死 2 通**；殘餘仍為「需**質性新載體**」；`close` 觸發器不變",
-    "final_result.md": "**狀態**：🟡 partial（2026-11-03；**R1–R30 完成**；五類 no-go ＋ 奇宇稱定理 ＋ 單模／二模支撐定理 ＋ M13 兩路皆負 ＋ **R30 受影響重算**；★ R30：`Ξc` 符號真機制＝ROW 硬編碼、`B2`／`C2` 同源 ⟹ R5 tally **通 7／死 1**、R6 Ξ-型 **3 死 2 通**；殘餘收窄為「需**質性新載體**」；精度閘 `σ_ρd ÷ 半格 = 3.6724`；**未 close、未裁決**）"
+    "README.md": "## 狀態: 🟡 partial — **R1–R31 完成**＋三層審計＋全鏈審計＋傳播審計＋階段性 close-out＋精度預算＋支撐下界＋跨 M 裁決＋受影響重算＋**M14 自主判定**（2026-11-03）；★ R31：`12 = 大小C1(A₅) = V(Ico) = F₅(RH)` 閉合出處；`3 = h11/12` **判死**（跨載體無算子＋`B−1` 冗餘＋無選擇原理）；`σ(δ_c)` 差異源 = `Σc⁺` 誤差 0.22 vs 0.19（皆全傳播）；殘餘仍為「需**質性新載體**」",
+    "final_result.md": "**狀態**：🟡 partial（2026-11-03；**R1–R31 完成**；五類 no-go ＋ 奇宇稱定理 ＋ 單模／二模支撐定理 ＋ M13 兩路皆負 ＋ R30 受影響重算 ＋ **R31 M14 自主判定**；★ R31：`12 = 大小C1(A₅)` 出處閉合、`3 = h11/12` 判死；殘餘收窄為「需**質性新載體**」；精度閘 `σ_ρd ÷ 半格 = 3.6724`；**未 close、未裁決**）"
   },
   "A7 01_problem_statement.md 圍欄偶數 & 無 U+FFFD": {
     "status": "PASS",
@@ -648,15 +656,19 @@
     "status": "PASS",
     "detail": "fences=0 fffd=0"
   },
+  "A7 47_r31_m14_reply.md 圍欄偶數 & 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "fences=2 fffd=0"
+  },
   "A8 README 檔表覆蓋全部 docs": {
     "status": "PASS",
-    "detail": "README 提及 46 個 docs/ 條目 vs 實際 46 份"
+    "detail": "README 提及 47 個 docs/ 條目 vs 實際 47 份"
   },
   "_summary": {
     "fail": 0,
     "warn": 0,
-    "docs": 46,
-    "scripts_nn": 52,
+    "docs": 47,
+    "scripts_nn": 53,
     "runs": 2
   }
 }
