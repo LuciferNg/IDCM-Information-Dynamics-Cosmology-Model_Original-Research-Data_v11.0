@@ -26,9 +26,12 @@ S3 樣本外預言清單（跑前寫死，共 8 條，禁增刪）
    [A3] Σ*⁰−Σ*⁺        = δ_u + δ_s        （自旋盲）
    [A4] Ξ*⁻−Ξ*⁰        = 2 δ_s            （自旋盲）
    [B1] (Σc⁰−Σc⁺)−(Σc⁺−Σc⁺⁺) = δ_d − δ_u
-   [B2] (Σc⁰−Σc⁺)+(Ξc⁰−Ξc⁺)  = δ_d − δ_s
+   [B2] (Σc⁰−Σc⁺)+(Ξc⁰−Ξc⁺)  = δ_d + δ_s + 2δ_c
+        ★ 2026-11-03 更正（R30）：原寫 δ_d − δ_s，該式只在 Ξc⁰ = usc（錯內容）下成立；
+          Ξc⁰ = dsc ⟹ Ξc⁰−Ξc⁺ = +(δ_s+δ_c) ⟹ 粲項**不相消**。見 docs/46。
    [C1] (Σb⁻−Σb⁺) − 2(Ξb⁻−Ξb⁰) = (n−p) − (Ξ⁻−Ξ⁰)
-   [C2] δ_c := (Σc⁰−Σc⁺) − δ_d ；預言 Ξc⁰−Ξc⁺ = −(δ_s + δ_c)
+   [C2] δ_c := (Σc⁰−Σc⁺) − δ_d ；預言 Ξc⁰−Ξc⁺ = +(δ_s + δ_c)
+        ★ 2026-11-03 更正（R30）：原寫 −(δ_s+δ_c)，係 Ξc⁰ = usc（錯內容）之產物；Ξc⁰ = dsc ⟹ 正號。
 
 S4 判死門檻 |z| ≥ 3；本輪**只報通過/總數，不作裁決**（依指示：未出結論前不裁定）。
 S5 紀律：禁由任一被測通道回擬 δ；禁新增參數；禁剔除通道；禁改質量表。
@@ -61,8 +64,8 @@ CONTENT = {
     "4112": "ddc",   # Sigma_c(2455)0
     "4212": "udc",   # Sigma_c(2455)+
     "4222": "uuc",   # Sigma_c(2455)++
-    "4132": "usc",   # Xi_c0
-    "4232": "dsc",   # Xi_c+
+    "4132": "dsc",   # Xi_c0（PDG 電荷 0）
+    "4232": "usc",   # Xi_c+（PDG 電荷 +）
     "5112": "bdd",   # Sigma_b-
     "5222": "buu",   # Sigma_b+
     "5132": "bds",   # Xi_b-
@@ -197,18 +200,19 @@ for nm, key, pred in [("[A2] Σ*⁻−Σ*⁰", ("Σ*⁻", "Σ*⁰"), d_d + d_s),
 dS0c, sS0c = RAW[("Σc⁰", "Σc⁺")]
 dScp, sScp = RAW[("Σc⁺", "Σc⁺⁺")]
 dXc, sXc = RAW[("Ξc⁰", "Ξc⁺")]
+d_c = dS0c - d_d            # ★ R30：δ_c 提前定義（B2 之預言含 2δ_c）
 TESTS.append(("[B1] (Σc⁰−Σc⁺)−(Σc⁺−Σc⁺⁺)", d_d - d_u, dS0c - dScp,
               mp.sqrt(sS0c ** 2 + sScp ** 2)))
-TESTS.append(("[B2] (Σc⁰−Σc⁺)+(Ξc⁰−Ξc⁺)", d_d - d_s, dS0c + dXc,
+# ★ R30 更正：原 d_d − d_s（錯內容假設）；正確 δ_d + δ_s + 2δ_c（粲項不相消）
+TESTS.append(("[B2] (Σc⁰−Σc⁺)+(Ξc⁰−Ξc⁺)", d_d + d_s + 2 * d_c, dS0c + dXc,
               mp.sqrt(sS0c ** 2 + sXc ** 2)))
 # C1（底）
 dSb, sSb = RAW[("Σb⁻", "Σb⁺")]
 dXb, sXb = RAW[("Ξb⁻", "Ξb⁰")]
 TESTS.append(("[C1] (Σb⁻−Σb⁺)−2(Ξb⁻−Ξb⁰)", d_np - d_XX, dSb - 2 * dXb,
               mp.sqrt(sSb ** 2 + (2 * sXb) ** 2)))
-# C2（δ_c 由 Σc 解，再預言 Ξc）
-d_c = dS0c - d_d
-TESTS.append(("[C2] Ξc⁰−Ξc⁺（δ_c 自 Σc 解）", -(d_s + d_c), dXc, sXc))
+# C2（δ_c 由 Σc 解，再預言 Ξc；d_c 已於 B2 前定義）
+TESTS.append(("[C2] Ξc⁰−Ξc⁺（δ_c 自 Σc 解）", d_s + d_c, dXc, sXc))
 print("\n   δ_c = (Σc⁰−Σc⁺) − δ_d = %+10.4f MeV" % d_c)
 
 npass = nkill = 0

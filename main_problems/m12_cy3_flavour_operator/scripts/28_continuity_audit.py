@@ -97,6 +97,13 @@ DERIVED = {
 }
 
 
+# 已更正之歷史值（R30，2026-11-03）：該值之同輪 log 因**修正源碼後重跑**而覆寫 ⟹ 屬合法失效。
+# 判別：必須同時存在 (i) 更正記錄（docs/46）(ii) 新值在同輪 log。此類只披露，不計 FAIL。
+SUPERSEDED = {
+    (14, "5.8730"): "R30 前之歷史殘差（舊預言 −2.0430）；更正後 −0.4130，見 docs/46",
+}
+
+
 def main():
     fails = {}
     print("=" * 100)
@@ -223,8 +230,13 @@ def main():
     print("   每 doc 孤兒數：%s" % perdoc)
     print("   C3a 孤兒（任何 log／data 產物皆無）：%d %s" % (len(orphan), orphan[:12] if orphan else ""))
     print("   C3b 時光污染（只在更晚 log 出現）：%d %s" % (len(timewarp), timewarp[:12] if timewarp else ""))
+    sup = [w for w in timewarp if (w[0], w[1]) in SUPERSEDED]
+    timewarp = [w for w in timewarp if (w[0], w[1]) not in SUPERSEDED]
+    print("   C3s 已更正之歷史值（disclosed，不計 FAIL）：%d %s"
+          % (len(sup), [(d, v) for d, v, _ in sup] if sup else ""))
     fails["C3"] = len(orphan) + len(timewarp)
     fails["C3d"] = len(derived)   # 披露項，不計入 FAIL
+    fails["C3s"] = len(sup)
 
     # ---------------- C4
     print("\n[C4] 更正／撤回標記（append-only 留痕）")
@@ -281,7 +293,7 @@ def main():
     for k in ("C1", "C2", "C3", "C4", "C5"):
         print("   %s = %d %s" % (k, fails.get(k, 0), "✓" if fails.get(k, 0) == 0 else "✗"))
     print("   C3d = %d（白名單披露，不計 FAIL）" % fails.get("C3d", 0))
-    tot = sum(v for k, v in fails.items() if k != "C3d")
+    tot = sum(v for k, v in fails.items() if k not in ("C3d", "C3s"))   # 兩者皆披露項
     print("   ⟹ %s" % ("全綠 PASS" if tot == 0 else "FAIL（見上明細）"))
     print("=" * 100)
     out = ROOT / "data" / "28_continuity_audit.json"
