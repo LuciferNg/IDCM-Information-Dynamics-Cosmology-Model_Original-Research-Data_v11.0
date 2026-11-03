@@ -313,6 +313,13 @@ check_num("19_handoff_m14_ids_and_z3.md", "Ω_b(N=120)", l2["omega_b_120"], 5e-4
 check_ctx("19_handoff_m14_ids_and_z3.md", "預算升到 76", "N=120 預算", l2["budget_120"], 2e-3, 6)
 check_num("19_handoff_m14_ids_and_z3.md", "Σγ(9,15,27) on /90", l2["triple_4_on_90"], 5e-4)
 
+say("")
+say("§13k  docs/20 — R2 續推")
+check_ctx("20_r2_composite_mods_push.md", "恰 3 組", "共振組數", l2["res_count"], 2e-3, 6)
+check_num("20_r2_composite_mods_push.md", "d/u 觀測", l2["obs_du"], 5e-3)
+check_num("20_r2_composite_mods_push.md", "s/d 之 z", l2["z_sd_best"], 5e-3)
+check_num("20_r2_composite_mods_push.md", "s/u 之 z", l2["z_su_best"], 5e-3)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

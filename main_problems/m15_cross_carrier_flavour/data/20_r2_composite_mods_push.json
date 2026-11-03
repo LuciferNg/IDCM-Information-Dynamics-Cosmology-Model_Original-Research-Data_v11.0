@@ -1,0 +1,49 @@
+{
+ "resonance_triples": [
+  [
+   9,
+   15,
+   18
+  ],
+  [
+   9,
+   27,
+   30
+  ],
+  [
+   15,
+   27,
+   36
+  ]
+ ],
+ "closing_modes": [
+  18,
+  30,
+  36
+ ],
+ "identity_g36_eq_g18_over_g9": "3.61803398875",
+ "obs_ratios": {
+  "d/u": 2.162,
+  "s/d": 20.0,
+  "s/u": 43.2407
+ },
+ "obs_sigma": {
+  "d/u": 0.5385,
+  "s/d": 2.7599,
+  "s/u": 10.5865
+ },
+ "best_perm": [
+  "18",
+  "30",
+  "36"
+ ],
+ "best_chi2": 61.1,
+ "best_z": {
+  "d/u": 0.02,
+  "s/d": -6.81,
+  "s/u": -3.84
+ },
+ "verdict": "R2 red: mass/flavour reading refuted (best S3 permutation chi2 = 61.1)",
+ "n_pass": 11,
+ "n_fail": 0
+}

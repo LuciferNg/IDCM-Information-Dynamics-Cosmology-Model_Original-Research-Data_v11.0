@@ -257,7 +257,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（18 份）｜scripts/（21 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（19 份）｜scripts/（22 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -265,8 +265,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3）
-├── scripts/           ← 21 支（18 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3 → 20 R2 續推）
+├── scripts/           ← 22 支（19 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -295,6 +295,7 @@ m15_cross_carrier_flavour/
 | `docs/17_minus_one_derivation.md` | ★★★★★ **減一導出：非平凡特徵標 = `B−1`；與零模排除同一原則；`4/60` 被 +20.27σ 排除 ⟹ 減一硬性要求** | ✅ |
 | `docs/18_q2_provenance_recheck.md` | ★★★★ **Q2 重核：撤回「兩條零輸入源」（實為一恆等＋一巧合）；`B=4` 只由迹通道選定 ⟹ 🟢→🟡** | 🟡 |
 | `docs/19_handoff_m14_ids_and_z3.md` | ★★★★ **M14 承接：`N` 鎖死 88／GP 永久封閉／φ 不可移植；七 id 6 死 1 命名；`ℚ(√5)` 四元組兩對和 = γ_max** | ✅ |
+| `docs/20_r2_composite_mods_push.md` | ★★★★★ **R2 續推：集合真實（共振收束模）、物理讀法虛假（`s/d` 差 16.6×）⟹ 七 id 全死** | 🔴 |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
@@ -313,6 +314,7 @@ m15_cross_carrier_flavour/
 | `scripts/17_minus_one_derivation.py` | ★★★★★ **「減一」導出**：`3 = B−1` = 分支群之非平凡特徵標數（階 4 全 abelian ⟹ 與群選擇無關）；`n=4` 由 Nyquist 鎖死 | ✅ |
 | `scripts/18_q2_provenance_recheck.py` | ★★★★ **依 M13 異議重核 Q2**：幾何級數對 `B` 無鑑別力；`44/33` 係同一恆等；`B=4` 由迹通道（−0.22σ）⟹ 撤回「兩條獨立源」 | 🟡 |
 | `scripts/19_handoff_m14_ids_and_z3.py` | ★★★★ **承接 M14**：Z3 三問（載體鎖死／GP 永久封閉／φ 不可移植）＋ 七 id（6 死 1 命名）；發現 `{9,15,27}` 屬 `/90` 慣例 | ✅ |
+| `scripts/20_r2_composite_mods_push.py` | ★★★★ **R2 續推**：`{18,30,36}` = `/90` 三波共振收束模（內在）；質量讀法六排列全掃最佳 χ² = 61.1 ⟹ **判死** | 🔴 |
 | `scripts/06_audit_verify.py` | 全鏈審計（十一項；不入 L1） | ✅ |
 | `scripts/l2_independent_verify.py` | L2 獨立重算（42 keys） | ✅ |
 | `scripts/l3_doc_crosscheck.py` | L3 文檔交叉核（36 claims） | ✅ |

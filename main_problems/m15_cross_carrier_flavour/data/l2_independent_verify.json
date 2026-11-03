@@ -540,6 +540,17 @@
   "pair_sum_9_36": "4.0",
   "pair_sum_18_27": "4.0",
   "triple_4_on_90": 4.0,
+  "res_count": 3,
+  "closing_modes": [
+   18,
+   30,
+   36
+  ],
+  "g36_eq_g18_over_g9": 3.618034,
+  "obs_du": 2.162,
+  "sd_sigma": 2.7599,
+  "z_sd_best": -6.81,
+  "z_su_best": -3.84,
   "pdg_m_p": "0.93827208816",
   "pdg_m_n": "0.9395654205",
   "pdg_s_xi_minus": "0.00007",

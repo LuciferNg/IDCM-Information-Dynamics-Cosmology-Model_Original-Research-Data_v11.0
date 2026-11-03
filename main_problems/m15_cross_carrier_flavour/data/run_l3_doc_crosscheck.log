@@ -160,8 +160,14 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 19_handoff_m14_ids_and_z3.md :: Ω_b(N=120) ≈ 0.039474（doc 命中 True）
 [PASS] 19_handoff_m14_ids_and_z3.md :: N=120 預算 ≈ 76（錨點窗口）
 [PASS] 19_handoff_m14_ids_and_z3.md :: Σγ(9,15,27) on /90 ≈ 4.0（doc 命中 True）
+
+§13k  docs/20 — R2 續推
+[PASS] 20_r2_composite_mods_push.md :: 共振組數 ≈ 3（錨點窗口）
+[PASS] 20_r2_composite_mods_push.md :: d/u 觀測 ≈ 2.162（doc 命中 True）
+[PASS] 20_r2_composite_mods_push.md :: s/d 之 z ≈ -6.81（doc 命中 True）
+[PASS] 20_r2_composite_mods_push.md :: s/u 之 z ≈ -3.84（doc 命中 True）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 116、FAIL 0
+L3 總結：PASS 120、FAIL 0
 ==============================================================================

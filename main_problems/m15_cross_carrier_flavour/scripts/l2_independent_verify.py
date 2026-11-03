@@ -503,6 +503,22 @@ _g90 = lambda n: 4 * mp.sin(mp.pi * n / 90) ** 2
 put("pair_sum_9_36", str(mp.nint(_g90(9) + _g90(36))))
 put("pair_sum_18_27", str(mp.nint(_g90(18) + _g90(27))))
 put("triple_4_on_90", round(float(_g90(9) + _g90(15) + _g90(27)), 6))
+# ── 8q. R2 續推（docs/20；獨立重算）
+_g = lambda n: 4 * mp.sin(mp.pi * n / 90) ** 2
+# 三波共振（a<b<c ≤ 44，γ_a+γ_b=γ_c）
+_rs = [(a, b, c) for a in range(1, 44) for b in range(a + 1, 44) for c in range(b + 1, 45)
+       if abs(_g(a) + _g(b) - _g(c)) < mp.mpf("1e-35")]
+put("res_count", len(_rs))
+put("closing_modes", sorted({c for _, _, c in _rs}))
+put("g36_eq_g18_over_g9", round(float(_g(18) / _g(9)), 6))
+_mu, _mu_s, _md, _md_s, _ms, _ms_s = 2.16, 0.49, 4.67, 0.48, 93.4, 8.6
+_du = _md / _mu; _sd = _ms / _md; _su = _ms / _mu
+_sdu = _du * ((_mu_s / _mu) ** 2 + (_md_s / _md) ** 2) ** 0.5
+_ssd = _sd * ((_md_s / _md) ** 2 + (_ms_s / _ms) ** 2) ** 0.5
+_ssu = _su * ((_mu_s / _mu) ** 2 + (_ms_s / _ms) ** 2) ** 0.5
+put("obs_du", round(_du, 4)); put("sd_sigma", round(_ssd, 4))
+put("z_sd_best", round((float(_g(36) / _g(30)) - _sd) / _ssd, 2))
+put("z_su_best", round((float(_g(36) / _g(18)) - _su) / _ssu, 2))
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))
