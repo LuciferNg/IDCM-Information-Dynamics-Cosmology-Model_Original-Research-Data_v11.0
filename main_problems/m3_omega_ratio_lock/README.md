@@ -42,6 +42,8 @@
 | `scripts/15_round15_r1_gate_identity.py` | 15/15 PASS | — |
 | `docs/16_round16_a3_dimension_capacity.md` | 第十六輪 **A3 證明**：容量必須維度型（標度不變性）；能量規則 ℓ 隨 t 跳 ⟹ 不可作 sector 定義 | 推進 |
 | `scripts/16_round16_a3_scale_invariance.py` | 9/9 PASS | — |
+| `docs/17_round17_pythagoras_audit.md` | 第十七輪 畢氏和積審計：非一般律、方向倒轉、零指派力 ⟹ 入禁區 | 否證 |
+| `scripts/17_round17_pythagoras_audit.py` | 8/8 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
