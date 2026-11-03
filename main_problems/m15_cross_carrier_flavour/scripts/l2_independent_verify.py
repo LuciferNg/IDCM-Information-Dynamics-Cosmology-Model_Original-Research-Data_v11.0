@@ -544,6 +544,12 @@ put("vis_share_sqrt_over_Sig", round(float(_sq3) / float(1 + mp.cot(mp.pi / 176)
 _shares = [float(_vg) / 90, float(_vg) / 44, float(_sq3) / float(1 + mp.cot(mp.pi / 176)),
            float(_zpe) / float(_T00)]
 put("share_span", round(max(_shares) / min(_shares), 2))
+# ── 8u. 分支群 abelian（docs/24）
+_s3 = [1, 1, 2]
+put("s3_sum_dims", sum(_s3))
+put("s3_sum_sq", sum(d * d for d in _s3))
+put("s3_nontrivial_sum", sum(_s3[1:]))
+put("order4_group_count", 2)
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

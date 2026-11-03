@@ -1,0 +1,25 @@
+{
+ "order4_groups": [
+  "Z4",
+  "V4"
+ ],
+ "all_abelian": true,
+ "v4_char_dims": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "capacity_units": 3,
+ "s3_dims": [
+  1,
+  1,
+  2
+ ],
+ "s3_nontrivial_sum": 4,
+ "s3_expected_if_formula": 5,
+ "criterion": "sum dims of nontrivial irreps = |G|-1 iff G abelian",
+ "verdict": "capacity = B-1 is forced: every order-4 group is abelian, B = gamma_max = 4",
+ "n_pass": 8,
+ "n_fail": 0
+}

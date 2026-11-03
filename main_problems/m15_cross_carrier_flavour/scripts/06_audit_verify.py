@@ -52,6 +52,7 @@ LOGS = {
     "21_upstream_identity_reconcile": "run_21_reconcile.log",
     "22_capacity_vs_energy": "run_22_capacity.log",
     "23_capacity_saturation": "run_23_saturation.log",
+    "24_abelian_branch_group": "run_24_abelian.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -79,6 +80,7 @@ DOC_PROD = {
     "21_upstream_identity_reconcile.md": ["21"],
     "22_capacity_vs_energy.md": ["22"],
     "23_capacity_saturation.md": ["23"],
+    "24_abelian_branch_group.md": ["24"],
 }
 EXEMPT_DOCS = set()      # 全部 doc 納入 L3（2026-11-01 全面審計）
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}

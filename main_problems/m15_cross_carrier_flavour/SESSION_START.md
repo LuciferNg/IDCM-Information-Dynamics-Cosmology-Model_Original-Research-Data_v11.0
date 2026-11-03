@@ -148,3 +148,6 @@ L2／L3 為必跑閘（`idcm-audit-verify` §2.4）；`final_result.md` 只在�
 - **v2.9（2026-11-02）**：容量飽和（`scripts/23`、`docs/23`）—— 四種 currency 全 >40σ（P1 判死穩健，跨度 13.3×）；
   V₄ 非平凡特徵標恰 3、每通道 1 維 ⟹ **溢出定義上不可能**；填滿無額外自由度（三代存在 = 三通道佔用）。
   殘留：分支群 abelian 性之定義。四數：L1 22/22（每支兩跑 byte-identical ≡ canonical）｜L2 153 keys｜L3 129/129（22/22 doc、零豁免）｜audit 15/15（FAIL 0、WARN 0）
+
+- **v3.0（2026-11-02）**：分支群 abelian（`scripts/24`、`docs/24`）—— 階 4 群全 abelian（分類定理）⟹ 容量 = `B−1` = 3；
+  判準 `Σdim = |G|−1 ⟺ abelian`（`S₃` 反例 `3 ≠ 5`）。**容量鏈全 dof = 0**，殘留收束。四數：L1 23/23（每支兩跑 byte-identical ≡ canonical）｜L2 157 keys｜L3 132/132（23/23 doc、零豁免）｜audit 15/15（FAIL 0、WARN 0）

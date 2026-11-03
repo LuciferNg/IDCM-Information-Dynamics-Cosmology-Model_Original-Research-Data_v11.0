@@ -338,6 +338,12 @@ check_num("23_capacity_saturation.md", "γ/Σ√γ 份額", 100 * l2["vis_share_
 check_num("23_capacity_saturation.md", "跨度", l2["share_span"], 5e-3)
 check_ctx("23_capacity_saturation.md", "非平凡 3", "非平凡數", l2["v4_nontrivial"], 2e-3, 8)
 
+say("")
+say("§13o  docs/24 — 分支群 abelian")
+check_ctx("24_abelian_branch_group.md", "Σ維數² = 1+1+4 = 6", "S₃ 階", l2["s3_sum_sq"], 2e-3, 8)
+check_ctx("24_abelian_branch_group.md", "Σ維數  = 4 < 6", "Σ維數", l2["s3_sum_dims"], 2e-3, 8)
+check_ctx("24_abelian_branch_group.md", "Σ維數 3 ≠ |G| − 1 = 5", "非平凡 Σ", l2["s3_nontrivial_sum"], 2e-3, 8)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

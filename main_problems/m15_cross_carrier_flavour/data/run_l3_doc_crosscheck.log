@@ -181,8 +181,13 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 23_capacity_saturation.md :: γ/Σ√γ 份額 ≈ 0.37544（doc 命中 True）
 [PASS] 23_capacity_saturation.md :: 跨度 ≈ 13.28（doc 命中 True）
 [PASS] 23_capacity_saturation.md :: 非平凡數 ≈ 3（錨點窗口）
+
+§13o  docs/24 — 分支群 abelian
+[PASS] 24_abelian_branch_group.md :: S₃ 階 ≈ 6（錨點窗口）
+[PASS] 24_abelian_branch_group.md :: Σ維數 ≈ 4（錨點窗口）
+[PASS] 24_abelian_branch_group.md :: 非平凡 Σ ≈ 3（錨點窗口）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 129、FAIL 0
+L3 總結：PASS 132、FAIL 0
 ==============================================================================
