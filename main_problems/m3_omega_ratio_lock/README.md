@@ -38,6 +38,8 @@
 | `scripts/13_round13_index_audit.py` | 12/12 PASS | — |
 | `docs/14_round14_r5_mc_null.md` | 第十四輪 **R5 銷賬**：10⁷ MC-null 四空間；數值層 3.25σ；5σ 系統性不可達 | 推進（負面發現）|
 | `scripts/14_round14_r5_mc_null.py` | 7/7 PASS（~25 s）| — |
+| `docs/15_round15_r1_gate_identity.md` | 第十五輪 **R1 閉合**：ℓ=2 由容量填充導出；`κ⁻¹=16` = 終端佔用；Ω_dm 升預言 | 閉合 |
+| `scripts/15_round15_r1_gate_identity.py` | 15/15 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
