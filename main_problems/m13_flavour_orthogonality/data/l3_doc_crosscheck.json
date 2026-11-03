@@ -1,0 +1,442 @@
+{
+  "E1 L2 有 _derived 且非空": {
+    "pass": true,
+    "detail": "66 keys"
+  },
+  "C.01_reproduction_.ρ_d": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-14）"
+  },
+  "C.01_reproduction_.ρ_u（負）": {
+    "pass": true,
+    "detail": "L2 -0.0258884 ↔ 文檔 0.0258884（rel 8.2e-12）"
+  },
+  "C.01_reproduction_.σ_ρd": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 4.1e-09）"
+  },
+  "C.01_reproduction_.δ_s": {
+    "pass": true,
+    "detail": "L2 3.425 ↔ 文檔 3.425（rel 0.0e+00）"
+  },
+  "C.01_reproduction_.Δ_Ξ": {
+    "pass": true,
+    "detail": "L2 6.85 ↔ 文檔 6.85（rel 0.0e+00）"
+  },
+  "C.02_null_capacity.K=2 類大小": {
+    "pass": true,
+    "detail": "L2 3784 ↔ 文檔 3784（rel 0.0e+00）"
+  },
+  "C.02_null_capacity.K=3 類大小": {
+    "pass": true,
+    "detail": "L2 105952 ↔ 文檔 105952（rel 0.0e+00）"
+  },
+  "C.02_null_capacity.K=4 類大小": {
+    "pass": true,
+    "detail": "L2 2.17202e+06 ↔ 文檔 2.17202e+06（rel 0.0e+00）"
+  },
+  "C.02_null_capacity.K=5 類大小": {
+    "pass": true,
+    "detail": "L2 3.47523e+07 ↔ 文檔 3.47523e+07（rel 0.0e+00）"
+  },
+  "C.02_null_capacity.K=6 類大小": {
+    "pass": true,
+    "detail": "L2 4.51779e+08 ↔ 文檔 4.51779e+08（rel 0.0e+00）"
+  },
+  "C.03_closure_scan.σ_ρu": {
+    "pass": true,
+    "detail": "L2 0.0335839 ↔ 文檔 0.0335839（rel 3.4e-08）"
+  },
+  "C.03_closure_scan.ρ_d(α_s=3)=0.5": {
+    "pass": true,
+    "detail": "L2 0.5 ↔ 文檔 0.5（rel 0.0e+00）"
+  },
+  "C.04_carry_by_2_ca.α_s=1 → 1.5": {
+    "pass": true,
+    "detail": "L2 1.5 ↔ 文檔 1.5（rel 0.0e+00）"
+  },
+  "C.04_carry_by_2_ca.α_s=2 → 0.75": {
+    "pass": true,
+    "detail": "L2 0.75 ↔ 文檔 0.75（rel 0.0e+00）"
+  },
+  "C.04_carry_by_2_ca.α_s=4 → 0.375": {
+    "pass": true,
+    "detail": "L2 0.375 ↔ 文檔 0.375（rel 0.0e+00）"
+  },
+  "C.04_carry_by_2_ca.α_s=5 → 0.3": {
+    "pass": true,
+    "detail": "L2 0.3 ↔ 文檔 0.3（rel 0.0e+00）"
+  },
+  "C.04_carry_by_2_ca.α_s=8 → 0.1875": {
+    "pass": true,
+    "detail": "L2 0.1875 ↔ 文檔 0.188（rel 2.7e-03）"
+  },
+  "C.04_carry_by_2_ca.ρ_d 觀測": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-10）"
+  },
+  "C.05_universality.α_s/α_u 中心": {
+    "pass": true,
+    "detail": "L2 3.71744 ↔ 文檔 3.71744（rel 1.4e-09）"
+  },
+  "C.05_universality.窗下界（線性）": {
+    "pass": true,
+    "detail": "L2 3.30484 ↔ 文檔 3.3048（rel 1.1e-05）"
+  },
+  "C.05_universality.窗上界（線性）": {
+    "pass": true,
+    "detail": "L2 4.13004 ↔ 文檔 4.13（rel 9.6e-06）"
+  },
+  "C.06_ktree_alpha_p.α=(1,4,16) 之 ρ_u": {
+    "pass": true,
+    "detail": "L2 -0.0625 ↔ 文檔 0.0625（rel 0.0e+00）"
+  },
+  "C.06_ktree_alpha_p.α=(1,4,16) 之 ρ_d": {
+    "pass": true,
+    "detail": "L2 0.21875 ↔ 文檔 0.21875（rel 0.0e+00）"
+  },
+  "C.07_alpha_source.N_trials = 216": {
+    "pass": true,
+    "detail": "L2 216 ↔ 文檔 216（rel 0.0e+00）"
+  },
+  "C.08_precision_bud.δ_s": {
+    "pass": true,
+    "detail": "L2 3.425 ↔ 文檔 3.43（rel 1.5e-03）"
+  },
+  "C.08_precision_bud.Σ 硬底 σ_ρd ≥": {
+    "pass": true,
+    "detail": "L2 0.0109907 ↔ 文檔 0.01099（rel 6.1e-05）"
+  },
+  "C.08_precision_bud.Δ_Σ": {
+    "pass": true,
+    "detail": "L2 4.807 ↔ 文檔 4.807（rel 0.0e+00）"
+  },
+  "C.08_precision_bud.Δ_Ξ": {
+    "pass": true,
+    "detail": "L2 6.85 ↔ 文檔 6.85（rel 0.0e+00）"
+  },
+  "C.08_precision_bud.σ_ρd": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 1.1e-10）"
+  },
+  "C.09_completeness_.χ²(x=2)": {
+    "pass": true,
+    "detail": "L2 0.999292 ↔ 文檔 0.999（rel 2.9e-04）"
+  },
+  "C.09_completeness_.χ²(x=3)": {
+    "pass": true,
+    "detail": "L2 8.66134 ↔ 文檔 8.66（rel 1.5e-04）"
+  },
+  "C.09_completeness_.χ²(x=4)": {
+    "pass": true,
+    "detail": "L2 18.2068 ↔ 文檔 18.21（rel 1.8e-04）"
+  },
+  "C.09_completeness_.z(r=15/4)": {
+    "pass": true,
+    "detail": "L2 -0.0782323 ↔ 文檔 0.078（rel 3.0e-03）"
+  },
+  "C.09_completeness_.z(r=11/3)": {
+    "pass": true,
+    "detail": "L2 0.124757 ↔ 文檔 0.125（rel 1.9e-03）"
+  },
+  "C.09_completeness_.z(r=7/2)": {
+    "pass": true,
+    "detail": "L2 0.559734 ↔ 文檔 0.56（rel 4.8e-04）"
+  },
+  "C.10_sector_extens.δ_s": {
+    "pass": true,
+    "detail": "L2 3.425 ↔ 文檔 3.425（rel 0.0e+00）"
+  },
+  "C.10_sector_extens.δ_d": {
+    "pass": true,
+    "detail": "L2 1.382 ↔ 文檔 1.382（rel 0.0e+00）"
+  },
+  "C.11_t1_provenance.α 依 k → z=7.74": {
+    "pass": true,
+    "detail": "L2 7.73685 ↔ 文檔 7.74（rel 4.1e-04）"
+  },
+  "C.11_t1_provenance.α 依 d → z=−9.01": {
+    "pass": true,
+    "detail": "L2 -9.00976 ↔ 文檔 9.01（rel 2.7e-05）"
+  },
+  "C.12_rival_lattice.ρ_d(15/4)=0.4": {
+    "pass": true,
+    "detail": "L2 0.4 ↔ 文檔 0.4（rel 0.0e+00）"
+  },
+  "C.12_rival_lattice.ρ_d(11/3)=9/22": {
+    "pass": true,
+    "detail": "L2 0.409091 ↔ 文檔 0.40909（rel 2.2e-06）"
+  },
+  "C.12_rival_lattice.ρ_d(7/2)=3/7": {
+    "pass": true,
+    "detail": "L2 0.428571 ↔ 文檔 0.42857（rel 3.3e-06）"
+  },
+  "C.12_rival_lattice.z(15/4)": {
+    "pass": true,
+    "detail": "L2 -0.0782323 ↔ 文檔 0.078（rel 3.0e-03）"
+  },
+  "C.13_symmetric_tra.迹 ρ_u+ρ_d": {
+    "pass": true,
+    "detail": "L2 0.377615 ↔ 文檔 0.377615（rel 4.6e-13）"
+  },
+  "C.13_symmetric_tra.σ_迹": {
+    "pass": true,
+    "detail": "L2 0.0116811 ↔ 文檔 0.0116811（rel 3.6e-06）"
+  },
+  "C.13_symmetric_tra.corr（負）": {
+    "pass": true,
+    "detail": "L2 -0.99635 ↔ 文檔 0.99635（rel 4.0e-07）"
+  },
+  "C.13_symmetric_tra.Δ_N/Δ_Ξ": {
+    "pass": true,
+    "detail": "L2 0.188808 ↔ 文檔 0.188808（rel 1.3e-10）"
+  },
+  "C.13_symmetric_tra.3/16": {
+    "pass": true,
+    "detail": "L2 0.1875 ↔ 文檔 0.1875（rel 0.0e+00）"
+  },
+  "C.13_symmetric_tra.ρ_d−ρ_u": {
+    "pass": true,
+    "detail": "L2 0.429392 ↔ 文檔 0.429392（rel 4.1e-08）"
+  },
+  "C.14_hypothesis_ve.迹（Σ 通道）": {
+    "pass": true,
+    "detail": "L2 0.395273 ↔ 文檔 0.39527（rel 6.9e-06）"
+  },
+  "C.14_hypothesis_ve.z（Σ 通道）": {
+    "pass": true,
+    "detail": "L2 2.26776 ↔ 文檔 2.268（rel 1.1e-04）"
+  },
+  "C.14_hypothesis_ve.z（Ξ 通道）": {
+    "pass": true,
+    "detail": "L2 0.223891 ↔ 文檔 0.224（rel 4.9e-04）"
+  },
+  "C.14_hypothesis_ve.識別所需 σ(Ξ⁰)": {
+    "pass": true,
+    "detail": "L2 0.0158139 ↔ 文檔 0.0158（rel 8.8e-04）"
+  },
+  "C.14_hypothesis_ve.dev/基準": {
+    "pass": true,
+    "detail": "L2 3.57073 ↔ 文檔 3.571（rel 7.5e-05）"
+  },
+  "C.14_hypothesis_ve.絕對 dev": {
+    "pass": true,
+    "detail": "L2 0.00261528 ↔ 文檔 0.00261528（rel 6.7e-07）"
+  },
+  "C.15_audit_report.ρ_d（L2↔doc）": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-14）"
+  },
+  "C.15_audit_report.σ_ρd": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 4.1e-09）"
+  },
+  "C.15_audit_report.corr（負）": {
+    "pass": true,
+    "detail": "L2 -0.99635 ↔ 文檔 0.99635（rel 1.2e-09）"
+  },
+  "C.15_audit_report.更正後 dev/基準 3.571": {
+    "pass": true,
+    "detail": "L2 3.57073 ↔ 文檔 3.571（rel 7.5e-05）"
+  },
+  "C.15_audit_report.識別所需 σ(Ξ⁰)": {
+    "pass": true,
+    "detail": "L2 0.0158139 ↔ 文檔 0.0158（rel 8.8e-04）"
+  },
+  "C.15_audit_report.3/8": {
+    "pass": true,
+    "detail": "L2 0.375 ↔ 文檔 0.375（rel 0.0e+00）"
+  },
+  "C.16_propagation_a.ρ_d（canon）": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-14）"
+  },
+  "C.16_propagation_a.迹 0.377615281752": {
+    "pass": true,
+    "detail": "L2 0.377615 ↔ 文檔 0.377615（rel 4.6e-13）"
+  },
+  "C.16_propagation_a.3.571": {
+    "pass": true,
+    "detail": "L2 3.57073 ↔ 文檔 3.571（rel 7.5e-05）"
+  },
+  "C.16_propagation_a.σ_ρd": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 1.1e-10）"
+  },
+  "C.16_propagation_a.0.0158": {
+    "pass": true,
+    "detail": "L2 0.0158139 ↔ 文檔 0.0158（rel 8.8e-04）"
+  },
+  "C.17_handoff_repli.Δ_N/Δ_Ξ": {
+    "pass": true,
+    "detail": "L2 0.188808 ↔ 文檔 0.188808（rel 6.6e-10）"
+  },
+  "C.17_handoff_repli.σ(Δ_N/Δ_Ξ)": {
+    "pass": true,
+    "detail": "L2 0.00584053 ↔ 文檔 0.00584053（rel 4.6e-08）"
+  },
+  "C.17_handoff_repli.迹 = 2q": {
+    "pass": true,
+    "detail": "L2 0.377615 ↔ 文檔 0.377615（rel 6.6e-10）"
+  },
+  "C.17_handoff_repli.α 依 k 7.74σ": {
+    "pass": true,
+    "detail": "L2 7.73685 ↔ 文檔 7.74（rel 4.1e-04）"
+  },
+  "C.17_handoff_repli.α 依 d −9.01σ": {
+    "pass": true,
+    "detail": "L2 -9.00976 ↔ 文檔 9.01（rel 2.7e-05）"
+  },
+  "C.17_handoff_repli.K=5 類大小": {
+    "pass": true,
+    "detail": "L2 3.47523e+07 ↔ 文檔 3.47523e+07（rel 0.0e+00）"
+  },
+  "C.17_handoff_repli.r = α_s/α_u": {
+    "pass": true,
+    "detail": "L2 3.71744 ↔ 文檔 3.71744（rel 1.8e-11）"
+  },
+  "C.17_handoff_repli.α_s/(α_u+α_d)": {
+    "pass": true,
+    "detail": "L2 1.3241 ↔ 文檔 1.3241（rel 2.3e-12）"
+  },
+  "C.17_handoff_repli.σ(α 組合)": {
+    "pass": true,
+    "detail": "L2 0.0409593 ↔ 文檔 0.0409593（rel 8.1e-09）"
+  },
+  "C.13_symmetric_tra.α 組合（附註5）": {
+    "pass": true,
+    "detail": "L2 1.3241 ↔ 文檔 1.3241（rel 2.3e-12）"
+  },
+  "C.13_symmetric_tra.σ（附註5）": {
+    "pass": true,
+    "detail": "L2 0.0409593 ↔ 文檔 0.0409593（rel 8.1e-09）"
+  },
+  "C.final_result.α_s/α_u 中心": {
+    "pass": true,
+    "detail": "L2 3.71744 ↔ 文檔 3.71744（rel 1.8e-11）"
+  },
+  "C.final_result.ρ_d": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-14）"
+  },
+  "C.final_result.迹": {
+    "pass": true,
+    "detail": "L2 0.377615 ↔ 文檔 0.377615（rel 6.6e-10）"
+  },
+  "C.final_result.Δ_N/Δ_Ξ": {
+    "pass": true,
+    "detail": "L2 0.188808 ↔ 文檔 0.188808（rel 6.6e-10）"
+  },
+  "C.final_result.α 組合": {
+    "pass": true,
+    "detail": "L2 1.3241 ↔ 文檔 1.3241（rel 2.3e-12）"
+  },
+  "C.final_result.σ(α 組合)": {
+    "pass": true,
+    "detail": "L2 0.0409593 ↔ 文檔 0.0409593（rel 8.1e-09）"
+  },
+  "C.final_result.σ_ρd": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 1.1e-10）"
+  },
+  "C.final_result.σ_迹": {
+    "pass": true,
+    "detail": "L2 0.0116811 ↔ 文檔 0.0116811（rel 4.0e-08）"
+  },
+  "F.01_reproduction_gate 全命中（5/5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.02_null_capacity 全命中（5/5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.03_closure_scan 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.04_carry_by_2_candidate 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.05_universality 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.06_ktree_alpha_probe 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.07_alpha_source 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.08_precision_budget 全命中（5/5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.09_completeness_audit 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.10_sector_extension 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.11_t1_provenance_theorem 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.12_rival_lattice_audit 全命中（4/4）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.13_symmetric_trace_closure 全命中（8/8）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.14_hypothesis_verification 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.15_audit_report 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.16_propagation_audit 全命中（5/5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.17_handoff_replies 全命中（9/9）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.final_result 全命中（8/8）": {
+    "pass": true,
+    "detail": ""
+  },
+  "_summary": {
+    "checks": 104,
+    "fail": 0,
+    "by_doc": {
+      "docs/01_reproduction_gate.md": "5/5",
+      "docs/02_null_capacity.md": "5/5",
+      "docs/03_closure_scan.md": "2/2",
+      "docs/04_carry_by_2_candidate.md": "6/6",
+      "docs/05_universality.md": "3/3",
+      "docs/06_ktree_alpha_probe.md": "2/2",
+      "docs/07_alpha_source.md": "1/1",
+      "docs/08_precision_budget.md": "5/5",
+      "docs/09_completeness_audit.md": "6/6",
+      "docs/10_sector_extension.md": "2/2",
+      "docs/11_t1_provenance_theorem.md": "2/2",
+      "docs/12_rival_lattice_audit.md": "4/4",
+      "docs/13_symmetric_trace_closure.md": "8/8",
+      "docs/14_hypothesis_verification.md": "6/6",
+      "docs/15_audit_report.md": "6/6",
+      "docs/16_propagation_audit.md": "5/5",
+      "docs/17_handoff_replies.md": "9/9",
+      "final_result.md": "8/8"
+    }
+  }
+}

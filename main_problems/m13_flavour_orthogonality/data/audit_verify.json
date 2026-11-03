@@ -1,0 +1,184 @@
+{
+  "A1a 每個 L1 腳本都有 canonical log（顯式 LOGMAP）": {
+    "pass": true,
+    "warn": false,
+    "detail": "缺 []"
+  },
+  "A1b 無孤兒 log": {
+    "pass": true,
+    "warn": false,
+    "detail": "孤兒 []"
+  },
+  "A1c 所有腳本已入 LOGMAP": {
+    "pass": true,
+    "warn": false,
+    "detail": "未宣告 []"
+  },
+  "A1d 腳本數 = log 數（19）": {
+    "pass": true,
+    "warn": false,
+    "detail": "19 vs 19"
+  },
+  "A2 rho_d 0.403503649635 ← 01_reproduction_gate.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 sigma_rho_d 0.044785178 ← 09_precision_budget.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 delta_s 3.4250 ← 01_reproduction_gate.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 trace 0.37761528 ← 14_symmetric_trace_emergence.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 sigma_trace 0.0116811 ← 15_trace_statistics.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 corr −0.99635 ← 15_trace_statistics.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 z_trace 0.22389 ← 17_hypothesis_verification.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 chi2_x2 0.999 ← 10_family_x_scan.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 chi2_x4 18.207 ← 10_family_x_scan.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 z_r11_3 0.1248 ← 13_rival_lattice_audit.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 N_trials 216 ← 08_alpha_source.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A2 K=5 類大小 34752256 ← 03_null_capacity.py": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A3 L1/L2/L3 零 /tmp 寫入": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A4 全部 L1（18 支，排除本檔）重跑 byte-identical": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A5a L2 重跑 rc=0": {
+    "pass": true,
+    "warn": false,
+    "detail": "rc=0"
+  },
+  "A5b L3 重跑 rc=0": {
+    "pass": true,
+    "warn": false,
+    "detail": "rc=0"
+  },
+  "A5c data/l2_independent_verify.json 存在": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A5c data/l3_doc_crosscheck.json 存在": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A6 全部 18 份 doc 命中率 100%": {
+    "pass": true,
+    "warn": false,
+    "detail": "{'docs/01_reproduction_gate.md': '5/5', 'docs/02_null_capacity.md': '5/5', 'docs/03_closure_scan.md': '2/2', 'docs/04_carry_by_2_candidate.md': '6/6', 'docs/05_universality.md': '3/3', 'docs/06_ktree_alpha_probe.md': '2/2', 'docs/07_alpha_source.md': '1/1', 'docs/08_precision_budget.md': '5/5', 'docs/09_completeness_audit.md': '6/6', 'docs/10_sector_extension.md': '2/2', 'docs/11_t1_provenance_theorem.md': '2/2', 'docs/12_rival_lattice_audit.md': '4/4', 'docs/13_symmetric_trace_closure.md': '8/8', 'docs/14_hypothesis_verification.md': '6/6', 'docs/15_audit_report.md': '6/6', 'docs/16_propagation_audit.md': '5/5', 'docs/17_handoff_replies.md': '9/9', 'final_result.md': '8/8'}"
+  },
+  "A6b L3 FAIL = 0": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7a 01_problem_record.md 存在": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7b SESSION_START.md 存在": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7c final_result.md 存在（階段性收尾已建）": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7c2 final_result 載 verdict `partial`（可 grep）": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7c3 final_result 保留判死／禁區段": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7c4 final_result 四數與 audit 一致": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A7d 問題記錄載明 🟡 狀態": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A8a 無未標註之舊值（1.339／0.00443）": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A8b L2 硬編碼質量 == vendored PDG 原文（7 個）": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A9 跨記錄引用已列舉（供傳播表）": {
+    "pass": true,
+    "warn": false,
+    "detail": "32 處: ['main_problems/m14_uds_assignment/final_result.md:20', 'main_problems/m14_uds_assignment/SESSION_START.md:35', 'main_problems/m14_uds_assignment/01_problem_record.md:40', 'main_problems/m12_cy3_flavour_operator/final_result.md:186', 'main_problems/m12_cy3_flavour_operator/SESSION_START.md:369', 'main_problems/m12_cy3_flavour_operator/01_problem_record.md:56']"
+  },
+  "A10 全部 log／json 喺其 producer 修改之後重算": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "_summary": {
+    "checks": 35,
+    "fail": 0,
+    "warn": 0,
+    "n_scripts": 19,
+    "n_logs": 19
+  }
+}
