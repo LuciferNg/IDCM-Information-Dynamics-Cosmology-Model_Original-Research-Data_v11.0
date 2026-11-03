@@ -277,6 +277,66 @@ for _f in sorted(DOCS.glob("*.md")):
 chk("⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文明示豁免）",
     not _untr, f"未追溯 {_untr}")
 
+# ⑯ 撤回主張流通掃描：已撤回短語之每處出現，±25 行內須有修正指針
+RETRACTED = {
+    "跨空間相加": ("§J", "§22", "後續修正", "已撤回", "推翻", "修正"),
+    "3 = rank(P_κ)": ("撤回", "作廢"),
+    "60·Ω_b": ("撤回", "識別"),
+    "兩條獨立源": ("撤回",),
+    "32/120 = 4/15": ("撤回",),
+}
+_circulating = []
+for _p in sorted(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "final_result.md",
+                                       ROOT / "01_problem_record.md", ROOT / "SESSION_START.md"]:
+    if not _p.exists():
+        continue
+    _lines = _p.read_text().splitlines()
+    for _ph, _marks in RETRACTED.items():
+        for _i, _ln in enumerate(_lines):
+            if _ph not in _ln:
+                continue
+            _win = "\n".join(_lines[max(0, _i - 25): _i + 26])
+            if not any(_mk in _win for _mk in _marks):
+                _circulating.append(f"{_p.name}:{_i + 1}:{_ph}")
+chk("⑯ 撤回主張流通掃描（已撤回短語須有修正指針）", not _circulating, f"無指針 {_circulating}")
+
+
+# ⑰ 文件內恆等式重算：由 doc 自述之 dims 重算 Σd²／Σd／Σd(d−1)，核對同檔之總值
+_d25 = (DOCS / "25_a5_sixty_uniqueness.md").read_text()
+_mdims = re.search(r"不可約表示維數 d = \[([\d,\s]+)\]", _d25) or re.search(r"d = \[([\d,\s]+)\]", _d25)
+_dd = [int(x) for x in _mdims.group(1).split(",")] if _mdims else []
+_ident = {"\u03a3d\u00b2": (sum(d * d for d in _dd), r"^\u03a3d\u00b2\s*=.*?\+.*?=\s*(\d+)\s*$"),
+          "\u03a3d": (sum(_dd), r"^\u03a3d\s*=.*?\+.*?=\s*(\d+)\s*$"),
+          "\u03a3d(d\u22121)": (sum(d * (d - 1) for d in _dd), r"^\u03a3d\(d\u22121\)\s*=.*?\+.*?=\s*(\d+)\s*$")}
+_bad_id = []
+for _nm, (_re_, _pat) in _ident.items():
+    _m = re.search(_pat, _d25, re.M)
+    if not _m:
+        _bad_id.append(f"{_nm} 未在 doc 中給出總值")
+    elif int(_m.group(1)) != _re_:
+        _bad_id.append(f"{_nm}: doc={_m.group(1)} 重算={_re_}")
+chk("⑰ 文件內恆等式重算（docs/25 dims → Σd²／Σd／Σd(d−1)）",
+    bool(_dd) and not _bad_id, f"dims={_dd}；{_bad_id}")
+
+
+# ⑱ 四件套最新審計數一致（取各檔最後一次出現之 L1/L2/L3 四數）
+_l2log = (DATA / "run_l2_independent_verify.log").read_text()
+_l3log = (DATA / "run_l3_doc_crosscheck.log").read_text()
+_act = {"l1": len(LOGS),
+        "l2": int(re.search(r"(\d+) 個 _derived key", _l2log).group(1)) if re.search(r"(\d+) 個 _derived key", _l2log) else -1,
+        "l3": int(re.search(r"L3 總結：PASS (\d+)", _l3log).group(1)) if re.search(r"L3 總結：PASS (\d+)", _l3log) else -1}
+_stale = []
+for _p in (ROOT / "README.md", ROOT / "final_result.md"):
+    _ms = re.findall(r"L1 (\d+)/(\d+)｜L2 (\d+) keys｜L3 (\d+)/(\d+)", _p.read_text())
+    if not _ms:
+        _stale.append(f"{_p.name}: 無審計數區塊")
+        continue
+    _a, _b, _c, _d, _e = (int(x) for x in _ms[-1])
+    if (_a, _b, _c, _d, _e) != (_act["l1"], _act["l1"], _act["l2"], _act["l3"], _act["l3"]):
+        _stale.append(f"{_p.name}: 最新區塊 L1 {_a}/{_b}｜L2 {_c}｜L3 {_d}/{_e} ≠ 實際 "
+                      f"L1 {_act['l1']}｜L2 {_act['l2']}｜L3 {_act['l3']}")
+chk("⑱ 四件套最新審計數 ≡ 實際（防 stale 水位）", not _stale, f"{_stale}")
+
 # ⑪ 文件衛生
 hyg = []
 for p in list(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "01_problem_record.md"]:

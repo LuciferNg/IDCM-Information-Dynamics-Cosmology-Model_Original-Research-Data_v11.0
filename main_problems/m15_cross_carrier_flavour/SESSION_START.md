@@ -154,3 +154,7 @@ L2／L3 為必跑閘（`idcm-audit-verify` §2.4）；`final_result.md` 只在�
 
 - **v3.1（2026-11-02）**：`60` 之 A₅ 身份（`scripts/25`、`docs/25`）—— **`Σd² = Σd + Σd(d−1)` ⟹ `60 = 16 + 44` 同質**（推翻「跨空間相加」）；
   但 `(3,16,41)` 整體**非唯一**（6 組其他三分拆；`41` 有 5 條 A₅ 讀法 ⟹ 只可作補集）。四數：L1 24/24（每支兩跑 byte-identical ≡ canonical）｜L2 164 keys｜L3 136/136（24/24 doc、零豁免）｜audit 15/15（FAIL 0、WARN 0）
+
+- **v3.2（2026-11-02）階段性 Closeout v3**：Audit-Verify 全鏈（新增機器閘 ⑯撤回流通、⑰檔內恆等式、⑱stale 水位），
+  捉到 7 項真缺陷（含 README／final_result 停在 14/14）全已修；傳播審計證明 **24 支 canonical log byte-identical ⟹ 無下游需重算**。
+  殘留收窄至群選擇原理 ⟹ 已開 `M16`。四數：L1 24/24（每支兩跑 byte-identical ≡ canonical）｜L2 164 keys｜L3 136/136（24/24 doc、零豁免）｜audit 18/18（FAIL 0、WARN 0）
