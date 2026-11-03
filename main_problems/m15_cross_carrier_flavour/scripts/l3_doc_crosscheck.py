@@ -325,6 +325,13 @@ say("§13l  docs/21 — 上游身份對賬")
 check_num("21_upstream_identity_reconcile.md", "f_unproj", l2["f_unproj_val"], 5e-9)
 check_ctx("21_upstream_identity_reconcile.md", "資料行 = **32**", "阻挫邊行數", l2["frust_edge_lines"], 2e-3, 6)
 
+say("")
+say("§13m  docs/22 — 容量 vs 能量")
+check_num("22_capacity_vs_energy.md", "零點能佔比", l2["zpe_share_pct"], 2e-3)
+check_num("22_capacity_vs_energy.md", "z(P1)", l2["z_P1_zero_point"], 5e-3)
+check_num("22_capacity_vs_energy.md", "z(P2)", l2["z_P2_capacity"], 5e-3)
+check_num("22_capacity_vs_energy.md", "容量/零點能", l2["cap_over_zpe"], 5e-5)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

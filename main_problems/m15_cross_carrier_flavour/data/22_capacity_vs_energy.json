@@ -1,0 +1,20 @@
+{
+ "T00": 90.008295,
+ "zpe_vis": 0.10703152,
+ "zpe_share_pct": 0.118913,
+ "omega_b_obs": 0.049302,
+ "sigma": 0.000857,
+ "P1_energy": 0.00118913,
+ "z_P1": -56.15,
+ "P2_capacity": 0.05,
+ "z_P2": 0.82,
+ "separation_sigma": 57.0,
+ "ratio_cap_over_zpe": 42.0476,
+ "pool_size": 156,
+ "near_hits": [
+  42
+ ],
+ "verdict": "capacity reading supported (1 sigma) vs zero-point energy (>40 sigma rejected)",
+ "n_pass": 11,
+ "n_fail": 0
+}

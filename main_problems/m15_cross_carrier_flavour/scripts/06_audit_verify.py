@@ -50,6 +50,7 @@ LOGS = {
     "19_handoff_m14_ids_and_z3": "run_19_m14_ids.log",
     "20_r2_composite_mods_push": "run_20_r2_push.log",
     "21_upstream_identity_reconcile": "run_21_reconcile.log",
+    "22_capacity_vs_energy": "run_22_capacity.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -75,6 +76,7 @@ DOC_PROD = {
     "19_handoff_m14_ids_and_z3.md": ["19"],
     "20_r2_composite_mods_push.md": ["20"],
     "21_upstream_identity_reconcile.md": ["21"],
+    "22_capacity_vs_energy.md": ["22"],
 }
 EXEMPT_DOCS = set()      # 全部 doc 納入 L3（2026-11-01 全面審計）
 L3_COVERED = {d for d in DOC_PROD if d not in EXEMPT_DOCS}

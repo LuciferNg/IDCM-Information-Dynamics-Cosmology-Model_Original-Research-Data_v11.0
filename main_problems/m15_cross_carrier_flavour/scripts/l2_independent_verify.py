@@ -525,6 +525,16 @@ put("f_unproj_frac", str(_fu))
 put("f_unproj_val", round(float(_fu), 10))
 put("kappa_inv", 16)
 put("frust_edge_lines", 32)
+# ── 8s. 容量 vs 能量（docs/22）
+_sq = lambda n: 2 * mp.sin(mp.pi * n / 88)
+_zpe = (_sq(1) + _sq(2)) / 2
+_T00 = (1 + mp.cot(mp.pi / 176)) / 2 + mp.mpf(123) / 2
+put("T00", round(float(_T00), 6))
+put("zpe_vis", round(float(_zpe), 8))
+put("zpe_share_pct", round(100 * float(_zpe) / float(_T00), 6))
+put("z_P1_zero_point", round((float(_zpe) / float(_T00) - _Ob) / _Ob_s, 2))
+put("z_P2_capacity", round((3 / 60 - _Ob) / _Ob_s, 2))
+put("cap_over_zpe", round((3 / 60) / (float(_zpe) / float(_T00)), 4))
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

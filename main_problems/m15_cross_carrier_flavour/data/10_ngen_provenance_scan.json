@@ -3,7 +3,7 @@
   {
    "tag": "§1-a 掃描完成",
    "status": "PASS",
-   "detail": "162 處"
+   "detail": "163 處"
   },
   {
    "tag": "§3 安裝點唯一（字面列表 ＋ if/elif 硬編碼；全 corpus 僅此一類）",
@@ -15,9 +15,9 @@
   "L": 117,
   "W": 11,
   "P": 23,
-  "E": 11
+  "E": 12
  },
- "total": 162,
+ "total": 163,
  "install_points": [
   "IDCM-v9.0--W-Field-Lattice/04_extended_verify.py:259",
   "IDCM-v9.0--W-Field-Lattice/12_dirac_lattice_verify.py:213",
@@ -25,6 +25,11 @@
   "main_problems/03_q2a_label_provenance.py:87"
  ],
  "E_class": [
+  {
+   "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o201_spectral_language/scripts/27_r1_generation_identity.py",
+   "line": 102,
+   "rhs": "b - 1"
+  },
   {
    "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o107_extra_u1_physical/scripts/03_causal_hierarchy.py",
    "line": 55,
