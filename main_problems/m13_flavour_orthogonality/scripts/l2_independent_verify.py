@@ -184,6 +184,10 @@ DERIVE = {
     "target_3_16": lambda I: mpf(I["N_gen"])/mpf(I["B"])**2,
     "target_3_8": lambda I: mp.mpf(3)/8,
     "trace_sigma_chan": lambda I: _dN(I)/_dS2(I),
+    # 2026-11-04 新增：鏈譜翻倍比 γ₂/γ₁（R1 候選）＋ B=5 之 z 天花板（R2）
+    "gamma2_over_gamma1": lambda I: (mp.sin(2 * mp.pi / 88) / mp.sin(mp.pi / 88)) ** 2,
+    "z_B5_ceiling": lambda I: ((_rho_u(I) + _rho_d(I)) - mp.mpf(4) / 10)
+    / mp.sqrt((2 * _s_dN(I) / _dX(I)) ** 2 + (2 * _dN(I) * mpf(I["s_Xm"]) / _dX(I) ** 2) ** 2),
     # 2026-11-03 新增：Ξc 分裂（R3）＋ B=5 之 3σ 所需 σ(Ξ⁰)（R2 定界）
     "Xi_c_split": lambda I: mpf(I["m_Xc0"]) - mpf(I["m_Xcp"]),
     "Xi_c_sigma": lambda I: mp.sqrt(mpf(I["s_Xc0"]) ** 2 + mpf(I["s_Xcp"]) ** 2),

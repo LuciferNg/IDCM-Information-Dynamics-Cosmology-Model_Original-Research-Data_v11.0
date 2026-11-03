@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "69 keys"
+    "detail": "71 keys"
   },
   "C.01_reproduction_.ρ_d": {
     "pass": true,
@@ -359,6 +359,18 @@
     "pass": true,
     "detail": "L2 0.142681 ↔ 文檔 0.1427（rel 1.3e-04）"
   },
+  "C.19_chain_ratio_a.γ₂/γ₁": {
+    "pass": true,
+    "detail": "L2 3.9949 ↔ 文檔 3.9949（rel 5.5e-11）"
+  },
+  "C.19_chain_ratio_a.z(B=5) 天花板": {
+    "pass": true,
+    "detail": "L2 -5.80089 ↔ 文檔 5.8（rel 1.5e-04）"
+  },
+  "C.19_chain_ratio_a.σ(Ξ⁰) 需 ≤": {
+    "pass": true,
+    "detail": "L2 0.142681 ↔ 文檔 0.1427（rel 1.3e-04）"
+  },
   "F.01_reproduction_gate 全命中（5/5）": {
     "pass": true,
     "detail": ""
@@ -431,12 +443,16 @@
     "pass": true,
     "detail": ""
   },
+  "F.19_chain_ratio_and_besiii 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
   "F.final_result 全命中（8/8）": {
     "pass": true,
     "detail": ""
   },
   "_summary": {
-    "checks": 109,
+    "checks": 113,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": "5/5",
@@ -457,7 +473,8 @@
       "docs/16_propagation_audit.md": "5/5",
       "docs/17_handoff_replies.md": "9/9",
       "final_result.md": "8/8",
-      "docs/18_full_push.md": "4/4"
+      "docs/18_full_push.md": "4/4",
+      "docs/19_chain_ratio_and_besiii.md": "3/3"
     }
   }
 }

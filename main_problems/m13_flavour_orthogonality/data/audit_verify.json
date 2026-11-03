@@ -14,10 +14,10 @@
     "warn": false,
     "detail": "未宣告 []"
   },
-  "A1d 腳本數 = log 數（21）": {
+  "A1d 腳本數 = log 數（22）": {
     "pass": true,
     "warn": false,
-    "detail": "21 vs 21"
+    "detail": "22 vs 22"
   },
   "A2 rho_d 0.403503649635 ← 01_reproduction_gate.py": {
     "pass": true,
@@ -84,7 +84,7 @@
     "warn": false,
     "detail": "[]"
   },
-  "A4 全部 L1（20 支，排除本檔）重跑 byte-identical": {
+  "A4 全部 L1（21 支，排除本檔）重跑 byte-identical": {
     "pass": true,
     "warn": false,
     "detail": "[]"
@@ -109,10 +109,10 @@
     "warn": false,
     "detail": ""
   },
-  "A6 全部 19 份 doc 命中率 100%": {
+  "A6 全部 20 份 doc 命中率 100%": {
     "pass": true,
     "warn": false,
-    "detail": "{'docs/01_reproduction_gate.md': '5/5', 'docs/02_null_capacity.md': '5/5', 'docs/03_closure_scan.md': '2/2', 'docs/04_carry_by_2_candidate.md': '6/6', 'docs/05_universality.md': '3/3', 'docs/06_ktree_alpha_probe.md': '2/2', 'docs/07_alpha_source.md': '1/1', 'docs/08_precision_budget.md': '5/5', 'docs/09_completeness_audit.md': '6/6', 'docs/10_sector_extension.md': '2/2', 'docs/11_t1_provenance_theorem.md': '2/2', 'docs/12_rival_lattice_audit.md': '4/4', 'docs/13_symmetric_trace_closure.md': '8/8', 'docs/14_hypothesis_verification.md': '6/6', 'docs/15_audit_report.md': '6/6', 'docs/16_propagation_audit.md': '5/5', 'docs/17_handoff_replies.md': '9/9', 'final_result.md': '8/8', 'docs/18_full_push.md': '4/4'}"
+    "detail": "{'docs/01_reproduction_gate.md': '5/5', 'docs/02_null_capacity.md': '5/5', 'docs/03_closure_scan.md': '2/2', 'docs/04_carry_by_2_candidate.md': '6/6', 'docs/05_universality.md': '3/3', 'docs/06_ktree_alpha_probe.md': '2/2', 'docs/07_alpha_source.md': '1/1', 'docs/08_precision_budget.md': '5/5', 'docs/09_completeness_audit.md': '6/6', 'docs/10_sector_extension.md': '2/2', 'docs/11_t1_provenance_theorem.md': '2/2', 'docs/12_rival_lattice_audit.md': '4/4', 'docs/13_symmetric_trace_closure.md': '8/8', 'docs/14_hypothesis_verification.md': '6/6', 'docs/15_audit_report.md': '6/6', 'docs/16_propagation_audit.md': '5/5', 'docs/17_handoff_replies.md': '9/9', 'final_result.md': '8/8', 'docs/18_full_push.md': '4/4', 'docs/19_chain_ratio_and_besiii.md': '3/3'}"
   },
   "A6b L3 FAIL = 0": {
     "pass": true,
@@ -178,7 +178,7 @@
     "checks": 35,
     "fail": 0,
     "warn": 0,
-    "n_scripts": 21,
-    "n_logs": 21
+    "n_scripts": 22,
+    "n_logs": 22
   }
 }

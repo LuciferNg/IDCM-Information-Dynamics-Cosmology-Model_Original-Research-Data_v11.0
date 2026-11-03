@@ -186,6 +186,10 @@ CLAIMS = [
     {"doc": "docs/18_full_push.md", "key": "Xi_c_split", "label": "Ξc⁰−Ξc⁺"},
     {"doc": "docs/18_full_push.md", "key": "Xi_c_sigma", "label": "σ(Ξc 分裂)"},
     {"doc": "docs/18_full_push.md", "key": "sigma_Xi0_needed_B5", "label": "σ(Ξ⁰) 需 ≤（vs B=5）"},
+    # docs/19 續推（R1 鏈譜比／R2 天花板）
+    {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "gamma2_over_gamma1", "label": "γ₂/γ₁"},
+    {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "z_B5_ceiling", "label": "z(B=5) 天花板"},
+    {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "sigma_Xi0_needed_B5", "label": "σ(Ξ⁰) 需 ≤"},
 ]
 
 

@@ -78,6 +78,7 @@ LOGMAP = {
     "19_handoff_replies": "run_19_handoff_replies",
     "20_channel_optimization": "run_20_channel",
     "21_r1_r3_push": "run_21_r1_r3",
+    "22_chain_ratio_scan": "run_22_chain_ratio",
 }
 CANON = {p: DATA / f"{LOGMAP[p.stem]}.log" for p in L1 if p.stem in LOGMAP}
 # A4 排除本檔自身（否則 18→18 無限遞歸）；本檔之可重現性由「跑兩次 cmp」外部驗證
