@@ -1,0 +1,329 @@
+{
+ "claims": [
+  {
+   "doc": "01_round1_partition_null.md",
+   "label": "Σγ = 90",
+   "key": "sig_gamma",
+   "expected": "90.0",
+   "nearest": 90.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "01_round1_partition_null.md",
+   "label": "Σγ_odd = 44",
+   "key": "sig_odd",
+   "expected": "44.0",
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "01_round1_partition_null.md",
+   "label": "Σγ_even = 46",
+   "key": "sig_even",
+   "expected": "46.0",
+   "nearest": 46.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "02_round2_g3_assignment.md",
+   "label": "(3:16:41)/60",
+   "key": "prod_345",
+   "expected": 60,
+   "nearest": 60.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "03_round3_r3_operatorization.md",
+   "label": "N_d = 44",
+   "key": "N_d",
+   "expected": 44,
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "04_round4_oplus_legitimacy.md",
+   "label": "量子 3/2 = 1.5",
+   "key": "quantum",
+   "expected": "3/2",
+   "nearest": 1.5,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "05_round5_chain_length_origin.md",
+   "label": "88 sites",
+   "key": "N_sites",
+   "expected": 88,
+   "nearest": 88.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "06_round6_f2_onedim.md",
+   "label": "N_d = 44",
+   "key": "N_d",
+   "expected": 44,
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "07_round7_single_component.md",
+   "label": "44 模式",
+   "key": "N_d",
+   "expected": 44,
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "08_round8_correction_k.md",
+   "label": "44",
+   "key": "N_d",
+   "expected": 44,
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "09_round9_gamma1_identity.md",
+   "label": "∏γ = N_d = 44",
+   "key": "N_d",
+   "expected": 44,
+   "nearest": 44.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "09_round9_gamma1_identity.md",
+   "label": "Σγ = 90",
+   "key": "sig_gamma",
+   "expected": "90.0",
+   "nearest": 90.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "10_round10_omega_b_fork.md",
+   "label": "Ω_b h² = 0.0227186",
+   "key": "omega_b_h2",
+   "expected": "0.02271858565205",
+   "nearest": 0.022719,
+   "dev": 1.823828104202209e-05,
+   "pass": true
+  },
+  {
+   "doc": "11_round11_g3_fork.md",
+   "label": "γ₂ = 0.0203571",
+   "key": "gamma_2",
+   "expected": "0.02035711623813453524781592444656242524696",
+   "nearest": 0.0203571,
+   "dev": 7.976637921089336e-07,
+   "pass": true
+  },
+  {
+   "doc": "11_round11_g3_fork.md",
+   "label": "γ₃ = 0.0457063",
+   "key": "gamma_3",
+   "expected": "0.04570626805768096102656290132001788261131",
+   "nearest": 0.0457063,
+   "dev": 6.98860799562341e-07,
+   "pass": true
+  },
+  {
+   "doc": "12_round12_g3a_p4.md",
+   "label": "E_sync = 61.5",
+   "key": "E_sync",
+   "expected": "123/2",
+   "nearest": 61.5,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "12_round12_g3a_p4.md",
+   "label": "E_proj = 28.5",
+   "key": "E_proj",
+   "expected": "57/2",
+   "nearest": 28.5,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "13_round13_index_audit.md",
+   "label": "物理索引 rank = 2",
+   "key": "rank_phys",
+   "expected": 2,
+   "nearest": 2.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "14_round14_r5_mc_null.md",
+   "label": "p1 = 5.845e-4",
+   "key": "p1_value_space",
+   "expected": 0.0005844535359438924,
+   "nearest": 0.0005844535359438924,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "14_round14_r5_mc_null.md",
+   "label": "3.25σ",
+   "key": "z_p1",
+   "expected": 3.246360528119658,
+   "nearest": 3.25,
+   "dev": 0.0011210929435647495,
+   "pass": true
+  },
+  {
+   "doc": "15_round15_r1_gate_identity.md",
+   "label": "Ω_dm = 0.26667",
+   "key": "omega_dm",
+   "expected": "4/15",
+   "nearest": 0.26666666666666666,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "16_round16_a3_dimension_capacity.md",
+   "label": "1452",
+   "key": "dims_total",
+   "expected": 1452,
+   "nearest": 1452.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "17_round17_pythagoras_audit.md",
+   "label": "462 ≠ 780",
+   "key": "pyth_lhs_5_12_13",
+   "expected": 462,
+   "nearest": 462.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "17_round17_pythagoras_audit.md",
+   "label": "780",
+   "key": "pyth_rhs_5_12_13",
+   "expected": 780,
+   "nearest": 780.0,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "final_result.md",
+   "label": "E_sync = 61.5",
+   "key": "E_sync",
+   "expected": "123/2",
+   "nearest": 61.5,
+   "dev": 0.0,
+   "pass": true
+  },
+  {
+   "doc": "final_result.md",
+   "label": "統計上限 3.25σ",
+   "key": "z_p1",
+   "expected": 3.246360528119658,
+   "nearest": 3.25,
+   "dev": 0.0011210929435647495,
+   "pass": true
+  },
+  {
+   "doc": "18_round18_audit_verify.md",
+   "label": "整數三分 1711",
+   "key": "n_triples",
+   "expected": 1711,
+   "nearest": 1711.0,
+   "dev": 0.0,
+   "pass": true
+  }
+ ],
+ "per_doc": {
+  "01_round1_partition_null.md": [
+   3,
+   3
+  ],
+  "02_round2_g3_assignment.md": [
+   1,
+   1
+  ],
+  "03_round3_r3_operatorization.md": [
+   1,
+   1
+  ],
+  "04_round4_oplus_legitimacy.md": [
+   1,
+   1
+  ],
+  "05_round5_chain_length_origin.md": [
+   1,
+   1
+  ],
+  "06_round6_f2_onedim.md": [
+   1,
+   1
+  ],
+  "07_round7_single_component.md": [
+   1,
+   1
+  ],
+  "08_round8_correction_k.md": [
+   1,
+   1
+  ],
+  "09_round9_gamma1_identity.md": [
+   2,
+   2
+  ],
+  "10_round10_omega_b_fork.md": [
+   1,
+   1
+  ],
+  "11_round11_g3_fork.md": [
+   2,
+   2
+  ],
+  "12_round12_g3a_p4.md": [
+   2,
+   2
+  ],
+  "13_round13_index_audit.md": [
+   1,
+   1
+  ],
+  "14_round14_r5_mc_null.md": [
+   2,
+   2
+  ],
+  "15_round15_r1_gate_identity.md": [
+   1,
+   1
+  ],
+  "16_round16_a3_dimension_capacity.md": [
+   1,
+   1
+  ],
+  "17_round17_pythagoras_audit.md": [
+   2,
+   2
+  ],
+  "final_result.md": [
+   2,
+   2
+  ],
+  "18_round18_audit_verify.md": [
+   1,
+   1
+  ]
+ },
+ "pass": true,
+ "docs_on_disk": 18,
+ "docs_with_claim": 19,
+ "docs_missing_claim": []
+}

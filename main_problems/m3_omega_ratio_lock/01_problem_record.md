@@ -96,6 +96,8 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 | 16 | 2026-10-25 | 第十四輪 **R5 銷賬**：10⁷ MC-null 四空間 ⟹ 數值層 3.25σ（非 5σ），5σ 對整數閉合系統性不可達（7/7）| scripts/14, data/14, docs/14_round14_r5_mc_null.md |
 | 17 | 2026-10-25 | 第十五輪 **R1 閉合**：ℓ=2 由容量填充導出（cum≤dim K_tree）；κ⁻¹=16=終端佔用；Ω_dm 由擬合升預言；R6 結案（15/15）| scripts/15, data/15, docs/15_round15_r1_gate_identity.md |
 | 18 | 2026-10-25 | 第十六輪 **A3 證明**：容量必須維度型（標度不變性；能量規則 ℓ 隨 t 跳 1→4、t=1 即錯）；A1/A2/A3 全部落地（9/9）| scripts/16, data/16, docs/16_round16_a3_dimension_capacity.md |
+| 19 | 2026-11-03 | 第十七輪 畢氏和積審計（8/8）：非一般律、方向倒轉、零指派力 ⟹ 禁區 | scripts/17, data/17, docs/17 |
+| 20 | 2026-11-03 | 第十八輪 **Audit-Verify**（首建 L2/L3/audit/driver）：L1 17/17、L2 45 keys、L3 27/27、audit 14/14；修 D1–D3 | scripts/18, data/18, docs/18_round18_audit_verify.md |
 
 ## 七、相關文件
 
@@ -922,3 +924,38 @@ B = 4：11 = 16 − 4 − 1 ✓
    ① 非一般律　② 方向倒轉（B=4 ⟹ 和積）　③ 零指派力
    同族：φ-power 陷阱
 ```
+
+---
+
+## 二十九、第十八輪：Audit-Verify（全鏈審計，2026-11-03）
+
+> 詳見 `docs/18_round18_audit_verify.md`；`scripts/18_audit_verify.py`、`scripts/l2_independent_verify.py`、`scripts/l3_doc_crosscheck.py`、`scripts/run_chain.sh`。
+> **水位**：M3 從無審計基建 ⟹ 首次全驗（17 支腳本 ＋ 18 份文檔全覆蓋）。
+
+### 29.1 四數
+
+```
+L1    17/17  兩跑 byte-identical 且 == canonical（rc 全 0）
+L2    45 keys ＋ 10 identities（零 import L1、零讀 docs）
+L3    27/27 claims；19/19 檔有 claim（18 docs ＋ final_result）
+audit 14/14  PASS ｜ FAIL 0 ｜ WARN 0（含 2 負控制；審計自身兩跑 identical）
+```
+
+### 29.2 捉到之真缺陷（3 項，已修）
+
+| # | 症狀 | 處理 |
+|:-:|:--|:--|
+| D1 | README 引用 `docs/13` 但檔案不存在 | 補建 `docs/13`（明標 2026-11-03 補建）|
+| D2 | `docs/03`、`docs/11` 仍以**撤回前讀法**作活文檔 | 兩檔尾 append 更正塊（`3=rank(P_κ)` 撤回、`3` 改由特徵標供給）|
+| D3 | 四件套缺 `final_result.md` | 本輪補建（狀態／結論／關鍵式／依賴／審計／保留／禁區／邊界）|
+
+### 29.3 一致性判定
+
+```
+推導鏈：17 腳本 → 17 canonical log → 19 檔，逐層有 producer；無孤兒、無 inline 幽靈
+數值：L2（獨立路徑）與 L1 在 45 key 上零分歧；10 條代數恆等差 < 1e-30
+文檔：27 條 headline claim 全命中；小整數用錨點窗（避免零鑑別力）
+邊界：Ω_b 仍 +2.33σ（R2）；統計上限 3.25σ 已定（空間 1711）
+```
+
+**⟹ M3 推導全鏈連續、一致，四數全綠。**

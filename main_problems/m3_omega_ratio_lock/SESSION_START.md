@@ -14,7 +14,7 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 -->
 
 > **Session**: 2026-10-15（v11 Reality-Architecture 建立）
-> **狀態**: 🟢 **主體閉合（2026-10-25 十六輪：G1–G4 關閉；P4 橋閉合；R1/R5/R6 結案；A1–A3 全部落地；只剩 Ω_b 預言等 CMB-S4）—— 見 `docs/01`–`docs/16`**
+> **狀態**: 🟢 **主體閉合 ＋ 全鏈審計通過（2026-11-03 十八輪：G1–G4 關閉；R1/R5/R6 結案；A1–A3 落地；audit 14/14）—— 見 `docs/01`–`docs/18`**
 > **來源**: 調律者 2026-10-15「在v11.0 開2個新M，現在只開不推」
 > **前置**: O215（Ω 預算 3:16:41）; O39（⟨W⟩²=61.5）; O121（同步池）; O223（|A₅|=60）; M2（互換公式）
 > **位置**: `main_problems/m3_omega_ratio_lock/`
@@ -389,6 +389,25 @@ MC-null 5σ 對零參數整數閉合**系統性不可達**；替代 = dof=0 ＋ 
 | ★ 三假設 | A1 定義性、A2 零參數原則、**A3 定理級** ⟹ `ℓ=2 → Ω_dm` 鏈條無假設級環節 |
 
 累計 217 PASS / 0 FAIL。
+
+## 二十二、2026-11-03 第十八輪（Audit-Verify，首建 L2/L3/audit/driver）
+
+```text
+L1 17/17 ｜ L2 45 keys ＋ 10 ident ｜ L3 27/27 ｜ audit 14/14（FAIL 0、WARN 0）
+文檔: docs/18_round18_audit_verify.md
+```
+
+| 結果 | 內容 |
+|:--|:--|
+| 基建 | `l2_independent_verify.py`、`l3_doc_crosscheck.py`、`18_audit_verify.py`、`run_chain.sh` |
+| D1 | README 引用 `docs/13` 但無檔 ⟹ 補建 |
+| D2 | `docs/03`／`docs/11` 缺前向撤回指針 ⟹ append 更正塊 |
+| D3 | 四件套缺 `final_result.md` ⟹ 補建 |
+| 判定 | 17 腳本 → 17 log → 19 檔，逐層有 producer；L2 與 L1 零分歧 |
+
+累計 231 PASS / 0 FAIL。
+
+---
 
 ---
 

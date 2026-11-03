@@ -1,0 +1,36 @@
+§A1 canonical log 對稱
+  [PASS] 每支 L1 有 canonical log  17 支 / 缺 []
+  [PASS] A10 產物時序（log mtime ≥ script mtime）  違例 []
+
+§A2 L1 兩跑 determinism ＋ == canonical
+  [PASS] L1 17/17 兩跑 identical 且 == canonical  []
+  [PASS] A5 無 nan/inf 數值  []
+
+§A3 路徑衛生
+  [PASS] scripts 無 /tmp 寫入  []（跳過審計自身）
+
+§A4 driver 覆蓋
+  [PASS] driver 腳本集 == L1 宣告集  缺 [] 多 []
+
+§A6 L3 覆蓋
+  [PASS] 每份 doc 有 ≥1 claim  缺 []、額外 ['final_result.md']
+  [PASS] L3 claims 27/27 PASS  
+
+§A7 撤回前向指針
+  [PASS] 被推翻 doc 含撤回指針  缺 []
+
+§A8 README 引用
+  [PASS] README 引用之 docs 全部存在  缺檔 []
+
+§A9 四件套
+  [PASS] 四件套齊全  在碟 4/4；缺 []（未收官）
+
+§A11 負控制
+  [PASS] L3 負控制：期望 91（真值 90）不命中  token 內有 91？False
+  [PASS] A2 負控制：篡改後 ≠ canonical  in-memory
+
+§A12 內部碼命名
+  [PASS] 無點號式內部碼（m14.1 型）  []
+
+audit 14/14 PASS ｜ FAIL 0 ｜ WARN 0
+SUMMARY PASS=14 FAIL=0

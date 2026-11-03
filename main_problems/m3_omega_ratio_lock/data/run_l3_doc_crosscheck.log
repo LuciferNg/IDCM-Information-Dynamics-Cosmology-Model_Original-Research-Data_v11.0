@@ -1,0 +1,31 @@
+  [PASS] 01_round1_partition_null.md                  Σγ = 90                L2=90.0  最近=90.0  dev=0.00e+00
+  [PASS] 01_round1_partition_null.md                  Σγ_odd = 44            L2=44.0  最近=44.0  dev=0.00e+00
+  [PASS] 01_round1_partition_null.md                  Σγ_even = 46           L2=46.0  最近=46.0  dev=0.00e+00
+  [PASS] 02_round2_g3_assignment.md                   (3:16:41)/60           L2=60  最近=60.0  dev=0.00e+00
+  [PASS] 03_round3_r3_operatorization.md              N_d = 44               L2=44  最近=44.0  dev=0.00e+00
+  [PASS] 04_round4_oplus_legitimacy.md                量子 3/2 = 1.5           L2=3/2  最近=1.5  dev=0.00e+00
+  [PASS] 05_round5_chain_length_origin.md             88 sites               L2=88  最近=88.0  dev=0.00e+00
+  [PASS] 06_round6_f2_onedim.md                       N_d = 44               L2=44  最近=44.0  dev=0.00e+00
+  [PASS] 07_round7_single_component.md                44 模式                  L2=44  最近=44.0  dev=0.00e+00
+  [PASS] 08_round8_correction_k.md                    44                     L2=44  最近=44.0  dev=0.00e+00
+  [PASS] 09_round9_gamma1_identity.md                 ∏γ = N_d = 44          L2=44  最近=44.0  dev=0.00e+00
+  [PASS] 09_round9_gamma1_identity.md                 Σγ = 90                L2=90.0  最近=90.0  dev=0.00e+00
+  [PASS] 10_round10_omega_b_fork.md                   Ω_b h² = 0.0227186     L2=0.02271858565205  最近=0.022719  dev=1.82e-05
+  [PASS] 11_round11_g3_fork.md                        γ₂ = 0.0203571         L2=0.02035711623813453524781592444656242524696  最近=0.0203571  dev=7.98e-07
+  [PASS] 11_round11_g3_fork.md                        γ₃ = 0.0457063         L2=0.04570626805768096102656290132001788261131  最近=0.0457063  dev=6.99e-07
+  [PASS] 12_round12_g3a_p4.md                         E_sync = 61.5          L2=123/2  最近=61.5  dev=0.00e+00
+  [PASS] 12_round12_g3a_p4.md                         E_proj = 28.5          L2=57/2  最近=28.5  dev=0.00e+00
+  [PASS] 13_round13_index_audit.md                    物理索引 rank = 2          L2=2  最近=2.0  dev=0.00e+00
+  [PASS] 14_round14_r5_mc_null.md                     p1 = 5.845e-4          L2=0.0005844535359438924  最近=0.0005844535359438924  dev=0.00e+00
+  [PASS] 14_round14_r5_mc_null.md                     3.25σ                  L2=3.246360528119658  最近=3.25  dev=1.12e-03
+  [PASS] 15_round15_r1_gate_identity.md               Ω_dm = 0.26667         L2=4/15  最近=0.26666666666666666  dev=0.00e+00
+  [PASS] 16_round16_a3_dimension_capacity.md          1452                   L2=1452  最近=1452.0  dev=0.00e+00
+  [PASS] 17_round17_pythagoras_audit.md               462 ≠ 780              L2=462  最近=462.0  dev=0.00e+00
+  [PASS] 17_round17_pythagoras_audit.md               780                    L2=780  最近=780.0  dev=0.00e+00
+  [PASS] final_result.md                              E_sync = 61.5          L2=123/2  最近=61.5  dev=0.00e+00
+  [PASS] final_result.md                              統計上限 3.25σ             L2=3.246360528119658  最近=3.25  dev=1.12e-03
+  [PASS] 18_round18_audit_verify.md                   整數三分 1711              L2=1711  最近=1711.0  dev=0.00e+00
+
+  docs 在碟 = 18 ；有 claim = 19 ；缺 claim = []
+
+L3 27/27 ；all_pass=True
