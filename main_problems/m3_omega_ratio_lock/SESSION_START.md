@@ -5,7 +5,7 @@ pid:     M3
 title:   Ω 比例硬性鎖定：Ω_b=3/60、Ω_dm=16/60、Ω_Λ=41/60（只開不推）
 state:   partial
 verdict: -
-flags:   register-only; rounds-1-15; g1-g4-closed; p4-bridge-closed; r1-r6-closed; omega_b-preregistered
+flags:   register-only; rounds-1-16; g1-g4-closed; p4-bridge-closed; r1-r6-closed; a1-a3-grounded; omega_b-preregistered
 owner:   M3
 created: 2026-10-15
 updated: 2026-10-24
@@ -14,7 +14,7 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 -->
 
 > **Session**: 2026-10-15（v11 Reality-Architecture 建立）
-> **狀態**: 🟢 **主體閉合（2026-10-25 十五輪：G1–G4 關閉；P4 橋閉合；R1/R5/R6 結案；只剩 Ω_b 預言等 CMB-S4）—— 見 `docs/01`–`docs/15`**
+> **狀態**: 🟢 **主體閉合（2026-10-25 十六輪：G1–G4 關閉；P4 橋閉合；R1/R5/R6 結案；A1–A3 全部落地；只剩 Ω_b 預言等 CMB-S4）—— 見 `docs/01`–`docs/16`**
 > **來源**: 調律者 2026-10-15「在v11.0 開2個新M，現在只開不推」
 > **前置**: O215（Ω 預算 3:16:41）; O39（⟨W⟩²=61.5）; O121（同步池）; O223（|A₅|=60）; M2（互換公式）
 > **位置**: `main_problems/m3_omega_ratio_lock/`
@@ -373,6 +373,24 @@ MC-null 5σ 對零參數整數閉合**系統性不可達**；替代 = dof=0 ＋ 
 台帳：**R1 ✅ 閉合、R6 ✅ 結案**；剩 R2（等 CMB-S4）、R3（註記）、R4（已判死）。
 
 累計 208 PASS / 0 FAIL。
+
+## 二十一、2026-10-25 第十六輪（A3 證明：容量必須維度型）
+
+```text
+腳本: scripts/16_round16_a3_scale_invariance.py   9/9 PASS
+文檔: docs/16_round16_a3_dimension_capacity.md
+```
+
+| 結果 | 內容 |
+|:--|:--|
+| ★ 判準 | `t` = 歸一化 ⟹ `Σγ(t)=90t`；sector 計數必須 `t`-不變 |
+| 🔴 能量容量 | `ℓ_E(t)` 跳 1→4，`Ω_dm` 掃 −36σ…+118σ；**`t=1` 直接給 ℓ=3（錯）** |
+| 🟢 維度容量 | `dim=33` ⟹ `ℓ=2` 唯一；維度界係線性代數定理 |
+| ★ 三假設 | A1 定義性、A2 零參數原則、**A3 定理級** ⟹ `ℓ=2 → Ω_dm` 鏈條無假設級環節 |
+
+累計 217 PASS / 0 FAIL。
+
+---
 
 ---
 

@@ -40,6 +40,8 @@
 | `scripts/14_round14_r5_mc_null.py` | 7/7 PASS（~25 s）| — |
 | `docs/15_round15_r1_gate_identity.md` | 第十五輪 **R1 閉合**：ℓ=2 由容量填充導出；`κ⁻¹=16` = 終端佔用；Ω_dm 升預言 | 閉合 |
 | `scripts/15_round15_r1_gate_identity.py` | 15/15 PASS | — |
+| `docs/16_round16_a3_dimension_capacity.md` | 第十六輪 **A3 證明**：容量必須維度型（標度不變性）；能量規則 ℓ 隨 t 跳 ⟹ 不可作 sector 定義 | 推進 |
+| `scripts/16_round16_a3_scale_invariance.py` | 9/9 PASS | — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
