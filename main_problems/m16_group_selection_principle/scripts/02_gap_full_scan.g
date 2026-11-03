@@ -1,10 +1,12 @@
 # scripts/02_gap_full_scan.g — M16 R2：全域掃描（階 ≤ 500 之全部群）
-# 執行：bash scripts/gap_run.sh scripts/02_gap_full_scan.g <outfile>
-# 輸出每行：n  i  [[deg,mult],...]   （CharacterDegrees，GAP 內建）
-# 用途：事後以 Python（scripts/03）計算準則及其變體之命中率。
+# 執行（於 m16 目錄）：bash scripts/gap_run.sh scripts/02_gap_full_scan.g
+# 輸出：data/run_02_scan_all_500.txt（每行：n  i  [[deg,mult],...]）
+#       標準輸出：每個階之進度 + 總數 + GAP 版本
+# 註：本機 GAP 未綁 ARGV，故路徑寫死。
 
+outfile := "data/run_02_scan_all_500.txt";
 tot := 0;
-str := OutputTextFile(ARGV[1], false);
+str := OutputTextFile(outfile, false);
 SetPrintFormattingStatus(str, false);
 t0 := Runtime();
 for n in [1..500] do
@@ -20,7 +22,8 @@ for n in [1..500] do
     Print(n, " NOT-AVAILABLE\n");
   fi;
 od;
+CloseStream(str);
 Print("TOTAL ", tot, " ms=", Runtime()-t0, "\n");
 Print("GAP_VERSION ", GAPInfo.Version, "\n");
-CloseStream(str);
+Print("SMALLGRP ", InstalledPackageVersion("smallgrp"), "\n");
 QUIT;

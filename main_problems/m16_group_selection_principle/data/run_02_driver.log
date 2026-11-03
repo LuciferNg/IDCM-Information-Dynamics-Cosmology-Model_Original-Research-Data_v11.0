@@ -1,0 +1,15 @@
+orders=500 groups=92570 tasks=519 chunks=11
+chunk 00: tasks=63 weight=60845
+chunk 01: tasks=64 weight=60845
+chunk 02: tasks=63 weight=60845
+chunk 03: tasks=63 weight=60844
+chunk 04: tasks=3 weight=67984
+chunk 05: tasks=61 weight=60844
+chunk 06: tasks=65 weight=60844
+chunk 07: tasks=65 weight=60844
+chunk 08: tasks=66 weight=60844
+chunk 09: tasks=3 weight=69136
+chunk 10: tasks=3 weight=61664
+launched 11 GAP workers
+workers done fail=0
+92570 data/run_02_scan_all_500.txt

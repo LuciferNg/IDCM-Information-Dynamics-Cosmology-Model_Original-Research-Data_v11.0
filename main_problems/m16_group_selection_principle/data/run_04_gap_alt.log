@@ -1,0 +1,22 @@
+GAP 4.14.0 smallgrp 1.5.4
+--- §A non-abelian simple groups, order <= 500 ---
+  SIMPLE 60/5 A5
+  SIMPLE 168/42 PSL(3,2)
+  SIMPLE 360/118 A6
+non-abelian simple (order<=500) count = 3
+--- §B order 60 : all 13 groups ---
+60/1 C5 x (C3 : C4) simple=false perfect=false |G'|=3 k(linear)=20 DNT=[ 2 ]
+60/2 C3 x (C5 : C4) simple=false perfect=false |G'|=5 k(linear)=12 DNT=[ 2 ]
+60/3 C15 : C4 simple=false perfect=false |G'|=15 k(linear)=4 DNT=[ 2 ]
+60/4 C60 simple=false perfect=false |G'|=1 k(linear)=60 DNT=[  ]
+60/5 A5 simple=true perfect=true |G'|=60 k(linear)=1 DNT=[ 3, 4, 5 ]
+60/6 C3 x (C5 : C4) simple=false perfect=false |G'|=5 k(linear)=12 DNT=[ 4 ]
+60/7 C15 : C4 simple=false perfect=false |G'|=15 k(linear)=4 DNT=[ 2, 4 ]
+60/8 S3 x D10 simple=false perfect=false |G'|=15 k(linear)=4 DNT=[ 2, 4 ]
+60/9 C5 x A4 simple=false perfect=false |G'|=4 k(linear)=15 DNT=[ 3 ]
+60/10 C6 x D10 simple=false perfect=false |G'|=5 k(linear)=12 DNT=[ 2 ]
+60/11 C10 x S3 simple=false perfect=false |G'|=3 k(linear)=20 DNT=[ 2 ]
+60/12 D60 simple=false perfect=false |G'|=15 k(linear)=4 DNT=[ 2 ]
+60/13 C30 x C2 simple=false perfect=false |G'|=1 k(linear)=60 DNT=[  ]
+--- §C perfect groups, order<=120 (count only) ---
+  perfect groups order<=120 : 3

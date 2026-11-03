@@ -37,14 +37,18 @@ def chk(name, cond, detail=""):
 # ─────────────────────────────────────────────────────────────
 # §A  Burnside 恆等式（L1）—— 對已知 irrep 維數清單逐群核
 # ─────────────────────────────────────────────────────────────
+# 以下維數清單全部由 GAP 4.14.0 + CharacterDegrees 直接讀出（見 data/run_00_named_degrees.log）
 KNOWN = {
-    "C1":  (1, [1]),
-    "S3":  (6, [1, 1, 2]),
-    "A4":  (12, [1, 1, 1, 3]),
-    "S4":  (24, [1, 1, 2, 3, 3]),
-    "A5":  (60, [1, 3, 3, 4, 5]),
-    "S5":  (120, [1, 1, 4, 4, 5, 5, 6]),
-    "A6":  (360, [1, 5, 5, 8, 8, 9, 9, 10, 10]),
+    "C1":      (1,    [1]),
+    "S3":      (6,    [1, 1, 2]),
+    "A4":      (12,   [1, 1, 1, 3]),
+    "S4":      (24,   [1, 1, 2, 3, 3]),
+    "A5":      (60,   [1, 3, 3, 4, 5]),
+    "S5":      (120,  [1, 1, 4, 4, 5, 5, 6]),
+    "PSL(2,7)": (168, [1, 3, 3, 6, 7, 8]),
+    "A6":      (360,  [1, 5, 5, 8, 8, 9, 10]),
+    "S6":      (720,  [1, 1, 5, 5, 5, 5, 9, 9, 10, 10, 16]),
+    "A7":      (2520, [1, 6, 10, 10, 14, 14, 15, 21, 35]),
 }
 LOG.append("§A Burnside 恆等式 Σd² = |G|（全部群皆真 ⟹ 單獨零鑑別力）")
 for g, (order, degs) in KNOWN.items():
@@ -113,59 +117,43 @@ chk("C:two-patterns", SOL == [(1, 1, 1, 10), (2, 1, 1, 1)], f"{SOL}")
 chk("C:A5-pattern-is-second", SOL[1] == (2, 1, 1, 1))
 
 # ─────────────────────────────────────────────────────────────
-# §D  暴力證書：n ≤ N_MAX 全掃（非平凡維數重數多重集，Σd² ≤ n）
+# §D  暴力證書：n ≤ N_MAX 全掃（以「相異集 S + 重數 + 線性數」三分窮盡，無漏）
+#     每個群給定：S = 相異非平凡維數集，m_d ≥ 1（重數），k = 線性特徵標數 ≥ 1
+#     ⟹ |G| = k + Σ_d m_d d²，且必須 |G| = ∏_{d∈S} d
+#     ⟹ 對 n ≤ N_MAX 窮盡所有 (S, m, k) 組合（不需任何群表）
 # ─────────────────────────────────────────────────────────────
-def multisets_sq_le(nmax):
-    """所有 nondecreasing 多重集（元素 ≥ 2），其 Σd² ≤ nmax。"""
-    out = []
-
-    def rec(start, cur, sq):
-        out.append(tuple(cur))
-        if not cur:
-            d = 2
-        else:
-            d = cur[-1]
-        while sq + d * d <= nmax:
-            cur.append(d)
-            rec(start, cur, sq + d * d)
-            cur.pop()
-            d += 1
-
-    rec(2, [], 0)
-    return out
-
-
 N_MAX = 500
-MS = multisets_sq_le(N_MAX)
-LOG.append(f"§D 多重集總數（Σd² ≤ {N_MAX}，元素 ≥ 2，含空集）：{len(MS)}")
-
-HITS_MIN = []      # ∏(相異非平凡) = n 且 Σ(相異非平凡) = 12
-HITS_MIN_ANY = []  # 同上，但 n 由 k = n − Σd²（線性數 ≥ 1）補齊
-for ms in MS:
-    sq = sum(d * d for d in ms)
-    for n in range(max(sq + 1, 1), N_MAX + 1):
-        k = n - sq               # 線性特徵標數
-        if k < 1:
+sols = 0
+HITS_MIN_ANY = []   # (n, S, mult_tuple, k)
+for r in range(1, 6):
+    for comb in itertools.combinations(range(2, 13), r):
+        if sum(comb) != 12:
             continue
-        S = sorted(set(ms))
-        if not S:
+        prodS = 1
+        for d in comb:
+            prodS *= d
+        if prodS > N_MAX:            # |G| = ∏S 已被階上界排除
             continue
-        prod = 1
-        for d in S:
-            prod *= d
-        if prod == n and sum(S) == 12:
-            HITS_MIN_ANY.append((n, ms, k))
-
-LOG.append("§D 暴力證書結果（n ≤ 500）：")
+        # 重數上限：1 ≤ m_d，Σ m_d d² ≤ N_MAX − 1
+        maxes = [min(N_MAX // (d * d), (N_MAX - 1) // (d * d)) for d in comb]
+        for m in itertools.product(*[range(1, mx + 1) for mx in maxes]):
+            sq = sum(mi * d * d for mi, d in zip(m, comb))
+            k = prodS - sq           # 線性數由閉合逼出
+            if k < 1:
+                continue
+            n = prodS
+            sols += 1
+            HITS_MIN_ANY.append((n, comb, m, k))
+LOG.append(f"§D 三分窮盡（n ≤ {N_MAX}）：候選 (S,m,k) 組合數 = {sols}")
 uniq_n = sorted({h[0] for h in HITS_MIN_ANY})
 for h in HITS_MIN_ANY[:20]:
-    LOG.append(f"  HIT n={h[0]} 非平凡多重集={h[1]} k(線性)={h[2]}")
+    LOG.append(f"  HIT n={h[0]} S={list(h[1])} 重數={h[2]} k(線性)={h[3]}")
 chk("D:only-n==60", uniq_n == [60], f"命中階 = {uniq_n}")
-# 60 之下之全部命中模式
 P60 = [h for h in HITS_MIN_ANY if h[0] == 60]
 for h in P60:
-    LOG.append(f"  n=60 模式：非平凡多重集={h[1]}  線性 k={h[2]}")
-chk("D:60-patterns", sorted(h[1] for h in P60) == [(3, 3, 4, 5), (3, 4, 5)])
+    LOG.append(f"  n=60 模式：S={list(h[1])} 重數={h[2]} 線性 k={h[3]}")
+chk("D:60-patterns", sorted((h[1], h[2]) for h in P60) ==
+    [((3, 4, 5), (1, 1, 1)), ((3, 4, 5), (2, 1, 1))])
 
 # ─────────────────────────────────────────────────────────────
 # §E  修飾詞敏感度（R3）：去「相異」／去「非平凡」

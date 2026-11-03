@@ -1,6 +1,6 @@
 # M16 — 群選擇原理（Group Selection Principle）
 
-**狀態**: ⚪ 已註冊、未開推 ｜ **version** v11.0 ｜ **性質** 公理層缺口
+**狀態**: 🟢 已閉合（2026-11-03）｜ **version** v11.0 ｜ **性質** 公理層缺口 → 已歸約至上游
 
 ---
 
@@ -12,64 +12,56 @@
 Σd² = Σd + Σd(d−1)   ⟺   60 = 16 + 44      （d = [1,3,3,4,5]）
 ```
 
-但下一步即刻撞牆：**為何係 A₅？** 呢個唔係算術問題，係**群選擇原理**問題 ——
-本 O 專門處理呢一條缺口，唔做其他。
+本 O 處理下一步：**為何係 A₅？**
 
-| 已閉（勿重推） | 出處 |
+## 結論
+
+```
+C(G) := [∏(相異非平凡 irrep 維數) = |G|] ∧ [Σ(相異非平凡 irrep 維數) = 12]
+C(G) ⟺ G ≅ A₅          （覆蓋所有階；零自由度、零新增假設）
+```
+
+**A₅ = 條件導出，非公理輸入。** 缺口搬遷至上游（`MR1–MR3`，全部屬 `O171`）。
+
+| 已閉 | 出處 |
 |:--|:--|
-| `60 = 16 + 44`（A₅ irrep 恆等式） | `M15 docs/25` |
-| 容量 `= (B−1)/60`、溢出不可能 | `M15 docs/17`、`docs/23`、`docs/24` |
-| `3 = B − 1`（階 4 群非平凡特徵標） | `M15 docs/17` |
-| A₅ ↔ 88-site 配分（含舊群選擇準則） | v10 `O171`（只讀） |
-
-## 本 O 之五個缺口
-
-| # | 缺口 |
-|:-:|:--|
-| **R1** | 準則兩條件（`∏ = |G|`、`Σ = 12`）各自之結構理由 |
-| **R2** | 全域唯一性：階 `≤ 500` 之群，同時滿足者是否只有 A₅ |
-| **R3** | 「相異」「非平凡」兩修飾詞之必要性（自由度計數） |
-| **R4** | 準則之地位：導出 / 事後（look-elsewhere 校正） |
-| **R5** | `60 = |A₅|` 與 `Σd² = |G|` 是否同一陳述（若同一，`M3` 之 🟢 須降級） |
-
-## 三件套
-
-```
-01_problem_record.md   ★ 主檔（問題、已立、缺口、判準、範圍、參考集）
-SESSION_START.md       承接指引（已立事實、陷阱、首步）
-README.md              本檔（定位）
-```
+| `C(G) ⟺ DNT = {3,4,5} ∧ \|G\| = 60`（算術引理） | `docs/01` |
+| 92,570 群全域掃描 → 唯一 A₅ | `docs/02` |
+| 修飾詞承重 ＋ look-elsewhere | `docs/02 §3–4` |
+| `∏ = \|G\|` 之真內容 = 排除 abelian 膨脹（11 群族） | `docs/03 §3` |
+| 判詞 ＋ R5 ＋ 發還 M3 | `docs/04` |
 
 ## 目錄
 
 ```
 m16_group_selection_principle/
-├── 01_problem_record.md
-├── SESSION_START.md
-├── README.md
-├── docs/        ⬜ 待承接 session 建
-└── scripts/     ⬜ 待承接 session 建
+├── 01_problem_record.md     問題、缺口、參考集、推導時序
+├── SESSION_START.md         承接指引（已閉合；殘項指向 O171）
+├── README.md                本檔
+├── final_result.md          🟢 判詞（一句話 ＋ 關鍵式 ＋ 審計 ＋ 已否證）
+├── docs/01_r5_and_arithmetic_reduction.md
+├── docs/02_global_scan_and_modifiers.md
+├── docs/03_criterion_source_and_verdict.md
+├── docs/04_verdict_r5_and_status.md
+├── scripts/00_gap_named_degrees.g   具名群維數（GAP 權威）
+├── scripts/01_arithmetic_reduction.py
+├── scripts/02_gap_full_scan.g ｜ 02b_chunk_driver.py ｜ 02c_order_counts.g
+├── scripts/03_variants_and_lookelsewhere.py
+├── scripts/04_gap_alternative_principles.g
+├── scripts/05_candidate_principles.py
+├── scripts/gap_run.sh ｜ run_02_parallel.sh
+└── data/                    全部 run 記錄（含 92,570 群掃描原始檔）
 ```
-
-## 參考集（摘要；全文見 `01_problem_record.md §6`）
-
-**v10 主先前工作**
-
-- `o171_a5_partition_theory/` —— A₅ ↔ 88-site 配分；`final_result.md:225` 群選擇準則；
-  `docs/04_r1_sector_selection_law.md:67` 準則原文
-- `o137_cy3_topological_resonance/` —— `docs/24:259` 明寫「為何 A₅ 集被選」為下一步
-- `o19_lowl_dodecahedron/`、`o102_12_pentagons_su12/`、`o238_mass_as_cost/`、
-  `o167_cmb_h0_tension/`、`o213_world_dynamics/`、`o220_spin_origin/`、`p4_cmb_cold_spot/`
-
-**v11**
-
-- `m15/docs/25_a5_sixty_uniqueness.md`（★ 來源）、`m15/docs/02`＋`scripts/02`（A₅ 諧波重數）
-- `m3/01_problem_record.md:37`（`60 = |A₅|` 🟢）、`m12/SESSION_START.md:36-37`（A₅ 頂點標籤 🔴）
-- `m4/docs/{30,33,34,37,47}`、`m7/docs/{17,19}`（A₅ 引用，待逐條核）
 
 ## 使用方式
 
-1. 讀 `SESSION_START.md` → 已立事實與陷阱；
-2. 讀 `01_problem_record.md §3`（五缺口）與 `§4`（判準）；
-3. 自行判斷從哪一缺口入手（建議 `R5 → R2 → R3 → R1`）；
-4. **判死亦算結果** —— 若群選擇不可由結構決定，明寫「A₅ = 輸入」即可結案。
+1. 想知結論 → `final_result.md`；
+2. 想核證明 → `docs/01`（算術）＋ `docs/03`（定理）；
+3. 想核掃描／look-elsewhere → `docs/02` ＋ `data/run_02_scan_all_500.txt`；
+4. 想接殘項 → `SESSION_START.md §四`（MR1–MR3，全屬 O171）。
+
+## 環境備註
+
+GAP 4.14.0 + SmallGrp 1.5.4 由 Debian deb 解包至
+`/home/wsl/.hermes/cache/scratch/gapdebs/root`（無 root）；`scripts/gap_run.sh` 為啟動器。
+掃描以 11 進程並行分片執行（`scripts/run_02_parallel.sh`），片段按其階之子區間切分。
