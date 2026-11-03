@@ -34,6 +34,10 @@
 | `scripts/11_round11_g3_fork.py` | 8/8 PASS | — |
 | `docs/12_round12_g3a_p4.md` | 第十二輪 (a) 單閘門兩泛函 ＋ (b) P4 橋閉合；`60=Σγ/(3/2)` 導出 | 推進 |
 | `scripts/12_round12_g3a_p4.py` | 15/15 PASS | — |
+| `docs/13_round13_index_audit.md`（內容見 `01_problem_record §二十三`）| 第十三輪 索引缺陷審計（M15 handoff×2）：`3=rank(P_κ)` 撤回、`3=B−1` 反轉、秩三分 2:16:42 | 更正 |
+| `scripts/13_round13_index_audit.py` | 12/12 PASS | — |
+| `docs/14_round14_r5_mc_null.md` | 第十四輪 **R5 銷賬**：10⁷ MC-null 四空間；數值層 3.25σ；5σ 系統性不可達 | 推進（負面發現）|
+| `scripts/14_round14_r5_mc_null.py` | 7/7 PASS（~25 s）| — |
 | `scripts/01_round1_spectral_identities.py` | 18/18 PASS（mpmath dps=50 + sympy） | — |
 
 ## 依賴
