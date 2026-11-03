@@ -344,6 +344,13 @@ check_ctx("24_abelian_branch_group.md", "Σ維數² = 1+1+4 = 6", "S₃ 階", l2
 check_ctx("24_abelian_branch_group.md", "Σ維數  = 4 < 6", "Σ維數", l2["s3_sum_dims"], 2e-3, 8)
 check_ctx("24_abelian_branch_group.md", "Σ維數 3 ≠ |G| − 1 = 5", "非平凡 Σ", l2["s3_nontrivial_sum"], 2e-3, 8)
 
+say("")
+say("§13p  docs/25 — A₅ 恆等式")
+check_ctx("25_a5_sixty_uniqueness.md", "Σd²    = 1 + 9 + 9 + 16 + 25 = 60", "Σd²", l2["a5_sum_d2"], 2e-3, 6)
+check_ctx("25_a5_sixty_uniqueness.md", "Σd     = 1 + 3 + 3 + 4 + 5   = 16", "Σd", l2["a5_sum_d"], 2e-3, 6)
+check_ctx("25_a5_sixty_uniqueness.md", "Σd(d−1)= 0 + 6 + 6 + 12 + 20 = 44", "Σd(d−1)", l2["a5_sum_dd1"], 2e-3, 6)
+check_ctx("25_a5_sixty_uniqueness.md", "Euler：60 − 120 + 62 = 2", "F", l2["rhomb_F"], 2e-3, 4)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

@@ -550,6 +550,13 @@ put("s3_sum_dims", sum(_s3))
 put("s3_sum_sq", sum(d * d for d in _s3))
 put("s3_nontrivial_sum", sum(_s3[1:]))
 put("order4_group_count", 2)
+# ── 8v. A₅ 恆等式（docs/25）
+_d5 = [1, 3, 3, 4, 5]
+put("a5_sum_d2", sum(d * d for d in _d5))
+put("a5_sum_d", sum(_d5))
+put("a5_sum_dd1", sum(d * (d - 1) for d in _d5))
+put("a5_classes", [1, 15, 20, 12, 12])
+put("rhomb_V", 60); put("rhomb_E", 120); put("rhomb_F", 62)
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

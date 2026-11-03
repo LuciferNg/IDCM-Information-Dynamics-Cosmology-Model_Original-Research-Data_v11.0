@@ -186,8 +186,14 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 24_abelian_branch_group.md :: S₃ 階 ≈ 6（錨點窗口）
 [PASS] 24_abelian_branch_group.md :: Σ維數 ≈ 4（錨點窗口）
 [PASS] 24_abelian_branch_group.md :: 非平凡 Σ ≈ 3（錨點窗口）
+
+§13p  docs/25 — A₅ 恆等式
+[PASS] 25_a5_sixty_uniqueness.md :: Σd² ≈ 60（錨點窗口）
+[PASS] 25_a5_sixty_uniqueness.md :: Σd ≈ 16（錨點窗口）
+[PASS] 25_a5_sixty_uniqueness.md :: Σd(d−1) ≈ 44（錨點窗口）
+[PASS] 25_a5_sixty_uniqueness.md :: F ≈ 62（錨點窗口）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 132、FAIL 0
+L3 總結：PASS 136、FAIL 0
 ==============================================================================

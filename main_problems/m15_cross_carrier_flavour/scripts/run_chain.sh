@@ -1,5 +1,5 @@
 #!/bin/bash
-# M15 全鏈 driver —— 依序跑 L1（01–05、07–24）→ L2 → L3 → audit（06）
+# M15 全鏈 driver —— 依序跑 L1（01–05、07–25）→ L2 → L3 → audit（06）
 # 用法：bash scripts/run_chain.sh
 set -u
 cd "$(dirname "$0")/.." || exit 1
@@ -36,6 +36,7 @@ run 21_upstream_identity_reconcile.py  run_21_reconcile.log
 run 22_capacity_vs_energy.py       run_22_capacity.log
 run 23_capacity_saturation.py      run_23_saturation.log
 run 24_abelian_branch_group.py     run_24_abelian.log
+run 25_a5_sixty_uniqueness.py      run_25_a5.log
 run l2_independent_verify.py        run_l2_independent_verify.log
 run l3_doc_crosscheck.py            run_l3_doc_crosscheck.log
 
