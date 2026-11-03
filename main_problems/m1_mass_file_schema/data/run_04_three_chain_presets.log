@@ -1,0 +1,10 @@
+{"checks": {"total": 3, "pass": 3}, "sqrt5_in_Qzeta88": false, "P1_feasible": {"e": 43, "mu": 7, "tau": 0, "u": 41, "d": 39, "s": 12, "c": 0, "b": 0, "t": 0}, "conclusion": "三鏈唔可以合併成一條；正確講法係「一個骨架（帳本泛函）+ 三個退化 preset」，其中只有 P3 局部有效"}
+  e t=0.01831477423 feasible_n= 43  1 連續參數（F_proj 由目標反解）⟹ 0 bit
+ mu t=  3.78691442 feasible_n=  7  1 連續參數（F_proj 由目標反解）⟹ 0 bit
+tau t= 63.68465088 feasible_n=  0  不可表（λ > 90 需多量子）
+  u t=0.07741681726 feasible_n= 41  1 連續參數（F_proj 由目標反解）⟹ 0 bit
+  d t=0.1673780262 feasible_n= 39  1 連續參數（F_proj 由目標反解）⟹ 0 bit
+  s t= 3.347560524 feasible_n= 12  1 連續參數（F_proj 由目標反解）⟹ 0 bit
+  c t= 45.62574461 feasible_n=  0  不可表（λ > 90 需多量子）
+  b t= 149.8158778 feasible_n=  0  不可表（λ > 90 需多量子）
+  t t= 6185.101923 feasible_n=  0  不可表（λ > 90 需多量子）

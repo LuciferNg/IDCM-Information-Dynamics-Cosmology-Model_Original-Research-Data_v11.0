@@ -1,0 +1,19 @@
+Error, Variable: 'ARGV' must have a value
+not in any function at scripts/02_gap_full_scan.g:7
+Error, file "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problem\
+s/m16_group_selection_principle/data/run_02_scan_all_500.txt" must exist and be readable at /home/wsl/.hermes/cache/scratch/gapdebs/root/usr/share/gap/lib/files.gi:
+207 called from
+Read( f 
+ ); at /home/wsl/.hermes/cache/scratch/gapdebs/root/usr/share/gap/lib/init.g:9\
+18 called from
+ProcessInitFiles( GAPInfo.InitFiles 
+ ); at /home/wsl/.hermes/cache/scratch/gapdebs/root/usr/share/gap/lib/init.g:9\
+24 called from
+func(  
+ ); at /home/wsl/.hermes/cache/scratch/gapdebs/root/usr/share/gap/lib/system.g\
+:253 called from
+<function "InstallAndCallPostRestore">( <arguments> )
+ called from read-eval loop at /home/wsl/.hermes/cache/scratch/gapdebs/root/usr/share/gap/lib/init.g:925
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+[1m[34m[0m[31m

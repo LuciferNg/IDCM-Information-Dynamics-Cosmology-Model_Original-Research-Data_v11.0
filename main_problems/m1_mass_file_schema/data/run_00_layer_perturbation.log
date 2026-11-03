@@ -1,0 +1,11 @@
+{"checks": {"total": 4, "pass": 4}, "L1_N_sensitive": "9/9", "mirror_max_dev": "4.2169e-81", "L2_all_ratios_invariant": true, "L3_any_complement_match": false, "L4_identical": "200/200", "n_effective_layers": 3}
+--- L1 rows (k<=3) ---
+  e t=0.018314774227 N88 dev=0.0264955   k=3 N86 dev=0.0192747   N90 dev=0.0627411   sensitive=True
+ mu t=3.78691442023  N88 dev=7.84001e-05 k=3 N86 dev=8.61834e-06 N90 dev=5.69341e-05 sensitive=True
+tau t=63.6846508844  N88 dev=0.909147    k=3 N86 dev=0.909225    N90 dev=0.909072    sensitive=True
+  u t=0.0774168172564 N88 dev=0.000865989 k=2 N86 dev=0.00498809  N90 dev=0.000772324 sensitive=True
+  d t=0.167378026198 N88 dev=0.00617479  k=3 N86 dev=0.00245718  N90 dev=0.000647496 sensitive=True
+  s t=3.34756052396  N88 dev=8.81398e-05 k=3 N86 dev=5.10854e-05 N90 dev=0.000114387 sensitive=True
+  c t=45.6257446145  N88 dev=0.873187    k=3 N86 dev=0.873296    N90 dev=0.873083    sensitive=True
+  b t=149.815877839  N88 dev=0.96138     k=3 N86 dev=0.961413    N90 dev=0.961348    sensitive=True
+  t t=6185.10192312  N88 dev=0.999065    k=3 N86 dev=0.999065    N90 dev=0.999064    sensitive=True

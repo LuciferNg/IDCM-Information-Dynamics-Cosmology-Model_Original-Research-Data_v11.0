@@ -1,0 +1,1231 @@
+{
+  "D 全部 key 可推導（209 個）": {
+    "pass": true,
+    "detail": "成功 209/209"
+  },
+  "I1 Σγ(ring/44) = 2M+2（直接加 vs 閉式）": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "I2 Σγ(dir/44, x=90) = 2M−2": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "I3 γ_n + γ_(44−n) = 4（/88 補償）": {
+    "pass": true,
+    "detail": "差 = 9.18355e-41"
+  },
+  "I4 γ_n + γ_(45−n) = 4（/90 補償）": {
+    "pass": true,
+    "detail": "差 = 9.18355e-41"
+  },
+  "I5 sin²18°+sin²30° = sin²36°（ℚ(√5)）": {
+    "pass": true,
+    "detail": "差 = 4.59177e-41"
+  },
+  "I6 sin²18°+sin²54° = sin²60°": {
+    "pass": true,
+    "detail": "差 = 2.75506e-40"
+  },
+  "I7 sin²30°+sin²54° = sin²72°": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "I8 Δγ 閉式 4sin(89nπ/3960)sin(nπ/3960)": {
+    "pass": true,
+    "detail": "差 = 9.04006e-41"
+  },
+  "I9 2sin18° = φ⁻¹": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "I10 2sin54° = φ": {
+    "pass": true,
+    "detail": "差 = 2.29589e-41"
+  },
+  "I11 Σ_p cos(kpπ/45) = −1（k 偶）": {
+    "pass": true,
+    "detail": "差 = 1.72192e-40"
+  },
+  "I12 Σ_p sin(kpπ/45) = 0（k 偶）": {
+    "pass": true,
+    "detail": "差 = 2.72637e-40"
+  },
+  "I13 Green 閉式 = 譜和（(9,18)）": {
+    "pass": true,
+    "detail": "差 = 2.75506e-40"
+  },
+  "I14 γ9+γ15+γ27 = 4（sum-4 三元組）": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "X1 Σ88 − Σ90 = 2": {
+    "pass": true,
+    "detail": "90.0 − 88.0"
+  },
+  "X2 Δγ_44 = γ90_1": {
+    "pass": true,
+    "detail": ""
+  },
+  "X3 交叉退化 = 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X4 96 模之補償 parity：88 保 44/44、90 反 0/44": {
+    "pass": true,
+    "detail": ""
+  },
+  "X5 和頻族：44 有 21 對、45 有 22 對": {
+    "pass": true,
+    "detail": ""
+  },
+  "X6 和頻族 parity：44 全同 21/21、45 全異 0/22": {
+    "pass": true,
+    "detail": ""
+  },
+  "X7 和頻通道：/88 = 21、/90 = 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X8 拍頻通道：兩鏈皆 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X9 三波三元組 = 3": {
+    "pass": true,
+    "detail": ""
+  },
+  "X10 χ³ 對三組全 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X11 χ³ 非零集 ∩ 共振集 = ∅": {
+    "pass": true,
+    "detail": ""
+  },
+  "X12 四波譜 913 類；22 類最大": {
+    "pass": true,
+    "detail": ""
+  },
+  "X13 12 雙元類全在 mod-3": {
+    "pass": true,
+    "detail": ""
+  },
+  "X14 子晶格 14 模、/30 退化": {
+    "pass": true,
+    "detail": ""
+  },
+  "X15 T_pipe：n*=27、只 1 組在窗、合成模 1 個活": {
+    "pass": true,
+    "detail": ""
+  },
+  "X16 A9:A15:A27 = φ⁻¹:1:φ": {
+    "pass": true,
+    "detail": ""
+  },
+  "X17 合成模 γ 和 = 8": {
+    "pass": true,
+    "detail": ""
+  },
+  "X18 γ18+γ36 = 5": {
+    "pass": true,
+    "detail": ""
+  },
+  "X19a |Δ| 分類 = 43 類（集合論分割，非群軌道）": {
+    "pass": true,
+    "detail": "43.0 類 = Δ 範圍 43.0"
+  },
+  "X19b ★真群作用：ℤ_44 軌道 = 22（非 43）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X19c ★Δ **唔** 係 ℤ_44 不變量（唯一 Δ 之軌道僅 1 個）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X19d 真不變量 = min(Δ, 44−Δ)（22/22 軌道唯一）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X20 irrep：4×1+43×2，Σd²=176": {
+    "pass": true,
+    "detail": ""
+  },
+  "X21 mod-3 三類 γ 和互異": {
+    "pass": true,
+    "detail": ""
+  },
+  "X22 112 三元組：A2⊕1 = 44（s 退耦亦 44）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X23 A2 塊 87/112": {
+    "pass": true,
+    "detail": ""
+  },
+  "X24 δ 三分律：+2 / −2 / 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X25 折疊 max|dev| = 0": {
+    "pass": true,
+    "detail": ""
+  },
+  "X26 γ 嚴格遞增（單標籤前提）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X27 Vandermonde det ≠ 0": {
+    "pass": true,
+    "detail": "log10|det| = 41.34012269"
+  },
+  "X28 Green 核閉式全核（1936 點；容差 1e−35 = dps40 之累積噪底）": {
+    "pass": true,
+    "detail": "max|dev| = 6.43e-40"
+  },
+  "X29 sum-4 三元組唯一 = {9,15,27}": {
+    "pass": true,
+    "detail": ""
+  },
+  "X30 Φ(n)=45−n 不保 parity（0/44）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X31 不變量格：恰 3 類之互不等價分割 = 5": {
+    "pass": true,
+    "detail": "5.0"
+  },
+  "X32 canonical（ℤ_44）類數 = 22 ⟹ 冇 3": {
+    "pass": true,
+    "detail": ""
+  },
+  "X33 /88 共振三元組 = 21（奇模 11／偶模 10）": {
+    "pass": true,
+    "detail": "21.0/11.0/10.0"
+  },
+  "X34 5 個 3 類分割皆不能三分離（0）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X35 四波譜：/88 926 類／210 共振；/90 913 類／243 共振": {
+    "pass": true,
+    "detail": "926.0/210.0 | 913.0/243.0"
+  },
+  "X36 /88 零意外簡併（0）／/90 12 個雙元類": {
+    "pass": true,
+    "detail": ""
+  },
+  "X37 對偶 S↦8−S（/88 全價對）": {
+    "pass": true,
+    "detail": "max|dev| = 1.84e-40"
+  },
+  "X38 子晶格：/88 六個、/90 九個；3∤88（0）": {
+    "pass": true,
+    "detail": "6.0/9.0"
+  },
+  "X39 /30 半譜 Σγ = (2M−4)/2 = 28（精確）": {
+    "pass": true,
+    "detail": "28.0"
+  },
+  "X40 二次域：disc(γ11)=8、disc(γ9)=5；而 5∤88、5|90": {
+    "pass": true,
+    "detail": ""
+  },
+  "X41 /8 子鏈：4 模、三波 1、四波 0": {
+    "pass": true,
+    "detail": "1.0/0.0"
+  },
+  "X42 加性/乘性二分：/88 GP=0 AP=21；/90 GP=3 AP=0": {
+    "pass": true,
+    "detail": "0.0/21.0 | 3.0/0.0"
+  },
+  "X43 /88 之 21 個 AP 全屬 (a,22,44−a)": {
+    "pass": true,
+    "detail": ""
+  },
+  "X44 判準兩式對 88/90 精確吻合（AP=88/4−1、GP=0；GP=3）": {
+    "pass": true,
+    "detail": "88: 21.0/0.0 90: 3.0"
+  },
+  "X45 AP 兩族恆等（族A dev<1e−35、族B dev<1e−35）": {
+    "pass": true,
+    "detail": "1.38e-40/0.0"
+  },
+  "X46 AP(N) 公式：(12,24,120) → (3,6,30)": {
+    "pass": true,
+    "detail": "3.0/6.0/30.0"
+  },
+  "X47 GP 五族恆等（P1,P2,Q1,Q2,Q3 dev < 1e−40）": {
+    "pass": true,
+    "detail": "9.18e-41"
+  },
+  "X48 Q1 閉式 s1·s11 = (7−3√5)/2": {
+    "pass": true,
+    "detail": "1.72e-41"
+  },
+  "X49 GP(N) 公式：(12,30,60) → (2,3,5)": {
+    "pass": true,
+    "detail": ""
+  },
+  "X50 φ-階梯：A9=A15·? 及比值 = φ（A9:A15:A27 = φ⁻¹:1:φ）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X51 γ-GP 與 A-GP 同集（/88、/90）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X52 L3：γ18+γ30+γ36 = 8（φ 相消 ⟹ γ18+γ36 = 5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X53 Q3：odd core 88→11、90→45，域扇區與 cond|N 一致": {
+    "pass": true,
+    "detail": ""
+  },
+  "X54 K4：重複模新增共振 /88=1（(22,22,44)）、/90=0；且 γ44 = 2γ22": {
+    "pass": true,
+    "detail": ""
+  },
+  "X55 P1：3960 = lcm(88,90) = 88·90/gcd(88,90)": {
+    "pass": true,
+    "detail": ""
+  },
+  "X56 J1：ℚ(√5) 值集 6 模、集內共振恰 3 個": {
+    "pass": true,
+    "detail": ""
+  },
+  "X57 K3：偶和 χ³ = 0（10 個抽樣，含 3 個共振三元組）": {
+    "pass": true,
+    "detail": "1.72e-41"
+  },
+  "X58 K3：奇和最小 |χ³| 於 (1,2,44) = 1.60974178465e−6": {
+    "pass": true,
+    "detail": "1.609741784646e-6"
+  },
+  "X59 K3：反射恆等 φ_n(45−j) = (−1)^(n+1)φ_n(j)（1936 對）": {
+    "pass": true,
+    "detail": "5.85e-40"
+  },
+  "X60 Q4：δ 三分律 x=3..200 違例 0；Σ_(1..22)cos(2πn/45) = −1/2": {
+    "pass": true,
+    "detail": "-0.5"
+  },
+  "X61 216 = 6 規則 × 36 指派（docs/04 §五 N_trials）": {
+    "pass": true,
+    "detail": ""
+  },
+  "X62 Q1：δ_ring = +2 = γ_max/2，且 γ_max = 4": {
+    "pass": true,
+    "detail": ""
+  },
+  "X63 M2：γ^(90)_(3k) = γ^(30)_k（k=1..14，精確）": {
+    "pass": true,
+    "detail": "9.18e-41"
+  },
+  "X64 M3：mod-3 子晶格共振 3 個；k 和 14 = 3+5+6": {
+    "pass": true,
+    "detail": ""
+  },
+  "X65 K3 閉式：χ³(1,1,43) == χ³(1,2,44)（k ↦ 90−k 反射）": {
+    "pass": true,
+    "detail": "2.35e-43"
+  },
+  "X66 K3：k_i=0 只出現於偶和（奇和者 = 0）；現存 2838 個": {
+    "pass": true,
+    "detail": ""
+  },
+  "X67 χ⁴(1,2,3,4) = 1/90；χ⁴(1,1,1,1) = 3/90 = 1/30": {
+    "pass": true,
+    "detail": "0.0111111"
+  },
+  "X68 四波能量共振 1,233 = 和偶 1,221 ＋ 和奇 12（γ = 4sin²(πn/90)）": {
+    "pass": true,
+    "detail": "(1233, 1221, 12)"
+  },
+  "X69 和偶共振 W 值集 {2,3}（W=3 者 66 組）；off-shell 非零 13,874": {
+    "pass": true,
+    "detail": "13874"
+  },
+  "X70 三波衰變恰 3 條、四波衰變恰 1 條、3→1 = 0": {
+    "pass": true,
+    "detail": "(3, 1)"
+  },
+  "X71 2→2 配對共振 243 = 231 ＋ 12；不透明度均勻（每模 21）": {
+    "pass": true,
+    "detail": "(243, 231, 12, [21])"
+  },
+  "X72 二階：運動學極點 1 個、真極點 0（宇稱屏蔽）": {
+    "pass": true,
+    "detail": "[(30, (15, 15, 15), 0)]"
+  },
+  "X73 二階：δγ 全相異 44/44；|g₄| 界 = 0.0702653958580522（最小者 n = 3）": {
+    "pass": true,
+    "detail": "0.07026539585805223"
+  },
+  "_inputs": {
+    "N_d": 44,
+    "B": 4,
+    "N_gen": 3,
+    "L6": 18,
+    "x_ring": 88,
+    "x_dir": 90,
+    "p_u_max": 7,
+    "p_d_max": 8,
+    "p_s_max": 10,
+    "alpha_canon": [
+      1,
+      2,
+      4
+    ],
+    "rho_d_obs": "0.40350365",
+    "rho_u_obs": "-0.02588837",
+    "sig_rho_d": "0.044785178",
+    "sig_rho_u": "0.033583899",
+    "delta_u_obs": "-0.088667660",
+    "sig_delta_u": "0.11244"
+  },
+  "_derived": {
+    "pairs_946": {
+      "float": 946.0,
+      "str": "946.0"
+    },
+    "sum88": {
+      "float": 90.0,
+      "str": "90.0"
+    },
+    "sum90": {
+      "float": 88.0,
+      "str": "88.0"
+    },
+    "sum_delta": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "theta_den_3960": {
+      "float": 3960.0,
+      "str": "3960.0"
+    },
+    "gam88_1": {
+      "float": 0.005095770779492918,
+      "str": "0.005095770779492917275388486"
+    },
+    "gam90_1": {
+      "float": 0.004871899480351505,
+      "str": "0.004871899480351504773674639"
+    },
+    "d44_eq_gam90_1": {
+      "float": 0.004871899480351505,
+      "str": "0.004871899480351504773674639"
+    },
+    "min_gap_cross": {
+      "float": 0.0002238712991414125,
+      "str": "0.0002238712991414125017138476"
+    },
+    "cross_degeneracy": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "comp88_parity_same": {
+      "float": 44.0,
+      "str": "44.0"
+    },
+    "comp90_parity_same": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "sumfam88_pairs": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "sumfam90_pairs": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "sumfam44_same_parity": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "sumfam45_same_parity": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "chan88_sum": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "chan90_sum": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "chan88_beat": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "chan90_beat": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "law_sum_N44": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "law_beat_N44": {
+      "float": 43.0,
+      "str": "43.0"
+    },
+    "law_active_N44": {
+      "float": 64.0,
+      "str": "64.0"
+    },
+    "law_active_N88": {
+      "float": 130.0,
+      "str": "130.0"
+    },
+    "law_active_N176": {
+      "float": 262.0,
+      "str": "262.0"
+    },
+    "n_triples90": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "trip_sum_9_15_18": {
+      "float": 42.0,
+      "str": "42.0"
+    },
+    "trip_sum_9_27_30": {
+      "float": 66.0,
+      "str": "66.0"
+    },
+    "trip_sum_15_27_36": {
+      "float": 78.0,
+      "str": "78.0"
+    },
+    "chi3_cot_identity_dev": {
+      "float": 7.346839692639297e-40,
+      "str": "7.346839692639296924804603e-40"
+    },
+    "chi3_triples_zero_max": {
+      "float": 1.3273099054084667e-41,
+      "str": "1.327309905408466729578957e-41"
+    },
+    "distinct_triples": {
+      "float": 13244.0,
+      "str": "13244.0"
+    },
+    "chi3_nonzero_count": {
+      "float": 6622.0,
+      "str": "6622.0"
+    },
+    "chi3_chi4_intersection": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "chi4_value": {
+      "float": -0.0019753086419753087,
+      "str": "-0.001975308641975308641975309"
+    },
+    "clusters_913": {
+      "float": 913.0,
+      "str": "913.0"
+    },
+    "cluster_max_size": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "n_doubletons": {
+      "float": 12.0,
+      "str": "12.0"
+    },
+    "n_singletons": {
+      "float": 900.0,
+      "str": "900.0"
+    },
+    "fourwave_count": {
+      "float": 243.0,
+      "str": "243.0"
+    },
+    "doubleton_mod3_all": {
+      "float": 12.0,
+      "str": "12.0"
+    },
+    "sublattice_modes": {
+      "float": 14.0,
+      "str": "14.0"
+    },
+    "sublattice30_dev": {
+      "float": 9.183549615799121e-41,
+      "str": "9.183549615799121156005754e-41"
+    },
+    "n_star_27": {
+      "float": 27.0,
+      "str": "27.0"
+    },
+    "tpipe_window_count": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "tpipe_composites_live": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "A9_phi_inv": {
+      "float": 0.6180339887498949,
+      "str": "0.6180339887498948482045868"
+    },
+    "A15_one": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "A27_phi": {
+      "float": 1.618033988749895,
+      "str": "1.618033988749894848204587"
+    },
+    "g18": {
+      "float": 1.381966011250105,
+      "str": "1.381966011250105151795413"
+    },
+    "g30": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "g36": {
+      "float": 3.618033988749895,
+      "str": "3.618033988749894848204587"
+    },
+    "g18_plus_g36": {
+      "float": 5.0,
+      "str": "5.0"
+    },
+    "gsum_composites": {
+      "float": 8.0,
+      "str": "8.0"
+    },
+    "delta_classes_43": {
+      "float": 43.0,
+      "str": "43.0"
+    },
+    "z44_orbits_22": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "d44_orbits_22": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "z44_orbits_delta_invariant": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "z44_orbits_mindelta_invariant": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "delta_range": {
+      "float": 43.0,
+      "str": "43.0"
+    },
+    "aut_C88": {
+      "float": 176.0,
+      "str": "176.0"
+    },
+    "aut_P44": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "irrep_dimsq_sum": {
+      "float": 176.0,
+      "str": "176.0"
+    },
+    "n_irrep_2d": {
+      "float": 43.0,
+      "str": "43.0"
+    },
+    "mod3_gamma_sum_a": {
+      "float": 8.789867336681004,
+      "str": "8.78986733668100361939902"
+    },
+    "mod3_gamma_sum_b": {
+      "float": 9.691040847628516,
+      "str": "9.691040847628515634643213"
+    },
+    "mod3_gamma_sum_c": {
+      "float": 10.634554909832682,
+      "str": "10.63455490983268249797595"
+    },
+    "n_triples_112": {
+      "float": 112.0,
+      "str": "112.0"
+    },
+    "n_A2p1": {
+      "float": 44.0,
+      "str": "44.0"
+    },
+    "n_A2block": {
+      "float": 87.0,
+      "str": "87.0"
+    },
+    "n_singlet_decoupled": {
+      "float": 44.0,
+      "str": "44.0"
+    },
+    "rho_d_dev_3_8": {
+      "float": 0.02850365,
+      "str": "0.02850365"
+    },
+    "rho_d_z": {
+      "float": 0.2121509189193502,
+      "str": "0.2121509189193502070409694"
+    },
+    "delta_u_over_sigma": {
+      "float": 0.7885775524724298,
+      "str": "0.7885775524724297403059409"
+    },
+    "rho_u_z": {
+      "float": 0.7708565941077896,
+      "str": "0.7708565941077895690431894"
+    },
+    "defect_ring88": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "defect_dir90": {
+      "float": -2.0,
+      "str": "-2.0"
+    },
+    "defect_dir45": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "defect_ring44": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "layers88": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "layers90": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "v2_88": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "v2_90": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "fold_dev_88_44": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "fold_dev_90_45": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "q1_delta_half": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "nyquist_val": {
+      "float": 4.0,
+      "str": "4.0"
+    },
+    "specmax_90": {
+      "float": 3.9951281005196484,
+      "str": "3.995128100519648495226325"
+    },
+    "q1_ring_delta": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "m2_sub_dev": {
+      "float": 9.183549615799121e-41,
+      "str": "9.183549615799121156005754e-41"
+    },
+    "m3_res_count": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "m3_ksum14": {
+      "float": 14.0,
+      "str": "14.0"
+    },
+    "k3_phi_core": {
+      "float": 0.0006772115257829256,
+      "str": "0.000677211525782925643755438"
+    },
+    "k3_tie": {
+      "float": 2.3541814200656927e-43,
+      "str": "2.354181420065692679151866e-43"
+    },
+    "k3_min_val": {
+      "float": -1.6097417846463755e-06,
+      "str": "-0.000001609741784646375390196621"
+    },
+    "k3_zero_key_even": {
+      "float": 2838.0,
+      "str": "2838.0"
+    },
+    "k3_zero_key_odd": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "chi4_1234": {
+      "float": 0.011111111111111112,
+      "str": "0.01111111111111111111111111"
+    },
+    "chi4_1111": {
+      "float": 0.03333333333333333,
+      "str": "0.03333333333333333333333333"
+    },
+    "w4_nz_frac_pct": {
+      "float": 18.94,
+      "str": "18.94"
+    },
+    "fw_total": {
+      "float": 1233.0,
+      "str": "1233.0"
+    },
+    "fw_even": {
+      "float": 1221.0,
+      "str": "1221.0"
+    },
+    "fw_odd": {
+      "float": 12.0,
+      "str": "12.0"
+    },
+    "fw_offshell": {
+      "float": 13874.0,
+      "str": "13874.0"
+    },
+    "fw_W3": {
+      "float": 66.0,
+      "str": "66.0"
+    },
+    "dyn_d12": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "dyn_d13": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "dyn_tri4": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "dyn_res": {
+      "float": 243.0,
+      "str": "243.0"
+    },
+    "dyn_even": {
+      "float": 231.0,
+      "str": "231.0"
+    },
+    "dyn_odd": {
+      "float": 12.0,
+      "str": "12.0"
+    },
+    "dyn_uniform": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "so_poles": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "so_true_poles": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "so_distinct": {
+      "float": 44.0,
+      "str": "44.0"
+    },
+    "so_bound": {
+      "float": 0.07026539585805223,
+      "str": "0.07026539585805222785547104"
+    },
+    "perm_scan_total": {
+      "float": 216.0,
+      "str": "216.0"
+    },
+    "k3_even_max": {
+      "float": 1.7219155529623352e-41,
+      "str": "1.721915552962335216751079e-41"
+    },
+    "k3_odd_min": {
+      "float": 1.6097417846463755e-06,
+      "str": "0.000001609741784646375390196621"
+    },
+    "k3_even_n": {
+      "float": 6622.0,
+      "str": "6622.0"
+    },
+    "k3_reflect_pairs": {
+      "float": 1936.0,
+      "str": "1936.0"
+    },
+    "k3_reflect_dev": {
+      "float": 5.850925556003268e-40,
+      "str": "5.850925556003268205252104e-40"
+    },
+    "q4_viol": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "q4_cos_half": {
+      "float": -0.5,
+      "str": "-0.5"
+    },
+    "l3_sum8": {
+      "float": 8.0,
+      "str": "8.0"
+    },
+    "l3_phi_cancel": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "q3_odd88": {
+      "float": 11.0,
+      "str": "11.0"
+    },
+    "q3_odd90": {
+      "float": 45.0,
+      "str": "45.0"
+    },
+    "k4_rep88": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "k4_rep90": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "p1_lcm": {
+      "float": 3960.0,
+      "str": "3960.0"
+    },
+    "j1_members": {
+      "float": 6.0,
+      "str": "6.0"
+    },
+    "j1_closures": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "amp9": {
+      "float": 0.6180339887498949,
+      "str": "0.6180339887498948482045868"
+    },
+    "amp15": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "amp27": {
+      "float": 1.618033988749895,
+      "str": "1.618033988749894848204587"
+    },
+    "phi_inv_check": {
+      "float": 1.1479437019748901e-41,
+      "str": "1.147943701974890144500719e-41"
+    },
+    "agp_equals_ggp88": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "agp_equals_ggp90": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "q2_amp_ratio": {
+      "float": 1.618033988749895,
+      "str": "1.618033988749894848204587"
+    },
+    "gpP1_dev": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "gpP2_dev": {
+      "float": 9.183549615799121e-41,
+      "str": "9.183549615799121156005754e-41"
+    },
+    "gpQ1_dev": {
+      "float": 2.8698592549372254e-42,
+      "str": "2.869859254937225361251798e-42"
+    },
+    "gpQ2_dev": {
+      "float": 2.2958874039497803e-41,
+      "str": "2.295887403949780289001439e-41"
+    },
+    "gpQ3_dev": {
+      "float": 9.183549615799121e-41,
+      "str": "9.183549615799121156005754e-41"
+    },
+    "gpQ1_closed": {
+      "float": 0.14589803375031546,
+      "str": "0.1458980337503154553862395"
+    },
+    "gpQ1_prod": {
+      "float": 0.14589803375031546,
+      "str": "0.1458980337503154553862395"
+    },
+    "famA_dev": {
+      "float": 1.3775324423698682e-40,
+      "str": "1.377532442369868173400863e-40"
+    },
+    "famB_dev": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "ap12": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "ap24": {
+      "float": 6.0,
+      "str": "6.0"
+    },
+    "ap120": {
+      "float": 30.0,
+      "str": "30.0"
+    },
+    "c4_88": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "c12_88": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "c30_88": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "c4_90": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "c12_90": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "c30_90": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "ap88_formula": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "gp88_formula_ring": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "gp90_formula_dir": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "gp88": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "ap88": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "gp90": {
+      "float": 3.0,
+      "str": "3.0"
+    },
+    "ap90": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "ap88_mid22": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "q2_subchain_modes": {
+      "float": 4.0,
+      "str": "4.0"
+    },
+    "q2_gamma1": {
+      "float": 0.585786437626905,
+      "str": "0.5857864376269049511983113"
+    },
+    "q2_disc_gamma11": {
+      "float": 8.0,
+      "str": "8.0"
+    },
+    "q2_disc_gamma9_90": {
+      "float": 5.0,
+      "str": "5.0"
+    },
+    "cond5_div88": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "cond5_div90": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "q2_threewave8": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "q2_fourwave8": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "sub88_count": {
+      "float": 6.0,
+      "str": "6.0"
+    },
+    "sub90_count": {
+      "float": 9.0,
+      "str": "9.0"
+    },
+    "sub88_has3": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "sub30_halfsum": {
+      "float": 28.0,
+      "str": "28.0"
+    },
+    "sub30_halfsum_closed": {
+      "float": 28.0,
+      "str": "28.0"
+    },
+    "spec88_classes": {
+      "float": 926.0,
+      "str": "926.0"
+    },
+    "spec90_classes": {
+      "float": 913.0,
+      "str": "913.0"
+    },
+    "fw88_resonances": {
+      "float": 210.0,
+      "str": "210.0"
+    },
+    "fw90_resonances": {
+      "float": 243.0,
+      "str": "243.0"
+    },
+    "accidental88": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "accidental90": {
+      "float": 12.0,
+      "str": "12.0"
+    },
+    "fixed_line_pairs88": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "duality_dev": {
+      "float": 1.8367099231598242e-40,
+      "str": "1.836709923159824231201151e-40"
+    },
+    "res88_triples": {
+      "float": 21.0,
+      "str": "21.0"
+    },
+    "res88_odd_pair": {
+      "float": 11.0,
+      "str": "11.0"
+    },
+    "res88_even_pair": {
+      "float": 10.0,
+      "str": "10.0"
+    },
+    "res90_triples": {
+      "float": 2.0,
+      "str": "2.0"
+    },
+    "res_all_chi3_dark": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "res_separable_count": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "inv_pool": {
+      "float": 10.0,
+      "str": "10.0"
+    },
+    "inv_subsets": {
+      "float": 1023.0,
+      "str": "1023.0"
+    },
+    "three_class_partitions": {
+      "float": 5.0,
+      "str": "5.0"
+    },
+    "canonical_classes_z44": {
+      "float": 22.0,
+      "str": "22.0"
+    },
+    "green_points": {
+      "float": 1936.0,
+      "str": "1936.0"
+    },
+    "green_dev_max": {
+      "float": 6.428484731059385e-40,
+      "str": "6.428484731059384809204028e-40"
+    },
+    "green_g_9_15": {
+      "float": 6.0,
+      "str": "6.0"
+    },
+    "green_diag_18": {
+      "float": 10.8,
+      "str": "10.8"
+    },
+    "green_g_18_36": {
+      "float": 3.6,
+      "str": "3.6"
+    },
+    "sum4_triples": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "sum4_set_is_9_15_27": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "phi_parity_same": {
+      "float": 0.0,
+      "str": "0.0"
+    },
+    "trunc_rel_max_pct": {
+      "float": 1.5508180642808054,
+      "str": "1.550818064280805406330499"
+    },
+    "gamma_strict_increasing": {
+      "float": 1.0,
+      "str": "1.0"
+    },
+    "vandermonde_det_abs": {
+      "float": 2.1883797826669254e+41,
+      "str": "2.188379782666925306636797e+41"
+    },
+    "vandermonde_log10": {
+      "float": 41.34012269389708,
+      "str": "41.34012269389708251122593"
+    }
+  },
+  "_summary": {
+    "checks": 91,
+    "fail": 0,
+    "n_derived": 209
+  }
+}

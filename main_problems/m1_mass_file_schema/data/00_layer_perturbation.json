@@ -1,0 +1,242 @@
+{
+  "L1_vertices": {
+    "mirror": {
+      "identity": "γ_{44−n} = 4 − γ_n",
+      "max_dev": "4.21688e-81",
+      "meaning": "鏡射係譜之精確 ℤ₂ 對稱（非擾動）⟹ 索引 n 只在 n ~ 44−n 之等價類上有意義；固定點 n=22 ⟹ γ=2（M8 交接點）"
+    },
+    "N_perturbation": {
+      "rows": [
+        {
+          "fermion": "e",
+          "target_units": "0.018314774227",
+          "dev_N88": "0.0264955",
+          "k_N88": 3,
+          "dev_N86": "0.0192747",
+          "k_N86": 3,
+          "dev_N90": "0.0627411",
+          "k_N90": 1,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "mu",
+          "target_units": "3.78691442023",
+          "dev_N88": "7.84001e-05",
+          "k_N88": 3,
+          "dev_N86": "8.61834e-06",
+          "k_N86": 3,
+          "dev_N90": "5.69341e-05",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "tau",
+          "target_units": "63.6846508844",
+          "dev_N88": "0.909147",
+          "k_N88": 3,
+          "dev_N86": "0.909225",
+          "k_N86": 3,
+          "dev_N90": "0.909072",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "u",
+          "target_units": "0.0774168172564",
+          "dev_N88": "0.000865989",
+          "k_N88": 2,
+          "dev_N86": "0.00498809",
+          "k_N86": 2,
+          "dev_N90": "0.000772324",
+          "k_N90": 1,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "d",
+          "target_units": "0.167378026198",
+          "dev_N88": "0.00617479",
+          "k_N88": 3,
+          "dev_N86": "0.00245718",
+          "k_N86": 3,
+          "dev_N90": "0.000647496",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "s",
+          "target_units": "3.34756052396",
+          "dev_N88": "8.81398e-05",
+          "k_N88": 3,
+          "dev_N86": "5.10854e-05",
+          "k_N86": 3,
+          "dev_N90": "0.000114387",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "c",
+          "target_units": "45.6257446145",
+          "dev_N88": "0.873187",
+          "k_N88": 3,
+          "dev_N86": "0.873296",
+          "k_N86": 3,
+          "dev_N90": "0.873083",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "b",
+          "target_units": "149.815877839",
+          "dev_N88": "0.96138",
+          "k_N88": 3,
+          "dev_N86": "0.961413",
+          "k_N86": 3,
+          "dev_N90": "0.961348",
+          "k_N90": 3,
+          "N_sensitive": true
+        },
+        {
+          "fermion": "t",
+          "target_units": "6185.10192312",
+          "dev_N88": "0.999065",
+          "k_N88": 3,
+          "dev_N86": "0.999065",
+          "k_N86": 3,
+          "dev_N90": "0.999064",
+          "k_N90": 3,
+          "N_sensitive": true
+        }
+      ],
+      "sensitive": 9,
+      "n": 9
+    },
+    "verdict": "有內容（改環長 N ⟹ 9/9 最佳編碼改變）"
+  },
+  "L2_transform_scale": {
+    "rows": [
+      {
+        "delta": "1e-3",
+        "all_ratios_invariant": true,
+        "n_ratios": 36
+      },
+      {
+        "delta": "-1e-3",
+        "all_ratios_invariant": true,
+        "n_ratios": 36
+      },
+      {
+        "delta": "0.5",
+        "all_ratios_invariant": true,
+        "n_ratios": 36
+      },
+      {
+        "delta": "2",
+        "all_ratios_invariant": true,
+        "n_ratios": 36
+      }
+    ],
+    "verdict": "單位（無量綱預言全不變）"
+  },
+  "L3_operators_complement": {
+    "rows": [
+      {
+        "fermion": "e",
+        "complement_units": "89.9816852258",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "mu",
+        "complement_units": "86.2130855798",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "tau",
+        "complement_units": "26.3153491156",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "u",
+        "complement_units": "89.9225831827",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "d",
+        "complement_units": "89.8326219738",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "s",
+        "complement_units": "86.652439476",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "c",
+        "complement_units": "44.3742553855",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "b",
+        "complement_units": "-59.8158778388",
+        "matches_fermion": []
+      },
+      {
+        "fermion": "t",
+        "complement_units": "-6095.10192312",
+        "matches_fermion": []
+      }
+    ],
+    "verdict": "有內容（互補改變質量；互補態不落在費米子集）"
+  },
+  "L4_topology_index_permutation": {
+    "trials": 200,
+    "identical_subset_multiset": 200,
+    "n_three_subsets": 13244,
+    "note": "譜值在索引上重排 ⟹ 子集和多重集完全不變；質量預言只依賴多重集 ⟹ 索引標籤（拓撲指派）為空層",
+    "verdict": "空層（只可作等價結構，不可作 flavour 指派）"
+  },
+  "L5_labels": {
+    "note": "標籤重命名不改任何 σ；標籤加性預言已被 M4 docs/22 以 41.5σ 否證",
+    "verdict": "空層（質量層）"
+  },
+  "checks": [
+    {
+      "name": "sum_gamma=90",
+      "pass": true
+    },
+    {
+      "name": "gamma44=4",
+      "pass": true
+    },
+    {
+      "name": "gamma_monotone",
+      "pass": true
+    },
+    {
+      "name": "mirror_identity_4-gamma",
+      "pass": true
+    }
+  ],
+  "check_summary": {
+    "total": 4,
+    "pass": 4
+  },
+  "reduction": {
+    "content_layers": [
+      "L1 vertices（譜表 γ_n，N=88 強制）",
+      "L3 operators（σ 編碼）"
+    ],
+    "unit_layer": [
+      "L2 transform（M₀）"
+    ],
+    "empty_layers": [
+      "L4 topology（索引標籤）",
+      "L5 labels"
+    ],
+    "external": [
+      "M5 束縛態/重疊",
+      "M10 合法性",
+      "M11 em 通道算子"
+    ],
+    "n_effective": 3
+  }
+}

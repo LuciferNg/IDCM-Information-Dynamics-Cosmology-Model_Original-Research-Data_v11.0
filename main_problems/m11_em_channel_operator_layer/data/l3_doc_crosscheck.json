@@ -1,0 +1,208 @@
+{
+  "E1 L2 有 _derived 且非空": {
+    "pass": true,
+    "detail": "89 keys"
+  },
+  "C.01_r1_criteria_and.k₀ = αħc/a₀ = 3.815262": {
+    "pass": true,
+    "detail": "L2 3.81526 ↔ 文檔 3.81526（rel 6.3e-08）"
+  },
+  "C.01_r1_criteria_and.ħc/a₀ = 522.8283": {
+    "pass": true,
+    "detail": "L2 522.828 ↔ 文檔 522.828（rel 5.2e-08）"
+  },
+  "C.01_r1_criteria_and.⟨O⟩_n−p = 1.1263": {
+    "pass": true,
+    "detail": "L2 1.1263 ↔ 文檔 1.1263（rel 1.1e-06）"
+  },
+  "C.01_r1_criteria_and.⟨O⟩_K = 2.4213": {
+    "pass": true,
+    "detail": "L2 2.42132 ↔ 文檔 2.4213（rel 9.8e-06）"
+  },
+  "C.01_r1_criteria_and.⟨O⟩_Σ = 1.9090": {
+    "pass": true,
+    "detail": "L2 1.90898 ↔ 文檔 1.909（rel 8.2e-06）"
+  },
+  "C.01_r1_criteria_and.⟨O⟩_Ξ = 2.1719": {
+    "pass": true,
+    "detail": "L2 2.17188 ↔ 文檔 2.1719（rel 1.2e-05）"
+  },
+  "C.06_r5_k0_identity_.k₀ 3.815262": {
+    "pass": true,
+    "detail": "L2 3.81526 ↔ 文檔 3.81526（rel 6.0e-10）"
+  },
+  "C.06_r5_k0_identity_.522.828": {
+    "pass": true,
+    "detail": "L2 522.828 ↔ 文檔 522.828（rel 5.2e-08）"
+  },
+  "C.06_r5_k0_identity_.k₀^crit(D) = 2.5425": {
+    "pass": true,
+    "detail": "L2 2.5425 ↔ 文檔 2.5425（rel 0.0e+00）"
+  },
+  "C.06_r5_k0_identity_.k₀^crit(A) = 4.0730": {
+    "pass": true,
+    "detail": "L2 4.07296 ↔ 文檔 4.073（rel 9.7e-06）"
+  },
+  "C.06_r5_k0_identity_.k₀^crit(B) = 4.1358": {
+    "pass": true,
+    "detail": "L2 4.13577 ↔ 文檔 4.1358（rel 8.0e-06）"
+  },
+  "C.06_r5_k0_identity_.k₀^crit(C) = 5.3358": {
+    "pass": true,
+    "detail": "L2 5.33582 ↔ 文檔 5.3358（rel 4.2e-06）"
+  },
+  "C.06_r5_k0_identity_.a^crit(all) = 0.26987": {
+    "pass": true,
+    "detail": "L2 0.269867 ↔ 文檔 0.26987（rel 9.6e-06）"
+  },
+  "C.05_r4_necessity_an.docs/05 引 a^crit 0.26987": {
+    "pass": true,
+    "detail": "L2 0.269867 ↔ 文檔 0.26987（rel 9.6e-06）"
+  },
+  "C.01_problem_record..R5 行 k₀^crit C 5.3358": {
+    "pass": true,
+    "detail": "L2 5.33582 ↔ 文檔 5.33582（rel 2.5e-15）"
+  },
+  "C.07_m5_docs52_xref..T₂ = A_eff/k₀ = 1.166158": {
+    "pass": true,
+    "detail": "L2 1.16616 ↔ 文檔 1.16616（rel 3.2e-07）"
+  },
+  "C.07_m5_docs52_xref..T₂(v2 支) = 1.187051": {
+    "pass": true,
+    "detail": "L2 1.18705 ↔ 文檔 1.18705（rel 2.2e-08）"
+  },
+  "C.09_em_anchor_prove.em(ε=0.79) = 2.2773": {
+    "pass": true,
+    "detail": "L2 2.27731 ↔ 文檔 2.2773（rel 4.8e-06）"
+  },
+  "C.09_em_anchor_prove.σ_em = 0.0763": {
+    "pass": true,
+    "detail": "L2 0.0763344 ↔ 文檔 0.0763（rel 4.5e-04）"
+  },
+  "C.09_em_anchor_prove.em(ε=0.78) = 2.2646": {
+    "pass": true,
+    "detail": "L2 2.26459 ↔ 文檔 2.2646（rel 5.1e-06）"
+  },
+  "C.09_em_anchor_prove.z(只 ε) = −25.47": {
+    "pass": true,
+    "detail": "L2 -25.4749 ↔ 文檔 25.47（rel 1.9e-04）"
+  },
+  "C.09_em_anchor_prove.z(ε+X) = −11.16": {
+    "pass": true,
+    "detail": "L2 -11.1583 ↔ 文檔 11.16（rel 1.5e-04）"
+  },
+  "C.10_g0_x_operator_v.δM(D) = 0.01811": {
+    "pass": true,
+    "detail": "L2 0.018115 ↔ 文檔 0.01811（rel 2.7e-04）"
+  },
+  "C.10_g0_x_operator_v.deficit = 141.3×": {
+    "pass": true,
+    "detail": "L2 141.32 ↔ 文檔 141.3（rel 1.4e-04）"
+  },
+  "C.11_route_c_total_d.a = 5.6581": {
+    "pass": true,
+    "detail": "L2 5.65805 ↔ 文檔 5.6581（rel 8.3e-06）"
+  },
+  "C.11_route_c_total_d.b = 3.1793": {
+    "pass": true,
+    "detail": "L2 3.17935 ↔ 文檔 3.1793（rel 1.5e-05）"
+  },
+  "C.11_route_c_total_d.χ²/dof = 3154": {
+    "pass": true,
+    "detail": "L2 3154.36 ↔ 文檔 3154.4（rel 1.2e-05）"
+  },
+  "C.11_route_c_total_d.⟨O⟩_eff = 1.2419": {
+    "pass": true,
+    "detail": "L2 1.24193 ↔ 文檔 1.2419（rel 2.7e-05）"
+  },
+  "C.11_route_c_total_d.退化差 1.9787 MeV": {
+    "pass": true,
+    "detail": "L2 1.97867 ↔ 文檔 1.9787（rel 1.6e-05）"
+  },
+  "C.11_route_c_total_d.退化差 2.0430 MeV": {
+    "pass": true,
+    "detail": "L2 2.043 ↔ 文檔 2.043（rel 0.0e+00）"
+  },
+  "C.01_problem_record..R6 行 k₀ 3.815262": {
+    "pass": true,
+    "detail": "L2 3.81526 ↔ 文檔 3.81526（rel 5.8e-10）"
+  },
+  "C.01_problem_record..Q16 行 χ²/dof 3154": {
+    "pass": true,
+    "detail": "L2 3154.36 ↔ 文檔 3154（rel 1.2e-04）"
+  },
+  "C.01_problem_record..Q15 行 141": {
+    "pass": true,
+    "detail": "L2 141.32 ↔ 文檔 141.32（rel 2.7e-10）"
+  },
+  "F.01_r1_criteria_and_target.md 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.06_r5_k0_identity_and_sensitivity.md 全命中（7/7）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.05_r4_necessity_and_saturation.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.01_problem_record.md 全命中（4/4）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.07_m5_docs52_xref.md 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.09_em_anchor_provenance.md 全命中（5/5）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.10_g0_x_operator_verdict.md 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.11_route_c_total_dm_verdict.md 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
+  "_summary": {
+    "checks": 42,
+    "fail": 0,
+    "by_doc": {
+      "docs/01_r1_criteria_and_target.md": [
+        6,
+        6
+      ],
+      "docs/06_r5_k0_identity_and_sensitivity.md": [
+        7,
+        7
+      ],
+      "docs/05_r4_necessity_and_saturation.md": [
+        1,
+        1
+      ],
+      "01_problem_record.md": [
+        4,
+        4
+      ],
+      "docs/07_m5_docs52_xref.md": [
+        2,
+        2
+      ],
+      "docs/09_em_anchor_provenance.md": [
+        5,
+        5
+      ],
+      "docs/10_g0_x_operator_verdict.md": [
+        2,
+        2
+      ],
+      "docs/11_route_c_total_dm_verdict.md": [
+        6,
+        6
+      ]
+    }
+  }
+}

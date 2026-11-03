@@ -1,0 +1,174 @@
+{
+  "A1 四件套齊全": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A2 L2／L3／driver 齊備": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A3 every JSON 有 run log 對應（06 之 log 名前綴對齊）": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "B1 全部文檔數字可追溯（未申報 = 0）": {
+    "pass": true,
+    "warn": false,
+    "detail": "0 個：[]"
+  },
+  "_per_doc": {
+    "01_r1_criteria_and_target.md": {
+      "total": 228,
+      "hit": 228,
+      "miss": []
+    },
+    "02_m4_handoff_adjudication.md": {
+      "total": 20,
+      "hit": 20,
+      "miss": []
+    },
+    "03_r2_inventory_scan.md": {
+      "total": 81,
+      "hit": 81,
+      "miss": []
+    },
+    "04_r3_concave_identifiability.md": {
+      "total": 41,
+      "hit": 41,
+      "miss": []
+    },
+    "05_r4_necessity_and_saturation.md": {
+      "total": 97,
+      "hit": 97,
+      "miss": []
+    },
+    "06_r5_k0_identity_and_sensitivity.md": {
+      "total": 156,
+      "hit": 156,
+      "miss": []
+    },
+    "07_m5_docs52_xref.md": {
+      "total": 43,
+      "hit": 43,
+      "miss": []
+    },
+    "08_kappa_decision_surface.md": {
+      "total": 108,
+      "hit": 108,
+      "miss": []
+    },
+    "09_em_anchor_provenance.md": {
+      "total": 76,
+      "hit": 76,
+      "miss": []
+    },
+    "10_g0_x_operator_verdict.md": {
+      "total": 31,
+      "hit": 31,
+      "miss": []
+    },
+    "11_route_c_total_dm_verdict.md": {
+      "total": 33,
+      "hit": 33,
+      "miss": []
+    },
+    "12_handoff_adjudication.md": {
+      "total": 41,
+      "hit": 41,
+      "miss": []
+    },
+    "13_v2_branch_full_recompute.md": {
+      "total": 33,
+      "hit": 33,
+      "miss": []
+    },
+    "01_problem_record.md": {
+      "total": 261,
+      "hit": 261,
+      "miss": []
+    },
+    "SESSION_START.md": {
+      "total": 63,
+      "hit": 63,
+      "miss": []
+    },
+    "README.md": {
+      "total": 13,
+      "hit": 13,
+      "miss": []
+    },
+    "final_result.md": {
+      "total": 13,
+      "hit": 13,
+      "miss": []
+    }
+  },
+  "C1 全 13 支：exit0 ＋ 雙跑相同 ＋ 與 canonical log 相同": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "C2 13 份 log 零 traceback": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "C3 五支路徑敏感腳本 cwd-獨立": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "D1 13 個 JSON 全綁定且綠": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "E1 四件套狀態一致": {
+    "pass": true,
+    "warn": false,
+    "detail": "{'01_problem_record.md': 'partial', 'SESSION_START.md': 'partial', 'README.md': 'partial', 'final_result.md': 'partial'}"
+  },
+  "E2 README ≤ 60 行": {
+    "pass": true,
+    "warn": false,
+    "detail": "47 行"
+  },
+  "E3 final_result ≤ 20 行": {
+    "pass": true,
+    "warn": false,
+    "detail": "19 行"
+  },
+  "E4 SESSION_START 保持快照（≤ 60 行）": {
+    "pass": true,
+    "warn": false,
+    "detail": "49 行"
+  },
+  "F1 L2 綠": {
+    "pass": true,
+    "warn": false,
+    "detail": "{'checks': 16, 'fail': 0, 'n_derived': 89}"
+  },
+  "F2 L3 綠": {
+    "pass": true,
+    "warn": false,
+    "detail": "{'checks': 42, 'fail': 0, 'by_doc': {'docs/01_r1_criteria_and_target.md': [6, 6], 'docs/06_r5_k0_identity_and_sensitivity.md': [7, 7], 'docs/05_r4_necessity_and_saturation.md': [1, 1], '01_problem_record.md': [4, 4], 'docs/07_m5_docs52_xref.md': [2, 2], 'docs/09_em_anchor_provenance.md': [5, 5], 'docs/10_g0_x_operator_verdict.md': [2, 2], 'docs/11_route_c_total_dm_verdict.md': [6, 6]}}"
+  },
+  "F3 audit(11) 綠": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "F4 無檔數型 canonical 驗證器需重生成": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "_summary": {
+    "checks": 16,
+    "fail": 0,
+    "warn": 0
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "alpha_inv": 137.035999,
+  "hbarc": 197.3269804,
+  "x_sensitivity": {
+    "A": {
+      "-1": 3.4784304849448144,
+      "+0": 4.072960681856742,
+      "+1": 4.667490878768667
+    },
+    "B": {
+      "-1": 3.452953680468749,
+      "+0": 4.135766999999997,
+      "+1": 4.8185803195312475
+    },
+    "C": {
+      "-1": 4.694921364075419,
+      "+0": 5.335822259543011,
+      "+1": 5.976723155010607
+    },
+    "D": {
+      "-1": 2.1533332031250016,
+      "+0": 2.5425000000000004,
+      "+1": 3.0808335937499995
+    }
+  },
+  "provenance": {
+    "canonical": {
+      "a": 0.3774221681639186,
+      "hc_over_a": 522.8282730713865,
+      "k0": 3.8152622441303654,
+      "src": "M5 docs/13 重校"
+    },
+    "v2": {
+      "a": 0.384184,
+      "hc_over_a": 513.6262322220603,
+      "k0": 3.748111707654718,
+      "src": "M5 docs/28（已取代）"
+    },
+    "m11_before": {
+      "a": 0.38390463112840467,
+      "hc_over_a": 514.0,
+      "k0": 3.750839222911054,
+      "src": "舊版 M11：514.0 MeV"
+    },
+    "data01": {
+      "a": 0.3774221681639186,
+      "k0": 3.8152622441303654
+    },
+    "delta_a_pct": 1.717562854355359,
+    "delta_k0_pct": -1.6885607619351428
+  },
+  "k0_crit": {
+    "A": 4.072960681856742,
+    "B": 4.135766999999997,
+    "C": 5.335822259543011,
+    "D": 2.5425000000000004
+  },
+  "k0_crit_all": 5.335822259543011,
+  "a_crit_all": 0.26986741279064763,
+  "branches": {
+    "M5 κ=0 主校準（正典）": {
+      "a": 0.3774221681639186,
+      "k0": 3.8152622441303654,
+      "verdict": {
+        "A": {
+          "blind_ok": false,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": false,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": false,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    },
+    "M5 v2 docs/28（舊）": {
+      "a": 0.384184,
+      "k0": 3.748111707654718,
+      "verdict": {
+        "A": {
+          "blind_ok": false,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": false,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": false,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    },
+    "窗界（M4 docs/26）": {
+      "a": 0.3357,
+      "k0": 4.289438630603575,
+      "verdict": {
+        "A": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": false,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    },
+    "M5 κ=0.215 天花板": {
+      "a": 0.243274,
+      "k0": 5.919105816049476,
+      "verdict": {
+        "A": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": true,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    },
+    "窗內下限（示意 0.20）": {
+      "a": 0.2,
+      "k0": 7.1998227414681,
+      "verdict": {
+        "A": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": true,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    },
+    "窗內更小（示意 0.10）": {
+      "a": 0.1,
+      "k0": 14.3996454829362,
+      "verdict": {
+        "A": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "B": {
+          "blind_ok": true,
+          "anchor": "KILL",
+          "alive": false
+        },
+        "C": {
+          "blind_ok": true,
+          "anchor": "TENSION",
+          "alive": false
+        },
+        "D": {
+          "blind_ok": true,
+          "anchor": "SATURATED",
+          "alive": true
+        }
+      }
+    }
+  },
+  "inventory_scales": [
+    {
+      "name": "R_world（世界環半徑）",
+      "fm": 1.357708e+23,
+      "mag": "10²⁹"
+    },
+    {
+      "name": "r_d = πR_world/88",
+      "fm": 4.5495128802000005e+21,
+      "mag": "10²⁷"
+    },
+    {
+      "name": "λ_sync = L_ring/88",
+      "fm": 4.5495128802000005e+21,
+      "mag": "10²⁷"
+    },
+    {
+      "name": "ħc/Λ_IDCM（Λ=45.28487 MeV）",
+      "fm": 4.357459354526137,
+      "mag": "10⁰"
+    },
+    {
+      "name": "ħc/v_SM（v=246.2196 GeV）",
+      "fm": 0.0008014267767472614,
+      "mag": "10⁻⁴"
+    },
+    {
+      "name": "ℓ_Pl",
+      "fm": 1.616e-20,
+      "mag": "10⁻²⁰"
+    }
+  ],
+  "zero_parameter": {
+    "available": false,
+    "note": "存貨無 0.1–1 fm 結構長度；ħc/Λ_IDCM=4.36 fm 差 11× 且比值非結構整數"
+  }
+}

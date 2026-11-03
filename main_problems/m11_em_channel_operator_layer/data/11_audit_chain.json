@@ -1,0 +1,127 @@
+{
+  "① 兩側差集空（磁碟有但文檔無）": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "① 兩側差集空（文檔有但磁碟無）": {
+    "pass": false,
+    "warn": true,
+    "detail": "['15', '54']"
+  },
+  "② C9 K 之 t = −0.3601 → 01_r1_criteria": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='0.3601' 命中=True"
+  },
+  "② k₀ 3.815262 → 01_r1_criteria": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='3.815262' 命中=True"
+  },
+  "② ⟨O⟩_K 2.4213 → 01_r1_criteria": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='2.4213' 命中=True"
+  },
+  "② 1040 候選 0 PASS → 02_r2_inventory_scan": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='1040' 命中=True"
+  },
+  "② 18468 候選 0 PASS → 03_r3_concave_identifiability": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='18468' 命中=True"
+  },
+  "② R4 D 飽和 1.908984 → 04_r4_necessity": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='1.908984' 命中=True"
+  },
+  "② k₀^crit D 2.5425 → 05_r5_k0_identity": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='2.5425' 命中=True"
+  },
+  "② k₀^crit A 4.0730 → 05_r5_k0_identity": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='4.072960681856742' 命中=True"
+  },
+  "② a^crit 0.26987 → 05_r5_k0_identity": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='0.26986741279064763' 命中=True"
+  },
+  "② κ=0.300 帶 → 06_r6b_kappa_sweep": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='0.300' 命中=True"
+  },
+  "② em(0.79) 2.2773 → 07_em_anchor_scan": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='2.2773' 命中=True"
+  },
+  "② G0 δM 0.01811 → 08_g0_x_operator": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='0.01811' 命中=True"
+  },
+  "② 路線 C χ²/dof 3154 → 09_route_c_total_dm": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='3154' 命中=True"
+  },
+  "② 退化 1.9787 → 10_route_c_degeneracy": {
+    "pass": true,
+    "warn": false,
+    "detail": "token='1.9787' 命中=True"
+  },
+  "③ 無 /tmp/ 寫入": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "④ 無孤兒 JSON": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "④ 每支腳本有 JSON 產物": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "⑤ 零未申報幽靈": {
+    "pass": true,
+    "warn": false,
+    "detail": "0 個（見上；須逐項入 ALLOW 或補 producer）"
+  },
+  "⑥ driver 齊備": {
+    "pass": true,
+    "warn": false,
+    "detail": "12 輪、OMP 鎖=True"
+  },
+  "⑦ 所有 run_*.log 無 traceback／路徑錯": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "E L2 綠燈": {
+    "pass": true,
+    "warn": false,
+    "detail": "checks=16 fail=0"
+  },
+  "E L3 綠燈": {
+    "pass": true,
+    "warn": false,
+    "detail": "checks=42 fail=0"
+  },
+  "_summary": {
+    "checks": 24,
+    "fail": 0,
+    "warn": 1
+  }
+}

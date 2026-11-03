@@ -1,0 +1,116 @@
+
+================================================================================
+A 檔案清單（全鏈・全檔）
+================================================================================
+  根檔 4｜docs 13｜NN 腳本 14｜L2/L3 2｜driver 1｜JSON 17｜log 17
+[PASS] A1 四件套齊全  |  []
+[PASS] A2 L2／L3／driver 齊備
+[PASS] A3 every JSON 有 run log 對應（06 之 log 名前綴對齊）  |  []
+
+================================================================================
+B 每份文檔數字審計（§3.4：data 域 ＋ L2 域 ＋ ALLOW 申報）
+================================================================================
+  可信值域：data+log+L2 = 9045 個數｜ALLOW 申報 29 個
+  ✅ 01_r1_criteria_and_target.md               228/228 = 100.00%
+  ✅ 02_m4_handoff_adjudication.md               20/ 20 = 100.00%
+  ✅ 03_r2_inventory_scan.md                     81/ 81 = 100.00%
+  ✅ 04_r3_concave_identifiability.md            41/ 41 = 100.00%
+  ✅ 05_r4_necessity_and_saturation.md           97/ 97 = 100.00%
+  ✅ 06_r5_k0_identity_and_sensitivity.md       156/156 = 100.00%
+  ✅ 07_m5_docs52_xref.md                        43/ 43 = 100.00%
+  ✅ 08_kappa_decision_surface.md               108/108 = 100.00%
+  ✅ 09_em_anchor_provenance.md                  76/ 76 = 100.00%
+  ✅ 10_g0_x_operator_verdict.md                 31/ 31 = 100.00%
+  ✅ 11_route_c_total_dm_verdict.md              33/ 33 = 100.00%
+  ✅ 12_handoff_adjudication.md                  41/ 41 = 100.00%
+  ✅ 13_v2_branch_full_recompute.md              33/ 33 = 100.00%
+  ✅ 01_problem_record.md                       261/261 = 100.00%
+  ✅ SESSION_START.md                            63/ 63 = 100.00%
+  ✅ README.md                                   13/ 13 = 100.00%
+  ✅ final_result.md                             13/ 13 = 100.00%
+[PASS] B1 全部文檔數字可追溯（未申報 = 0）  |  0 個：[]
+
+================================================================================
+C 每支腳本：雙跑 byte-identical ＋ log 健全 ＋ 產物存在（§3.1 ②④⑥⑦／§7.3-2）
+================================================================================
+  ✅ 01_r1_criteria.py                  exit=[0, 0] det=True canon=True lines=81
+  ✅ 02_r2_inventory_scan.py            exit=[0, 0] det=True canon=True lines=41
+  ✅ 03_r3_concave_identifiability.py   exit=[0, 0] det=True canon=True lines=32
+  ✅ 04_r4_necessity.py                 exit=[0, 0] det=True canon=True lines=66
+  ✅ 05_r5_k0_identity.py               exit=[0, 0] det=True canon=True lines=69
+  ✅ 06_r6b_kappa_sweep.py              exit=[0, 0] det=True canon=True lines=211
+  ✅ 07_em_anchor_scan.py               exit=[0, 0] det=True canon=True lines=23
+  ✅ 08_g0_x_operator.py                exit=[0, 0] det=True canon=True lines=34
+  ✅ 09_route_c_total_dm.py             exit=[0, 0] det=True canon=True lines=36
+  ✅ 10_route_c_degeneracy.py           exit=[0, 0] det=True canon=True lines=45
+  ✅ 11_audit_chain.py                  exit=[0, 0] det=True canon=True lines=94
+  ✅ 13_k0_branch_sensitivity.py        exit=[0, 0] det=True canon=True lines=28
+  ✅ 14_v2_branch_diff.py               exit=[0, 0] det=True canon=True lines=85
+  ✅ l2_independent_verify.py           exit=[0, 0] det=True canon=True lines=134
+  ✅ l3_doc_crosscheck.py               exit=[0, 0] det=True canon=True lines=69
+[PASS] C1 全 13 支：exit0 ＋ 雙跑相同 ＋ 與 canonical log 相同  |  []
+
+================================================================================
+C2 log 內容健全（⑦）
+================================================================================
+[PASS] C2 13 份 log 零 traceback  |  []
+
+================================================================================
+C3 cwd 獨立性（§14.3／§14.7 修補之驗收）
+================================================================================
+  ✅ 06_r6b_kappa_sweep.py              由 scratch cwd 執行 exit=0
+  ✅ 07_em_anchor_scan.py               由 scratch cwd 執行 exit=0
+  ✅ 08_g0_x_operator.py                由 scratch cwd 執行 exit=0
+  ✅ 09_route_c_total_dm.py             由 scratch cwd 執行 exit=0
+  ✅ 10_route_c_degeneracy.py           由 scratch cwd 執行 exit=0
+[PASS] C3 五支路徑敏感腳本 cwd-獨立  |  []
+
+================================================================================
+D 每個 JSON：可解析 ＋ 有產者 ＋ _summary 綠（④）
+================================================================================
+  ✅ 01_r1_criteria.json                producer=['01_r1_criteria.py'] summary=None
+  ✅ 02_r2_inventory_scan.json          producer=['02_r2_inventory_scan.py'] summary=None
+  ✅ 03_r3_concave.json                 producer=['03_r3_concave_identifiability.py'] summary=None
+  ✅ 04_r4_necessity.json               producer=['04_r4_necessity.py'] summary=None
+  ✅ 05_r5_k0_identity.json             producer=['05_r5_k0_identity.py'] summary=None
+  ✅ 06_r6b_kappa_sweep.json            producer=['06_r6b_kappa_sweep.py'] summary=None
+  ✅ 07_em_anchor_scan.json             producer=['07_em_anchor_scan.py'] summary=None
+  ✅ 08_g0_x_operator.json              producer=['08_g0_x_operator.py'] summary=None
+  ✅ 09_route_c_total_dm.json           producer=['09_route_c_total_dm.py'] summary=None
+  ✅ 10_route_c_degeneracy.json         producer=['10_route_c_degeneracy.py'] summary=None
+  ✅ 11_audit_chain.json                producer=['11_audit_chain.py'] summary={'checks': 24, 'fail': 0, 'warn': 1}
+  ✅ 13_k0_branch_sensitivity.json      producer=['13_k0_branch_sensitivity.py'] summary=None
+  ✅ 14_v2_branch_diff.json             producer=['14_v2_branch_diff.py'] summary=None
+  ✅ l2_independent_verify.json         producer=['l2_independent_verify.py'] summary={'checks': 16, 'fail': 0, 'n_derived': 89}
+  ✅ l3_doc_crosscheck.json             producer=['l3_doc_crosscheck.py'] summary={'checks': 42, 'fail': 0, 'by_doc': {'docs/01_r1_criteria_and_target.md': [6, 6], 'docs/06_r5_k0_identity_and_sensitivity.md': [7, 7], 'docs/05_r4_necessity_and_saturation.md': [1, 1], '01_problem_record.md': [4, 4], 'docs/07_m5_docs52_xref.md': [2, 2], 'docs/09_em_anchor_provenance.md': [5, 5], 'docs/10_g0_x_operator_verdict.md': [2, 2], 'docs/11_route_c_total_dm_verdict.md': [6, 6]}}
+[PASS] D1 13 個 JSON 全綁定且綠  |  []
+
+================================================================================
+E 四件套（§0 狀態一致 ＋ 行數上限）
+================================================================================
+  01_problem_record.md       → '🟡 partial（2026-10-28；八處封閉＋M7 味盲定理為第九處；route A 已移交 M12）'
+  SESSION_START.md           → '🟡 partial（2026-10-28 更新；見 01_problem_record §四、§十三）'
+  README.md                  → '🟡 partial（em 通道八處封閉＋C 路線死；route A 已移交 M12）'
+  final_result.md            → '🟡 partial（2026-10-28；em 八處封閉＋M7 味盲＝第九處；route A→M12）'
+[PASS] E1 四件套狀態一致  |  {'01_problem_record.md': 'partial', 'SESSION_START.md': 'partial', 'README.md': 'partial', 'final_result.md': 'partial'}
+  行數：{'01_problem_record.md': 426, 'SESSION_START.md': 49, 'README.md': 47, 'final_result.md': 19}
+[PASS] E2 README ≤ 60 行  |  47 行
+[PASS] E3 final_result ≤ 20 行  |  19 行
+[PASS] E4 SESSION_START 保持快照（≤ 60 行）  |  49 行
+
+================================================================================
+F L2／L3 納入（§7.3）＋ §7.2 檔數型驗證器
+================================================================================
+[PASS] F1 L2 綠  |  {'checks': 16, 'fail': 0, 'n_derived': 89}
+[PASS] F2 L3 綠  |  {'checks': 42, 'fail': 0, 'by_doc': {'docs/01_r1_criteria_and_target.md': [6, 6], 'docs/06_r5_k0_identity_and_sensitivity.md': [7, 7], 'docs/05_r4_necessity_and_saturation.md': [1, 1], '01_problem_record.md': [4, 4], 'docs/07_m5_docs52_xref.md': [2, 2], 'docs/09_em_anchor_provenance.md': [5, 5], 'docs/10_g0_x_operator_verdict.md': [2, 2], 'docs/11_route_c_total_dm_verdict.md': [6, 6]}}
+[PASS] F3 audit(11) 綠
+  M11 內以檔數作 assert 嘅驗證器：0 處
+[PASS] F4 無檔數型 canonical 驗證器需重生成  |  []
+
+================================================================================
+匯總
+================================================================================
+檢查項 = 16，FAIL = 0，WARN = 0
+
+寫出 12_full_file_audit_A_B_C_D_E_F.json
+EXIT=0

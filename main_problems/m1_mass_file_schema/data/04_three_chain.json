@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "script": "04_three_chain_presets",
+    "M0_MeV": "27.9009145112"
+  },
+  "P1_O54": {
+    "formula": "m_f = M₀·γ_n·F_proj",
+    "rows": {
+      "e": {
+        "target_units": "0.01831477423",
+        "n_feasible_modes": 43,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 1,
+        "status": "1 連續參數（F_proj 由目標反解）⟹ 0 bit"
+      },
+      "mu": {
+        "target_units": "3.78691442",
+        "n_feasible_modes": 7,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 1,
+        "status": "1 連續參數（F_proj 由目標反解）⟹ 0 bit"
+      },
+      "tau": {
+        "target_units": "63.68465088",
+        "n_feasible_modes": 0,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 0,
+        "status": "不可表（λ > 90 需多量子）"
+      },
+      "u": {
+        "target_units": "0.07741681726",
+        "n_feasible_modes": 41,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 1,
+        "status": "1 連續參數（F_proj 由目標反解）⟹ 0 bit"
+      },
+      "d": {
+        "target_units": "0.1673780262",
+        "n_feasible_modes": 39,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 1,
+        "status": "1 連續參數（F_proj 由目標反解）⟹ 0 bit"
+      },
+      "s": {
+        "target_units": "3.347560524",
+        "n_feasible_modes": 12,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 1,
+        "status": "1 連續參數（F_proj 由目標反解）⟹ 0 bit"
+      },
+      "c": {
+        "target_units": "45.62574461",
+        "n_feasible_modes": 0,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 0,
+        "status": "不可表（λ > 90 需多量子）"
+      },
+      "b": {
+        "target_units": "149.8158778",
+        "n_feasible_modes": 0,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 0,
+        "status": "不可表（λ > 90 需多量子）"
+      },
+      "t": {
+        "target_units": "6185.101923",
+        "n_feasible_modes": 0,
+        "F_proj_range": [
+          "≤1",
+          ">0"
+        ],
+        "dof_per_particle": 0,
+        "status": "不可表（λ > 90 需多量子）"
+      }
+    },
+    "verdict": "🔴 preset 不合法：每粒 1 個連續自由參數 F_proj（由目標反解）＋ n 可選 ⟹ 零判別力",
+    "n_feasible_examples": {
+      "e": 43,
+      "mu": 7,
+      "tau": 0,
+      "u": 41,
+      "d": 39,
+      "s": 12,
+      "c": 0,
+      "b": 0,
+      "t": 0
+    }
+  },
+  "P2_O239": {
+    "formula": "m = M₀·|Δm|^(φ²)",
+    "conductor_sqrt5": 5,
+    "divisors_of_88": [
+      1,
+      2,
+      4,
+      8,
+      11,
+      22,
+      44,
+      88
+    ],
+    "sqrt5_in_Qzeta88": false,
+    "argument": "Kronecker–Weber：ℚ(ζ₈₈) 之 quadratic subfield conductor 必整除 88；√5 之 conductor = 5 ∤ 88 ⟹ ℚ(√5) ⊄ ℚ(ζ₈₈) ⟹ φ ∉ ℚ(ζ₈₈)",
+    "numeric_note": {
+      "sqrt5": "2.2360679774997896964",
+      "phi": "1.6180339887498948482",
+      "phi_sq": "2.6180339887498948482"
+    },
+    "external_verdict": "M9：φ^(11+7/88) 對 m_μ/m_e 為 428.4σ（已判死，不重推）",
+    "verdict": "🔴 preset 不合法：域外（φ ∉ ℚ(ζ₈₈)）＋ 數值否證（428.4σ）＋ φ-ladder 屬插值族（0 bit）"
+  },
+  "P3_M4": {
+    "formula": "Δm² = R（代內差值）",
+    "absolute_scale": "需外部 M_comp（O86/N8）⟹ 不能給絕對質量",
+    "verdict": "🟡 preset 部分合法：只作代內差值算子（中微子），零絕對質量預言",
+    "scope": "intra-generation only"
+  },
+  "checks": [
+    {
+      "name": "P1_has_free_param",
+      "pass": true
+    },
+    {
+      "name": "sqrt5_not_in_Qzeta88",
+      "pass": true
+    },
+    {
+      "name": "P3_no_absolute",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "common_backbone": "m = M₀·Σσ_nγ_n（M2 §2）——三 preset 皆為其退化特例",
+    "P1": "σ 取單模 + 額外乘子 F_proj ⟹ 2 選擇 ⟹ 0 bit",
+    "P2": "非譜域算子（φ²）⟹ 域外 + 428.4σ ⟹ 封存",
+    "P3": "σ 差值讀法 ⟹ 只及代內 ⟹ 絕對質量仍空",
+    "conclusion": "三鏈唔可以合併成一條；正確講法係「一個骨架（帳本泛函）+ 三個退化 preset」，其中只有 P3 局部有效"
+  },
+  "check_summary": {
+    "total": 3,
+    "pass": 3
+  }
+}

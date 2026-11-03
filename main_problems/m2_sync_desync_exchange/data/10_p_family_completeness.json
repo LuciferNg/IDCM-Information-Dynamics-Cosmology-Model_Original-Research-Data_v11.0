@@ -1,0 +1,29 @@
+{
+  "script": "10_p_family_completeness.py",
+  "object": "非可分族 m = M₀[Σσ_nγ_n + λΣ_{n<m}σ_nσ_m w_nm], w_nm = γ_nγ_m/Σγ",
+  "C1_single_mode_max_dev": "0.0",
+  "C2_shift": {
+    "top2_modes_43_44_MeV": "4.953843617",
+    "full_44_modes_MeV": "1213.379771"
+  },
+  "C3_window": {
+    "lambda_max": "0.0",
+    "lambda_min": "-2.0694941",
+    "meaning": "λ≤0 吸引（束縛）容許；λ>0 排斥被守恆封頂 ⟹ 束縛窗口非空"
+  },
+  "verdict": {
+    "a_completeness": "🔴 不完備 — p 族只覆蓋可分族；非可分族 λ≠0 與單粒子譜、互換律、X 對合全部相容",
+    "escape": "唯一框架內排除 = O237 逐模讀數（質量= per-mode |1−U_n|² 之和）—— 屬定義，非 M2 定理",
+    "b_theorem_status": "只可升為【條件定理】：O237 逐模讀數 ⟹ 加性 ⟹ ⟨O⟩≡1；無條件版本拒絕"
+  },
+  "checks": {
+    "C1_single_mode_spectrum_lambda_blind": true,
+    "C2_composite_shift_nonzero_MeV": true,
+    "C3_binding_window_nonempty": true,
+    "C4_X_involution_and_identity": true,
+    "C5_completeness_not_established": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 5,
+  "n_total": 5
+}

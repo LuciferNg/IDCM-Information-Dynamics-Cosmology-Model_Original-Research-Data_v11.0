@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "script": "03_canonical_form",
+    "eps": "1e-3",
+    "M0_MeV": "27.9009145112",
+    "order": "(n_q, p, k, lex) up",
+    "kcap": 20,
+    "F1": "top-mode 規範 σ₄₄=(t−Σ_S)/4 ∈ (0,1)，S ⊆ {1..43}"
+  },
+  "rows": {
+    "e": {
+      "target_units": "0.018314774227019",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 1,
+      "k": 2,
+      "encoding": [],
+      "sigma44": "0.004578693557",
+      "sum_units": "0.0",
+      "dev": "0.0",
+      "degeneracy": 2,
+      "status": "🟡 二值無解（k≤20）⟹ F1：1 partial（σ₄₄）"
+    },
+    "mu": {
+      "target_units": "3.7869144202276",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 0,
+      "k": 2,
+      "encoding": [
+        11,
+        31
+      ],
+      "sum_units": "3.7843417706496",
+      "dev": "0.00067935245",
+      "degeneracy": 1,
+      "status": "✅ 二值編碼存在（F0）"
+    },
+    "tau": {
+      "target_units": "63.684650884355",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 0,
+      "k": 19,
+      "encoding": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "sum_units": "63.623213081309",
+      "dev": "0.00096471916",
+      "degeneracy": 513,
+      "status": "✅ 二值編碼存在（F0）"
+    },
+    "u": {
+      "target_units": "0.0774168172564",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 1,
+      "k": 2,
+      "encoding": [],
+      "sigma44": "0.01935420431",
+      "sum_units": "0.0",
+      "dev": "0.0",
+      "degeneracy": 4,
+      "status": "🟡 二值無解（k≤20）⟹ F1：1 partial（σ₄₄）"
+    },
+    "d": {
+      "target_units": "0.16737802619786",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 1,
+      "k": 2,
+      "encoding": [],
+      "sigma44": "0.04184450655",
+      "sum_units": "0.0",
+      "dev": "0.0",
+      "degeneracy": 6,
+      "status": "🟡 二值無解（k≤20）⟹ F1：1 partial（σ₄₄）"
+    },
+    "s": {
+      "target_units": "3.3475605239573",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 0,
+      "k": 3,
+      "encoding": [
+        2,
+        5,
+        31
+      ],
+      "sum_units": "3.3450129992613",
+      "dev": "0.0007610093",
+      "degeneracy": 7,
+      "status": "✅ 二值編碼存在（F0）"
+    },
+    "c": {
+      "target_units": "45.625744614536",
+      "n_q": 1,
+      "single_quantum": true,
+      "p": 0,
+      "k": 13,
+      "encoding": [
+        23,
+        25,
+        30,
+        33,
+        34,
+        35,
+        36,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "sum_units": "45.580119081162",
+      "dev": "0.00099999537",
+      "degeneracy": 4285,
+      "status": "✅ 二值編碼存在（F0）"
+    },
+    "b": {
+      "target_units": "149.81587783877",
+      "n_q": 2,
+      "single_quantum": false,
+      "status": "🔴 跨量子：單量子 λ ≤ 90 不足，組合律未定（開放）",
+      "per_quantum_mean_units": "74.90793892"
+    },
+    "t": {
+      "target_units": "6185.1019231189",
+      "n_q": 69,
+      "single_quantum": false,
+      "status": "🔴 跨量子：單量子 λ ≤ 90 不足，組合律未定（開放）",
+      "per_quantum_mean_units": "89.63915831"
+    }
+  },
+  "checks": [
+    {
+      "name": "tables_all_size",
+      "pass": true
+    },
+    {
+      "name": "tables_n44_size",
+      "pass": true
+    },
+    {
+      "name": "gamma44=4",
+      "pass": true
+    }
+  ],
+  "check_summary": {
+    "total": 3,
+    "pass": 3
+  },
+  "verdict": {
+    "F0_exists": 4,
+    "F1_forced": 3,
+    "multi_quantum": 2,
+    "none": 2
+  }
+}

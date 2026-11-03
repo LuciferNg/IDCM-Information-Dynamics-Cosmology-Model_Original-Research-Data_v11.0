@@ -1,0 +1,39 @@
+{
+  "script": "09_p3_frozen_split.py",
+  "equilibrium": {
+    "E_proj_eq": "45 = Σγ/2",
+    "f_E_eq": "1/2"
+  },
+  "observed": {
+    "E_proj": "57/2 = 28.5",
+    "f_E": "19/60",
+    "K_tree": "33"
+  },
+  "offset_from_equilibrium": "16.5 = K_tree/2 (EXACT) ⟹ 分裂 = 破缺序參量",
+  "time": {
+    "tick_Gyr": "0.96178409",
+    "t_age_Gyr": "13.8",
+    "N_ticks": "14.348335"
+  },
+  "p_bound": {
+    "tol_1pct": "0.0019545636",
+    "drift_if_p_1_over_88": "0.051015418",
+    "note": "p=1/88 (每 tick 一位元序列化) 已被 Ω_m 穩定性排除"
+  },
+  "verdict": {
+    "category": "🔵 X: σ↦1−σ 係賬本對稱 (gauge)，唔係動力學過程 ⟹ 「交換速率」係範疇問題",
+    "structure": "✅ 19/60 分裂 = 破缺序參量 K_tree=33（偏離均衡恰 16.5=K_tree/2）",
+    "data_bound": "p < 0.001955 /tick/mode（Ω_m 漂移 < 1% 於 13.8 Gyr）",
+    "falsifiable": "若 p ∼ bound，Ω_m(z) 有可測漂移（未來 Euclid/DESI 可判）"
+  },
+  "checks": {
+    "F1_equilibrium_is_half": true,
+    "F2_offset_is_half_K_tree": true,
+    "F3_f_E_is_19_over_60": true,
+    "F4_p_bound_positive_and_tight": true,
+    "F5_serial_p_excluded": true
+  },
+  "ALL_PASS": true,
+  "n_pass": 5,
+  "n_total": 5
+}

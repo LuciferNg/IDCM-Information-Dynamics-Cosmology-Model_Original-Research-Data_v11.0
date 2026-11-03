@@ -1,0 +1,109 @@
+{
+  "A1 四件套齊全": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "A2 L2／L3／driver 齊備": {
+    "pass": true,
+    "warn": false,
+    "detail": ""
+  },
+  "A3 every JSON 有 run log 對應（06 之 log 名前綴對齊）": {
+    "pass": true,
+    "warn": false,
+    "detail": "[]"
+  },
+  "B1 全部文檔數字可追溯（未申報 = 0）": {
+    "pass": true,
+    "warn": false,
+    "detail": "0 個：[]"
+  },
+  "_per_doc": {
+    "01_r1_criteria_and_target.md": {
+      "total": 228,
+      "hit": 228,
+      "miss": []
+    },
+    "02_m4_handoff_adjudication.md": {
+      "total": 20,
+      "hit": 20,
+      "miss": []
+    },
+    "03_r2_inventory_scan.md": {
+      "total": 81,
+      "hit": 81,
+      "miss": []
+    },
+    "04_r3_concave_identifiability.md": {
+      "total": 41,
+      "hit": 41,
+      "miss": []
+    },
+    "05_r4_necessity_and_saturation.md": {
+      "total": 97,
+      "hit": 97,
+      "miss": []
+    },
+    "06_r5_k0_identity_and_sensitivity.md": {
+      "total": 156,
+      "hit": 156,
+      "miss": []
+    },
+    "07_m5_docs52_xref.md": {
+      "total": 43,
+      "hit": 43,
+      "miss": []
+    },
+    "08_kappa_decision_surface.md": {
+      "total": 108,
+      "hit": 108,
+      "miss": []
+    },
+    "09_em_anchor_provenance.md": {
+      "total": 76,
+      "hit": 76,
+      "miss": []
+    },
+    "10_g0_x_operator_verdict.md": {
+      "total": 31,
+      "hit": 31,
+      "miss": []
+    },
+    "11_route_c_total_dm_verdict.md": {
+      "total": 33,
+      "hit": 33,
+      "miss": []
+    },
+    "12_handoff_adjudication.md": {
+      "total": 41,
+      "hit": 41,
+      "miss": []
+    },
+    "01_problem_record.md": {
+      "total": 234,
+      "hit": 234,
+      "miss": []
+    },
+    "SESSION_START.md": {
+      "total": 63,
+      "hit": 63,
+      "miss": []
+    },
+    "README.md": {
+      "total": 13,
+      "hit": 13,
+      "miss": []
+    },
+    "final_result.md": {
+      "total": 13,
+      "hit": 13,
+      "miss": []
+    }
+  },
+  "_summary": {
+    "checks": 4,
+    "fail": 0,
+    "warn": 0
+  }
+}

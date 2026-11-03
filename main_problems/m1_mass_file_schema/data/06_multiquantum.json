@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "script": "06_multiquantum",
+    "M0_MeV": "27.9009145112",
+    "sum_gamma": 90,
+    "eps": "0.001"
+  },
+  "checks": [
+    {
+      "name": "nq_b=2",
+      "pass": true
+    },
+    {
+      "name": "nq_t=69",
+      "pass": true
+    },
+    {
+      "name": "h_b_in_range",
+      "pass": true
+    },
+    {
+      "name": "r_b_in_range",
+      "pass": true
+    },
+    {
+      "name": "h_t_in_range",
+      "pass": true
+    },
+    {
+      "name": "r_t_in_range",
+      "pass": true
+    },
+    {
+      "name": "c_b_in_range",
+      "pass": true
+    },
+    {
+      "name": "c_t_in_range",
+      "pass": true
+    }
+  ],
+  "targets": {
+    "h_b": {
+      "value_units": "30.184122161227",
+      "k_min": 8,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.86748"
+      },
+      "rho_kmin": 117,
+      "rho_k2": 0,
+      "t_over_gamma1": "5923.367331"
+    },
+    "r_b": {
+      "value_units": "59.815877838773",
+      "k_min": 17,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.933128"
+      },
+      "rho_kmin": 25,
+      "rho_k2": 0,
+      "t_over_gamma1": "11738.33762"
+    },
+    "h_t": {
+      "value_units": "24.898076881069",
+      "k_min": 7,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.839345"
+      },
+      "rho_kmin": 1393,
+      "rho_k2": 0,
+      "t_over_gamma1": "4886.027641"
+    },
+    "r_t": {
+      "value_units": "65.101923118931",
+      "k_min": 19,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.938558"
+      },
+      "rho_kmin": 19,
+      "rho_k2": 0,
+      "t_over_gamma1": "12775.67731"
+    },
+    "c_b": {
+      "value_units": "74.907938919387",
+      "k_min": 23,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.946601"
+      },
+      "rho_kmin": 1,
+      "rho_k2": 0,
+      "t_over_gamma1": "14700.02128"
+    },
+    "c_t": {
+      "value_units": "89.639158306071",
+      "k_min": 39,
+      "single_mode_best": {
+        "n": 44,
+        "dev": "0.955377"
+      },
+      "rho_kmin": 7,
+      "rho_k2": 0,
+      "t_over_gamma1": "17590.89296"
+    }
+  },
+  "coverage": {
+    "k1": 0.0019677874061140225,
+    "k2": 0.055352545893653064,
+    "k3": 0.12268991976099373
+  },
+  "laws": {
+    "E_equal_split": {
+      "b": "2 × 74.90793892 = 149.815877839",
+      "t": "69 × 89.63915831 = 6185.10192312",
+      "dof": "σ 共用（44 維向量），分布律零新常數"
+    },
+    "F_fill_plus_remainder": {
+      "b": "90 + 59.815877839",
+      "t": "68 × 90 + 65.10192312",
+      "dof": "σ 共用；僅末量子非滿"
+    }
+  },
+  "structural_identity": {
+    "h_b": {
+      "single_mode_dev": "0.86748",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    },
+    "r_b": {
+      "single_mode_dev": "0.933128",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    },
+    "h_t": {
+      "single_mode_dev": "0.839345",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    },
+    "r_t": {
+      "single_mode_dev": "0.938558",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    },
+    "c_b": {
+      "single_mode_dev": "0.946601",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    },
+    "c_t": {
+      "single_mode_dev": "0.955377",
+      "p_single": null,
+      "k2_hit": false,
+      "p_k2": null,
+      "judged": "無鑑別力"
+    }
+  },
+  "R6": {
+    "R6_Q1": {
+      "claim": "每量子 ≥ 86 = 90 − γ₄₄",
+      "E_contents": {
+        "b": "74.90793892",
+        "t": "89.63915831"
+      },
+      "F_last_quantum": {
+        "b": "59.81587784",
+        "t": "65.10192312"
+      },
+      "verdict": "🔴 FAIL",
+      "reason": "E 下 b 每量子 = 74.9079 < 86；F 下末量子 59.8159 < 86 ⟹ 「≥86」係由 t 均值外推，無結構依據"
+    },
+    "R6_Q2": {
+      "claim": "兩餘額同源（同一算子作用 n_q 次）",
+      "per_quantum_deficit_b": "15.092061",
+      "per_quantum_deficit_t": "0.36084169",
+      "ratio": "41.824604",
+      "verdict": "🔴 FAIL",
+      "reason": "常數虧損律要求 h_b/2 = h_t/69；實測 15.0920611 vs 0.3608243（比 41.826）⟹ 非同源"
+    }
+  },
+  "identifiability": {
+    "verdict": "🔴 兩律（E／F）皆以零新常數精確重現 b、t ⟹ 質量值層不可識別",
+    "reason": "σ ∈ [0,1]^44 連續 ⟹ 任何分配皆可表；n_q 本身不可觀測"
+  },
+  "conclusion": {
+    "verdict": "🔴 跨量子組合律：no-go（不可識別）",
+    "status": "本 M 維持 partial；觸發器 = 未來獨立結構提供量子分配機制（如 M11 通道算子）",
+    "禁區": [
+      "D1 不得由 b/t 質量值反解量子分配",
+      "D2 不得以 γ₁ 格點命中當結構（間距 γ₁ = 0.0051 ⟹ 1e−3 容差下必然多重命中）"
+    ]
+  },
+  "check_summary": {
+    "total": 8,
+    "pass": 8
+  }
+}

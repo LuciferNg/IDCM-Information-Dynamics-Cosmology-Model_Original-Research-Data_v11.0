@@ -1,0 +1,642 @@
+{
+  "①a 每支 NN 腳本都在 README 列出": {
+    "status": "PASS",
+    "detail": "漏列 []"
+  },
+  "①b README 所列腳本都存在": {
+    "status": "PASS",
+    "detail": "幽靈 []"
+  },
+  "①c 腳本數 == LOGS 宣告數（不含審計）": {
+    "status": "PASS",
+    "detail": "實際 42 vs 宣告 42"
+  },
+  "② 每份 doc 至少綁一支 producer（或屬敘事類並附理由）": {
+    "status": "PASS",
+    "detail": "未綁且未申報 []"
+  },
+  "②b 敘事類白名單每項理由非空": {
+    "status": "PASS",
+    "detail": "空理由 []"
+  },
+  "③ 無 /tmp 寫入": {
+    "status": "PASS",
+    "detail": "命中 []"
+  },
+  "④a 每個 L1 腳本都有宣告 log": {
+    "status": "PASS",
+    "detail": "缺 []"
+  },
+  "④b 每個宣告 log 都存在": {
+    "status": "PASS",
+    "detail": "缺 []"
+  },
+  "④c 無孤兒 log": {
+    "status": "PASS",
+    "detail": "孤兒 []"
+  },
+  "⑤ 每份 doc 有 claim 或被明示豁免": {
+    "status": "PASS",
+    "detail": "未覆蓋 []"
+  },
+  "⑤b claim 份數 + 豁免份數 == 磁碟 doc 份數": {
+    "status": "PASS",
+    "detail": "35 + 7 = 42 vs 42"
+  },
+  "⑤c 每項豁免附非空理由": {
+    "status": "PASS",
+    "detail": "豁免 7 條 vs 名單 7；空理由 []"
+  },
+  "⑥a run_chain.sh 存在": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑥b 含 BLAS 線程鎖": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.01_reproduction_gate rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.01_reproduction_gate 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.01_reproduction_gate ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.02_q1_station_gauge rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.02_q1_station_gauge 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.02_q1_station_gauge ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.03_q2a_label_provenance rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.03_q2a_label_provenance 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.03_q2a_label_provenance ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.04_q2b_permutation_uniquen rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.04_q2b_permutation_uniquen 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.04_q2b_permutation_uniquen ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.05_q3_delta_u_sign rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.05_q3_delta_u_sign 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.05_q3_delta_u_sign ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.06_q4_third_slot rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.06_q4_third_slot 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.06_q4_third_slot ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.07_m13_incoming_reply rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.07_m13_incoming_reply 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.07_m13_incoming_reply ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.08_classification_partitio rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.08_classification_partitio 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.08_classification_partitio ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.09_pair_galois_orbits rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.09_pair_galois_orbits 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.09_pair_galois_orbits ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.10_symmetry_group_irreps rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.10_symmetry_group_irreps 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.10_symmetry_group_irreps ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.11_pair_physical_classific rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.11_pair_physical_classific 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.11_pair_physical_classific ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.12_delta_support rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.12_delta_support 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.12_delta_support ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.13_channel_fate_classifica rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.13_channel_fate_classifica 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.13_channel_fate_classifica ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.14_three_wave_resonance rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.14_three_wave_resonance 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.14_three_wave_resonance ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.15_general_resonance_law rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.15_general_resonance_law 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.15_general_resonance_law ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.16_convention_and_three_tr rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.16_convention_and_three_tr 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.16_convention_and_three_tr ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.17_chi3_charge_coefficient rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.17_chi3_charge_coefficient 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.17_chi3_charge_coefficient ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.18_triples_vs_tpipe rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.18_triples_vs_tpipe 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.18_triples_vs_tpipe ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.19_four_wave_and_mod3 rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.19_four_wave_and_mod3 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.19_four_wave_and_mod3 ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.20_single_label_theorem rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.20_single_label_theorem 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.20_single_label_theorem ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.21_odd_even_phase_gap rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.21_odd_even_phase_gap 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.21_odd_even_phase_gap ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.22_budget_defect_and_dyadi rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.22_budget_defect_and_dyadi 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.22_budget_defect_and_dyadi ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.24_charge_kernel_and_compl rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.24_charge_kernel_and_compl 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.24_charge_kernel_and_compl ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.25_invariant_lattice rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.25_invariant_lattice 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.25_invariant_lattice ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.26_odd_sector_and_partitio rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.26_odd_sector_and_partitio 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.26_odd_sector_and_partitio ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.27_fourwave_88_and_duality rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.27_fourwave_88_and_duality 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.27_fourwave_88_and_duality ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.28_sublattice_divisibility rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.28_sublattice_divisibility 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.28_sublattice_divisibility ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.29_qsqrt2_sector_and_field rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.29_qsqrt2_sector_and_field 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.29_qsqrt2_sector_and_field ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.30_ladder_ap_vs_gp rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.30_ladder_ap_vs_gp 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.30_ladder_ap_vs_gp ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.31_general_ap_gp_criterion rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.31_general_ap_gp_criterion 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.31_general_ap_gp_criterion ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.32_ap_classification rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.32_ap_classification 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.32_ap_classification ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.33_gp_classification rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.33_gp_classification 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.33_gp_classification ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.34_phi_ladder_identity rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.34_phi_ladder_identity 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.34_phi_ladder_identity ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.35_residue_five_items rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.35_residue_five_items 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.35_residue_five_items ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.36_parity_and_delta_theore rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.36_parity_and_delta_theore 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.36_parity_and_delta_theore ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.37_reverse_coverage rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.37_reverse_coverage 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.37_reverse_coverage ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.38_q1_m2_m3 rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.38_q1_m2_m3 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.38_q1_m2_m3 ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.39_k3_closed_form_proof rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.39_k3_closed_form_proof 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.39_k3_closed_form_proof ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.40_fourwave_overlap_theore rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.40_fourwave_overlap_theore 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.40_fourwave_overlap_theore ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.41_energy_vs_selection rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.41_energy_vs_selection 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.41_energy_vs_selection ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.42_cross_section_machine rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.42_cross_section_machine 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.42_cross_section_machine ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.43_second_order_selfenergy rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.43_second_order_selfenergy 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.43_second_order_selfenergy ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑧.L2 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑧.L2 ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑧.L2 FAIL 數 = 0": {
+    "status": "PASS",
+    "detail": "FAIL 0"
+  },
+  "⑧.L3 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑧.L3 ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑧.L3 FAIL 數 = 0": {
+    "status": "PASS",
+    "detail": "FAIL 0"
+  },
+  "⑨a docs 實際數 == README 檔表所列": {
+    "status": "PASS",
+    "detail": "實際 42 vs README 42"
+  },
+  "⑨b docs 每份都在 README 檔表": {
+    "status": "PASS",
+    "detail": "漏 []"
+  },
+  "⑨c scripts 實際數 == README 所列": {
+    "status": "PASS",
+    "detail": "實際 42 vs README 42"
+  },
+  "⑩a 四件套齊存": {
+    "status": "PASS",
+    "detail": "['01_problem_record.md', 'README.md', 'SESSION_START.md', 'final_result.md']"
+  },
+  "⑩b final_result 與 register 一致（partial, 非 negative-only）": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑪a markdown 圍欄偶數": {
+    "status": "PASS",
+    "detail": "奇數 []"
+  },
+  "⑪b 無 U+FFFD": {
+    "status": "PASS",
+    "detail": "含 []"
+  },
+  "⑪c 備份存在": {
+    "status": "PASS",
+    "detail": "5 個"
+  },
+  "⑫a scripts/37 log 存在": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑫b 未追溯 = 0": {
+    "status": "PASS",
+    "detail": "值 0"
+  },
+  "⑫c 工具自身輸出已排除（防自我餵養）": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑫d ALLOW 每項附理由": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "_summary": {
+    "checks": 158,
+    "fail": 0,
+    "warn": 0,
+    "n_docs": 42,
+    "n_scripts": 42,
+    "n_logs": 45
+  }
+}

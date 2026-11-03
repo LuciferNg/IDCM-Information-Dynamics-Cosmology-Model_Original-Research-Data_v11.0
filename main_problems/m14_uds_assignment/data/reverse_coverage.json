@@ -1,0 +1,197 @@
+{
+ "pool": 843,
+ "tokens": 191,
+ "untraced": [],
+ "allowed": [
+  [
+   "09_correction_object_type.md",
+   "0.4603"
+  ],
+  [
+   "09_correction_object_type.md",
+   "1.1486"
+  ],
+  [
+   "22_audit_report.md",
+   "0.4603"
+  ],
+  [
+   "22_audit_report.md",
+   "+0.63645"
+  ],
+  [
+   "22_audit_report.md",
+   "1.1486"
+  ]
+ ],
+ "per_doc": {
+  "01_reproduction_gate.md": {
+   "tokens": 30,
+   "untraced": []
+  },
+  "02_q1_station_gauge.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "03_q2a_label_provenance.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "04_q2b_permutation_uniqueness.md": {
+   "tokens": 12,
+   "untraced": []
+  },
+  "05_q3_delta_u_sign.md": {
+   "tokens": 20,
+   "untraced": []
+  },
+  "06_q4_third_slot.md": {
+   "tokens": 1,
+   "untraced": []
+  },
+  "07_verdicts_and_handoffs.md": {
+   "tokens": 4,
+   "untraced": []
+  },
+  "08_incoming_m13_triage.md": {
+   "tokens": 11,
+   "untraced": []
+  },
+  "09_correction_object_type.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "10_classification_first_step.md": {
+   "tokens": 5,
+   "untraced": []
+  },
+  "11_pair_delta_classification.md": {
+   "tokens": 5,
+   "untraced": []
+  },
+  "12_three_wave_resonance.md": {
+   "tokens": 1,
+   "untraced": []
+  },
+  "13_channel_fate_correction.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "14_universal_resonance_law.md": {
+   "tokens": 2,
+   "untraced": []
+  },
+  "15_convention_gate_three_triples.md": {
+   "tokens": 2,
+   "untraced": []
+  },
+  "16_chi3_charge_nogo.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "17_tpipe_filter_and_phi_ladder.md": {
+   "tokens": 11,
+   "untraced": []
+  },
+  "18_four_wave_mod3_reduction.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "19_single_label_theorem.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "20_odd_even_phase_gap.md": {
+   "tokens": 4,
+   "untraced": []
+  },
+  "21_budget_defect_dyadic_depth.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "22_audit_report.md": {
+   "tokens": 16,
+   "untraced": []
+  },
+  "23_green_kernel_and_complement.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "24_invariant_lattice.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "25_odd_sector_and_separability.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "26_fourwave_88_and_duality.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "27_sublattice_divisibility.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "28_quadratic_field_criterion.md": {
+   "tokens": 2,
+   "untraced": []
+  },
+  "29_additive_vs_multiplicative.md": {
+   "tokens": 8,
+   "untraced": []
+  },
+  "30_ap_gp_general_criterion.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "31_ap_classification.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "32_gp_classification.md": {
+   "tokens": 2,
+   "untraced": []
+  },
+  "33_phi_ladder_identity.md": {
+   "tokens": 6,
+   "untraced": []
+  },
+  "34_residue_five_items.md": {
+   "tokens": 8,
+   "untraced": []
+  },
+  "35_parity_and_delta_theorems.md": {
+   "tokens": 1,
+   "untraced": []
+  },
+  "36_q1_m2_m3.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "37_k3_closed_form_theorem.md": {
+   "tokens": 2,
+   "untraced": []
+  },
+  "38_code_namespace.md": {
+   "tokens": 0,
+   "untraced": []
+  },
+  "39_fourwave_overlap_closed_form.md": {
+   "tokens": 3,
+   "untraced": []
+  },
+  "40_energy_vs_selection.md": {
+   "tokens": 1,
+   "untraced": []
+  },
+  "41_dynamics_machine.md": {
+   "tokens": 5,
+   "untraced": []
+  },
+  "42_second_order_selfenergy.md": {
+   "tokens": 14,
+   "untraced": []
+  }
+ }
+}

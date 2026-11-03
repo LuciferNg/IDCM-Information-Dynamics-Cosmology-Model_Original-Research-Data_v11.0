@@ -1,0 +1,217 @@
+
+==============================================================================
+§0 讀 L2（期望值唯一來源）
+==============================================================================
+[PASS] E1 L2 有 _derived 且非空  |  209 keys
+
+==============================================================================
+§1 逐 claim 交叉核（唯讀）
+==============================================================================
+[PASS] C.01_reproduction_ga.A₂⊕1 = 44  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.01_reproduction_ga.A₂ 2×2 塊 = 87  |  L2 87 ↔ 文檔 87（rel 0.0e+00）
+[PASS] C.02_q1_station_gaug.44/112  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.02_q1_station_gaug.87/112  |  L2 87 ↔ 文檔 87（rel 0.0e+00）
+[PASS] C.05_q3_delta_u_sign.|δ_u|/σ = 0.789  |  L2 0.788578 ↔ 文檔 0.789（rel 5.4e-04）
+[PASS] C.05_q3_delta_u_sign.ρ_u z = 0.771  |  L2 0.770857 ↔ 文檔 0.771（rel 1.9e-04）
+[PASS] C.06_q4_third_slot.m.44 個 (2,1) 塊  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.06_q4_third_slot.m.44 個 s 退耦  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.10_classification_.946 價對  |  L2 946 ↔ 文檔 946（rel 0.0e+00）
+[PASS] C.10_classification_.|Aut(C_88)| = 176  |  L2 176 ↔ 文檔 176（rel 0.0e+00）
+[PASS] C.10_classification_.Σd² = 176  |  L2 176 ↔ 文檔 176（rel 0.0e+00）
+[PASS] C.11_pair_delta_clas.|Δ| 43 類  |  L2 43 ↔ 文檔 43（rel 0.0e+00）
+[PASS] C.11_pair_delta_clas.真群軌道 22（更正後 §九）  |  L2 22 ↔ 文檔 22（rel 0.0e+00）
+[PASS] C.12_three_wave_reso.sum 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.12_three_wave_reso.beat 43  |  L2 43 ↔ 文檔 43（rel 0.0e+00）
+[PASS] C.12_three_wave_reso.活價對 64  |  L2 64 ↔ 文檔 64（rel 0.0e+00）
+[PASS] C.14_universal_reson.N=44 → 64  |  L2 64 ↔ 文檔 64（rel 0.0e+00）
+[PASS] C.14_universal_reson.N=88 → 130  |  L2 130 ↔ 文檔 130（rel 0.0e+00）
+[PASS] C.14_universal_reson.N=176 → 262  |  L2 262 ↔ 文檔 262（rel 0.0e+00）
+[PASS] C.15_convention_gate.恰 3 個三元組  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.16_chi3_charge_nog.C(44,3) = 13,244  |  L2 13244 ↔ 文檔 13244（rel 0.0e+00）
+[PASS] C.16_chi3_charge_nog.χ³ 非零 6,622  |  L2 6622 ↔ 文檔 6622（rel 0.0e+00）
+[PASS] C.17_tpipe_filter_an.n* = 27  |  L2 27 ↔ 文檔 27（rel 0.0e+00）
+[PASS] C.17_tpipe_filter_an.A_9 = φ⁻¹ = 0.618034  |  L2 0.618034 ↔ 文檔 0.618034（rel 1.7e-13）
+[PASS] C.17_tpipe_filter_an.γ 和 = 8  |  L2 8 ↔ 文檔 8（rel 0.0e+00）
+[PASS] C.17_tpipe_filter_an.γ18+γ36 = 5  |  L2 5 ↔ 文檔 5（rel 0.0e+00）
+[PASS] C.18_four_wave_mod3_.913 等值類  |  L2 913 ↔ 文檔 913（rel 0.0e+00）
+[PASS] C.18_four_wave_mod3_.12 雙元類  |  L2 12 ↔ 文檔 12（rel 0.0e+00）
+[PASS] C.18_four_wave_mod3_.243 四波共振  |  L2 243 ↔ 文檔 243（rel 0.0e+00）
+[PASS] C.18_four_wave_mod3_.22 類  |  L2 22 ↔ 文檔 22（rel 0.0e+00）
+[PASS] C.18_four_wave_mod3_.14 模子晶格  |  L2 14 ↔ 文檔 14（rel 0.0e+00）
+[PASS] C.19_single_label_th.Σγ(/88) = 90  |  L2 90 ↔ 文檔 90（rel 0.0e+00）
+[PASS] C.19_single_label_th.Σγ(/90) = 88  |  L2 88 ↔ 文檔 88（rel 0.0e+00）
+[PASS] C.19_single_label_th.det V = 2.188e41  |  L2 2.18838e+41 ↔ 文檔 2.188e+41（rel 1.7e-04）
+[PASS] C.20_odd_even_phase_.3960  |  L2 3960 ↔ 文檔 3960（rel 0.0e+00）
+[PASS] C.20_odd_even_phase_.44/44 保宇稱  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.20_odd_even_phase_.0/44 flip 宇稱  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.20_odd_even_phase_.a+b=44 → 21 對  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.20_odd_even_phase_.a+b=45 → 22 對  |  L2 22 ↔ 文檔 22（rel 0.0e+00）
+[PASS] C.20_odd_even_phase_.最小間隙 2.2387e−4  |  L2 0.000223871 ↔ 文檔 0.000223871（rel 3.8e-09）
+[PASS] C.23_green_kernel_an.1936 點  |  L2 1936 ↔ 文檔 1936（rel 0.0e+00）
+[PASS] C.23_green_kernel_an.G(9,15) = 6  |  L2 6 ↔ 文檔 6（rel 0.0e+00）
+[PASS] C.23_green_kernel_an.G(18,18) = 10.8  |  L2 10.8 ↔ 文檔 10.8（rel 0.0e+00）
+[PASS] C.23_green_kernel_an.G(18,36) = 3.6  |  L2 3.6 ↔ 文檔 3.6（rel 0.0e+00）
+[PASS] C.23_green_kernel_an.sum-4 解恰 1  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.23_green_kernel_an.Φ 保 parity 0/44  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.24_invariant_latti.池 10 個  |  L2 10 ↔ 文檔 10（rel 0.0e+00）
+[PASS] C.24_invariant_latti.1023 個子集  |  L2 1023 ↔ 文檔 1023（rel 0.0e+00）
+[PASS] C.24_invariant_latti.恰 3 類分割 5 個  |  L2 5 ↔ 文檔 5（rel 0.0e+00）
+[PASS] C.24_invariant_latti.ℤ_44 軌道 22  |  L2 22 ↔ 文檔 22（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_.21 組  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_.奇模 11  |  L2 11 ↔ 文檔 11（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_.偶模 10  |  L2 10 ↔ 文檔 10（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_./90 3 組  |  L2 2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_.三分離者 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./88 926 類  |  L2 926 ↔ 文檔 926（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./90 913 類  |  L2 913 ↔ 文檔 913（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./88 共振 210  |  L2 210 ↔ 文檔 210（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./90 共振 243  |  L2 243 ↔ 文檔 243（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./88 雙元類 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and./90 雙元類 12  |  L2 12 ↔ 文檔 12（rel 0.0e+00）
+[PASS] C.26_fourwave_88_and.固定線 21 對  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.27_sublattice_divi./88 六個  |  L2 6 ↔ 文檔 6（rel 0.0e+00）
+[PASS] C.27_sublattice_divi./90 九個  |  L2 9 ↔ 文檔 9（rel 0.0e+00）
+[PASS] C.27_sublattice_divi.3∤88（0）  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.27_sublattice_divi./30 半譜 28  |  L2 28 ↔ 文檔 28（rel 0.0e+00）
+[PASS] C.28_quadratic_field.4 模  |  L2 4 ↔ 文檔 4（rel 0.0e+00）
+[PASS] C.28_quadratic_field.三波 1  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.28_quadratic_field.四波 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.28_quadratic_field.disc 8  |  L2 8 ↔ 文檔 8（rel 0.0e+00）
+[PASS] C.28_quadratic_field.disc 5  |  L2 5 ↔ 文檔 5（rel 0.0e+00）
+[PASS] C.28_quadratic_field.γ1 = 0.5857864376269  |  L2 0.585786 ↔ 文檔 0.585786（rel 8.5e-15）
+[PASS] C.29_additive_vs_mul./88 GP 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.29_additive_vs_mul./88 AP 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.29_additive_vs_mul./90 GP 3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.29_additive_vs_mul./90 AP 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.29_additive_vs_mul.中項 22 全核 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.4|88  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.30|90  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.AP = 88/4−1 = 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.GP(88) = 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.GP(90) = 3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.30_ap_gp_general_c.12∤88 (0)  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.31_ap_classificati.AP(12)=3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.31_ap_classificati.AP(24)=6  |  L2 6 ↔ 文檔 6（rel 0.0e+00）
+[PASS] C.31_ap_classificati.AP(120)=30  |  L2 30 ↔ 文檔 30（rel 0.0e+00）
+[PASS] C.31_ap_classificati.N=88 → AP 21（族A）  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.31_ap_classificati.N=90 → 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.32_gp_classificati.Q1 閉式 (7−3√5)/2  |  L2 0.145898 ↔ 文檔 0.145898（rel 1.1e-13）
+[PASS] C.32_gp_classificati.N=88 → GP 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.32_gp_classificati.N=90 → GP 3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.33_phi_ladder_iden.A 比 φ = 1.6180339887  |  L2 1.61803 ↔ 文檔 1.61803（rel 6.5e-14）
+[PASS] C.33_phi_ladder_iden./88 γ-GP 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.33_phi_ladder_iden./90 γ-GP 3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.34_residue_five_it.γ18+γ30+γ36 = 8  |  L2 8 ↔ 文檔 8（rel 0.0e+00）
+[PASS] C.34_residue_five_it.3960 = lcm(88,90)  |  L2 3960 ↔ 文檔 3960（rel 0.0e+00）
+[PASS] C.34_residue_five_it.ℚ(√5) 值集 6 模  |  L2 6 ↔ 文檔 6（rel 0.0e+00）
+[PASS] C.36_q1_m2_m3.md.ring 之 δ = +2  |  L2 2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.36_q1_m2_m3.md.k 和 14 = 3+5+6  |  L2 14 ↔ 文檔 14（rel 0.0e+00）
+[PASS] C.36_q1_m2_m3.md.共振 3 個  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.37_k3_closed_form_.k_i=0 之偶和三元組 2838  |  L2 2838 ↔ 文檔 2838（rel 0.0e+00）
+[PASS] C.37_k3_closed_form_.k_i=0 之奇和 = 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.37_k3_closed_form_.最小 |χ³| 於 (1,1,43)  |  L2 -1.60974e-06 ↔ 文檔 1.60974e-06（rel 1.3e-16）
+[PASS] C.39_fourwave_overla.χ⁴(1,2,3,4)=1/90  |  L2 0.0111111 ↔ 文檔 0.0111111（rel 1.0e-12）
+[PASS] C.39_fourwave_overla.χ⁴(1,1,1,1)=3/90  |  L2 0.0333333 ↔ 文檔 0.0333333（rel 1.0e-12）
+[PASS] C.39_fourwave_overla.非零比例 18.94%  |  L2 18.94 ↔ 文檔 18.94（rel 0.0e+00）
+[PASS] C.40_energy_vs_selec.能量共振 1,233（v2）  |  L2 1233 ↔ 文檔 1233（rel 0.0e+00）
+[PASS] C.40_energy_vs_selec.和奇 12（v2）  |  L2 12 ↔ 文檔 12（rel 0.0e+00）
+[PASS] C.41_dynamics_machin.三波衰變 3 條  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.41_dynamics_machin.四波衰變 1 條  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.41_dynamics_machin.2→2 共振 243 對  |  L2 243 ↔ 文檔 243（rel 0.0e+00）
+[PASS] C.41_dynamics_machin.不透明度每模 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.41_dynamics_machin.和=4 三波 1 組  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.40_energy_vs_selec.和偶 1,221  |  L2 1221 ↔ 文檔 1221（rel 0.0e+00）
+[PASS] C.40_energy_vs_selec.off-shell 13,874  |  L2 13874 ↔ 文檔 13874（rel 0.0e+00）
+[PASS] C.42_second_order_se.運動學極點 1 個  |  L2 1 ↔ 文檔 1（rel 0.0e+00）
+[PASS] C.42_second_order_se.真極點 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.42_second_order_se.相異 44  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
+[PASS] C.42_second_order_se.|g₄| < 0.070265395858052  |  L2 0.0702654 ↔ 文檔 0.0702654（rel 3.4e-15）
+[PASS] C.36_q1_m2_m3.md./90 譜內最大 3.99512810052  |  L2 3.99513 ↔ 文檔 3.99513（rel 8.8e-14）
+[PASS] C.04_q2b_permutation.216 獨立重跑（6 規則 × 36 指派）  |  L2 216 ↔ 文檔 216（rel 0.0e+00）
+[PASS] C.35_parity_and_delt.偶和三元組 6622  |  L2 6622 ↔ 文檔 6622（rel 0.0e+00）
+[PASS] C.35_parity_and_delt.δ 三分律違例 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.35_parity_and_delt.反射對 1936  |  L2 1936 ↔ 文檔 1936（rel 0.0e+00）
+[PASS] C.21_budget_defect_d.δ(/88) = +2  |  L2 2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.21_budget_defect_d.δ(/90) = −2  |  L2 -2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.21_budget_defect_d.3 層  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+[PASS] C.21_budget_defect_d.2 層  |  L2 2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.21_budget_defect_d.v₂(88) = 3  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
+
+==============================================================================
+§2 逐檔命中率
+==============================================================================
+    docs/01_reproduction_gate.md                       2/2
+[PASS] F.docs/01_reproduction_gate.md 全命中（2/2）
+    docs/02_q1_station_gauge.md                        2/2
+[PASS] F.docs/02_q1_station_gauge.md 全命中（2/2）
+    docs/04_q2b_permutation_uniqueness.md              1/1
+[PASS] F.docs/04_q2b_permutation_uniqueness.md 全命中（1/1）
+    docs/05_q3_delta_u_sign.md                         2/2
+[PASS] F.docs/05_q3_delta_u_sign.md 全命中（2/2）
+    docs/06_q4_third_slot.md                           2/2
+[PASS] F.docs/06_q4_third_slot.md 全命中（2/2）
+    docs/10_classification_first_step.md               3/3
+[PASS] F.docs/10_classification_first_step.md 全命中（3/3）
+    docs/11_pair_delta_classification.md               2/2
+[PASS] F.docs/11_pair_delta_classification.md 全命中（2/2）
+    docs/12_three_wave_resonance.md                    3/3
+[PASS] F.docs/12_three_wave_resonance.md 全命中（3/3）
+    docs/14_universal_resonance_law.md                 3/3
+[PASS] F.docs/14_universal_resonance_law.md 全命中（3/3）
+    docs/15_convention_gate_three_triples.md           1/1
+[PASS] F.docs/15_convention_gate_three_triples.md 全命中（1/1）
+    docs/16_chi3_charge_nogo.md                        2/2
+[PASS] F.docs/16_chi3_charge_nogo.md 全命中（2/2）
+    docs/17_tpipe_filter_and_phi_ladder.md             4/4
+[PASS] F.docs/17_tpipe_filter_and_phi_ladder.md 全命中（4/4）
+    docs/18_four_wave_mod3_reduction.md                5/5
+[PASS] F.docs/18_four_wave_mod3_reduction.md 全命中（5/5）
+    docs/19_single_label_theorem.md                    3/3
+[PASS] F.docs/19_single_label_theorem.md 全命中（3/3）
+    docs/20_odd_even_phase_gap.md                      6/6
+[PASS] F.docs/20_odd_even_phase_gap.md 全命中（6/6）
+    docs/21_budget_defect_dyadic_depth.md              5/5
+[PASS] F.docs/21_budget_defect_dyadic_depth.md 全命中（5/5）
+    docs/23_green_kernel_and_complement.md             6/6
+[PASS] F.docs/23_green_kernel_and_complement.md 全命中（6/6）
+    docs/24_invariant_lattice.md                       4/4
+[PASS] F.docs/24_invariant_lattice.md 全命中（4/4）
+    docs/25_odd_sector_and_separability.md             5/5
+[PASS] F.docs/25_odd_sector_and_separability.md 全命中（5/5）
+    docs/26_fourwave_88_and_duality.md                 7/7
+[PASS] F.docs/26_fourwave_88_and_duality.md 全命中（7/7）
+    docs/27_sublattice_divisibility.md                 4/4
+[PASS] F.docs/27_sublattice_divisibility.md 全命中（4/4）
+    docs/28_quadratic_field_criterion.md               6/6
+[PASS] F.docs/28_quadratic_field_criterion.md 全命中（6/6）
+    docs/29_additive_vs_multiplicative.md              5/5
+[PASS] F.docs/29_additive_vs_multiplicative.md 全命中（5/5）
+    docs/30_ap_gp_general_criterion.md                 6/6
+[PASS] F.docs/30_ap_gp_general_criterion.md 全命中（6/6）
+    docs/31_ap_classification.md                       5/5
+[PASS] F.docs/31_ap_classification.md 全命中（5/5）
+    docs/32_gp_classification.md                       3/3
+[PASS] F.docs/32_gp_classification.md 全命中（3/3）
+    docs/33_phi_ladder_identity.md                     3/3
+[PASS] F.docs/33_phi_ladder_identity.md 全命中（3/3）
+    docs/34_residue_five_items.md                      3/3
+[PASS] F.docs/34_residue_five_items.md 全命中（3/3）
+    docs/35_parity_and_delta_theorems.md               3/3
+[PASS] F.docs/35_parity_and_delta_theorems.md 全命中（3/3）
+    docs/36_q1_m2_m3.md                                4/4
+[PASS] F.docs/36_q1_m2_m3.md 全命中（4/4）
+    docs/37_k3_closed_form_theorem.md                  3/3
+[PASS] F.docs/37_k3_closed_form_theorem.md 全命中（3/3）
+    docs/39_fourwave_overlap_closed_form.md            3/3
+[PASS] F.docs/39_fourwave_overlap_closed_form.md 全命中（3/3）
+    docs/40_energy_vs_selection.md                     4/4
+[PASS] F.docs/40_energy_vs_selection.md 全命中（4/4）
+    docs/41_dynamics_machine.md                        5/5
+[PASS] F.docs/41_dynamics_machine.md 全命中（5/5）
+    docs/42_second_order_selfenergy.md                 4/4
+[PASS] F.docs/42_second_order_selfenergy.md 全命中（4/4）
+
+==============================================================================
+§3 匯總
+==============================================================================
+檢查項 = 165，FAIL = 0

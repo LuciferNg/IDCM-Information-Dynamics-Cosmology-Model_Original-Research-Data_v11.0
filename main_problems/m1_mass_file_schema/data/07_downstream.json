@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "script": "07_downstream_propagation",
+    "M0_MeV": "27.9009145112",
+    "eps": "0.001"
+  },
+  "checks": [
+    {
+      "name": "P1_ratio_837",
+      "pass": true
+    },
+    {
+      "name": "P2_m_p_nq1",
+      "pass": true
+    },
+    {
+      "name": "P2_vsm_nq99",
+      "pass": true
+    },
+    {
+      "name": "P3_k1_monotone",
+      "pass": true
+    },
+    {
+      "name": "P3_k2_monotone",
+      "pass": true
+    },
+    {
+      "name": "P3_k3_monotone",
+      "pass": true
+    },
+    {
+      "name": "P3_k4_monotone",
+      "pass": true
+    },
+    {
+      "name": "P3_k5_monotone",
+      "pass": true
+    },
+    {
+      "name": "P3_uniform_k4_17040",
+      "pass": true
+    },
+    {
+      "name": "P4_gate_is_k2",
+      "pass": true
+    },
+    {
+      "name": "P5_identity_b",
+      "pass": true
+    },
+    {
+      "name": "P5_identity_t",
+      "pass": true
+    },
+    {
+      "name": "P6_multiple_hits",
+      "pass": true
+    }
+  ],
+  "P1_M0": {
+    "M0_v11_MeV": "27.9009145112",
+    "M0_v10_O239_MeV": "0.033331",
+    "ratio": "837.0860314",
+    "ratio_is_27x31": true,
+    "verdict": "非矛盾：O239 之 0.033331 係 v10.0 公式 m=M₀|Δm|^φ² 之 1 參數 fit（標度被式吸收），v11 錨值 27.9009145112 MeV 單義；且 M₀ 絕對值屬單位制 artifact（O38），真缺口係無量綱比"
+  },
+  "P2_M6_nq": {
+    "m_p": {
+      "units": "33.62872165",
+      "n_q_min": 1
+    },
+    "v_SM": {
+      "units": "8824.786008",
+      "n_q_min": 99
+    },
+    "M_Pl": {
+      "units": "4.37581e+20",
+      "n_q_min": 4862007099802766857
+    },
+    "M_Pl_MeV": "1.220890e22 (CODATA 2018)",
+    "M_Pl_alt_codata2014": "4.3758781e+20",
+    "verdict": "數值全部復現（1／99／4.86e18）；但 n_q 只係下限 ⟹ M6 §3 之「n_q」欄須改「n_q ≥」；T3′ 結論不變且更強（加法量子數 ≥ 4.86e18 ≫ 乘法 10.56 層）"
+  },
+  "P3_coverage": {
+    "1": {
+      "uniform_t": 0.0019677874061140234,
+      "loguniform_pool": 0.008822264489571288,
+      "loguniform_M4conv": 0.006172394606188046,
+      "n_sums_le_k": 45
+    },
+    "2": {
+      "uniform_t": 0.05535254589365306,
+      "loguniform_pool": 0.13805335098738056,
+      "loguniform_M4conv": 0.09764716803323255,
+      "n_sums_le_k": 991
+    },
+    "3": {
+      "uniform_t": 0.12268991976099376,
+      "loguniform_pool": 0.28398032975973325,
+      "loguniform_M4conv": 0.20093994132675727,
+      "n_sums_le_k": 14235
+    },
+    "4": {
+      "uniform_t": 0.17039633695571774,
+      "loguniform_pool": 0.351550142844293,
+      "loguniform_M4conv": 0.24876847476961916,
+      "n_sums_le_k": 149986
+    },
+    "5": {
+      "uniform_t": 0.21482068499930346,
+      "loguniform_pool": 0.38483349877330025,
+      "loguniform_M4conv": 0.27232772452141335,
+      "n_sums_le_k": 1235994
+    }
+  },
+  "P3_verdict": "coverage 隨目標測度變動（uniform 17.040% vs log-uniform 池內 ~5–6% vs M4 慣例 ~2%）⟹ M1 帳本池、M4 比值池、M10 F1 池三者數字不可互換；引用必須連慣例一併報",
+  "P4_support_gate": {
+    "max_k_with_coverage_le_0.1": 2,
+    "rule": "「某質量 = 某 mode 集」claim 需 coverage(k,ε=1e−3) ≤ 0.1 且 ρ=1；在 ε=1e−3 下僅 k ≤ 2 合格（k=3 已 12.3%，k=4 17.0%）"
+  },
+  "P5_M2": {
+    "formula": "m/M₀ + Σ_q E_sync^(q) = n_q·90",
+    "b": {
+      "n_q": 2,
+      "identity_check": "0.0"
+    },
+    "t": {
+      "n_q": 69,
+      "identity_check": "0.0"
+    },
+    "verdict": "單量子式 m/M₀+E_sync=90（M2 docs/01 §3）只對 n_q=1 成立；多量子須逐量子計 E_sync，否則 b、t 之「E_sync」將成 2×90−m、69×90−m 之偽量"
+  },
+  "P6_lattice": {
+    "target": "30.1841221612",
+    "n_hits": 12,
+    "examples": [
+      5918,
+      5919,
+      5920,
+      5921,
+      5922,
+      5923,
+      5924,
+      5925,
+      5926,
+      5927
+    ],
+    "spacing_gamma1": "0.0050957708",
+    "tolerance": "0.0301841",
+    "verdict": "容差 0.03018 內 γ₁ 倍數命中 12 個 ⟹ 格點命中必然多重，不可作結構證據（D2）"
+  },
+  "summary": {
+    "total": 13,
+    "pass": 13,
+    "fail": 0
+  }
+}

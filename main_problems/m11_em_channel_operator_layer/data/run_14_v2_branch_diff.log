@@ -1,0 +1,85 @@
+====================================================================================================
+M11 scripts/14 — v2 支全鏈重算（a₀ = 0.384184）與 v1 正典逐欄 diff
+====================================================================================================
+[0] 正典 sha 快照：34 個檔（json＋log）
+[1] 隔離副本：<tmpdir>/O（路徑隨機 ⟹ 不印，保雙跑 byte-identical）
+    單點改支：A0_FM 0.37742216816391858835 → 0.384184（其餘 0 改動）
+[2] 副本內跑 run_chain.sh --full …
+    exit=1  尾行=['✗ L3 FAIL']
+[3] 逐 JSON 遞歸 diff（v1 正典 vs v2 副本）
+
+  ##### 01_r1_criteria.json（20 欄變動）
+    C9.k0_MeV                                               3.815262244 →      3.748111708  Δrel=-1.7601%
+    C9.a0_fm                                               0.3774221682 →         0.384184  Δrel=+1.7916%
+    C9.hc_over_a0_MeV                                       522.8282731 →      513.6262322  Δrel=-1.7601%
+    C9.channels.n-p.t                                     -0.3320004836 →    -0.3379485482  Δrel=+1.7916%
+    C9.channels.n-p.k_req_over_k0                          0.4980007254 →     0.5069228223  Δrel=+1.7916%
+    C9.channels.K+-K0.t                                   -0.3601325183 →    -0.3665845917  Δrel=+1.7916%
+    C9.channels.pi+-pi0.t                                  0.5330144745 →     0.5425638718  Δrel=+1.7916%
+    C9.channels.pi+-pi0.k_req_over_k0                       1.066028949 →      1.085127744  Δrel=+1.7916%
+    C9.channels.S--S0.t                                    0.5889503411 →     0.5995018759  Δrel=+1.7916%
+    C9.channels.S--S0.k_req_over_k0                        0.8834255116 →     0.8992528139  Δrel=+1.7916%
+    C9.channels.S0-S+.t                                    0.1866188887 →     0.1899623212  Δrel=+1.7916%
+    C9.channels.S--S+.t                                    0.7755692298 →     0.7894641971  Δrel=+1.7916%
+    C9.channels.S--S+.k_req_over_k0                         2.326707689 →      2.368392591  Δrel=+1.7916%
+    C9.channels.Xi--Xi0.t                                   1.124431225 →      1.144576345  Δrel=+1.7916%
+    C9.channels.Xi--Xi0.k_req_over_k0                       1.686646838 →      1.716864518  Δrel=+1.7916%
+    C9.channels.D+-D0.t                                    0.5923577084 →     0.6029702891  Δrel=+1.7916%
+    C9.channels.D+-D0.k_req_over_k0                        0.8885365626 →     0.9044554337  Δrel=+1.7916%
+    C11.required.[0].[1]                                    1.066028949 →      1.085127744  Δrel=+1.7916%
+    C11.required.[1].[1]                                    2.326707689 →      2.368392591  Δrel=+1.7916%
+    C11.required.[2].[1]                                    1.686646838 →      1.716864518  Δrel=+1.7916%
+
+  ##### 04_r4_necessity.json（12 欄變動）
+    models.[0].verdicts.S0-S+.t                           -0.5570137581 →    -0.5669931225  Δrel=+1.7916%
+    models.[0].verdicts.S--S+.t                           -0.7116960637 →    -0.7244466902  Δrel=+1.7916%
+    models.[0].verdicts.D+-D0.t                           -0.1512749383 →    -0.1539851546  Δrel=+1.7916%
+    models.[1].verdicts.S0-S+.t                           -0.4294273226 →      -0.43712087  Δrel=+1.7916%
+    models.[1].verdicts.S--S+.t                           -0.4565231927 →    -0.4647021852  Δrel=+1.7916%
+    models.[1].verdicts.D+-D0.t                            -0.361335319 →    -0.3678089415  Δrel=+1.7916%
+    models.[2].verdicts.S0-S+.t                           -0.6673479454 →    -0.6793040385  Δrel=+1.7916%
+    models.[2].verdicts.S--S+.t                           -0.9323644384 →    -0.9490685223  Δrel=+1.7916%
+    models.[2].verdicts.D+-D0.t                            0.5076109547 →     0.5167052268  Δrel=+1.7916%
+    models.[3].verdicts.S0-S+.t                           -0.4232998669 →    -0.4308836358  Δrel=+1.7916%
+    models.[3].verdicts.S--S+.t                           -0.4442682813 →    -0.4522277168  Δrel=+1.7916%
+    k0                                                      3.815262244 →      3.748111708  Δrel=-1.7601%
+
+  ##### 05_r5_k0_identity.json（2 欄變動）
+    provenance.data01.a                                    0.3774221682 →         0.384184  Δrel=+1.7916%
+    provenance.data01.k0                                    3.815262244 →      3.748111708  Δrel=-1.7601%
+
+  ##### 06_r6b_kappa_sweep.json（2 欄變動）
+    k0_ref                                                  3.815262244 →      3.748111708  Δrel=-1.7601%
+    a0_ref                                                 0.3774221679 →     0.3841839998  Δrel=+1.7916%
+
+  ##### l2_independent_verify.json（5 欄變動）
+    _derived.hc_over_a0.float                               522.8282731 →      513.6262322  Δrel=-1.7601%
+    _derived.k0_from_a0.float                               3.815262242 →      3.748111705  Δrel=-1.7601%
+    _derived.G0_dM_D_hf.float                             0.01811495515 →    0.01668644495  Δrel=-7.8858%
+    _derived.G0_deficit_D.float                             141.3196985 →      153.4179394  Δrel=+8.5609%
+    _derived.T2_aeff_over_k0.float                           1.16615837 →      1.187051066  Δrel=+1.7916%
+
+  ##### l3_doc_crosscheck.json（6 欄變動）
+    C.01_r1_criteria_and.k₀ = αħc/a₀ = 3.815262.pass   True → False   ★判定變
+    C.10_g0_x_operator_v.δM(D) = 0.01811.pass          True → False   ★判定變
+    C.10_g0_x_operator_v.deficit = 141.3×.pass         True → False   ★判定變
+    _summary.fail                                                     0 →                5  Δrel=n/a
+    _summary.by_doc.docs/01_r1_criteria_and_target.md.[0]                6 →                5  Δrel=-16.6667%
+    _summary.by_doc.docs/10_g0_x_operator_verdict.md.[0]                2 →                0  Δrel=-100.0000%
+
+[4] P2 分類：物理量變動 Δrel 集合 = [-7.8858, -1.7601, 1.7916, 8.5609]
+    未歸類 = 無
+    P1 物理判定翻轉 = 0（[]）｜文檔字面綁定翻轉 = 3（[('l3_doc_crosscheck.json', 'C.01_r1_criteria_and.k₀ = αħc/a₀ = 3.815262.pass'), ('l3_doc_crosscheck.json', 'C.10_g0_x_operator_v.δM(D) = 0.01811.pass'), ('l3_doc_crosscheck.json', 'C.10_g0_x_operator_v.deficit = 141.3×.pass')]）
+
+[5] 副本內 L3／audit 狀態（文檔仍為 v1 字面 ⟹ 預期部分失配）
+    run_l3.log: 檢查項 = 42，FAIL = 5
+      [FAIL] C.01_r1_criteria_and.k₀ = αħc/a₀ = 3.815262  |  ✗ L2 3.74811，文檔最近 None
+      [FAIL] C.10_g0_x_operator_v.δM(D) = 0.01811  |  ✗ L2 0.0166864，文檔最近 None
+      [FAIL] C.10_g0_x_operator_v.deficit = 141.3×  |  ✗ L2 153.418，文檔最近 None
+      [FAIL] F.01_r1_criteria_and_target.md 全命中（5/6）
+      [FAIL] F.10_g0_x_operator_verdict.md 全命中（0/2）
+    run_11_audit_chain.log: 檢查項 = 24，FAIL = 0，WARN = 1
+
+[6] P3 正典零漂移：變動 0｜新增 0  ✓ 隔離有效
+
+[判] 物理判定翻轉 0 個（P1；文檔字面綁定 3 個）｜標度律 OK（P2）｜正典漂移 0（P3）⟹ ✅ 全部通過

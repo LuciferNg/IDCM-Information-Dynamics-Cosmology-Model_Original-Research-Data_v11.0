@@ -2,7 +2,7 @@
 
 ## 狀態: 🟡 partial — 首輪推導完成 (2026-10-24)
 
-互換律 `m/M₀ + E_sync = Σγ = 90`（零新常數）；P1✅ P2✅ P3🟡（上界✅/值🔴）P4🟡；絕對標度 🔴。59/59 checks PASS。詳見 `docs/01_exchange_law.md`。
+互換律 `m/M₀ + E_sync = Σγ = 90`（零新常數）；P1✅ P2✅ P3✅（能量量子精確／速率=對稱非過程＋界 p<1.955e-3）P4✅（c 結構位置／c²=N_O38 重寫）；絕對標度 ⚪ 外部錨。74/74 checks PASS。詳見 `docs/01_exchange_law.md`。
 
 ## 檔案
 
@@ -18,7 +18,11 @@
 | `scripts/05_beat_duality.py` | 振幅讀法互換律＋對偶 (6/6) | ✅ |
 | `scripts/06_rate_bound.py` | 速率上界＋值 no-go (5/5) | ✅ |
 | `scripts/07_phase_slip_link.py` | O7 相位滑移鏈接 (7/7) | ✅ |
-| `data/01-07_*.json` | 七腳本輸出 | ✅ |
+| `scripts/08_p4_c2_position.py` | c² 結構位置 (5/5) | ✅ |
+| `scripts/09_p3_frozen_split.py` | 破缺序參量＋p 界 (5/5) | ✅ |
+| `scripts/10_p_family_completeness.py` | 非可分族完備性審計 (5/5) | ✅ |
+| `docs/02_m7_handoff_adjudication.md` | M7 三封 handoff 裁定 | ✅ |
+| `data/01-10_*.json` | 十腳本輸出 | ✅ |
 
 ## 依賴
 
