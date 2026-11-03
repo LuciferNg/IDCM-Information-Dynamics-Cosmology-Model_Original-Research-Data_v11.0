@@ -1,0 +1,29 @@
+{
+ "currencies": {
+  "γ 單位／Σγ": {
+   "share": 0.00028281,
+   "z": -57.2
+  },
+  "γ 單位／Σγ_odd": {
+   "share": 0.00057847,
+   "z": -56.85
+  },
+  "√γ 單位／Σ√γ": {
+   "share": 0.0037544,
+   "z": -53.15
+  },
+  "混合 T⁰₀（½Σ√γ+⟨W⟩²）": {
+   "share": 0.00118913,
+   "z": -56.14
+  }
+ },
+ "share_range_pct": [
+  0.0283,
+  0.3754
+ ],
+ "nontrivial_chars": 3,
+ "capacity": "1/20",
+ "verdict": "P1 rejection currency-robust; capacity = 3/60 saturated by definition; overflow impossible",
+ "n_pass": 10,
+ "n_fail": 0
+}

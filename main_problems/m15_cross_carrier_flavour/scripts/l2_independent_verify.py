@@ -535,6 +535,15 @@ put("zpe_share_pct", round(100 * float(_zpe) / float(_T00), 6))
 put("z_P1_zero_point", round((float(_zpe) / float(_T00) - _Ob) / _Ob_s, 2))
 put("z_P2_capacity", round((3 / 60 - _Ob) / _Ob_s, 2))
 put("cap_over_zpe", round((3 / 60) / (float(_zpe) / float(_T00)), 4))
+# ── 8t. 容量飽和（docs/23）
+_vg = sum(4 * mp.sin(mp.pi * n / 88) ** 2 for n in (0, 1, 2))
+put("vis_share_gamma_over_Sig", round(float(_vg) / 90, 8))
+put("vis_share_gamma_over_odd", round(float(_vg) / 44, 8))
+_sq3 = sum(2 * mp.sin(mp.pi * n / 88) for n in (0, 1, 2))
+put("vis_share_sqrt_over_Sig", round(float(_sq3) / float(1 + mp.cot(mp.pi / 176)), 8))
+_shares = [float(_vg) / 90, float(_vg) / 44, float(_sq3) / float(1 + mp.cot(mp.pi / 176)),
+           float(_zpe) / float(_T00)]
+put("share_span", round(max(_shares) / min(_shares), 2))
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

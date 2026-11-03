@@ -332,6 +332,12 @@ check_num("22_capacity_vs_energy.md", "z(P1)", l2["z_P1_zero_point"], 5e-3)
 check_num("22_capacity_vs_energy.md", "z(P2)", l2["z_P2_capacity"], 5e-3)
 check_num("22_capacity_vs_energy.md", "容量/零點能", l2["cap_over_zpe"], 5e-5)
 
+say("")
+say("§13n  docs/23 — 容量飽和")
+check_num("23_capacity_saturation.md", "γ/Σ√γ 份額", 100 * l2["vis_share_sqrt_over_Sig"], 5e-4)
+check_num("23_capacity_saturation.md", "跨度", l2["share_span"], 5e-3)
+check_ctx("23_capacity_saturation.md", "非平凡 3", "非平凡數", l2["v4_nontrivial"], 2e-3, 8)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

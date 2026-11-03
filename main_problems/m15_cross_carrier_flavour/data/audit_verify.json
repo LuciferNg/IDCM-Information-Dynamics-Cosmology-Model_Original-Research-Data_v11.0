@@ -2,7 +2,7 @@
  "results": {
   "① 腳本集對稱（磁碟 ↔ 宣告；審計自身不入 L1）": {
    "status": "PASS",
-   "detail": "磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute', '16_zero_mode_arbitration', '17_minus_one_derivation', '18_q2_provenance_recheck', '19_handoff_m14_ids_and_z3', '20_r2_composite_mods_push', '21_upstream_identity_reconcile', '22_capacity_vs_energy']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute', '16_zero_mode_arbitration', '17_minus_one_derivation', '18_q2_provenance_recheck', '19_handoff_m14_ids_and_z3', '20_r2_composite_mods_push', '21_upstream_identity_reconcile', '22_capacity_vs_energy']；差集 set()"
+   "detail": "磁碟 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute', '16_zero_mode_arbitration', '17_minus_one_derivation', '18_q2_provenance_recheck', '19_handoff_m14_ids_and_z3', '20_r2_composite_mods_push', '21_upstream_identity_reconcile', '22_capacity_vs_energy', '23_capacity_saturation']；宣告 ['01_label_theorems', '02_a5_harmonic_multiplicity', '03_count_census', '04_adic_map_nogo', '05_cy3_generation_count', '07_h11_minus_M_candidate', '08_ngen_equals_B_minus_1', '09_tenc_c_downgrade_audit', '10_ngen_provenance_scan', '11_gate_count_candidate', '12_gate_budget_identity', '13_remaining_four', '14_residual_push', '15_forced_recompute', '16_zero_mode_arbitration', '17_minus_one_derivation', '18_q2_provenance_recheck', '19_handoff_m14_ids_and_z3', '20_r2_composite_mods_push', '21_upstream_identity_reconcile', '22_capacity_vs_energy', '23_capacity_saturation']；差集 set()"
   },
   "② docs ↔ producer 綁定": {
    "status": "PASS",
@@ -10,7 +10,7 @@
   },
   "⑤ inline 幽靈（每份 doc 皆須有 L3 claim 覆蓋）": {
    "status": "PASS",
-   "detail": "L3 覆蓋 21/21；未被覆蓋 []；宣告而磁碟無 []"
+   "detail": "L3 覆蓋 22/22；未被覆蓋 []；宣告而磁碟無 []"
   },
   "③ scripts/ 內禁 /tmp 寫入": {
    "status": "PASS",
@@ -34,7 +34,7 @@
   },
   "⑨ README 宣稱檔數 == 實際": {
    "status": "PASS",
-   "detail": "README docs=21/21；scripts=24/24"
+   "detail": "README docs=22/22；scripts=25/25"
   },
   "⑩ 四件套狀態一致（三活文檔 verdict 相同；SESSION_START 為快照只查存在）": {
    "status": "PASS",
@@ -84,8 +84,9 @@
   "19_handoff_m14_ids_and_z3",
   "20_r2_composite_mods_push",
   "21_upstream_identity_reconcile",
-  "22_capacity_vs_energy"
+  "22_capacity_vs_energy",
+  "23_capacity_saturation"
  ],
- "docs": 21,
- "scripts": 24
+ "docs": 22,
+ "scripts": 25
 }

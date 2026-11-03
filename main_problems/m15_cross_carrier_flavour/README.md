@@ -257,7 +257,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（21 份）｜scripts/（24 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（22 份）｜scripts/（25 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -265,8 +265,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3 → 20 R2 續推 → 21 上游身份對賬 → 22 容量 vs 能量）
-├── scripts/           ← 24 支（21 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3 → 20 R2 續推 → 21 上游身份對賬 → 22 容量 vs 能量 → 23 容量飽和）
+├── scripts/           ← 25 支（22 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -298,6 +298,7 @@ m15_cross_carrier_flavour/
 | `docs/20_r2_composite_mods_push.md` | ★★★★★ **R2 續推：集合真實（共振收束模）、物理讀法虛假（`s/d` 差 16.6×）⟹ 七 id 全死** | 🔴 |
 | `docs/21_upstream_identity_reconcile.md` | ★★★★★ **對賬：`16 = κ⁻¹`、`41 = f_unproj`（條件於 `M=33`）已於 v10 閉合；`4/15` 幾何替代否定（非 canonical）** | ✅ |
 | `docs/22_capacity_vs_energy.md` | ★★★★★ **容量 vs 能量：零點能讀法 −56.15σ 否證、容量讀法 +0.82σ；兩者分離 57σ ⟹ 問題可判別** | ✅ |
+| `docs/23_capacity_saturation.md` | ★★★★★ **容量飽和：四種 currency 全 >40σ（判死穩健）；V₄ 非平凡特徵標恰 3 ⟹ 溢出定義上不可能** | ✅ |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
