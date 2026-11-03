@@ -1,0 +1,34 @@
+{
+ "kappa": "1/16",
+ "dm_16": 16,
+ "f_unproj": "41/60",
+ "vac_41": 41,
+ "budget_sum": 60,
+ "frust_file_lines": 32,
+ "frust_is_invariant": false,
+ "identity_table": {
+  "3": {
+   "expr": "B − 1 = 非平凡特徵標（階 4 群）",
+   "source": "M15 docs/17（本 O 導出）",
+   "status": "✅ 閉"
+  },
+  "16": {
+   "expr": "κ⁻¹ = γ_max² = B²（閘極倒數）",
+   "source": "v10 O163 docs/13",
+   "status": "✅ 閉（上游）"
+  },
+  "41": {
+   "expr": "(1 + M/Σγ_even)/2 × 60，M = 33",
+   "source": "v10 O163 docs/05",
+   "status": "🟡 條件於 M = 33"
+  },
+  "60": {
+   "expr": "N_d + B² = Σγ_odd + γ_max²",
+   "source": "v10 O215 T6",
+   "status": "✅ 閉（上游）"
+  }
+ },
+ "verdict": "16 closed upstream (kappa^-1); 41 closed conditional on M=33; 4/15 is not canonical",
+ "n_pass": 20,
+ "n_fail": 0
+}

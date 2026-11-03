@@ -320,6 +320,11 @@ check_num("20_r2_composite_mods_push.md", "d/u 觀測", l2["obs_du"], 5e-3)
 check_num("20_r2_composite_mods_push.md", "s/d 之 z", l2["z_sd_best"], 5e-3)
 check_num("20_r2_composite_mods_push.md", "s/u 之 z", l2["z_su_best"], 5e-3)
 
+say("")
+say("§13l  docs/21 — 上游身份對賬")
+check_num("21_upstream_identity_reconcile.md", "f_unproj", l2["f_unproj_val"], 5e-9)
+check_ctx("21_upstream_identity_reconcile.md", "資料行 = **32**", "阻挫邊行數", l2["frust_edge_lines"], 2e-3, 6)
+
 say("§14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）")
 
 say("")

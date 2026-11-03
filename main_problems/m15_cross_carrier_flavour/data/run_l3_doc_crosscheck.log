@@ -166,8 +166,12 @@ M15 L3 文檔交叉核（期望值全部來自 L2 獨立重算）
 [PASS] 20_r2_composite_mods_push.md :: d/u 觀測 ≈ 2.162（doc 命中 True）
 [PASS] 20_r2_composite_mods_push.md :: s/d 之 z ≈ -6.81（doc 命中 True）
 [PASS] 20_r2_composite_mods_push.md :: s/u 之 z ≈ -3.84（doc 命中 True）
+
+§13l  docs/21 — 上游身份對賬
+[PASS] 21_upstream_identity_reconcile.md :: f_unproj ≈ 0.6833333333（doc 命中 True）
+[PASS] 21_upstream_identity_reconcile.md :: 阻挫邊行數 ≈ 32（錨點窗口）
 §14  豁免：無（全部 12 份 doc 均納入 L3；判準凍結文件 01／判詞文件 07 以錨點上下文核）
 
 ==============================================================================
-L3 總結：PASS 120、FAIL 0
+L3 總結：PASS 122、FAIL 0
 ==============================================================================

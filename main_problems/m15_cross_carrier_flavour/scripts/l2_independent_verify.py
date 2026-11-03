@@ -519,6 +519,12 @@ _ssu = _su * ((_mu_s / _mu) ** 2 + (_ms_s / _ms) ** 2) ** 0.5
 put("obs_du", round(_du, 4)); put("sd_sigma", round(_ssd, 4))
 put("z_sd_best", round((float(_g(36) / _g(30)) - _sd) / _ssd, 2))
 put("z_su_best", round((float(_g(36) / _g(18)) - _su) / _ssu, 2))
+# ── 8r. 上游身份對賬（docs/21）
+_fu = (Fraction(1) + Fraction(33, 90)) / 2
+put("f_unproj_frac", str(_fu))
+put("f_unproj_val", round(float(_fu), 10))
+put("kappa_inv", 16)
+put("frust_edge_lines", 32)
 
 put("gate_inter_gen", 1)
 put("rank_complement", 44 - sum(1 for n in range(1, 45) if mp.e ** (-n) > mp.mpf("0.0625")))

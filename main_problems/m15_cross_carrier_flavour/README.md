@@ -257,7 +257,7 @@ L2 78 keys｜L3 90/90（13/13 doc、零豁免）｜audit 13/13 PASS（FAIL 0、W
 
 ## 目錄
 
-檔案數：docs/（19 份）｜scripts/（22 支）｜data/（run logs ＋ JSON）
+檔案數：docs/（20 份）｜scripts/（23 支）｜data/（run logs ＋ JSON）
 
 ```
 m15_cross_carrier_flavour/
@@ -265,8 +265,8 @@ m15_cross_carrier_flavour/
 ├── README.md          ← 本檔（狀態頁）
 ├── 01_problem_record.md
 ├── final_result.md    ← 判決摘要
-├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3 → 20 R2 續推）
-├── scripts/           ← 22 支（19 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
+├── docs/              ← 16 份（01 判準 → 07 判詞 → 08–14 候選、閘門、驗證、殘留 → 16 零模仲裁 → 17 減一導出 → 18 Q2 重核 → 19 M14 七 id／Z3 → 20 R2 續推 → 21 上游身份對賬）
+├── scripts/           ← 23 支（20 L1 ＋ audit ＋ L2 ＋ L3）＋ run_chain.sh
 └── data/              ← run logs ＋ JSON
 ```
 
@@ -296,6 +296,7 @@ m15_cross_carrier_flavour/
 | `docs/18_q2_provenance_recheck.md` | ★★★★ **Q2 重核：撤回「兩條零輸入源」（實為一恆等＋一巧合）；`B=4` 只由迹通道選定 ⟹ 🟢→🟡** | 🟡 |
 | `docs/19_handoff_m14_ids_and_z3.md` | ★★★★ **M14 承接：`N` 鎖死 88／GP 永久封閉／φ 不可移植；七 id 6 死 1 命名；`ℚ(√5)` 四元組兩對和 = γ_max** | ✅ |
 | `docs/20_r2_composite_mods_push.md` | ★★★★★ **R2 續推：集合真實（共振收束模）、物理讀法虛假（`s/d` 差 16.6×）⟹ 七 id 全死** | 🔴 |
+| `docs/21_upstream_identity_reconcile.md` | ★★★★★ **對賬：`16 = κ⁻¹`、`41 = f_unproj`（條件於 `M=33`）已於 v10 閉合；`4/15` 幾何替代否定（非 canonical）** | ✅ |
 | `scripts/01_label_theorems.py` | 恆真審計／A₅ 完美性／簡併／`ℤ_m` dof | ✅ |
 | `scripts/02_a5_harmonic_multiplicity.py` | A₅ 諧波重數（Molien，`ℚ(√5)` 精確）＋盲測 B1 | ✅ |
 | `scripts/03_count_census.py` | 供給曲線＋8 候選 C7＋互斥性 | ✅ |
