@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "209 keys"
+    "detail": "214 keys"
   },
   "C.01_reproduction_ga.A₂⊕1 = 44": {
     "pass": true,
@@ -217,7 +217,7 @@
   },
   "C.25_odd_sector_and_./90 3 組": {
     "pass": true,
-    "detail": "L2 2 ↔ 文檔 2（rel 0.0e+00）"
+    "detail": "L2 3 ↔ 文檔 3（rel 0.0e+00）"
   },
   "C.25_odd_sector_and_.三分離者 0": {
     "pass": true,
@@ -483,6 +483,18 @@
     "pass": true,
     "detail": "L2 3.99513 ↔ 文檔 3.99513（rel 8.8e-14）"
   },
+  "C.43_bubble_and_sign.W≠0 零分母每模 21": {
+    "pass": true,
+    "detail": "L2 21 ↔ 文檔 21（rel 0.0e+00）"
+  },
+  "C.43_bubble_and_sign.S_n > 0 之模 6 個": {
+    "pass": true,
+    "detail": "L2 6 ↔ 文檔 6（rel 0.0e+00）"
+  },
+  "C.43_bubble_and_sign.轉換 12 次": {
+    "pass": true,
+    "detail": "L2 12 ↔ 文檔 12（rel 0.0e+00）"
+  },
   "C.04_q2b_permutation.216 獨立重跑（6 規則 × 36 指派）": {
     "pass": true,
     "detail": "L2 216 ↔ 文檔 216（rel 0.0e+00）"
@@ -659,8 +671,12 @@
     "pass": true,
     "detail": ""
   },
+  "F.docs/43_bubble_and_sign.md 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
   "_summary": {
-    "checks": 165,
+    "checks": 169,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": [
@@ -790,6 +806,10 @@
       "docs/42_second_order_selfenergy.md": [
         4,
         4
+      ],
+      "docs/43_bubble_and_sign.md": [
+        3,
+        3
       ],
       "docs/04_q2b_permutation_uniqueness.md": [
         1,

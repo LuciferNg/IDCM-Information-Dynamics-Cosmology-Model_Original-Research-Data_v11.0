@@ -212,6 +212,13 @@ CLAIMS = [
     # docs/36 精度更正（新）
     {"doc": "docs/36_q1_m2_m3.md", "key": "specmax_90", "label": "/90 譜內最大 3.99512810052",
      "anchor": "譜內最大"},
+    # docs/43 bubble／符號（新）
+    {"doc": "docs/43_bubble_and_sign.md", "key": "bub_zero_nz", "label": "W≠0 零分母每模 21",
+     "anchor": "**21**"},
+    {"doc": "docs/43_bubble_and_sign.md", "key": "so_pos_count", "label": "S_n > 0 之模 6 個",
+     "anchor": "6 / 44"},
+    {"doc": "docs/43_bubble_and_sign.md", "key": "so_transitions", "label": "轉換 12 次",
+     "anchor": "轉換 **12** 次"},
     # docs/04 獨立重跑 216（新）
     {"doc": "docs/04_q2b_permutation_uniqueness.md", "key": "perm_scan_total",
      "label": "216 獨立重跑（6 規則 × 36 指派）"},

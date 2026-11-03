@@ -9,7 +9,7 @@
   },
   "①c 腳本數 == LOGS 宣告數（不含審計）": {
     "status": "PASS",
-    "detail": "實際 42 vs 宣告 42"
+    "detail": "實際 43 vs 宣告 43"
   },
   "② 每份 doc 至少綁一支 producer（或屬敘事類並附理由）": {
     "status": "PASS",
@@ -41,7 +41,7 @@
   },
   "⑤b claim 份數 + 豁免份數 == 磁碟 doc 份數": {
     "status": "PASS",
-    "detail": "35 + 7 = 42 vs 42"
+    "detail": "36 + 7 = 43 vs 43"
   },
   "⑤c 每項豁免附非空理由": {
     "status": "PASS",
@@ -559,6 +559,18 @@
     "status": "PASS",
     "detail": ""
   },
+  "⑦.44_bubble_and_sign rc=0 ×2": {
+    "status": "PASS",
+    "detail": "rc 0/0"
+  },
+  "⑦.44_bubble_and_sign 兩跑 byte-identical": {
+    "status": "PASS",
+    "detail": ""
+  },
+  "⑦.44_bubble_and_sign ≡ canonical": {
+    "status": "PASS",
+    "detail": ""
+  },
   "⑧.L2 兩跑 byte-identical": {
     "status": "PASS",
     "detail": ""
@@ -585,7 +597,7 @@
   },
   "⑨a docs 實際數 == README 檔表所列": {
     "status": "PASS",
-    "detail": "實際 42 vs README 42"
+    "detail": "實際 43 vs README 43"
   },
   "⑨b docs 每份都在 README 檔表": {
     "status": "PASS",
@@ -593,7 +605,7 @@
   },
   "⑨c scripts 實際數 == README 所列": {
     "status": "PASS",
-    "detail": "實際 42 vs README 42"
+    "detail": "實際 43 vs README 43"
   },
   "⑩a 四件套齊存": {
     "status": "PASS",
@@ -632,11 +644,11 @@
     "detail": ""
   },
   "_summary": {
-    "checks": 158,
+    "checks": 161,
     "fail": 0,
     "warn": 0,
-    "n_docs": 42,
-    "n_scripts": 42,
-    "n_logs": 45
+    "n_docs": 43,
+    "n_scripts": 43,
+    "n_logs": 46
   }
 }

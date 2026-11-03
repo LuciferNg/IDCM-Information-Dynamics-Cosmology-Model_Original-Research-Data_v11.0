@@ -1,6 +1,6 @@
 {
- "pool": 843,
- "tokens": 191,
+ "pool": 910,
+ "tokens": 196,
  "untraced": [],
  "allowed": [
   [
@@ -110,7 +110,7 @@
    "untraced": []
   },
   "22_audit_report.md": {
-   "tokens": 16,
+   "tokens": 17,
    "untraced": []
   },
   "23_green_kernel_and_complement.md": {
@@ -191,6 +191,10 @@
   },
   "42_second_order_selfenergy.md": {
    "tokens": 14,
+   "untraced": []
+  },
+  "43_bubble_and_sign.md": {
+   "tokens": 4,
    "untraced": []
   }
  }

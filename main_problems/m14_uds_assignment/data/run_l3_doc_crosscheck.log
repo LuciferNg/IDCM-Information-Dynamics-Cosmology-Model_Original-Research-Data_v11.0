@@ -2,7 +2,7 @@
 ==============================================================================
 §0 讀 L2（期望值唯一來源）
 ==============================================================================
-[PASS] E1 L2 有 _derived 且非空  |  209 keys
+[PASS] E1 L2 有 _derived 且非空  |  214 keys
 
 ==============================================================================
 §1 逐 claim 交叉核（唯讀）
@@ -60,7 +60,7 @@
 [PASS] C.25_odd_sector_and_.21 組  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
 [PASS] C.25_odd_sector_and_.奇模 11  |  L2 11 ↔ 文檔 11（rel 0.0e+00）
 [PASS] C.25_odd_sector_and_.偶模 10  |  L2 10 ↔ 文檔 10（rel 0.0e+00）
-[PASS] C.25_odd_sector_and_./90 3 組  |  L2 2 ↔ 文檔 2（rel 0.0e+00）
+[PASS] C.25_odd_sector_and_./90 3 組  |  L2 3 ↔ 文檔 3（rel 0.0e+00）
 [PASS] C.25_odd_sector_and_.三分離者 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
 [PASS] C.26_fourwave_88_and./88 926 類  |  L2 926 ↔ 文檔 926（rel 0.0e+00）
 [PASS] C.26_fourwave_88_and./90 913 類  |  L2 913 ↔ 文檔 913（rel 0.0e+00）
@@ -127,6 +127,9 @@
 [PASS] C.42_second_order_se.相異 44  |  L2 44 ↔ 文檔 44（rel 0.0e+00）
 [PASS] C.42_second_order_se.|g₄| < 0.070265395858052  |  L2 0.0702654 ↔ 文檔 0.0702654（rel 3.4e-15）
 [PASS] C.36_q1_m2_m3.md./90 譜內最大 3.99512810052  |  L2 3.99513 ↔ 文檔 3.99513（rel 8.8e-14）
+[PASS] C.43_bubble_and_sign.W≠0 零分母每模 21  |  L2 21 ↔ 文檔 21（rel 0.0e+00）
+[PASS] C.43_bubble_and_sign.S_n > 0 之模 6 個  |  L2 6 ↔ 文檔 6（rel 0.0e+00）
+[PASS] C.43_bubble_and_sign.轉換 12 次  |  L2 12 ↔ 文檔 12（rel 0.0e+00）
 [PASS] C.04_q2b_permutation.216 獨立重跑（6 規則 × 36 指派）  |  L2 216 ↔ 文檔 216（rel 0.0e+00）
 [PASS] C.35_parity_and_delt.偶和三元組 6622  |  L2 6622 ↔ 文檔 6622（rel 0.0e+00）
 [PASS] C.35_parity_and_delt.δ 三分律違例 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
@@ -210,8 +213,10 @@
 [PASS] F.docs/41_dynamics_machine.md 全命中（5/5）
     docs/42_second_order_selfenergy.md                 4/4
 [PASS] F.docs/42_second_order_selfenergy.md 全命中（4/4）
+    docs/43_bubble_and_sign.md                         3/3
+[PASS] F.docs/43_bubble_and_sign.md 全命中（3/3）
 
 ==============================================================================
 §3 匯總
 ==============================================================================
-檢查項 = 165，FAIL = 0
+檢查項 = 169，FAIL = 0

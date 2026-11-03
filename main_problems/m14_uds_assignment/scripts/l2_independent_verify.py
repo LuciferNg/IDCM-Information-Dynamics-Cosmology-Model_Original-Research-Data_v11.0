@@ -391,10 +391,50 @@ def _second_order():
                 acc += m * mp.mpf(w * w) / (g[n] - sum(g[x] for x in t))
             S[n] = acc
         bound = min(8100 * g[n] / (2 * abs(S[n])) for n in S if S[n] != 0)
+        order = sorted(range(1, 45), key=lambda n: g[n])
+        sigs = [1 if S[n] > 0 else -1 for n in order]
         res = dict(poles=poles, distinct=len({mp.nstr(v, 25) for v in S.values()}),
-                   bound=mp.sqrt(bound), smax=max(abs(v) for v in S.values()))
+                   bound=mp.sqrt(bound), smax=max(abs(v) for v in S.values()),
+                   pos=[n for n in range(1, 45) if S[n] > 0],
+                   transitions=sum(1 for i in range(len(sigs) - 1) if sigs[i] != sigs[i + 1]))
     _SO_CACHE.update(res)
     return _SO_CACHE
+
+
+def _bubble():
+    """bubble 支（docs/43）：γ 鏡像恆等、零分母分類、W 四點鏡像不變"""
+    def block():
+        mp.mp.dps = max(mp.mp.dps, 60)
+        g = {n: 4 * mp.sin(mp.pi * n / 90) ** 2 for n in range(1, 45)}
+        sig = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+               (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+        cs = [1, 1, -1, -1, -1, -1, 1, 1]
+
+        def W(t):
+            return sum(c for c, sg in zip(cs, sig) if sum(x * y for x, y in zip(sg, t)) % 90 == 0)
+
+        mir_g = max(abs(g[n] + g[45 - n] - 4) for n in range(1, 45))
+        mir_w = 0
+        for n in range(1, 45, 7):
+            for m in range(1, 45, 5):
+                for p in range(1, 45, 6):
+                    t = (n, m, p, (n + m + p) % 44 + 1)
+                    t2 = (45 - t[0], 45 - t[1], 45 - t[2], 45 - t[3])
+                    mir_w = max(mir_w, abs(W(t) - W(t2)))
+        cnt = {}
+        for n in range(1, 45):
+            z = 0
+            for m in range(1, 45):
+                for p in range(1, 45):
+                    for q in range(p, 45):
+                        if abs(g[n] + g[m] - g[p] - g[q]) < mp.mpf("1e-35") \
+                                and not (p == n and q == m) and not (p == m and q == n):
+                            if W((n, m, p, q)) != 0:
+                                z += 1
+            cnt[n] = z
+        return dict(mir_g=mir_g, mir_w=mir_w, zero_nz=sorted(set(cnt.values())))
+    res = block()
+    return res
 
 
 def _k3_phi(a, b, m):
@@ -739,6 +779,12 @@ DERIVE = {
     "so_true_poles": lambda I: sum(1 for p in _second_order()["poles"] if p[2] != 0),
     "so_distinct": lambda I: _second_order()["distinct"],
     "so_bound": lambda I: _second_order()["bound"],
+    # ---- §AG bubble／符號（docs/43）----
+    "bub_mir_gamma": lambda I: _bubble()["mir_g"],
+    "bub_mir_W": lambda I: _bubble()["mir_w"],
+    "bub_zero_nz": lambda I: _bubble()["zero_nz"][0] if len(_bubble()["zero_nz"]) == 1 else -1,
+    "so_pos_count": lambda I: len(_second_order()["pos"]),
+    "so_transitions": lambda I: _second_order()["transitions"],
     # ---- §Z 掃描設計計數（docs/04）----
     # 6 規則 × 36 指派 = 216（設計宣告；docs/04 §五 之 N_trials）
     "perm_scan_total": lambda I: mp.mpf(6 * 36),
@@ -1150,6 +1196,13 @@ def main():
     chk("X73 二階：δγ 全相異 44/44；|g₄| 界 = 0.0702653958580522（最小者 n = 3）",
         so["distinct"] == 44 and abs(so["bound"] - mp.mpf("0.070265395858052228")) < mp.mpf("1e-12"),
         mp.nstr(so["bound"], 16))
+
+    bu = _bubble()
+    chk("X74 bubble：γ_n + γ_(45−n) = 4 精確；W 四點鏡像不變；零分母 W≠0 每模 21",
+        bu["mir_g"] < mp.mpf("1e-35") and bu["mir_w"] == 0 and bu["zero_nz"] == [21],
+        str((mp.nstr(bu["mir_g"], 4), bu["mir_w"], bu["zero_nz"])))
+    chk("X75 符號：S_n > 0 之模 6 個；γ 升序轉換 12 次（閾值假說否證）",
+        len(so["pos"]) == 6 and so["transitions"] == 12, str((so["pos"], so["transitions"])))
 
     hdr("§4 匯總")
     nchk = len([k for k in RES if not k.startswith("_")])
