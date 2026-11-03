@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "214 keys"
+    "detail": "218 keys"
   },
   "C.01_reproduction_ga.A₂⊕1 = 44": {
     "pass": true,
@@ -495,6 +495,18 @@
     "pass": true,
     "detail": "L2 12 ↔ 文檔 12（rel 0.0e+00）"
   },
+  "C.44_third_order.md.T_1 = 36.90518272244775": {
+    "pass": true,
+    "detail": "L2 36.9052 ↔ 文檔 36.9052（rel 0.0e+00）"
+  },
+  "C.44_third_order.md.界 2.252170338316e−4": {
+    "pass": true,
+    "detail": "L2 0.000225217 ↔ 文檔 0.000225217（rel 1.6e-14）"
+  },
+  "C.44_third_order.md.1350·A2_1 = S_1": {
+    "pass": true,
+    "detail": "L2 -3913.79 ↔ 文檔 3913.79（rel 1.2e-16）"
+  },
   "C.04_q2b_permutation.216 獨立重跑（6 規則 × 36 指派）": {
     "pass": true,
     "detail": "L2 216 ↔ 文檔 216（rel 0.0e+00）"
@@ -675,8 +687,12 @@
     "pass": true,
     "detail": ""
   },
+  "F.docs/44_third_order.md 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
   "_summary": {
-    "checks": 169,
+    "checks": 173,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": [
@@ -808,6 +824,10 @@
         4
       ],
       "docs/43_bubble_and_sign.md": [
+        3,
+        3
+      ],
+      "docs/44_third_order.md": [
         3,
         3
       ],

@@ -1,6 +1,6 @@
 {
- "pool": 910,
- "tokens": 196,
+ "pool": 995,
+ "tokens": 265,
  "untraced": [],
  "allowed": [
   [
@@ -22,6 +22,10 @@
   [
    "22_audit_report.md",
    "1.1486"
+  ],
+  [
+   "22_audit_report.md",
+   "7.6064"
   ]
  ],
  "per_doc": {
@@ -110,7 +114,7 @@
    "untraced": []
   },
   "22_audit_report.md": {
-   "tokens": 17,
+   "tokens": 28,
    "untraced": []
   },
   "23_green_kernel_and_complement.md": {
@@ -195,6 +199,10 @@
   },
   "43_bubble_and_sign.md": {
    "tokens": 4,
+   "untraced": []
+  },
+  "44_third_order.md": {
+   "tokens": 58,
    "untraced": []
   }
  }

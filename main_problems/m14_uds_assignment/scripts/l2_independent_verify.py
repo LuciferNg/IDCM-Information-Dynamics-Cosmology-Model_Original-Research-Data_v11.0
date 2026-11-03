@@ -437,6 +437,65 @@ def _bubble():
     return res
 
 
+def _third():
+    """三階（docs/44）：矩陣元律＋T_n（只算 n = 1, 39；39 為微擾界綁定模）"""
+    def block():
+        mp.mp.dps = max(mp.mp.dps, 60)
+        g = {n: 4 * mp.sin(mp.pi * n / 90) ** 2 for n in range(1, 45)}
+        sig = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+               (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+        cs = [1, 1, -1, -1, -1, -1, 1, 1]
+        tri = list(__import__("itertools").combinations_with_replacement(range(1, 45), 3))
+
+        def W(t):
+            return sum(c for c, sg in zip(cs, sig) if sum(x * y for x, y in zip(sg, t)) % 90 == 0)
+
+        def nrm(T):
+            r = 1
+            for v in __import__("collections").Counter(T).values():
+                r *= __import__("math").factorial(v)
+            return mp.sqrt(mp.mpf(r))
+
+        def et(T):
+            return sum(g[m] for m in T)
+
+        def minus(mult, sub):
+            c = __import__("collections").Counter(mult)
+            for k, v in __import__("collections").Counter(sub).items():
+                c[k] -= v
+                if c[k] < 0:
+                    return None
+            return list(c.elements())
+
+        out = {}
+        for n in (1, 39):
+            lst = [(T, mp.mpf(W((n,) + T))) for T in tri if W((n,) + T)]
+            byx = {}
+            for T, w in lst:
+                for x in set(T):
+                    byx.setdefault(x, []).append((T, w, __import__("collections").Counter(T)[x]))
+            acc = mp.mpf(0)
+            a2 = mp.mpf(0)
+            for T, wT in lst:
+                a2 += (6 * (wT / 90) / nrm(T)) ** 2 / (g[n] - et(T))
+                uT = 6 * (wT / 90) / nrm(T) / (g[n] - et(T))
+                for idx in __import__("itertools").combinations(range(3), 2):
+                    rem = [T[i] for i in idx]
+                    x = minus(T, rem)[0]
+                    for Tp, wP, mp_ in byx.get(x, []):
+                        add = minus(Tp, [x])
+                        if add is None or len(add) != 2:
+                            continue
+                        wm = W(tuple(rem) + tuple(add))
+                        if not wm:
+                            continue
+                        uP = 6 * (wP / 90) / nrm(Tp) / (g[n] - et(Tp))
+                        acc += uT * uP * mp_ * 4 * (mp.mpf(wm) / 90) / (nrm(T) * nrm(Tp))
+            out[n] = (acc, a2)
+        return out
+    return block()
+
+
 def _k3_phi(a, b, m):
     """docs/37 之 Φ：∏ sin(πa/45) / ∏ sin(πk_i/90)（僅奇和有意義）"""
     num = mp.sin(mp.pi * a / 45) * mp.sin(mp.pi * b / 45) * mp.sin(mp.pi * m / 45)
@@ -785,6 +844,11 @@ DERIVE = {
     "bub_zero_nz": lambda I: _bubble()["zero_nz"][0] if len(_bubble()["zero_nz"]) == 1 else -1,
     "so_pos_count": lambda I: len(_second_order()["pos"]),
     "so_transitions": lambda I: _second_order()["transitions"],
+    # ---- §AH 三階（docs/44）----
+    "third_n1": lambda I: _third()[1][0],
+    "third_n39": lambda I: _third()[39][0],
+    "third_bound": lambda I: abs(_third()[39][1]) / abs(_third()[39][0]),
+    "third_a2_conv": lambda I: 1350 * _third()[1][1],
     # ---- §Z 掃描設計計數（docs/04）----
     # 6 規則 × 36 指派 = 216（設計宣告；docs/04 §五 之 N_trials）
     "perm_scan_total": lambda I: mp.mpf(6 * 36),
@@ -1203,6 +1267,15 @@ def main():
         str((mp.nstr(bu["mir_g"], 4), bu["mir_w"], bu["zero_nz"])))
     chk("X75 符號：S_n > 0 之模 6 個；γ 升序轉換 12 次（閾值假說否證）",
         len(so["pos"]) == 6 and so["transitions"] == 12, str((so["pos"], so["transitions"])))
+
+    th = _third()
+    chk("X76 三階：T_1 = 36.9051827224；1350·A2_1 = S_1（docs/42）",
+        abs(th[1][0] - mp.mpf("36.90518272244775")) < mp.mpf("1e-10")
+        and abs(1350 * th[1][1] + mp.mpf("3913.79403031326")) < mp.mpf("1e-7"),
+        str((mp.nstr(th[1][0], 12), mp.nstr(1350 * th[1][1], 14))))
+    chk("X77 三階界：|g₄| < 2.252170338316e−4（n = 39，收緊 127.37 倍）",
+        abs(abs(th[39][1]) / abs(th[39][0]) - mp.mpf("0.0002252170338316")) < mp.mpf("1e-16"),
+        mp.nstr(abs(th[39][1]) / abs(th[39][0]), 12))
 
     hdr("§4 匯總")
     nchk = len([k for k in RES if not k.startswith("_")])

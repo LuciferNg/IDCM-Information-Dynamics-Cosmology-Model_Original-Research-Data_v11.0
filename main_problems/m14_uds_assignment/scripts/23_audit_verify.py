@@ -76,6 +76,7 @@ LOGS = {
     "42_cross_section_machine": "run_42_cross_section.log",
     "43_second_order_selfenergy": "run_43_second_order.log",
     "44_bubble_and_sign": "run_44_bubble_sign.log",
+    "45_third_order": "run_45_third_order.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]

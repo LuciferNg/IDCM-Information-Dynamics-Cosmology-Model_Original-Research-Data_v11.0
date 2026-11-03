@@ -46,6 +46,8 @@ ALLOW = {
         "散文範圍：『φ vs 觀測 17–207』之區間下界，非量測值（禁作精確數引用）",
     ("17_tpipe_filter_and_phi_ladder.md", "207.0"):
         "散文範圍：同上區間上界，非量測值",
+    ("22_audit_report.md", "7.6064"):
+        "歷史值：docs/45 v1（錯矩陣元律）之 T_1 = 7.6064，僅作更正敘述；v1 log 封存 data/archive/（不在 data/*.log 池）",
 }
 
 

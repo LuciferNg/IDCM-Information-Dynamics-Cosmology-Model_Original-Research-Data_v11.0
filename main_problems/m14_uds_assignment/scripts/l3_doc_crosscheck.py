@@ -219,6 +219,13 @@ CLAIMS = [
      "anchor": "6 / 44"},
     {"doc": "docs/43_bubble_and_sign.md", "key": "so_transitions", "label": "轉換 12 次",
      "anchor": "轉換 **12** 次"},
+    # docs/44 三階（新）
+    {"doc": "docs/44_third_order.md", "key": "third_n1", "label": "T_1 = 36.90518272244775",
+     "anchor": "36.90518272244775"},
+    {"doc": "docs/44_third_order.md", "key": "third_bound", "label": "界 2.252170338316e−4",
+     "anchor": "2.252170338316e−4"},
+    {"doc": "docs/44_third_order.md", "key": "third_a2_conv", "label": "1350·A2_1 = S_1",
+     "anchor": "−3913.79403031326"},
     # docs/04 獨立重跑 216（新）
     {"doc": "docs/04_q2b_permutation_uniqueness.md", "key": "perm_scan_total",
      "label": "216 獨立重跑（6 規則 × 36 指派）"},
