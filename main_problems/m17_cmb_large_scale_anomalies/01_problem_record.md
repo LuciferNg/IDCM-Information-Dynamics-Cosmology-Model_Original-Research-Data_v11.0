@@ -24,14 +24,18 @@ Planck 2018（VII, Isotropy and statistics）確認 CMB 溫度圖在大角度尺
 
 ## 2. 已立事實（不可重推）
 
-### 2.1 v10 P4 之否證（歷史記錄，v11 不繼承其數值）
+### 2.1 v10 P4 之現狀（2026-11-05 修正後，v11 不繼承其數值）
 
 | 項 | 結果 | 依據 |
 |:--|:--|:--|
-| A₅ 節點圖像 vs Planck 11 異常 | **命中 0/11** | v10 `P4/docs/33` |
+| **A3 冷斑**（RID + BFS 錨定著色） | 🟡 **2.6σ 真信號**：阻挫 \|ΔT\| 34.48 vs 正常 53.12，打亂溫度重跑同流程 null（−0.61±7.39）→ p=0.0050 | v10 `P4/docs/34_rid_correction.md` |
+| A3 以外 10 項 Planck 異常 | ❌ 無事前預測 | v10 `P4/docs/33` |
 | A₅ 31 條對稱軸 vs 6 個異常方向 | 全不顯著（最小 44.7%，Bonferroni 門檻 0.83%） | v10 `P4/scripts/42` |
-| A₅ 群自生成 null（100 隨機種子） | 圖拓撲可變（30/60/90/120 邊）；與冷斑同構 12/100；δ3 喺 35 百分位；節點溫度 p=0.475 | v10 `P4/scripts/41` |
-| 冷斑 = A₅ 節點 | 🔴 假說否證 | v10 register `P4` verdict = negative |
+| max-cut（數據優化）版本 | Δ=+43.21 但 null +38.79 → p=0.0995（優化 artifact） | v10 `P4/scripts/47` |
+
+> ⚠️ **已作廢**：v10 `P4/docs/32`（killer test）—— 曾誤用「A₅ 隨機種子」作 null 並把 RID 換成
+> truncated dodecahedron，導致錯誤宣告「0/11」。IDCM 選圖為 **Rhombicosidodecahedron + 手性偏轉**，
+> 非任意 A₅ orbit。詳見 v10 `P4/docs/34`。
 
 ### 2.2 保留之觀測資產（真觀測／真方法，與 A₅ 假說無關）
 
