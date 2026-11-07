@@ -3,27 +3,27 @@
  "info": 4,
  "res": {
   "A1": {
-   "docs": 47,
-   "scripts": 52,
-   "logs": 52
+   "docs": 49,
+   "scripts": 53,
+   "logs": 53
   },
-  "A2": 47,
+  "A2": 49,
   "A3": {
-   "json": 25,
+   "json": 26,
    "orphan": 0
   },
   "A4": 0,
   "A5": {
-   "actual": 31,
+   "actual": 33,
    "claim": {
-    "01_problem_record.md": 31,
-    "README.md": 31,
-    "final_result.md": 31
+    "01_problem_record.md": 33,
+    "README.md": 33,
+    "final_result.md": 33
    }
   },
   "A6": {
-   "covered": 46,
-   "total": 47,
+   "covered": 48,
+   "total": 49,
    "missing": [
     39
    ]
@@ -77,6 +77,8 @@
     45,
     46,
     47,
+    48,
+    49,
     52
    ],
    "missing": []

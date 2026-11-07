@@ -1,25 +1,19 @@
 {
- "docs": 47,
- "scripts": 52,
- "logs": 53,
+ "docs": 49,
+ "scripts": 53,
+ "logs": 54,
  "fails": {
   "C1": 0,
   "C2": 0,
   "C3": 0,
-  "C3d": 1,
-  "C3s": 2,
+  "C3d": 0,
+  "C3s": 0,
   "C4": 0,
   "C5": 0
  },
  "orphan": [],
  "timewarp": [],
- "derived": [
-  [
-   12,
-   "90.0000000000",
-   "Σγ=90 錨值之排版展開：[E] 得 Σγ(44-site)=90.0"
-  ]
- ],
+ "derived": [],
  "register_refs": [
   13,
   14,

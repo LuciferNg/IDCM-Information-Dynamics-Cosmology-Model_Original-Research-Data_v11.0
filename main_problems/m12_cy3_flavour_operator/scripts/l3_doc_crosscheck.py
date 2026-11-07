@@ -235,12 +235,19 @@ def main():
         "22_r1_r12_continuity_audit.md": {
             "4.2257": "轉引 docs/02 之 F6 已降級值（明文「旁證，不作判據」）⟹ 與 docs/02／SESSION_START 同類",
         },
+        "40_propagation_audit.md": {
+            "6.22302": "P4 慣例分離之 maxdev 精確殘差（6.22302e−61）；producer 為 scripts/47，其 log 只印更少位數 ⟹ 取 docs/40 表列值為準（已核：兩種 γ 慣例之恆等皆 <1e−60）",
+        },
+        "49_r33_handoff_delivery.md": {
+            "4.2257": "轉引 docs/02 之 F6 已降級值（R33 §四 OP8 明文列為「旁證，不作判據」）",
+        },
         "45_r29_m13_receipt.md": {
             "0.008333": "跨記錄引用 M13 docs/12（分辨 15/4 所需 σ，非本 M 計算）",
             "0.01099": "跨記錄引用 M13 docs/08（Σ 阻死之 σ 硬底，非本 M 計算）",
         },
         "(root)final_result.md": {
             "0.0798": "M11 §14.6 之 0.079750 取 4dp 寫法（L2 floorX_Ξ = 0.079749）",
+            "4.2257": "R33 OP8 所列 F6 旁證（docs/02 inline 枚舉，無機器產物；明文不作判據）",
         },
         "12_full_chain_audit.md": {
             "-2.0695": "轉引 docs/02（M2 跨記錄）",

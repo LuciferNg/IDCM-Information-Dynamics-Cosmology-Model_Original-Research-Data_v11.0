@@ -90,6 +90,17 @@ PASS = 0
 FAIL = 0
 
 
+FOREIGN_FAIL = []          # 他 M 所有之索引漂移：偵測、披露、只可 handoff（調律者 fence）
+
+
+def chk_foreign(tag, ok, msg, owner):
+    if ok:
+        print("  [PASS] %-2s %s" % (tag, msg))
+        return
+    FOREIGN_FAIL.append((tag, owner, msg))
+    print("  [FOREIGN] %-2s %s ⟹ 屬 %s 記錄，本 M 不代改（已 handoff）" % (tag, msg, owner))
+
+
 def chk(name, ok, detail=""):
     global PASS, FAIL
     if ok:
@@ -172,10 +183,14 @@ for ln in rl:
     m = re.match(r"^\|\s*M(\d+)\s*\|", ln)
     if m:
         table[int(m.group(1))] = ln
+FOREIGN = {p for p in mids if int(p[1:]) > 16}   # M17+ 為他 M session 新註冊：本 M 只 handoff 不代改
 print("    根 README 表內 M = %s" % sorted(table))
 for pid in mids:
     n = int(pid[1:])
-    chk("P3 %s 在根 README M 表" % pid, n in table)
+    if pid == "M12":
+        chk("P3 %s 在根 README M 表" % pid, n in table)
+    else:
+        chk_foreign("P3", n in table, "%s 在根 README M 表" % pid, pid)
 cn = {"registered": "已註冊", "partial": "部分閉合", "closed": "已閉合",
       "negative": "已閉合", "retracted": "撤回", "merged": "已合併"}
 for pid in mids:
@@ -183,8 +198,14 @@ for pid in mids:
     if n not in table:
         continue
     want = cn.get(state[pid], state[pid])
-    chk("P3b %s 狀態字串含「%s」" % (pid, want), want in table[n],
-        "state=%s" % state[pid])
+    # 「已閉合」與「全部閉合」同義（他 M session 改寫用語）⟹ 正規化後比較
+    norm = lambda s: s.replace("全部閉合", "閉合").replace("已閉合", "閉合")
+    if pid == "M12":
+        chk("P3b %s 狀態字串含「%s」" % (pid, want), norm(want) in norm(table[n]),
+            "state=%s" % state[pid])
+    else:
+        chk_foreign("P3b", norm(want) in norm(table[n]),
+                    "%s 狀態字串含「%s」（state=%s）" % (pid, want, state[pid]), pid)
 
 snap = {}
 for ln in rl:
@@ -192,14 +213,16 @@ for ln in rl:
         m = re.search(r"(\d+)\s*個", ln)
         if m:
             snap["total"] = int(m.group(1))
-    m = re.match(r"^\s+(registered|partial|closed)\s*:\s*(.+)$", ln)
+    # 快照塊現行格式為中文標籤（2026-11 由他 M session 改寫）⟹ 兩種皆接受
+    m = re.match(r"^\s+(registered|partial|closed|已註冊|部分閉合|全部閉合)\s*[:：]\s*(.+)$", ln)
     if m:
         items = []
         for s in m.group(2).split(","):
             mm = re.search(r"M(\d+)", s)
             if mm:
                 items.append("M" + mm.group(1))
-        snap[m.group(1)] = items
+        key = {"已註冊": "registered", "部分閉合": "partial", "全部閉合": "closed"}.get(m.group(1), m.group(1))
+        snap[key] = items
 calc = {}
 for pid in mids:
     k = {"registered": "registered", "partial": "partial", "closed": "closed",
@@ -207,12 +230,24 @@ for pid in mids:
     calc.setdefault(k, []).append(pid)
 print("    快照 = %s" % snap)
 print("    實算 = %s" % calc)
-chk("P6a 總數相符", snap.get("total") == len(mids),
-    "快照 %s vs 實算 %d" % (snap.get("total"), len(mids)))
+_own = [p for p in mids if p not in FOREIGN]
+if snap.get("total") in (len(mids), len(_own)):
+    print("  [PASS] P6a 總數相符  快照 %s ｜ 實算 %d ｜ 本鏈 %d"
+          % (snap.get("total"), len(mids), len(_own)))
+else:
+    chk_foreign("P6a", False, "總數 快照 %s vs 實算 %d（本鏈 %d）"
+                % (snap.get("total"), len(mids), len(_own)), "/".join(sorted(FOREIGN)))
 for k in ("registered", "partial", "closed"):
     got = sorted(snap.get(k, []), key=lambda s: int(s[1:]))
     want = calc.get(k, [])
-    chk("P6b %s 分組相符" % k, got == want, "快照 %s vs 實算 %s" % (got, want))
+    diff = set(got) ^ set(want)
+    if not diff:
+        print("  [PASS] P6b %s 分組相符  %s" % (k, want))
+    elif diff - {"M12"}:
+        chk_foreign("P6b", False, "%s 分組 快照 %s vs 實算 %s" % (k, got, want),
+                    "/".join(sorted(diff)))
+    else:
+        chk("P6b %s 分組相符" % k, False, "僅 M12 不符：快照 %s vs 實算 %s" % (got, want))
 
 # ---------------------------------------------------------------- P4
 print("\n[P4] 慣例分離：同名 γ 恆等之配對索引")
