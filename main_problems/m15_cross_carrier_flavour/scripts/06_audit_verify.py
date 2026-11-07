@@ -284,6 +284,7 @@ RETRACTED = {
     "60·Ω_b": ("撤回", "識別"),
     "兩條獨立源": ("撤回",),
     "32/120 = 4/15": ("撤回",),
+    "−0.079σ": ("撤回", "已廢", "作廢"),
 }
 _circulating = []
 for _p in sorted(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "final_result.md",

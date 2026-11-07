@@ -21,6 +21,6 @@
   "7": -11.36
  },
  "verdict": "Q2 downgraded: geometric series is B-agnostic; 44/33 is the same identity; B=4 from trace channel",
- "n_pass": 8,
+ "n_pass": 9,
  "n_fail": 0
 }
