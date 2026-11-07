@@ -32,8 +32,8 @@ A8a 舊值掃描
 A10 時序閘（log mtime ≥ producer mtime）
 [PASS] A10 全部產物新於 producer  |  []
 A12 commit 完整性
-[FAIL] A12a 工作樹乾淨（排除審計輸出）  |  dirty=42
-[FAIL] A12b 全部文檔／腳本已入 git  |  ['UNTRACKED docs/09_open_problems_inventory.md', 'UNTRACKED scripts/10_audit_verify.py', 'UNTRACKED scripts/11_l1_reproducibility.py', 'UNTRACKED scripts/gap_setup.sh', 'UNTRACKED scripts/l2_independent_verify.py', 'UNTRACKED scripts/l3_doc_crosscheck.py']
+[FAIL] A12a 工作樹乾淨（排除審計輸出）  |  dirty=1
+[PASS] A12b 全部文檔／腳本已入 git  |  []
 G1 GAP 部署
 [PASS] G1a data/gap/ 被 git 忽略  |  main_problems/m16_group_selection_principle/.gitignore:4:data/gap/	data/gap/root
 [PASS] G1b GAP 可執行存在

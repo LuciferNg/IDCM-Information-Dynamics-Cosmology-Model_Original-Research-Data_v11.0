@@ -259,7 +259,13 @@ def main():
 
     # ───────── A12 commit 完整性 ─────────
     sec("A12 commit 完整性")
-    dirty = sh(f'git status --porcelain . | grep -v "data/run_audit.log" | grep -v "data/backup/" | grep -v "data/gap/" | grep -v "^?? data/chunk_" | wc -l')
+    AUDIT_OUT = ("data/run_audit.log data/audit_verify.json data/run_l1.json data/run_l1.log "
+                 "data/run_l1_boot.log data/run_l2.log data/run_l3.log data/l2_independent_verify.json "
+                 "data/l3_doc_crosscheck.json data/run_l2_boot.log data/run_l3_boot.log "
+                 "data/run_audit_boot.log data/run_gap_setup.log data/run_l2_raw.log")
+    excl = " ".join(f'| grep -v "{p}"' for p in AUDIT_OUT.split())
+    dirty = sh(f'git status --porcelain . | grep -v "data/backup/" | grep -v "data/gap/" '
+               f'| grep -v "^?? data/chunk_" {excl} | wc -l')
     chk("A12a 工作樹乾淨（排除審計輸出）", dirty.strip() in ("0", ""), f"dirty={dirty}")
     tracked_missing = []
     for p in ["01_problem_record.md", "SESSION_START.md", "README.md", "final_result.md"] + \

@@ -23,7 +23,7 @@
 [PASS] 05_minimum_cost_principle.md :: DNT={3,4,5} 之 11 群  |  exp=11 best=11.0 rel=0.000e+00 tol=5e-03
 [PASS] 05_minimum_cost_principle.md :: 深層 420  |  exp=420 best=420.0 rel=0.000e+00 tol=5e-03
 [PASS] 05_minimum_cost_principle.md :: 含 {3,4,5} 之 24 群  |  exp=24 best=24.0 rel=0.000e+00 tol=5e-03
-[FAIL] docs/05_minimum_cost_principle.md :: 最小階 60  |  錨點搵唔到：min = 60
+[PASS] 05_minimum_cost_principle.md :: 最小階 60  |  exp=60 best=60.0 rel=0.000e+00 tol=5e-03
 [PASS] 06_variational_axiom_attack.md :: γ_1 = 0.15224093…  |  exp=0.152240935 best=0.1522409349774265 rel=0.000e+00 tol=1e-06
 [PASS] 06_variational_axiom_attack.md :: γ_2 = 0.58578643…  |  exp=0.5857864376 best=0.585786437626905 rel=0.000e+00 tol=1e-06
 [PASS] 06_variational_axiom_attack.md :: γ_3 = 1.23463313…  |  exp=1.234633135 best=1.2346331352698205 rel=0.000e+00 tol=1e-06
@@ -57,7 +57,7 @@
 [PASS] 02_global_scan_and_modifiers.md 命中 6/6  |  100.0%
 [PASS] 03_criterion_source_and_verdict.md 命中 3/3  |  100.0%
 [PASS] 04_verdict_r5_and_status.md 命中 3/3  |  100.0%
-[PASS] 05_minimum_cost_principle.md 命中 3/3  |  100.0%
+[PASS] 05_minimum_cost_principle.md 命中 4/4  |  100.0%
 [PASS] 06_variational_axiom_attack.md 命中 11/11  |  100.0%
 [PASS] 07_mf2_closed_mf1prime_narrowed.md 命中 9/9  |  100.0%
 [PASS] 08_mf1prime_dissolution.md 命中 5/5  |  100.0%
@@ -70,7 +70,7 @@
 ==============================================================================
 §4 匯總
 ==============================================================================
-檢查項 = 56，FAIL = 1
+檢查項 = 56，FAIL = 0
 
 寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/data/l3_doc_crosscheck.json
 寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/data/run_l3.log

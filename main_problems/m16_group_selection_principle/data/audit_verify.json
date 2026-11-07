@@ -97,11 +97,11 @@
   },
   "A12a 工作樹乾淨（排除審計輸出）": {
     "pass": false,
-    "detail": "dirty=42"
+    "detail": "dirty=1"
   },
   "A12b 全部文檔／腳本已入 git": {
-    "pass": false,
-    "detail": "['UNTRACKED docs/09_open_problems_inventory.md', 'UNTRACKED scripts/10_audit_verify.py', 'UNTRACKED scripts/11_l1_reproducibility.py', 'UNTRACKED scripts/gap_setup.sh', 'UNTRACKED scripts/l2_independent_verify.py', 'UNTRACKED scripts/l3_doc_crosscheck.py']"
+    "pass": true,
+    "detail": "[]"
   },
   "G1a data/gap/ 被 git 忽略": {
     "pass": true,
@@ -125,6 +125,6 @@
   },
   "_summary": {
     "checks": 31,
-    "fail": 2
+    "fail": 1
   }
 }
