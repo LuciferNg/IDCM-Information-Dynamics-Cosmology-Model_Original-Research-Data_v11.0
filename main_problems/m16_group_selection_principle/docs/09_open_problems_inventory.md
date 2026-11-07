@@ -63,8 +63,12 @@
 ## §5 機械核（`register.py`）
 
 ```
-本 O 事件 = 10（registered 1／handed_off 2／closed 1／note 6）
-入向 handoff = 1（M15, 2026-11-03T19:27）  ⟹ 已回執（handoff → M15）
-出向 handoff = 2（M3 判詞；M15 回執＋更新）  ⟹ 另發 M17（阻塞解除）
-check：HARD DRIFT 0／REF-MISSING 0（見交付報告）
+本 O 事件 = 12（registered 1／handed_off 4／closed 1／note 6）
+入向 handoff = 1（M15, 2026-11-03T19:27）        ⟹ 已回執（11-07 handoff → M15）
+出向 handoff = 4：M3（11-03 R5 判詞）
+                  M15（11-07 回執＋終態更新）
+                  M17（11-07 CQ5 阻塞解除）
+                  M3 （11-07 補充：MF2 閉合 ⟹ perfect 非公理）
+機械核：in-box {M15} − out-box {M3, M15, M17} = ∅（未回執 0）
+check：HARD DRIFT 0／REF-MISSING 0
 ```

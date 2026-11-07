@@ -92,3 +92,13 @@ scripts/00–07 ＋ gap 工具 ✅
 data/                  ✅（含 run_02_scan_all_500.txt 92,570 行）
 final_result.md        ✅  🟢 closed
 ```
+
+## 六、Handoff 狀態（2026-11-07 實測）
+
+```
+入向 1（M15 11-03 19:27）        → 已回執（handoff → M15，附終態更新）
+出向 4：M3（R5 判詞）｜M3（MF2 補充）｜M15（回執）｜M17（CQ5 阻塞解除）
+未回執 = ∅；register check HARD DRIFT 0
+下游影響：M15 docs/24 L74、final_result L95 之「M16 只開不推」與 M17 README:27 之「待 M16」
+         皆屬他記錄 ⟹ 本 O 只發 handoff，不代改（idcm-audit-verify §4.6a）
+```
