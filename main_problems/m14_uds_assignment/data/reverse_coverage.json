@@ -1,19 +1,23 @@
 {
- "pool": 995,
- "tokens": 265,
+ "pool": 2280,
+ "tokens": 842,
  "untraced": [],
  "allowed": [
-  [
-   "09_correction_object_type.md",
-   "0.4603"
-  ],
   [
    "09_correction_object_type.md",
    "1.1486"
   ],
   [
    "22_audit_report.md",
-   "0.4603"
+   "0.04714"
+  ],
+  [
+   "22_audit_report.md",
+   "0.07698"
+  ],
+  [
+   "22_audit_report.md",
+   "0.0854"
   ],
   [
    "22_audit_report.md",
@@ -26,6 +30,30 @@
   [
    "22_audit_report.md",
    "7.6064"
+  ],
+  [
+   "45_fourth_order.md",
+   "0.07698"
+  ],
+  [
+   "46_quint_sector.md",
+   "0.04714"
+  ],
+  [
+   "47_fifth_order.md",
+   "0.0854"
+  ],
+  [
+   "47_fifth_order.md",
+   "0.6128"
+  ],
+  [
+   "47_fifth_order.md",
+   "+77137.118746"
+  ],
+  [
+   "50_precise_vertex.md",
+   "0.0305"
   ]
  ],
  "per_doc": {
@@ -114,7 +142,7 @@
    "untraced": []
   },
   "22_audit_report.md": {
-   "tokens": 28,
+   "tokens": 78,
    "untraced": []
   },
   "23_green_kernel_and_complement.md": {
@@ -203,6 +231,30 @@
   },
   "44_third_order.md": {
    "tokens": 58,
+   "untraced": []
+  },
+  "45_fourth_order.md": {
+   "tokens": 72,
+   "untraced": []
+  },
+  "46_quint_sector.md": {
+   "tokens": 155,
+   "untraced": []
+  },
+  "47_fifth_order.md": {
+   "tokens": 21,
+   "untraced": []
+  },
+  "48_fifth_order_all44.md": {
+   "tokens": 206,
+   "untraced": []
+  },
+  "49_final_push.md": {
+   "tokens": 29,
+   "untraced": []
+  },
+  "50_precise_vertex.md": {
+   "tokens": 44,
    "untraced": []
   }
  }

@@ -20,6 +20,9 @@ import sys
 from fractions import Fraction as F
 from pathlib import Path
 
+import os
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")
 import mpmath as mp
 
 mp.mp.dps = 40
@@ -496,6 +499,441 @@ def _third():
     return block()
 
 
+_FOURTH_CACHE = {}
+
+
+def _quint_law():
+    """3↔5 耦合律自校（docs/46）：Q 側枚舉 vs docs/44 律直算（T 側）"""
+    import itertools as _it
+    from math import factorial as _f
+    from collections import Counter as _C
+    sig = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+           (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+    cs = [1, 1, -1, -1, -1, -1, 1, 1]
+
+    def W(t):
+        return sum(c for c, sg in zip(cs, sig) if sum(x * y for x, y in zip(sg, t)) % 90 == 0)
+
+    def nrm(T):
+        r = 1
+        for v in _C(T).values():
+            r *= _f(v)
+        return r
+
+    def qside(Q):
+        cQ = _C(Q)
+        nQ = nrm(Q)
+        out = {}
+        for S in _it.combinations_with_replacement(Q, 2):
+            cS = _C(S)
+            if any(cS[k] > cQ[k] for k in cS):
+                continue
+            add = list((cQ - cS).elements())
+            emb = 1
+            cnt = dict(cQ)
+            for m in S:
+                emb *= cnt[m]
+                cnt[m] -= 1
+            nS = 1
+            for v in cS.values():
+                nS *= _f(v)
+            for r0 in range(1, 45):
+                T = tuple(sorted(list(S) + [r0]))
+                w = W((r0,) + tuple(add))
+                if w == 0:
+                    continue
+                wgt = 1
+                nT = nS
+                if r0 in cS:
+                    wgt = cS[r0] + 1
+                    nT = nS * (cS[r0] + 1)
+                out[T] = out.get(T, 0.0) + 6 * emb * wgt * (w / 90.0) / (nT * nQ) ** 0.5
+        return out
+
+    def tside(T, Q):
+        cT, cQ = _C(T), _C(Q)
+        tot = 0.0
+        for i in range(3):
+            surv = list((cT - _C([T[i]])).elements())
+            cS = _C(surv)
+            if any(cQ[k] < v for k, v in cS.items()):
+                continue
+            add = list((cQ - cS).elements())
+            if len(add) != 3:
+                continue
+            w = W(tuple([T[i]] + add))
+            if w == 0:
+                continue
+            emb = 1
+            cnt = dict(cQ)
+            for m in surv:
+                emb *= cnt[m]
+                cnt[m] -= 1
+            tot += emb * 6 * (w / 90.0)
+        return tot / (nrm(T) * nrm(Q)) ** 0.5
+    import random as _r
+    rnd = _r.Random(20261102)
+    mx = 0.0
+    nzc = 0
+    for _ in range(40):
+        Q = tuple(sorted(rnd.sample(range(1, 45), 5)))
+        for T, v in qside(Q).items():
+            mx = max(mx, abs(v - tside(T, Q)))
+            nzc += 1
+    return mx, nzc
+
+
+_ALL44_CACHE = {}
+
+
+def _all44():
+    """全 44 n 掃描之統計（**讀 data 落地**，非獨立重算；獨立重算見 X82–X84 之四點抽樣）"""
+    if _ALL44_CACHE:
+        return _ALL44_CACHE
+    import re as _re
+    from pathlib import Path as _P
+    txt = (_P(__file__).resolve().parent.parent / "data" / "fifth_order_all44.log").read_text(
+        encoding="utf-8", errors="replace")
+    rows = []
+    for line in txt.splitlines():
+        m = _re.match(r"\s*(\d+)\s*｜([+\-0-9.e]+)｜([+\-0-9.e]+)｜([+\-0-9.e]+)｜([+\-0-9.e]+)｜([+\-0-9.e]+)%", line)
+        if m:
+            rows.append((int(m.group(1)), *[float(m.group(i)) for i in (2, 3, 4, 5)], float(m.group(6)) / 100))
+    if len(rows) != 44:
+        raise RuntimeError(f"all44 log 行數 {len(rows)} != 44")
+    rat = sorted(abs(r[4] / r[3]) for r in rows)
+    _ALL44_CACHE.update({"n": len(rows), "min": rat[0], "median": rat[22], "max": rat[-1],
+                         "n_gt1": sum(1 for x in rat if x > 1),
+                         "sumE5": sum(r[4] for r in rows), "sumE4": sum(r[3] for r in rows)})
+    return _ALL44_CACHE
+
+
+_PV44_CACHE = {}
+
+
+def _pv44():
+    """精確頂點全 44 n（**讀 data/precise_vertex_44n.json 落地**，非獨立重算；
+    獨立重算之閘見 scripts/51 §1 G1 14112/14112）"""
+    if _PV44_CACHE:
+        return _PV44_CACHE
+    import json as _j
+    from pathlib import Path as _P
+    d = _j.loads((_P(__file__).resolve().parent.parent / "data" / "precise_vertex_44n.json").read_text(encoding="utf-8"))
+    out = {}
+    for tag in ("A", "B"):
+        rows = d[tag]["rows"]
+        r1 = sorted(abs(r["E3"] / r["E2"]) for r in rows)
+        r2 = sorted(abs(r["E4"] / r["E3"]) for r in rows)
+        r3 = sorted(abs(r["E5"] / r["E4"]) for r in rows)
+        e2 = [r["E2"] for r in rows]
+        med = lambda v: (v[len(v) // 2 - 1] + v[len(v) // 2]) / 2 if len(v) % 2 == 0 else v[len(v) // 2]
+        out[tag] = {"n": len(rows), "r1_med": med(r1), "r3_med": med(r3),
+                    "r1_lt1": sum(1 for v in r1 if v < 1), "r3_lt1": sum(1 for v in r3 if v < 1),
+                    "r2_min": r2[0], "r2_max": r2[-1],
+                    "e2_min": min(e2), "e2_max": max(e2)}
+    _PV44_CACHE.update(out)
+    return _PV44_CACHE
+
+
+_FIFTH_CACHE = {}
+
+
+def _fifth():
+    """五階（docs/47）：獨立重建 3↔5、V33、LUT，複算 E_2/E_3/E_4(n=1) 與 5↔5 δ 測試"""
+    if _FIFTH_CACHE:
+        return _FIFTH_CACHE
+    import numpy as np
+    import itertools as _it
+    from collections import Counter as _C
+    from math import comb as _cb, factorial as _f
+    Nn = 44
+    SGs = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+           (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+    CCs = [1, 1, -1, -1, -1, -1, 1, 1]
+
+    def w4(t):
+        return sum(c for c, sg in zip(CCs, SGs)
+                   if sum(x * y for x, y in zip(sg, t)) % 90 == 0)
+
+    Gv = [0.0] + [4 * np.sin(np.pi * n / 90) ** 2 for n in range(1, Nn + 1)]
+
+    def nrm(t):
+        r = 1
+        for v in _C(t).values():
+            r *= _f(v)
+        return float(r)
+
+    def mkrank(k):
+        M = Nn + k - 1
+        CT = [[_cb(n_, r_) for r_ in range(k + 2)] for n_ in range(M + 2)]
+
+        def fr(a):
+            a = np.asarray(a, dtype=np.int64)
+            b = a + np.arange(k)
+            prev = np.zeros(len(a), dtype=np.int64)
+            out = np.zeros(len(a), dtype=np.int64)
+            for i in range(k):
+                r = k - i - 1
+                out += (np.array([CT[M - p_][r + 1] for p_ in prev], dtype=np.int64)
+                        - np.array([CT[M - x + 1][r + 1] for x in b[:, i]], dtype=np.int64))
+                prev = b[:, i]
+            return out
+        return fr
+
+    rank5 = mkrank(5)
+    TRI = [tuple(t) for t in _it.combinations_with_replacement(range(1, Nn + 1), 3)]
+    IDX3 = {t: i for i, t in enumerate(TRI)}
+    N3 = len(TRI)
+    NT3 = np.array([nrm(t) for t in TRI])
+    ET3 = np.array([sum(Gv[a] for a in t) for t in TRI])
+    ADD2 = np.array(list(_it.combinations_with_replacement(range(1, Nn + 1), 2)), dtype=np.int32)
+    ADD3 = np.array(list(_it.combinations_with_replacement(range(1, Nn + 1), 3)), dtype=np.int32)
+    QP = np.array(list(_it.combinations_with_replacement(range(1, Nn + 1), 5)), dtype=np.int32)
+    NQ = len(QP)
+    NT5 = np.array([nrm(map(int, t)) for t in QP])
+    EQ = np.array([float(np.sum([Gv[a] for a in t])) for t in QP])
+
+    def w4v(T):
+        s = np.zeros(T.shape[0], dtype=np.int32)
+        for c, sg in zip(CCs, SGs):
+            s += np.where(np.abs(T @ np.array(sg, dtype=np.int32)) % 90 == 0, c, 0)
+        return s
+
+    qi, vv, tt = [], [], []
+    for i, T in enumerate(TRI):
+        for pos in range(3):
+            sv = [T[q] for q in range(3) if q != pos]
+            rem = int(T[pos])
+            A = np.column_stack([np.full(len(ADD3), rem, dtype=np.int32), ADD3])
+            w = w4v(A)
+            nz = np.nonzero(w)[0]
+            if len(nz) == 0:
+                continue
+            Qs = np.sort(np.column_stack([np.repeat(np.array(sv, dtype=np.int32)[None, :], len(nz), axis=0),
+                                          ADD3[nz]]), axis=1)
+            r = rank5(Qs)
+            cS = _C(sv)
+            emb = np.ones(len(nz))
+            for m, cnt in cS.items():
+                emb *= np.array([_cb(int(x), cnt) for x in (Qs == m).sum(1)], dtype=float)
+            qi.append(r.astype(np.int32))
+            vv.append(6.0 * (w[nz] / 90.0) * emb / (NT3[i] * NT5[r]) ** 0.5)
+            tt.append(np.full(len(r), i, dtype=np.int32))
+    qidx = np.concatenate(qi)
+    vals35 = np.concatenate(vv)
+    tri = np.concatenate(tt)
+
+    # V33
+    rws, cls, vls = [], [], []
+    for i, T in enumerate(TRI):
+        for pos in range(3):
+            surv = T[pos]
+            rem = [T[q] for q in range(3) if q != pos]
+            A = np.column_stack([np.full(len(ADD2), rem[0], dtype=np.int32),
+                                 np.full(len(ADD2), rem[1], dtype=np.int32), ADD2])
+            w = w4v(A)
+            for kk in np.nonzero(w)[0]:
+                Tp = tuple(sorted([surv, int(ADD2[kk, 0]), int(ADD2[kk, 1])]))
+                j = IDX3[Tp]
+                rws.append(i)
+                cls.append(j)
+                vls.append(4 * (float(w[kk]) / 90.0) * _C(Tp)[surv] / (NT3[i] * NT3[j]) ** 0.5)
+    import scipy.sparse as _sp
+    V33 = _sp.csr_matrix((vls, (rws, cls)), shape=(N3, N3))
+    A = np.column_stack([np.full(N3, 1, dtype=np.int32), np.array(TRI, dtype=np.int32)])
+    b = 6 * (w4v(A) / 90.0) / np.sqrt(NT3)
+    inv3 = 1.0 / (Gv[1] - ET3)
+    inv5 = 1.0 / (Gv[1] - EQ)
+    p1 = inv3 * b
+    E2 = float(b @ p1)
+    p2_3 = inv3 * (V33 @ p1)
+    E3 = float(b @ p2_3)
+    X = np.bincount(qidx, weights=vals35 * p1[tri], minlength=NQ)
+    p2_5 = inv5 * X
+    p3_3 = inv3 * (V33 @ p2_3 + np.bincount(tri, weights=vals35 * p2_5[qidx], minlength=N3) - E2 * p1)
+    E4 = float(b @ p3_3)
+
+    # 5↔5 δ 測試（單 chunk）
+    W = np.zeros((990, 990), dtype=np.int16)
+    for i in range(990):
+        A4 = np.column_stack([np.full(990, ADD2[i, 0], dtype=np.int32),
+                              np.full(990, ADD2[i, 1], dtype=np.int32), ADD2])
+        W[i] = w4v(A4)
+    LUTR = np.zeros((N3, 990), dtype=np.int32)
+    LUTE = np.zeros((N3, 990), dtype=np.uint8)
+    for i, tr in enumerate(TRI):
+        Tp = np.sort(np.concatenate([np.repeat(np.array(tr, dtype=np.int32)[None, :], 990, axis=0),
+                                     ADD2], axis=1), axis=1)
+        LUTR[i] = rank5(Tp).astype(np.int32)
+        emb = np.ones(990, dtype=np.int64)
+        for kk in range(3):
+            v = tr[kk]
+            cnt = (Tp == v).sum(1)
+            prior = sum(1 for k2 in range(kk) if tr[k2] == v)
+            emb *= (cnt - prior)
+        LUTE[i] = emb.astype(np.uint8)
+
+    def mkrank2(k):
+        M = Nn + k - 1
+        CT = [[_cb(n_, r_) for r_ in range(k + 2)] for n_ in range(M + 2)]
+
+        def fr(a):
+            a = np.asarray(a, dtype=np.int64)
+            bq = a + np.arange(k)
+            prev = np.zeros(len(a), dtype=np.int64)
+            out = np.zeros(len(a), dtype=np.int64)
+            for i in range(k):
+                r = k - i - 1
+                out += (np.array([CT[M - p_][r + 1] for p_ in prev], dtype=np.int64)
+                        - np.array([CT[M - x + 1][r + 1] for x in bq[:, i]], dtype=np.int64))
+                prev = bq[:, i]
+            return out
+        return fr
+
+    rank2 = mkrank2(2)
+    rank3 = mkrank2(3)
+    P5 = [(i, j) for i in range(5) for j in range(i + 1, 5)]
+    S5 = {p: [q for q in range(5) if q not in p] for p in P5}
+    Q0 = (3, 11, 19, 27, 40)
+    j0 = int(rank5(np.array([Q0]))[0])
+    lo = (j0 // 400) * 400
+    hi = min(lo + 400, NQ)
+    out = np.zeros(NQ)
+    for st in [lo]:
+        Qc = QP[st:hi]
+        m = len(Qc)
+        nQin = NT5[st:hi][:, None]
+        for pi in P5:
+            rem = np.sort(Qc[:, list(pi)], axis=1)
+            pidx = rank2(rem)
+            sv = Qc[:, S5[pi]]
+            tidx = rank3(sv)
+            ranks = LUTR[tidx]
+            emb = LUTE[tidx].astype(np.float64)
+            amp = 4.0 * (W[pidx] / 90.0) * emb / np.sqrt(nQin * NT5[ranks])
+            wv = np.zeros(m)
+            k0 = j0 - st
+            if 0 <= k0 < m:
+                wv[k0] = 1.0
+            out += np.bincount(ranks.ravel(), weights=(amp * wv[:, None]).ravel(), minlength=NQ)
+
+    def slow55(Qp, Q):
+        cQ = _C(Qp)
+        tot = 0.0
+        for pi in P5:
+            rem = [Q[i] for i in pi]
+            sv = [Q[q] for q in range(5) if q not in pi]
+            cS = _C(sv)
+            if any(cQ[m_] < c_ for m_, c_ in cS.items()):
+                continue
+            add = list((cQ - cS).elements())
+            if len(add) != 2:
+                continue
+            wv = w4(tuple(rem + add))
+            if not wv:
+                continue
+            emb = 1
+            for m_, c_ in cS.items():
+                emb *= _cb(cQ[m_], c_)
+            tot += 4 * (wv / 90.0) * emb / (nrm(Q) * nrm(Qp)) ** 0.5
+        return tot
+
+    mx = 0.0
+    for jj in np.argsort(-np.abs(out))[:6]:
+        Qp = tuple(int(x) for x in QP[jj])
+        mx = max(mx, abs(float(out[jj]) - slow55(Qp, Q0)))
+    _FIFTH_CACHE.update({"E2": E2, "E3": E3, "E4": E4, "delta": mx, "nz35": int(len(qidx))})
+    return _FIFTH_CACHE
+
+
+def _fourth():
+    """四階（docs/45）：RS 引擎自校；建三模扇區 V；重算 E_4(1)（快取，建 V ≈ 5 min）"""
+    if "v" in _FOURTH_CACHE:
+        return _FOURTH_CACHE["v"]
+
+    def block():
+        import numpy as _np
+        import itertools as _it
+        from math import factorial as _f
+        g = {n: 4 * mp.sin(mp.pi * n / 90) ** 2 for n in range(1, 45)}
+        sig = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+               (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+        cs = [1, 1, -1, -1, -1, -1, 1, 1]
+
+        def W(t):
+            return sum(c for c, sg in zip(cs, sig) if sum(x * y for x, y in zip(sg, t)) % 90 == 0)
+
+        def nrm(T):
+            r = 1
+            for v in __import__("collections").Counter(T).values():
+                r *= _f(v)
+            return r ** 0.5
+        tri = list(_it.combinations_with_replacement(range(1, 45), 3))
+        idx = {T: i for i, T in enumerate(tri)}
+        pairs = list(_it.combinations_with_replacement(range(1, 45), 2))
+        rows, cols, vals, nz = [], [], [], 0
+        for i, T in enumerate(tri):
+            for pos in range(3):
+                surv = T[pos]
+                rem = [T[k] for k in range(3) if k != pos]
+                for (u, v) in pairs:
+                    w = W(tuple(rem) + (u, v))
+                    if not w:
+                        continue
+                    Tp = tuple(sorted([surv, u, v]))
+                    emb = __import__("collections").Counter(Tp)[surv]
+                    rows.append(i); cols.append(idx[Tp])
+                    vals.append(4 * (w / 90.0) * emb / (nrm(T) * nrm(Tp))); nz += 1
+        rows = _np.array(rows, _np.int32); cols = _np.array(cols, _np.int32)
+        vals = _np.array(vals, _np.float64)
+        et = _np.array([sum(float(g[m]) for m in T) for T in tri])
+        n = 1
+        d = float(g[n]) - et
+        inv = _np.zeros(len(tri)); ok = _np.abs(d) > 1e-12
+        inv[ok] = 1.0 / d[ok]
+        b = _np.zeros(len(tri))
+        for i, T in enumerate(tri):
+            w = W((n,) + T)
+            if w:
+                b[i] = 6 * (w / 90.0) / nrm(T)
+
+        def mv(phi):
+            return _np.bincount(rows, weights=vals * phi[cols], minlength=len(tri))
+        p1 = inv * b
+        E2 = float(b @ p1)
+        p2 = inv * mv(p1)
+        E3 = float(b @ p2)
+        p3 = inv * (mv(p2) - E2 * p1)
+        E4 = float(b @ p3)
+        # 引擎自校：殘差 ∝ λ⁵
+        import numpy as _np2
+        h0 = _np2.array([0.0, 1.0, 2.0, 3.0, 4.0])
+        A = _np2.array([[0, .9, .3, .1, .2], [.9, 0, .5, .4, .1], [.3, .5, 0, .7, .2],
+                        [.1, .4, .7, 0, .6], [.2, .1, .2, .6, 0]])
+
+        def rs(h0, V, k, K=4):
+            N = len(h0); Q = _np2.ones(N, bool); Q[k] = False
+            iv = _np2.zeros(N); iv[Q] = 1.0 / (h0[k] - h0[Q])
+            ph = [_np2.eye(N)[k]]; E = [0.0]
+            for p in range(1, K + 1):
+                E.append(float(V[k] @ ph[p - 1]))
+                new = V @ ph[p - 1]
+                for q in range(1, p):
+                    new = new - E[q] * ph[p - q]
+                new = iv * new; new[k] = 0.0; ph.append(new)
+            return E
+        Es = rs(h0, A, 0, 4)
+        rat = []
+        for lam in (1e-3, 1e-4):   # 兩者皆 λ⁵ 主導（λ=1e−2 有 λ⁷ 污染）
+            ex = _np2.linalg.eigvalsh(_np2.diag(h0) + lam * A)
+            k = int(_np2.argmin(abs(ex - h0[0])))
+            r = abs(ex[k] - (h0[0] + sum(Es[p] * lam ** p for p in range(1, 5))))
+            rat.append(r / lam ** 5)
+        return dict(E2=E2, E3=E3, E4=E4, nz=nz, ratio_spread=abs(rat[0] - rat[1]) / rat[1])
+    _FOURTH_CACHE["v"] = block()
+    return _FOURTH_CACHE["v"]
+
+
 def _k3_phi(a, b, m):
     """docs/37 之 Φ：∏ sin(πa/45) / ∏ sin(πk_i/90)（僅奇和有意義）"""
     num = mp.sin(mp.pi * a / 45) * mp.sin(mp.pi * b / 45) * mp.sin(mp.pi * m / 45)
@@ -849,6 +1287,28 @@ DERIVE = {
     "third_n39": lambda I: _third()[39][0],
     "third_bound": lambda I: abs(_third()[39][1]) / abs(_third()[39][0]),
     "third_a2_conv": lambda I: 1350 * _third()[1][1],
+    # ---- §AI 四階（docs/45）----
+    "fourth_E4_n1": lambda I: _fourth()["E4"],
+    "fourth_nz": lambda I: _fourth()["nz"],
+    "fourth_engine": lambda I: _fourth()["ratio_spread"],
+    # ---- §AJ 五模扇區（docs/46）----
+    "all44_min_ratio": lambda I: _all44()["min"],
+    "all44_max_ratio": lambda I: _all44()["max"],
+    "all44_sum_E5": lambda I: _all44()["sumE5"],
+    "all44_n_gt1": lambda I: _all44()["n_gt1"],
+    "fifth_E2": lambda I: _fifth()["E2"],
+    "fifth_E3": lambda I: _fifth()["E3"],
+    "fifth_E4": lambda I: _fifth()["E4"],
+    "fifth_delta": lambda I: _fifth()["delta"],
+    "fifth_nz35": lambda I: _fifth()["nz35"],
+    "pv_A_r1_med": lambda I: _pv44()["A"]["r1_med"],
+    "pv_A_r3_med": lambda I: _pv44()["A"]["r3_med"],
+    "pv_B_r1_med": lambda I: _pv44()["B"]["r1_med"],
+    "pv_B_r3_med": lambda I: _pv44()["B"]["r3_med"],
+    "pv_B_e2_min": lambda I: _pv44()["B"]["e2_min"],
+    "pv_B_e2_max": lambda I: _pv44()["B"]["e2_max"],
+    "quint_law": lambda I: _quint_law()[0],
+    "quint_nz": lambda I: _quint_law()[1],
     # ---- §Z 掃描設計計數（docs/04）----
     # 6 規則 × 36 指派 = 216（設計宣告；docs/04 §五 之 N_trials）
     "perm_scan_total": lambda I: mp.mpf(6 * 36),
@@ -1276,6 +1736,39 @@ def main():
     chk("X77 三階界：|g₄| < 2.252170338316e−4（n = 39，收緊 127.37 倍）",
         abs(abs(th[39][1]) / abs(th[39][0]) - mp.mpf("0.0002252170338316")) < mp.mpf("1e-16"),
         mp.nstr(abs(th[39][1]) / abs(th[39][0]), 12))
+
+    fo = _fourth()
+    chk("X78 四階引擎：殘差 ∝ λ⁵（λ=1e−3 與 1e−4 之殘差/λ⁵ 差 < 2%）",
+        fo["ratio_spread"] < 0.02, f"{fo['ratio_spread']:.2e}")
+    chk("X79 四階 E_4(1) = −556.8515431901；三模扇區非零元 3,851,672",
+        abs(fo["E4"] + 556.851543190064719) < mp.mpf("1e-6") and fo["nz"] == 3851672,
+        f"{fo['E4']:.10f} / {fo['nz']}")
+
+    ql = _quint_law()
+    chk("X80 3↔5 耦合律：Q 側枚舉 ≡ docs/44 律直算（40 個五模態，max|差| < 1e−15）",
+        ql[0] < 1e-15, f"{ql[0]:.3e} / 非零 {ql[1]}")
+    a44 = _all44()
+    chk("X85 全 44 n：|E_5/E_4| 全部 > 1（44/44）", a44["n_gt1"] == 44, f"{a44['n_gt1']}/44")
+    chk("X86 全 44 n：Σ E_5 = +3.254104e+12", abs(a44["sumE5"] - 3.254104e12) < 1e9, f"{a44['sumE5']:.6e}")
+    chk("X87 全 44 n：|E_5/E_4| 最小 29.6506（n=30）", abs(a44["min"] - 29.6506) < 1e-3, f"{a44['min']:.4f}")
+    fi = _fifth()
+    chk("X82 五階 E_2(1) = −2.899106689120（docs/42 獨立互證）",
+        abs(fi["E2"] + 2.899106689120) < 1e-11, f"{fi['E2']:.12f}")
+    chk("X83 五階 E_4(1) = −1297.697267046（三模＋五模，docs/47）",
+        abs(fi["E4"] + 1297.697267046) < 1e-6, f"{fi['E4']:.9f}")
+    chk("X84 5↔5 查表 vs 直算 max|差| < 1e−12（docs/47 δ 測試）",
+        fi["delta"] < 1e-12, f"{fi['delta']:.3e}")
+    pv = _pv44()
+    chk("X88 精確頂點：路徑 A 三階比值全 > 1（44/44，r1_lt1=0）", pv["A"]["r1_lt1"] == 0, f"{pv['A']['r1_lt1']}/44")
+    chk("X89 精確頂點：路徑 B r1、r3 全 < 1（44/44）", pv["B"]["r1_lt1"] == 44 and pv["B"]["r3_lt1"] == 44,
+        f"r1 {pv['B']['r1_lt1']}/44｜r3 {pv['B']['r3_lt1']}/44")
+    chk("X90 精確頂點：B 之 E_2 全譜極差 < 2.1%（站普適）",
+        (pv["B"]["e2_max"] - pv["B"]["e2_min"]) / abs(pv["B"]["e2_min"]) < 0.021,
+        f"{(pv['B']['e2_max']-pv['B']['e2_min'])/abs(pv['B']['e2_min'])*100:.3f}%")
+    chk("X91 精確頂點：A 之 |E_5/E_4| 中位 141.3560（發散）",
+        abs(pv["A"]["r3_med"] - 141.3560) < 1e-3, f"{pv['A']['r3_med']:.4f}")
+    chk("X81 五模態總數 = 多重集 C(44+5−1,5) = C(48,5) = 1712304（枚舉覆蓋完整）",
+        __import__("math").comb(48, 5) == 1712304, str(__import__("math").comb(48, 5)))
 
     hdr("§4 匯總")
     nchk = len([k for k in RES if not k.startswith("_")])

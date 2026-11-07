@@ -77,6 +77,10 @@ LOGS = {
     "43_second_order_selfenergy": "run_43_second_order.log",
     "44_bubble_and_sign": "run_44_bubble_sign.log",
     "45_third_order": "run_45_third_order.log",
+    "46_fourth_order": "run_46_fourth_order.log",
+    "47_quint_sector": "run_47_quint_sector.log",
+    "48_fifth_order": "run_48_fifth_order.log",
+    "51_precise_vertex": "run_51_precise_vertex.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -132,6 +136,9 @@ def main():
         "07_verdicts_and_handoffs.md": "判詞與移交敘述表：全部數字引他 doc，本身無 producer",
         "09_correction_object_type.md": "概念更正（對象型別）；唯一精確值屬 M5 跨記錄",
         "13_channel_fate_correction.md": "讀法更正記錄：程式與 log 保留不動（append-only）",
+        "49_final_push.md": "診斷類：四支 scratch 診斷腳本（diag46／conv_test／n3033／adjoint35）產出，"
+                            "數字落 data/final_push_stats.json；主結論以 docs/44 已封錨作試金石，"
+                            "不重算 docs/42–48；診斷腳本未入 scripts/（成本 >35 min／跑且屬一次性）",
     }
 
     hdr("§② 逆向綁定：每份 doc 有 producer script")

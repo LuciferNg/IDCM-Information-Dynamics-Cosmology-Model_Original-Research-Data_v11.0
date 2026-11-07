@@ -1,0 +1,82 @@
+{
+ "script": "scripts/48_fifth_order.py --all",
+ "source_log": "data/fifth_order_all44.log",
+ "n_modes": 44,
+ "runtime_s": 10627.9,
+ "regression_vs_docs47_max_rel": 4.174e-11,
+ "absE5_E4": {
+  "min": 29.6506,
+  "min_n": 30,
+  "median": 1741.5439,
+  "max": 130915.9153,
+  "max_n": 38,
+  "n_gt1": 44
+ },
+ "absE4_E3": {
+  "min": 29.812,
+  "median": 127.4563,
+  "max": 2727.1916,
+  "n_gt1": 44
+ },
+ "sum_E4": -686966200.0,
+ "sum_E5": 3254104000000.0,
+ "sign_E4_pos": 7,
+ "sign_E5_pos": 41,
+ "corr55": {
+  "median_pct": 23.516,
+  "max_pct": 329.077,
+  "max_n": 39,
+  "min_pct": -59.147,
+  "min_n": 30,
+  "n_gt5pct": 36,
+  "n_lt1pct": 3,
+  "lt1pct_ns": [
+   3,
+   43,
+   44
+  ],
+  "negative_ns": [
+   [
+    17,
+    -5.078
+   ],
+   [
+    30,
+    -59.147
+   ],
+   [
+    33,
+    -39.584
+   ]
+  ],
+  "segment_avg_max_pct": {
+   "1-11": [
+    20.29,
+    41.21
+   ],
+   "12-22": [
+    31.28,
+    72.36
+   ],
+   "23-33": [
+    41.91,
+    154.63
+   ],
+   "34-44": [
+    38.58,
+    329.08
+   ]
+  },
+  "pearson_abs_vs_n": 0.1381
+ },
+ "near_degeneracy": {
+  "n30_min_dE": 9.768e-06,
+  "n33_min_dE": 9.768e-06,
+  "n43_min_dE": 6.562e-06,
+  "n30_corr_pct": -59.147,
+  "n33_corr_pct": -39.584,
+  "n43_corr_pct": 0.7745
+ },
+ "sum_E4_str": "-6.869662e+08",
+ "sum_E5_str": "+3.254104e+12"
+}

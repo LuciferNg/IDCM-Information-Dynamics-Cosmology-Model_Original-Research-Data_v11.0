@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "218 keys"
+    "detail": "238 keys"
   },
   "C.01_reproduction_ga.A₂⊕1 = 44": {
     "pass": true,
@@ -507,6 +507,70 @@
     "pass": true,
     "detail": "L2 -3913.79 ↔ 文檔 3913.79（rel 1.2e-16）"
   },
+  "C.49_final_push.md.raw 公約 E_3(1) = 36.905182722448": {
+    "pass": true,
+    "detail": "L2 36.9052 ↔ 文檔 36.9052（rel 0.0e+00）"
+  },
+  "C.50_precise_vertex..A |E_3/E_2| 中位 10.6459": {
+    "pass": true,
+    "detail": "L2 10.6459 ↔ 文檔 10.6459（rel 6.7e-08）"
+  },
+  "C.50_precise_vertex..A |E_5/E_4| 中位 141.3560": {
+    "pass": true,
+    "detail": "L2 141.356 ↔ 文檔 141.356（rel 7.8e-08）"
+  },
+  "C.50_precise_vertex..B |E_3/E_2| 中位 0.0648": {
+    "pass": true,
+    "detail": "L2 0.0648066 ↔ 文檔 0.0648（rel 1.0e-04）"
+  },
+  "C.50_precise_vertex..B |E_5/E_4| 中位 0.3458": {
+    "pass": true,
+    "detail": "L2 0.345811 ↔ 文檔 0.3458（rel 3.2e-05）"
+  },
+  "C.50_precise_vertex..B E_2 下界 −0.633720": {
+    "pass": true,
+    "detail": "L2 -0.63372 ↔ 文檔 0.63372（rel 6.9e-13）"
+  },
+  "C.50_precise_vertex..B E_2 上界 −0.621048": {
+    "pass": true,
+    "detail": "L2 -0.621048 ↔ 文檔 0.621048（rel 2.4e-07）"
+  },
+  "C.48_fifth_order_all.|E_5/E_4| 全譜最小 29.6506": {
+    "pass": true,
+    "detail": "L2 29.6506 ↔ 文檔 29.6506（rel 3.8e-07）"
+  },
+  "C.48_fifth_order_all.|E_5/E_4| 全譜最大 130915.9153": {
+    "pass": true,
+    "detail": "L2 130916 ↔ 文檔 130916（rel 1.6e-10）"
+  },
+  "C.48_fifth_order_all.Σ E_5 = +3.254104e+12": {
+    "pass": true,
+    "detail": "L2 3.2541e+12 ↔ 文檔 3.2541e+12（rel 9.4e-08）"
+  },
+  "C.47_fifth_order.md.E_4(1) = −1,297.697267": {
+    "pass": true,
+    "detail": "L2 -1297.7 ↔ 文檔 1297.7（rel 3.5e-11）"
+  },
+  "C.47_fifth_order.md.E_2(1) = −2.899106689": {
+    "pass": true,
+    "detail": "L2 -2.89911 ↔ 文檔 2.89911（rel 4.2e-11）"
+  },
+  "C.47_fifth_order.md.3↔5 非零元 58442310": {
+    "pass": true,
+    "detail": "L2 5.84423e+07 ↔ 文檔 5.84423e+07（rel 0.0e+00）"
+  },
+  "C.46_quint_sector.md.3↔5 對稱核 max|差| = 0": {
+    "pass": true,
+    "detail": "L2 0 ↔ 文檔 0（rel 0.0e+00）"
+  },
+  "C.45_fourth_order.md.A4_1 = −556.8515431901": {
+    "pass": true,
+    "detail": "L2 -556.852 ↔ 文檔 556.852（rel 6.3e-14）"
+  },
+  "C.45_fourth_order.md.非零元 3,851,672": {
+    "pass": true,
+    "detail": "L2 3.85167e+06 ↔ 文檔 3.85167e+06（rel 0.0e+00）"
+  },
   "C.04_q2b_permutation.216 獨立重跑（6 規則 × 36 指派）": {
     "pass": true,
     "detail": "L2 216 ↔ 文檔 216（rel 0.0e+00）"
@@ -691,8 +755,32 @@
     "pass": true,
     "detail": ""
   },
+  "F.docs/45_fourth_order.md 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/46_quint_sector.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/47_fifth_order.md 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/48_fifth_order_all44.md 全命中（3/3）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/49_final_push.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/50_precise_vertex.md 全命中（6/6）": {
+    "pass": true,
+    "detail": ""
+  },
   "_summary": {
-    "checks": 173,
+    "checks": 195,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": [
@@ -830,6 +918,30 @@
       "docs/44_third_order.md": [
         3,
         3
+      ],
+      "docs/49_final_push.md": [
+        1,
+        1
+      ],
+      "docs/50_precise_vertex.md": [
+        6,
+        6
+      ],
+      "docs/48_fifth_order_all44.md": [
+        3,
+        3
+      ],
+      "docs/47_fifth_order.md": [
+        3,
+        3
+      ],
+      "docs/46_quint_sector.md": [
+        1,
+        1
+      ],
+      "docs/45_fourth_order.md": [
+        2,
+        2
       ],
       "docs/04_q2b_permutation_uniqueness.md": [
         1,
