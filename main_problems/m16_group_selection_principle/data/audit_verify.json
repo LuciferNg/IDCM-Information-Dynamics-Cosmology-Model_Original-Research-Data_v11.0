@@ -96,12 +96,12 @@
     "detail": "[]"
   },
   "A12a 工作樹乾淨（排除審計輸出）": {
-    "pass": true,
-    "detail": "dirty=0"
+    "pass": false,
+    "detail": "dirty=1"
   },
   "A12b 全部文檔／腳本已入 git": {
-    "pass": true,
-    "detail": "[]"
+    "pass": false,
+    "detail": "['UNTRACKED docs/10_audit_round.md']"
   },
   "G1a data/gap/ 被 git 忽略": {
     "pass": true,
@@ -125,6 +125,6 @@
   },
   "_summary": {
     "checks": 31,
-    "fail": 0
+    "fail": 2
   }
 }
