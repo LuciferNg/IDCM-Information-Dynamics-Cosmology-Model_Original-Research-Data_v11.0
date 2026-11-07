@@ -1,0 +1,51 @@
+{
+  "pass": 11,
+  "fail": 0,
+  "total": 11,
+  "detail": {
+    "L1 py 01_arithmetic_reduction.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=3380 identical=True"
+    },
+    "L1 py 03_variants_and_lookelsewhere.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=2606 identical=True"
+    },
+    "L1 py 05_candidate_principles.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=3930 identical=True"
+    },
+    "L1 py 06_minimum_cost_principle.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=2200 identical=True"
+    },
+    "L1 py 07_variational_axiom_attack.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=2148 identical=True"
+    },
+    "L1 py 08_mf1prime_mf2_attack.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=2215 identical=True"
+    },
+    "L1 py 09_mf1prime_dissolution.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=1296 identical=True"
+    },
+    "L1 gap 00_gap_named_degrees.g": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=1867 identical=True"
+    },
+    "L1 gap 02c_order_counts.g": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=3046 identical=True"
+    },
+    "L1 gap 04_gap_alternative_principles.g": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=1236 identical=True"
+    },
+    "L1 gap 02_gap_full_scan.g（md5 ≡ 入庫）": {
+      "pass": true,
+      "detail": "3dfd5d214f279707fba4390eb42b00e8 vs 3dfd5d214f279707fba4390eb42b00e8"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+[PASS] L2 存在且 FAIL=0  |  FAIL=0
+
+==============================================================================
+§1 逐 claim 核對
+==============================================================================
+[PASS] 01_r5_and_arithmetic_reduction.md :: ∏{3,4,5} = 60  |  exp=60 best=60.0 rel=0.000e+00 tol=5e-03
+[PASS] 01_r5_and_arithmetic_reduction.md :: Σ = 12  |  exp=12 best=12.0 rel=0.000e+00 tol=5e-03
+[PASS] 01_r5_and_arithmetic_reduction.md :: Σ=12 之集合恰 8 個  |  exp=8 best=8.0 rel=0.000e+00 tol=5e-03
+[PASS] 01_r5_and_arithmetic_reduction.md :: Σd² = 50  |  exp=50 best=50.0 rel=0.000e+00 tol=5e-03
+[PASS] 01_r5_and_arithmetic_reduction.md :: Σd + N_d = 60  |  exp=60 best=60.0 rel=0.000e+00 tol=5e-03
+[PASS] 02_global_scan_and_modifiers.md :: 92,570 群  |  exp=92570 best=92570.0 rel=0.000e+00 tol=5e-04
+[PASS] 02_global_scan_and_modifiers.md :: ∏=|G| 單獨 17 群  |  exp=17 best=17.0 rel=0.000e+00 tol=5e-03
+[PASS] 02_global_scan_and_modifiers.md :: Σ=12 單獨 267 群  |  exp=267 best=267.0 rel=0.000e+00 tol=5e-03
+[PASS] 02_global_scan_and_modifiers.md :: 去「相異」5 群 ∌A₅  |  exp=5 best=5.0 rel=0.000e+00 tol=5e-03
+[PASS] 02_global_scan_and_modifiers.md :: 去「非平凡」586 群  |  exp=586 best=586.0 rel=0.000e+00 tol=5e-03
+[PASS] 02_global_scan_and_modifiers.md :: 準則族 17/45 = 37.8%  |  exp=37.77777778 best=37.8 rel=5.882e-04 tol=5e-03
+[PASS] 03_criterion_source_and_verdict.md :: 階 60 之 13 群  |  exp=13 best=13.0 rel=0.000e+00 tol=5e-03
+[PASS] 03_criterion_source_and_verdict.md :: look-elsewhere 1.79%  |  exp=1.785714286 best=1.79 rel=2.400e-03 tol=5e-03
+[PASS] 03_criterion_source_and_verdict.md :: 深層 420  |  exp=420 best=420.0 rel=0.000e+00 tol=5e-03
+[PASS] 04_verdict_r5_and_status.md :: |G| = 60  |  exp=60 best=60.0 rel=0.000e+00 tol=5e-03
+[PASS] 04_verdict_r5_and_status.md :: 13 群  |  exp=13 best=13.0 rel=0.000e+00 tol=5e-03
+[PASS] 04_verdict_r5_and_status.md :: look-elsewhere 1.79%  |  exp=1.785714286 best=1.79 rel=2.400e-03 tol=5e-03
+[PASS] 05_minimum_cost_principle.md :: DNT={3,4,5} 之 11 群  |  exp=11 best=11.0 rel=0.000e+00 tol=5e-03
+[PASS] 05_minimum_cost_principle.md :: 深層 420  |  exp=420 best=420.0 rel=0.000e+00 tol=5e-03
+[PASS] 05_minimum_cost_principle.md :: 含 {3,4,5} 之 24 群  |  exp=24 best=24.0 rel=0.000e+00 tol=5e-03
+[FAIL] docs/05_minimum_cost_principle.md :: 最小階 60  |  錨點搵唔到：min = 60
+[PASS] 06_variational_axiom_attack.md :: γ_1 = 0.15224093…  |  exp=0.152240935 best=0.1522409349774265 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: γ_2 = 0.58578643…  |  exp=0.5857864376 best=0.585786437626905 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: γ_3 = 1.23463313…  |  exp=1.234633135 best=1.2346331352698205 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: γ_5 = 2.76536686…  |  exp=2.765366865 best=2.7653668647301797 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: γ_6 = 3.41421356…  |  exp=3.414213562 best=3.414213562373095 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: γ_7 = 3.84775906…  |  exp=3.847759065 best=3.8477590650225735 rel=0.000e+00 tol=1e-06
+[PASS] 06_variational_axiom_attack.md :: Δ_1 = +0.281305  |  exp=0.2813045677 best=0.281305 rel=1.537e-06 tol=1e-05
+[PASS] 06_variational_axiom_attack.md :: Δ_2 = +0.215301  |  exp=0.215301195 best=0.215301 rel=9.057e-07 tol=1e-05
+[PASS] 06_variational_axiom_attack.md :: Δ_3 = +0.116520  |  exp=0.1165201671 best=0.11652 rel=1.434e-06 tol=1e-05
+[PASS] 06_variational_axiom_attack.md :: 中項帶 nR = N_d = 44  |  exp=44 best=44.0 rel=0.000e+00 tol=5e-03
+[PASS] 06_variational_axiom_attack.md :: B=6 → 210  |  exp=210 best=210.0 rel=0.000e+00 tol=5e-03
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: Ω_b = 0.049302  |  exp=0.04930169233 best=0.049302 rel=6.241e-06 tol=1e-05
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: σ(Ω_b) = 0.000857  |  exp=0.0008568114275 best=0.000857 rel=2.201e-04 tol=1e-03
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: k = 1.0142  |  exp=1.01416397 best=1.0142 rel=3.553e-05 tol=1e-04
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: σ(k) = 0.0176  |  exp=0.01762510043 best=0.0176 rel=1.424e-03 tol=5e-03
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: z(k=2) = −55.93  |  exp=-55.93364046 best=55.93 rel=6.509e-05 tol=1e-04
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: z(k=3) = −112.67  |  exp=-112.6709058 best=112.67 rel=8.040e-06 tol=1e-04
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: z(k=4) = −169.41  |  exp=-169.4081712 best=169.41 rel=1.080e-05 tol=1e-04
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: k(H₀=0.674071) = 1.0156  |  exp=1.015582729 best=1.0156 rel=1.701e-05 tol=1e-04
+[PASS] 07_mf2_closed_mf1prime_narrowed.md :: 1/56 → 1.79%（級聯）  |  exp=1.785714286 best=1.79 rel=2.400e-03 tol=5e-03
+[PASS] 08_mf1prime_dissolution.md :: 8 集  |  exp=8 best=8.0 rel=0.000e+00 tol=5e-03
+[PASS] 08_mf1prime_dissolution.md :: 生還 1 集  |  exp=1 best=1.0 rel=0.000e+00 tol=5e-03
+[PASS] 08_mf1prime_dissolution.md :: 1/8 = 12.5%  |  exp=12.5 best=12.5 rel=0.000e+00 tol=5e-03
+[PASS] 08_mf1prime_dissolution.md :: 1/56 = 1.79%  |  exp=1.785714286 best=1.79 rel=2.400e-03 tol=5e-03
+[PASS] 08_mf1prime_dissolution.md :: γ_3+γ_5 = 4  |  exp=4 best=4.0 rel=0.000e+00 tol=5e-03
+
+==============================================================================
+§2 逐檔命中率（須 100%）
+==============================================================================
+[PASS] 01_r5_and_arithmetic_reduction.md 命中 5/5  |  100.0%
+[PASS] 02_global_scan_and_modifiers.md 命中 6/6  |  100.0%
+[PASS] 03_criterion_source_and_verdict.md 命中 3/3  |  100.0%
+[PASS] 04_verdict_r5_and_status.md 命中 3/3  |  100.0%
+[PASS] 05_minimum_cost_principle.md 命中 3/3  |  100.0%
+[PASS] 06_variational_axiom_attack.md 命中 11/11  |  100.0%
+[PASS] 07_mf2_closed_mf1prime_narrowed.md 命中 9/9  |  100.0%
+[PASS] 08_mf1prime_dissolution.md 命中 5/5  |  100.0%
+
+==============================================================================
+§3 負控制（期望值 +1 必須 FAIL）
+==============================================================================
+[PASS] N1 期望值+1 在文中無匹配（負控制）  |  命中 0
+
+==============================================================================
+§4 匯總
+==============================================================================
+檢查項 = 56，FAIL = 1
+
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/data/l3_doc_crosscheck.json
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/data/run_l3.log

@@ -89,3 +89,13 @@ docs/04_verdict_r5_and_status.md            本檔
 scripts/00–05 ＋ gap_run.sh ＋ run_02_parallel.sh
 data/run_00…05、run_02_scan_all_500.txt（92,570 行）、order_counts.txt、chunks/
 ```
+
+---
+
+## 附註（append-only，2026-11-07）：殘項措辭更正 ＋ 權威清單
+
+`MR3` 之原措辭「帶指數 {3,4,5} 之來源」**過寬**。上游 O171 已證 rung 指數本身唔係自由參數
+（`m = 5` 因 `R = 2N_d/2B = 11 = L₅`；`m = 4` 因 `420/60 = L₄`）；真正未閉者係**成員／帶之選擇**
+（O171 `docs/24 §2` 已判原理性封頂、改列結構事實）。
+`MF1`（變分公理）已撤回、`MF1′`（等距共振）已撤回、`MF2` 已閉合 —— 見 `docs/06`–`docs/08`。
+開放問題之唯一權威清單 = `docs/09_open_problems_inventory.md`（OA／OB／OC）。

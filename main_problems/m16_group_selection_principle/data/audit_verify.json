@@ -1,0 +1,130 @@
+{
+  "①a 宣告集全部在磁碟": {
+    "pass": true,
+    "detail": "缺 []"
+  },
+  "①b 磁碟無未宣告腳本": {
+    "pass": true,
+    "detail": "未列 []"
+  },
+  "①c 文檔引用之腳本全部存在": {
+    "pass": true,
+    "detail": "缺 []"
+  },
+  "② 92570 ← 03_variants_and_lookelsewhere.py": {
+    "pass": true,
+    "detail": "log=run_03.log"
+  },
+  "② 17 ← 03_variants_and_lookelsewhere.py": {
+    "pass": true,
+    "detail": "log=run_03.log"
+  },
+  "② 267 ← 03_variants_and_lookelsewhere.py": {
+    "pass": true,
+    "detail": "log=run_03.log"
+  },
+  "② 586 ← 03_variants_and_lookelsewhere.py": {
+    "pass": true,
+    "detail": "log=run_03.log"
+  },
+  "② 37.77 ← 03_variants_and_lookelsewhere.py": {
+    "pass": true,
+    "detail": "log=run_03.log"
+  },
+  "② 11 ← 05_candidate_principles.py": {
+    "pass": true,
+    "detail": "log=run_05.log"
+  },
+  "② 60 ← 06_minimum_cost_principle.py": {
+    "pass": true,
+    "detail": "log=run_06.log"
+  },
+  "② 0.281304 ← 07_variational_axiom_attack.py": {
+    "pass": true,
+    "detail": "log=run_07.log"
+  },
+  "② 1.0142 ← 08_mf1prime_mf2_attack.py": {
+    "pass": true,
+    "detail": "log=run_08.log"
+  },
+  "② 55.93 ← 08_mf1prime_mf2_attack.py": {
+    "pass": true,
+    "detail": "log=run_08.log"
+  },
+  "② 1.79 ← 09_mf1prime_dissolution.py": {
+    "pass": true,
+    "detail": "log=run_09.log"
+  },
+  "③a scripts 內零 prune 路徑（非註釋）": {
+    "pass": true,
+    "detail": "[]"
+  },
+  "③b gap_run.sh 指向記錄內 data/gap/root": {
+    "pass": true,
+    "detail": ""
+  },
+  "③c gap_setup.sh 存在（可重建部署）": {
+    "pass": true,
+    "detail": ""
+  },
+  "④a 宣告產物全部存在": {
+    "pass": true,
+    "detail": "缺 []"
+  },
+  "④b 無孤兒 data/run_*.log": {
+    "pass": true,
+    "detail": "孤兒 []"
+  },
+  "⑤⑦ docs 高精度數值全部可追溯": {
+    "pass": true,
+    "detail": "{}"
+  },
+  "⑥a run_chain.sh 存在": {
+    "pass": true,
+    "detail": ""
+  },
+  "⑥b driver 覆蓋全部核心＋L2/L3/audit": {
+    "pass": true,
+    "detail": "缺 []"
+  },
+  "A8a-1 「16.7%」每出現點帶標註": {
+    "pass": true,
+    "detail": "[]"
+  },
+  "A10 全部產物新於 producer": {
+    "pass": true,
+    "detail": "[]"
+  },
+  "A12a 工作樹乾淨（排除審計輸出）": {
+    "pass": false,
+    "detail": "dirty=42"
+  },
+  "A12b 全部文檔／腳本已入 git": {
+    "pass": false,
+    "detail": "['UNTRACKED docs/09_open_problems_inventory.md', 'UNTRACKED scripts/10_audit_verify.py', 'UNTRACKED scripts/11_l1_reproducibility.py', 'UNTRACKED scripts/gap_setup.sh', 'UNTRACKED scripts/l2_independent_verify.py', 'UNTRACKED scripts/l3_doc_crosscheck.py']"
+  },
+  "G1a data/gap/ 被 git 忽略": {
+    "pass": true,
+    "detail": "main_problems/m16_group_selection_principle/.gitignore:4:data/gap/\tdata/gap/root"
+  },
+  "G1b GAP 可執行存在": {
+    "pass": true,
+    "detail": ""
+  },
+  "L1 雙跑 byte-identical 全過": {
+    "pass": true,
+    "detail": "11/11 fail=0"
+  },
+  "L2 FAIL=0": {
+    "pass": true,
+    "detail": "{'checks': 18, 'fail': 0, 'n_derived': 69}"
+  },
+  "L3 FAIL=0": {
+    "pass": true,
+    "detail": "0"
+  },
+  "_summary": {
+    "checks": 31,
+    "fail": 2
+  }
+}

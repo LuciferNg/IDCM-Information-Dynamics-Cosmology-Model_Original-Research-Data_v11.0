@@ -1,0 +1,16 @@
+==============================================================================
+L1 雙跑重現性
+==============================================================================
+[PASS] L1 py 01_arithmetic_reduction.py  |  rc=0/0 bytes=3380 identical=True
+[PASS] L1 py 03_variants_and_lookelsewhere.py  |  rc=0/0 bytes=2606 identical=True
+[PASS] L1 py 05_candidate_principles.py  |  rc=0/0 bytes=3930 identical=True
+[PASS] L1 py 06_minimum_cost_principle.py  |  rc=0/0 bytes=2200 identical=True
+[PASS] L1 py 07_variational_axiom_attack.py  |  rc=0/0 bytes=2148 identical=True
+[PASS] L1 py 08_mf1prime_mf2_attack.py  |  rc=0/0 bytes=2215 identical=True
+[PASS] L1 py 09_mf1prime_dissolution.py  |  rc=0/0 bytes=1296 identical=True
+[PASS] L1 gap 00_gap_named_degrees.g  |  rc=0/0 bytes=1867 identical=True
+[PASS] L1 gap 02c_order_counts.g  |  rc=0/0 bytes=3046 identical=True
+[PASS] L1 gap 04_gap_alternative_principles.g  |  rc=0/0 bytes=1236 identical=True
+[PASS] L1 gap 02_gap_full_scan.g（md5 ≡ 入庫）  |  3dfd5d214f279707fba4390eb42b00e8 vs 3dfd5d214f279707fba4390eb42b00e8
+
+L1 PASS=11 FAIL=0

@@ -115,3 +115,25 @@ SESSION_START.md       承接指引
 README.md              定位
 （待承接 session 建 docs/、scripts/、final_result.md）
 ```
+
+## 9. 追加輪與全鏈審計（append-only，2026-11-07）
+
+```
+| 序 | 事件 | 位置 |
+|:-:|:--|:--|
+| 8  | 追加輪 1：最低成本原理 ≡ 同一選擇定理（|G| = k·∏DNT，k=|G:G'|；11/11 精確） | scripts/06、docs/05 |
+| 9  | 追加輪 2：變分公理 MF1 被反證（naive min → S₃）＋ 約束下 vacuous ⟹ 撤回；M16-3 | scripts/07、docs/06 |
+| 10 | 追加輪 3：MF2 閉合（Ω_b 測 k=1，+0.80σ）＋ MF1′ 收窄（ω 幣制零解） | scripts/08、docs/07 |
+| 11 | 追加輪 4：MF1′ 撤回（Σ=12 ∧ 非平凡 ∧ L2 ⟹ 8→1）；AP／連續係結果 | scripts/09、docs/08 |
+| 12 | 全鏈審計閘建立：L1 雙跑、L2 獨立重推導、L3 文檔交叉核、audit 六項＋機器閘 | scripts/11、l2_*、l3_*、10_audit_verify |
+| 13 | GAP 路徑衛生修復：scratch → 記錄內 data/gap/（版本釘 gap 4.14.0-3 / smallgrp 1.5.4-2） | scripts/gap_setup.sh、gap_run.sh |
+```
+
+### 附註（append-only；原文不動）
+
+```
+2026-11-07  §8「產物」所述之 docs/scripts 已落地（docs/01–08、scripts/00–11 ＋ 三個審計腳本）
+            四數：L1 11/11 ｜ L2 18/18 ｜ L3 54/54（8 檔 100%）｜ audit 見 data/audit_verify.json
+            狀態維持 🟢 closed（追加輪不改變 closed；本 O 自身殘項 = 0）
+            路徑衛生缺陷（GAP 指向會被 prune 嘅 scratch）已修並納入 audit ③
+```

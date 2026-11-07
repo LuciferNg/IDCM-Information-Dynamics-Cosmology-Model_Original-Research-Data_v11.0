@@ -1,3 +1,5 @@
 # M16 本地生成物（可由 scripts 重跑；合併檔 run_02_scan_all_500.txt 入庫作證據）
 data/chunk_*.txt
 data/chunks/
+data/gap/
+data/backup/
