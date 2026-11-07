@@ -1,7 +1,7 @@
 # SESSION_START — M16 群選擇原理（公理層缺口）
 
 > **承接狀態**: 🟢 **已閉合（2026-11-03；含追加輪 1–4 與全鏈審計）**。不要重推；要接就接殘項 `MR1–MR3`（全部在上游 `O171`）。
-> **四數**: L1 11/11（兩跑 byte-identical）｜ L2 18/18（獨立重推導）｜ L3 54/54（8 文檔 100%）｜ audit 見 `data/audit_verify.json`
+> **四數**: L1 11/11（兩跑 byte-identical）｜ L2 18/18（獨立重推導）｜ L3 56/56（9 文檔 100%）｜ audit 31/31（FAIL 0）
 > **先讀**: `final_result.md` →（要細節）`docs/01`–`docs/08`
 > **一鍵重跑**: `bash scripts/run_chain.sh`（前置 `bash scripts/gap_setup.sh`，冪等）
 

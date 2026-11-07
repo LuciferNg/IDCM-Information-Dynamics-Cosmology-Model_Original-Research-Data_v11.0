@@ -81,8 +81,8 @@ A₅ vs S₅：S₅ 需扇區 44,55,66 —— 66 唔在家族 ⟹ 鏈數據判 S
 ```
 L1  11/11   每支核心腳本兩跑 stdout byte-identical、rc=0；02 全量掃描以 md5 ≡ 入庫證明
 L2  18/18   獨立重推導（零 import L1、零讀 docs；mpmath dps=40 ＋ 精確 Fraction）
-L3  54/54   8 份文檔逐 claim 交叉核，逐檔命中率 100%
-audit       ① 腳本對稱 ② 逆向綁定 ③ 路徑衛生 ④ 產物綁定 ⑤⑦ 反向數值覆蓋 ⑥ driver
+L3  56/56   9 份文檔逐 claim 交叉核，逐檔命中率 100%
+audit 31/31 ① 腳本對稱 ② 逆向綁定 ③ 路徑衛生 ④ 產物綁定 ⑤⑦ 反向數值覆蓋 ⑥ driver
             ＋ A8a 舊值／A10 時序／A12 commit／G1 GAP 部署（見 data/audit_verify.json）
 
 掃描：92,570 群（階 ≤ 500 全部，11 片並行）；Burnside 自檢 92,570/92,570 全中

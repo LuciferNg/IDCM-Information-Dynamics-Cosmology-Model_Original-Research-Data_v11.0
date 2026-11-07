@@ -133,7 +133,7 @@ README.md              定位
 
 ```
 2026-11-07  §8「產物」所述之 docs/scripts 已落地（docs/01–08、scripts/00–11 ＋ 三個審計腳本）
-            四數：L1 11/11 ｜ L2 18/18 ｜ L3 54/54（8 檔 100%）｜ audit 見 data/audit_verify.json
+            四數：L1 11/11 ｜ L2 18/18 ｜ L3 56/56（9 檔 100%）｜ audit 31/31（FAIL 0）
             狀態維持 🟢 closed（追加輪不改變 closed；本 O 自身殘項 = 0）
             路徑衛生缺陷（GAP 指向會被 prune 嘅 scratch）已修並納入 audit ③
 ```

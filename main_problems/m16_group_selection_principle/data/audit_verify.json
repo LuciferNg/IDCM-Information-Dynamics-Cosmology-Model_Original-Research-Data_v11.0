@@ -96,8 +96,8 @@
     "detail": "[]"
   },
   "A12a 工作樹乾淨（排除審計輸出）": {
-    "pass": false,
-    "detail": "dirty=1"
+    "pass": true,
+    "detail": "dirty=0"
   },
   "A12b 全部文檔／腳本已入 git": {
     "pass": true,
@@ -125,6 +125,6 @@
   },
   "_summary": {
     "checks": 31,
-    "fail": 1
+    "fail": 0
   }
 }
