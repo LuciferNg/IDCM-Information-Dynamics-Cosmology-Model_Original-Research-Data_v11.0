@@ -1,6 +1,6 @@
 {
- "pool": 2280,
- "tokens": 842,
+ "pool": 2334,
+ "tokens": 873,
  "untraced": [],
  "allowed": [
   [
@@ -53,6 +53,10 @@
   ],
   [
    "50_precise_vertex.md",
+   "0.0305"
+  ],
+  [
+   "52_e7_full_cpu_chain.md",
    "0.0305"
   ]
  ],
@@ -255,6 +259,14 @@
   },
   "50_precise_vertex.md": {
    "tokens": 44,
+   "untraced": []
+  },
+  "51_precise_vertex_e6.md": {
+   "tokens": 16,
+   "untraced": []
+  },
+  "52_e7_full_cpu_chain.md": {
+   "tokens": 15,
    "untraced": []
   }
  }

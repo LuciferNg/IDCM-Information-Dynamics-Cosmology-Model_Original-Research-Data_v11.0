@@ -41,7 +41,7 @@
   },
   "⑤b claim 份數 + 豁免份數 == 磁碟 doc 份數": {
     "status": "PASS",
-    "detail": "43 + 7 = 50 vs 50"
+    "detail": "45 + 7 = 52 vs 52"
   },
   "⑤c 每項豁免附非空理由": {
     "status": "PASS",
@@ -657,7 +657,7 @@
   },
   "⑨a docs 實際數 == README 檔表所列": {
     "status": "PASS",
-    "detail": "實際 50 vs README 50"
+    "detail": "實際 52 vs README 52"
   },
   "⑨b docs 每份都在 README 檔表": {
     "status": "PASS",
@@ -707,7 +707,7 @@
     "checks": 176,
     "fail": 0,
     "warn": 0,
-    "n_docs": 50,
+    "n_docs": 52,
     "n_scripts": 48,
     "n_logs": 51
   }

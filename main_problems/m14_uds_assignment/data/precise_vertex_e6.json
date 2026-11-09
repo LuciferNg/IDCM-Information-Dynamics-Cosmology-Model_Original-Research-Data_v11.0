@@ -1,0 +1,35 @@
+{
+ "meta": {
+  "path": "A",
+  "n": 1,
+  "modes_max": 7,
+  "engine": "CPU: scripts/51\uff083\u21943\u30013\u21925\u30015\u21923\uff09\uff1bGPU: \u901a\u7528\u7cbe\u78ba kernel\uff085\u21945\u30015\u21927\u30017\u21925\uff09+ combinadic unrank + den7",
+  "gates": [
+   "7 \u6a21\u614b kernel \u55ae\u614b\u9010\u9ede 40/40\uff08float32 \u76f8\u5c0d\u5dee ~6e\u22128\uff09",
+   "E_2\uff0fE_3\uff0fE_4\uff0fE_5 \u8207 data/precise_vertex_44n.json \u4e4b 5 \u6a21\u503c\u4e00\u81f4\uff08\u22645.3e\u22127\uff09",
+   "combinadic unrank \u4fee\u6b63\u5f8c\u96d9\u5c04\uff08lo=j\u3001v=lo\u2212j+1\uff09"
+  ],
+  "note": "E_6 \u65bc \u0394\u2208{0,\u00b12} \u622a\u65b7\u4e0b\u4ee5 7 \u6a21\u614b\u9589\u5408\uff081\u21923\u21925\u21927\u21925\u21923\u21921\uff09\uff1bE_7 \u9700 9 \u6a21"
+ },
+ "rows": [
+  {
+   "n": 1,
+   "E2": -0.08053074136447039,
+   "E3": 0.2562859911281094,
+   "E4": -2.8332813970884647,
+   "E5": 38.088140829709694,
+   "E6": -546.3192509939245
+  }
+ ],
+ "E6_trunc5": -545.054173271644,
+ "E6_7mode_delta": -1.2650777222804663,
+ "ratios": {
+  "r3_E5E4": 13.443119652304855,
+  "r4_E6E5": 14.343552588625746
+ },
+ "norms": {
+  "phi3_7": 39.83294,
+  "V75_phi3_7": 2246.285,
+  "note": "GPU \u93c8\u65bc 1168 s\uff0f1391 s \u4e4b \u2016\u00b7\u2016\uff086 \u4f4d\u6709\u6548\uff09"
+ }
+}

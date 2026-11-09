@@ -39,6 +39,8 @@ ALLOW = {
     ("50_precise_vertex.md", "0.0305"):
         "衍生統計：⟨E_2⟩ 與 −5/8 之相對偏差百分比（由 data/precise_vertex_44n.json 44 列算出），"
         "屬『誘餌』登記用，非量測值亦非恆等式",
+    ("52_e7_full_cpu_chain.md", "0.0305"):
+        "跨文檔轉述：同 docs/50 之誘餌登記（§六 邊界），非本輪新量測值",
     ("09_correction_object_type.md", "1.1486"):
         "跨記錄：M13 預註冊 T1 閘 ρ ≡ |r_K|/(|r_Ξ|/2) = 1.1486 ± 0.05；本 M 只引用作停止條件",
     ("09_correction_object_type.md", "0.4603"):

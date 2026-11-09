@@ -136,6 +136,12 @@ def main():
         "07_verdicts_and_handoffs.md": "判詞與移交敘述表：全部數字引他 doc，本身無 producer",
         "09_correction_object_type.md": "概念更正（對象型別）；唯一精確值屬 M5 跨記錄",
         "13_channel_fate_correction.md": "讀法更正記錄：程式與 log 保留不動（append-only）",
+        "51_precise_vertex_e6.md": "GPU 一次性長跑（7 模態 kernel＋unrank，約 30 min／n）："
+                                   "kernel 正確性以 docs/51 §三 G-7a（單態 40/40，相對差 6e−8）為閘，"
+                                   "E_2–E_5 與 data/precise_vertex_44n.json 互核；數字落 data/precise_vertex_e6.json",
+        "52_e7_full_cpu_chain.md": "全 CPU 鏈一次性長跑（scratch e7chain.py／e7run.py，1,180 s，12 進程 ＋ 全階段 checkpoint）："
+                                   "各算子先對 scripts/51 vertex_apply 過閘（六通道 ≤1.6e−15；7→5 於 120k 真實 φ_3^7 源 4.3e−19），"
+                                   "數字落 data/e7_chain.json；鏈腳本未入 scripts/（與 docs/49 診斷類同例）",
         "49_final_push.md": "診斷類：四支 scratch 診斷腳本（diag46／conv_test／n3033／adjoint35）產出，"
                             "數字落 data/final_push_stats.json；主結論以 docs/44 已封錨作試金石，"
                             "不重算 docs/42–48；診斷腳本未入 scripts/（成本 >35 min／跑且屬一次性）",

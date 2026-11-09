@@ -635,6 +635,43 @@ def _pv44():
     return _PV44_CACHE
 
 
+_E6_CACHE = {}
+
+
+def _pv_e6():
+    """E_6（含 7 模態，路徑 A n=1）：**讀 data/precise_vertex_e6.json 落地**；
+    kernel 正確性之獨立閘見 docs/51 §三（G-7a 單態 40/40）"""
+    if _E6_CACHE:
+        return _E6_CACHE
+    import json as _j
+    from pathlib import Path as _P
+    d = _j.loads((_P(__file__).resolve().parent.parent / "data" / "precise_vertex_e6.json").read_text(encoding="utf-8"))
+    r = d["rows"][0]
+    _E6_CACHE.update({"E2": r["E2"], "E3": r["E3"], "E4": r["E4"], "E5": r["E5"], "E6": r["E6"],
+                      "delta7": d["E6_7mode_delta"], "r4": abs(r["E6"] / r["E5"])})
+    return _E6_CACHE
+
+
+_E7_CACHE = {}
+
+
+def _e7():
+    """E_7 全 CPU 鏈（docs/52）：讀 data/e7_chain.json 落地；算子正確性之閘見 docs/52 §二"""
+    if _E7_CACHE:
+        return _E7_CACHE
+    import json as _j
+    from pathlib import Path as _P
+    d = _j.loads((_P(__file__).resolve().parent.parent / "data" / "e7_chain.json").read_text(encoding="utf-8"))
+    v = d["values"]; c = d["correction"]
+    _E7_CACHE.update({"E2": v["E2"], "E3": v["E3"], "E4": v["E4"], "E5": v["E5"],
+                      "E6": v["E6"], "E7": v["E7"],
+                      "r5": abs(v["E7"] / v["E6"]), "r4": abs(v["E6"] / v["E5"]),
+                      "E6_5mode": c["E6_5mode_trunc"], "rel5": c["rel_diff_5mode"],
+                      "V75n": d["norms"]["V75_phi3_7"], "V75old": c["old_V75_norm_docs51"],
+                      "gene": d["gates"]["7->5_120k_realphi"]})
+    return _E7_CACHE
+
+
 _FIFTH_CACHE = {}
 
 
@@ -1301,6 +1338,17 @@ DERIVE = {
     "fifth_E4": lambda I: _fifth()["E4"],
     "fifth_delta": lambda I: _fifth()["delta"],
     "fifth_nz35": lambda I: _fifth()["nz35"],
+    "pv_E6": lambda I: _pv_e6()["E6"],
+    "pv_E6_delta7": lambda I: _pv_e6()["delta7"],
+    "pv_r4": lambda I: _pv_e6()["r4"],
+    "e7_E2": lambda I: _e7()["E2"],
+    "e7_E5": lambda I: _e7()["E5"],
+    "e7_E6": lambda I: _e7()["E6"],
+    "e7_E7": lambda I: _e7()["E7"],
+    "e7_E6_5mode": lambda I: _e7()["E6_5mode"],
+    "e7_r5": lambda I: _e7()["r5"],
+    "e7_V75n": lambda I: _e7()["V75n"],
+    "e7_V75old": lambda I: _e7()["V75old"],
     "pv_A_r1_med": lambda I: _pv44()["A"]["r1_med"],
     "pv_A_r3_med": lambda I: _pv44()["A"]["r3_med"],
     "pv_B_r1_med": lambda I: _pv44()["B"]["r1_med"],
@@ -1767,6 +1815,25 @@ def main():
         f"{(pv['B']['e2_max']-pv['B']['e2_min'])/abs(pv['B']['e2_min'])*100:.3f}%")
     chk("X91 精確頂點：A 之 |E_5/E_4| 中位 141.3560（發散）",
         abs(pv["A"]["r3_med"] - 141.3560) < 1e-3, f"{pv['A']['r3_med']:.4f}")
+    e6 = _pv_e6()
+    chk("X92 E_6（7 模態）= −546.319250994", abs(e6["E6"] + 546.3192509939245) < 1e-6, f"{e6['E6']:.9f}")
+    chk("X93 7 模態貢獻 = −1.2650777（佔 E_6 之 0.232%）",
+        abs(e6["delta7"] + 1.2650777222804663) < 1e-6, f"{e6['delta7']:.7f}")
+    chk("X94 [作廢·docs/51 §八] |E_6/E_5| = 14.3436（建於 GPU V^{7→5}）",
+        abs(e6["r4"] - 14.343552588625746) < 1e-6, f"{e6['r4']:.4f}")
+
+    e7 = _e7()
+    chk("X95 E_6（全 CPU 正典）= −631.576826694853", abs(e7["E6"] + 631.5768266948529) < 1e-6, f"{e7['E6']:.9f}")
+    chk("X96 E_7 = +10325.588935405450（V^{7→7} 全精度）", abs(e7["E7"] - 10325.588935405450) < 1e-6, f"{e7['E7']:.9f}")
+    chk("X97 E_6（5 模截斷）復現舊值至 1.8e−7",
+        abs(e7["E6_5mode"] + 545.054076280586) < 1e-6 and e7["rel5"] < 2e-7,
+        f"{e7['E6_5mode']:.9f} rel {e7['rel5']:.2e}")
+    chk("X98 |E_7/E_6| = 16.3489、|E_6/E_5| = 16.5820（發散飽和）",
+        abs(e7["r5"] - 16.348904047545712) < 1e-6 and abs(e7["r4"] - 16.58198157981441) < 1e-6,
+        f"{e7['r4']:.4f} / {e7['r5']:.4f}")
+    chk("X99 ‖V^{7→5}φ_3^7‖ = 14.526（經閘）vs 舊 GPU 2246.285",
+        abs(e7["V75n"] - 14.52618953969585) < 1e-6 and abs(e7["V75old"] - 2246.285) < 1e-3,
+        f"{e7['V75n']:.6f} / {e7['V75old']:.3f}")
     chk("X81 五模態總數 = 多重集 C(44+5−1,5) = C(48,5) = 1712304（枚舉覆蓋完整）",
         __import__("math").comb(48, 5) == 1712304, str(__import__("math").comb(48, 5)))
 
