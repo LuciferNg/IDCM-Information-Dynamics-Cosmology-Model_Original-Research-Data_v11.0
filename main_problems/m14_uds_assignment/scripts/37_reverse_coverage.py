@@ -39,6 +39,9 @@ ALLOW = {
     ("50_precise_vertex.md", "0.0305"):
         "衍生統計：⟨E_2⟩ 與 −5/8 之相對偏差百分比（由 data/precise_vertex_44n.json 44 列算出），"
         "屬『誘餌』登記用，非量測值亦非恆等式",
+    ("53_e7_matrix_cpu_gpu.md", "-0.000171304"):
+        "已更正之錯誤輸出：CPU 路徑 B 之 par_op 快取別名 bug 曾得 E_7(B) = −0.000171303687；"
+        "保留於 docs/53 §六 記錄診斷過程，真值為 +0.006584778237（data/chain_matrix.json）",
     ("52_e7_full_cpu_chain.md", "0.0305"):
         "跨文檔轉述：同 docs/50 之誘餌登記（§六 邊界），非本輪新量測值",
     ("09_correction_object_type.md", "1.1486"):

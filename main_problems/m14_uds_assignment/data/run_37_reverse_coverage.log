@@ -1,22 +1,20 @@
 ==============================================================================
 M14 scripts/37 — 反向數值覆蓋（docs → data，容差 0.5%）
 ==============================================================================
-  data 池 2334 個值；docs token 873 個（含 e-記法／上標／分數）
-  ALLOW（跨記錄／散文範圍）命中 14 項
+  data 池 2466 個值；docs token 897 個（含 e-記法／上標／分數）
+  ALLOW（跨記錄／散文範圍）命中 12 項
     [ALLOW] 09_correction_object_type.md                       1.1486  ← 跨記錄：M13 預註冊 T1 閘 ρ ≡ |r_K|/(|r_Ξ|/2) = 1.1486 ± 0.05；本 M 只引用
     [ALLOW] 22_audit_report.md                                0.04714  ← 歷史值：同上，僅作更正敘述
     [ALLOW] 22_audit_report.md                                0.07698  ← 歷史值：同上，僅作更正敘述
-    [ALLOW] 22_audit_report.md                                 0.0854  ← χ⁴ 表非零率之轉述；值見 scripts/48 之 stderr，非 stdout 量測
     [ALLOW] 22_audit_report.md                               +0.63645  ← 跨記錄：M13 δ_c 相關值；本 M data 以 −0.63645 落地（文檔以正號作符號缺陷示例時命中此條）
     [ALLOW] 22_audit_report.md                                 1.1486  ← 跨記錄：M13 預註冊 T1 閘 ρ = 1.1486 ± 0.05
-    [ALLOW] 22_audit_report.md                                 7.6064  ← 歷史值：docs/45 v1（錯矩陣元律）之 T_1 = 7.6064，僅作更正敘述；v1 log 封存 data/ar
     [ALLOW] 45_fourth_order.md                                0.07698  ← 歷史值：三模 V 建構期 dict 覆蓋造成之假不對稱 7.698e−02（早期跑）；現行 log 已為 1.388e−
     [ALLOW] 46_quint_sector.md                                0.04714  ← 歷史值：3↔5 耦合律初版漏位置重複權重之對稱核差 4.714e−02（已修，現值 0.000e+00）
-    [ALLOW] 47_fifth_order.md                                  0.0854  ← χ⁴ 表非零率，僅於 stderr 報（stdout 禁耗時/衍生統計）
     [ALLOW] 47_fifth_order.md                                  0.6128  ← 歷史值：對稱核檢查函數用錯『去 2』之假 FAIL 6.128e−01（已修，現值 0.000e+00）
     [ALLOW] 47_fifth_order.md                           +77137.118746  ← 5↔5 未含之 E_5，腳本以 stderr 報（stdout 只留含 5↔5 之定稿值）
     [ALLOW] 50_precise_vertex.md                               0.0305  ← 衍生統計：⟨E_2⟩ 與 −5/8 之相對偏差百分比（由 data/precise_vertex_44n.json 44
     [ALLOW] 52_e7_full_cpu_chain.md                            0.0305  ← 跨文檔轉述：同 docs/50 之誘餌登記（§六 邊界），非本輪新量測值
+    [ALLOW] 53_e7_matrix_cpu_gpu.md                    -0.000171303687  ← 已更正之錯誤輸出：CPU 路徑 B 之 par_op 快取別名 bug 曾得 E_7(B) = −0.000171303
 
   未追溯（且不在 ALLOW）= 0
 

@@ -1,6 +1,6 @@
 {
- "pool": 2334,
- "tokens": 873,
+ "pool": 2466,
+ "tokens": 897,
  "untraced": [],
  "allowed": [
   [
@@ -17,19 +17,11 @@
   ],
   [
    "22_audit_report.md",
-   "0.0854"
-  ],
-  [
-   "22_audit_report.md",
    "+0.63645"
   ],
   [
    "22_audit_report.md",
    "1.1486"
-  ],
-  [
-   "22_audit_report.md",
-   "7.6064"
   ],
   [
    "45_fourth_order.md",
@@ -38,10 +30,6 @@
   [
    "46_quint_sector.md",
    "0.04714"
-  ],
-  [
-   "47_fifth_order.md",
-   "0.0854"
   ],
   [
    "47_fifth_order.md",
@@ -58,6 +46,10 @@
   [
    "52_e7_full_cpu_chain.md",
    "0.0305"
+  ],
+  [
+   "53_e7_matrix_cpu_gpu.md",
+   "-0.000171303687"
   ]
  ],
  "per_doc": {
@@ -267,6 +259,10 @@
   },
   "52_e7_full_cpu_chain.md": {
    "tokens": 15,
+   "untraced": []
+  },
+  "53_e7_matrix_cpu_gpu.md": {
+   "tokens": 24,
    "untraced": []
   }
  }

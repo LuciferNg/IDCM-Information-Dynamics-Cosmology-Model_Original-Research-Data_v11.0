@@ -1,7 +1,7 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "249 keys"
+    "detail": "282 keys"
   },
   "C.01_reproduction_ga.A₂⊕1 = 44": {
     "pass": true,
@@ -583,6 +583,26 @@
     "pass": true,
     "detail": "L2 -631.577 ↔ 文檔 631.577（rel 1.8e-16）"
   },
+  "C.53_e7_matrix_cpu_g.E_1 = 0.004871899480": {
+    "pass": true,
+    "detail": "L2 0.0048719 ↔ 文檔 0.0048719（rel 7.2e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.E_7(A,GPU) = 10325.589025559188": {
+    "pass": true,
+    "detail": "L2 10325.6 ↔ 文檔 10325.6（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.E_7(B,GPU) = 0.006584778230": {
+    "pass": true,
+    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 1.3e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.E_7(B,CPU) = 0.006584778237": {
+    "pass": true,
+    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 4.3e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.E_6(B,CPU) = −0.014904537963": {
+    "pass": true,
+    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 1.1e-11）"
+  },
   "C.48_fifth_order_all.|E_5/E_4| 全譜最小 29.6506": {
     "pass": true,
     "detail": "L2 29.6506 ↔ 文檔 29.6506（rel 3.8e-07）"
@@ -654,6 +674,78 @@
   "C.21_budget_defect_d.v₂(88) = 3": {
     "pass": true,
     "detail": "L2 3 ↔ 文檔 3（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E1 = +0.004871899480": {
+    "pass": true,
+    "detail": "L2 0.0048719 ↔ 文檔 0.0048719（rel 7.2e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E2 = −0.080530741364": {
+    "pass": true,
+    "detail": "L2 -0.0805307 ↔ 文檔 0.0805307（rel 5.8e-12）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E2 = −0.633720033859": {
+    "pass": true,
+    "detail": "L2 -0.63372 ↔ 文檔 0.63372（rel 6.9e-13）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E3 = +0.256285991128": {
+    "pass": true,
+    "detail": "L2 0.256286 ↔ 文檔 0.256286（rel 4.3e-13）"
+  },
+  "C.53_e7_matrix_cpu_g.A_gpu E3 = +0.256285996352": {
+    "pass": true,
+    "detail": "L2 0.256286 ↔ 文檔 0.256286（rel 2.6e-13）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E3 = +0.040240117635": {
+    "pass": true,
+    "detail": "L2 0.0402401 ↔ 文檔 0.0402401（rel 8.7e-12）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E4 = −2.833281397088": {
+    "pass": true,
+    "detail": "L2 -2.83328 ↔ 文檔 2.83328（rel 1.6e-13）"
+  },
+  "C.53_e7_matrix_cpu_g.A_gpu E4 = −2.833281416854": {
+    "pass": true,
+    "detail": "L2 -2.83328 ↔ 文檔 2.83328（rel 1.2e-13）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E4 = −0.045644034981": {
+    "pass": true,
+    "detail": "L2 -0.045644 ↔ 文檔 0.045644（rel 3.6e-12）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E5 = +38.088139445510": {
+    "pass": true,
+    "detail": "L2 38.0881 ↔ 文檔 38.0881（rel 5.4e-15）"
+  },
+  "C.53_e7_matrix_cpu_g.A_gpu E5 = +38.088140164305": {
+    "pass": true,
+    "detail": "L2 38.0881 ↔ 文檔 38.0881（rel 1.1e-14）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E5 = +0.015000708917": {
+    "pass": true,
+    "detail": "L2 0.0150007 ↔ 文檔 0.0150007（rel 2.6e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E6 = −631.576826694853": {
+    "pass": true,
+    "detail": "L2 -631.577 ↔ 文檔 631.577（rel 1.8e-16）"
+  },
+  "C.53_e7_matrix_cpu_g.A_gpu E6 = −631.576828302081": {
+    "pass": true,
+    "detail": "L2 -631.577 ↔ 文檔 631.577（rel 7.2e-16）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E6 = −0.014904537963": {
+    "pass": true,
+    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 1.1e-11）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E7 = +10325.588935405450": {
+    "pass": true,
+    "detail": "L2 10325.6 ↔ 文檔 10325.6（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.A_gpu E7 = +10325.589025559188": {
+    "pass": true,
+    "detail": "L2 10325.6 ↔ 文檔 10325.6（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E7 = +0.006584778237": {
+    "pass": true,
+    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 4.3e-11）"
   },
   "F.docs/01_reproduction_gate.md 全命中（2/2）": {
     "pass": true,
@@ -835,8 +927,12 @@
     "pass": true,
     "detail": ""
   },
+  "F.docs/53_e7_matrix_cpu_gpu.md 全命中（23/23）": {
+    "pass": true,
+    "detail": ""
+  },
   "_summary": {
-    "checks": 209,
+    "checks": 233,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": [
@@ -990,6 +1086,10 @@
       "docs/52_e7_full_cpu_chain.md": [
         8,
         8
+      ],
+      "docs/53_e7_matrix_cpu_gpu.md": [
+        23,
+        23
       ],
       "docs/48_fifth_order_all44.md": [
         3,

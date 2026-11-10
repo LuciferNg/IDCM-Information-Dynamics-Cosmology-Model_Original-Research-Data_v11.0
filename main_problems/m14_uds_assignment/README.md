@@ -536,6 +536,17 @@
 > - **④ 全精度**：`V^{7→7}` 以本輪 float64 `φ_3^7` 重算（8 進程、分塊 checkpoint、每工人 17,887 s）⟹ `E_7` 移 `2.79e−10`，已採用。
 >
 > 詳見 **`docs/52`**（落地 `data/e7_chain.json`；`docs/51` 已加更正橫幅＋§八 附註）。
+>
+> ## ★★★ 進展三十九（2026-11-09）：`E_1–E_8` 四維矩陣（A／B × CPU／GPU）
+>
+> - **GPU 算子**（CuPy RawModule 四 kernel）：對 CPU 算子五通道逐點閘 ≤3.9e−8（float32 φ 噪底）；`3→5` 快 23×。
+> - **飄移**：A 欄 CPU↔GPU 最大相對差 **2.04e−8**、B 欄 ≤5.4e−9；`E_2` 兩欄逐位相同 ⟹ 無結構性飄移。
+> - **`E_7`**：A = `+10325.588935405450`（CPU）／`+10325.589025559188`（GPU）；B = `+0.006584778237`（CPU）／`+0.006584778230`（GPU）。
+> - **交叉比對抓到第三個真錯**：CPU 路徑 B 之 `par_op` 快取別名（`V75` 固定 tag 覆用）⟹ `E_7(B)` 曾得 −0.000171（錯）→ 修後 +0.006584778237（與 GPU 差 1.0e−9）。
+> - **`E_8` 阻斷**（量化）：需 9 模態 3,679,075,400 態；float64 27.4 GB ×2 = 54.8 GB > RAM 54 GB；GPU 3 GB 卡不足 9×；算力 CPU 11.5 日／GPU 26 時 ⟹ 現機不可行。
+> - 兩個真錯已修：GPU `V^{7→5}` 標度錯（致 `E_6` −546.319 作廢）、GPU `k13` 重數漏 `(x,y,y)` 型。
+>
+> 詳見 **`docs/53`**（落地 `data/chain_matrix.json`、`data/gpu_chain_A|B.json`、`data/chain_logs/`）。
 
 ## 狀態: 🔴 closed / verdict **negative**（2026-10-30）→ **已撤回，現為 🟡 partial**（見頂部橫幅）
 
@@ -620,8 +631,11 @@ Q4 死  ：「rank+1 = 3」只對 44/112 成立；耦合塊恆為 (u,d) 對（ra
 | `docs/49_final_push.md` | ★★ 三項攻堅：公約裁決、n=30/33 機制、零半徑 | 🟡 部分取代（見 docs/50） |
 | `docs/50_precise_vertex.md` | ★★★ 精確頂點、`emb` 族否證、雙讀法 44 n | ✅ |
 | `docs/52_e7_full_cpu_chain.md` | ★★★ `E_7` 全 CPU 鏈、六閘、`E_6` 更正 | 🟡 n=1 |
+| `docs/53_e7_matrix_cpu_gpu.md` | ★★★ `E_1–E_8` 四維矩陣、CPU↔GPU 飄移、`E_8` 阻斷 | 🟡 部分（B 之 CPU `E_7` 待） |
 | `docs/51_precise_vertex_e6.md` | ★★★ `E_6` 7 模態閉合（路徑 A n=1） | ✅ |
 | `scripts/51_precise_vertex.py` | 精確四波頂點＋兩讀法 `E_2/E_3`（G1 閘、`T2/T0`） | ✅ |
+| `scripts/52_fourwave_operator.py` | 通用四波算子（CPU）＋六閘（三通道對 `51`、同模伴隨性、χ⁴ 率） | ✅ |
+| `scripts/53_vertex_gpu.py` | GPU 算子（CuPy RawModule 四 kernel）＋對 CPU 五通道閘 | ✅ |
 | `scripts/01_reproduction_gate.py` | 零 import 上游；PDG 唯讀＋精確 `Fraction`＋`(LG=I)` 1936 格 | ✅ |
 | `scripts/02_q1_station_gauge.py` | A₂⊕1 重建（112/44/87）＋三層檢定＋`10⁷` null MC | ✅ |
 | `scripts/03_q2a_label_provenance.py` | AST 解析 v9 三檔＋恆真檢定＋範疇檢定＋6 謂詞 | ✅ |

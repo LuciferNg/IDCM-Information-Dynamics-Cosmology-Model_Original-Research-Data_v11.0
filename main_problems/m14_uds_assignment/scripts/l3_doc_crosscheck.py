@@ -269,6 +269,17 @@ CLAIMS = [
     # docs/51 更正橫幅（新）
     {"doc": "docs/51_precise_vertex_e6.md", "key": "e7_E6", "label": "更正後 E_6 = −631.576826694853",
      "anchor": "−631.576826694853"},
+    # docs/53 四維矩陣（新）
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_E1", "label": "E_1 = 0.004871899480",
+     "anchor": "0.004871899480"},
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_A7_gpu", "label": "E_7(A,GPU) = 10325.589025559188",
+     "anchor": "10325.589025559188"},
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B7_gpu", "label": "E_7(B,GPU) = 0.006584778230",
+     "anchor": "0.006584778230"},
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B7_cpu", "label": "E_7(B,CPU) = 0.006584778237",
+     "anchor": "0.006584778237"},
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B6_cpu", "label": "E_6(B,CPU) = −0.014904537963",
+     "anchor": "−0.014904537963"},
     # docs/48 全 44 n（新）
     {"doc": "docs/48_fifth_order_all44.md", "key": "all44_min_ratio", "label": "|E_5/E_4| 全譜最小 29.6506",
      "anchor": "29.6506"},
@@ -354,7 +365,46 @@ def match(toks, target, tol_override=None):
     return (best is not None), best, best_d
 
 
+def _mtx_claims():
+    """docs/53 矩陣：每個數字一個 claim；anchor 直接取文中出現之字面 token
+    （負號為 U+2212，正號帶 +；以 1e−9 相對容差對上 data 值，避免 .12f 進位差異）"""
+    import json as _j
+    import re as _re
+    from pathlib import Path as _P
+    f = _P(__file__).resolve().parent.parent / "data" / "chain_matrix.json"
+    docf = _P(__file__).resolve().parent.parent / "docs" / "53_e7_matrix_cpu_gpu.md"
+    if not (f.exists() and docf.exists()):
+        return []
+    d = _j.loads(f.read_text(encoding="utf-8"))
+    txt = docf.read_text(encoding="utf-8")
+    vals = []
+    for m in _re.finditer(r"([+\u2212-]?)(\d+\.\d{3,})", txt):
+        sgn, num = m.group(1), m.group(2)
+        v = float(num) * (-1.0 if sgn in ("\u2212", "-") else 1.0)
+        vals.append((m.group(0), v))
+    out, seen = [], set()
+    for r in d["rows"]:
+        for col in ("A_cpu", "A_gpu", "B_cpu", "B_gpu"):
+            v = r.get(col)
+            if v is None:
+                continue
+            v = float(v)
+            hit = None
+            for lit, tv in vals:
+                if abs(tv - v) <= 1e-9 * max(1.0, abs(v)):
+                    hit = lit
+                    break
+            if hit is None or hit in seen:
+                continue
+            seen.add(hit)
+            out.append({"doc": "docs/53_e7_matrix_cpu_gpu.md",
+                        "key": f"cell_{col}_{r['E']}",
+                        "label": f"{col} {r['E']} = {hit}", "anchor": hit})
+    return out
+
+
 def main():
+    CLAIMS.extend([c for c in _mtx_claims() if c not in CLAIMS])
     hdr("§0 讀 L2（期望值唯一來源）")
     if not L2PATH.exists():
         print(f"✗ 缺 {L2PATH}")

@@ -81,6 +81,8 @@ LOGS = {
     "47_quint_sector": "run_47_quint_sector.log",
     "48_fifth_order": "run_48_fifth_order.log",
     "51_precise_vertex": "run_51_precise_vertex.log",
+    "52_fourwave_operator": "run_52_fourwave_operator.log",
+    "53_vertex_gpu": "run_53_vertex_gpu.log",
 }
 EXTRA = [("L2", "l2_independent_verify.py", "run_l2_independent_verify.log"),
          ("L3", "l3_doc_crosscheck.py", "run_l3_doc_crosscheck.log")]
@@ -142,6 +144,10 @@ def main():
         "52_e7_full_cpu_chain.md": "全 CPU 鏈一次性長跑（scratch e7chain.py／e7run.py，1,180 s，12 進程 ＋ 全階段 checkpoint）："
                                    "各算子先對 scripts/51 vertex_apply 過閘（六通道 ≤1.6e−15；7→5 於 120k 真實 φ_3^7 源 4.3e−19），"
                                    "數字落 data/e7_chain.json；鏈腳本未入 scripts/（與 docs/49 診斷類同例）",
+        "53_e7_matrix_cpu_gpu.md": "四維矩陣（A／B × CPU／GPU）之一次性長跑合表：CPU 全鏈 20 min／GPU 40 min／"
+                                   "路徑 B 之 V^{7→7} 6 h，且輸出含耗時行 ⟹ 不符 L1 兩跑 byte-identical；"
+                                   "算子本身已由 scripts/52、scripts/53 兩支 L1 腳本把關，鏈 log 存 data/chain_logs/，"
+                                   "數字落 data/chain_matrix.json",
         "49_final_push.md": "診斷類：四支 scratch 診斷腳本（diag46／conv_test／n3033／adjoint35）產出，"
                             "數字落 data/final_push_stats.json；主結論以 docs/44 已封錨作試金石，"
                             "不重算 docs/42–48；診斷腳本未入 scripts/（成本 >35 min／跑且屬一次性）",

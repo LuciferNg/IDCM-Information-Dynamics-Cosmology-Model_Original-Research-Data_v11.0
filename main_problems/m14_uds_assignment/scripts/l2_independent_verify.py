@@ -672,6 +672,38 @@ def _e7():
     return _E7_CACHE
 
 
+_MTX_CACHE = {}
+
+
+def _mtx():
+    """docs/53 四維矩陣：讀 data/chain_matrix.json"""
+    if _MTX_CACHE:
+        return _MTX_CACHE
+    import json as _j
+    from pathlib import Path as _P
+    d = _j.loads((_P(__file__).resolve().parent.parent / "data" / "chain_matrix.json").read_text(encoding="utf-8"))
+    rows = {r["E"]: r for r in d["rows"]}
+    _MTX_CACHE.update({
+        "E1": rows["E1"]["A_cpu"],
+        "A7": rows["E7"]["A_gpu"], "B7": rows["E7"]["B_gpu"],
+        "B6cpu": rows["E6"]["B_cpu"], "B7cpu": rows["E7"]["B_cpu"], "A7cpu": rows["E7"]["A_cpu"],
+        "maxrelA": max(v for k, v in rows["E3"].items() if k.startswith("rel_") and v is not None),
+        "maxrelB": max(v for k, v in rows["E7"].items() if k.startswith("rel_") and v is not None and k != "rel_A"),
+    })
+    return _MTX_CACHE
+
+
+def _mtx_cell(col, e):
+    """docs/53 矩陣單格"""
+    import json as _j
+    from pathlib import Path as _P
+    d = _j.loads((_P(__file__).resolve().parent.parent / "data" / "chain_matrix.json").read_text(encoding="utf-8"))
+    for r in d["rows"]:
+        if r["E"] == e:
+            return r.get(col)
+    return None
+
+
 _FIFTH_CACHE = {}
 
 
@@ -1343,6 +1375,39 @@ DERIVE = {
     "pv_r4": lambda I: _pv_e6()["r4"],
     "e7_E2": lambda I: _e7()["E2"],
     "e7_E5": lambda I: _e7()["E5"],
+    "mtx_E1": lambda I: _mtx()["E1"],
+    "mtx_A7_gpu": lambda I: _mtx()["A7"],
+    "mtx_B7_gpu": lambda I: _mtx()["B7"],
+    "mtx_B6_cpu": lambda I: _mtx()["B6cpu"],
+    "mtx_B7_cpu": lambda I: _mtx()["B7cpu"],
+    "cell_A_cpu_E1": lambda I, c="A_cpu", e="E1": _mtx_cell(c, e),
+    "cell_A_cpu_E2": lambda I, c="A_cpu", e="E2": _mtx_cell(c, e),
+    "cell_A_cpu_E3": lambda I, c="A_cpu", e="E3": _mtx_cell(c, e),
+    "cell_A_cpu_E4": lambda I, c="A_cpu", e="E4": _mtx_cell(c, e),
+    "cell_A_cpu_E5": lambda I, c="A_cpu", e="E5": _mtx_cell(c, e),
+    "cell_A_cpu_E6": lambda I, c="A_cpu", e="E6": _mtx_cell(c, e),
+    "cell_A_cpu_E7": lambda I, c="A_cpu", e="E7": _mtx_cell(c, e),
+    "cell_A_gpu_E1": lambda I, c="A_gpu", e="E1": _mtx_cell(c, e),
+    "cell_A_gpu_E2": lambda I, c="A_gpu", e="E2": _mtx_cell(c, e),
+    "cell_A_gpu_E3": lambda I, c="A_gpu", e="E3": _mtx_cell(c, e),
+    "cell_A_gpu_E4": lambda I, c="A_gpu", e="E4": _mtx_cell(c, e),
+    "cell_A_gpu_E5": lambda I, c="A_gpu", e="E5": _mtx_cell(c, e),
+    "cell_A_gpu_E6": lambda I, c="A_gpu", e="E6": _mtx_cell(c, e),
+    "cell_A_gpu_E7": lambda I, c="A_gpu", e="E7": _mtx_cell(c, e),
+    "cell_B_cpu_E1": lambda I, c="B_cpu", e="E1": _mtx_cell(c, e),
+    "cell_B_cpu_E2": lambda I, c="B_cpu", e="E2": _mtx_cell(c, e),
+    "cell_B_cpu_E3": lambda I, c="B_cpu", e="E3": _mtx_cell(c, e),
+    "cell_B_cpu_E4": lambda I, c="B_cpu", e="E4": _mtx_cell(c, e),
+    "cell_B_cpu_E5": lambda I, c="B_cpu", e="E5": _mtx_cell(c, e),
+    "cell_B_cpu_E6": lambda I, c="B_cpu", e="E6": _mtx_cell(c, e),
+    "cell_B_cpu_E7": lambda I, c="B_cpu", e="E7": _mtx_cell(c, e),
+    "cell_B_gpu_E1": lambda I, c="B_gpu", e="E1": _mtx_cell(c, e),
+    "cell_B_gpu_E2": lambda I, c="B_gpu", e="E2": _mtx_cell(c, e),
+    "cell_B_gpu_E3": lambda I, c="B_gpu", e="E3": _mtx_cell(c, e),
+    "cell_B_gpu_E4": lambda I, c="B_gpu", e="E4": _mtx_cell(c, e),
+    "cell_B_gpu_E5": lambda I, c="B_gpu", e="E5": _mtx_cell(c, e),
+    "cell_B_gpu_E6": lambda I, c="B_gpu", e="E6": _mtx_cell(c, e),
+    "cell_B_gpu_E7": lambda I, c="B_gpu", e="E7": _mtx_cell(c, e),
     "e7_E6": lambda I: _e7()["E6"],
     "e7_E7": lambda I: _e7()["E7"],
     "e7_E6_5mode": lambda I: _e7()["E6_5mode"],
@@ -1831,6 +1896,12 @@ def main():
     chk("X98 |E_7/E_6| = 16.3489、|E_6/E_5| = 16.5820（發散飽和）",
         abs(e7["r5"] - 16.348904047545712) < 1e-6 and abs(e7["r4"] - 16.58198157981441) < 1e-6,
         f"{e7['r4']:.4f} / {e7['r5']:.4f}")
+    m = _mtx()
+    chk("X100 E_1 ≡ γ_n = 0.004871899480（四欄同值）", abs(m["E1"] - 0.004871899480351504) < 1e-15, f"{m['E1']:.12f}")
+    chk("X101 E_7(A, GPU) = +10325.589025559188", abs(m["A7"] - 10325.589025559188) < 1e-6, f"{m['A7']:.9f}")
+    chk("X102 E_7(B, GPU) = +0.006584778230", abs(m["B7"] - 0.006584778230) < 1e-9, f"{m['B7']:.12f}")
+    chk("X103 cpu↔gpu 最大相對差 ≤ 2.1e−8", m["maxrelA"] < 2.2e-8, f"{m['maxrelA']:.2e}")
+    chk("X104 E_7(B, CPU) = +0.006584778237", abs(m["B7cpu"] - 0.006584778237) < 1e-12, f"{m['B7cpu']:.12f}")
     chk("X99 ‖V^{7→5}φ_3^7‖ = 14.526（經閘）vs 舊 GPU 2246.285",
         abs(e7["V75n"] - 14.52618953969585) < 1e-6 and abs(e7["V75old"] - 2246.285) < 1e-3,
         f"{e7['V75n']:.6f} / {e7['V75old']:.3f}")
