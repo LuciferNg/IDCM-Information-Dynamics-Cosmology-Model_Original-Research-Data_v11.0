@@ -53,14 +53,17 @@ MC null（10⁴）：p = 0.4334 ⟹ 無信號
 | 檔 | 內容 |
 |:--|:--|
 | `SESSION_START.md` | 章程、重現閘、定義先行紀律、禁區（不動） |
-| `01_problem_record.md` | §〇 fence／Q／T／P／R／禁區 ＋ **§十 本輪結果（追加）** |
+| `01_problem_record.md` | §〇 fence／Q／T／P／R／禁區 ＋ **§十 本輪結果／§十一 殘留清單（追加）** |
 | `docs/01_phi_axiom_freeze.md` | **定義凍結**：A1–A7、語法、語義、Woodbury、T1 定理、強逼鏈、凍結族、判準 |
 | `docs/02_r1r3_results.md` | 結果＋判詞＋窮盡掃描＋診斷＋自捕留痕 |
+| `docs/03_residual_register.md` | **殘留清單權威版**：22 項（MA 8／MB 5／MC 4／MD 5）＋重開觸發器 |
+| `docs/04_handoff_S5_status.md` | **→ M12**：`S5` 狀態更正（「無可算載體」作廢） |
 | `scripts/00` | 重現閘（26 PASS / 0 FAIL） |
 | `scripts/01` | 凍結族 F1–F5 精確評估（`N_trials` 由准入機械決定） |
 | `scripts/02` | 單鍵 ±1 類 3606 成員窮盡 ＋ MC null |
 | `scripts/03` | 結構引理 L1（簽名／kink）／L2（Comm）／L3（對易子支撐） |
-| `data/run_0*.log` | 四支腳本之 stdout（`stdout == log`） |
+| `scripts/04` | **殘留掃描**：剛性(∀N)／譜移動／精度門檻／ℚ/41 範圍／T4 可達性（12 PASS） |
+| `data/run_0*.log` | 五支腳本之 stdout（`stdout == log`） |
 
 ## 依賴
 
