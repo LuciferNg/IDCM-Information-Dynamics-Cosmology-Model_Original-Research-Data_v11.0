@@ -31,7 +31,7 @@ N = 44 站；det(K) = 45
 [PASS] G5.1  σ_ρd ÷ (1/41) = 1.4391  = 1.4391
 [PASS] G5.2  σ_ρu = 1.34972/41 = 0.03292  = 0.03292
 [PASS] G5.3  半格 0.0122 < σ_ρd ∧ < σ_ρu（落格點 = 零資訊）  半格 = 0.012195122
-[PASS] G6.1  本目錄 scripts/ 只有本檔（零他 M 腳本、零 subprocess、零 import 模組）  pyfiles = ['00_reproduction_gate.py']
+[PASS] G6.1  本目錄 scripts/ 全部屬 M23 自身（零他 M 腳本、零 subprocess、零 import 模組）  pyfiles = ['00_reproduction_gate.py', '01_family_enum.py', '02_three_forms.py', '03_nogo_rigidity.py', '04_completeness.py']
 [PASS] G6.2  本檔零 import 專案模組（只有 stdlib ＋ mpmath）  imports = ['from fractions import Fraction as F', 'import os', 'import sys', 'import mpmath as mp']
 
 ──────────────────────────────────────────

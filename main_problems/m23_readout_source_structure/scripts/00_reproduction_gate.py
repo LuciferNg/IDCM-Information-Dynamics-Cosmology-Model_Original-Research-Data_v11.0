@@ -280,8 +280,10 @@ chk("G5.3  半格 0.0122 < σ_ρd ∧ < σ_ρu（落格點 = 零資訊）",
 # ── 閘⑥：唔准重跑他 M 腳本 ──────────────────────────────────────────
 here = os.path.dirname(os.path.abspath(__file__))
 pyfiles = sorted(f for f in os.listdir(here) if f.endswith(".py"))
-chk("G6.1  本目錄 scripts/ 只有本檔（零他 M 腳本、零 subprocess、零 import 模組）",
-    pyfiles == ["00_reproduction_gate.py"] or set(pyfiles) <= {"00_reproduction_gate.py"},
+OWN = {"00_reproduction_gate.py", "01_family_enum.py", "02_three_forms.py",
+       "03_nogo_rigidity.py", "04_completeness.py"}
+chk("G6.1  本目錄 scripts/ 全部屬 M23 自身（零他 M 腳本、零 subprocess、零 import 模組）",
+    set(pyfiles) <= OWN and "00_reproduction_gate.py" in pyfiles,
     "pyfiles = %s" % pyfiles)
 chk("G6.2  本檔零 import 專案模組（只有 stdlib ＋ mpmath）",
     all(m in ("fractions", "os", "sys", "mpmath") for m in

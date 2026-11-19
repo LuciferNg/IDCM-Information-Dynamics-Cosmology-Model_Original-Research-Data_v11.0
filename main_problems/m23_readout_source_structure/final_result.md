@@ -70,10 +70,12 @@ scripts/01  R2 形狀/F-A    9/9  PASS ＋ 1 記錄 FAIL（探針 R2.6）  EXIT=
 scripts/02  R3/R4 三型     6/6  PASS ＋ 2 記錄 FAIL（探針 I1／J1）  EXIT=0
 scripts/03  R5 no-go       8/8  PASS  EXIT=0
 scripts/04  R6 完備性      5/5  PASS ＋ 1 記錄 FAIL（探針 C3）  EXIT=0
-合計 57 檢查（54 PASS ＋ 3 記錄 FAIL）—— 判準收緊、零放寬
+合計 **61 檢查（57 PASS ＋ 4 記錄 FAIL）**—— 判準收緊、零放寬（由 `data/run_0*.log` 逐個 grep `^\[PASS\]`／`^\[REC!\]` 重點算）
 ```
 
-★ 三項記錄 FAIL 皆係**預期假設被否**（非判據放寬）：`R2.6`（比值同值）、`I1`（T2 密度 ≥5%）、`J1`（1 參數 >3σ）、`C3`（族稠密 <1σ）。
+★ **四項**記錄 FAIL 皆係**預期假設被否**（非判據放寬）：`R2.6`（比值同值）、`I1`（T2 密度 ≥5%）、`J1`（1 參數 >3σ）、`C3`（族稠密 <1σ）。
+
+**重跑一致**：`scripts/00`–`04` 重跑與 `data/` canonical log **全 MATCH**（`diff -q` 無差、全 EXIT=0）。
 
 ## 水位｜殘留
 
