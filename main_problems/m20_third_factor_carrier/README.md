@@ -56,7 +56,7 @@ MC null（10⁴）：p = 0.4334 ⟹ 無信號
 | `01_problem_record.md` | §〇 fence／Q／T／P／R／禁區 ＋ **§十 本輪結果（追加）** |
 | `docs/01_phi_axiom_freeze.md` | **定義凍結**：A1–A7、語法、語義、Woodbury、T1 定理、強逼鏈、凍結族、判準 |
 | `docs/02_r1r3_results.md` | 結果＋判詞＋窮盡掃描＋診斷＋自捕留痕 |
-| `scripts/00` | 重現閘（22 PASS / 0 FAIL） |
+| `scripts/00` | 重現閘（26 PASS / 0 FAIL） |
 | `scripts/01` | 凍結族 F1–F5 精確評估（`N_trials` 由准入機械決定） |
 | `scripts/02` | 單鍵 ±1 類 3606 成員窮盡 ＋ MC null |
 | `scripts/03` | 結構引理 L1（簽名／kink）／L2（Comm）／L3（對易子支撐） |

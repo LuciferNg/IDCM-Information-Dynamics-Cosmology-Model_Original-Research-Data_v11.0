@@ -16,7 +16,7 @@
 
 ---
 
-## §一 重現閘（`scripts/00`，EXIT=0，**22 PASS / 0 FAIL**）
+## §一 重現閘（`scripts/00`，EXIT=0，**26 PASS / 0 FAIL**）
 
 | 項 | 結果 |
 |:--|:--|
@@ -223,3 +223,5 @@ C. look-elsewhere（MC null，10⁴ 次，目標真值落於其誤差雲）
    ⟹ 含 `c/b` 通道之評估仍屬**後驗指數選擇**（M12 禁區）⟹ **結論不變：R4 只覆 `u/d/s`**，但理由由「未註冊」改為「已註冊為輸入、不可作結構判據」。
 2. **register HARD DRIFT 之歸屬**：本輪 `register.py check` 得 `HARD DRIFT: 18`，全屬 **v10.0 `open_problems_fresh` 之 legacy REF-MISSING**（M4／O124／O140／O142／O148 等），
    與 M20 無關（M20 之 `STATUS-DRIFT = 0`、`PID-NO-FOLDER = 0`、`BLOCK-DRIFT = 0`）。不代他 O 修，只記錄。
+
+3. **計數更正**：§一 原寫「22 PASS」係首次跑之數；修正判準（② 由公佈值重建、捨入界）後實跑為 **26 PASS / 0 FAIL**（`data/run_00_reproduction_gate.log` `TOTAL` 行）。以真實輸出為準，已同步 README。
