@@ -89,3 +89,22 @@
             資料夾 m23_readout_source_structure/{docs,scripts,data} 建空
             零推導、零 scripts、零 data
 ```
+---
+
+## §八 第二 session 交付記錄（2026-11-20；R1–R6 執行，append-only）
+
+```
+重現閘  scripts/00  29/29 PASS  EXIT=0（六項閘全過）
+R1      docs/01     語法凍結：三型 T1/T2/T3 ＋ 准入 P1–P3 ＋ 族 F-A–F-E ＋ 移動球門 Mv-1–Mv-3（零數值）
+R2      scripts/01  SL1 形狀引理（41,624 點精確）＋ DA1（(2,3) 唯一全異段對）＋ F-A 946 對
+                    （0/946 落 1σ；min χ 2.1688 @ (2,4)；MC 10⁷ p = 0.4973）
+R3/R4   scripts/02  三型判定：T1 17.70σ ｜ T2 0.231σ（7.35 bit）｜ T3 25.39–27.07σ；格點閘
+R5      scripts/03  NG1 no-go ＋ 剛性（N=43/44/45）＋ 防重複（重建 M20 F1–F5/3606/min χ 全吻合）
+R6      scripts/04  完備性（後驗）：T3 語法窮盡、7 段位類、判別力、形式邊界
+記錄    docs/02（R1–R4）、docs/03（NG1）、docs/04（R6）、final_result.md、README 更新
+        register note ×2 ＋ handoff → M20（診斷更正）／M12（T0 通道）
+判      partial：Q1 ✅｜Q2 🔴｜Q3 🔴｜Q4 ✅(NG1)｜T1 🔴｜T2 🔴｜T3 🟡｜T4 ✅
+核心    讀數來源結構**唔係**缺口；缺口在 W 側（M12 T0）與 δ 形狀層（超章程）
+```
+
+★ 全程未改他 M 任何檔案；跨 M 只經 register。原文（§七）不動。
