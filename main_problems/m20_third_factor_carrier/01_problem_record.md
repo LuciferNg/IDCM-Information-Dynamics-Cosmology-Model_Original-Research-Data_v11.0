@@ -3,12 +3,12 @@
 <!-- registry
 pid:     M20
 title:   第三因子載體：非二部、帶 ±1 阻挫、帶味之新結構因子（味讀數殘餘之範疇外物件）
-state:   registered
-verdict: -
-flags:   opened-only; no-derivation; new-carrier; residue-of-M12
+state:   partial
+verdict: partial
+flags:   opened-only→r1-r3-done; new-carrier; theorem-commutant; class-no-go; minimal-object-falsified; residue-of-M12
 owner:   M20
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-19
 prereq:  M12 (final_result §殘餘 S1–S5; L162 均勻性兩難; L193 缺口精確化) + M13 (近正交性) + M14 (Q3) + M15 (Q5) + M19 (指數註冊，先決)
 source:  調律者 2026-11-14「先開這幾個 M，但不在本 session 推」；缺口依據 M12 `final_result.md` L319「需質性新載體（不在已枚舉支撐×權重類）」
 -->
@@ -154,3 +154,26 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - M14 `final_result.md` §殘餘（`δ_u < 0` 語言外殘餘）
 - M15 `01_problem_record.md` §9.3（Q5）
 - M19（指數註冊，先決）
+
+---
+
+## §十 本輪結果（2026-11-19 追加，原文以上不動）
+
+```
+state = partial   ｜  R1–R3 完成 ｜  scripts 0–3 ｜  docs 01–02 ｜  判詞見 docs/02 §九
+```
+
+| # | 判 | 一句 |
+|:-:|:--|:--|
+| T1 | ✅ 定理 | `𝒞 = Comm(K)`；新載體 ⟺ `[Φ,K] ≠ 0` |
+| T2 | 🔴 | ㈠ ✅；㈡ 🔴（`1/ρ_d = 41/85` vs 2.478，差 80.5%） |
+| T3 | 🔴 | `δ_u = −2/131 < 0` 自動 ✅；`ρ_d = 85/41`（z +47.6）🔴 |
+| T4 | ✅ 類級 no-go | 單鍵 ±1 類 3606 成員精確窮盡：`|z_d|<1` = **0**；最佳 χ = 3.10 ⟹ 類否證 ≥3.1σ |
+
+- **Q1 答**：最小物件 = `Φ = +L_(2,4)`（味站三角形 AF 弦），在 `𝒯` 內部、**唯一**（`N_trials = 1`，A1–A7 機械核）。
+- **Q2 答**：㈠ ✅／㈡ 🔴。
+- **Q3 答**：負號由結構**自動**產生（不需帶號核）；量級錯 5.1×。
+- **Q4 答**：類級 no-go 已得；範疇性 no-go 未有（`𝒞` 之外空間無限）。
+- **新定理（非 M12 已有）**：`scripts/03` L1c —— 鏈上任何 `±1` 簽名 `|ρ_d| ≡ 42/41`（只能動 `ρ_u`）。
+- **診斷**：失敗在**單核 ansatz**（同一 `G` 供三 `δ`），非在載體類；改讀出式超本 M 章程 ⟹ 只發還（`docs/02 §十`）。
+- **先決**：M19 指數未完成 ⟹ R4 只對 `u/d/s` 做（本輪即此範圍），`c/b` 通道未評。
