@@ -63,6 +63,7 @@ MC null（10⁴）：p = 0.4334 ⟹ 無信號
 | `scripts/02` | 單鍵 ±1 類 3606 成員窮盡 ＋ MC null |
 | `scripts/03` | 結構引理 L1（簽名／kink）／L2（Comm）／L3（對易子支撐） |
 | `scripts/04` | **殘留掃描**：剛性(∀N)／譜移動／精度門檻／ℚ/41 範圍／T4 可達性（12 PASS） |
+| `scripts/05` | **權衡前沿**：ρ_d 與 ρ_u 之聯合可達性（MC04 精確化） |
 | `data/run_0*.log` | 五支腳本之 stdout（`stdout == log`） |
 
 ## 依賴
