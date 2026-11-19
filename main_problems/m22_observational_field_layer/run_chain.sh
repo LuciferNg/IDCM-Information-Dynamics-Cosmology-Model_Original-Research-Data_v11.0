@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# M22 driver — 全鏈重跑（依序；任何一支非 0 即停）
+set -u
+cd "$(dirname "$0")"
+export PYTHONDONTWRITEBYTECODE=1
+PY=/usr/bin/python3
+fail=0
+for s in scripts/00_reproduction_gate.py scripts/01_a5_invariants.py \
+         scripts/02_amplitude_nogo.py scripts/03_comb_field_stats.py \
+         scripts/04_null_and_sensitivity.py scripts/05_chirality.py; do
+  echo "=== $s ==="
+  $PY "$s" > "data/$(basename "${s%.py}").log" 2>&1
+  rc=$?
+  tail -1 "data/$(basename "${s%.py}").log"
+  echo "rc=$rc"
+  [ $rc -ne 0 ] && fail=1 && break
+done
+echo "CHAIN_EXIT=$fail"
+exit $fail

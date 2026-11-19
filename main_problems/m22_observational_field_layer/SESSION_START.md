@@ -76,4 +76,9 @@
 2026-11-14  開檔：01_problem_record.md + SESSION_START.md + README.md
             資料夾 m22_observational_field_layer/{docs,scripts,data} 建空
             零推導、零 scripts、零 data
+2026-11-20  第一輪執行完（partial）：重現閘 35/35；docs/01 判準凍結
+            scripts/01–05（34/20/9/8/9 PASS，合計 115 PASS／0 FAIL）
+            docs/02 投影算子（T1 ✅）；docs/03 統計量帶；docs/04 三輸入門答覆
+            final_result.md；新增禁區 5 條；register note →
+            判詞：Q1 ✅／Q2 ✅形式／Q3 🟡／Q4 🔴；T1 ✅／T2 🟡→✅形式／T3 🟡／T4 🔴
 ```

@@ -3,12 +3,12 @@
 <!-- registry
 pid:     M22
 title:   觀測場層：結構常數 → 天空場投影（原初譜 IR 端、宇稱／手性、低方差通道）
-state:   registered
-verdict: -
-flags:   opened-only; no-derivation; observational-field-layer; feeds-M17
+state:   partial
+verdict: T1-pass; T2-form; T3-partial; T4-fail
+flags:   observational-field-layer; A5-isotypic-projector; support-theorem; amplitude-nogo; feeds-M17
 owner:   M22
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-20
 prereq:  M17 (§3 輸入門 CQ2–CQ5) + M6 (dof=1 定理) + M15 (N_gen=3) + M3 (Ω 比例) + M12 (CY₃ 投影) + M16 (A₅ 唯一解)
 source:  調律者 2026-11-14「先開這幾個 M，但不在本 session 推」；缺口依據 M17 `§3` 五個子問題之輸入門全部落空
 -->
@@ -146,3 +146,37 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - M16 `final_result.md`（A₅ 唯一解）
 - M3 `final_result.md`（Ω 三分量）
 - v10 `P4 docs/72`、`docs/73`、`docs/48`（後代讀前代，只作約束）
+
+---
+
+## §十 執行結果（2026-11-20 第一輪；append-only，原文不動）
+
+> 本節 = 結果附註。上方 §〇–§九 原文保留（「只開不推」之歷史狀態）。
+> 權威判詞：`final_result.md`；推導：`docs/01–04`；腳本：`scripts/00–05`（115 PASS／0 FAIL）。
+
+### §10.1 四問之答案
+
+| 碼 | 問題 | 答案 | 判 |
+|:-:|:--|:--|:--:|
+| Q1 | 投影算子係咩？由 `𝒯` 邊個結構導出？ | `P` = **A₅ 等型投影**（`(1/|A₅|)Σ_g D(g)`）；唯一性由「鏈側 A₅ 作用平凡（5∤88）」＋ 等變性逼出 | ✅ |
+| Q2 | 能否給 IR 端？ | `ℓ = 1..5` 功率**恰零**（`f ≡ 0`）；門檻 `f < 0.2166`（Bonf）／`< 0.1143`（5σ） | ✅ 形式 |
+| Q3 | 有無宇稱／手性？ | 有（`𝒟_odd`、`ℓ_odd^min = 15`、A₅ = I 手性）；但觀測簽名為空（`C_ℓ` 全盲 ＋ 鏡像 = `c_ℓ` 符號翻轉） | 🟡 |
+| Q4 | 能否給 `σ²_16`？ | `dof=1` 排除自由 variance，但無「質量→ΔT/T」通道 ⟹ 絕對值須外部歸一 | 🔴 |
+
+### §10.2 T／P 狀態同步
+
+```
+T1 ✅（存在＋唯一＋零參數，除 3 框架 ＋ 振幅側 dof）
+T2 🟡→✅形式｜T3 🟡｜T4 🔴
+P1 🟢 閉｜P2 🟡｜P3 🟡｜P4 🔴｜P5 n/a（未全落空 ⟹ 不走 negative 全書）
+```
+
+### §10.3 新增禁區（本輪立）
+
+```
+✗ 逐模指派到天空格（任何 44→44/60 雙射）        NA1：隱藏 dof log₂(44!) = 180.795 bits
+✗ 以 R^27 數值作宇稱判準                        帶 [0.40, 102]
+✗ 以 C(π)／S_{1/2} 數值作判準                   帶跨符號／7.5×
+✗ σ²_16 絕對值作判準                            章程 T4
+✗ 「60 dof 牆」當作 𝒯 之信息上限                場模型約束 768–779
+```

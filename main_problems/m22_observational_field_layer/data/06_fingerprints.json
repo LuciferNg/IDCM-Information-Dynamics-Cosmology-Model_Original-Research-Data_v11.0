@@ -1,0 +1,13 @@
+{
+ "data/00_reproduction_gate.json": "8edba7850d9d52e5c200694412a58d10",
+ "data/01_a5_invariants.json": "fe1863ac68faf9972002180e9f760615",
+ "data/02_amplitude_nogo.json": "a2867b1e4939a4bca5f8c951be9b3e9b",
+ "data/03_comb_field_stats.json": "46a5ce564f3fa0d1883151d2fa1f6095",
+ "data/04_null_and_sensitivity.json": "07a92ed6fca72904dbe6cb8a3c1322e1",
+ "data/05_chirality.json": "0c858dccac1115961468f899cd3d561b",
+ "data/06_fingerprints.json": "870d06c7eab3ff872ff3da60bed298e9",
+ "docs/01_preregistration.md": "e84f7e2f0b4251c523adb0403f019f28",
+ "docs/02_projection_operator.md": "87b1ed595f8e5e7aee04d0b09fa19177",
+ "docs/03_statistics_bands.md": "cf66a0baf1f7bd7d527e5f05d182fd25",
+ "docs/04_input_gates.md": "76729480509c47358c9ed6383eb2b9af"
+}
