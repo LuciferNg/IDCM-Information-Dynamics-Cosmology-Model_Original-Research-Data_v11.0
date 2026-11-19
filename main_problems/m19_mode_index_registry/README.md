@@ -2,11 +2,11 @@
 
 ## 狀態
 
-⚪ **registered — 未開推**（2026-11-14 開檔）｜本 session 零推導
+🟢 **`closed`（scoped：9 模式集 × F1 frame）** — 2026-11-14 收官｜水位 85/85｜零跨 M 寫入
 
 ## 一句話
 
-`k_q`（夸克模式指數）係**結構量抑或輸入**未定；`s` 三讀未裁、`c/b/t` 完全未註冊 —— 呢張表唔落地，M12 `S4` 與 M14 `S5` 永久封死。
+`k_q` 係**混合量**：模式集 ＋ 輕子類別有結構出處（4.392 bit），逐粒子值全由質量 rank 餵入（14.077 bit）——`s` 三讀結構零判別力、`c/b/t` 純結構規則 0/21 命中、`S4` 阻塞性質更正為「可算但不可判」。
 
 ## 為何要開
 
@@ -39,7 +39,7 @@ M14 `final_result.md` L173：
 | `01_problem_record.md` | §〇 歸屬 fence／Q1–Q4／T1–T4／P1–P4／R1–R5／禁區／驗證標準 |
 | `SESSION_START.md` | 接手起點、重現閘、禁區、分工、交接 |
 | `README.md` | 本檔 |
-| `docs/` `scripts/` `data/` | 空（只開不推） |
+| `docs/` `scripts/` `data/` | 已落地：docs 7 份、scripts 8 支 ＋ l1–l3、data 6 JSON ＋ 13 log |
 
 ## 依賴
 

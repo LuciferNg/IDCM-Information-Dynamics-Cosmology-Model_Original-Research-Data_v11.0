@@ -1,0 +1,340 @@
+{
+ "n_rules": 30,
+ "rules": [
+  {
+   "name": "A 第1小",
+   "family": "A",
+   "set": [
+    1
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第2小",
+   "family": "A",
+   "set": [
+    2
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第3小",
+   "family": "A",
+   "set": [
+    3
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第4小",
+   "family": "A",
+   "set": [
+    4
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第5小",
+   "family": "A",
+   "set": [
+    5
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第6小",
+   "family": "A",
+   "set": [
+    7
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第7小",
+   "family": "A",
+   "set": [
+    9
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第8小",
+   "family": "A",
+   "set": [
+    11
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "A 第9小",
+   "family": "A",
+   "set": [
+    13
+   ],
+   "uses_mass": true
+  },
+  {
+   "name": "B n≡0(mod 2)",
+   "family": "B",
+   "set": [
+    2,
+    4
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡1(mod 2)",
+   "family": "B",
+   "set": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡0(mod 3)",
+   "family": "B",
+   "set": [
+    3,
+    9
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡1(mod 3)",
+   "family": "B",
+   "set": [
+    1,
+    4,
+    7,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡2(mod 3)",
+   "family": "B",
+   "set": [
+    2,
+    5,
+    11
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡0(mod 4)",
+   "family": "B",
+   "set": [
+    4
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡1(mod 4)",
+   "family": "B",
+   "set": [
+    1,
+    5,
+    9,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡2(mod 4)",
+   "family": "B",
+   "set": [
+    2
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "B n≡3(mod 4)",
+   "family": "B",
+   "set": [
+    3,
+    7,
+    11
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C primes",
+   "family": "C",
+   "set": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C Fibonacci",
+   "family": "C",
+   "set": [
+    1,
+    2,
+    3,
+    5,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C Lucas",
+   "family": "C",
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    11
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C 平方",
+   "family": "C",
+   "set": [
+    1,
+    4,
+    9
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C 三角",
+   "family": "C",
+   "set": [
+    1,
+    3
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "C 2冪",
+   "family": "C",
+   "set": [
+    1,
+    2,
+    4
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<0.05",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<0.1",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<0.2",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<0.3",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<0.5",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "D γ<1.0",
+   "family": "D",
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "uses_mass": false
+  },
+  {
+   "name": "E 質量 rank（正控制／輸入）",
+   "family": "E",
+   "set": [
+    7,
+    11,
+    13
+   ],
+   "uses_mass": true
+  }
+ ],
+ "hits_T1": [
+  "E 質量 rank（正控制／輸入）"
+ ],
+ "hits_T2": [],
+ "hits_T3": [
+  "A 第6小"
+ ],
+ "density": {
+  "T1": 0.0,
+  "T2": 0.0,
+  "T3": 0.0
+ },
+ "mc": {
+  "N": 10000000,
+  "seed": 20261114,
+  "p_perm_c7b11t13": 0.001983,
+  "p_sub5_T1": 0.011887,
+  "theory_perm": 0.001984126984126984,
+  "theory_sub5": 0.007936507936507936
+ }
+}

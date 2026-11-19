@@ -1,0 +1,16 @@
+============================================================================================
+M19 scripts/00 — 重現閘
+============================================================================================
+  [PASS] G1 譜重建（dps=60，n=1..44）   γ_1=0.005095770779492917275388486  γ_44=4.0
+  [PASS] G2 γ_1 對 M4 記載值   |dev|=2.75388e-19
+  [PASS] G3 γ_44 = 4 精確   γ_44 − 4 = 0.0
+  [PASS] G4 對極核 γ_n+γ_{44−n}=4   max|dev|=6.22302e-61
+  [PASS] G5 嚴格遞增 ＋ 恆等式   min Δγ=0.005095770779（n=43：γ_44−γ_43）
+  [PASS] G6a 9 模式集準則（O136/O137）   ok
+  [PASS] G6b γ 升序授權（O137→O233）   ok
+  [PASS] G6c T3 槽定理（O210 docs/08 × O233 docs/13）   ok
+  [PASS] G6d 測度層 no-go（O210 docs/11）   ok
+  [PASS] G6e CSSG-v3 第三 frame 存在（O206 scripts/23）   ok
+  [PASS] G7 本 script 喺 M19 目錄內（零跨 M 寫入）   /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m19_mode_index_registry/scripts
+
+RESULT 11/11 PASS

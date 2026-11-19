@@ -3,9 +3,9 @@
 <!-- registry
 pid:     M19
 title:   模式指數註冊：夸克模式指數 k_q 之結構來源、三讀裁決與登記制度
-state:   registered
-verdict: -
-flags:   opened-only; no-derivation; index-registry; unblocks-S4-S5
+state:   closed
+verdict: closed
+flags:   closed-scoped; bit-decomposition; three-state-registry; frame-tag-mandatory; S4S5-diagnosis-corrected
 owner:   M19
 created: 2026-11-14
 updated: 2026-11-14
@@ -142,3 +142,49 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - M14 `final_result.md` L173（S4/S5 阻塞）、§殘餘 R2
 - M13 `docs/04`（gen-2^k 權重、look-elsewhere 12.5%）
 - M20（若 T3 需新載體 ⟹ handoff）
+
+---
+
+## §十 推導時序索引（append-only）
+
+| # | 輪 | 內容 | 產物 |
+|:-:|:--|:--|:--|
+| 1 | 2026-11-14 | 重現閘 G1–G7（譜 ＋ 出處存在性） | `docs/01`／`scripts/00`（11/11） |
+| 2 | 2026-11-14 | Frame 普查：F1／F2 = 同一次序嵌入之兩向；F3 屬支撐層（非雙射） | `docs/02`／`scripts/01`（8/8） |
+| 3 | 2026-11-14 | 位元分解：9! → 17,280（結構 4.392 bit ／ 輸入 14.077 bit） | `docs/03`／`scripts/02`（8/8） |
+| 4 | 2026-11-14 | 容許矩陣 ＋ s 三讀 ＋ c/b/t：三讀零判別力（T2 🔴） | `docs/04`／`scripts/03`（8/8） |
+| 5 | 2026-11-14 | 掃描：21 純結構規則 0 命中；MC 10⁷ | `docs/04`／`scripts/04`（5/5） |
+| 6 | 2026-11-14 | 登記冊三態 ＋ 引用閘（1 PASS／2 BLOCK） | `docs/05`／`scripts/05`（5/5） |
+| 7 | 2026-11-14 | 作用域定理：全 T3 可行雙射 = 0（鴿籠 6 > 4） | `docs/06`／`scripts/07`（6/6） |
+| 8 | 2026-11-14 | 回接 `S4`／`S5`：阻塞診斷更正（T4 🔴） | `docs/06` |
+| 9 | 2026-11-14 | 審計 A1–A8 ＋ L1／L2／L3 | `docs/07`（85/85） |
+
+## §十一 判決（T1–T4 逐條）
+
+| # | 待證 | 判 | 依據 |
+|:-:|:--|:-:|:--|
+| **T1** | `k_q` = 譜上之結構標記 | 🟡 **混合** | 模式集 ＋ 輕子類別 = 結構（4.392 bit）；值 = 質量 rank 輸入（14.077 bit） |
+| **T2** | `s` 三讀恰一可由對極結構選出 | 🔴 **觸發凍結失敗判準** | 三讀 S1 可行數 2,880／720／2,880 全 > 0 ⟹ 零判別力 |
+| **T3** | `c/b/t` 落已枚舉結構集 | 🔴 **零命中** | 21 條純結構規則 0/21；秩族命中屬輸入 |
+| **T4** | 登記 ⟹ `S4`／`S5` 阻塞解除 | 🔴 **診斷更正** | 登記完成但零參數地位未恢復 ⟹ 「可算 ≠ 可判」 |
+
+## §十二 登記冊（權威在 `docs/05` ＋ `data/05_registry.json`）
+
+```
+三態：STRUCT_CLASS（支撐 ⊊ 9 模式集）／INPUT_RANK（支撐 = 全 9 模）／UNREGISTERED
+引用閘 REQUIRED = (frame, state, provenance)；裸寫 k_q 一律 BLOCK
+本輪：3 STRUCT_CLASS（e,μ,τ）＋ 6 INPUT_RANK（u,d,s,c,b,t）
+```
+
+## §十三 附註（append-only 更正，原文保留）
+
+- **對 §八 之附註（2026-11-14）**：§八 之 `state = registered（只開不推）`、`scripts = 0`、`docs = 0`、`data = 0` 係開檔時狀態；現況見 §十／§十一與 `final_result.md`。原文保留，不刪。
+- **對 §一 現況表之附註（2026-11-14）**：表內 `s = 4/5/7 三讀未定`、`c/b/t 未註冊` 係開檔時狀態；本輪已裁：三讀**結構零判別力**（非「揀一讀」）；`c→7、b→11、t→13` 已登記為 `INPUT_RANK`（見 `docs/05`）。
+- **對 §二 T1 之附註（2026-11-14）**：原命題「`k_q` = 結構量抑或輸入」預設二元；實測為**混合量**（類別結構 ＋ 值輸入），判準不變、命題形式收窄。
+- **腳本層兩處 append-only 澄清**（判據零放寬）：① `scripts/00` Δγ 恆等式常數由 `π/44` 更正為 `π/88`（推導錯，非閾值放寬）；② `scripts/01` C5 之「6/9 落集外」更正為「5/9」（手數錯，實跑為準）。
+
+## §十四 相關文件（本輪產物）
+
+- `docs/01`–`docs/07`｜`scripts/00`–`07`、`l1`–`l3`｜`data/0*.json`、`data/run_*log`
+- 唯讀引用：M12 `final_result` L201／`docs/49` §OP3、M14 `final_result` L173、M13 `docs/11`、
+  v10 `O136` `docs/19`、`O137` `final_result`、`O210` `docs/08/10/11`、`O233` `docs/12/13/17`、`O206` `scripts/23`

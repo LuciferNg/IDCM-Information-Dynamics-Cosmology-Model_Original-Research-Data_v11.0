@@ -1,0 +1,30 @@
+{
+ "total_bijections": 362880,
+ "rho_struct": 17280,
+ "S1_class": [
+  1,
+  5,
+  9,
+  13
+ ],
+ "F1_admissible": true,
+ "F2_admissible": false,
+ "struct_bits": 4.392317422778761,
+ "input_bits": 14.076815597050832,
+ "s_at": {
+  "4": 2880,
+  "5": 720,
+  "7": 2880
+ },
+ "rank_map": {
+  "e": 1,
+  "μ": 5,
+  "τ": 9,
+  "t": 13,
+  "u": 2,
+  "d": 3,
+  "s": 4,
+  "c": 7,
+  "b": 11
+ }
+}

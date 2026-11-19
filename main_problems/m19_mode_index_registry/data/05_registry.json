@@ -1,0 +1,225 @@
+{
+ "frame_canonical": "F1_gamma_ascending",
+ "states": [
+  "STRUCT_CLASS",
+  "INPUT_RANK",
+  "UNREGISTERED"
+ ],
+ "rows": [
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "e",
+   "n": 1,
+   "state": "STRUCT_CLASS",
+   "provenance": "T3 槽定理（χ=1 ⟹ n≡1 mod 4）× 群層 iso Φ:Ŝ↦z（v10 O210 docs/08,10；O233 docs/13+17）",
+   "note": "類別結構；具體值由質量 rank 定",
+   "support": [
+    1,
+    5,
+    9,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "u",
+   "n": 2,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "d",
+   "n": 3,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "s",
+   "n": 4,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "μ",
+   "n": 5,
+   "state": "STRUCT_CLASS",
+   "provenance": "T3 槽定理（χ=1 ⟹ n≡1 mod 4）× 群層 iso Φ:Ŝ↦z（v10 O210 docs/08,10；O233 docs/13+17）",
+   "note": "類別結構；具體值由質量 rank 定",
+   "support": [
+    1,
+    5,
+    9,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "c",
+   "n": 7,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "τ",
+   "n": 9,
+   "state": "STRUCT_CLASS",
+   "provenance": "T3 槽定理（χ=1 ⟹ n≡1 mod 4）× 群層 iso Φ:Ŝ↦z（v10 O210 docs/08,10；O233 docs/13+17）",
+   "note": "類別結構；具體值由質量 rank 定",
+   "support": [
+    1,
+    5,
+    9,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "b",
+   "n": 11,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  },
+  {
+   "frame": "F1_gamma_ascending",
+   "particle": "t",
+   "n": 13,
+   "state": "INPUT_RANK",
+   "provenance": "質量 rank（觀測輸入）",
+   "note": "零結構約束；值 = 類內 γ 升序",
+   "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "log2_free_value_layer": null
+  }
+ ],
+ "gate": {
+  "required": [
+   "frame",
+   "state",
+   "provenance"
+  ],
+  "samples": [
+   {
+    "name": "合法：完整三欄",
+    "verdict": "PASS",
+    "missing": []
+   },
+   {
+    "name": "非法：缺 frame",
+    "verdict": "BLOCK",
+    "missing": [
+     "frame"
+    ]
+   },
+   {
+    "name": "非法：裸 k_q",
+    "verdict": "BLOCK",
+    "missing": [
+     "frame",
+     "state",
+     "provenance"
+    ]
+   }
+  ]
+ },
+ "inconsistencies": [
+  {
+   "id": "GX1",
+   "item": "u→2 / d→3 之地位",
+   "detail": "M12 OP6：M4 docs/34 記「已裁決觀測輸入」；O140 docs/19 記「後驗候選」⟹ 同兩值兩個地位",
+   "target": "M12 / M14"
+  },
+  {
+   "id": "GX2",
+   "item": "S4 阻塞",
+   "detail": "M12 OP3 ＋ M14 §附二.3：阻塞於 c/b 模式指數未註冊 ⟹ 本輪證明：登記後仍係 rank 輸入，阻塞性質係「框架依賴」而非「缺一格」",
+   "target": "M12 / M14"
+  },
+  {
+   "id": "GX3",
+   "item": "F3（O206 CSSG-v3）之層位",
+   "detail": "被稱「物理 assignment」，但 n=1 三粒子重複 ＋ 5/9 落 9 模式集外 ⟹ 屬支撐編碼層，非索引層",
+   "target": "M1 / O206（v10，唯讀）"
+  }
+ ]
+}
