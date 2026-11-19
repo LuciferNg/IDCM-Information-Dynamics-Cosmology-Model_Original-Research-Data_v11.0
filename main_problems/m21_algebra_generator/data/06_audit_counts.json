@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "tag": "A00  log(22P/0F) ≡ JSON(n_pass=22,n_fail=0)",
+      "pass": true,
+      "detail": "22/0"
+    },
+    {
+      "tag": "A01  log(26P/0F) ≡ JSON(n_pass=26,n_fail=0)",
+      "pass": true,
+      "detail": "26/0"
+    },
+    {
+      "tag": "A02  log(4P/2F) ≡ JSON(n_pass=4,n_fail=2)",
+      "pass": true,
+      "detail": "4/2"
+    },
+    {
+      "tag": "A03  log(8P/0F) ≡ JSON(n_pass=8,n_fail=0)",
+      "pass": true,
+      "detail": "8/0"
+    },
+    {
+      "tag": "A04  log(9P/2F) ≡ JSON(n_pass=9,n_fail=2)",
+      "pass": true,
+      "detail": "9/2"
+    },
+    {
+      "tag": "A05  log 已解析（18P/0F）",
+      "pass": true,
+      "detail": "18/0"
+    },
+    {
+      "tag": "TOT  合計水位（87 PASS / 4 FAIL，scripts 00–05）",
+      "pass": true,
+      "detail": "87/4"
+    },
+    {
+      "tag": "B00  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B01  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B02  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B03  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B04  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B05  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    }
+  ],
+  "n_pass": 13,
+  "n_fail": 0,
+  "n_total": 13,
+  "watermark": {
+    "pass": 87,
+    "fail": 4
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "tag": "TF1-a-a  N_d·T₁ = N_O38（dev ≤ 1e-5）",
+      "pass": true,
+      "detail": "dev = 7.583e-6"
+    },
+    {
+      "tag": "TF1-a-b  N_O38 = M₀/(ħω_ring)（dev ≤ 1e-3，限 E_kchain 位數）",
+      "pass": true,
+      "detail": "dev = -1.626e-5"
+    },
+    {
+      "tag": "TF1-b  log₁₀T₁ ≡ log₁₀(M₀/ħω_ring) − log₁₀(N_d)（dev ≤ 1e-4，同一量）",
+      "pass": true,
+      "detail": "dev = -1.036e-5"
+    },
+    {
+      "tag": "TF1-b1  gap = log₁₀T₁ − 2.894296 = 35.717977（恆等）",
+      "pass": true,
+      "detail": "35.717977"
+    },
+    {
+      "tag": "TF1-b2  缺口無新內容：= log₁₀(T₁) − 圖卡跨距",
+      "pass": true,
+      "detail": "恆等"
+    },
+    {
+      "tag": "TF1-c  X₀/√N_IDCM ≡ μ（代數恆等，dev ≤ 1e-6）",
+      "pass": true,
+      "detail": "dev = -1.734e-8"
+    },
+    {
+      "tag": "TF1-d  乘積固定 ⟹ (f_M0, f_R) 一維族（乘積全等）",
+      "pass": true,
+      "detail": "5/5 乘積相同"
+    },
+    {
+      "tag": "TF1-e  f_R 只能由除法反解（f_R = N_d·T₁/f_M0）",
+      "pass": true,
+      "detail": "f_R 無獨立結構式；定義式即反解式"
+    }
+  ],
+  "n_pass": 8,
+  "n_fail": 0,
+  "n_total": 8,
+  "identity": {
+    "N_d_times_T1": "1.801881664e+40",
+    "N_O38": "1.801868e+40",
+    "M0_over_hbarw": "1.8018387006581e+40",
+    "dev_a": "7.58324e-6",
+    "dev_b": "-1.62605e-5"
+  },
+  "gap": {
+    "gap_from_ratio": "38.6122632342",
+    "gap_published": "35.717977"
+  },
+  "gauge": {
+    "samples": [
+      [
+        "2.2852931e-21",
+        "7.884685181e+60"
+      ],
+      [
+        "1.0e-21",
+        "1.801881664e+61"
+      ],
+      [
+        "5.0e-21",
+        "3.603763328e+60"
+      ],
+      [
+        "1.0e-20",
+        "1.801881664e+60"
+      ],
+      [
+        "1.0e-18",
+        "1.801881664e+58"
+      ]
+    ]
+  },
+  "verdict": "T3 🔴 — 兩因子係 gauge 分解；乘積 = N_O38 = M₀/ħω_ring 單一 object"
+}

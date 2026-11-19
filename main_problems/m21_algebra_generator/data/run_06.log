@@ -1,0 +1,24 @@
+==============================================================================
+M21 scripts/06 — check 水位自查
+==============================================================================
+[PASS] A00  log(22P/0F) ≡ JSON(n_pass=22,n_fail=0) :: 22/0
+[PASS] A01  log(26P/0F) ≡ JSON(n_pass=26,n_fail=0) :: 26/0
+[PASS] A02  log(4P/2F) ≡ JSON(n_pass=4,n_fail=2) :: 4/2
+[PASS] A03  log(8P/0F) ≡ JSON(n_pass=8,n_fail=0) :: 8/0
+[PASS] A04  log(9P/2F) ≡ JSON(n_pass=9,n_fail=2) :: 9/2
+[PASS] A05  log 已解析（18P/0F） :: 18/0
+
+  合計：PASS = 87 ｜ FAIL = 4
+[PASS] TOT  合計水位（87 PASS / 4 FAIL，scripts 00–05） :: 87/4
+
+── 決定性重跑（00–05，比對 stdout） ──
+[PASS] B00  重跑 stdout byte-identical :: rc=0, diff=0
+[PASS] B01  重跑 stdout byte-identical :: rc=0, diff=0
+[PASS] B02  重跑 stdout byte-identical :: rc=1, diff=0
+[PASS] B03  重跑 stdout byte-identical :: rc=0, diff=0
+[PASS] B04  重跑 stdout byte-identical :: rc=1, diff=0
+[PASS] B05  重跑 stdout byte-identical :: rc=0, diff=0
+
+==============================================================================
+scripts/06 結果：13/13 PASS ｜ 0 FAIL
+==============================================================================

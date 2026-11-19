@@ -3,12 +3,12 @@
 <!-- registry
 pid:     M21
 title:   代數產生器層：N_d = 44 之生成機制，及 10^38 = f_M0·f_R/N_d 之兩因子缺口
-state:   registered
-verdict: -
-flags:   opened-only; no-derivation; algebra-generator; producer-gap
+state:   partial
+verdict: partial
+flags:   algebra-generator; producer-gap; census-identity; bridge-open; density-gate
 owner:   M21
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-20
 prereq:  M16 (B=4 ↔ A₅ 已閉合, dof=0 —— 本 M 不重推) + M6 (Σγ=90 環核 12/12) + M8 (T1 = f_M0·f_R/N_d, 缺口 35.717977 dex) + M15 (Q3 歸約至 N_d=44)
 source:  調律者 2026-11-14「先開這幾個 M，但不在本 session 推」；缺口依據 M15 §9.5「本 O 不判定 N_d=44／88／Σγ=90」＋ M8 T1
 -->
@@ -148,3 +148,78 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - M8 `final_result.md` T1、`docs/04 §4`、`docs/06`
 - M15 `01_problem_record.md` Q3、§9.5
 - v10 `O38` `scripts/33`（φ-lock 0 命中，後代讀前代）
+
+---
+
+## §十 推導結果（2026-11-20 第一輪；append-only，上方原文不動）
+
+> 狀態更正：§八 之 `state = registered`（只開不推）已於本輪失效 ⟹
+> 現況 = **partial**（第一輪完，本 O 自身殘項 3）。判準見 `docs/00_preregistration.md`。
+
+### §10.1 判詞表
+
+| 項 | 判 | 依據 | 檔案 |
+|:-:|:-:|:--|:--|
+| **Q1／T1** | 🟡 | 群側 `E4`：`N_d = Σ_χ d(d−1) = \|G\| − #{g²=e} = 60 − 16 = 44`（F 型，dof=0）；度集被 `CA1` 唯一強迫。晶格側橋 `BR1` 只到「存在」（44 點 A₅-集，249 種分解） | `docs/01`；`scripts/01` |
+| **Q2／T3** | 🔴 | `f_M0·f_R ≡ N_O38 ≡ M₀/ħω_ring ≡ N_d·T₁` 四重寫；`f_R = N_d·T₁/f_M0` 係反解 ⟹ 分解係 gauge（一維族） | `docs/03`；`scripts/03` |
+| **Q3／P5** | ✅ | 雙態登記：`structure-derived (group side) / bridge-open (lattice side)`；`data/05_registry_Nd.json` 機械生成 | `docs/05`；`scripts/05` |
+| **Q4／T4** | 🔴 不閉 | 13 邊分類 `F=7, T=2, M=3, A=0, D=1`；無孤立節點；缺口 = `E5/E6`（T：恆等反演）＋ `E7/E8/E13`（M：無算子身份） | `docs/04`；`scripts/04` |
+| **T2** | 🔴 | `CY1′` k-free 命中 **6 ≥ 5**（§六禁區明列「≥5 條 ⟹ 零判別力」）；`CY1` `q_obs = 53.5%` ≫ 5% | `docs/02`；`scripts/02` |
+
+### §10.2 新結果（只 4 項；其餘全部已註冊，見 §10.3）
+
+```
+CA1  度集唯一性引理：5 件、Σd²=60、Σd=16 ⟹ 唯一解 {1,3,3,4,5}（M16 未固定「3 之重數 2」）
+CA2  普查形式：Σ_χ (d−1)(d−B) = 0（B=4）⟺ B = (d−1)-加權平均度 ⟺ N_d = B·Σ(d−1) = 4×11
+      ⚠ CA2 ≡ CA3（同一方程兩種寫法）⟹ 不可當兩條獨立證據
+CA5/CA6  族 𝔉（|𝔉|=30）內命中 44／33／55 各恰 1 個（q_obs = 3.33%）；AP 生成元對 {33,11} 唯一
+GR1  T／M／A 三型邊分類 ＋ dof 分支判定（(a) O212 dof = 1 成立）＋ 雙態登記 JSON
+```
+
+### §10.3 產物查重（硬約束：不得宣稱新恆等式）
+
+掃 v10 ∪ v11 共 9,576 檔（`scripts/05`）：`Σd(d−1)` 23 命中｜`B·L₅` 167｜`Σγ=2N+2` 77｜
+`K_tree=3·11` 29｜`f_M0·f_R/N_O38` 92｜`60 = N_d+B²` 151 ⟹ **全部已註冊**
+（v10 O171 docs/33 & docs/38；M15 §三；M16；M8 docs/06）。
+
+### §10.4 對 §六 禁區之判（不重推，只標結果）
+
+```
+✗ p9 FORCE_44（φ-級聯 ⟹ Σγ=90 ⟹ N=44）   🔴 循環 —— M15 out_of_scope/docs/14 已判，本輪只引用
+✗ Σγ = 90 作 producer                       🔴 T 型（CG1：N=2..120 違例 0 ⟹ 恆等反演）
+✗ 記賬 60 = N_d + B² 當兩條約束              🔴 只係一條：N₂ = B²
+✗ CY₃(h11,h21) → N_d                        🔴 k-free 6 條同族，零判別力
+```
+
+### §10.5 殘項（3）
+
+```
+CA-bridge  44 點 A₅-分解選哪一種（249 種）        🟡 需晶格側環作用先定
+h11/h21    與 N_d 之算子身份                      🔴 現 M 型
+N₂ = B²    之算子身份                              🟡 現 M 型
+```
+
+### §10.6 審計水位（機械重算，`scripts/06`）
+
+```
+00 重現閘 22/22 ｜ 01 26/26 ｜ 02 4/6（2 FAIL = 結論）｜ 03 8/8 ｜ 04 9/11（2 FAIL = 結論）
+05 18/18 ｜ 06 13/13（水位 ＋ 決定性重跑 byte-identical）
+合計 87 PASS ／ 4 FAIL（00–05；4 FAIL 全部係被證偽之假設本身）
+表格 pipe 自查：本輪新增表格全綠；§三 已知前置表（原檔既有）含未 escape 之 |G|，
+              屬既有顯示缺陷，按 append-only 不修改原文，只此註記。
+```
+
+---
+
+## §十一 推導時序索引（append-only）
+
+| 輪 | 日期 | 產物 | checks | 判 |
+|:-:|:--|:--|:-:|:--|
+| 0 | 2026-11-14 | `01_problem_record.md`、`SESSION_START.md`、`README.md`（只開不推） | — | — |
+| 1 | 2026-11-20 | `docs/00`（預註冊）＋ `scripts/00`（重現閘） | 22/22 | 閘過 |
+| 1 | 2026-11-20 | `scripts/01` ＋ `docs/01`（R1／T1） | 26/26 | T1 🟡 |
+| 1 | 2026-11-20 | `scripts/02` ＋ `docs/02`（R2／T2） | 4/6 | T2 🔴 |
+| 1 | 2026-11-20 | `scripts/03` ＋ `docs/03`（R3／T3） | 8/8 | T3 🔴 |
+| 1 | 2026-11-20 | `scripts/04` ＋ `docs/04`（R4／T4） | 9/11 | T4 🔴 不閉 |
+| 1 | 2026-11-20 | `scripts/05` ＋ `docs/05`（P5／Q3、查重、登記） | 18/18 | 登記 ✅ |
+| 1 | 2026-11-20 | `scripts/06`（水位自查）＋ `final_result.md` ＋ README／本檔同步 | 13/13 | partial |

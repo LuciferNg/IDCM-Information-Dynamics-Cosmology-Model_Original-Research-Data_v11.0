@@ -1,0 +1,264 @@
+{
+  "checks": [
+    {
+      "tag": "A5.0  |G| = 60",
+      "pass": true,
+      "detail": "60"
+    },
+    {
+      "tag": "A5.1  k = 5 共軛類",
+      "pass": true,
+      "detail": "[1, 12, 12, 15, 20]"
+    },
+    {
+      "tag": "A5.2  #對合 = 15",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "tag": "A5.3  #{g² = e} = 16",
+      "pass": true,
+      "detail": "16"
+    },
+    {
+      "tag": "CA4-a  每元素與其逆共軛（違例 0）⟹ 特徵標全實 ⟹ FS = +1",
+      "pass": true,
+      "detail": "violations = 0"
+    },
+    {
+      "tag": "CA4-b  Σχ(1) = #{g²=e} = 16（FS 定理，先決已證）",
+      "pass": true,
+      "detail": "16"
+    },
+    {
+      "tag": "CA4-c  Burnside 自檢：Σd² = |G| = 60",
+      "pass": true,
+      "detail": "60 vs 60"
+    },
+    {
+      "tag": "CA4-d  #度 = #共軛類 = 5",
+      "pass": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "tag": "CA4-e  Σd = #{g²=e} = 16",
+      "pass": true,
+      "detail": "16 vs 16"
+    },
+    {
+      "tag": "CA1  度集唯一 ⟹ {1,3,3,4,5}",
+      "pass": true,
+      "detail": "|S| = 1, S = [(1, 3, 3, 4, 5)]"
+    },
+    {
+      "tag": "CA2  加權均值恆等 Σ(d−1)(d−B) = 0（B = 4）",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "CA3-a  Σd(d−1) = 44",
+      "pass": true,
+      "detail": "44"
+    },
+    {
+      "tag": "CA3-b  B·Σ(d−1) = 4×11 = 44",
+      "pass": true,
+      "detail": "4×11 = 44"
+    },
+    {
+      "tag": "CA3-c  兩式精確相等 ⟹ N_d = B·Σ(d−1)",
+      "pass": true,
+      "detail": "44 = 44"
+    },
+    {
+      "tag": "CA3-d  Σ(d−1) = 11 = L₅",
+      "pass": true,
+      "detail": "11"
+    },
+    {
+      "tag": "CA3-e  Σ(d−1)² = 33 = K_tree",
+      "pass": true,
+      "detail": "33"
+    },
+    {
+      "tag": "CA3-f  Σ(d²−1) = 55 = F₁₀",
+      "pass": true,
+      "detail": "55"
+    },
+    {
+      "tag": "CA3-g  三元 AP：(33, 44, 55) 公差 11",
+      "pass": true,
+      "detail": "33, 44, 55"
+    },
+    {
+      "tag": "CA3-h  Σd(d−1) = |G| − Σd = 60 − 16 = 44",
+      "pass": true,
+      "detail": "44"
+    },
+    {
+      "tag": "CA3-i  33 + 44 + 55 = 132 = 3·44（M16 記賬自檢）",
+      "pass": true,
+      "detail": "132"
+    },
+    {
+      "tag": "CA5  密度閘 q_obs(44) ≤ 5%",
+      "pass": true,
+      "detail": "q_obs = 0.0333 (1/30)"
+    },
+    {
+      "tag": "CA6  (33,44,55) 之生成元對在已實現值域內唯一",
+      "pass": true,
+      "detail": "[(33, 11)]"
+    },
+    {
+      "tag": "CA6-b  生成元 = {Σ(d−1)², Σ(d−1)} = {33, 11}",
+      "pass": true,
+      "detail": "[(33, 11)]"
+    },
+    {
+      "tag": "BR1-a  44 點 A₅-集存在（軌道分解非空）",
+      "pass": true,
+      "detail": "249 種分解"
+    },
+    {
+      "tag": "BR1-b  存在 ≠ 唯一（分解數 = 1 才算唯一）",
+      "pass": true,
+      "detail": "分解數 = 249"
+    },
+    {
+      "tag": "BR1-c  44 ∤ 60 ⟹ 無傳遞 A₅-作用於 44 點",
+      "pass": true,
+      "detail": "60 mod 44 = 16"
+    }
+  ],
+  "n_pass": 26,
+  "n_fail": 0,
+  "n_total": 26,
+  "a5": {
+    "order": 60,
+    "n_classes": 5,
+    "class_sizes": [
+      1,
+      12,
+      12,
+      15,
+      20
+    ],
+    "n_involutions": 15,
+    "n_sqrt_identity": 16,
+    "degrees": [
+      1,
+      3,
+      3,
+      4,
+      5
+    ],
+    "sum_d2": 60,
+    "sum_d": 16
+  },
+  "census": {
+    "sum_dm1": 11,
+    "sum_dm1_sq": 33,
+    "sum_dd_1": 44,
+    "sum_dsq_1": 55,
+    "centred_at_B": 0,
+    "B": 4,
+    "N_d_pred": 44
+  },
+  "density": {
+    "family_size": 30,
+    "hits_44": [
+      "Σ(d-1)^1 d^1 (d+1)^0"
+    ],
+    "q_obs_44": 0.03333333333333333,
+    "hits_33": [
+      "Σ(d-1)^2 d^0 (d+1)^0"
+    ],
+    "hits_55": [
+      "Σ(d-1)^1 d^0 (d+1)^1"
+    ]
+  },
+  "generator_pair": [
+    [
+      33,
+      11
+    ]
+  ],
+  "bridge": {
+    "subgroup_orders": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      12,
+      60
+    ],
+    "orbit_sizes": [
+      1,
+      5,
+      6,
+      10,
+      12,
+      15,
+      20,
+      30,
+      60
+    ],
+    "n_decompositions_44": 249,
+    "examples": [
+      [
+        12,
+        12,
+        20
+      ],
+      [
+        1,
+        1,
+        12,
+        30
+      ],
+      [
+        5,
+        12,
+        12,
+        15
+      ],
+      [
+        6,
+        6,
+        12,
+        20
+      ],
+      [
+        10,
+        10,
+        12,
+        12
+      ],
+      [
+        1,
+        1,
+        6,
+        6,
+        30
+      ],
+      [
+        1,
+        1,
+        10,
+        12,
+        20
+      ],
+      [
+        1,
+        1,
+        12,
+        15,
+        15
+      ]
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+==============================================================================
+M21 scripts/05 — 產物查重 ＋ 雙態登記
+==============================================================================
+  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9576
+
+  K1  Σ_χ d(d−1) = 44（A₅ 度集普查）
+    命中檔案數 = 23
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/final_result.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/01_problem_record.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/README.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/docs/34_audit_verify_round.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/docs/33_anchor_generation.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/docs/38_chain_spectrum_derivation.md
+
+  K2  N_d = B·L₅ = L₃·L₅ = 4×11
+    命中檔案數 = 167
+      · IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino/docs/06_identity_refinement.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino/docs/04_ring_tightbinding.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/00_Master_Theorem.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/01_problem_record.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/07_three_prong_20260907.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md
+
+  K3  Σγ = 2N + 2（恆等）
+    命中檔案數 = 77
+      · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o72_kchain_ktree_reality__SESSION_START.md
+      · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o72_kchain_ktree_reality.SESSION_START.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p9_kchain_number_field/final_result.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p9_kchain_number_field/05_structural_proof_force_44.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p9_kchain_number_field/00_record.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p9_kchain_number_field/01_problem_record.md
+
+  K4  K_tree = 33 = 3·11 = N_gen·L₅
+    命中檔案數 = 29
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/00_Master_Theorem.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/12_p2_residual_attack_20261107.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/scripts/66_channel_duality_deltacp.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/scripts/67_level_count_thet23.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/scripts/63_audit_independent.py
+
+  K5  非對合／平方根計數（群側算子身份）
+    命中檔案數 = 117
+      · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o82_mass_generation__SESSION_START.md
+      · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o82_mass_generation.SESSION_START.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/docs/09_highl_tail_transfer.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/12_highl_tail_identity.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/src/self_consistent_projection.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/src/sqrt_phi_algebraic_origin.py
+
+  K6  f_M0·f_R 乘積 = N_O38
+    命中檔案數 = 92
+      · IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino/docs/14_open_problems.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/SESSION_START.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/docs/17_full_audit_20261024.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/docs/15_handoff_adjudications.md
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/docs/01_problem_record.md
+
+  K7  60 = N_d + B² 記賬
+    命中檔案數 = 151
+      · IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/08_omegab_direct.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/scripts/07_he3_and_omegab.py
+      · IDCM-v10.0--It-From-Beat/main_problems/p14_global_routing_table/docs/38_winding_energy_bridge.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p14_global_routing_table/docs/37_winding_cost_mincover.md
+      · IDCM-v10.0--It-From-Beat/main_problems/p14_global_routing_table/scripts/75_winding_energy_bridge.py
+      · IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md
+
+  K8  唯一性：度集由 (Σd², Σd, k) 唯一決定
+    命中檔案數 = 1
+      · IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md
+[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9576 files
+[PASS] NDR1  K1 查重已記錄 :: hits = 23
+[PASS] NDR1  K2 查重已記錄 :: hits = 167
+[PASS] NDR1  K3 查重已記錄 :: hits = 77
+[PASS] NDR1  K4 查重已記錄 :: hits = 29
+[PASS] NDR1  K5 查重已記錄 :: hits = 117
+[PASS] NDR1  K6 查重已記錄 :: hits = 92
+[PASS] NDR1  K7 查重已記錄 :: hits = 151
+[PASS] NDR1  K8 查重已記錄 :: hits = 1
+[PASS] NDR1-dedup  K1 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 23
+[PASS] NDR1-dedup  K2 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 167
+[PASS] NDR1-dedup  K4 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 29
+[PASS] NDR1-dedup  K6 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 92
+[PASS] NDR1-dedup  K7 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 151
+
+── 雙態登記（機械生成）──
+{
+  "quantity": "N_d = 44",
+  "formal_state": "structure-derived (group side) / bridge-open (lattice side)",
+  "state_zh": "結構導出（群側）／橋未閉（晶格側）",
+  "dof_continuous_added": 0,
+  "producers": [
+    {
+      "id": "E4",
+      "route": "N_d = Σ_χ d(d−1) = |G| − Σ_χ d = 60 − 16",
+      "operator_identity": "非對合元素計數（= |G| − #{g: g²=e}）；度集由 (Σd²=60, Σd=16, k=5) 唯一強迫",
+      "dof": 0,
+      "status": "F",
+      "registered_upstream": [
+        "v10 O171 docs/38_chain_spectrum_derivation.md",
+        "v11 M15 §三 已知前置",
+        "v11 M16 記賬 60 = N_d + B²"
+      ]
+    },
+    {
+      "id": "E9",
+      "route": "N_d = B·L₅ = 4×11（= L₃·L₅）",
+      "operator_identity": "B = (d−1)-加權平均度（CA2）；L₅ = Σ_χ(d−1)",
+      "dof": 0,
+      "status": "F（給定 E4 + CA2）",
+      "registered_upstream": [
+        "v11 M15 docs/13 Q3（N_d = L₃L₅）",
+        "v10 O171（2B·L₅ = 88）"
+      ]
+    }
+  ],
+  "tautologies_never_producers": [
+    {
+      "id": "E5",
+      "stmt": "Σγ = 2(N_d+1) = 90",
+      "why": "循環圖恆等（CG1，N=2..120 違例 0）⟹ 對 N 零約束"
+    },
+    {
+      "id": "E6",
+      "stmt": "Σγ = B(N_d+1)/2 = 90",
+      "why": "與 E5 同一方程（B/2 = 2）"
+    }
+  ],
+  "matches_no_operator_identity": [
+    {
+      "id": "E7",
+      "stmt": "h11 = N_d − 2B = 36",
+      "why": "池掃 ≥6 條 k-free 式（scripts/02）⟹ 零判別力"
+    },
+    {
+      "id": "E8",
+      "stmt": "h21 = 2N_d + 10 = 98",
+      "why": "10 = 2F₅ 係後見選項"
+    },
+    {
+      "id": "E13",
+      "stmt": "|G| = N_d + B² ⟺ N₂ = B² = 16",
+      "why": "兩邊各自被 A₅ 確定，但 B² 無算子身份"
+    }
+  ]
+[PASS] NDR1-e  登記狀態 = 雙態（群側導出／晶格側橋未閉） :: structure-derived (group side) / bridge-open (lattice side)
+[PASS] NDR1-f  dof 連續新增 = 0 :: 0
+[PASS] NDR1-g  N_d 非第二錨 ⟹ O212 dof = 1 :: (a) dof = 1 成立
+[PASS] NDR1-h  登記含 producer／T／M／refuted／bridge 五欄 :: 五欄齊
+
+==============================================================================
+scripts/05 結果：18/18 PASS ｜ 0 FAIL
+==============================================================================

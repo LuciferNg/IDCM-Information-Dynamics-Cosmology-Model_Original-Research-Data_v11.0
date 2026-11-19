@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "tag": "R00.0  ζ₈₈^44 = −1（環內）",
+      "pass": true,
+      "detail": "x^44 ≡ -1"
+    },
+    {
+      "tag": "R00.1  γ_0 = 0",
+      "pass": true,
+      "detail": "zero mode"
+    },
+    {
+      "tag": "R00.2  γ_44 = 4 = γ_max",
+      "pass": true,
+      "detail": "Nyquist 端"
+    },
+    {
+      "tag": "gate①-a  88 = 2·N_d",
+      "pass": true,
+      "detail": "88"
+    },
+    {
+      "tag": "gate①-b  B = γ_max = 4",
+      "pass": true,
+      "detail": "B 由譜端定義"
+    },
+    {
+      "tag": "gate①-c  N_gen = B−1 = 3",
+      "pass": true,
+      "detail": "3"
+    },
+    {
+      "tag": "gate①-d  Σγ 為整數環元素",
+      "pass": true,
+      "detail": "Σγ = 90"
+    },
+    {
+      "tag": "gate①-e  h11、h21 為註冊輸入（χ 一致）",
+      "pass": true,
+      "detail": "χ = -124"
+    },
+    {
+      "tag": "gate②-a  Σγ = 90（精確）",
+      "pass": true,
+      "detail": "90"
+    },
+    {
+      "tag": "gate②-b  B(N_d+1)/2 = 4×45/2 = 90",
+      "pass": true,
+      "detail": "90"
+    },
+    {
+      "tag": "gate②-c  兩式相等",
+      "pass": true,
+      "detail": "90 vs 90"
+    },
+    {
+      "tag": "gate②-d  Σγ = 2(N_d+1)（恆等，非約束）",
+      "pass": true,
+      "detail": "90 vs 90"
+    },
+    {
+      "tag": "gate③-a  γ_n + γ_{44−n} = 4，n = 1..43，違例 0",
+      "pass": true,
+      "detail": "violations = 0"
+    },
+    {
+      "tag": "gate③-b  違例計數恰 43 對檢查",
+      "pass": true,
+      "detail": "pairs = 43"
+    },
+    {
+      "tag": "gate④-a  跨距 = 2.894296 dex（6 位）",
+      "pass": true,
+      "detail": "2.894296488"
+    },
+    {
+      "tag": "gate④-b  需求 = 38.612274 dex",
+      "pass": true,
+      "detail": "38.61227359"
+    },
+    {
+      "tag": "gate④-c  缺口 = 35.717977 dex",
+      "pass": true,
+      "detail": "35.7179771"
+    },
+    {
+      "tag": "gate④-d  因子 5.223686e35（M8 更正後值）",
+      "pass": true,
+      "detail": "5.2236865e+35"
+    },
+    {
+      "tag": "gate④-e  因子 = T₁ / cot²(π/88)",
+      "pass": true,
+      "detail": "1.0"
+    },
+    {
+      "tag": "gate④-f  迭代 13.34 非整數（T₁ 需求）",
+      "pass": true,
+      "detail": "13.340815"
+    },
+    {
+      "tag": "gate⑤-a  本檔零 import 上游模組",
+      "pass": true,
+      "detail": "imports = ['ast', 'fractions', 'json', 'mpmath', 'os', 'sys'] ｜ upstream hits = []"
+    },
+    {
+      "tag": "gate⑤-b  本檔零 exec/eval/runpy",
+      "pass": true,
+      "detail": "exec/eval calls = []"
+    }
+  ],
+  "n_pass": 22,
+  "n_fail": 0,
+  "n_total": 22,
+  "quantities": {
+    "N_d": 44,
+    "N": 88,
+    "B": 4,
+    "Sigma_gamma": 90,
+    "h11": 36,
+    "h21": 98,
+    "N_gen": 3,
+    "chi_CY3": -124
+  },
+  "exact": {
+    "field": "Q(zeta_88)=Q[x]/(Phi88)",
+    "deg": 40
+  }
+}

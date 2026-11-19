@@ -81,3 +81,22 @@
             資料夾 m21_algebra_generator/{docs,scripts,data} 建空
             零推導、零 scripts、零 data
 ```
+
+---
+
+## §八 後續交付記錄（append-only）
+
+```
+2026-11-20  第一輪：R1–R5 全行完
+            重現閘 scripts/00 22/22 PASS（Φ₈₈ = Φ₁₁(−x⁴)，ℚ(ζ₈₈) 精確環運算）
+            docs/00 預註冊（判準跑前凍結）→ scripts/01–05 → scripts/06 水位自查
+            scripts/01 R1/T1 26/26 ｜ 02 R2/T2 4/6（2 FAIL = 結論）｜ 03 R3/T3 8/8
+            scripts/04 R4/T4 9/11（2 FAIL = 結論）｜ 05 P5/Q3 18/18 ｜ 06 13/13
+            合計 87 PASS / 4 FAIL（00–05）
+            判：Q1/T1 🟡（群側 dof=0 ／ 晶格側橋未閉）· Q2/T3 🔴 · Q3/P5 ✅ · Q4/T4 🔴 不閉 · T2 🔴
+            ★ 新結果 4 項：CA1 度集唯一性引理 · CA2 普查形式（加權均值 = B）
+              · CA5/CA6 密度閘（q_obs = 1/30）· GR1 邊分類 ＋ dof 分支 (a)
+            ★ 產物查重：Σd(d−1)、B·L₅、Σγ=2N+2、K_tree=3·11、f_M0·f_R、60=N_d+B²
+              全部已註冊（v10 O171 / M15 / M16 / M8）⟹ 不宣稱新恆等式
+            state：registered → partial（本 O 自身殘項 3）
+```

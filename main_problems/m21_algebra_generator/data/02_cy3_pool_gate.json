@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "tag": "CY0-a  池 P0 不含 44",
+      "pass": true,
+      "detail": "44 ∉ P0"
+    },
+    {
+      "tag": "CY0-b  池 P0 不含 88／45／89（44-導出）",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "CY1′-a  k-free 命中數 < 5（唯一／少數才有判別力）",
+      "pass": false,
+      "detail": "hits = 6"
+    },
+    {
+      "tag": "CY1′-b  無單項 k-free 命中（44 唔係池成員之標量倍）",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "CY1  族 𝔊 密度 q_obs ≤ 5%",
+      "pass": false,
+      "detail": "q_obs = 0.5353 (668/1248)"
+    },
+    {
+      "tag": "CY1-MC  MC null 完成（10^7）",
+      "pass": true,
+      "detail": "p_null = 4.808e-03"
+    }
+  ],
+  "n_pass": 4,
+  "n_fail": 2,
+  "n_total": 6,
+  "pool_P0": {
+    "h11": 36,
+    "h21": 98,
+    "chi=2(h11-h21)": -124,
+    "b2=h11": 36,
+    "b3=2(1+h21)": 198,
+    "B": 4,
+    "Sigma_gamma": 90,
+    "N_gen": 3,
+    "|G|": 60,
+    "K_tree": 33,
+    "F10": 55,
+    "L4": 7,
+    "L5": 11
+  },
+  "pool_P1_derived": {
+    "N=88": 88,
+    "N_d+1=45": 45,
+    "F11=89": 89,
+    "C(44,2)=946": 946,
+    "B^2=16": 16,
+    "k=5": 5
+  },
+  "target": 44,
+  "kfree": {
+    "n_expr": 1300,
+    "single_hits": [],
+    "two_term_hits": [
+      "+1·h11 +2·B",
+      "+1·b2=h11 +2·B",
+      "-2·K_tree +2·F10",
+      "+1·K_tree +1·L5",
+      "+2·K_tree -2·L5",
+      "+1·F10 -1·L5"
+    ]
+  },
+  "family_G": {
+    "n_total": 1248,
+    "n_hit": 668,
+    "q_obs": 0.5352564102564102
+  },
+  "circular_hits": [
+    "+1·h11 +2·B",
+    "+1·b2=h11 +2·B",
+    "+1·|G| -1·B^2=16",
+    "-2·K_tree +2·F10",
+    "+1·K_tree +1·L5",
+    "+2·K_tree -2·L5",
+    "+1·F10 -1·L5",
+    "-1·N_d+1=45 +1·F11=89"
+  ],
+  "mc_null": {
+    "N": 10000000,
+    "n44": 48083,
+    "p_null": 0.0048083,
+    "lift": 111.3192625785434
+  },
+  "verdict": "CY2 ⟹ T2 🔴：族 𝔊 密度超閘，44 可由大量 a·x+b·y+c 表示 ⟹ 零判別力"
+}

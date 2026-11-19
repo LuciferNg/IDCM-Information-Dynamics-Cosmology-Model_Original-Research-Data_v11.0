@@ -1,0 +1,205 @@
+{
+  "checks": [
+    {
+      "tag": "CG1  Σγ(N) = 2(N+1) 恆成立（違例 0）⟹ 對 N 零約束",
+      "pass": true,
+      "detail": "violations = 0"
+    },
+    {
+      "tag": "CG1-b  解析根據：γ_n + γ_{N−n} = 4（sin²+cos²=1）⟹ Σ = 2(N−1)+4 = 2N+2",
+      "pass": true,
+      "detail": "N=44 特例 = 90"
+    },
+    {
+      "tag": "GR1-a  全部邊之陳述皆機核為真",
+      "pass": true,
+      "detail": "13/13"
+    },
+    {
+      "tag": "GR1-b  錨邊 A = 0（七量內無未解釋輸入）",
+      "pass": true,
+      "detail": "A = 0"
+    },
+    {
+      "tag": "GR1-c  producer 閉合（M + A = 0）",
+      "pass": false,
+      "detail": "M + A = 3"
+    },
+    {
+      "tag": "GR1-d  嚴格預註冊判準（T + M + A = 0）",
+      "pass": false,
+      "detail": "T + M + A = 5"
+    },
+    {
+      "tag": "GR1-e  Σγ 之入邊全屬 T（恆等反演，非 producer）",
+      "pass": true,
+      "detail": "E5, E6"
+    },
+    {
+      "tag": "GR1-f  h11/h21 之入邊全屬 M（無算子身份）",
+      "pass": true,
+      "detail": "E7, E8"
+    },
+    {
+      "tag": "GR1-g  無孤立節點（每節點 deg ≥ 1）",
+      "pass": true,
+      "detail": "min deg = 1"
+    },
+    {
+      "tag": "dof-a  N_d 由零參數群不變量確定 ⟹ 非第二錨",
+      "pass": true,
+      "detail": "分支 (a)：O212 dof = 1 成立"
+    },
+    {
+      "tag": "dof-b  連續 dof 不增（無新增可調參數）",
+      "pass": true,
+      "detail": "E4/E10/E11 全部係整數恆等，無自由係數"
+    }
+  ],
+  "n_pass": 9,
+  "n_fail": 2,
+  "n_total": 11,
+  "edges": [
+    {
+      "id": "E1",
+      "src": "A₅(G)",
+      "dst": "B",
+      "stmt": "B = γ_max（+ M16：|G|=60 ⟹ B=4，dof=0）",
+      "class": "F",
+      "verified": true,
+      "evidence": "γ_44 = 4 精確"
+    },
+    {
+      "id": "E2",
+      "src": "B",
+      "dst": "N_gen",
+      "stmt": "N_gen = B − 1 = 3",
+      "class": "F",
+      "verified": true,
+      "evidence": "4−1 = 3"
+    },
+    {
+      "id": "E3",
+      "src": "N_d",
+      "dst": "N_site",
+      "stmt": "N_site = 2·N_d（dual 88-site 表示）",
+      "class": "D",
+      "verified": true,
+      "evidence": "2×44 = 88"
+    },
+    {
+      "id": "E4",
+      "src": "A₅(G)",
+      "dst": "N_d",
+      "stmt": "N_d = Σ_χ d(d−1) = |G| − Σ_χ d = 60 − 16",
+      "class": "F",
+      "verified": true,
+      "evidence": "Σd(d−1) = 44；|G|−Σd = 44"
+    },
+    {
+      "id": "E5",
+      "src": "N_d",
+      "dst": "Σγ",
+      "stmt": "Σγ = 2(N_d+1) = 90",
+      "class": "T",
+      "verified": true,
+      "evidence": "恆等（CG1）；對 N 零約束"
+    },
+    {
+      "id": "E6",
+      "src": "B,N_d",
+      "dst": "Σγ",
+      "stmt": "Σγ = B(N_d+1)/2 = 90",
+      "class": "T",
+      "verified": true,
+      "evidence": "與 E5 同一方程（B/2 = 2）"
+    },
+    {
+      "id": "E7",
+      "src": "N_d,B",
+      "dst": "h11",
+      "stmt": "h11 = N_d − 2B = 36",
+      "class": "M",
+      "verified": true,
+      "evidence": "數值吻合；池掃 ≥6 條 k-free（scripts/02）"
+    },
+    {
+      "id": "E8",
+      "src": "N_d",
+      "dst": "h21",
+      "stmt": "h21 = 2N_d + 10 = 98",
+      "class": "M",
+      "verified": true,
+      "evidence": "數值吻合；10 = 2F₅ 係後見選項"
+    },
+    {
+      "id": "E9",
+      "src": "L₅",
+      "dst": "N_d",
+      "stmt": "N_d = B·L₅ = 4×11 = 44",
+      "class": "F",
+      "verified": true,
+      "evidence": "4×11 = 44（由 E4 + E11 合成）"
+    },
+    {
+      "id": "E10",
+      "src": "A₅(G)",
+      "dst": "K_tree",
+      "stmt": "K_tree = Σ_χ (d−1)² = 33",
+      "class": "F",
+      "verified": true,
+      "evidence": "33"
+    },
+    {
+      "id": "E11",
+      "src": "A₅(G)",
+      "dst": "L₅",
+      "stmt": "L₅ = Σ_χ (d−1) = 11",
+      "class": "F",
+      "verified": true,
+      "evidence": "11"
+    },
+    {
+      "id": "E12",
+      "src": "A₅(G)",
+      "dst": "N₂",
+      "stmt": "N₂ = Σ_χ d = #{g: g²=e} = 16",
+      "class": "F",
+      "verified": true,
+      "evidence": "16"
+    },
+    {
+      "id": "E13",
+      "src": "N₂,B",
+      "dst": "|G| 記賬",
+      "stmt": "|G| = N_d + B² ⟺ N₂ = B² = 16",
+      "class": "M",
+      "verified": true,
+      "evidence": "兩邊各自被 A₅ 確定，但無算子身份 ⟹ 一致性檢查"
+    }
+  ],
+  "class_counts": {
+    "F": 7,
+    "D": 1,
+    "T": 2,
+    "M": 3
+  },
+  "node_degrees": {
+    "N_d": 7,
+    "B": 5,
+    "Σγ": 2,
+    "h11": 1,
+    "h21": 1,
+    "N_gen": 1,
+    "N_site": 1,
+    "A₅(G)": 5,
+    "K_tree": 1,
+    "L₅": 2,
+    "N₂": 2
+  },
+  "dof": {
+    "anchors_in_seven": 0,
+    "N_d_forced": true,
+    "branch": "(a)"
+  }
+}
