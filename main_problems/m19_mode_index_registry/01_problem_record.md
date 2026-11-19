@@ -188,3 +188,16 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - `docs/01`–`docs/07`｜`scripts/00`–`07`、`l1`–`l3`｜`data/0*.json`、`data/run_*log`
 - 唯讀引用：M12 `final_result` L201／`docs/49` §OP3、M14 `final_result` L173、M13 `docs/11`、
   v10 `O136` `docs/19`、`O137` `final_result`、`O210` `docs/08/10/11`、`O233` `docs/12/13/17`、`O206` `scripts/23`
+
+## §十五 出向 handoff（5 條，非本 M 歸屬項全部發還）
+
+| → | 內容 | ref |
+|:-:|:--|:--|
+| **M12** | `S4`／OP3 診斷更正：「可算 ≠ 可判」；`s` 三讀零判別力之真原因 | `docs/06` |
+| **M14** | 同上 ＋ `S5` 不變；`u/d` 雙記地位不裁，只登 `INPUT_RANK` | `docs/06` |
+| **M4** | 9 模式集於 v11 無登記（現只引用 v10 `O136`/`O137`）⟹ 譜層補登或明判 | `docs/03` |
+| **M1** | `k_q` 之單模支撐前提（`σ = C_f·e_n` 未註冊）；F3 層位須入 schema | `docs/02` |
+| **M20** | `S5` 載體需求；附全 T3 = 0（夸克槽算術封死）＋ 框架方向已定 F1 | `docs/06` |
+
+> 全部經 `register.py handoff`（v11→v11，零跨版本）；已讀回核實 5/5（`status --pid <target>` 各見 `from M19` 1 條）。
+> 本 M 自身殘項 = 0。

@@ -84,6 +84,8 @@ Frame    F1 / F2 = 同一次序嵌入之兩向（只差 1 bit）；F3（CSSG-v3�
 登記     3 STRUCT_CLASS（e,μ,τ）＋ 6 INPUT_RANK（u,d,s,c,b,t）；引用閘 1 PASS／2 BLOCK
 作用域   全 T3（χ ≡ n mod 4 全施加）可行雙射 = 0（鴿籠 6 > 4）⟹ 夸克槽算術封死
 回接     S4 阻塞更正為「可算但不可判」；S5 不變（無載體 → M20）
+出向     5 條 handoff（全部讀回核實）：M12／M14（S4 診斷更正）、M4（9 模式集 v11 登記）、
+         M1（單模支撐前提）、M20（S5 載體）
 水位     85/85（核心 51 ＋ 審計 9 ＋ L1 15 ＋ L2 7 ＋ L3 3）；零跨 M 寫入
 備份     scripts/*.pre_patch_* ＋ 四件套 .pre_patch_*
 ```
