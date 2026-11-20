@@ -73,8 +73,8 @@ scripts/13  R9 形狀不變量 κ₃            8/8  PASS
 scripts/14  R10 κ₃ 推廣（跨ℓ／κ₄／聯合）  6/6  PASS
 scripts/15  R11 共變性／奇ℓ普查／𝒟延伸  5/5  PASS
 scripts/16  R12 Regime 界線更正／秩獨立核  4/4  PASS
-scripts/06  自審（docs↔data 數字、圍欄、指紋、R6–R12 數字）  62/62 PASS
-合計 265 PASS ／ 0 FAIL（00–05、07–16 = 203 ＋ 06 自審 62）
+scripts/06  自審（docs↔data 數字、圍欄、指紋、R6–R12 數字）  64/64 PASS
+合計 267 PASS ／ 0 FAIL（00–05、07–16 = 203 ＋ 06 自審 64）
 決定性：00/03/04/05 重跑 md5 byte-identical；01/02 重跑 md5 byte-identical（全 6 支一致）
 環境：/usr/bin/python3 3.12、numpy 2.4.6、scipy 1.18.0、sympy 1.13.1、mpmath 1.3.0、healpy 1.19.0
       PYTHONDONTWRITEBYTECODE=1；RNG seed 20261120–20261124（固定）

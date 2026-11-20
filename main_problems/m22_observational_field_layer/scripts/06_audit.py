@@ -71,7 +71,7 @@ ck("A2-R6門檻", "0.23160" in d03 and "0.11948" in d03 and "0.23160" in d05,
    "真 ΛCDM 門檻 0.23160／0.11948 在 docs/03 §七 與 docs/05")
 ck("A2-R6缺損", "40.18" in d05 and "40.18" in fr, "ΛCDM 缺損 40.18%")
 ck("A2-R6手性", "2.13e−14" in d05 or "2.13e-14" in d05, "反極點恆等式殘差")
-ck("A2-265", "265 PASS" in fr, "final_result 合計 265")
+ck("A2-267", "267 PASS" in fr, "final_result 合計 267")
 d11 = rd(os.path.join(DOCS, "11_r12_regime_boundaries.md"))
 ck("A2-R12", "156" in d11 and "更正" in d11, "R12 更正節在 docs/11")
 d10 = rd(os.path.join(DOCS, "10_r11_covariance_density.md"))
