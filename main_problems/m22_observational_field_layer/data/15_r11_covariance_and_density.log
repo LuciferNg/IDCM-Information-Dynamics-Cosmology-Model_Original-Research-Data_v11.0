@@ -1,0 +1,26 @@
+(1) 鏡像本徵態之 realisation 獨立性（共變性）
+/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/15_r11_covariance_and_density.py:135: RuntimeWarning: divide by zero encountered in reciprocal
+  idx = int(np.argmax(np.abs(ev - 1) ** (-1)))
+[PASS] R11-共變 :: 共軛 realisation：max|1−|⟨I^{(R)}, D^ℓ(R)I⟩|| = 2.22e-16（ℓ=6,10 × 3 個隨機 R）
+[PASS] R11-鏡像隨共變 :: 鏡面法向 = R·ŷ：max‖D^ℓ(S_new)I_new ∓ I_new‖ = 1.57e-15 ⟹ 鏡像本徵態性質 **realisation-independent**
+
+(2) 奇 ℓ 之低階純量不變量（order 3 / order 4）
+   ℓ = 15（奇）：|I₃| = 4.933e-35｜|I₄^{L=2}| = 2.609e-19
+   ℓ = 21（奇）：|I₃| = 5.014e-19｜|I₄^{L=2}| = 1.154e-19
+   ℓ = 25（奇）：|I₃| = 5.458e-35｜|I₄^{L=2}| = 1.614e-19
+   ℓ = 27（奇）：|I₃| = 1.626e-19｜|I₄^{L=2}| = 6.760e-20
+[PASS] R11-奇ℓ低階全零 :: 4 個奇 ℓ：order-3 與 order-4 純量不變量**皆恆零** ⟹ 奇 ℓ 之形狀對低階純量統計不可見
+
+(3) 𝒟 延伸（ℓ ≤ 200）與預言力衰減
+   ℓ ≤ 200 之零位（m_ℓ = 0）：14 個 ⟹ [2, 3, 4, 5, 7, 8, 9, 11, 13, 14, 17, 19, 23, 29] …
+   最後一個零位 ℓ* = 29 ⟹ ℓ > 29 之支援**全滿**（每個 ℓ 皆有 1 維不變空間）
+   ℓ ≤  27：零位 13/ 26（ 50.0%）｜N_fix = 770｜N_fix/維數 = 0.9821
+   ℓ ≤  40：零位 14/ 39（ 35.9%）｜N_fix = 1652｜N_fix/維數 = 0.9827
+   ℓ ≤  60：零位 14/ 59（ 23.7%）｜N_fix = 3658｜N_fix/維數 = 0.9831
+   ℓ ≤ 100：零位 14/ 99（ 14.1%）｜N_fix = 10030｜N_fix/維數 = 0.9832
+   ℓ ≤ 200：零位 14/199（  7.0%）｜N_fix = 39727｜N_fix/維數 = 0.9833
+[PASS] R11-零位有限 :: 零位集有限（ℓ* = 29）⟹ 支援約束在大 ℓ 完全消失（預言力集中於 ℓ ≤ 29）
+[PASS] R11-密度衰減 :: 零位密度：ℓ≤27 = 50% ⟹ ℓ≤200 = 7.0%（單調衰減）
+
+=== scripts/15：5 PASS ／ 0 FAIL ===
+EXIT = 0
