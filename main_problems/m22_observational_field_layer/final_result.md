@@ -69,8 +69,9 @@ scripts/10  MR3 ΛCDM 基準        5/5  PASS
 scripts/11  MR0 終局（形式×3 ＋ 不可導出）  14/14 PASS
 scripts/12  MR1 終局（等變性零約束）      11/11 PASS
 scripts/13  R9 形狀不變量 κ₃            8/8  PASS
-scripts/06  自審（docs↔data 數字、圍欄、指紋、R6–R9 數字）  53/53 PASS
-合計 241 PASS ／ 0 FAIL（00–05、07–13 = 188 ＋ 06 自審 53）
+scripts/14  R10 κ₃ 推廣（跨ℓ／κ₄／聯合）  6/6  PASS
+scripts/06  自審（docs↔data 數字、圍欄、指紋、R6–R10 數字）  56/56 PASS
+合計 250 PASS ／ 0 FAIL（00–05、07–14 = 194 ＋ 06 自審 56）
 決定性：00/03/04/05 重跑 md5 byte-identical；01/02 重跑 md5 byte-identical（全 6 支一致）
 環境：/usr/bin/python3 3.12、numpy 2.4.6、scipy 1.18.0、sympy 1.13.1、mpmath 1.3.0、healpy 1.19.0
       PYTHONDONTWRITEBYTECODE=1；RNG seed 20261120–20261124（固定）
