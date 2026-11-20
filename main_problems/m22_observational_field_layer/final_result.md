@@ -64,8 +64,9 @@ scripts/07  MR0 載體收窄        14/14 PASS
 scripts/08  MR1 Ω/BR1           15/15 PASS
 scripts/09  MR2 反極點恆等式     6/6  PASS
 scripts/10  MR3 ΛCDM 基準        5/5  PASS
-scripts/06  自審（docs↔data 數字、圍欄、指紋、R6 數字）  41/41 PASS
-合計 196 PASS ／ 0 FAIL（00–05、07–10 = 155 ＋ 06 自審 41）
+scripts/11  MR0 終局（形式×3 ＋ 不可導出）  14/14 PASS
+scripts/06  自審（docs↔data 數字、圍欄、指紋、R6/R7 數字）  44/44 PASS
+合計 213 PASS ／ 0 FAIL（00–05、07–11 = 169 ＋ 06 自審 44）
 決定性：00/03/04/05 重跑 md5 byte-identical；01/02 重跑 md5 byte-identical（全 6 支一致）
 環境：/usr/bin/python3 3.12、numpy 2.4.6、scipy 1.18.0、sympy 1.13.1、mpmath 1.3.0、healpy 1.19.0
       PYTHONDONTWRITEBYTECODE=1；RNG seed 20261120–20261124（固定）
@@ -91,8 +92,11 @@ scripts/00–05 ＋ run_chain.sh  ｜ data/00–05 ＋ *.log
 ## 保留開放（本 M 自身殘項 3）
 
 ```
-MR0 🟡 **載體識別（R6 收窄）**：3 維 ＋ 忠實 ⟹ 只剩 {3, 3′}（二值）；兩者之差 = Galois = 5-類交換
-       = 手性鏡像；位元**觀測惰性**（scripts/07）⟹ 剩「天空 = 3 維載體之單位球」一個識別
+MR0 🔴 **終局（R7）：B1 = bridge axiom，不可由 𝒯 導出**
+       形式已證死（若 B1 成立）：線性化 ⟹ A₅ ⊂ O(3) ⟹ 忠實 3 維實表示 {3,3′}；
+       不變度量 1 維 ∝ I ⟹ 尺度 = dof_scale = 1；自由軌道 2000/2000 generic ⟹ 零額外參數
+       存在**不可導出**：|Aut 𝒯| = 176×2 = 352 = 2⁵·11，5 ∤ 352；A₅ 單群 ⟹ 同態必平凡
+       ⟹ T1–T4／𝒟／形狀定理全部 **conditional on B1**（docs/06）
 MR1 🟡 振幅之結構固定（R6 加強）：三路皆無（NA1–NA3）＋ **NA4**（Ω 3:16:41 不可 A₅-等變落格，
        3 與 41 皆非共軛類之並）；BR1′ 60=16+44 有典範實現，但 BR1″ 對級亦不合（21 對+1+1 vs 22 對）
        ⟹ 缺口更深：數目對得上，但類級／對級典範映射皆不存在（scripts/08）

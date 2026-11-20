@@ -34,13 +34,14 @@ J = {i: json.load(open(os.path.join(DATA, f"{i:02d}_" + n), encoding="utf-8"))
                   (2, "amplitude_nogo.json"), (3, "comb_field_stats.json"),
                   (4, "null_and_sensitivity.json"), (5, "chirality.json"),
                   (7, "mr0_carrier.json"), (8, "mr1_partition.json"),
-                  (9, "mr2_chirality_test.json"), (10, "mr3_lcdm_baseline.json")]}
+                  (9, "mr2_chirality_test.json"), (10, "mr3_lcdm_baseline.json"),
+                  (11, "mr0_r7.json")]}
 
 # ── 1 逐支 PASS/FAIL 合計 ────────────────────────────────────────
 tot_p = sum(J[i]["n_pass"] for i in J)
 tot_f = sum(J[i]["n_fail"] for i in J)
 print("逐支：", {i: (J[i]["n_pass"], J[i]["n_fail"]) for i in J})
-ck("A1-合計", tot_p == 155 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–10）")
+ck("A1-合計", tot_p == 169 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–11）")
 
 # ── 2 docs 數字 vs data ─────────────────────────────────────────
 d02 = rd(os.path.join(DOCS, "02_projection_operator.md"))
@@ -70,7 +71,7 @@ ck("A2-R6門檻", "0.23160" in d03 and "0.11948" in d03 and "0.23160" in d05,
    "真 ΛCDM 門檻 0.23160／0.11948 在 docs/03 §七 與 docs/05")
 ck("A2-R6缺損", "40.18" in d05 and "40.18" in fr, "ΛCDM 缺損 40.18%")
 ck("A2-R6手性", "2.13e−14" in d05 or "2.13e-14" in d05, "反極點恆等式殘差")
-ck("A2-196", "196 PASS" in fr, "final_result 合計 196")
+ck("A2-213", "213 PASS" in fr, "final_result 合計 213")
 
 # ── 3 圍欄偶數 ＋ U+FFFD ───────────────────────────────────────
 for p in sorted(glob.glob(os.path.join(DOCS, "*.md"))) + [os.path.join(ODIR, "final_result.md"),
@@ -83,6 +84,9 @@ for p in sorted(glob.glob(os.path.join(DOCS, "*.md"))) + [os.path.join(ODIR, "fi
 
 # ── 4 四件套狀態同步 ──────────────────────────────────────────
 rec = rd(os.path.join(ODIR, "01_problem_record.md"))
+d06 = rd(os.path.join(DOCS, "06_mr0_bridge_b1.md"))
+ck("A2-B1", "B1" in d06 and "352" in d06 and "B1" in fr and "B1" in rd(os.path.join(DOCS, "04_input_gates.md")),
+   "B1 在 docs/04 §九、docs/06、final_result")
 ck("A4-registry", "state:   partial" in rec and "verdict: T1-pass" in rec,
    "01_problem_record registry 已同步 partial")
 ck("A4-README", "partial" in rd(os.path.join(ODIR, "README.md")), "README 標 partial")

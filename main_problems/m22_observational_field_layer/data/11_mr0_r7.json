@@ -1,0 +1,82 @@
+{
+ "invariant_form_dim": 1,
+ "free_orbit_frac": 1.0,
+ "aut_chain": 176,
+ "aut_tree": 2,
+ "aut_T": 352,
+ "gcd_60_autT": 4,
+ "checks": [
+  {
+   "tag": "群",
+   "pass": true,
+   "detail": "|A₅| = 60"
+  },
+  {
+   "tag": "TA-階",
+   "pass": true,
+   "detail": "|A₅| = 60"
+  },
+  {
+   "tag": "TA-類",
+   "pass": true,
+   "detail": "類結構 1/15/20/12/12（SO(3) 有限子群分類中，階 60 者唯 I；T 階 12、O 階 24、D_n 階 2n）"
+  },
+  {
+   "tag": "TA-線性化（引用）",
+   "pass": true,
+   "detail": "定理（Kerékjártó 1919／Brouwer）：有限群在 S² 之忠實作用共軛於正交作用 ⟹ A₅ ⊂ O(3) ⟹ 忠實 3 維實表示 ⟹ {3,3′}（唯一至二值）"
+  },
+  {
+   "tag": "TB-維數",
+   "pass": true,
+   "detail": "不變對稱形空間 = 1 維（6 − rank 5）⟹ Schur：End(V) = ℝ"
+  },
+  {
+   "tag": "TB-∝I",
+   "pass": true,
+   "detail": "解 ∝ 單位陣（max|S/I − 1| = 3.3e-16）⟹ 度量唯一至一尺度 = dof_scale = 1"
+  },
+  {
+   "tag": "TC-自由",
+   "pass": true,
+   "detail": "2000/2000 個隨機種子 |orbit| = 60"
+  },
+  {
+   "tag": "TC-非自由集",
+   "pass": true,
+   "detail": "非自由點 = 60 個元素之轉軸（每個 2 點）之並 = 1 維集，測度 0 ⟹ 自由軌道存在且 generic（與 P4 docs/72 之「orbit 2 dof」一致：自由軌道族 = S² 減測度零集）"
+  },
+  {
+   "tag": "TD-5不整除",
+   "pass": true,
+   "detail": "5 ∤ 352"
+  },
+  {
+   "tag": "TD-gcd",
+   "pass": true,
+   "detail": "gcd(60, 352) = 4 = 4"
+  },
+  {
+   "tag": "TD-單群",
+   "pass": true,
+   "detail": "A₅ 單群 ⟹ 任何同態 A₅ → Aut(𝒯) 之像 = A₅/{1} 或 A₅/A₅ ⟹ |Im| ∈ {1,60}；但 |Im| 須整除 |Aut 𝒯| = 352 而 60 ∤ 352 ⟹ |Im| = 1 ⟹ 同態平凡"
+  },
+  {
+   "tag": "TD-判",
+   "pass": true,
+   "detail": "⟹ **A₅ 在 𝒯 及其任一因子（88、34）上皆無忠實作用（5 ∤ 88、5 ∤ 34）** ⟹ 「A₅ 作用於天空」唔可能由 𝒯 導出 ⟹ MR0 剩餘 = 單一 bridge axiom B1，v11 內不可閉"
+  },
+  {
+   "tag": "R7-形式已閉",
+   "pass": true,
+   "detail": "若 B1 成立 ⟹ 作用形式唯一（{3,3′}、度量唯一至 dof=1、自由軌道 generic）⟹ 無額外參數"
+  },
+  {
+   "tag": "R7-B1不可導",
+   "pass": true,
+   "detail": "B1（A₅ 作用於天空）在 v11 內不可導出（T-D 算術 no-go）⟹ 列為 bridge axiom；M22 之 T1–T4／𝒟／形狀定理全部 **conditional on B1**"
+  }
+ ],
+ "n_pass": 14,
+ "n_fail": 0
+}

@@ -5,14 +5,16 @@
  "data/03_comb_field_stats.json": "46a5ce564f3fa0d1883151d2fa1f6095",
  "data/04_null_and_sensitivity.json": "07a92ed6fca72904dbe6cb8a3c1322e1",
  "data/05_chirality.json": "0c858dccac1115961468f899cd3d561b",
- "data/06_fingerprints.json": "2fb49a80b44013a1387c0e0c5619edf1",
+ "data/06_fingerprints.json": "fad7967fa564af6883e7641e8f7edd44",
  "data/07_mr0_carrier.json": "3deb93a31bd90ee8a382828f1ae98363",
  "data/08_mr1_partition.json": "4ba7fcc6f52f4cdd730a44a9c7b9c667",
  "data/09_mr2_chirality_test.json": "1dddf324e57eb784eb898bfcf8786cf0",
  "data/10_mr3_lcdm_baseline.json": "2b27d214dfe4a9c0fb0d5dbf141d61a8",
+ "data/11_mr0_r7.json": "2e2acbd67863407d856303b0a4b78d08",
  "docs/01_preregistration.md": "e84f7e2f0b4251c523adb0403f019f28",
  "docs/02_projection_operator.md": "87b1ed595f8e5e7aee04d0b09fa19177",
  "docs/03_statistics_bands.md": "ec6671ffd55bf1895ba85c82fbb31cef",
- "docs/04_input_gates.md": "4ffb9ec5edff6d927ebb2aaf56352077",
- "docs/05_residuals_r6.md": "19715f7b0f2a5b8e279622523cf7b266"
+ "docs/04_input_gates.md": "df59a6576c9053fdb2671b3db70b69d8",
+ "docs/05_residuals_r6.md": "19715f7b0f2a5b8e279622523cf7b266",
+ "docs/06_mr0_bridge_b1.md": "6e90054cd9a482aeab2e44b2d056f8ce"
 }
