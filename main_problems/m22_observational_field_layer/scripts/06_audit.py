@@ -35,13 +35,13 @@ J = {i: json.load(open(os.path.join(DATA, f"{i:02d}_" + n), encoding="utf-8"))
                   (4, "null_and_sensitivity.json"), (5, "chirality.json"),
                   (7, "mr0_carrier.json"), (8, "mr1_partition.json"),
                   (9, "mr2_chirality_test.json"), (10, "mr3_lcdm_baseline.json"),
-                  (11, "mr0_r7.json"), (12, "mr1_equivariance.json"), (13, "shape_invariants.json"), (14, "shape_invariants_r10.json"), (15, "r11_covariance_and_density.json")]}
+                  (11, "mr0_r7.json"), (12, "mr1_equivariance.json"), (13, "shape_invariants.json"), (14, "shape_invariants_r10.json"), (15, "r11_covariance_and_density.json"), (16, "r12_regime_b.json")]}
 
 # ── 1 逐支 PASS/FAIL 合計 ────────────────────────────────────────
 tot_p = sum(J[i]["n_pass"] for i in J)
 tot_f = sum(J[i]["n_fail"] for i in J)
 print("逐支：", {i: (J[i]["n_pass"], J[i]["n_fail"]) for i in J})
-ck("A1-合計", tot_p == 199 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–15）")
+ck("A1-合計", tot_p == 203 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–16）")
 
 # ── 2 docs 數字 vs data ─────────────────────────────────────────
 d02 = rd(os.path.join(DOCS, "02_projection_operator.md"))
@@ -71,7 +71,9 @@ ck("A2-R6門檻", "0.23160" in d03 and "0.11948" in d03 and "0.23160" in d05,
    "真 ΛCDM 門檻 0.23160／0.11948 在 docs/03 §七 與 docs/05")
 ck("A2-R6缺損", "40.18" in d05 and "40.18" in fr, "ΛCDM 缺損 40.18%")
 ck("A2-R6手性", "2.13e−14" in d05 or "2.13e-14" in d05, "反極點恆等式殘差")
-ck("A2-258", "258 PASS" in fr, "final_result 合計 258")
+ck("A2-265", "265 PASS" in fr, "final_result 合計 265")
+d11 = rd(os.path.join(DOCS, "11_r12_regime_boundaries.md"))
+ck("A2-R12", "156" in d11 and "更正" in d11, "R12 更正節在 docs/11")
 d10 = rd(os.path.join(DOCS, "10_r11_covariance_density.md"))
 ck("A2-R11", "ℓ* = 29" in d10 and "1.57e−15" in d10, "R11 兩項在 docs/10")
 d09 = rd(os.path.join(DOCS, "09_r10_kappa3_extensions.md"))

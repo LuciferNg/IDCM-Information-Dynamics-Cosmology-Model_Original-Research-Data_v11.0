@@ -50,5 +50,5 @@ M3 投影算子秩法：rank(P̄), P̄ = (1/60)Σ_g D^ℓ(g)
 [PASS] Iℓ-不變性 :: max|I(Rn̂) − I(n̂)| = 1.93e-14
 [PASS] Iℓ-宇稱 :: max rel |I(−n̂) − (−1)^ℓ I(n̂)| = 1.39e-13
 
-=== scripts/01：34 PASS ／ 0 FAIL ｜ 290.3s ===
+=== scripts/01：34 PASS ／ 0 FAIL ｜ 290.8s ===
 EXIT = 0
