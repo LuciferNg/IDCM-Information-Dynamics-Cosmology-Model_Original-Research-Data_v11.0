@@ -5,7 +5,7 @@ pid:     M23
 title:   讀數來源結構：單核 ansatz 之替代（同一 G 供三個 δ 之解除）
 state:   partial
 verdict: partial
-flags:   r1-r6-done; readout-layer-no-go; shape-lemma-SL1; axis-uniqueness-DA1; residual-of-M20; may-change-readout-with-declaration
+flags:   r1-r9-done; readout-layer-no-go; shape-lemma-SL1; axis-uniqueness-DA1; source-side-closed-SC1; residual-of-M20; may-change-readout-with-declaration
 owner:   M23
 created: 2026-11-19
 updated: 2026-11-20
@@ -153,9 +153,10 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 
 ```
 state = partial ｜ verdict = partial
-scripts = 00–04（5 支，全 EXIT=0）｜ docs = 01–04（4 份）｜ data = 5 份（log ＋ json）
-判：Q1 ✅ ｜ Q2 🔴 ｜ Q3 🔴 ｜ Q4 ✅（NG1 scoped）｜ T1 🔴 ｜ T2 🔴 ｜ T3 🟡 ｜ T4 ✅
-殘項（全屬他 M）：RD5 → M12 T0 ｜ RD6 → M12（δ 形狀層）
+scripts = 00–07（8 支，全 EXIT=0）｜ docs = 01–08（8 份）｜ data = 12 份（log ＋ json）
+判：Q1 ✅ ｜ Q2 🔴 ｜ Q3 🔴 ｜ Q4 ✅（NG1′ scoped）｜ T1 🔴 ｜ T2 🔴 ｜ T3 🟡 ｜ T4 ✅
+水位：79 檢查（75 PASS ＋ 4 記錄 FAIL）
+殘項：RD1–RD4 全閉 ｜ RD5 → M12 T0 ｜ RD6 → M12（δ 形狀層）
 ```
 
 ---
@@ -209,3 +210,39 @@ Q4 ✅ NG1（非「未找到」）
    判詞不依賴；判準零放寬（`J1` 失敗後改以「0 個 1σ 命中 ＋ null 中位」陳述，係**收緊**非放寬）。
 2. **後驗擴展**：`scripts/04`（R6）寫於 R1–R5 之後，用途限封閉性檢查，不入命中／判準統計。
 3. **未改任何他 M 檔**；全部跨 M 資訊只經 register（note／handoff）。
+
+---
+
+## §十三 第二輪執行記錄（R7–R9，2026-11-20，append-only）
+
+| # | 日期 | 內容 |
+|:-:|:--|:--|
+| 1 | 2026-11-20 | **自捕覆蓋缺口**：`docs/01 §二` 三型未獨立覆蓋 `Q1` 第二問之**場差版本**（源對隨站）⟹ `docs/05` 移動球門 `Mv-4`（映射集 `M`：14 個已註冊映射，跑前凍結） |
+| 2 | 2026-11-20 | `scripts/05` R7：T1x／F-F1 **114 成員、0/114 落 1σ**、min χ 2.1688（`(2,4)` 同一點）、MC 10⁷ p = 0.4118；錨定子集 14 個皆無結構唯一；F-F2 有效 5 自由整數 ⟹ χ 可達 0.0210 但 19.89 bit |
+| 3 | 2026-11-20 | **再自捕**：S 側仲有「源剖面」一格（`δ_x = Σ_j s_jG(j,k_x)`）⟹ `docs/07` 移動球門 `Mv-5`（剖面 P1–P9，跑前凍結） |
+| 4 | 2026-11-20 | `scripts/06` R8：P1–P8 **13 成員、0 個落 3σ**（min χ **18.779**）；P9 自由剖面 rank 3、3 模態 witness 殘差 1.3e−51 ⟹ 41 自由實數 ⟹ 範疇性淘汰 |
+| 5 | 2026-11-20 | `scripts/07` R9 **SC1 封閉性審計**：三族併為 catalog = **251 distinct 三元組**；0/251 落 1σ；地板 2.1688 由 ≥2 條規則共用（無身份）；每讀數自選 20.371 bit ⟹ 擬合 |
+| 6 | 2026-11-20 | `docs/03 §十` 擴充 **NG1′**（A5″：T1／T2／T1x／T1p／T3 五族）；`docs/06`、`docs/07`、`docs/08` 新增；`final_result`／`README`／`SESSION_START` 更新；register note ＋ handoff → M12 |
+
+---
+
+## §十四 判詞更新（權威版 `docs/08 §三`）
+
+```text
+NG1′：A1 w=1/γ ∧ A2 一階源差 ∧ A3 M14 指派 ∧ A4 同泛函 ∧ A5″ 五族 ⟹ 無零參數式落 3σ   ✅
+SC1 ：S 側（源）封閉 —— (a) 一致規則 0/251 落 1σ（地板 2.1688 無身份）
+                     (b) 每讀數自選 χ 可達 0.0123 但 20.371 bit ⟹ 零判別力
+                     (c) 自由剖面 rank 3 ⟹ 任何值可達，41 自由實數 ⟹ 範疇性淘汰     ✅
+```
+
+★ **Q2 之答更新**：由「無最小結構形式可改」→「**S 側五族＋catalog 級全封；可改者只剩 `w` 或 `δ` 形狀**」。
+★ **RD1–RD4 全閉**（RD2 由「無可逼」升級為 SC1 之封閉性陳述）。
+
+---
+
+## §十五 附註（append-only）
+
+1. **兩次自捕**：T1x（`docs/06 §六`）與 T1p（`docs/07 §〇`）皆係本 M 自己發現之覆蓋缺口，非外部指出；
+   兩者各配一次移動球門聲明（`Mv-4`／`Mv-5`），族定義跑前凍結，判準全程未改。
+2. **scratch 披露**：`docs/07 §六` 第 2 條已聲明 P1–P8 曾以 scratch 探路確認族非空；canonical 數字一律來自 `scripts/06`。
+3. **水位重算**：79 檢查（75 PASS ＋ 4 記錄 FAIL）＝ `data/run_0{0..7}*.log` 逐個 grep `^\[PASS\]`／`^\[REC!\]` 重點算。
