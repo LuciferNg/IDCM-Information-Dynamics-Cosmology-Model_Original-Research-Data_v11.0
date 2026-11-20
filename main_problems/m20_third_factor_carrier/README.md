@@ -65,6 +65,9 @@ MC null（10⁴）：p = 0.4334 ⟹ 無信號
 | `scripts/03` | 結構引理 L1（簽名／kink）／L2（Comm）／L3（對易子支撐） |
 | `scripts/04` | **殘留掃描**：剛性(∀N)／譜移動／精度門檻／ℚ/41 範圍／T4 可達性（12 PASS） |
 | `scripts/05` | **權衡前沿**：ρ_d 與 ρ_u 之聯合可達性（MC04 精確化） |
+| `scripts/06` | ⚠️ **作廢**（Woodbury `G₀U` 誤寫＋F1 覆蓋缺口；保留作自捕記錄） |
+| `scripts/06b` | **單位強度類 `𝒰*` 完整窮盡**（20,700 成員；禁帶；C0 回歸含 F1） |
+| `docs/05_r6_unit_strength_complete.md` | R6 結果＋自捕＋MC04 第二次收窄 |
 | `data/run_0*.log` | 五支腳本之 stdout（`stdout == log`） |
 
 ## 依賴
