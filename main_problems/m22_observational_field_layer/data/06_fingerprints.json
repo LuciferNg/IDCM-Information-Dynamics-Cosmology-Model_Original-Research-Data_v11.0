@@ -5,7 +5,7 @@
  "data/03_comb_field_stats.json": "46a5ce564f3fa0d1883151d2fa1f6095",
  "data/04_null_and_sensitivity.json": "07a92ed6fca72904dbe6cb8a3c1322e1",
  "data/05_chirality.json": "0c858dccac1115961468f899cd3d561b",
- "data/06_fingerprints.json": "bf3bae6bab7f39b86f89c6ba54c5dca1",
+ "data/06_fingerprints.json": "04e9e34db2d8288502b403c9de9a2998",
  "data/07_mr0_carrier.json": "3deb93a31bd90ee8a382828f1ae98363",
  "data/08_mr1_partition.json": "4ba7fcc6f52f4cdd730a44a9c7b9c667",
  "data/09_mr2_chirality_test.json": "1dddf324e57eb784eb898bfcf8786cf0",
@@ -19,6 +19,7 @@
  "data/17_r13_estimator_robustness.json": "1685c37a4aa0b3d4f49803518b20f173",
  "data/18_r14_end_to_end.json": "45413f7c0d67b58a45f52ceb33fe98a6",
  "data/19_r15_frame_freedom.json": "cfe15bafc963eec27923d82d42333090",
+ "data/20_r16_kappa4_L_odd.json": "9d63fed15b9639c21134aea98d670655",
  "docs/01_preregistration.md": "e84f7e2f0b4251c523adb0403f019f28",
  "docs/02_projection_operator.md": "87b1ed595f8e5e7aee04d0b09fa19177",
  "docs/03_statistics_bands.md": "ec6671ffd55bf1895ba85c82fbb31cef",
@@ -30,8 +31,9 @@
  "docs/09_r10_kappa3_extensions.md": "576d40f7010c9078f6590cb9940adc44",
  "docs/10_r11_covariance_density.md": "5c5b818f551b9d2ab88bff6c00659423",
  "docs/11_r12_regime_boundaries.md": "4c79bcbc710dcdac1b6bda8d6e503ecd",
- "docs/12_test_package.md": "3d091fd090b32a570530efc0b2710d7c",
+ "docs/12_test_package.md": "e1dab6ef6a1858a5d7b00c963a470d41",
  "docs/13_r13_estimator_robustness.md": "a71459951f22d705493d82b78a145ef1",
  "docs/14_r14_end_to_end.md": "dd90ecfb5d11a203481de4ac7aab2dbf",
- "docs/15_r15_frame_freedom.md": "4a83890539d420a97f32396e5be9d4f1"
+ "docs/15_r15_frame_freedom.md": "4a83890539d420a97f32396e5be9d4f1",
+ "docs/16_r16_odd_ell_final.md": "b5b67aa8f12b8c981750d9d02a2b8379"
 }

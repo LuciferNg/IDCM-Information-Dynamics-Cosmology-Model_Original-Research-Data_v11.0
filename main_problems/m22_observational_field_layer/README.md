@@ -2,7 +2,7 @@
 
 ## 狀態
 
-🟡 **部分閉合（partial）**｜2026-11-20 第一輪 ＋ R6–R15｜290 PASS／0 FAIL
+🟡 **部分閉合（partial）**｜2026-11-20 第一輪 ＋ R6–R16｜298 PASS／0 FAIL
 📎 `T1 ✅`｜`T2 🟡→✅形式`｜`T3 🟡`｜`T4 🔴`
 📎 輸入門：`CQ2 ✅形式`｜`CQ3 🟡（算子有、簽名空）`｜`CQ4 🔴（絕對值須外部歸一）`
 
@@ -55,7 +55,8 @@ v11 七層全部止於「結構常數」；M17 `§3` 三項輸入門（CQ2／CQ3
 | `docs/13_r13_estimator_robustness.md` | R13：κ₃ 估計量公約穩健性（免 3j 求和之實作 ＋ C_ℓ 表）|
 | `docs/14_r14_end_to_end.md` | R14：端到端（離散化 1.3e−5／null 校準 1.03／提取 5e−6）|
 | `docs/15_r15_frame_freedom.md` | R15：框架自由定理 —— 方向／子空間統計量判死力 ≡ 0 |
-| `scripts/00–05,07–19` | 重現閘／A₅＋𝒟／振幅 no-go／comb 統計／null／手性／MR0–MR3／R7–R15 |
+| `docs/16_r16_odd_ell_final.md` | R16：奇 ℓ 盲區終局 —— 四點通道只存活 L=6；結構可見、統計不可見 |
+| `scripts/00–05,07–20` | 重現閘／A₅＋𝒟／振幅 no-go／comb 統計／null／手性／MR0–MR3／R7–R16 |
 | `run_chain.sh` | 全鏈重跑（任一支非 0 即停）|
 | `data/00–15` ＋ `*.log` | 機器輸出（json ＋ log）|
 
