@@ -246,3 +246,25 @@ SC1 ：S 側（源）封閉 —— (a) 一致規則 0/251 落 1σ（地板 2.168
    兩者各配一次移動球門聲明（`Mv-4`／`Mv-5`），族定義跑前凍結，判準全程未改。
 2. **scratch 披露**：`docs/07 §六` 第 2 條已聲明 P1–P8 曾以 scratch 探路確認族非空；canonical 數字一律來自 `scripts/06`。
 3. **水位重算**：79 檢查（75 PASS ＋ 4 記錄 FAIL）＝ `data/run_0{0..7}*.log` 逐個 grep `^\[PASS\]`／`^\[REC!\]` 重點算。
+
+---
+
+## §十六 Handoff 交付（2026-11-21，append-only）
+
+**交付包入口**：`docs/09_handoff_M20_M12.md`（合併三條 handoff；`register` note 2026-11-21T01:58:06 指此檔）
+
+| # | 時間（register 權威） | → | ref | 讀回 |
+|:-:|:--|:-:|:--|:--|
+| 1 | `2026-11-20T03:21:52` | M20 | `docs/03_r5_readout_layer_nogo.md` | M20 incoming 可見 ✅ |
+| 2 | `2026-11-20T03:21:53` | M12 | `docs/03_r5_readout_layer_nogo.md` | M12 incoming 可見 ✅ |
+| 3 | `2026-11-21T01:53:40` | M12 | `docs/08_r9_sc1_closure.md` | M12 incoming 可見 ✅ |
+
+```
+出向 3（M20 ×1、M12 ×2）｜入向 0｜withdrawn/retracted 0｜零重複組合
+check：M23 零 REF-MISSING、零 DRIFT｜四份 ref 檔全部存在（03=11,787B、08=3,805B、final=8,614B、01=15,987B）
+```
+
+**日期附註**：`docs/06`／`07`／`08` 標頭寫 2026-11-20（session 起始日）；register 對 R7–R9 落冊為
+2026-11-21T01:53:40 ⟹ 依「register 時間戳為權威」：R7–R9 跨 11-20→11-21 執行。原文不動，以本附註為準。
+
+**回執狀態**：M20（2 項）／M12（3 項）**皆未回執**；`docs/09 §六` 有回執欄。
