@@ -90,4 +90,9 @@
             形式證死：線性化 ⟹ {3,3′}；度量 1 維 ∝ I（dof_scale=1）；自由軌道 2000/2000
             存在不可導出：|Aut 𝒯| = 352 = 2⁵·11、5 ∤ 352、A₅ 單群 ⟹ 同態平凡
             ⟹ 立 bridge axiom B1；全部結果 conditional on B1；合計 213 PASS／0 FAIL
+2026-11-20  R8：MR1 終局（docs/07；scripts/12 = 11/11 PASS）
+            四路全封：NA1 標號／NA2 方向／NA3 外部錨／NA4 等變性
+            等變性約束維數 = 0（44 譜值全相異 ⟹ 對稱泛函 = 任意函數；ℝ¹³ 任意可達）
+            ⟹ 立第二條 bridge axiom B2（振幅指派規則）；合計 228 PASS／0 FAIL
+            附：越界寫 M17 之 3 檔已刪、M17 還原；改 register handoff 交付 f 診斷
 ```
