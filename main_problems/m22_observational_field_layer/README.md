@@ -51,6 +51,7 @@ v11 七層全部止於「結構常數」；M17 `§3` 三項輸入門（CQ2／CQ3
 | `docs/09_r10_kappa3_extensions.md` | R10：跨 ℓ κ₃（選擇律）／κ₄ ≡ 0（鏡像本徵態）／聯合 χ² |
 | `docs/10_r11_covariance_density.md` | R11：鏡像本徵態升格定理／奇 ℓ 低階全零／𝒟 之 ℓ* = 29 邊界（§五 更正）|
 | `docs/11_r12_regime_boundaries.md` | R12：regime 界線更正（29／59／60）／秩獨立核／κ₃ 區間 |
+| `docs/12_test_package.md` | 檢定通道電話簿（7 通道：輸入／預言／判死式／成本／狀態）|
 | `scripts/00–05,07–16` | 重現閘／A₅＋𝒟／振幅 no-go／comb 統計／null／手性／MR0–MR3／R7–R12 |
 | `run_chain.sh` | 全鏈重跑（任一支非 0 即停）|
 | `data/00–15` ＋ `*.log` | 機器輸出（json ＋ log）|
