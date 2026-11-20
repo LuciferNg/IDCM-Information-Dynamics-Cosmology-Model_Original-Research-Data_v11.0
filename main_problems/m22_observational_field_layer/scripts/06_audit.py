@@ -35,13 +35,13 @@ J = {i: json.load(open(os.path.join(DATA, f"{i:02d}_" + n), encoding="utf-8"))
                   (4, "null_and_sensitivity.json"), (5, "chirality.json"),
                   (7, "mr0_carrier.json"), (8, "mr1_partition.json"),
                   (9, "mr2_chirality_test.json"), (10, "mr3_lcdm_baseline.json"),
-                  (11, "mr0_r7.json"), (12, "mr1_equivariance.json")]}
+                  (11, "mr0_r7.json"), (12, "mr1_equivariance.json"), (13, "shape_invariants.json")]}
 
 # ── 1 逐支 PASS/FAIL 合計 ────────────────────────────────────────
 tot_p = sum(J[i]["n_pass"] for i in J)
 tot_f = sum(J[i]["n_fail"] for i in J)
 print("逐支：", {i: (J[i]["n_pass"], J[i]["n_fail"]) for i in J})
-ck("A1-合計", tot_p == 180 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–12）")
+ck("A1-合計", tot_p == 188 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–13）")
 
 # ── 2 docs 數字 vs data ─────────────────────────────────────────
 d02 = rd(os.path.join(DOCS, "02_projection_operator.md"))
@@ -71,7 +71,7 @@ ck("A2-R6門檻", "0.23160" in d03 and "0.11948" in d03 and "0.23160" in d05,
    "真 ΛCDM 門檻 0.23160／0.11948 在 docs/03 §七 與 docs/05")
 ck("A2-R6缺損", "40.18" in d05 and "40.18" in fr, "ΛCDM 缺損 40.18%")
 ck("A2-R6手性", "2.13e−14" in d05 or "2.13e-14" in d05, "反極點恆等式殘差")
-ck("A2-228", "228 PASS" in fr, "final_result 合計 228")
+ck("A2-241", "241 PASS" in fr, "final_result 合計 241")
 
 # ── 3 圍欄偶數 ＋ U+FFFD ───────────────────────────────────────
 for p in sorted(glob.glob(os.path.join(DOCS, "*.md"))) + [os.path.join(ODIR, "final_result.md"),
@@ -88,6 +88,15 @@ d06 = rd(os.path.join(DOCS, "06_mr0_bridge_b1.md"))
 ck("A2-B1", "B1" in d06 and "352" in d06 and "B1" in fr and "B1" in rd(os.path.join(DOCS, "04_input_gates.md")),
    "B1 在 docs/04 §九、docs/06、final_result")
 d07 = rd(os.path.join(DOCS, "07_mr1_equivariance.md"))
+d08 = rd(os.path.join(DOCS, "08_shape_invariant_kappa3.md"))
+j13 = J[13]["model"]
+vals08 = {6: "+0.169754", 10: "+0.093968", 12: "+0.099039", 16: "0.030804",
+          18: "+0.069251", 20: "+0.047672", 24: "+0.051914"}
+ck("A2-κ₃表", all(v.replace("-", "") in d08.replace("−", "-") for v in list(vals08.values())[:-1]),
+   f"{len(vals08)-1} 個模型 κ₃ 值在 docs/08（正負號形式已容許 −/\u2212）")
+ck("A2-κ₃機器一致", all(abs(abs(j13[str(l)]["kappa3_real"]) - abs(float(v))) < 5e-6 for l, v in vals08.items()),
+   "docs/08 之值與 data/13 機器值一致（±5e-6）")
+ck("A2-奇ℓ恆零", all(abs(j13[str(l)]["I3_re"]) < 1e-9 and abs(j13[str(l)]["I3_abs"]) < 1e-9 for l in (15,21,25,27)), "奇 ℓ I₃ ≡ 0（機器）")
 ck("A2-B2", "B2" in d07 and "13 全自由" in d07 and "B1" in d07, "B2 與 B1 並列在 docs/07")
 ck("A2-M17越界", "越界" in d07 and "m17_cmb_large_scale_anomalies" in d07, "越界寫入已記錄並還原")
 ck("A4-registry", "state:   partial" in rec and "verdict: T1-pass" in rec,

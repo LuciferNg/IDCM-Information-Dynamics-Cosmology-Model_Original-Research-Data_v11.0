@@ -10,7 +10,7 @@ for s in scripts/00_reproduction_gate.py scripts/01_a5_invariants.py \
          scripts/04_null_and_sensitivity.py scripts/05_chirality.py \
          scripts/07_mr0_carrier.py scripts/08_mr1_partition.py \
          scripts/09_mr2_chirality_test.py scripts/10_mr3_lcdm_baseline.py \
-         scripts/11_mr0_r7.py scripts/12_mr1_equivariance.py; do
+         scripts/11_mr0_r7.py scripts/12_mr1_equivariance.py scripts/13_shape_invariants.py; do
   echo "=== $s ==="
   $PY "$s" > "data/$(basename "${s%.py}").log" 2>&1
   rc=$?

@@ -28,6 +28,8 @@ NA3 外部歸一            v11 冇「質量 → ΔT/T」通道；T₀ = 2.7255 
 f（主統計量）            f = Σ_{ℓ=2..5}(2ℓ+1)C_ℓ / Σ_{ℓ=2..27}(2ℓ+1)C_ℓ = 0（恰；任何 convention）
 門檻                    f_crit(Bonf α=.05/22) = 0.21659（SW）／0.01809（平 C_ℓ）
                         f_crit(5σ)              = 0.11432（SW）／0.00878（平 C_ℓ）
+κ₃（R9 新層）           I₃ = Σ(ℓℓℓ|m₁m₂m₃)a a a；κ₃ = I₃/I₁^{3/2}（SO(3) 純量、尺度不變、由 I_ℓ 定）
+                       奇 ℓ ⟹ I₃ ≡ 0（定理）；偶 ℓ 9 個：模型值 7/9 屬 GRF 極端（2.7σ–7.8σ）
 手性                    偶 ℓ：I∘S = D^ℓ(R_z(π))I（恆等）｜奇 ℓ：I∘S = −D^ℓ(R_z(π))I
                         ⟹ 鏡像 = c_ℓ → −c_ℓ（奇 ℓ），c_ℓ 正負皆現 ⟹ **無觀測簽名**
 信息量                  ℓ≤27 觀測 784 維；N_fix(ℓ≤27) = 770；約束 779（Reading F）／768（Reading S）
@@ -66,8 +68,9 @@ scripts/09  MR2 反極點恆等式     6/6  PASS
 scripts/10  MR3 ΛCDM 基準        5/5  PASS
 scripts/11  MR0 終局（形式×3 ＋ 不可導出）  14/14 PASS
 scripts/12  MR1 終局（等變性零約束）      11/11 PASS
-scripts/06  自審（docs↔data 數字、圍欄、指紋、R6/R7/R8 數字）  48/48 PASS
-合計 228 PASS ／ 0 FAIL（00–05、07–12 = 180 ＋ 06 自審 48）
+scripts/13  R9 形狀不變量 κ₃            8/8  PASS
+scripts/06  自審（docs↔data 數字、圍欄、指紋、R6–R9 數字）  53/53 PASS
+合計 241 PASS ／ 0 FAIL（00–05、07–13 = 188 ＋ 06 自審 53）
 決定性：00/03/04/05 重跑 md5 byte-identical；01/02 重跑 md5 byte-identical（全 6 支一致）
 環境：/usr/bin/python3 3.12、numpy 2.4.6、scipy 1.18.0、sympy 1.13.1、mpmath 1.3.0、healpy 1.19.0
       PYTHONDONTWRITEBYTECODE=1；RNG seed 20261120–20261124（固定）
