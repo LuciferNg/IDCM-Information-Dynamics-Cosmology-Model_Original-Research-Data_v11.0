@@ -32,13 +32,15 @@ def rd(p):
 J = {i: json.load(open(os.path.join(DATA, f"{i:02d}_" + n), encoding="utf-8"))
      for i, n in [(0, "reproduction_gate.json"), (1, "a5_invariants.json"),
                   (2, "amplitude_nogo.json"), (3, "comb_field_stats.json"),
-                  (4, "null_and_sensitivity.json"), (5, "chirality.json")]}
+                  (4, "null_and_sensitivity.json"), (5, "chirality.json"),
+                  (7, "mr0_carrier.json"), (8, "mr1_partition.json"),
+                  (9, "mr2_chirality_test.json"), (10, "mr3_lcdm_baseline.json")]}
 
 # ── 1 逐支 PASS/FAIL 合計 ────────────────────────────────────────
 tot_p = sum(J[i]["n_pass"] for i in J)
 tot_f = sum(J[i]["n_fail"] for i in J)
 print("逐支：", {i: (J[i]["n_pass"], J[i]["n_fail"]) for i in J})
-ck("A1-合計", tot_p == 115 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL")
+ck("A1-合計", tot_p == 155 and tot_f == 0, f"{tot_p} PASS ／ {tot_f} FAIL（00–05、07–10）")
 
 # ── 2 docs 數字 vs data ─────────────────────────────────────────
 d02 = rd(os.path.join(DOCS, "02_projection_operator.md"))
@@ -63,6 +65,12 @@ ck("A2-f門檻", f"{fn['SW']['f_crit_bonf']:.5f}" in d03 and f"{fn['SW']['f_crit
    and f"{fn['SW']['f_crit_5sigma']:.5f}" in d04,
    f"f_crit = {fn['SW']['f_crit_bonf']:.5f} / {fn['SW']['f_crit_5sigma']:.5f}")
 ck("A2-Nmc", "10⁷" in d03, "N_mc = 10⁷ 標示")
+d05 = rd(os.path.join(DOCS, "05_residuals_r6.md"))
+ck("A2-R6門檻", "0.23160" in d03 and "0.11948" in d03 and "0.23160" in d05,
+   "真 ΛCDM 門檻 0.23160／0.11948 在 docs/03 §七 與 docs/05")
+ck("A2-R6缺損", "40.18" in d05 and "40.18" in fr, "ΛCDM 缺損 40.18%")
+ck("A2-R6手性", "2.13e−14" in d05 or "2.13e-14" in d05, "反極點恆等式殘差")
+ck("A2-196", "196 PASS" in fr, "final_result 合計 196")
 
 # ── 3 圍欄偶數 ＋ U+FFFD ───────────────────────────────────────
 for p in sorted(glob.glob(os.path.join(DOCS, "*.md"))) + [os.path.join(ODIR, "final_result.md"),
