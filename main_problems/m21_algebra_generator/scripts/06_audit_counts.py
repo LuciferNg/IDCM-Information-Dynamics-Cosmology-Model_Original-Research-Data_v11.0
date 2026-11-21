@@ -37,6 +37,8 @@ PAIRS = [
     ("03", "03_two_factor_audit.json"),
     ("04", "04_derivation_graph.json"),
     ("05", None),   # 05 之 JSON 結構不同（registry），只查 log
+    ("07", "07_m22_intake.json"),
+    ("08", "08_br1_mechanism_verdict.json"),
 ]
 
 print("=" * 78)
@@ -63,13 +65,15 @@ for num, jf in PAIRS:
         ck(f"A{num}  log 已解析（{p}P/{f_}F）", p + f_ > 0, f"{p}/{f_}")
 
 print(f"\n  合計：PASS = {tot_p} ｜ FAIL = {tot_f}")
-ck("TOT  合計水位（87 PASS / 4 FAIL，scripts 00–05）", (tot_p, tot_f) == (87, 4), f"{tot_p}/{tot_f}")
+ck("TOT  合計水位（131 PASS / 4 FAIL，scripts 00–05 ＋ 07–08）",
+   (tot_p, tot_f) == (131, 4), f"{tot_p}/{tot_f}")
 
 # 決定性重跑（byte-identical）
 print("\n── 決定性重跑（00–05，比對 stdout） ──")
 env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
 names = {0: "00_reproduction_gate.py", 1: "01_a5_census_identity.py", 2: "02_cy3_pool_gate.py",
-         3: "03_two_factor_audit.py", 4: "04_derivation_graph.py", 5: "05_registry_and_dedup.py"}
+         3: "03_two_factor_audit.py", 4: "04_derivation_graph.py", 5: "05_registry_and_dedup.py",
+         7: "07_m22_intake.py", 8: "08_br1_mechanism_verdict.py"}
 for num, fn in names.items():
     r = subprocess.run([sys.executable, os.path.join(HERE, fn)], capture_output=True, env=env)
     old = open(os.path.join(DATA, f"run_{num:02d}.log"), encoding="utf-8").read()

@@ -2,8 +2,9 @@
 
 ## 狀態
 
-🟡 **partial — 部分閉合**（2026-11-20 第一輪）｜本 O 自身殘項 **3**（橋選定、h11/h21 算子關係、`N₂ = B²` 身份）
-📎 交付：`scripts/00–06`（7 支）｜`docs/00–05`（6 份）｜`data/` 7 JSON ＋ 7 log｜`final_result.md`
+🟡 **partial — 部分閉合**（2026-11-20；第一輪 R1–R5 ＋ 第二輪 M22 入站裁定）｜本 O 自身殘項 **4**
+（`h11 = 36` 維數缺口、h11/h21 算子身份、`N₂ = B²` 身份、`BR1` 只餘 count-level 約定）
+📎 交付：`scripts/00–08`（9 支）｜`docs/00–06`（7 份）｜`data/` 9 JSON ＋ 9 log｜`final_result.md`
 
 ## 一句話
 
@@ -26,7 +27,8 @@
 
 | 項 | 判 | 一句 |
 |:-:|:-:|:--|
-| Q1／T1 | 🟡 | 群側 ✅（`E4`，dof=0）／晶格側橋 🟡（`BR1` 只到存在，249 種分解） |
+| Q1／T1 | 🟡 | 群側 ✅（`E4`，dof=0）／晶格側橋 **🔴 對象層判死**（第二輪三重死因）；識別 = count-level 約定 |
+| BR1 | 🔴 閉（負） | M22 入站裁定：類級／對級／等變級三重死因；環作用／transport／固有算術三機制全封 |
 | Q2／T3 | 🔴 | 「兩因子」係 gauge 分解；乘積 = `N_O38` = `M₀/ħω_ring` 單一 object |
 | Q3／P5 | ✅ | 雙態登記制度（`data/05_registry_Nd.json` 機械生成） |
 | Q4／T4 | 🔴 | 13 邊：`F7/T2/M3/A0/D1`；缺口 3 M ＋ 2 T；無孤立節點 |
@@ -63,8 +65,9 @@ gap = 38.612274 − 2.894296 = 35.717977 dex = 5.223686e35×   （「缺口」�
 | `docs/03_two_factor_audit.md` | R3／T3：兩因子 gauge（🔴） |
 | `docs/04_derivation_graph.md` | R4／T4：互導圖 `CG1/GR1` |
 | `docs/05_registry_and_dedup.md` | P5／Q3：查重 ＋ 雙態登記 ＋ 總判詞 |
+| `docs/06_handoff_m22_adjudication.md` | M22 入站裁定：`BR1` 對象層判死（三重）＋ 維數層殘留 |
 | `final_result.md` | 最終摘要 |
-| `scripts/00–06` | 重現閘 → R1–R4 → 登記查重 → 自查水位 |
+| `scripts/00–08` | 重現閘 → R1–R4 → 登記查重 → 自查水位 → M22 驗收 → BR1 機制裁定 |
 
 ## 依賴
 

@@ -99,4 +99,15 @@
             ★ 產物查重：Σd(d−1)、B·L₅、Σγ=2N+2、K_tree=3·11、f_M0·f_R、60=N_d+B²
               全部已註冊（v10 O171 / M15 / M16 / M8）⟹ 不宣稱新恆等式
             state：registered → partial（本 O 自身殘項 3）
+
+2026-11-20  第二輪：入站 handoff 裁定（M22 → M21）
+            入站 1 條（M22 11:12，ref m22/docs/07_mr1_equivariance.md）
+            scripts/07 四項宣稱獨立重算 22/22（Q1 典範分割／Q2 對級／Q3 型別／Q4 Ω 落格）
+            scripts/08 BR1 機制裁定 22/22
+            ⟹ BR1 對象層 🔴 判死（三重：類級 7型vs2型／對級 21+1+1 vs 22／等變 orbit 0 對中）
+               三機制全封（環作用＝O171 非群作用；transport 類型不合；Galois 阿貝爾 vs A₅ 單非交換）
+            ⟹ 答 M22：振幅不可由 M21 供 ⟹ B2 仍唯一出處（register note 已發）
+            ⟹ 維數層殘留（新）：ΣdimΛ² = 22 = N_d/2；Σ_(i<j)d_id_j = 98 = h21；h11 = 36 池內 0 命中
+            水位：00–05,07,08 = 131 PASS / 4 FAIL（4 FAIL = 被證偽假設本身）；06 自查 17/17
+            殘項 3 → 4；registry open_bridge → closed-NEGATIVE；dof 帳本 ＋1 條結構約定
 ```

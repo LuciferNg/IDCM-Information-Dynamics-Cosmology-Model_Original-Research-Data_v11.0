@@ -1,8 +1,8 @@
 {
   "registry": {
     "quantity": "N_d = 44",
-    "formal_state": "structure-derived (group side) / bridge-open (lattice side)",
-    "state_zh": "結構導出（群側）／橋未閉（晶格側）",
+    "formal_state": "structure-derived (group side) / bridge-closed-negative + identification-stipulated (lattice side)",
+    "state_zh": "結構導出（群側）／橋已判死（對象層）＋識別為約定（晶格側）",
     "dof_continuous_added": 0,
     "producers": [
       {
@@ -68,8 +68,19 @@
     ],
     "open_bridge": {
       "question": "A₅ 之 44 個非對合元素 ↔ 鏈之 44 個非零相異模式 之典範映射",
-      "equivalent_form": "N_site = 2·N_d（為何乘 2）＋ 為何載體係環（O171 residual 🔴）",
-      "status": "BR1 只到「存在」：44 點 A₅-集存在（249 種軌道分解）⟹ 存在 ≠ 唯一"
+      "equivalent_form": "N_site = 2·N_d（為何乘 2）＋ 為何載體係環（O171 residual）",
+      "status": "🔴 closed-NEGATIVE（對象層）2026-11-20 第二轮：入站 M22 handoff 裁定（scripts/07–08）",
+      "death_certificate": [
+        "類級：gcd 型 {20,10,5,5,2,1,1} vs 階型 {24,20}（7 型 vs 2 型）",
+        "對級：鏈 (21 對 +1 不動點 +1 無伴) vs 群 (22 對 +0 +0)；44 集上 involutive 置換必偶數不動點",
+        "等變級：兩側 orbit 多重集 0 對相等（{20,12,12}/{2×22} vs {20,10,5,5,2,1,1}/{2×21,1,1}）",
+        "機制級：環作用＝上游 O171 已判非群作用；transport 類型不合；Galois 阿貝爾 vs A₅ 單非交換"
+      ],
+      "residue": {
+        "coarse_label": "{20,24} = (gcd=1 vs >1) ≡ (階3 vs 階5)；cut 密度 2/43 = 4.65% ⟹ 標籤，無映射內容",
+        "dimension_level": "Σ dim Λ² V_χ = 22 = N_d/2；Σ_(i<j) d_i d_j = 98 = h21（皆非元素映射）"
+      },
+      "identification_status": "stipulation（載體 = 2× 普查計數；無元素映射）⟹ 連續 dof 仍 0，帳本 ＋1 條結構約定"
     },
     "dof_ledger": {
       "anchors_in_seven_quantities": 0,
@@ -89,6 +100,9 @@
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/docs/03_verification_and_open_items.md",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/scripts/60_chain_spectrum_derivation.py",
       "IDCM-v11.0--Reality-Architecture/README.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/final_result.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/README.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/01_problem_record.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/README.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/scripts/l2_independent_verify.py",
@@ -494,6 +508,11 @@
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o160_spectral_number_scan/docs/30_commutator_measurement.md",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o160_spectral_number_scan/scripts/31_commutator_measurement.py",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o244_fsr_qft_feynman_generic_tensor/scripts/06_t4_mass_ladder.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/final_result.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/docs/02_projection_operator.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/docs/05_residuals_r6.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/08_mr1_partition.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/02_amplitude_nogo.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/scripts/10_p_family_completeness.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/scripts/02_exchange_operator.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/scripts/05_beat_duality.py",
@@ -584,6 +603,7 @@
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/scripts/08_p4_c2_position.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/final_result.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/01_problem_record.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/docs/15_m_series_handoff_adjudication.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/docs/04_t3_handoff_and_verdict.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/01_problem_record.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/README.md",
@@ -715,6 +735,12 @@
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o129_sigma_sync_transition/final_result.md",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o129_sigma_sync_transition/SESSION_START.md",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o129_sigma_sync_transition/docs/02_o126_handback_reverification.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/docs/02_projection_operator.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/docs/01_preregistration.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/29_m15_gate_scope.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/scripts/20_m15_gate_check.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m9_lepton_sector_audit/docs/07_m15_handoff_verdict.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/final_result.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/10_audit_round.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/scripts/l2_independent_verify.py",
@@ -750,8 +776,9 @@
       "IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock/scripts/02_round2_g3_assignment.py"
     ],
     "K8  唯一性：度集由 (Σd², Σd, k) 唯一決定": [
+      "IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md"
     ]
   },
-  "n_files_scanned": 9576
+  "n_files_scanned": 9703
 }

@@ -118,8 +118,8 @@ assert N_d_census == 44 and G - N2 == 44
 
 registry = {
     "quantity": "N_d = 44",
-    "formal_state": "structure-derived (group side) / bridge-open (lattice side)",
-    "state_zh": "結構導出（群側）／橋未閉（晶格側）",
+    "formal_state": "structure-derived (group side) / bridge-closed-negative + identification-stipulated (lattice side)",
+    "state_zh": "結構導出（群側）／橋已判死（對象層）＋識別為約定（晶格側）",
     "dof_continuous_added": 0,
     "producers": [
         {
@@ -155,8 +155,19 @@ registry = {
     ],
     "open_bridge": {
         "question": "A₅ 之 44 個非對合元素 ↔ 鏈之 44 個非零相異模式 之典範映射",
-        "equivalent_form": "N_site = 2·N_d（為何乘 2）＋ 為何載體係環（O171 residual 🔴）",
-        "status": "BR1 只到「存在」：44 點 A₅-集存在（249 種軌道分解）⟹ 存在 ≠ 唯一",
+        "equivalent_form": "N_site = 2·N_d（為何乘 2）＋ 為何載體係環（O171 residual）",
+        "status": "🔴 closed-NEGATIVE（對象層）2026-11-20 第二轮：入站 M22 handoff 裁定（scripts/07–08）",
+        "death_certificate": [
+            "類級：gcd 型 {20,10,5,5,2,1,1} vs 階型 {24,20}（7 型 vs 2 型）",
+            "對級：鏈 (21 對 +1 不動點 +1 無伴) vs 群 (22 對 +0 +0)；44 集上 involutive 置換必偶數不動點",
+            "等變級：兩側 orbit 多重集 0 對相等（{20,12,12}/{2×22} vs {20,10,5,5,2,1,1}/{2×21,1,1}）",
+            "機制級：環作用＝上游 O171 已判非群作用；transport 類型不合；Galois 阿貝爾 vs A₅ 單非交換",
+        ],
+        "residue": {
+            "coarse_label": "{20,24} = (gcd=1 vs >1) ≡ (階3 vs 階5)；cut 密度 2/43 = 4.65% ⟹ 標籤，無映射內容",
+            "dimension_level": "Σ dim Λ² V_χ = 22 = N_d/2；Σ_(i<j) d_i d_j = 98 = h21（皆非元素映射）",
+        },
+        "identification_status": "stipulation（載體 = 2× 普查計數；無元素映射）⟹ 連續 dof 仍 0，帳本 ＋1 條結構約定",
     },
     "dof_ledger": {
         "anchors_in_seven_quantities": 0,
@@ -172,8 +183,9 @@ with open(os.path.join(DATA, "05_registry_Nd.json"), "w", encoding="utf-8") as f
                "n_files_scanned": len(files)}, f, ensure_ascii=False, indent=2)
 print(json.dumps(registry, ensure_ascii=False, indent=2)[:1500])
 
-ck("NDR1-e  登記狀態 = 雙態（群側導出／晶格側橋未閉）",
-   "structure-derived" in registry["formal_state"] and "bridge-open" in registry["formal_state"],
+ck("NDR1-e  登記狀態 = 雙態（群側導出／晶格側橋判死＋識別約定）",
+   "structure-derived" in registry["formal_state"]
+   and "bridge-closed-negative" in registry["formal_state"],
    registry["formal_state"])
 ck("NDR1-f  dof 連續新增 = 0", registry["dof_continuous_added"] == 0, "0")
 ck("NDR1-g  N_d 非第二錨 ⟹ O212 dof = 1", registry["dof_ledger"]["N_d_is_second_anchor"] is False,

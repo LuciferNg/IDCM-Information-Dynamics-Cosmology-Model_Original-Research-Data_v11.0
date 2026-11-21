@@ -1,10 +1,10 @@
 ==============================================================================
 M21 scripts/05 — 產物查重 ＋ 雙態登記
 ==============================================================================
-  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9576
+  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9703
 
   K1  Σ_χ d(d−1) = 44（A₅ 度集普查）
-    命中檔案數 = 23
+    命中檔案數 = 26
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/final_result.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/01_problem_record.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o171_a5_partition_theory/README.md
@@ -40,7 +40,7 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
       · IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/scripts/63_audit_independent.py
 
   K5  非對合／平方根計數（群側算子身份）
-    命中檔案數 = 117
+    命中檔案數 = 122
       · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o82_mass_generation__SESSION_START.md
       · IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o82_mass_generation.SESSION_START.md
       · IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/docs/09_highl_tail_transfer.md
@@ -49,7 +49,7 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
       · IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/src/sqrt_phi_algebraic_origin.py
 
   K6  f_M0·f_R 乘積 = N_O38
-    命中檔案數 = 92
+    命中檔案數 = 93
       · IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino/docs/14_open_problems.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/SESSION_START.md
@@ -58,7 +58,7 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/docs/01_problem_record.md
 
   K7  60 = N_d + B² 記賬
-    命中檔案數 = 151
+    命中檔案數 = 157
       · IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/08_omegab_direct.md
       · IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/scripts/07_he3_and_omegab.py
       · IDCM-v10.0--It-From-Beat/main_problems/p14_global_routing_table/docs/38_winding_energy_bridge.md
@@ -67,28 +67,29 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md
 
   K8  唯一性：度集由 (Σd², Σd, k) 唯一決定
-    命中檔案數 = 1
+    命中檔案數 = 2
+      · IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py
       · IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md
-[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9576 files
-[PASS] NDR1  K1 查重已記錄 :: hits = 23
+[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9703 files
+[PASS] NDR1  K1 查重已記錄 :: hits = 26
 [PASS] NDR1  K2 查重已記錄 :: hits = 167
 [PASS] NDR1  K3 查重已記錄 :: hits = 77
 [PASS] NDR1  K4 查重已記錄 :: hits = 29
-[PASS] NDR1  K5 查重已記錄 :: hits = 117
-[PASS] NDR1  K6 查重已記錄 :: hits = 92
-[PASS] NDR1  K7 查重已記錄 :: hits = 151
-[PASS] NDR1  K8 查重已記錄 :: hits = 1
-[PASS] NDR1-dedup  K1 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 23
+[PASS] NDR1  K5 查重已記錄 :: hits = 122
+[PASS] NDR1  K6 查重已記錄 :: hits = 93
+[PASS] NDR1  K7 查重已記錄 :: hits = 157
+[PASS] NDR1  K8 查重已記錄 :: hits = 2
+[PASS] NDR1-dedup  K1 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 26
 [PASS] NDR1-dedup  K2 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 167
 [PASS] NDR1-dedup  K4 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 29
-[PASS] NDR1-dedup  K6 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 92
-[PASS] NDR1-dedup  K7 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 151
+[PASS] NDR1-dedup  K6 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 93
+[PASS] NDR1-dedup  K7 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 157
 
 ── 雙態登記（機械生成）──
 {
   "quantity": "N_d = 44",
-  "formal_state": "structure-derived (group side) / bridge-open (lattice side)",
-  "state_zh": "結構導出（群側）／橋未閉（晶格側）",
+  "formal_state": "structure-derived (group side) / bridge-closed-negative + identification-stipulated (lattice side)",
+  "state_zh": "結構導出（群側）／橋已判死（對象層）＋識別為約定（晶格側）",
   "dof_continuous_added": 0,
   "producers": [
     {
@@ -140,11 +141,8 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
     },
     {
       "id": "E13",
-      "stmt": "|G| = N_d + B² ⟺ N₂ = B² = 16",
-      "why": "兩邊各自被 A₅ 確定，但 B² 無算子身份"
-    }
-  ]
-[PASS] NDR1-e  登記狀態 = 雙態（群側導出／晶格側橋未閉） :: structure-derived (group side) / bridge-open (lattice side)
+      "stmt": "|G| = N_d + B² ⟺ N₂ = B² = 1
+[PASS] NDR1-e  登記狀態 = 雙態（群側導出／晶格側橋判死＋識別約定） :: structure-derived (group side) / bridge-closed-negative + identification-stipulated (lattice side)
 [PASS] NDR1-f  dof 連續新增 = 0 :: 0
 [PASS] NDR1-g  N_d 非第二錨 ⟹ O212 dof = 1 :: (a) dof = 1 成立
 [PASS] NDR1-h  登記含 producer／T／M／refuted／bridge 五欄 :: 五欄齊
