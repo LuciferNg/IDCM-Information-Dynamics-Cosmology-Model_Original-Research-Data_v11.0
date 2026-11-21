@@ -1,0 +1,108 @@
+{
+ "checks": {
+  "A1_zero_crossing": true,
+  "A2_support_theorem": true,
+  "A3_nq_bound": true,
+  "A4_operator_identity": true
+ },
+ "summary": {
+  "pass": 4,
+  "total": 4
+ },
+ "zero_crossing": {
+  "root": 18.593307968174997,
+  "g18": 0.17329545454545456,
+  "g19": -0.11647727272727272
+ },
+ "support": {
+  "strict": 43,
+  "equality": 1,
+  "lambda_max_1": 4.0
+ },
+ "nq": [
+  {
+   "target": "m_p",
+   "lambda_M0": 33.62872107097563,
+   "ratio": 0.37365245634417366,
+   "n_q_bound": 1
+  },
+  {
+   "target": "v_SM",
+   "lambda_M0": 8824.785853797268,
+   "ratio": 98.05317615330297,
+   "n_q_bound": 99
+  },
+  {
+   "target": "M_Pl/M₀",
+   "lambda_M0": 4.3758063131621314e+20,
+   "ratio": 4.86200701462459e+18,
+   "n_q_bound": "4,862,007,014,624,589,824"
+  }
+ ],
+ "nq_rel_diff_M1": 2.3258592640596383e-09,
+ "scan": {
+  "κ/M₀ 下界": {
+   "value": 2.457611,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "κ/M₀ 上界": {
+   "value": 2.529465,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "κ_crit": {
+   "value": 0.00455132,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "T_A v1 = ħc/(a₀M₀)": {
+   "value": 18.738758425035037,
+   "n_hits": 0,
+   "random_expect": 1,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "T_A v2 = ħc/(a₀M₀)": {
+   "value": 18.4089386395414,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "T_t v1 = t/M₀": {
+   "value": 0.028257137803545152,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  },
+  "T_t v2 = t/M₀": {
+   "value": 0.06347820492625421,
+   "n_hits": 0,
+   "random_expect": 0,
+   "hits": [],
+   "verdict": "無身份"
+  }
+ },
+ "n_candidates": 67166,
+ "n_atoms": 71,
+ "ledger": {
+  "continuous_scale": 1,
+  "transcendental_slots": {
+   "rate": "<=6",
+   "hadron_shape": 2
+  },
+  "discrete_anchors": {
+   "N_d": 44,
+   "N = 2N_d": 88,
+   "B (=N_gen+1)": 4
+  }
+ }
+}
