@@ -2,7 +2,7 @@
 
 ## 狀態
 
-🟢 **`closed`（scoped：9 模式集 × F1 frame）** — 2026-11-14 收官｜水位 85/85｜零跨 M 寫入
+🟢 **`closed`（scoped：9 模式集 × F1 frame）** — 2026-11-20 收尾審計｜水位 **97/97**（driver rc=0）｜零跨 M 寫入
 
 ## 一句話
 
@@ -39,7 +39,11 @@ M14 `final_result.md` L173：
 | `01_problem_record.md` | §〇 歸屬 fence／Q1–Q4／T1–T4／P1–P4／R1–R5／禁區／驗證標準 |
 | `SESSION_START.md` | 接手起點、重現閘、禁區、分工、交接 |
 | `README.md` | 本檔 |
-| `docs/` `scripts/` `data/` | 已落地：docs 7 份、scripts 8 支 ＋ l1–l3、data 6 JSON ＋ 13 log |
+| `docs/` `scripts/` `data/` | docs 8 份、scripts 9 支 ＋ l1–l3 ＋ run_chain.sh、data 7 JSON ＋ 13 log |
+
+## 開放問題
+
+權威清單只有一份：**`docs/08_open_problems_inventory.md`**（OA 2／OB 6／OC 9）。本檔唔重覆。
 
 ## 依賴
 

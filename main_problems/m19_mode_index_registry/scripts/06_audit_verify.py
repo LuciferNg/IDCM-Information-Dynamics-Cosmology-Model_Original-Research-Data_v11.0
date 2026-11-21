@@ -38,7 +38,7 @@ print("M19 scripts/06 — 審計 A1–A8")
 print("=" * 92)
 
 script_files = sorted(p for p in SCRIPTS.glob("0*.py") if ".pre_patch_" not in p.name)
-chk("A1a 腳本數量 = 8（00–07）", len(script_files) == 8, ", ".join(p.name for p in script_files))
+chk("A1a 腳本數量 = 9（00–08）", len(script_files) == 9, ", ".join(p.name for p in script_files))
 
 no_prereg = [p.name for p in script_files if "預註冊" not in p.read_text()]
 chk("A1b 每支含預註冊塊", not no_prereg, "缺：" + str(no_prereg) if no_prereg else f"{len(script_files)}/{len(script_files)}")
@@ -70,8 +70,9 @@ chk("A3 RESULT n/n == chk 呼叫數（每支全 PASS）", not mismatch, str(mism
 
 jsons = sorted(DATA.glob("0*.json"))
 expected = {"01_frame_census.json", "02_bit_decomposition.json", "03_admissibility.json",
-            "04_scan_density.json", "05_registry.json", "07_slot_scope.json"}
-chk("A4 產物綁定 6 個 JSON", {p.name for p in jsons} == expected,
+            "04_scan_density.json", "05_registry.json", "07_slot_scope.json",
+            "08_reverse_numeric_coverage.json"}
+chk("A4 產物綁定 7 個 JSON", {p.name for p in jsons} == expected,
     ", ".join(p.name for p in jsons))
 
 # A5：路徑衛生（腳本內 OUT 定義必須指向本目錄 data/）
@@ -106,8 +107,48 @@ for p in script_files:
 chk("A7 import 白名單（無他 M 模組）", not viol, str(viol))
 
 docs = sorted(DOCS.glob("*.md"))
-chk("A8 docs 非空且含判段", len(docs) >= 6 and all("判" in p.read_text() for p in docs),
+chk("A8 docs 非空且含判段", len(docs) >= 7 and all("判" in p.read_text() for p in docs),
     f"{len(docs)} 份")
+
+FOUR = [ROOT / f for f in ("01_problem_record.md", "SESSION_START.md", "README.md", "final_result.md")]
+drv = (SCRIPTS / "run_chain.sh").read_text()
+drv_set = set(re.findall(r"scripts/([0-9a-z_]+\.py)", drv))
+disk_set = {p.name for p in script_files} | {p.name for p in SCRIPTS.glob("l*.py")}
+chk("A9 driver 覆蓋 = 磁碟腳本集（差集空）", drv_set == disk_set,
+    f"缺跑 {sorted(disk_set - drv_set)}｜多跑 {sorted(drv_set - disk_set)}")
+
+pyc = list(SCRIPTS.glob("**/*.pyc")) + list(DATA.glob("**/*.pyc"))
+chk("A10 無 __pycache__／.pyc 殘留", not pyc and not (SCRIPTS / "__pycache__").exists(),
+    f"{len(pyc)} 個 pyc")
+
+stale = [p.name for p in FOUR if not ("🟢" in p.read_text() and
+                                      ("已閉合" in p.read_text() or "closed" in p.read_text()))]
+chk("A11 四件套狀態同步（四份皆 🟢／已閉合）", not stale, f"缺 {stale}")
+
+REF = [
+    "main_problems/m19_mode_index_registry/final_result.md",
+    "main_problems/m19_mode_index_registry/docs/06_handback_S4_S5.md",
+    "main_problems/m19_mode_index_registry/docs/03_bit_decomposition.md",
+    "main_problems/m19_mode_index_registry/docs/02_object_layer_and_frames.md",
+    "main_problems/m19_mode_index_registry/docs/05_registry.md",
+    "main_problems/m19_mode_index_registry/01_problem_record.md",
+]
+V11 = ROOT.parent.parent
+missing_ref = [r for r in REF if not (V11 / r).exists()]
+chk("A12 register ref 全部 resolve（6 條）", not missing_ref, str(missing_ref))
+
+hyg = []
+for p in script_files + sorted(SCRIPTS.glob("l*.py")):
+    if p.name.startswith("06_"):      # 自審腳本：A13 之禁字清單本身就含這些字串
+        continue
+    txt = p.read_text()
+    for bad in ("/tmp/", ".hermes/cache", "/var/tmp", "~/scratch"):
+        if bad in txt and p.name not in ("00_reproduction_gate.py",):
+            hyg.append((p.name, bad))
+chk("A13 路徑衛生（無 /tmp／scratch／cache 讀寫）", not hyg, str(hyg))
+
+bak = sorted(SCRIPTS.glob("*.pre_patch_*"))
+chk("A14 pre-patch 備份存在（≥8）", len(bak) >= 8, f"{len(bak)} 份")
 
 n_pass = sum(1 for _, c in checks if c)
 print(f"\nRESULT {n_pass}/{len(checks)} PASS")

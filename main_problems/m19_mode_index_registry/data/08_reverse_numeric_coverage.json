@@ -1,0 +1,12 @@
+{
+ "pool_size": 1634,
+ "scanned_tokens": 55,
+ "untraceable": [],
+ "allow": {
+  "9.876543": "負控制值（docs/07 §九.2 引述掃描器自身之負控制），非物理量"
+ },
+ "negative_control": {
+  "value": 9.876543,
+  "detected": true
+ }
+}

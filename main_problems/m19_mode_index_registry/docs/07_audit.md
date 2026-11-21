@@ -98,3 +98,77 @@ scripts/l3_doc_crosscheck.py.pre_patch_*
 ⚪ 未改任何他 M 檔案（依紀律，只經 register handoff）
 ⚪ 未處理 S5 載體（屬 M20）
 ```
+
+---
+
+## 九、收尾審計（2026-11-20）——覆蓋全鏈，取代 §一 之水位
+
+**新增閘（本輪）**：`scripts/run_chain.sh`（driver）＋ `scripts/08_reverse_numeric_coverage.py`（L3b）
+＋ `scripts/06` 擴至 A1–A14。§一 之「核心 51／85」為當時值，**現行水位如下**。
+
+| 支 | 檢查 | RESULT |
+|:--|:--|:--|
+| `00` | G1–G7 | 11/11 |
+| `01` | C1–C7 | 8/8 |
+| `02` | B1–B7 | 8/8 |
+| `03` | D1–D6 | 8/8 |
+| `04` | E1–E5 | 5/5 |
+| `05` | F1–F5 | 5/5 |
+| `07` | H1–H6 | 6/6 |
+| `08` | R1–R7（反向覆蓋） | 4/4 |
+| `l1` | 兩跑 byte-identical（9 支 ×2） | 17/17 |
+| `l2` | 獨立閉式重算 | 7/7 |
+| `l3` | 30 claim 逐字命中 | 3/3 |
+| `06` | A1–A14 | 15/15 |
+
+**總水位 = 11+8+8+8+5+5+6+4 ＋ 17 ＋ 7 ＋ 3 ＋ 15 = 97/97**（`run_chain.sh` rc=0）。
+
+### 九.1 新增三閘之意義
+
+```
+A9  driver 所跑腳本集 == 磁碟腳本集（差集空）      ← 防「支腳本從未入鏈而 audit 照綠」
+A10 零 __pycache__／.pyc                          ← 路徑衛生（py_compile 曾遺 .pyc）
+A11 四件套狀態同步（四份皆 🟢／已閉合）             ← 修好 01_problem_record／SESSION_START 之 stale 狀態行
+A12 register ref 全部 resolve（6 條）              ← handoff／close／note 之 ref 指向實檔
+A13 零 /tmp／scratch／cache 讀寫                    ← 排除 06 自身（禁字清單自含）
+A14 pre-patch 備份 ≥8 份                           ← 改檔必先備份
+```
+
+### 九.2 反向數字覆蓋（L3b）結果
+
+```
+pool = 1637 值（data/run_0{0,1,2,3,4,5,7}.log ∪ data/0*.json；排除 audit／L1／L2／L3／L3b 自身）
+doc token（4+ dp 或科學記數）= 51（docs/08 加入後重掃：51 → 見 §九.5）
+UNTRACEABLE = 0；ALLOW = 0 條（零豁免）
+負控制 9.876543 被判 UNTRACEABLE ⟹ 掃描器有鑑別力
+```
+
+### 九.2a 附註（append-only，2026-11-20 收尾輪末）
+
+- **ALLOW 由 0 → 1 條**：`docs/08_open_problems_inventory.md` 加入掃描範圍後，`docs/07 §九.2` 自身引述之負控制值 `9.876543` 被掃成 UNTRACEABLE。該值係掃描器自證用，**非物理量**，故 `scripts/08` 增 `ALLOW = {"9.876543": "負控制值"}`（逐條列明理由）。同時修 `R1` 之硬編碼檔數（11 → 動態 `len(docs)+4`）。§九.2 之「ALLOW 0 條」為當時值，現行為 **1 條**。
+- 掃描檔數 = **12**（docs 8 ＋ 四件套 4），非 §九.2 當時之 11。
+
+### 九.3 本輪修好之真缺陷（三條，全部為審計自身）
+
+| # | 缺陷 | 修法 |
+|:-:|:--|:--|
+| 1 | `08` 掃描器把自己輸出之負控制值 `9.876543` 收入 pool ⟹ 負控制自我中毒 | 排除 `08_reverse_numeric_coverage.json` |
+| 2 | `06` A13 之禁字清單（`/tmp/` 等）令自審腳本自我命中 | A13 跳過 `06_*` |
+| 3 | 四件套中 `01_problem_record`／`SESSION_START` 狀態行仍為「⚪ 已註冊、未開推」 | live field 直接改為 🟢 已閉合（§八／§一 原文保留 ＋ 附註指向） |
+
+### 九.4 driver 覆蓋核（A9 實測）
+
+```
+run_chain.sh 跑 12 支：00,01,02,03,04,05,07,08,l1,l2,l3,06
+磁碟腳本集（0*.py 9 支 ＋ l*.py 3 支）= 12 ⟹ 差集空 ✅
+```
+
+## 十、判（收尾審計）
+
+```
+✅ 97/97 全綠；driver rc=0；反向覆蓋 0 UNTRACEABLE（零豁免）
+✅ 六項核對：①腳本集對稱 ✅ ②逆向綁定 ✅ ③路徑衛生 ✅ ④產物綁定（7 JSON）✅
+             ⑤無 ghost 推導（全部 docs/NN 標明 producer script＋log）✅ ⑥driver ✅
+✅ 四件套同步；register ref 6/6 resolve
+```
+

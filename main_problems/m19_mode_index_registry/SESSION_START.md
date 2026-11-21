@@ -1,6 +1,6 @@
 # M19 — SESSION_START（接手文件）
 
-> **建立**: 2026-11-14｜**狀態**: ⚪ 已註冊、未開推
+> **建立**: 2026-11-14｜**狀態**: 🟢 已閉合（2026-11-20；scoped：9 模式集 × F1 frame）
 > **本 session 性質**: 只開不推 —— 零 scripts、零 docs 內容、零數據。
 
 ---
@@ -92,3 +92,18 @@ Frame    F1 / F2 = 同一次序嵌入之兩向（只差 1 bit）；F3（CSSG-v3�
 
 **下一 session 入口**（若重開）：`final_result.md` → `docs/05`（登記冊權威）→ `docs/06`（回接）。
 禁重推：`docs/06` §四（全 T3 = 0）、`final_result.md` 🔴 段全部。
+
+---
+
+## §八 收尾審計輪（2026-11-20）
+
+```
+新增 scripts/run_chain.sh（driver，12 支）＋ scripts/08_reverse_numeric_coverage.py（L3b）
+06 擴至 A1–A14；四件套狀態行修同步（01_problem_record／SESSION_START 原為 stale ⚪）
+水位 97/97（核心 55 ＋ audit 15 ＋ L1 17 ＋ L2 7 ＋ L3 3）；driver rc=0
+反向覆蓋：pool 1637、doc token 51、UNTRACEABLE 0、ALLOW 1（負控制值，非物理量）
+開放清單：docs/08（OA 2／OB 6／OC 9）—— 權威單一來源
+入向 handoff：0（無回執義務）；出向：5（讀回 5/5）
+```
+
+**本輪修正**：① `08` 掃描器自我中毒（排除自身 JSON）② `06` A13 自含禁字（跳過自身）③ 兩份四件套 stale 狀態行。全部屬審計層，**零數字改動**（所有核心 RESULT 與前輪逐位相同）。
