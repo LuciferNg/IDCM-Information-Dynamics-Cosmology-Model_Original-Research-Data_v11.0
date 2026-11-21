@@ -37,13 +37,13 @@ print("=" * 92)
 print("M19 scripts/06 — 審計 A1–A8")
 print("=" * 92)
 
-script_files = sorted(p for p in SCRIPTS.glob("0*.py") if ".pre_patch_" not in p.name)
-chk("A1a 腳本數量 = 9（00–08）", len(script_files) == 9, ", ".join(p.name for p in script_files))
+script_files = sorted(p for p in SCRIPTS.glob("[0-9][0-9]_*.py") if ".pre_patch_" not in p.name)
+chk("A1a 腳本數量 = 11（00–10）", len(script_files) == 11, ", ".join(p.name for p in script_files))
 
 no_prereg = [p.name for p in script_files if "預註冊" not in p.read_text()]
 chk("A1b 每支含預註冊塊", not no_prereg, "缺：" + str(no_prereg) if no_prereg else f"{len(script_files)}/{len(script_files)}")
 
-logs = {p.name.split("_")[1]: p for p in DATA.glob("run_0*_*.log")}
+logs = {p.name.split("_")[1]: p for p in DATA.glob("run_[0-9][0-9]_*.log")}
 chk("A2 每支有 log", len(logs) == len(script_files),
     ", ".join(sorted(logs)))
 
@@ -68,11 +68,12 @@ for p in script_files:
         mismatch.append((p.name, f"RESULT {a}/{b} vs chk {n_chk}"))
 chk("A3 RESULT n/n == chk 呼叫數（每支全 PASS）", not mismatch, str(mismatch))
 
-jsons = sorted(DATA.glob("0*.json"))
+jsons = sorted(DATA.glob("[0-9][0-9]_*.json"))
 expected = {"01_frame_census.json", "02_bit_decomposition.json", "03_admissibility.json",
             "04_scan_density.json", "05_registry.json", "07_slot_scope.json",
-            "08_reverse_numeric_coverage.json"}
-chk("A4 產物綁定 7 個 JSON", {p.name for p in jsons} == expected,
+            "08_reverse_numeric_coverage.json", "09_naming_operator_class.json",
+            "10_assignment_prior.json"}
+chk("A4 產物綁定 9 個 JSON", {p.name for p in jsons} == expected,
     ", ".join(p.name for p in jsons))
 
 # A5：路徑衛生（腳本內 OUT 定義必須指向本目錄 data/）

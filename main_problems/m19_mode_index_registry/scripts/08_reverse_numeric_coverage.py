@@ -48,7 +48,7 @@ for p in sorted(DATA.glob("*.log")):
             pool_vals.append(float(m.group(0)))
         except ValueError:
             pass
-for p in sorted(DATA.glob("0*.json")):
+for p in sorted(DATA.glob("[0-9][0-9]_*.json")):
     if p.name == "08_reverse_numeric_coverage.json":   # 掃描器自身輸出（含負控制值）⟹ 排除，否則自我中毒
         continue
     for m in re.finditer(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", norm(p.read_text())):

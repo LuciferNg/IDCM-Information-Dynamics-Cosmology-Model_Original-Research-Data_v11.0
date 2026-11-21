@@ -1,0 +1,12 @@
+{
+ "A_quark_eq1": 720,
+ "A_quark_neq1": 2880,
+ "ratio": "1/4",
+ "ratio_source": "1/#{≡1 slots} = 1/4（空槽均勻先驗）",
+ "marginal_conditioned": {
+  "eq1": "1/24",
+  "neq1": "1/6"
+ },
+ "marginal_unconditioned": "1/9",
+ "verdict": "OA2 🔴 不可作弱判別：權重比係 S1 條件化之產物；v11 無指派動力學"
+}

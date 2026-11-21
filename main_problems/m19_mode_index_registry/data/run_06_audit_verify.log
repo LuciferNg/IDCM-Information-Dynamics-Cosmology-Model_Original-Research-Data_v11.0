@@ -1,20 +1,20 @@
 ============================================================================================
 M19 scripts/06 — 審計 A1–A8
 ============================================================================================
-  [PASS] A1a 腳本數量 = 9（00–08）   00_reproduction_gate.py, 01_frame_census.py, 02_bit_decomposition.py, 03_admissibility_and_readings.py, 04_cbt_scan_density.py, 05_registry_build.py, 06_audit_verify.py, 07_slot_scope_theorem.py, 08_reverse_numeric_coverage.py
-  [PASS] A1b 每支含預註冊塊   9/9
-  [PASS] A2 每支有 log   00, 01, 02, 03, 04, 05, 06, 07, 08
+  [PASS] A1a 腳本數量 = 11（00–10）   00_reproduction_gate.py, 01_frame_census.py, 02_bit_decomposition.py, 03_admissibility_and_readings.py, 04_cbt_scan_density.py, 05_registry_build.py, 06_audit_verify.py, 07_slot_scope_theorem.py, 08_reverse_numeric_coverage.py, 09_naming_operator_class.py, 10_assignment_prior.py
+  [PASS] A1b 每支含預註冊塊   11/11
+  [PASS] A2 每支有 log   00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10
   [PASS] A3 RESULT n/n == chk 呼叫數（每支全 PASS）   []
-  [PASS] A4 產物綁定 7 個 JSON   01_frame_census.json, 02_bit_decomposition.json, 03_admissibility.json, 04_scan_density.json, 05_registry.json, 07_slot_scope.json, 08_reverse_numeric_coverage.json
+  [PASS] A4 產物綁定 9 個 JSON   01_frame_census.json, 02_bit_decomposition.json, 03_admissibility.json, 04_scan_density.json, 05_registry.json, 07_slot_scope.json, 08_reverse_numeric_coverage.json, 09_naming_operator_class.json, 10_assignment_prior.json
   [PASS] A5 零硬編碼外部絕對路徑（除 00 之唯讀 grep 根）   [('00_reproduction_gate.py', '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat')]
   [PASS] A6 引用閘重放 PASS/BLOCK/BLOCK   ['PASS', 'BLOCK', 'BLOCK']
   [PASS] A7 import 白名單（無他 M 模組）   []
-  [PASS] A8 docs 非空且含判段   8 份
+  [PASS] A8 docs 非空且含判段   9 份
   [PASS] A9 driver 覆蓋 = 磁碟腳本集（差集空）   缺跑 []｜多跑 []
   [PASS] A10 無 __pycache__／.pyc 殘留   0 個 pyc
   [PASS] A11 四件套狀態同步（四份皆 🟢／已閉合）   缺 []
   [PASS] A12 register ref 全部 resolve（6 條）   []
   [PASS] A13 路徑衛生（無 /tmp／scratch／cache 讀寫）   []
-  [PASS] A14 pre-patch 備份存在（≥8）   15 份
+  [PASS] A14 pre-patch 備份存在（≥8）   20 份
 
 RESULT 15/15 PASS

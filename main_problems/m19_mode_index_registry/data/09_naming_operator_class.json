@@ -1,0 +1,15 @@
+{
+ "class_counts": {
+  "{χ}": 2,
+  "{Q}": 3,
+  "{B−L}": 3,
+  "{χ,Q}": 3,
+  "{χ,B−L}": 3,
+  "{Q,B−L}": 3,
+  "{χ,Q,B−L}": 3
+ },
+ "max_registered_labels_class": 3,
+ "with_generation_class": 9,
+ "generation_label_status": "未註冊（M14 docs/03：範疇錯置＋純字面值）",
+ "verdict": "OA1 🔴 不存在命名算子（已註冊標籤下）；唯一救命條件 = 世代標籤註冊"
+}

@@ -29,6 +29,8 @@ run data/run_03_admissibility_and_readings.log scripts/03_admissibility_and_read
 run data/run_04_cbt_scan_density.log         scripts/04_cbt_scan_density.py
 run data/run_05_registry_build.log           scripts/05_registry_build.py
 run data/run_07_slot_scope_theorem.log       scripts/07_slot_scope_theorem.py
+run data/run_09_naming_operator_class.log    scripts/09_naming_operator_class.py
+run data/run_10_assignment_prior.log         scripts/10_assignment_prior.py
 
 # ── L2／L3／coverage／audit（依賴上面產物）
 run data/run_08_reverse_numeric_coverage.log scripts/08_reverse_numeric_coverage.py

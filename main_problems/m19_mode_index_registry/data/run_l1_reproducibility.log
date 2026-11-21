@@ -13,10 +13,14 @@ M19 l1 — 可重現性（兩跑 byte-identical）
   [PASS] L1 04_cbt_scan_density.py 與入庫 log 一致   log md5 534bb917
   [PASS] L1 05_registry_build.py 兩跑一致 ＋ rc=0   md5 cdb409a4 ×2
   [PASS] L1 05_registry_build.py 與入庫 log 一致   log md5 cdb409a4
-  [PASS] L1 06_audit_verify.py 兩跑一致 ＋ rc=0   md5 2518b66d ×2
+  [PASS] L1 06_audit_verify.py 兩跑一致 ＋ rc=0   md5 5cfcc289 ×2
   [PASS] L1 07_slot_scope_theorem.py 兩跑一致 ＋ rc=0   md5 9dd837df ×2
   [PASS] L1 07_slot_scope_theorem.py 與入庫 log 一致   log md5 9dd837df
-  [PASS] L1 08_reverse_numeric_coverage.py 兩跑一致 ＋ rc=0   md5 3476e6f8 ×2
-  [PASS] L1 08_reverse_numeric_coverage.py 與入庫 log 一致   log md5 3476e6f8
+  [PASS] L1 08_reverse_numeric_coverage.py 兩跑一致 ＋ rc=0   md5 0d148fbc ×2
+  [PASS] L1 08_reverse_numeric_coverage.py 與入庫 log 一致   log md5 0d148fbc
+  [PASS] L1 09_naming_operator_class.py 兩跑一致 ＋ rc=0   md5 7fdf9040 ×2
+  [PASS] L1 09_naming_operator_class.py 與入庫 log 一致   log md5 7fdf9040
+  [PASS] L1 10_assignment_prior.py 兩跑一致 ＋ rc=0   md5 c76d8cce ×2
+  [PASS] L1 10_assignment_prior.py 與入庫 log 一致   log md5 c76d8cce
 
-RESULT 17/17 PASS
+RESULT 21/21 PASS

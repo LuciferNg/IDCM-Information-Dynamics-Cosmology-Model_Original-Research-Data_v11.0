@@ -29,7 +29,7 @@ print("=" * 92)
 print("M19 l1 — 可重現性（兩跑 byte-identical）")
 print("=" * 92)
 
-files = sorted(p for p in SCRIPTS.glob("0*.py") if ".pre_patch_" not in p.name)
+files = sorted(p for p in SCRIPTS.glob("[0-9][0-9]_*.py") if ".pre_patch_" not in p.name)
 # 排除自審腳本（其自身 log 會因 A8 之 docs 狀態而變；仍可兩跑比較）
 for p in files:
     nn, rest = p.name[:2], p.name[3:-3]
