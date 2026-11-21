@@ -122,3 +122,19 @@ M19（11-19）：
 - 上游：M19 `docs/05`／`docs/06`／`docs/09`；M20 `docs/03`／`docs/04`／`docs/07`；M23 `docs/03`／`docs/08`
 - 本 M：`docs/49`（R33 台帳，本輪 §七 為其增量）、`scripts/56`（P1–P6）、`data/56_r34_handoff_processing.json`
 - 交付：register note ×3（M19／M20／M23）＋ note → v10 `O140`（跨版本：只記錄）
+
+---
+
+## 九 跨 M 索引 handoff（交付補記，2026-11-21）
+
+本輪 `scripts/48` 之 owner-aware 檢查（`P3`／`P3b`）偵測到**他 M 索引**三項，依 fence **不代改**，只發還：
+
+| 目標 | 偵測 | 已辦 |
+|:--:|:--|:--|
+| **M23** | v11 根 README 之 M 表**未列 M23**（現只 M1–M16） | `handoff M12 → M23`（附本輪對其兩條 handoff 之收件處置摘要） |
+| **M18** | register `state = partial`，根 README 之 M18 列未含「部分閉合」／或列缺失 | `handoff M12 → M18` |
+| **M17** | 早前已發（`2026-11-07`）；其 state 其後改為 `open`，仍屬其 owner 範圍 | 已於 R33 交付 |
+
+★ 本 M 自身索引（`M1–M16` 之 `P3`／`P3b`／`P6`）維持 **全 PASS**。
+★ `register check` 之 `HARD DRIFT = 18` **全屬 v10 記錄之 ref 失效**（`M4`／`O124`／`O140`／`O142`／`O148` 等指向 `open_problems_fresh/...` 之相對路徑），**與 M12 無關**（本 M ref 缺失 = 0）；跨版本不可代修，僅記錄。
+

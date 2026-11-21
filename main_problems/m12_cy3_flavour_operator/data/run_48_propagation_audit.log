@@ -10,7 +10,7 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [P2] 收件收據：target_pid=M12 之 handed_off 逐條
     incoming handed_off 條數 = 18
 [PASS] P2 M11 @2026-10-28T16:47:31  收據事件 4 條
-[PASS] P2 M1 @2026-10-29T01:49:53  收據事件 4 條
+[PASS] P2 M1 @2026-10-29T01:49:53  收據事件 5 條
 [PASS] P2 M13 @2026-10-30T14:03:37  收據事件 4 條
 [PASS] P2 M13 @2026-10-30T21:12:20  收據事件 4 條
 [PASS] P2 M14 @2026-10-30T23:05:42  收據事件 1 條
@@ -23,8 +23,8 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P2 M3 @2026-11-03T16:28:10  收據事件 1 條
 [PASS] P2 M19 @2026-11-19T20:52:16  收據事件 1 條
 [PASS] P2 M20 @2026-11-20T02:56:23  收據事件 1 條
-[PASS] P2 M23 @2026-11-20T03:21:53  收據事件 1 條
-[PASS] P2 M23 @2026-11-21T01:53:40  收據事件 1 條
+[PASS] P2 M23 @2026-11-20T03:21:53  收據事件 2 條
+[PASS] P2 M23 @2026-11-21T01:53:40  收據事件 2 條
 [PASS] P2 M20 @2026-11-21T08:41:06  收據事件 1 條
 [PASS] P2 M19 @2026-11-21T14:34:29  收據事件 1 條
 
