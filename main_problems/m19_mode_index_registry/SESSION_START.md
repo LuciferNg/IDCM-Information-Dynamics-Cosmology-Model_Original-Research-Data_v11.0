@@ -103,7 +103,7 @@ Frame    F1 / F2 = 同一次序嵌入之兩向（只差 1 bit）；F3（CSSG-v3�
 水位 113/113（核心 67 ＋ audit 15 ＋ L1 21 ＋ L2 7 ＋ L3 3）；driver rc=0
 反向覆蓋：pool 1637、doc token 51、UNTRACEABLE 0、ALLOW 1（負控制值，非物理量）
 開放清單：docs/08（OA 0／OB 6／OC 11）—— 權威單一來源
-入向 handoff：0（無回執義務）；出向：5（讀回 5/5）
+入向 handoff：0（無回執義務）；出向：6（M12×2／M14／M4／M1／M20，讀回 6/6）
 OA 閉合：docs/09（命名算子不存在／權重比非信息）
 ```
 
