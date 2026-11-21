@@ -1,0 +1,76 @@
+{
+  "script": "19_p9_t2c_irrelevance.py",
+  "role": "R21-A P9 結構封閉",
+  "channels": [
+    {
+      "name": "β⁻",
+      "content": "n → p + e + ν̄",
+      "dB": 0
+    },
+    {
+      "name": "β⁺/EC",
+      "content": "p → n + e⁺ + ν",
+      "dB": 0
+    },
+    {
+      "name": "α",
+      "content": "A → (A−4) + ⁴He",
+      "dB": 0
+    },
+    {
+      "name": "p",
+      "content": "A → (A−1) + p",
+      "dB": 0
+    },
+    {
+      "name": "n",
+      "content": "A → (A−1) + n",
+      "dB": 0
+    },
+    {
+      "name": "cluster",
+      "content": "A → (A−A_c) + A_c",
+      "dB": 0
+    },
+    {
+      "name": "SF_opt",
+      "content": "A → A₁ + A₂（A₁+A₂=A）",
+      "dB": 0
+    },
+    {
+      "name": "2β⁻",
+      "content": "A → A + 2e⁻ + 2ν̄",
+      "dB": 0
+    },
+    {
+      "name": "2β⁺/ECEC",
+      "content": "A → A + 2e⁺ + 2ν",
+      "dB": 0
+    },
+    {
+      "name": "ternary-α",
+      "content": "A → (A−12) + 3α",
+      "dB": 0
+    },
+    {
+      "name": "SF_sym",
+      "content": "A → 2(A/2)",
+      "dB": 0
+    }
+  ],
+  "all_dB_zero": true,
+  "T2c_footprint": {
+    "P1": "不變（兩支）",
+    "P2": "降級（需 B−L）"
+  },
+  "invariants": {
+    "P_size": 90,
+    "SP_size": 182,
+    "max_rel": 0.0005211539448161078,
+    "Nat_not_P": 198
+  },
+  "verdict": "P9 = closed（T2c 對本 M 判準零影響；只影響 P1/P2 兩條預註冊，且 P1 兩支皆不變）",
+  "checks_passed": 17,
+  "checks_total": 17,
+  "failures": []
+}

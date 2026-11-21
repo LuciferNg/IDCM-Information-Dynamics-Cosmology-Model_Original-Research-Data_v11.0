@@ -49,7 +49,8 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "08_nuclide_chart", "09_sphaleron", "10_channel_completion",
           "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
           "14_barrier_gate", "15_mechanism_classification",
-          "16_definition_d6", "17_em_sign", "18_w1_convention"):
+          "16_definition_d6", "17_em_sign", "18_w1_convention",
+          "19_p9_t2c", "20_w1_suppression"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -62,7 +63,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
           "16_definition_d6", "17_surviving_results", "18_incoming_triage",
-          "19_em_sign_downstream", "20_status_audit"):
+          "19_em_sign_downstream", "20_status_audit", "21_r21_own_residuals"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -455,6 +456,24 @@ cl("20_status_audit", f"{j18c['gamma_over_v1_pct']:.2f}%", "γ 超 v1")
 cl("20_status_audit", f"{j18c['gamma_over_v2_pct']:.2f}%", "γ 超 v2")
 cl("20_status_audit", f"{j18c['checks_passed']}/{j18c['checks_total']}", "check 數")
 
+
+# ---------------- docs/21 ← 19_p9_t2c ＋ 20_w1_suppression
+j19p = J["19_p9_t2c"]
+j20s = J["20_w1_suppression"]
+cl("21_r21_own_residuals", f"{j19p['invariants']['P_size']}", "P 條數")
+cl("21_r21_own_residuals", f"{j19p['invariants']['SP_size']}", "S\\P 條數")
+cl("21_r21_own_residuals", e_(j19p["invariants"]["max_rel"], 3), "失效半徑")
+cl("21_r21_own_residuals", f"{j19p['invariants']['Nat_not_P']}", "Nat\\P 條數")
+cl("21_r21_own_residuals", f"{j19p['T2c_footprint']['P1'] and 199.08564002254982:.4f}", "S_inst")
+cl("21_r21_own_residuals", f"{j20s['family_size']}", "式族規模")
+cl("21_r21_own_residuals", f"{j20s['target']:.6f}", "目標比值")
+cl("21_r21_own_residuals", f"{j20s['hits_pct1']}", "±1% 命中數")
+cl("21_r21_own_residuals", f"{j20s['hits_pct01']}", "±0.1% 命中數")
+cl("21_r21_own_residuals", f"{j20s['null']['pct1']['median']}", "±1% 零假設中位")
+cl("21_r21_own_residuals", f"{j20s['null']['pct01']['median']}", "±0.1% 零假設中位")
+cl("21_r21_own_residuals", f"{j19p['checks_passed']}/{j19p['checks_total']}", "scripts/19 check")
+cl("21_r21_own_residuals", f"{j20s['checks_passed']}/{j20s['checks_total']}", "scripts/20 check")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -489,7 +508,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 20,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 21,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)
