@@ -3,7 +3,7 @@
   {
    "tag": "§1-a 掃描完成",
    "status": "PASS",
-   "detail": "163 處"
+   "detail": "166 處"
   },
   {
    "tag": "§3 安裝點唯一（字面列表 ＋ if/elif 硬編碼；全 corpus 僅此一類）",
@@ -12,12 +12,12 @@
   }
  ],
  "counts": {
-  "L": 117,
+  "L": 118,
   "W": 11,
-  "P": 23,
-  "E": 12
+  "P": 24,
+  "E": 13
  },
- "total": 163,
+ "total": 166,
  "install_points": [
   "IDCM-v9.0--W-Field-Lattice/04_extended_verify.py:259",
   "IDCM-v9.0--W-Field-Lattice/12_dirac_lattice_verify.py:213",
@@ -79,6 +79,11 @@
    "path": "IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/scripts/10_vew_normalization_closure.py",
    "line": 33,
    "rhs": "mpf(3)"
+  },
+  {
+   "path": "IDCM-v11.0--Reality-Architecture/main_problems/m21_algebra_generator/scripts/00_reproduction_gate.py",
+   "line": 183,
+   "rhs": "B - 1"
   },
   {
    "path": "IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock/scripts/05_round5_chain_length_origin.py",

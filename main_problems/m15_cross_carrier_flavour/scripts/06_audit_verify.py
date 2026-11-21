@@ -242,7 +242,8 @@ chk("⑮ driver ↔ LOGS 宣告一致（漏跑／多跑／log 名不符）",
 # ⑭ 反向覆蓋：docs 內 4+ 有效位小數 → 須可追溯至 data（容差 0.5%；跨記錄引文明示豁免）
 import bisect as _bisect
 SUP = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻", "0123456789-")
-ALLOW = {"02_reduction_theorem_status.md": {0.1657}}   # O137 (v10) 屏障曲線，跨記錄引用
+ALLOW = {"02_reduction_theorem_status.md": {0.1657},   # O137 (v10) 屏障曲線，跨記錄引用
+         "24_abelian_branch_group.md": {1.0142, 0.0176}}  # M16 之 k=|G:G'| 測量（跨記錄引用，本 O 不重算）
 _pool = []
 for _f in list(DATA.glob("*.json")) + list(DATA.glob("run_*.log")):
     _t = _f.read_text(errors="ignore")
@@ -281,10 +282,12 @@ chk("⑭ 反向覆蓋（docs 4+ 位小數 → data 可追溯；跨記錄引文�
 RETRACTED = {
     "跨空間相加": ("§J", "§22", "後續修正", "已撤回", "推翻", "修正"),
     "3 = rank(P_κ)": ("撤回", "作廢"),
-    "60·Ω_b": ("撤回", "識別"),
+    "60·Ω_b": ("撤回", "識別", "作廢"),
     "兩條獨立源": ("撤回",),
     "32/120 = 4/15": ("撤回",),
     "−0.079σ": ("撤回", "已廢", "作廢"),
+    "屬「輸入」層": ("更正", "作廢"),
+    "M16（只開不推）": ("已閉", "closed", "追加"),
 }
 _circulating = []
 for _p in sorted(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "final_result.md",

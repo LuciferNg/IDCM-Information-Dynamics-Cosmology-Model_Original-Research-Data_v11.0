@@ -4,9 +4,9 @@ M15 scripts/10 — 全 corpus `N_gen` provenance 掃描
 
 §1  掃描結果（v9／v10／v11 全部 .py）
 ------------------------------------------------------------------------------
-  總賦值 163 處：L 類 117｜W 類 11｜P 類 23｜E 類 12
+  總賦值 166 處：L 類 118｜W 類 11｜P 類 24｜E 類 13
     L = 字面純數｜W = 數值包裝（mp.mpf(3) 等）｜P = 散文／docstring（不可解析）｜E = 可解析之真表達式
-[PASS] §1-a 掃描完成  |  163 處
+[PASS] §1-a 掃描完成  |  166 處
 
   E 類（唯一可能係「由結構算出」者）逐條：
     IDCM-v10.0--It-From-Beat/open_problems_fresh/o201_spectral_language/scripts/27_r1_generation_identity.py:102  ngen = b - 1
@@ -20,6 +20,7 @@ M15 scripts/10 — 全 corpus `N_gen` provenance 掃描
     IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/scripts/07_beta_consistency.py:39  N_gen = B - 1
     IDCM-v10.0--It-From-Beat/open_problems_fresh/o55_cf_sm_center_z3/scripts/07_hard_test_h3.py:71  n_gen = h11_test // 12
     IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/scripts/10_vew_normalization_closure.py:33  N_gen = mpf(3)
+    IDCM-v11.0--Reality-Architecture/main_problems/m21_algebra_generator/scripts/00_reproduction_gate.py:183  N_gen = B - 1
     IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock/scripts/05_round5_chain_length_origin.py:98  N_gen = F(e + o - 3, F5 + 1)
 
 §2  E 類之自變量分析（P2：含 N_gen／B／K_tree 即循環）
@@ -35,6 +36,7 @@ M15 scripts/10 — 全 corpus `N_gen` provenance 掃描
     B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
     h11_test // 12                                 ⟹ 跨載體輸入：= 36/12；12 ∉ CY₃ primitive（M15 docs/06 判 CROSS-IMPORT）
     mpf(3)                                         ⟹ 字面（數值包裝）：`mpf(3)` = mp.mpf(3)
+    B - 1                                          ⟹ 循環：B = |ℤ₂|² = 4 為恆等；B − 1 = 3 係算術（docs/08 Lucas 恆等式）
     F(e + o - 3, F5 + 1)                           ⟹ 含字面 3：(e+o−3)/(F₅+1) = (6+15−3)/6 = 3；分子含字面 −3
 
   ⟹ 無一條 E 係「由非 N_gen 輸入算出 N_gen」：全部屬 (i) B − 1 之算術、
@@ -61,7 +63,7 @@ M15 scripts/10 — 全 corpus `N_gen` provenance 掃描
 
 §4  判詞
 ------------------------------------------------------------------------------
-  (1) P1 成立：全 corpus 163 處 `N_gen` 賦值中，128 處為字面／數值包裝、23 處為散文，12 處為可解析表達式，
+  (1) P1 成立：全 corpus 166 處 `N_gen` 賦值中，129 處為字面／數值包裝、24 處為散文，13 處為可解析表達式，
       而該 E 類全部化約為 B − 1 之算術或 K_tree/L₅ 之定義重寫 ⟹ **無 producer**。
   (2) P3 成立：世代索引之唯一實際使用處 = 三個模式之字面列表 [1,4,5]（3 處）
       ＋ `chiral_index` 之 if/elif 硬編碼 ⟹ **3 之安裝點唯一且係字面**。
