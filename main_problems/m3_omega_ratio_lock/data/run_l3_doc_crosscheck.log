@@ -25,7 +25,9 @@
   [PASS] final_result.md                              E_sync = 61.5          L2=123/2  最近=61.5  dev=0.00e+00
   [PASS] final_result.md                              統計上限 3.25σ             L2=3.246360528119658  最近=3.25  dev=1.12e-03
   [PASS] 18_round18_audit_verify.md                   整數三分 1711              L2=1711  最近=1711.0  dev=0.00e+00
+  [PASS] 19_round19_m16_handoff.md                    k = 1.0142（定義式）        L2=1.014198782961460446247464503042596348884  最近=1.0142  dev=1.20e-06
+  [PASS] 19_round19_m16_handoff.md                    σ_k 傳播 = 0.0060        L2=0.006  最近=0.006  dev=0.00e+00
 
-  docs 在碟 = 18 ；有 claim = 19 ；缺 claim = []
+  docs 在碟 = 19 ；有 claim = 20 ；缺 claim = []
 
-L3 27/27 ；all_pass=True
+L3 29/29 ；all_pass=True

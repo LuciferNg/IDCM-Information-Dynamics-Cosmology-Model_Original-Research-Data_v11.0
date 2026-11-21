@@ -1,9 +1,9 @@
 §A1 canonical log 對稱
-  [PASS] 每支 L1 有 canonical log  17 支 / 缺 []
+  [PASS] 每支 L1 有 canonical log  18 支 / 缺 []
   [PASS] A10 產物時序（log mtime ≥ script mtime）  違例 []
 
 §A2 L1 兩跑 determinism ＋ == canonical
-  [PASS] L1 17/17 兩跑 identical 且 == canonical  []
+  [PASS] L1 18/18 兩跑 identical 且 == canonical  []
   [PASS] A5 無 nan/inf 數值  []
 
 §A3 路徑衛生
@@ -14,7 +14,7 @@
 
 §A6 L3 覆蓋
   [PASS] 每份 doc 有 ≥1 claim  缺 []、額外 ['final_result.md']
-  [PASS] L3 claims 27/27 PASS  
+  [PASS] L3 claims 29/29 PASS  
 
 §A7 撤回前向指針
   [PASS] 被推翻 doc 含撤回指針  缺 []

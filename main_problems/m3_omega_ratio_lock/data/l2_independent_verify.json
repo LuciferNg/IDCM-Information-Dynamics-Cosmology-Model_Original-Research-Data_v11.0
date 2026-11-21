@@ -69,6 +69,11 @@
   "prod_345": 60,
   "dims_total": 1452,
   "dict_size": 24,
+  "m16_arith_sets": 7,
+  "m16_arith_unique_set": "(3, 4, 5)",
+  "m16_k": "1.014198782961460446247464503042596348884",
+  "m16_sig_k_prop": "0.006",
+  "m16_z_prop": "2.366463826910074374577417173766058147397",
   "dict_admissible": 1
  },
  "identities": {

@@ -53,6 +53,8 @@
 | `scripts/16_round16_a3_scale_invariance.py` | 9/9 PASS | — |
 | `docs/17_round17_pythagoras_audit.md` | 第十七輪 畢氏和積審計：非一般律、方向倒轉、零指派力 ⟹ 入禁區 | 否證 |
 | `scripts/17_round17_pythagoras_audit.py` | 8/8 PASS | — |
+| `docs/19_round19_m16_handoff.md` | 第十九輪 M16 handoff 處理：算術引理接受、階-60 唯一性未證、MF2「由 Ω_b 測定」判不成立 | 裁定 |
+| `scripts/19_round19_m16_handoff.py` | 9/9 PASS | — |
 | `docs/18_round18_audit_verify.md` | 第十八輪 **Audit-Verify**（首建 L2/L3/audit/driver）：L1 17/17、L2 45 keys、L3 27/27、audit 14/14 | 審計 |
 | `scripts/18_audit_verify.py` | audit 14/14（含 2 負控制）| — |
 | `scripts/l2_independent_verify.py` | 45 keys ＋ 10 identities | — |

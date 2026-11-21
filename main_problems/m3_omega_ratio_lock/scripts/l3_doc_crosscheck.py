@@ -76,6 +76,8 @@ CLAIMS = [
     ("final_result.md",              "E_sync = 61.5",      "E_sync",    None, 5e-3, "num"),
     ("final_result.md",              "統計上限 3.25σ",      "z_p1",      "3.25", 5e-3, "num"),
     ("18_round18_audit_verify.md",   "整數三分 1711",       "n_triples", None, 1e-9, "num"),
+    ("19_round19_m16_handoff.md",    "k = 1.0142（定義式）",  "m16_k",     "1.0142", 5e-4, "num"),
+    ("19_round19_m16_handoff.md",    "σ_k 傳播 = 0.0060",    "m16_sig_k_prop", "0.0060", 5e-3, "num"),
 ]
 
 report = {"claims": [], "per_doc": {}, "pass": True}

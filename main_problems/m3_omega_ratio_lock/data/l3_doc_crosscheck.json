@@ -242,6 +242,24 @@
    "nearest": 1711.0,
    "dev": 0.0,
    "pass": true
+  },
+  {
+   "doc": "19_round19_m16_handoff.md",
+   "label": "k = 1.0142（定義式）",
+   "key": "m16_k",
+   "expected": "1.014198782961460446247464503042596348884",
+   "nearest": 1.0142,
+   "dev": 1.1999999999496858e-06,
+   "pass": true
+  },
+  {
+   "doc": "19_round19_m16_handoff.md",
+   "label": "σ_k 傳播 = 0.0060",
+   "key": "m16_sig_k_prop",
+   "expected": "0.006",
+   "nearest": 0.006,
+   "dev": 0.0,
+   "pass": true
   }
  ],
  "per_doc": {
@@ -320,10 +338,14 @@
   "18_round18_audit_verify.md": [
    1,
    1
+  ],
+  "19_round19_m16_handoff.md": [
+   2,
+   2
   ]
  },
  "pass": true,
- "docs_on_disk": 18,
- "docs_with_claim": 19,
+ "docs_on_disk": 19,
+ "docs_with_claim": 20,
  "docs_missing_claim": []
 }

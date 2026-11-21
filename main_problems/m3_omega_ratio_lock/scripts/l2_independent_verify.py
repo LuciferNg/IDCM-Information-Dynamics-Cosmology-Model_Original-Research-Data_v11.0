@@ -121,6 +121,16 @@ put("dims_total", INPUTS["N_d"]*INPUTS["K_tree"])
 # ── 字典命中（M3 結構字典）───────────────────────────────────
 D = {1,2,3,4,5,6,8,11,15,16,19,22,29,30,33,41,44,45,46,60,88,90,123,176}
 put("dict_size", len(D))
+# ── M16 handoff 相關（獨立重算）────────────────────────────────
+from itertools import combinations as _comb
+from math import prod as _prod
+_sets = [c for r in range(1, 7) for c in _comb(range(2, 12), r) if sum(c) == 12]
+_m60 = [c for c in _sets if _prod(c) == 60]
+put("m16_arith_sets", len(_sets)); put("m16_arith_unique_set", str(_m60[0]) if _m60 else None)
+put("m16_k", (mp.mpf(vis)/tot)/mp.mpf(str(INPUTS["omega_b"])))
+put("m16_sig_k_prop", mp.mpf(str(INPUTS["sig_b"]))/(mp.mpf(1)/20))
+put("m16_z_prop", ((mp.mpf(vis)/tot)/mp.mpf(str(INPUTS["omega_b"])) - 1) /
+                  (mp.mpf(str(INPUTS["sig_b"]))/(mp.mpf(1)/20)))
 put("dict_admissible", sum(1 for t in triples if chi2(t) <= chi2_obs and set(t) <= D))
 
 # ── IDENTITIES（代數恆等，差 < 1e-30）────────────────────────
