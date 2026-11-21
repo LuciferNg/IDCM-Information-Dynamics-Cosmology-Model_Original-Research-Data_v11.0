@@ -69,6 +69,7 @@ MC null（10⁴）：p = 0.4334 ⟹ 無信號
 | `scripts/06b` | **單位強度類 `𝒰*` 完整窮盡**（20,700 成員；禁帶；C0 回歸含 F1） |
 | `docs/05_r6_unit_strength_complete.md` | R6 結果＋自捕＋MC04 第二次收窄 |
 | `docs/06_r7_fractional_weights.md` | R7：具名分數權重 18 候選全滅＋載體側極限 |
+| `docs/07_handoff_upstream.md` | **→ M12（T0）／M13（α）**：載體側終局 ＋ 兩條精確要求 |
 | `scripts/07` | 結構性分數權重（RD7）判定（C0 回歸 3/3） |
 | `data/run_0*.log` | 五支腳本之 stdout（`stdout == log`） |
 
