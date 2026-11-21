@@ -20,7 +20,7 @@ DATA = ROOT / "data"
 PY = ["01_arithmetic_reduction.py", "03_variants_and_lookelsewhere.py",
       "05_candidate_principles.py", "06_minimum_cost_principle.py",
       "07_variational_axiom_attack.py", "08_mf1prime_mf2_attack.py",
-      "09_mf1prime_dissolution.py"]
+      "09_mf1prime_dissolution.py", "12_m18_faithfulness_adjudication.py"]
 G = ["00_gap_named_degrees.g", "02c_order_counts.g", "04_gap_alternative_principles.g"]
 
 LOG, RES, NFAIL, NPASS = [], {}, 0, 0

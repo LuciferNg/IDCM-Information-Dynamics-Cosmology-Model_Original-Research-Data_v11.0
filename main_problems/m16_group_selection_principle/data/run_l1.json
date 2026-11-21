@@ -1,7 +1,7 @@
 {
-  "pass": 11,
+  "pass": 12,
   "fail": 0,
-  "total": 11,
+  "total": 12,
   "detail": {
     "L1 py 01_arithmetic_reduction.py": {
       "pass": true,
@@ -30,6 +30,10 @@
     "L1 py 09_mf1prime_dissolution.py": {
       "pass": true,
       "detail": "rc=0/0 bytes=1296 identical=True"
+    },
+    "L1 py 12_m18_faithfulness_adjudication.py": {
+      "pass": true,
+      "detail": "rc=0/0 bytes=2187 identical=True"
     },
     "L1 gap 00_gap_named_degrees.g": {
       "pass": true,

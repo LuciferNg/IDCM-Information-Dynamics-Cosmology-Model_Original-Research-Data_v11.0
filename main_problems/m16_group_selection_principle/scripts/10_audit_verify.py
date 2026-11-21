@@ -56,9 +56,9 @@ def sh(cmd):
 CORE_PY = ["01_arithmetic_reduction.py", "03_variants_and_lookelsewhere.py",
            "05_candidate_principles.py", "06_minimum_cost_principle.py",
            "07_variational_axiom_attack.py", "08_mf1prime_mf2_attack.py",
-           "09_mf1prime_dissolution.py"]
+           "09_mf1prime_dissolution.py", "12_m18_faithfulness_adjudication.py"]
 CORE_G = ["00_gap_named_degrees.g", "02_gap_full_scan.g", "02c_order_counts.g",
-          "04_gap_alternative_principles.g"]
+          "04_gap_alternative_principles.g", "12_gap_m18_facts.g"]
 INFRA = ["02b_chunk_driver.py", "run_02_parallel.sh", "gap_run.sh", "gap_setup.sh",
          "run_chain.sh", "l2_independent_verify.py", "l3_doc_crosscheck.py",
          "10_audit_verify.py", "11_l1_reproducibility.py"]
@@ -153,6 +153,7 @@ def main():
                 "run_07.log": "07_variational_axiom_attack.py",
                 "run_08.log": "08_mf1prime_mf2_attack.py",
                 "run_09.log": "09_mf1prime_dissolution.py",
+                "run_12.log": "12_m18_faithfulness_adjudication.py",
                 "l2_independent_verify.json": "l2_independent_verify.py",
                 "l3_doc_crosscheck.json": "l3_doc_crosscheck.py"}
     orphan = [k for k in PRODUCER if not (DATA / k).exists()]
@@ -218,6 +219,12 @@ def main():
         if l1.exists() and "11_l1_reproducibility.py" in txt:
             cover |= set(re.findall(r"\"((?:\d{2}[a-z]?|l[23])_[a-z0-9_]+\.(?:py|g))\"",
                                     l1.read_text(encoding="utf-8")))
+        # 子進程引用：核心 .py 內呼叫之 .g（例如 scripts/12 呼叫 scripts/12_gap_*.g）
+        for core in CORE_PY:
+            cp = HERE / core
+            if cp.exists():
+                cover |= set(re.findall(r"(\d{2}[a-z]?_[a-z0-9_]+\.g)",
+                                        cp.read_text(encoding="utf-8")))
         # 全量掃描 02 之入口：run_02_parallel.sh（由 02b 生成分片）
         for helper in ["run_02_parallel.sh", "02b_chunk_driver.py"]:
             hp = HERE / helper

@@ -1,0 +1,95 @@
+{
+  "GAP 執行 rc=0": {
+    "pass": true,
+    "detail": "rc=0"
+  },
+  "A: A₅ 單": {
+    "pass": true,
+    "detail": ""
+  },
+  "A: k ≤ 4 只平凡（|Hom|=1）": {
+    "pass": true,
+    "detail": "[1, 1, 1, 1]"
+  },
+  "A: k = 5 非平凡（|Hom|>1）": {
+    "pass": true,
+    "detail": "|Hom(A₅,S₅)|=121"
+  },
+  "A: 線性最小忠實度 = 3（≠ 置換下界 5）": {
+    "pass": true,
+    "detail": "3"
+  },
+  "A: 4 維 irrep 亦忠實": {
+    "pass": true,
+    "detail": ""
+  },
+  "B: J=2 限制字符 = [5,1,−1,0,0]": {
+    "pass": true,
+    "detail": "[5, 1, -1, 0, 0]"
+  },
+  "B: 與 5 維 irrep 字符一致": {
+    "pass": true,
+    "detail": "GAP=[5, 1, -1, 0, 0]"
+  },
+  "B: 5 維 irrep 忠實 ⟹ J=2 載體忠實": {
+    "pass": true,
+    "detail": ""
+  },
+  "C: |A₅| = B(B²−1) 唯一解 B=4": {
+    "pass": true,
+    "detail": "[4]"
+  },
+  "C: B=5 ⟹ |G| = 120 = |S₅|（唔再係 A₅）": {
+    "pass": true,
+    "detail": ""
+  },
+  "C: B=5 ⟹ 扇區含 66（不在 O171 家族）": {
+    "pass": true,
+    "detail": ""
+  },
+  "C: B=5 ⟹ Σ = 15 ≠ 12（觀測扇區和 132/11）": {
+    "pass": true,
+    "detail": ""
+  },
+  "D: 判詞四條齊備": {
+    "pass": true,
+    "detail": ""
+  },
+  "_summary": {
+    "pass": 14,
+    "fail": 0
+  },
+  "_gap": {
+    "hom": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 121,
+      "6": 1441
+    },
+    "irr": [
+      [
+        1,
+        false
+      ],
+      [
+        3,
+        true
+      ],
+      [
+        3,
+        true
+      ],
+      [
+        4,
+        true
+      ],
+      [
+        5,
+        true
+      ]
+    ],
+    "min_faithful_linear": 3
+  }
+}

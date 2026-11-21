@@ -26,19 +26,19 @@
 [PASS] ⑤⑦ docs 高精度數值全部可追溯  |  {}
 ⑥ driver 覆蓋
 [PASS] ⑥a run_chain.sh 存在
-[PASS] ⑥b driver 覆蓋全部核心＋L2/L3/audit  |  缺 []
+[FAIL] ⑥b driver 覆蓋全部核心＋L2/L3/audit  |  缺 ['12_gap_m18_facts.g']
 A8a 舊值掃描
 [PASS] A8a-1 「16.7%」每出現點帶標註  |  []
 A10 時序閘（log mtime ≥ producer mtime）
 [PASS] A10 全部產物新於 producer  |  []
 A12 commit 完整性
-[FAIL] A12a 工作樹乾淨（排除審計輸出）  |  dirty=1
-[FAIL] A12b 全部文檔／腳本已入 git  |  ['UNTRACKED docs/10_audit_round.md']
+[FAIL] A12a 工作樹乾淨（排除審計輸出）  |  dirty=10
+[FAIL] A12b 全部文檔／腳本已入 git  |  ['UNTRACKED docs/11_m18_faithfulness_adjudication.md', 'UNTRACKED scripts/12_gap_m18_facts.g', 'UNTRACKED scripts/12_m18_faithfulness_adjudication.py']
 G1 GAP 部署
 [PASS] G1a data/gap/ 被 git 忽略  |  main_problems/m16_group_selection_principle/.gitignore:4:data/gap/	data/gap/root
 [PASS] G1b GAP 可執行存在
 L1／L2／L3 閘
-[PASS] L1 雙跑 byte-identical 全過  |  11/11 fail=0
+[PASS] L1 雙跑 byte-identical 全過  |  12/12 fail=0
 [PASS] L2 FAIL=0  |  {'checks': 18, 'fail': 0, 'n_derived': 69}
 [PASS] L3 FAIL=0  |  0
 匯總
