@@ -45,6 +45,7 @@ J17 = load("17_sigma_budget.json")
 J08 = load("08_handoff_matrix.json")
 J18 = load("18_m5_operator_slot.json")
 J19 = load("19_flavour_blind_theorem.json")
+J20 = load("20_m15_gate_check.json")
 JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
@@ -440,6 +441,15 @@ claim("§28 ntotal", "28_flavour_blind_theorem.md", J19["ntotal"], "| ntotal |",
 claim("§28 n_pair", "28_flavour_blind_theorem.md", M19["n_pair"], "| 對數 |", cell=2, kth=0, integer=True)
 claim("§28 mc", "28_flavour_blind_theorem.md", J19["theorem"]["mc"], "| MC |", cell=2, kth=0, integer=True)
 claim("§28 A_eff", "28_flavour_blind_theorem.md", M19["A_eff"], "| `A_eff`（外部，M5） |", cell=2, kth=0)
+
+# ══════════ docs/29（M15 閘範圍） ══════════
+M20 = J20["budget"]
+claim("§29 npass", "29_m15_gate_scope.md", J20["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§29 ntotal", "29_m15_gate_scope.md", J20["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§29 gmax", "29_m15_gate_scope.md", M20["gamma_max"], "| `γ_max` |", cell=2, kth=0, integer=True)
+claim("§29 sgodd", "29_m15_gate_scope.md", M20["sum_gamma_odd"], "| `Σγ_odd` |", cell=2, kth=0, integer=True)
+claim("§29 41", "29_m15_gate_scope.md", M20["fortyone"], "| 41 |", cell=2, kth=0, integer=True)
+claim("§29 60", "29_m15_gate_scope.md", M20["denom"], "| 60 |", cell=2, kth=0, integer=True)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

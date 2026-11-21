@@ -12,7 +12,7 @@
   {
    "item": "§3 incoming 已回應",
    "pass_": true,
-   "got": "11 條 incoming",
+   "got": "12 條 incoming",
    "want": "全部有後續事件",
    "note": ""
   },
@@ -50,8 +50,25 @@
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/21_incoming_triage.md"
    ],
-   "target_activity_after": 22,
+   "target_activity_after": 31,
    "status": "✅ 已閉環"
+  },
+  {
+   "target": "M15",
+   "n_out": 1,
+   "n_reply": 0,
+   "reply_ts": [],
+   "prior_incoming": [
+    "2026-11-02T02:52:10+08:00"
+   ],
+   "ts": [
+    "2026-11-22T00:11:09+08:00"
+   ],
+   "refs": [
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/29_m15_gate_scope.md"
+   ],
+   "target_activity_after": 0,
+   "status": "⏳ 未閉環（無回覆）"
   },
   {
    "target": "M2",
@@ -107,12 +124,12 @@
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/23_m4_intake_recheck.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/22_external_recompute.md"
    ],
-   "target_activity_after": 30,
+   "target_activity_after": 41,
    "status": "✅ 已閉環"
   },
   {
    "target": "M5",
-   "n_out": 3,
+   "n_out": 4,
    "n_reply": 1,
    "reply_ts": [
     "2026-10-28T14:46:22+08:00"
@@ -121,14 +138,16 @@
    "ts": [
     "2026-10-26T12:59:17+08:00",
     "2026-10-28T09:35:21+08:00",
-    "2026-10-28T16:18:20+08:00"
+    "2026-10-28T16:18:20+08:00",
+    "2026-10-28T17:11:02+08:00"
    ],
    "refs": [
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/10_reproduction_gate.md",
     "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/24_session_handoff.md",
-    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/27_m5_operator_slot.md"
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/27_m5_operator_slot.md",
+    "../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/28_flavour_blind_theorem.md"
    ],
-   "target_activity_after": 1,
+   "target_activity_after": 8,
    "status": "✅ 已閉環"
   },
   {
@@ -151,17 +170,18 @@
     null,
     "/home/wsl/Projects/IDCM-Original/problem_register/../IDCM-v10.0--It-From-Beat/../IDCM-v11.0--Reality-Architecture/main_problems/m7_hadron_model_basis/docs/26_reverse_push_ban.md"
    ],
-   "target_activity_after": 0,
+   "target_activity_after": 2,
    "status": "⏳ 未閉環（無回覆）"
   }
  ],
  "notes_out": [],
  "npass": 4,
  "ntotal": 4,
- "n_out": 20,
- "n_in": 11,
+ "n_out": 22,
+ "n_in": 12,
  "targets": [
   "M10",
+  "M15",
   "M2",
   "M4",
   "M5",

@@ -1,0 +1,135 @@
+{
+ "module": "M7",
+ "script": "20_m15_gate_check.py",
+ "checks": [
+  {
+   "item": "γ_max = γ_44 = 4（Nyquist，精確）",
+   "pass_": true,
+   "got": "4.0",
+   "want": "4",
+   "note": ""
+  },
+  {
+   "item": "Σγ(1..44) = 90",
+   "pass_": true,
+   "got": "90.0",
+   "want": "90",
+   "note": ""
+  },
+  {
+   "item": "Σγ_odd = 44（配對 11×4）",
+   "pass_": true,
+   "got": "44.0",
+   "want": "44",
+   "note": "γ_n+γ_{44−n}=4；奇 n 成 11 對"
+  },
+  {
+   "item": "Σγ_odd + Σγ_even = 90（分割完備）",
+   "pass_": true,
+   "got": "90.0",
+   "want": "90.0",
+   "note": ""
+  },
+  {
+   "item": "3 = γ_max − 1 = B − 1",
+   "pass_": true,
+   "got": "3",
+   "want": "3",
+   "note": ""
+  },
+  {
+   "item": "16 = γ_max² = B²",
+   "pass_": true,
+   "got": "16",
+   "want": "16",
+   "note": ""
+  },
+  {
+   "item": "41 = Σγ_odd − γ_max + 1 = 44 − 4 + 1",
+   "pass_": true,
+   "got": "41.0",
+   "want": "41",
+   "note": ""
+  },
+  {
+   "item": "60 = N_d + B² = 44 + 16（預算分母）",
+   "pass_": true,
+   "got": "60",
+   "want": "60",
+   "note": ""
+  },
+  {
+   "item": "3+16+41 = 60（預算三分完備）",
+   "pass_": true,
+   "got": "60",
+   "want": "60",
+   "note": ""
+  },
+  {
+   "item": "Ω_b = 3/60 = 1/20（與本 M 錨一致）",
+   "pass_": true,
+   "got": "1/20",
+   "want": "1/20",
+   "note": "O168 17.6σ 排除族"
+  },
+  {
+   "item": "Ω_DM/Ω_b = 16/3（與本 M 錨一致）",
+   "pass_": true,
+   "got": "16/3",
+   "want": "16/3",
+   "note": ""
+  },
+  {
+   "item": "Ω_Λ = 41/60（與本 M 錨一致）",
+   "pass_": true,
+   "got": "41/60",
+   "want": "41/60",
+   "note": ""
+  },
+  {
+   "item": "946 = C(44,2)（兩處同源於組合數，非互相引用）",
+   "pass_": true,
+   "got": "946",
+   "want": "946",
+   "note": "本 M 模式對 / M15 特徵值對"
+  },
+  {
+   "item": "A6 之形式須為『F̂ ∈ 𝒜 ⟹ 味盲』（範圍語不可省）",
+   "pass_": true,
+   "got": "scope = 𝒜",
+   "want": "帶範圍",
+   "note": "M15 carrier 表 C1 已寫 [ρ,H]=0；P2 答句／已否證#2 缺此語"
+  },
+  {
+   "item": "𝒜 外新算子之禁止來自 A3 ＋ M2 唯一性（另一道閘）",
+   "pass_": true,
+   "got": "零參數＋唯一性",
+   "want": "非味盲定理",
+   "note": "M7 docs/27 §2.4、docs/15 §九"
+  }
+ ],
+ "budget": {
+  "gamma_max": 4,
+  "sum_gamma_odd": 44.0,
+  "three": 3,
+  "sixteen": 16,
+  "fortyone": 41,
+  "denom": 60,
+  "omega_b": "1/20",
+  "omega_dm_over_b": "16/3",
+  "omega_lambda": "41/60"
+ },
+ "nine_four_six": {
+  "comb": 946,
+  "note": "mode pairs (M7) vs eigenvalue pairs (M15); identical combinatorial count, no evidential link"
+ },
+ "a6_scope": {
+  "correct_form": "F̂ ∈ 𝒜 ⟹ flavour-blind",
+  "not_implied": "new operator outside 𝒜 may not depend on flavour",
+  "outside_ban_source": "dof=0 (A3) + M2 uniqueness (M7 docs/15 §九)",
+  "suggested_fix_for_M15": "carry the [ρ(G),H]=0 qualifier into P2 answer and 已否證#2; define F̂ explicitly"
+ },
+ "npass": 15,
+ "ntotal": 15,
+ "verdict": "M15 budget identity CONFIRMED with M7 spectrum; A6 gate over-reaches unless scoped to F̂ ∈ 𝒜; 946 is a combinatorial coincidence"
+}

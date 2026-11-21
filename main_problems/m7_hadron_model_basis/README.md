@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/29_m15_gate_scope.md` | M15 交接回核（15/15）：`3:16:41` 預算譜源以本 M 譜確認；A6 味盲閘範圍須帶 `F̂ ∈ 𝒜` | ✅ |
 | `docs/28_flavour_blind_theorem.md` | **味盲定理**（8/8）：𝒜 味-blind ⟹ Δ0／s-d／u-c ≡ 0（一體＋兩體；946 對精確 ＋ 10⁷ MC）；判死味分裂之 M7 來源 | 🔴 |
 | `docs/27_m5_operator_slot.md` | 回覆 M5 docs/52：Δ0 算子槽位需求；√5 = B-only fit；M7 缺「標籤層→譜量」橋 | ✅ |
 | `docs/26_reverse_push_ban.md` | 撤回 3 封 v11→v10 反向推送；反向推送禁令＋同版本消化；08 §4 C4 閘 | ✅ |
@@ -40,6 +41,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/20_m15_gate_check.py` | M15 回核（15/15）：γ_max/Σγ_odd/41/60/Ω 比 ＋ 946 身份 ＋ A6 範圍 | ✅ |
 | `scripts/19_flavour_blind_theorem.py` | 味盲定理（8/8）：946 對精確零 ＋ 10⁷ MC bit-identical 零 | ✅ |
 | `scripts/18_m5_operator_slot.py` | M5 docs/52 回核（6/6）：√5 地位、A_eff 標度、基底可行性 | ✅ |
 | `scripts/17_sigma_budget.py` | 誤差預算回核（7/7）：σ_X 修正，canonical z=−9.76 | ✅ |

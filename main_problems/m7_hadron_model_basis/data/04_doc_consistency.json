@@ -1,6 +1,6 @@
 {
- "npass": 214,
- "ntotal": 214,
+ "npass": 220,
+ "ntotal": 220,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -1302,6 +1302,42 @@
    "doc": "28_flavour_blind_theorem.md",
    "status": "✅",
    "detail": "doc=4.4492 art=4.4492 |Δ|=0.00e+00 ≤ 5.0e-05"
+  },
+  {
+   "name": "§29 npass",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=15 art=15（整數須全等）"
+  },
+  {
+   "name": "§29 ntotal",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=15 art=15（整數須全等）"
+  },
+  {
+   "name": "§29 gmax",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=4 art=4（整數須全等）"
+  },
+  {
+   "name": "§29 sgodd",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=44 art=44（整數須全等）"
+  },
+  {
+   "name": "§29 41",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=41 art=41（整數須全等）"
+  },
+  {
+   "name": "§29 60",
+   "doc": "29_m15_gate_scope.md",
+   "status": "✅",
+   "detail": "doc=60 art=60（整數須全等）"
   },
   {
    "name": "v1 vs v2 K1 max_dev",
