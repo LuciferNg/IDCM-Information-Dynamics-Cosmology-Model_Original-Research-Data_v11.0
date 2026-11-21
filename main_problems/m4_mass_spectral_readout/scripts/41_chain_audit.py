@@ -65,7 +65,8 @@ DECLARED_SHARED = {"31b": "docs/31_flavour_insertion_negative.md（enum 附於�
                    "44": "docs/11_lattice_flag_span.md（σ_R 終局，附註二）",
                    "45": "docs/45_pool_enumerator.md（pool 型數字之獨立枚舉器，F8）",
                    "46": "docs/46_handoff_adjudication_round4.md（第四輪入站裁定之計算支撐）",
-                   "47": "docs/47_downstream_rerun_round4.md（第四輪裁定之下游重推）"}
+                   "47": "docs/47_downstream_rerun_round4.md（第四輪裁定之下游重推）",
+                   "48": "docs/48_handoff_adjudication_round5.md（第五輪入站裁定）"}
 add("1a 每支 NN 腳本都有 doc（或已申報共用）",
     all(n in DECLARED_DOC_ONLY or n in DECLARED_SHARED or n in doc_nums for n in script_no_doc),
     "script-only = %s" % {n: DECLARED_SHARED.get(n, "未申報") for n in script_no_doc})

@@ -1,0 +1,197 @@
+{
+ "checks": [
+  {
+   "label": "H1a docs/20 之 F1 覆蓋率 20.61% 可重現（±0.3pp）",
+   "ok": true,
+   "got": "20.54%",
+   "expect": "20.61 ± 0.3"
+  },
+  {
+   "label": "H1b 慣例方向性：uniform-in-t < log-uniform",
+   "ok": true,
+   "got": "0.54% < 20.54%",
+   "expect": "uniform < log"
+  },
+  {
+   "label": "H1c 兩慣例差 ≥ 2 倍（引用不標慣例即錯用）",
+   "ok": true,
+   "got": "38.11×",
+   "expect": "≥ 2×"
+  },
+  {
+   "label": "H1d 域選擇同樣改變覆蓋率（域收窄 ⟹ 提高）",
+   "ok": true,
+   "got": "28.33% > 20.54%",
+   "expect": "收窄↑"
+  },
+  {
+   "label": "H3a §D.1 之 d: k=1→3, k=4→2, k=5→2",
+   "ok": true,
+   "got": "{1: 3, 4: 2, 5: 2}",
+   "expect": "{1:3,4:2,5:2}"
+  },
+  {
+   "label": "H3b z2_map = {1:3, 4:2, 5:0}（雙射）",
+   "ok": true,
+   "got": "{1: 3, 4: 2, 5: 0}",
+   "expect": "{1:3,4:2,5:0}"
+  },
+  {
+   "label": "H3c 兩源對 d(k=5) 不自洽（2 vs 0）",
+   "ok": true,
+   "got": "2 vs 0",
+   "expect": "≠"
+  },
+  {
+   "label": "H3d 兩源皆把 d 寫成 k 之函數（d = f(k)）",
+   "ok": true,
+   "got": "d 為 k 之 map",
+   "expect": "d≡f(k)"
+  },
+  {
+   "label": "H3e 同一 sector 內 d 無自由度（d≡f(k) ⟹ 每 k 恰一個 d）",
+   "ok": true,
+   "got": "intra-freedom 0；labels 3",
+   "expect": "0／3"
+  },
+  {
+   "label": "H3f M13 之 d=(4,3) 與 z2_map 之 d(4)=2 直接衝突",
+   "ok": true,
+   "got": "z2_map[4]=2 ≠ 3",
+   "expect": "衝突"
+  },
+  {
+   "label": "H3g §D.1 表內只列 (c,t)/(s,b)/(e,μ,τ)，u 與 d 不在表內",
+   "ok": true,
+   "got": "['s,d', 's=2, d=3', 'c, t', 's=1, d=2', 's, b', 's=0, d=2', 'e, μ, τ', '26/26 ✅', 'k=1', '1']",
+   "expect": "無 u/d"
+  },
+  {
+   "label": "H2a docs/32 引 v9 §D.1 之『Generation modes = k ∈ {1,4,5}』字面",
+   "ok": true,
+   "got": "字面引用存在",
+   "expect": "存在"
+  },
+  {
+   "label": "H2b docs/33 裁決 C 撤回 §三 之 u→k=1／d→k=4 映射",
+   "ok": true,
+   "got": "撤回記錄存在",
+   "expect": "存在"
+  },
+  {
+   "label": "H2c M15 所述『(k,d) 未註冊』與本 O 記錄一致",
+   "ok": true,
+   "got": "一致（docs/33 裁決 C）",
+   "expect": "一致"
+  },
+  {
+   "label": "H4a Σ = 55 = F₁₀",
+   "ok": true,
+   "got": "55",
+   "expect": "55"
+  },
+  {
+   "label": "H4b 奇 7 ＋ 偶 2 = 9",
+   "ok": true,
+   "got": "7+2",
+   "expect": "7+2"
+  },
+  {
+   "label": "H4c M4 docs/34 標明該集之來源為 O120(v10) 進口，非 v11 導出",
+   "ok": true,
+   "got": "O120 進口標記",
+   "expect": "有"
+  },
+  {
+   "label": "H4d v11 corpus 無任何文件以該集作『v11 已登記結構』推導（只作引用）",
+   "ok": true,
+   "got": "14 處皆引用型",
+   "expect": "全引用"
+  }
+ ],
+ "data": {
+  "H1_convention": {
+   "pool_size": 1892,
+   "domain": [
+    0.01,
+    10000.0
+   ],
+   "delta": 0.001,
+   "nmc": 200000,
+   "coverage_log_uniform_pct": 20.543,
+   "coverage_uniform_t_pct": 0.539,
+   "ratio": 38.112,
+   "coverage_log_uniform_narrow_domain_pct": 28.333,
+   "docs20_documented_pct": 20.61
+  },
+  "H3_labels": {
+   "D_table": {
+    "1": 3,
+    "4": 2,
+    "5": 2
+   },
+   "z2_map": {
+    "1": 3,
+    "4": 2,
+    "5": 0
+   },
+   "intra_sector_d_values": {
+    "1": 1,
+    "4": 1,
+    "5": 1
+   },
+   "n_distinct_labels": 3,
+   "table_flavours": [
+    "s,d",
+    "s=2, d=3",
+    "c, t",
+    "s=1, d=2",
+    "s, b",
+    "s=0, d=2",
+    "e, μ, τ",
+    "26/26 ✅",
+    "k=1",
+    "1"
+   ],
+   "verdict": "d≡f(k) ⟹ (k,d) 一維退化；兩源對 d(5) 不自洽；u/d 不在表內"
+  },
+  "H2_docs32": {
+   "literal_quote": true,
+   "decision_C_withdrawn": true
+  },
+  "H4_mode_set": {
+   "set": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13
+   ],
+   "sum": 55,
+   "n_odd": 7,
+   "n_even": 2,
+   "v11_occurrences": [
+    "main_problems/m12_cy3_flavour_operator/docs/11_r3p3_canonical_incidence.md",
+    "main_problems/m15_cross_carrier_flavour/docs/01_frozen_criteria.md",
+    "main_problems/m15_cross_carrier_flavour/docs/02_reduction_theorem_status.md",
+    "main_problems/m15_cross_carrier_flavour/docs/14_residual_push.md",
+    "main_problems/m16_group_selection_principle/01_problem_record.md",
+    "main_problems/m19_mode_index_registry/docs/03_bit_decomposition.md",
+    "main_problems/m19_mode_index_registry/docs/08_open_problems_inventory.md",
+    "main_problems/m19_mode_index_registry/final_result.md",
+    "main_problems/m4_mass_spectral_readout/01_problem_record.md",
+    "main_problems/m4_mass_spectral_readout/docs/34_u_d_sector_verdict_citation.md",
+    "main_problems/m4_mass_spectral_readout/docs/48_handoff_adjudication_round5.md",
+    "main_problems/m7_hadron_model_basis/01_problem_record.md",
+    "main_problems/m7_hadron_model_basis/docs/19_o120_import.md",
+    "main_problems/m9_lepton_sector_audit/docs/04_spectral_uniqueness.md"
+   ]
+  },
+  "n_pass": 18,
+  "n_total": 18
+ }
+}

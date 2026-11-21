@@ -859,7 +859,7 @@
       "json": [],
       "docstring_match": false,
       "t3": {
-        "meta": 0,
+        "meta": 1,
         "external": 8,
         "pending": 15,
         "unexplained": [
@@ -961,14 +961,26 @@
       "docstring_match": null,
       "sections_ok": true,
       "h1_ok": true
+    },
+    "48": {
+      "script": "48_handoff_adjudication_round5.py",
+      "doc": "48_handoff_adjudication_round5.md",
+      "log": "run_48_handoff_adjudication_round5.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 44,
-    "scripts": 45,
-    "scripts_audited": 44,
+    "docs": 45,
+    "scripts": 46,
+    "scripts_audited": 45,
     "logs": 44,
-    "json": 40,
+    "json": 41,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
