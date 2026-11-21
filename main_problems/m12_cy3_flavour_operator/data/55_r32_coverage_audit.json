@@ -1,13 +1,13 @@
 {
- "num_scripts": 55,
+ "num_scripts": 56,
  "aux": [
   "l2_independent_verify.py",
   "l3_doc_crosscheck.py"
  ],
- "docs": 49,
- "logs": 58,
- "a3": 54,
- "tokens": 1092,
+ "docs": 50,
+ "logs": 59,
+ "a3": 55,
+ "tokens": 1111,
  "orphan_values": [],
  "late_values": [
   [
@@ -1969,7 +1969,8 @@
    "19_r10_isovector_shape.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -2127,7 +2128,8 @@
    "20_r11_green_derivative.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -2352,7 +2354,8 @@
    "21_r12_dual_chain_and_structure.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -3661,7 +3664,8 @@
    "35_r22_omega_ledger.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -3991,7 +3995,8 @@
    "38_r25_half_integer_parity.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -4151,7 +4156,8 @@
    "41_stage_closeout.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -4284,7 +4290,8 @@
    "42_r27_precision_feasibility.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -4582,7 +4589,8 @@
    "44_inter_m_handoff_audit.md",
    "0.03510",
    [
-    49
+    49,
+    56
    ]
   ],
   [
@@ -4899,6 +4907,41 @@
    "0.7219",
    [
     53
+   ]
+  ],
+  [
+   "50_r34_handoff_processing.md",
+   "0.016092",
+   [
+    56
+   ]
+  ],
+  [
+   "50_r34_handoff_processing.md",
+   "0.064159",
+   [
+    56
+   ]
+  ],
+  [
+   "50_r34_handoff_processing.md",
+   "0.403361",
+   [
+    56
+   ]
+  ],
+  [
+   "50_r34_handoff_processing.md",
+   "0.419453",
+   [
+    56
+   ]
+  ],
+  [
+   "50_r34_handoff_processing.md",
+   "2.0731707317",
+   [
+    56
    ]
   ]
  ],

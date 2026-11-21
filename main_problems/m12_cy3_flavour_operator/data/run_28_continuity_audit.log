@@ -3,10 +3,10 @@
 ====================================================================================================
 
 [C1] 檔案鏈完整性
-   docs 01–49：49 份，缺號 無
-   scripts 01–55：53 支（EXCL=[15, 28] 另計），缺號 無
-   logs run_01–55：54 份（EXCL 另計），缺號 無
-   script ↔ log 配對：53 對（排除自身與 15 聚合器），不符 無
+   docs 01–50：50 份，缺號 無
+   scripts 01–56：54 支（EXCL=[15, 28] 另計），缺號 無
+   logs run_01–56：55 份（EXCL 另計），缺號 無
+   script ↔ log 配對：54 對（排除自身與 15 聚合器），不符 無
 
 [C2] 可重現性（逐支重跑，stdout vs canonical log）
    01 01_r1_domain_additivity            ✓
@@ -62,6 +62,7 @@
    53 53_r30_recompute_affected          ✓
    54 54_r31_m14_reply                   ✓
    55 55_r32_coverage_audit              ✓
+   56 56_r34_handoff_processing          ✓
 
 [C3] 數值溯源（docs/NN 之 ≥3 位小數，須在**同輪或更早** log 命中）
    檢查數值 788 個（docs 02–21）
@@ -82,7 +83,7 @@
 
 [C5] register 連續性（M12 note/handoff ref 覆蓋 docs/13–docs/21）
    audit-refs --pid M12：EXIT=0（非 0 即 ref 失效）
-   register 內 M12 相關記錄 95 條；ref 覆蓋 docs [13, 14, 15, 16, 17, 18, 19, 20, 21]
+   register 內 M12 相關記錄 106 條；ref 覆蓋 docs [13, 14, 15, 16, 17, 18, 19, 20, 21]
    缺漏：無
 
 [E] 殘餘 9 項之機器核實（供 docs/22 §五 溯源）

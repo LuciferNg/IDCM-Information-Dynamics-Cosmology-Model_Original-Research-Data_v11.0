@@ -8,7 +8,7 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P1c 引用行號仍落載體 ±3 行內  cited L162, carrier L[162], dist=0
 
 [P2] 收件收據：target_pid=M12 之 handed_off 逐條
-    incoming handed_off 條數 = 12
+    incoming handed_off 條數 = 18
 [PASS] P2 M11 @2026-10-28T16:47:31  收據事件 4 條
 [PASS] P2 M1 @2026-10-29T01:49:53  收據事件 4 條
 [PASS] P2 M13 @2026-10-30T14:03:37  收據事件 4 條
@@ -21,10 +21,16 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [PASS] P2 M13 @2026-11-02T06:53:33  收據事件 4 條
 [PASS] P2 M13 @2026-11-03T00:35:25  收據事件 4 條
 [PASS] P2 M3 @2026-11-03T16:28:10  收據事件 1 條
+[PASS] P2 M19 @2026-11-19T20:52:16  收據事件 1 條
+[PASS] P2 M20 @2026-11-20T02:56:23  收據事件 1 條
+[PASS] P2 M23 @2026-11-20T03:21:53  收據事件 1 條
+[PASS] P2 M23 @2026-11-21T01:53:40  收據事件 1 條
+[PASS] P2 M20 @2026-11-21T08:41:06  收據事件 1 條
+[PASS] P2 M19 @2026-11-21T14:34:29  收據事件 1 條
 
 [P3/P6] 根 README M 系列表 vs register 最新 state
-    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M16', 'M17']
-    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    register M pid = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M16', 'M17', 'M18', 'M19', 'M20', 'M21', 'M22', 'M23']
+    根 README 表內 M = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
   [PASS] P3 M1 在根 README M 表
   [PASS] P3 M2 在根 README M 表
   [PASS] P3 M3 在根 README M 表
@@ -41,7 +47,13 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
   [PASS] P3 M14 在根 README M 表
   [PASS] P3 M15 在根 README M 表
   [PASS] P3 M16 在根 README M 表
-  [FOREIGN] P3 M17 在根 README M 表 ⟹ 屬 M17 記錄，本 M 不代改（已 handoff）
+  [PASS] P3 M17 在根 README M 表
+  [PASS] P3 M18 在根 README M 表
+  [PASS] P3 M19 在根 README M 表
+  [PASS] P3 M20 在根 README M 表
+  [PASS] P3 M21 在根 README M 表
+  [PASS] P3 M22 在根 README M 表
+  [FOREIGN] P3 M23 在根 README M 表 ⟹ 屬 M23 記錄，本 M 不代改（已 handoff）
   [PASS] P3b M1 狀態字串含「部分閉合」（state=partial）
   [PASS] P3b M2 狀態字串含「部分閉合」（state=partial）
   [PASS] P3b M3 狀態字串含「部分閉合」（state=partial）
@@ -57,13 +69,19 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
   [PASS] P3b M13 狀態字串含「部分閉合」（state=partial）
   [PASS] P3b M14 狀態字串含「部分閉合」（state=partial）
   [PASS] P3b M15 狀態字串含「部分閉合」（state=partial）
-  [FOREIGN] P3b M16 狀態字串含「已閉合」（state=closed） ⟹ 屬 M16 記錄，本 M 不代改（已 handoff）
-    快照 = {'total': 16, 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9'], 'registered': ['M16']}
-    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9', 'M16'], 'registered': ['M17']}
-  [PASS] P6a 總數相符  快照 16 ｜ 實算 17 ｜ 本鏈 16
-  [FOREIGN] P6b registered 分組 快照 ['M16'] vs 實算 ['M17'] ⟹ 屬 M16/M17 記錄，本 M 不代改（已 handoff）
-  [PASS] P6b partial 分組相符  ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15']
-  [FOREIGN] P6b closed 分組 快照 ['M6', 'M7', 'M9'] vs 實算 ['M6', 'M7', 'M9', 'M16'] ⟹ 屬 M16 記錄，本 M 不代改（已 handoff）
+  [PASS] P3b M16 狀態字串含「已閉合」（state=closed）
+  [FOREIGN] P3b M17 狀態字串含「open」（state=open） ⟹ 屬 M17 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P3b M18 狀態字串含「部分閉合」（state=partial） ⟹ 屬 M18 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P3b M19 狀態字串含「已閉合」（state=closed） ⟹ 屬 M19 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P3b M20 狀態字串含「部分閉合」（state=partial） ⟹ 屬 M20 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P3b M21 狀態字串含「部分閉合」（state=partial） ⟹ 屬 M21 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P3b M22 狀態字串含「部分閉合」（state=partial） ⟹ 屬 M22 記錄，本 M 不代改（已 handoff）
+    快照 = {'total': 22, 'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'], 'closed': ['M6', 'M7', 'M9', 'M16'], 'registered': ['M18', 'M19', 'M20', 'M21', 'M22']}
+    實算 = {'partial': ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M18', 'M20', 'M21', 'M22', 'M23'], 'closed': ['M6', 'M7', 'M9', 'M16', 'M19'], None: ['M17']}
+  [FOREIGN] P6a 總數 快照 22 vs 實算 23（本鏈 16） ⟹ 屬 M17/M18/M19/M20/M21/M22/M23 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P6b registered 分組 快照 ['M18', 'M19', 'M20', 'M21', 'M22'] vs 實算 [] ⟹ 屬 M18/M19/M20/M21/M22 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P6b partial 分組 快照 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15'] vs 實算 ['M1', 'M2', 'M3', 'M4', 'M5', 'M8', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M18', 'M20', 'M21', 'M22', 'M23'] ⟹ 屬 M18/M20/M21/M22/M23 記錄，本 M 不代改（已 handoff）
+  [FOREIGN] P6b closed 分組 快照 ['M6', 'M7', 'M9', 'M16'] vs 實算 ['M6', 'M7', 'M9', 'M16', 'M19'] ⟹ 屬 M19 記錄，本 M 不代改（已 handoff）
 
 [P4] 慣例分離：同名 γ 恆等之配對索引
     (a) /90 配 45-n : 6.22302e-61
@@ -83,4 +101,4 @@ V11 = /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture
 [P7] 本輪記錄落碟
 [PASS] P7 docs/40 存在且非空  10517 bytes
 
-RESULT: 26/26 PASS
+RESULT: 32/32 PASS
