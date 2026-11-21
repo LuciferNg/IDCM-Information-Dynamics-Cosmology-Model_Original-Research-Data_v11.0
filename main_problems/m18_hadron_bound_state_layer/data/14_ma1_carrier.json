@@ -1,0 +1,213 @@
+{
+  "script": "14_ma1_carrier.py",
+  "checks": [
+    {
+      "name": "Z0a 特徵表自核：⟨χ,χ⟩=1 全部",
+      "pass": true,
+      "detail": "正交表（非照抄）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z0b 特徵表自核：⟨χ,χ'⟩=0 全部 ＋ Σdim² = 60",
+      "pass": true,
+      "detail": "正交 ＋ 完備",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z2a 全部分解 Σ n_R·dim R = n（內部閉合）",
+      "pass": true,
+      "detail": "8/8",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z2b 全部 n_R ≥ 0（無負重數）",
+      "pass": true,
+      "detail": "全非負",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z3a ★ 含全部五 irrep 之 orbit 大小（升序）= [20, 30, 60]",
+      "pass": true,
+      "detail": "3 個",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z3b ★ 最小合格 orbit = 20；唯一性：**多個**",
+      "pass": false,
+      "detail": "合格集 [20, 30, 60] ⟹ 未唯一",
+      "tag": "Z3",
+      "integrity": false
+    },
+    {
+      "name": "Z3c 若合格集非唯一 ⟹ 載體仍有一個自由選擇（唔可以宣稱逼出）",
+      "pass": false,
+      "detail": "合格 3 個",
+      "tag": "Z3",
+      "integrity": false
+    },
+    {
+      "name": "Z4a 5-orbit 只含 A、G ⟹ **唔可能**作 J 譜載體（只可作樹接駁層）",
+      "pass": true,
+      "detail": "5 = 1 + 4（A ⊕ G）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z4b ★ 兩角色分離：樹接駁層（degree 5）≠ irrep 載體（合格 orbit）⟹ 必須明寫兩層",
+      "pass": true,
+      "detail": "docs/13 之『根上層 degree 5』講接駁；本檔之載體講頻譜 — 唔同角色",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z5a 交 = [20, 60] ⟹ 30 出局（唔係塔層）",
+      "pass": true,
+      "detail": "8 個 orbit 收窄至 2",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z5b 剩 {20, 60}；若採『塔終端（穩定子平凡）』原則則取 60 —— 但此係**原則**非推導，須明標",
+      "pass": true,
+      "detail": "60 = |A₅| = B(B²−1)（已註冊）；20 = [A₅:C₃]",
+      "tag": "Z5",
+      "integrity": false
+    },
+    {
+      "name": "Z6a 12-orbit 含 A/T1/T2/H 但**唔含 G** ⟹ 只可承載 J ≤ 2（G 缺 ⟹ J=3,4,… 出局）",
+      "pass": true,
+      "detail": "['A', 'H', 'T1', 'T2']",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6b ★ 故『容量 12』（MD6 之 3 irrep × P × C）係**標籤數**，唔係載體點數 ⟹ 唔可以同 12-orbit 等同",
+      "pass": true,
+      "detail": "X6 之數值巧合拒絕，本輪得結構理由（12-orbit 缺 G）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6c 若載體 = 12-orbit ⟹ J≥3 必須另置（多 orbit 或更大載體）⟹ 12 唔可能係唯一載體",
+      "pass": false,
+      "detail": "觀測 J=3,4 存在 ⟹ 12-orbit 單獨不足",
+      "tag": "Z6",
+      "integrity": false
+    },
+    {
+      "name": "Z7a ★ MD10 兩角色分離（已導）：樹接駁層 = 5-orbit = A ⊕ G，缺 T1/H ⟹ 唔可能係 J 載體",
+      "pass": true,
+      "detail": "5 = 1 + 4；J=1(T1)、J=2(H) 全部缺 ⟹ 接駁層與載體**必為兩件物件**",
+      "tag": "Z7",
+      "integrity": false
+    },
+    {
+      "name": "Z7b MA1 收窄：8 個 orbit → 合格 3 個 {20,30,60} → ∩塔層 2 個 {20,60}",
+      "pass": true,
+      "detail": "仍未唯一 ⟹ 載體選擇尚餘 1 bit（或需『塔終端』原則）",
+      "tag": "Z7",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "tower_intersection": [
+    20,
+    60
+  ],
+  "orbit12_irreps": [
+    "A",
+    "H",
+    "T1",
+    "T2"
+  ],
+  "decomp_by_n": {
+    "60": {
+      "A": 1,
+      "T1": 3,
+      "T2": 3,
+      "G": 4,
+      "H": 5
+    },
+    "30": {
+      "A": 1,
+      "T1": 1,
+      "T2": 1,
+      "G": 2,
+      "H": 3
+    },
+    "20": {
+      "A": 1,
+      "T1": 1,
+      "T2": 1,
+      "G": 2,
+      "H": 1
+    },
+    "15": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 1,
+      "H": 2
+    },
+    "12": {
+      "A": 1,
+      "T1": 1,
+      "T2": 1,
+      "G": 0,
+      "H": 1
+    },
+    "10": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 1,
+      "H": 1
+    },
+    "6": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 0,
+      "H": 1
+    },
+    "5": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 1,
+      "H": 0
+    },
+    "1": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 0,
+      "H": 0
+    }
+  },
+  "qualified_orbits": [
+    20,
+    30,
+    60
+  ],
+  "qualified_min": 20,
+  "five_orbit_decomp": {
+    "A": 1,
+    "T1": 0,
+    "T2": 0,
+    "G": 1,
+    "H": 0
+  },
+  "J_needed": [
+    "A",
+    "G",
+    "H",
+    "T1",
+    "T2"
+  ]
+}

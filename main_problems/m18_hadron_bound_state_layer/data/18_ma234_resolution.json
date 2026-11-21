@@ -1,0 +1,103 @@
+{
+  "script": "18_ma234_resolution.py",
+  "checks": [
+    {
+      "name": "F1a 群階 = 60 = |A₅|（R5、R3 閉包）",
+      "pass": true,
+      "detail": "60",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F1b ★ 全部元素 det = +1（純旋轉；冇反射／反演）",
+      "pass": true,
+      "detail": "[1.0]",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F1c 對 12 頂點傳遞；穩定子階 = 60/12 = 5 = |C₅|（與 docs/13 X2 之 index 12 一致）",
+      "pass": true,
+      "detail": "orbit 12｜stab 5",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F1d 全部元素保頂點集（真係 12 面體旋轉群）",
+      "pass": true,
+      "detail": "60/60",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F2a 完整群 = 120（60 個 det +1、60 個 det −1）⟹ 宇稱元素只喺 O(3)",
+      "pass": true,
+      "detail": "120｜+1 佔 60",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F2b ★ `A₅ ≅ I ⊂ SO(3)`（60 元素全 det +1）⟹ **束之幾何層冇宇稱算子** ⟹ 絕對 `P` 唔可由幾何層導出",
+      "pass": true,
+      "detail": "`P ∉ A₅`（結構事實）",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F3a ★ 全部纖維以 {0,1} 置換矩陣實現 ⟹ 復共軛 `J` 喺基上 = 恒等 ⟹ `C` 之絕對符號唔可由束提供",
+      "pass": true,
+      "detail": "元素 ∈ {0,1}",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F4a `44 ∉ {1,5,6,10,12,15,20,30,60}`（重算）⟹ 鏈唔可能係任何 `A₅` orbit",
+      "pass": true,
+      "detail": "44 ∉ ORB",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F4b ★ 鏈在 M4 讀數中只以 `γ_n` **標量**出現（質量值）⟹ 鏈 sector 係**表示盲**",
+      "pass": true,
+      "detail": "表示盲 ⟹ 只供標量，唔供 irrep 標籤",
+      "tag": "F",
+      "integrity": true
+    },
+    {
+      "name": "F5a ★ `MA2` **解消**（ill-posed）：「content→irrep 映射」唔存在 —— 內容（鏈 mode 集）只供質量標量，irrep 標籤全部由束提供",
+      "pass": true,
+      "detail": "舊設定錯喺：假設鏈要帶 irrep 標籤（實際 MC9/MD8 已封）",
+      "tag": "F5",
+      "integrity": false
+    },
+    {
+      "name": "F5b ★ `MA3` 升禁區 **`MC11`**：絕對 `P` 需 `O(3)` 宇稱；`A₅ ⊂ SO(3)`（60 元素全 `det = +1`）⟹ 冇宇稱算子",
+      "pass": false,
+      "detail": "結構 no-go（非能力不足）",
+      "tag": "F5",
+      "integrity": false
+    },
+    {
+      "name": "F5c ★ `MA4` 升禁區 **`MC12`**：束之纖維全為實置換模塊 ⟹ 共軛平凡 ⟹ `C` 之絕對指派唔可由束提供",
+      "pass": false,
+      "detail": "`C` 只到 Z₂（相對），絕對指派屬約定層",
+      "tag": "F5",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "icosa_rotation_order": 60,
+  "icosa_dets": [
+    1.0
+  ],
+  "full_sym_order": 120,
+  "full_dets": [
+    -1.0,
+    1.0
+  ],
+  "perm_mats_binary": true,
+  "MA2": "dissolved (chain is representation-blind)",
+  "MC11": "absolute P requires O(3) parity; A5 subset SO(3)",
+  "MC12": "absolute C requires non-real structure; fibers are real permutation modules"
+}

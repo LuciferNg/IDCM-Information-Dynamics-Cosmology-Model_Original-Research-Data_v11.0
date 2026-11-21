@@ -1,0 +1,202 @@
+{
+  "script": "13_ma1_tower.py",
+  "checks": [
+    {
+      "name": "X1a 子群階分佈 = {1:1, 2:15, 3:10, 4:5, 5:6, 6:10, 10:6, 12:5, 60:1}",
+      "pass": true,
+      "detail": "{1: 1, 2: 15, 3: 10, 4: 5, 5: 6, 6: 10, 10: 6, 12: 5, 60: 1}（總 59）",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2a ★ 每個階恰一個共軛類 ⟹ 每個 orbit 大小之傳遞作用**唯一**（零參數）",
+      "pass": true,
+      "detail": "9/9 階單類",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2b ★ 可用 orbit 大小 = index 集 = {1,5,6,10,12,15,20,30,60}（**冇 2,3,4** ⟹ 最小非平凡 = 5）",
+      "pass": true,
+      "detail": "[1, 5, 6, 10, 12, 15, 20, 30, 60] ⟹ 再次核得最小忠實度 5（與 docs/12 獨立一致）",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X3a 塔指數 = (5, 4, 3)，積 = 60 = |A₅|",
+      "pass": true,
+      "detail": "[5, 4, 3] 積 60",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X3b ★ B = 4 = [A₄:C₃]；N_gen = 3 = [C₃:1]；F₅ = 5 = [A₅:A₄]",
+      "pass": true,
+      "detail": "註冊 B=4、N_gen=3、F₅=5 逐個對上塔指數",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X3c 塔之層大小（等變樹）= 1, 5, 20, 60",
+      "pass": true,
+      "detail": "1 → 5 → 20 → 60；分支 (5,4,3)",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X4a ★ Cayley 前三層 (1,4,12) = A₄-段之塔（A₄ ⊃ C₃ ⊃ 1）",
+      "pass": true,
+      "detail": "B=4 = [A₄:C₃]；B−1=3 = [C₃:1]",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X4b 塔在 |A₅| 終止（60）而 Cayley 無限增長（36,108,…）⟹ 兩者**只喺前段相同**",
+      "pass": true,
+      "detail": "第 4 層 Cayley 36 vs 塔 60",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X5a 三因子分解 (B+1)B(B−1) 係恆等 ⟹ 塔指數積 = |A₅| 之一般式",
+      "pass": true,
+      "detail": "60 = (B+1)B(B−1) 於 B=4",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X5b ★ `F₅ = B+1` 只於 B=4 成立（單點）⟹ 禁寫成普適",
+      "pass": true,
+      "detail": "F₅=5 恆為 5；B+1 只在 B=4 等於 5",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X6a 兩者數值皆 12 但無映射 ⟹ 只可記『數值巧合』（計數 ≠ 測度）",
+      "pass": true,
+      "detail": "12 亦 = B·N_gen；至少 3 條獨立來路 ⟹ 數值 12 唔可作映射證據",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X6b 判：`12_JPC` ↔ `12_vertices` 無結構映射（**唔可**當已識別）",
+      "pass": false,
+      "detail": "需一條把 3 irrep×4 映到 12 個頂點之 equivariant 映射；未導 ⟹ 記巧合",
+      "tag": "X6",
+      "integrity": false
+    },
+    {
+      "name": "X7a `MA1` 定位：缺嘅係**徑向根之上一層**（degree 5 = F₅），等變塔 = (5,4,3)",
+      "pass": true,
+      "detail": "已註冊 (1,4,12) = 塔之 A₄-段 ⟹ 頂層缺 5 ⟹ 位置（唔只 degree）已定",
+      "tag": "X7",
+      "integrity": false
+    },
+    {
+      "name": "X7b `MC9` 範圍收窄：非典範只落**多 orbit 分解**（44/34）；單 orbit 載體則**唯一**（X2a）",
+      "pass": true,
+      "detail": "每個 orbit 大小恰一共軛類 ⟹ G/H ≅ G/H' ⟹ 傳遞作用零參數",
+      "tag": "X7",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "subgroup_count": 59,
+  "by_order": {
+    "1": 1,
+    "2": 15,
+    "3": 10,
+    "4": 5,
+    "5": 6,
+    "6": 10,
+    "10": 6,
+    "12": 5,
+    "60": 1
+  },
+  "orbit_rows": [
+    {
+      "order": 1,
+      "index": 60,
+      "count": 1,
+      "classes": 1
+    },
+    {
+      "order": 2,
+      "index": 30,
+      "count": 15,
+      "classes": 1
+    },
+    {
+      "order": 3,
+      "index": 20,
+      "count": 10,
+      "classes": 1
+    },
+    {
+      "order": 4,
+      "index": 15,
+      "count": 5,
+      "classes": 1
+    },
+    {
+      "order": 5,
+      "index": 12,
+      "count": 6,
+      "classes": 1
+    },
+    {
+      "order": 6,
+      "index": 10,
+      "count": 10,
+      "classes": 1
+    },
+    {
+      "order": 10,
+      "index": 6,
+      "count": 6,
+      "classes": 1
+    },
+    {
+      "order": 12,
+      "index": 5,
+      "count": 5,
+      "classes": 1
+    },
+    {
+      "order": 60,
+      "index": 1,
+      "count": 1,
+      "classes": 1
+    }
+  ],
+  "tower_sizes": [
+    60,
+    12,
+    3,
+    1
+  ],
+  "tower_indices": [
+    5,
+    4,
+    3
+  ],
+  "cayley_levels": [
+    1,
+    4,
+    12,
+    36,
+    108,
+    324
+  ],
+  "tower_levels": [
+    1,
+    5,
+    20,
+    60
+  ],
+  "B_fact": {
+    "generic_identity": true,
+    "F5_eq_Bplus1_single_point": true
+  },
+  "capacity_12_vs_vertices_12": "numeric coincidence only"
+}

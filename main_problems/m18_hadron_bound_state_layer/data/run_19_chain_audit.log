@@ -1,0 +1,104 @@
+==============================================================================
+Q1. 腳本集對稱（推導支 ↔ docs）
+==============================================================================
+  推導腳本 19 支｜對應 docs 19 份
+  PASS Q1a 每支腳本（含審計支）皆有 docs/NN（差集空） :: 缺 []
+  PASS Q1b 每份 docs/NN 皆有腳本（差集空） :: 孤兒 docs []
+
+==============================================================================
+Q2. 產物綁定（JSON ↔ producer ↔ log）
+==============================================================================
+  PASS Q2a 每個 data JSON 有 producer script :: 22 JSON｜孤兒 []
+  PASS Q2b 每個 data JSON 有 canonical log :: 缺 log []
+  PASS Q2c 每支 script 宣告之 JSON 存在 :: 缺 JSON []
+  PASS Q2d 每個 run_*.log 皆有對應 JSON（零孤兒 log） :: 孤兒 log []
+
+==============================================================================
+Q3. 路徑衛生（/tmp、scratch、.cache 讀寫）
+==============================================================================
+  PASS Q3a 腳本／driver 內零 /tmp 或快取目錄引用 :: 0 命中
+
+==============================================================================
+Q4. L1：逐支重跑（stdout ↔ canonical log 逐字節；JSON sha 不變）
+==============================================================================
+  01_reproduction_gate.py          exit=0  JSON same  log same
+  02_support_theorem.py            exit=0  JSON same  log same
+  03_composition_law.py            exit=0  JSON same  log same
+  04_jpc_classification.py         exit=0  JSON same  log same
+  05_radial_ladder.py              exit=0  JSON same  log same
+  06_shape_parameter_identity.py   exit=0  JSON same  log same
+  07_feedback_gate.py              exit=0  JSON same  log same
+  09_jpc_geometric_carrier.py      exit=0  JSON same  log same
+  10_residual_census.py            exit=0  JSON same  log same
+  11_coupling_mechanism.py         exit=0  JSON same  log same
+  12_ma1_faithfulness.py           exit=0  JSON same  log same
+  13_ma1_tower.py                  exit=0  JSON same  log same
+  14_ma1_carrier.py                exit=0  JSON same  log same
+  15_ma1_induction.py              exit=0  JSON same  log same
+  16_md12_correction.py            exit=0  JSON same  log same
+  17_connection_law.py             exit=0  JSON same  log same
+  18_ma234_resolution.py           exit=0  JSON same  log same
+  21_closeout_verify.py            exit=0  JSON same  log same
+  22_coupling_dof.py               exit=0  JSON same  log same
+  PASS Q4a 全部推導腳本 exit 0 :: 19/19
+  PASS Q4b 全部 JSON byte-identical（重跑後 sha 不變） :: 19/19
+  PASS Q4c 全部 stdout == canonical log（逐字節） :: 19/19
+
+==============================================================================
+Q5. L2：log 匯總行 ↔ JSON checks
+==============================================================================
+  01_reproduction_gate.py          log 27/27｜JSON 27/27｜實作閘 0↔0 
+  02_support_theorem.py            log 16/17｜JSON 16/17｜實作閘 0↔0 
+  03_composition_law.py            log 12/12｜JSON 12/12｜實作閘 0↔0 
+  04_jpc_classification.py         log 13/14｜JSON 13/14｜實作閘 0↔0 
+  05_radial_ladder.py              log 8/9｜JSON 8/9｜實作閘 0↔0 
+  06_shape_parameter_identity.py   log 5/7｜JSON 5/7｜實作閘 0↔0 
+  07_feedback_gate.py              log 7/8｜JSON 7/8｜實作閘 0↔0 
+  09_jpc_geometric_carrier.py      log 17/17｜JSON 17/17｜實作閘 0↔0 
+  10_residual_census.py            log 14/16｜JSON 14/16｜實作閘 0↔0 
+  11_coupling_mechanism.py         log 10/11｜JSON 10/11｜實作閘 0↔0 
+  12_ma1_faithfulness.py           log 9/11｜JSON 9/11｜實作閘 0↔0 
+  13_ma1_tower.py                  log 13/14｜JSON 13/14｜實作閘 0↔0 
+  14_ma1_carrier.py                log 13/16｜JSON 13/16｜實作閘 0↔0 
+  15_ma1_induction.py              log 9/9｜JSON 9/9｜實作閘 0↔0 
+  16_md12_correction.py            log 6/8｜JSON 6/8｜實作閘 0↔0 
+  17_connection_law.py             log 11/11｜JSON 11/11｜實作閘 0↔0 
+  18_ma234_resolution.py           log 10/12｜JSON 10/12｜實作閘 0↔0 
+  21_closeout_verify.py            log 18/18｜JSON 18/18｜實作閘 0↔0 
+  22_coupling_dof.py               log 12/13｜JSON 12/13｜實作閘 0↔0 
+  PASS Q5a 全部 log 匯總 ↔ JSON 一致（PASS／總數／實作閘） :: 違例 []
+
+==============================================================================
+Q6. 時序閘（data mtime ≥ producer mtime）
+==============================================================================
+  PASS Q6a 全部產物 mtime ≥ producer mtime :: 遲 []
+
+==============================================================================
+Q7. driver 覆蓋
+==============================================================================
+  PASS Q7a driver 覆蓋集 == 推導腳本集 ∪ {08,19,20} :: 覆蓋 ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']｜需 ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+  PASS Q7b driver 含三條線程鎖 export :: 3/3
+  PASS Q7c driver 預設 dry-run（未傳 --run 不執行） :: 有 MODE 分流
+
+==============================================================================
+Q8. L3b：docs 數值反溯（池 = data JSON ∪ run log，排除審計自身 log）
+==============================================================================
+  掃描數值 token = 95｜ORPHAN = 0
+  PASS Q8a docs 內 3+ 小數位數值全部可反溯（ORPHAN = 0） :: 掃 95｜ORPHAN 0
+
+==============================================================================
+Q9. 四件套存在與狀態詞
+==============================================================================
+  PASS Q9a 四件套齊全 :: 4/4
+  PASS Q9b README.md 狀態行首含四態 emoji :: ['🟡', '🔴']
+  PASS Q9b final_result.md 狀態行首含四態 emoji :: ['🟡']
+
+==============================================================================
+Q10. inline 幽靈推導
+==============================================================================
+  PASS Q10a 無 execute_code headline 推導（本 M 全部數值皆有落碟 script） :: 本 session 推導全部喺 scripts/01–18；execute_code 未用於產生 headline
+
+==============================================================================
+匯總：PASS 20 / FAIL 0（共 20）｜實作閘 FAIL 0
+==============================================================================
+JSON → data/19_chain_audit.json

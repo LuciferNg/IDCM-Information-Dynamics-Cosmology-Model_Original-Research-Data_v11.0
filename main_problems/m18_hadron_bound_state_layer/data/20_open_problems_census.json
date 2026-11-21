@@ -1,0 +1,454 @@
+{
+  "script": "20_open_problems_census.py",
+  "checks": [
+    {
+      "name": "R1a OA 每項皆有否證出口",
+      "pass": true,
+      "detail": "1/1",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R1b 分類總數 = 殘留權威表項數",
+      "pass": true,
+      "detail": "40 = 40",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R3a 出向 handoff 目標集 = MB 表所列（M5／M6／M16）",
+      "pass": true,
+      "detail": "['M16', 'M5', 'M6']",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R3b 入向 handoff 已全部回執（差集空）",
+      "pass": true,
+      "detail": "入向 0 條 ⟹ 無需回執（機械核：in=1）",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R4a OC 每項附依據（docs 編號）",
+      "pass": true,
+      "detail": "31/31",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R5b 每條 OB 皆有解鎖條件（handoff 回覆 ⟹ 邊項變可推）",
+      "pass": true,
+      "detail": "6/6",
+      "tag": "R",
+      "integrity": true
+    },
+    {
+      "name": "R5a 舊清單 → 現處置 7 行齊全",
+      "pass": true,
+      "detail": "7/7",
+      "tag": "R",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "OA": [
+    {
+      "code": "MA1",
+      "kind": "MA",
+      "item": "耦合機制形式層閉合（MD7/MD9/MD10/MD11/MD14）；殘 = 束上動力學（→M5 handoff）＋ P1–P3 待測",
+      "status": "spec",
+      "ref": "docs/17 E4",
+      "exit": "若 M5 核得 J=1,2 於 d=0 振幅 ≠ 0 ⟹ MD14 錯（束連接律須重立）"
+    }
+  ],
+  "OB": [
+    {
+      "code": "MA5",
+      "kind": "MA",
+      "item": "baryon 非鏈譜算子 —— 已發還 M5（MB5），非本 M 範圍",
+      "status": "handed",
+      "ref": "docs/10 十一",
+      "target": ""
+    },
+    {
+      "code": "MA6",
+      "kind": "MA",
+      "item": "質量載體 ħc/a₀ —— 已發還 M6（MB4），非本 M 範圍",
+      "status": "handed",
+      "ref": "docs/10 十一",
+      "target": ""
+    },
+    {
+      "code": "MB1",
+      "kind": "MB",
+      "item": "徑向塔標度 t*",
+      "status": "handoff",
+      "ref": "docs/05 W4",
+      "target": "M5"
+    },
+    {
+      "code": "MB2",
+      "kind": "MB",
+      "item": "強子形狀 2 帳本（a₀, t）",
+      "status": "handoff",
+      "ref": "docs/06 X4",
+      "target": "M6"
+    },
+    {
+      "code": "MB3",
+      "kind": "MB",
+      "item": "A_req 缺口 → V_self",
+      "status": "note",
+      "ref": "docs/07 Y4b",
+      "target": "M5"
+    },
+    {
+      "code": "MB4",
+      "kind": "MB",
+      "item": "質量載體 ħc/a₀（原 MA6）",
+      "status": "handoff",
+      "ref": "docs/10 十一",
+      "target": "M6"
+    },
+    {
+      "code": "MB5",
+      "kind": "MB",
+      "item": "baryon 三體非鏈譜載體算子（原 MA5）＋ P1-P3 核",
+      "status": "handoff",
+      "ref": "docs/10 十一",
+      "target": "M5"
+    },
+    {
+      "code": "MB6",
+      "kind": "MB",
+      "item": "三向張力裁決 MD3×M16×MC10",
+      "status": "handoff",
+      "ref": "docs/10 十一",
+      "target": "M16"
+    }
+  ],
+  "OC": [
+    {
+      "code": "MA2",
+      "kind": "MA",
+      "item": "content→irrep 映射 —— ⚫ DISSOLVED（MD15：鏈表示盲，映射唔存在）",
+      "status": "dissolved",
+      "ref": "docs/18 F4/F5a",
+      "basis": "docs/18 F4/F5a"
+    },
+    {
+      "code": "MA3",
+      "kind": "MA",
+      "item": "P 絕對符號 —— ⚫ 升禁區 MC11（A₅⊂SO(3)，60 元素全 det=+1）",
+      "status": "dead",
+      "ref": "docs/18 F2/F5b",
+      "basis": "docs/18 F2/F5b"
+    },
+    {
+      "code": "MA4",
+      "kind": "MA",
+      "item": "C 絕對指派 —— ⚫ 升禁區 MC12（纖維全實置換模塊 ⟹ 共軛平凡）",
+      "status": "dead",
+      "ref": "docs/18 F3/F5c",
+      "basis": "docs/18 F3/F5c"
+    },
+    {
+      "code": "MC1",
+      "kind": "MC",
+      "item": "chain 能量作質量",
+      "status": "dead",
+      "ref": "docs/02 V6",
+      "basis": "docs/02 V6"
+    },
+    {
+      "code": "MC2",
+      "kind": "MC",
+      "item": "M₀ 整數量子化",
+      "status": "dead",
+      "ref": "RA2",
+      "basis": "RA2"
+    },
+    {
+      "code": "MC3",
+      "kind": "MC",
+      "item": "Λ_IDCM 作質量量子",
+      "status": "dead",
+      "ref": "RA4a",
+      "basis": "RA4a"
+    },
+    {
+      "code": "MC4",
+      "kind": "MC",
+      "item": "Cayley 算子作徑向塔",
+      "status": "dead",
+      "ref": "docs/05 W3b",
+      "basis": "docs/05 W3b"
+    },
+    {
+      "code": "MC5",
+      "kind": "MC",
+      "item": "λ_k 直接配觀測間距",
+      "status": "dead",
+      "ref": "docs/05 W4",
+      "basis": "docs/05 W4"
+    },
+    {
+      "code": "MC6",
+      "kind": "MC",
+      "item": "F_proj = 17 放大",
+      "status": "dead",
+      "ref": "O144 撤回",
+      "basis": "O144 撤回"
+    },
+    {
+      "code": "MC7",
+      "kind": "MC",
+      "item": "(d,s) 交換作 J^PC",
+      "status": "dead",
+      "ref": "docs/04 U1d/U1e",
+      "basis": "docs/04 U1d/U1e"
+    },
+    {
+      "code": "MC8",
+      "kind": "MC",
+      "item": "A₅ 頂點着色作味標籤",
+      "status": "forbidden",
+      "ref": "M12 docs/03",
+      "basis": "M12 docs/03"
+    },
+    {
+      "code": "MC9",
+      "kind": "MC",
+      "item": "A₅ 多 orbit 分解（44/34）作零參數耦合（M(44)=249、≥1 bit）；★ 範圍限多 orbit，單 orbit 典範（MD8）",
+      "status": "dead",
+      "ref": "docs/11 Y4 ＋ docs/13 X2",
+      "basis": "docs/11 Y4 ＋ docs/13 X2"
+    },
+    {
+      "code": "MC10",
+      "kind": "MC",
+      "item": "A₅ 保結構忠實作用於樹(B=4)／鏈(C₄₄,C₈₈)：最小忠實度 5 > B=4；60 ∤ 88/176",
+      "status": "dead",
+      "ref": "docs/12 W2/W3",
+      "basis": "docs/12 W2/W3"
+    },
+    {
+      "code": "MC11",
+      "kind": "MC",
+      "item": "絕對 P 由幾何層導出：A₅ ⊂ SO(3)，60 元素全 det=+1 ⟹ 無宇稱算子（O(3) 才有，120 群半數 det=−1）",
+      "status": "dead",
+      "ref": "docs/18 F1/F2",
+      "basis": "docs/18 F1/F2"
+    },
+    {
+      "code": "MC12",
+      "kind": "MC",
+      "item": "絕對 C 指派由束提供：纖維全實置換模塊（元素∈{0,1}）⟹ 復共軛平凡",
+      "status": "dead",
+      "ref": "docs/18 F3",
+      "basis": "docs/18 F3"
+    },
+    {
+      "code": "MD1",
+      "kind": "MD",
+      "item": "N_q=2 三判準等價（χ=0 ⟺ 在殼 ⟺ a+b=N_c）",
+      "status": "theorem",
+      "ref": "RA5a",
+      "basis": "RA5a"
+    },
+    {
+      "code": "MD2",
+      "kind": "MD",
+      "item": "N_q=3 等價斷裂",
+      "status": "theorem",
+      "ref": "RA6a",
+      "basis": "RA6a"
+    },
+    {
+      "code": "MD3",
+      "kind": "MD",
+      "item": "J 載體唯一 = A₅",
+      "status": "theorem",
+      "ref": "docs/09 Z4",
+      "basis": "docs/09 Z4"
+    },
+    {
+      "code": "MD4",
+      "kind": "MD",
+      "item": "A ≤ αq(ħc/a)",
+      "status": "theorem",
+      "ref": "docs/07 Y2",
+      "basis": "docs/07 Y2"
+    },
+    {
+      "code": "MD5",
+      "kind": "MD",
+      "item": "χ=0 退化",
+      "status": "theorem",
+      "ref": "docs/02 V5",
+      "basis": "docs/02 V5"
+    },
+    {
+      "code": "MD6",
+      "kind": "MD",
+      "item": "J^PC 容量 12",
+      "status": "theorem",
+      "ref": "docs/09 Z5",
+      "basis": "docs/09 Z5"
+    },
+    {
+      "code": "MD7",
+      "kind": "MD",
+      "item": "晶體場分裂層數序 n_lev = 1,1,1,2,2,3,4,4,4,5（J≤2 唔分裂）",
+      "status": "theorem",
+      "ref": "docs/11 Y2",
+      "basis": "docs/11 Y2"
+    },
+    {
+      "code": "MD8",
+      "kind": "MD",
+      "item": "A₅ 每 orbit 大小恰一共軛類 ⟹ 單 orbit 載體唯一（零參數）",
+      "status": "theorem",
+      "ref": "docs/13 X2",
+      "basis": "docs/13 X2"
+    },
+    {
+      "code": "MD9",
+      "kind": "MD",
+      "item": "子群塔指數 (5,4,3) = (F₅,B,N_gen)，積 = |A₅| = 60；Cayley (1,4,12) = A₄-段",
+      "status": "theorem",
+      "ref": "docs/13 X3/X4",
+      "basis": "docs/13 X3/X4"
+    },
+    {
+      "code": "MD10",
+      "kind": "MD",
+      "item": "接駁層 5-orbit = A⊕G 缺 T1/H ⟹ 樹接駁層 ≠ J 載體（兩層必分）",
+      "status": "theorem",
+      "ref": "docs/14 Z4/Z7",
+      "basis": "docs/14 Z4/Z7"
+    },
+    {
+      "code": "MD11",
+      "kind": "MD",
+      "item": "載體 20 = Ind_{A₄}^{A₅}(4點子模) 逐類精確 ⟹ 20 = F₅·B（誘導，零參數）",
+      "status": "theorem",
+      "ref": "docs/15 A1",
+      "basis": "docs/15 A1"
+    },
+    {
+      "code": "MD12",
+      "kind": "MD",
+      "item": "60-載體條件性排除 —— ⚫ WITHDRAWN（前提 H 為 A₅-等變 被否；d=0 單點 ⟹ 只餘 A₄）",
+      "status": "withdrawn",
+      "ref": "docs/15 A4 → docs/16 C4",
+      "basis": "docs/15 A4 → docs/16 C4"
+    },
+    {
+      "code": "MD13",
+      "kind": "MD",
+      "item": "A₅-交換子維數 8 ≪ A₄-交換子維數 36 ⟹ 重數可劈開 ⟹ 退化論證對 {20,60} 無判別力",
+      "status": "theorem",
+      "ref": "docs/16 C1-C3",
+      "basis": "docs/16 C1-C3"
+    },
+    {
+      "code": "MD14",
+      "kind": "MD",
+      "item": "連接律 = 誘導束 fiber_d = Ind_{H_d}^{A₅}(triv) ⟹ (5,20,60,60)；{20,60} 之 1 bit ill-posed 解消",
+      "status": "theorem",
+      "ref": "docs/17 E2/E4",
+      "basis": "docs/17 E2/E4"
+    },
+    {
+      "code": "MD15",
+      "kind": "MD",
+      "item": "鏈 sector 表示盲（44 ∉ A₅ orbit 集；只供 γ_n 標量）⟹ content→irrep 映射唔存在",
+      "status": "theorem",
+      "ref": "docs/18 F4",
+      "basis": "docs/18 F4"
+    },
+    {
+      "code": "MD16",
+      "kind": "MD",
+      "item": "耦合自由度 A₄-等變 11/100/300（A₅-等變 3/20/60）⟹ 零參數動力學結構上不可能",
+      "status": "theorem",
+      "ref": "docs/22 W3",
+      "basis": "docs/22 W3"
+    }
+  ],
+  "old_to_new": [
+    {
+      "old": "MA2 (n,k)→irrep 映射",
+      "now": "⚫ 解消（MD15 鏈表示盲）"
+    },
+    {
+      "old": "MA3 P 絕對符號",
+      "now": "⚫ 禁區 MC11（A₅ ⊂ SO(3)）"
+    },
+    {
+      "old": "MA4 C 絕對指派",
+      "now": "⚫ 禁區 MC12（實模塊）"
+    },
+    {
+      "old": "MA5 baryon 非鏈譜算子",
+      "now": "⛔ 發還 M5（MB5）"
+    },
+    {
+      "old": "MA6 質量載體 ħc/a₀",
+      "now": "⛔ 發還 M6（MB4）"
+    },
+    {
+      "old": "{20,60} 載體二選一",
+      "now": "⚫ ill-posed 解消（MD14 誘導束）"
+    },
+    {
+      "old": "MD12 60 條件性排除",
+      "now": "⚫ withdrawn（docs/16）"
+    }
+  ],
+  "outgoing_handoffs": [
+    {
+      "target": "M5",
+      "ts": "2026-11-20",
+      "note": "徑向塔標度發還：觀測徑向間距需 t* = 12424×–57649× M5 t（≈9.8e3–4.5e4 MeV）；M5 之 t=0.7884 MeV 雙重角色（contact hop ＋ 徑向塔）唔成立；Cayley 算子只得 0–2 束"
+    },
+    {
+      "target": "M6",
+      "ts": "2026-11-20",
+      "note": "強子形狀 2 帳本發還：a₀（T_A=(ħc/a₀)/M₀=18.73875）與 t（T_t=t/M₀=0.0282571）皆無算子身份（28 原子三項積 1404928 值；嚴格閘 0 命中；t 之 2 條命中 < 隨機期望 10.50）"
+    },
+    {
+      "target": "M5",
+      "ts": "2026-11-21",
+      "note": "M18 MD14：聲子/強子態空間 = 徑向樹 ⊗ 接駁 5-orbit（誘導束，纖維 5/20/60/60）。M5 之 H_tree+V₀ 未含載體耦合項；請 M5 於振子模型加上束上耦合（fiber_d 間轉移矩陣），以測 P1（J=1"
+    },
+    {
+      "target": "M6",
+      "ts": "2026-11-21",
+      "note": "MA6 發還（非 M18 範圍）：質量載體層唯一活口 = ħc/a₀ = 522.83 MeV，8 候選普查後只剩校準尺度本身（docs/01 RA4c）。a₀ = 0.37742216816391858835 fm 之算子身份屬 M6 帳"
+    },
+    {
+      "target": "M5",
+      "ts": "2026-11-21",
+      "note": "MA5 發還（非 M18 範圍，承前 束動力學 handoff）：(1) baryon 三體載體算子 —— 本 M docs/03 證三體譜閉合空集 0/15180（ordered 44³ 獨立核亦 0，最小間隙 1.037e-4），N_q"
+    },
+    {
+      "target": "M16",
+      "ts": "2026-11-21",
+      "note": "三向張力裁決（非 M18 範圍）：MD3（J 載體=A₅，J=2 需 5 維 irrep 逼出，無替代）× M16（B=4 已閉合）× M18 docs/12（A₅ 保結構忠實作用 ⟹ B≥5，最小忠實度 5 > 4）⟹ 三者唔可同時為真。"
+    },
+    {
+      "target": "M6",
+      "ts": "2026-11-21",
+      "note": "回執（你 2026-11-19 note：『44/44 嚴格』實為 43/44 ＋ k=1 等式）：已於 docs/01 第 45／54 行附註吸收 —— λ_max(k) < 4k 對 k=2..44 係 43/43 嚴格，k=1 為等式"
+    },
+    {
+      "target": "M5",
+      "ts": "2026-11-21",
+      "note": "回執（你 2026-11-19 兩條 note：R4 徑向塔 t* 需 12424×–57649×、R5 A ≤ αq(ħc/a) 定理）：已知悉，無需行動。另 M18 新發三件已在你 inbox：(1) MB5=baryon 三體非鏈譜載"
+    }
+  ],
+  "incoming_handoffs": 1
+}

@@ -1,0 +1,193 @@
+{
+  "script": "01_reproduction_gate.py",
+  "version": 2,
+  "dps": 60,
+  "checks": [
+    {
+      "name": "A1 Φ₈₈ = Φ₁₁(−x⁴)，度 40",
+      "pass": true,
+      "detail": "deg=40, Φ₁₁(−x⁴)−Φ₈₈=0 : True",
+      "upstream": "M6 docs/14"
+    },
+    {
+      "name": "A2 Φ₆₈ 度 32（樹譜 ℚ(ζ₆₈)⁺ 度 16）",
+      "pass": true,
+      "detail": "deg=32",
+      "upstream": "O155 R3 ＋ 本輪"
+    },
+    {
+      "name": "B1 γ_n 全部 ∈ ℚ(ζ₈₈)（44/44）",
+      "pass": true,
+      "detail": "44 modes",
+      "upstream": "定義層"
+    },
+    {
+      "name": "B2 γ_n + γ_{44−n} = 4 EXACT（n=1..43，0 違反）",
+      "pass": true,
+      "detail": "違反 0 []",
+      "upstream": "M4 §三／M6 final"
+    },
+    {
+      "name": "B3 Σγ = 90 EXACT",
+      "pass": true,
+      "detail": "Σγ = 90",
+      "upstream": "M6 final／O211"
+    },
+    {
+      "name": "B4 Σγ² = 272 EXACT",
+      "pass": true,
+      "detail": "Σγ² = 272",
+      "upstream": "M6 final"
+    },
+    {
+      "name": "B5 γ₂ = 4γ₁ − γ₁² EXACT",
+      "pass": true,
+      "detail": "環差零",
+      "upstream": "M4 data/19 A_verify.gamma2_identity_sympy=\"0\""
+    },
+    {
+      "name": "B6 γ₂₂ = 2 EXACT",
+      "pass": true,
+      "detail": "μ² = 2",
+      "upstream": "M6 final"
+    },
+    {
+      "name": "B7 γ₄₄ = 4 EXACT",
+      "pass": true,
+      "detail": "Nyquist = B",
+      "upstream": "M6 final"
+    },
+    {
+      "name": "B8 γ₁ 對照（|Δ| ≤ 1e−18）",
+      "pass": true,
+      "detail": "0.00509577077949291727538848632575",
+      "upstream": "M4 data/19 A_verify.gamma1"
+    },
+    {
+      "name": "B9 1/γ₁ 對照（16 位有效數字一致，|Δ| ≤ 1e−13）",
+      "pass": true,
+      "detail": "196.241166110597797570538008577",
+      "upstream": "M4 data/19 A_verify.inv_g1"
+    },
+    {
+      "name": "B10 γ₄₄ = 4（數值 |Δ| ≤ 1e−55）",
+      "pass": true,
+      "detail": "4.0",
+      "upstream": "M4 data/19 A_verify.gamma44"
+    },
+    {
+      "name": "B11 γ₁ = 2 − 2cos(π/44)（|Δ| ≤ 1e−55）",
+      "pass": true,
+      "detail": "|Δ| = 2.2486e-62",
+      "upstream": "定義層"
+    },
+    {
+      "name": "C1 rank_ℚ{γ_n} = 20（ℚ(ζ₈₈)⁺ 度 20）",
+      "pass": true,
+      "detail": "rank = 20",
+      "upstream": "M6 final"
+    },
+    {
+      "name": "C2 核維數 = 24",
+      "pass": true,
+      "detail": "kernel = 24",
+      "upstream": "M6 final"
+    },
+    {
+      "name": "D1 λ_max(k) < 4k（k=2..44：43/43 嚴格）",
+      "pass": true,
+      "detail": "43/43",
+      "upstream": "M6 final（44/44 宣稱）"
+    },
+    {
+      "name": "D2 k=1：λ_max(1) = γ₄₄ = 4k 等式（非嚴格）",
+      "pass": true,
+      "detail": "★ 上游「44/44」應為 43/44 嚴格 + k=1 等式",
+      "upstream": "M6 final 附註建議"
+    },
+    {
+      "name": "E1 sites = 68，mode 數 33，node 數 34",
+      "pass": true,
+      "detail": "68/33/34",
+      "upstream": "O210 C9 ＋ O155 R3"
+    },
+    {
+      "name": "E2 Σλ = 66 EXACT",
+      "pass": true,
+      "detail": "Σλ = 66（= 2B²+μ² = 4·16+2）",
+      "upstream": "O155 R3（Σλ = B³+B/2）"
+    },
+    {
+      "name": "E3 λ_k + λ_{34−k} = 4 EXACT（k=1..16，0 違反）",
+      "pass": true,
+      "detail": "違反 0",
+      "upstream": "本輪"
+    },
+    {
+      "name": "E4 λ₁₇ = 2 EXACT",
+      "pass": true,
+      "detail": "樹自對偶模 = μ²",
+      "upstream": "本輪"
+    },
+    {
+      "name": "E5 λ₃₃ + λ₃₄ = 4 ⟹ 物理區 16 對 + 自對點",
+      "pass": true,
+      "detail": "物理區 k=1..33 = 16 對 ±4 + {17}",
+      "upstream": "本輪"
+    },
+    {
+      "name": "F1 鏈：I₀={0..44} = 22 對 + 1 自對點",
+      "pass": true,
+      "detail": "pairs=22 fixed=[22]",
+      "upstream": "本輪"
+    },
+    {
+      "name": "F2 Σγ = 4·22 + 2 = 90（每對貢獻恰 4）",
+      "pass": true,
+      "detail": "2N_d + μ²",
+      "upstream": "本輪"
+    },
+    {
+      "name": "F3 樹：I₀={0..34} = 17 對 + 1 自對點",
+      "pass": true,
+      "detail": "pairs=17 fixed=[17]",
+      "upstream": "本輪"
+    },
+    {
+      "name": "F4 Σλ = 4·16 + 2 = 66（物理區 16 對）",
+      "pass": true,
+      "detail": "2B² + μ²",
+      "upstream": "本輪"
+    },
+    {
+      "name": "F5 槽數 = 鏈 22 + 樹 17 = 39",
+      "pass": true,
+      "detail": "22 = N_d/2，17 = F_proj = L₆−1",
+      "upstream": "本輪（供 R1）"
+    }
+  ],
+  "warns": [
+    {
+      "name": "B9w 1/γ₁ 末 2 位與上游記載不符",
+      "detail": "記載 196.24116611059782 vs 本輪 196.24116611059780（|Δ| = 2.2429e-14）⟹ 上游末兩位漂移，建議 register note"
+    }
+  ],
+  "pass": 27,
+  "fail": 0,
+  "warn": 1,
+  "gamma1": "0.005095770779492917275388486325746590690056",
+  "inv_gamma1": "196.2411661105977975705380085774843827552",
+  "sigma_gamma": 90,
+  "sigma_lambda": 66,
+  "rank_Q_gamma": 20,
+  "kernel_dim": 24,
+  "chain_chiral_pairs": 22,
+  "chain_self_dual": [
+    22
+  ],
+  "tree_chiral_pairs": 17,
+  "tree_self_dual": [
+    17
+  ],
+  "chiral_slots": 39
+}

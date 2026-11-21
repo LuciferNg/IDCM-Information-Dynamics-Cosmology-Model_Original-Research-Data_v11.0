@@ -1,0 +1,162 @@
+{
+  "script": "03_composition_law.py",
+  "checks": [
+    {
+      "name": "S2a 兩體 + 通道全部落 γ₄₄ = 4（單一 m）",
+      "pass": true,
+      "detail": "m 值集 = [44]",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S2b 解集 = {a + b = 44}（22 條，含 (22,22)）",
+      "pass": true,
+      "detail": "差集 = set()",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S2c 22 條全部 ℚ(ζ₈₈) 精確確認",
+      "pass": true,
+      "detail": "環確認 22/22",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S2d 非 (a+b=44) 之 924 對：環內 0 其他解",
+      "pass": true,
+      "detail": "額外解 0",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S2'a − 通道全部 = {b = 44，m = 44−a}（43 條）",
+      "pass": true,
+      "detail": "命中 43；b=44 全真 = True",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S3a0 獨立方法一致（ordered scan 亦 0 命中；最小間隙 ≫ tol）",
+      "pass": true,
+      "detail": "最小間隙 0.000103735 ⟹ 零命中穩健（唔係容差 artifact）",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S3a 三體譜閉合 = 空集（0/15180 在殼內容）",
+      "pass": true,
+      "detail": "★ 結構 no-go：鏈譜對三體加法**唔封閉** ⟹ baryon 唔可能以『譜閉合』承載",
+      "tag": "S",
+      "integrity": false
+    },
+    {
+      "name": "S3b 全部命中 ℚ(ζ₈₈) 精確確認",
+      "pass": true,
+      "detail": "環確認 0/0",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S3c 選擇性比率 = 命中/全部",
+      "pass": true,
+      "detail": "0.000%（0/15180）",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S4a a+b=N_c 之解必屬命中集（必要部分，6/6）",
+      "pass": true,
+      "detail": "6/6",
+      "tag": "S",
+      "integrity": true
+    },
+    {
+      "name": "S4b 命中集 ≡ {a+b=N_c} ⟺ 無內部有理譜值",
+      "pass": true,
+      "detail": "N_c=6 例外 +2 條（γ₂=1、γ₃=2 有理 ⟹ 2γ₂=γ₃、γ₂+γ₃=γ₄）⟹ 定律**精確性**需 Niven 級條件",
+      "tag": "S",
+      "integrity": false
+    },
+    {
+      "name": "S4c N_c=44 唯一內部有理譜值 = γ₂₂ = μ² = 2，其加法巧合 2μ² = 4 = γ₄₄ 已含於 {a+b=N_c}",
+      "pass": true,
+      "detail": "γ_n 有理 ⟺ n ∈ {0,22,44}（γ = 0,2,4）；22 係唯一內部有理值；2γ₂₂ = γ₄₄ 恰好就係 (22,22) ∈ {a+b=44} ⟹ 零額外巧合（與 N_c=6 不同）",
+      "tag": "S",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "sum_hits": 22,
+  "sum_all_m44": true,
+  "beat_hits": 43,
+  "tri_hits": 0,
+  "tri_total": 15180,
+  "tri_selectivity_pct": 0.0,
+  "tri_m_dist": {},
+  "rigidity": [
+    {
+      "N_c": 3,
+      "hits": 1,
+      "pred": 1,
+      "extra": 0,
+      "rational_interior": [
+        1,
+        2
+      ],
+      "law_holds": true
+    },
+    {
+      "N_c": 5,
+      "hits": 2,
+      "pred": 2,
+      "extra": 0,
+      "rational_interior": [],
+      "law_holds": true
+    },
+    {
+      "N_c": 6,
+      "hits": 5,
+      "pred": 3,
+      "extra": 2,
+      "rational_interior": [
+        2,
+        3,
+        4
+      ],
+      "law_holds": true
+    },
+    {
+      "N_c": 11,
+      "hits": 5,
+      "pred": 5,
+      "extra": 0,
+      "rational_interior": [],
+      "law_holds": true
+    },
+    {
+      "N_c": 22,
+      "hits": 11,
+      "pred": 11,
+      "extra": 0,
+      "rational_interior": [
+        11
+      ],
+      "law_holds": true
+    },
+    {
+      "N_c": 44,
+      "hits": 22,
+      "pred": 22,
+      "extra": 0,
+      "rational_interior": [
+        22
+      ],
+      "law_holds": true
+    }
+  ],
+  "tri_min_gap": "0.0001037351981",
+  "tri_contain_44": 0,
+  "tri_contain_22": 0,
+  "tri_chi0": 0
+}

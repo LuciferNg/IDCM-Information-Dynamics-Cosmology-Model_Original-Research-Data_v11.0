@@ -1,0 +1,284 @@
+{
+  "script": "02_support_theorem.py",
+  "checks": [
+    {
+      "name": "V1a 21/21 σ-對：γ_a + γ_b = 4 精確（0 違反）",
+      "pass": true,
+      "detail": "違反 0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V1b 自對點 γ₂₂ = 2（= μ²，χ = 0）",
+      "pass": true,
+      "detail": "γ₂₂ − μ² = 0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V1c σ-孤兒 γ₄₄ = 4（= B，χ = +2）",
+      "pass": true,
+      "detail": "γ₄₄ − B = 0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V1d chirality 算子關係 S H S⁻¹ = 4·I − H（逐模 44/44）",
+      "pass": true,
+      "detail": "γ_{44−n} = 4 − γ_n ⟹ H 之 chiral 中心 = μ² = 2",
+      "tag": "V1",
+      "integrity": true
+    },
+    {
+      "name": "V2 σ-閉合 ⟹ E = 4k_pair + 2[22] + 4[44] 精確（|S|≤4 全枚舉，0 例外）",
+      "pass": true,
+      "detail": "例外 0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V3 逆命題（E ∈ ℤ ⟹ σ-閉合）：|S|≤4 完全枚舉",
+      "pass": true,
+      "detail": "0 反例",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V3b 逆命題大 |S| 抽樣（200000 樣本，|S| ∈ 5..22）",
+      "pass": true,
+      "detail": "非閉合而 E ∈ ℤ 之樣本 = 0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V4a 總數 = 2^23 = 8388608",
+      "pass": true,
+      "detail": "8388608",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V4b 全部能量 ∈ 2ℤ 且 ≥ 0（零奇數能量）",
+      "pass": true,
+      "detail": "能量全偶",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V4c 支撐自由度 = 0（支撐只由 23 個布爾槽決定，冇連續參數）",
+      "pass": true,
+      "detail": "決策變量 = 23 個 {0,1}（21 對 + {22} + {44}）⟹ 零連續 dof",
+      "tag": "V4",
+      "integrity": true
+    },
+    {
+      "name": "V5a 全部兩體 χ=0 內容 E = 4 精確（退化）",
+      "pass": true,
+      "detail": "E 值集 = [4.0, 4.0, 4.0]",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V5b 全部三體 χ=0 內容 E = 6 精確（退化）",
+      "pass": true,
+      "detail": "22/22 條 E=6，max|Δ| = 1.2446e-60（mp dps60 捨入級）",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V5c 兩體／三體 χ=0 槽數均 = 22 = N_d/2",
+      "pass": true,
+      "detail": "22 / 22（= 21 σ-對 ＋ 全自對點組合）",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6a χ=0 讀法：全部觀測落 {4M₀, 6M₀} ±2% 內？",
+      "pass": false,
+      "detail": "不行（ρ dev 86%、p dev 88%）⟹ 🔴 chain-sector 唔係質量載體",
+      "tag": "V6",
+      "integrity": false
+    },
+    {
+      "name": "V6b 無選擇律支之鑑別力 = 0（E 值集過密 ⟹ 標籤非預言）",
+      "pass": true,
+      "detail": "可取值 15181 個，覆蓋 [0, 8] ⟹ 任何目標都命中 ⟹ 零預言力",
+      "tag": "V6",
+      "integrity": false
+    },
+    {
+      "name": "V7 對極定律對 N_c = 2..44 全部成立（非 88-專屬）",
+      "pass": true,
+      "detail": "⟹ 定理 generic，唔係 88 特定",
+      "tag": "V7",
+      "integrity": true
+    },
+    {
+      "name": "V7b Σγ = 2N_c + μ² 只在 N_c 偶數成立",
+      "pass": true,
+      "detail": "奇 N_c 無自對點（γ 中心唔落格）",
+      "tag": "V7",
+      "integrity": true
+    }
+  ],
+  "pass": 16,
+  "fail": 1,
+  "integrity_fail": 0,
+  "verdict_negative": 1,
+  "sigma_pairs": 21,
+  "self_dual": 22,
+  "orphan": 44,
+  "supply_total": 8388608,
+  "energy_hist": {
+    "0": 1,
+    "2": 1,
+    "4": 22,
+    "6": 22,
+    "8": 231,
+    "10": 231,
+    "12": 1540,
+    "14": 1540,
+    "16": 7315,
+    "18": 7315,
+    "20": 26334,
+    "22": 26334,
+    "24": 74613,
+    "26": 74613,
+    "28": 170544,
+    "30": 170544,
+    "32": 319770,
+    "34": 319770,
+    "36": 497420,
+    "38": 497420,
+    "40": 646646,
+    "42": 646646,
+    "44": 705432,
+    "46": 705432,
+    "48": 646646,
+    "50": 646646,
+    "52": 497420,
+    "54": 497420,
+    "56": 319770,
+    "58": 319770,
+    "60": 170544,
+    "62": 170544,
+    "64": 74613,
+    "66": 74613,
+    "68": 26334,
+    "70": 26334,
+    "72": 7315,
+    "74": 7315,
+    "76": 1540,
+    "78": 1540,
+    "80": 231,
+    "82": 231,
+    "84": 22,
+    "86": 22,
+    "88": 1,
+    "90": 1
+  },
+  "neutral2_count": 22,
+  "neutral2_E": [
+    4.0,
+    4.0,
+    4.0
+  ],
+  "neutral3_count": 22,
+  "neutral3_E": [
+    6.0,
+    6.0,
+    6.0
+  ],
+  "mass_rows": [
+    {
+      "hadron": "π±",
+      "mass": 139.57039,
+      "E_req": 5.002358883212253,
+      "dev_vs_4M0": 0.20037724333936446,
+      "dev_vs_6M0": 0.1994341349909533
+    },
+    {
+      "hadron": "K±",
+      "mass": 493.677,
+      "E_req": 17.693935844039522,
+      "dev_vs_4M0": 0.7739338474346587,
+      "dev_vs_6M0": 0.6609007711519881
+    },
+    {
+      "hadron": "ρ(770)",
+      "mass": 775.26,
+      "E_req": 27.7861855068194,
+      "dev_vs_4M0": 0.8560435724789103,
+      "dev_vs_6M0": 0.7840653587183655
+    },
+    {
+      "hadron": "p",
+      "mass": 938.272,
+      "E_req": 33.62871791122262,
+      "dev_vs_4M0": 0.8810540440298762,
+      "dev_vs_6M0": 0.8215810660448143
+    },
+    {
+      "hadron": "Δ(1232)",
+      "mass": 1232.0,
+      "E_req": 44.15625795784833,
+      "dev_vs_4M0": 0.9094126136363636,
+      "dev_vs_6M0": 0.8641189204545454
+    }
+  ],
+  "rigidity": [
+    {
+      "N_c": 2,
+      "pair_law": true,
+      "sum_gamma": 6.0,
+      "sum_rule_2Nc+2": 6.0,
+      "sum_ok": true
+    },
+    {
+      "N_c": 3,
+      "pair_law": true,
+      "sum_gamma": 8.0,
+      "sum_rule_2Nc+2": null,
+      "sum_ok": true
+    },
+    {
+      "N_c": 5,
+      "pair_law": true,
+      "sum_gamma": 12.0,
+      "sum_rule_2Nc+2": null,
+      "sum_ok": true
+    },
+    {
+      "N_c": 6,
+      "pair_law": true,
+      "sum_gamma": 14.0,
+      "sum_rule_2Nc+2": 14.0,
+      "sum_ok": true
+    },
+    {
+      "N_c": 11,
+      "pair_law": true,
+      "sum_gamma": 24.0,
+      "sum_rule_2Nc+2": null,
+      "sum_ok": true
+    },
+    {
+      "N_c": 22,
+      "pair_law": true,
+      "sum_gamma": 46.0,
+      "sum_rule_2Nc+2": 46.0,
+      "sum_ok": true
+    },
+    {
+      "N_c": 44,
+      "pair_law": true,
+      "sum_gamma": 90.0,
+      "sum_rule_2Nc+2": 90.0,
+      "sum_ok": true
+    }
+  ],
+  "exhaustive_sizes": 4,
+  "exhaustive_subsets": 149985,
+  "int_energy_count": 297,
+  "nonint_energy_count": 149688
+}

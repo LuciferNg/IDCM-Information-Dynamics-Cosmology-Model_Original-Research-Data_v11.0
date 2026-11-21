@@ -1,0 +1,71 @@
+{
+  "script": "16_md12_correction.py",
+  "checks": [
+    {
+      "name": "C1a A₅ 之交換子維數 = 8（與 Σ mult² 交叉核）",
+      "pass": true,
+      "detail": "8",
+      "tag": "C",
+      "integrity": true
+    },
+    {
+      "name": "C2a ★ A₄ 交換子維數 36 **嚴格大於** A₅ 之 8 ⟹ 允許更多混合（可劈開重數）",
+      "pass": true,
+      "detail": "36 > 8",
+      "tag": "C",
+      "integrity": true
+    },
+    {
+      "name": "C3a G-等型維數 = 8 = 2 份 × dim G ⟹ 重數 = 2",
+      "pass": true,
+      "detail": "rank 8",
+      "tag": "C",
+      "integrity": true
+    },
+    {
+      "name": "C3b ★ 顯式見證：存在 A₄-等變、但喺重數空間上非純量之算子 ⟹ 可劈開 2 份 G",
+      "pass": true,
+      "detail": "rank 8",
+      "tag": "C",
+      "integrity": true
+    },
+    {
+      "name": "C4a ★ `MD12` 前提 P（H 為 A₅-等變）**被接駁結構否證** ⟹ 退化論證失效 ⟹ `60` 唔被排除",
+      "pass": false,
+      "detail": "⟹ MD12 必須撤回為條件性命題（append-only 更正）",
+      "tag": "C4",
+      "integrity": false
+    },
+    {
+      "name": "C4b `MD11` 不受影響（Frobenius 誘導係模塊層事實，與 H 之等變性無關）",
+      "pass": true,
+      "detail": "A1 逐類相等仍成立",
+      "tag": "C4",
+      "integrity": false
+    },
+    {
+      "name": "C5a 態數判別：6 vs 16 多重態（可數、可證偽，但**較弱**：靠經濟性非定理）",
+      "pass": true,
+      "detail": "比例 3",
+      "tag": "C",
+      "integrity": true
+    },
+    {
+      "name": "C5b 判定：`{20,60}` 之 1 bit **未解**（群論層兩者皆合法）；只能用態數經濟性 🟡 傾向 20",
+      "pass": false,
+      "detail": "唔可以宣稱已判 ⟹ 誠實報殘",
+      "tag": "C5",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "commutant_A5_on_20": 8,
+  "commutant_A4_on_20": 36,
+  "G_isotypic_dim": 8,
+  "A4_invariant_dim_on_G_isotypic": 8,
+  "witness_exists": true,
+  "MD12_status": "WITHDRAWN (premise refuted)",
+  "multiplet_20": 6,
+  "multiplet_60": 16,
+  "bit_resolved": false
+}

@@ -1,0 +1,144 @@
+{
+  "script": "21_closeout_verify.py",
+  "checks": [
+    {
+      "name": "V1a Laplacian 特徵值（排序）== 2−2cos(2πk/88)（逐 88 個，|Δ|<1e-10）",
+      "pass": true,
+      "detail": "max|Δ| = 2.26e-14",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V1b `γ_n`（sin² 式）== 矩陣譜 `2−2cos(2πn/88)`（逐 44 個）",
+      "pass": true,
+      "detail": "max|Δ| = 5.3455e-51",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V2a Σγ = 90",
+      "pass": true,
+      "detail": "90.0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V2b Σγ² = 272",
+      "pass": true,
+      "detail": "272.0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V2c γ₄₄ = 4、γ₂₂ = 2",
+      "pass": true,
+      "detail": "γ₄₄=4.0｜γ₂₂=2.0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V2d γ_n + γ_{44−n} = 4（n=1..43 逐項）",
+      "pass": true,
+      "detail": "43/43",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V3a `5`-orbit：Σ mult² = 2（= 1+1 ⟹ `A ⊕ G`，dims 1+4 = 5）",
+      "pass": true,
+      "detail": "2",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V3b `20`-orbit：Σ mult² = 8（與 docs/14 內積法一致 ⟹ 第三路確認）",
+      "pass": true,
+      "detail": "8",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V3c regular（60 點）：#orbits(X×X) = 60 = Σ dim² = 1+9+9+16+25",
+      "pass": true,
+      "detail": "60",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V4a 塔指數 = (5,4,3)；積 = 60",
+      "pass": true,
+      "detail": "[5, 4, 3] 積 60",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V4b 60 = B(B²−1) = (B+1)B(B−1)",
+      "pass": true,
+      "detail": "4·15 = 5·4·3",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V5a 44 ∉ orbit 集（鏈表示盲之依據）",
+      "pass": true,
+      "detail": "44 ∉",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V5b 20 = 5·4 = F₅·B；12 = 3·4 = N_gen·B",
+      "pass": true,
+      "detail": "20｜12",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6a sites = 4(B²+1) = 68",
+      "pass": true,
+      "detail": "68",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6b Σλ（k=1..33）= 66（16 對 ×4 + λ₁₇=2）",
+      "pass": true,
+      "detail": "66.0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6b2 λ₃₄ = 4（sites/2 端點，唔計入 Σλ）",
+      "pass": true,
+      "detail": "4",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6c λ₁₇ = μ² = 2",
+      "pass": true,
+      "detail": "2.0",
+      "tag": "V",
+      "integrity": true
+    },
+    {
+      "name": "V6d λ_k + λ_{34−k} = 4（k=1..16）",
+      "pass": true,
+      "detail": "16/16",
+      "tag": "V",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "sigma_gamma": "90.0",
+  "sigma_gamma2": "272.0",
+  "burnside": {
+    "30": 16,
+    "20": 8,
+    "15": 6,
+    "12": 4,
+    "10": 3,
+    "6": 2,
+    "5": 2,
+    "1": 1
+  }
+}

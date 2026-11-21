@@ -1,0 +1,216 @@
+{
+  "script": "04_jpc_classification.py",
+  "checks": [
+    {
+      "name": "U1a B(d,s) ≡ ω_{d+s} + ω_{d−s} 精確",
+      "pass": true,
+      "detail": "beat = sum + difference",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U1b B(d,s) − B(s,d) = −2sin(...)⋯ 符號：只靠 |d−s| 對稱",
+      "pass": true,
+      "detail": "差式 = 4*sin(pi*(d/176 - s/176))（∝ sin((d−s)π/176)·[cos−cos]，非零 ⟹ B 唔係逐點對稱）",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U1c 交換 d↔s 非平凡（52/56 樣本 B(d,s) ≠ B(s,d)）⟹ 交換 Z₂ 分裂為對稱／反對稱",
+      "pass": true,
+      "detail": "⟹ 交換**確實**給出一個 Z₂（唔係冇），但要睇佢標籤咩",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U1d 交換分解精確：對稱部 ≡ ω_{d+s}（sum 模）、反對稱部 ≡ ω_{d−s}（beat 模）",
+      "pass": true,
+      "detail": "⟹ 交換 Z₂ 之標籤 = 已註冊之 sum／beat 通道（物質／反物質定向），非 J",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U1e 型別：d ∈ I₄₄（44 值）、s ∈ I₃₃（33 值）⟹ 兩 slot 唔同 index 集",
+      "pass": true,
+      "detail": "|I₄₄| = 44 ≠ |I₃₃| = 33 ⟹ (d,s) 之交換 ill-typed；可交換者只係**兩個組成子**，唔係鏈／樹 slot",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U2a Σd² = 176 = |D_88|（Burnside 恆等式閉合）",
+      "pass": true,
+      "detail": "4 + 172 = 176",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U2b max irrep dim = 2 < 3 ⟹ 冇 3 維 irrep ⟹ 唔可能承載 J 三重態",
+      "pass": true,
+      "detail": "d_max = 2（指數 2 之交換正規子群定理）",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U2c 由 |G|=176 與 d ∈ {1,2} 之算術：4·1 + 43·4 = 176 唯一解（含 3-維則 Σd² ≠ 176）",
+      "pass": true,
+      "detail": "176 = 4 + 172；加 3-維（9）後餘 167 唔可以由 {1,4} 湊出（167 mod 4 = 3 ≠ 1·? ）",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U2d Aut(P_34) = C_2（僅反射）⟹ 樹層亦無 3-維 irrep",
+      "pass": true,
+      "detail": "|Aut| = 2；irrep 2×1-維",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U2e mode／tree 層結構性唔能承載 J",
+      "pass": true,
+      "detail": "D_88 irrep ≤2 維、Aut(P_34)=C_2 ⟹ 層內無角動量三重態；J 必須由幾何層（A₅, |GeoAut|=60）供",
+      "tag": "U",
+      "integrity": false
+    },
+    {
+      "name": "U3a 樹層 parity 恆等式 ψ_k(34−d) = (−1)^{k+1}ψ_k(d)（33/33 精確）",
+      "pass": true,
+      "detail": "⟹ P = (−1)^{k+1}",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U3b 對 σ-閉合內容（R1 已證），chiral 標籤恆 +1（trivial，無鑑別力）",
+      "pass": true,
+      "detail": "χ = 0 ⟹ σ 標籤唔分裂；χ = ±2 只分 {44} 之有無",
+      "tag": "U",
+      "integrity": true
+    },
+    {
+      "name": "U4a T3 判死：mode 層供給 4 類 ≪ 需求 10 類（且 J 值集 [0, 1, 2, 3] 完全無載體）",
+      "pass": true,
+      "detail": "供給 4 / 需求 10 ⟹ 嚴重不足",
+      "tag": "U4",
+      "integrity": false
+    },
+    {
+      "name": "U4b T3 字面版本判死：交換 Z₂ 只給 C（sum／beat 定向）；(d,s) 之交換 ill-typed；J 無載體",
+      "pass": false,
+      "detail": "U1d/U1e/U2e 已證 ⟹ 🔴",
+      "tag": "U4",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "labels": [
+    {
+      "label": "C_exchange",
+      "carrier": "constituent permutation (a,b)↔(b,a)",
+      "values": [
+        -1,
+        1
+      ],
+      "why": "兩體波函數之對稱／反對稱組合；qq̄ 之 C-parity"
+    },
+    {
+      "label": "P_tree",
+      "carrier": "ψ_k(34−d)=(−1)^{k+1}ψ_k(d)",
+      "values": [
+        -1,
+        1
+      ],
+      "why": "徑向本徵函數之宇稱 ⟹ P"
+    },
+    {
+      "label": "χ_chiral",
+      "carrier": "χ(S) = Σ(γ_n−2)",
+      "values": "0 / ±2 / …",
+      "why": "只分『含 44 與否』，非二值"
+    }
+  ],
+  "light_jpc": [
+    [
+      "π⁰/π±",
+      "0−+"
+    ],
+    [
+      "η",
+      "0−+"
+    ],
+    [
+      "η′",
+      "0−+"
+    ],
+    [
+      "ρ(770)",
+      "1−−"
+    ],
+    [
+      "ω(782)",
+      "1−−"
+    ],
+    [
+      "φ(1020)",
+      "1−−"
+    ],
+    [
+      "K*(892)",
+      "1−"
+    ],
+    [
+      "a₀/f₀(980)",
+      "0++"
+    ],
+    [
+      "a₁(1260)",
+      "1++"
+    ],
+    [
+      "b₁(1235)",
+      "1+−"
+    ],
+    [
+      "h₁(1170)",
+      "1+−"
+    ],
+    [
+      "f₂(1270)",
+      "2++"
+    ],
+    [
+      "a₂(1320)",
+      "2++"
+    ],
+    [
+      "π₂(1670)",
+      "2−+"
+    ],
+    [
+      "π₁(1400)",
+      "1−+"
+    ],
+    [
+      "ρ₃(1690)",
+      "3−−"
+    ]
+  ],
+  "uniq_jpc": [
+    "0++",
+    "0−+",
+    "1++",
+    "1+−",
+    "1−",
+    "1−+",
+    "1−−",
+    "2++",
+    "2−+",
+    "3−−"
+  ],
+  "J_values": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "mode_supply_classes": 4,
+  "demand_classes": 10
+}

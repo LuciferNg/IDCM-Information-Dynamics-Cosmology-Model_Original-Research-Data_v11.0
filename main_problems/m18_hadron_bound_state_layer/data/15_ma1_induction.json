@@ -1,0 +1,100 @@
+{
+  "script": "15_ma1_induction.py",
+  "checks": [
+    {
+      "name": "A1a ★ Ind_{A₄}^{A₅}(4 點) 逐類 = χ_20 ⟹ `20`-載體 = **由接駁層誘導**（零參數）",
+      "pass": true,
+      "detail": "20 = Ind(5-orbit 之 A₄ 對 4 = B 子之作用)",
+      "tag": "A",
+      "integrity": true
+    },
+    {
+      "name": "A2a 20 分解 = A⊕T1⊕T2⊕2G⊕H，Σ = 20",
+      "pass": true,
+      "detail": "{'A': 1, 'T1': 1, 'T2': 1, 'G': 2, 'H': 1}",
+      "tag": "A",
+      "integrity": true
+    },
+    {
+      "name": "A2b 60 分解 = regular（重數 = dim），Σ = 60",
+      "pass": true,
+      "detail": "{'A': 1, 'T1': 3, 'T2': 3, 'G': 4, 'H': 5}",
+      "tag": "A",
+      "integrity": true
+    },
+    {
+      "name": "A2c 20 對 A/T1/T2/H 重數 = 1（唯一副本），僅 G 重數 2",
+      "pass": true,
+      "detail": "{'A': 1, 'T1': 1, 'T2': 1, 'G': 2, 'H': 1}",
+      "tag": "A",
+      "integrity": true
+    },
+    {
+      "name": "A3a ★ 若載體重數 > 1 且算子對載體盲 ⟹ **精確退化**（樹分裂同譜）⟹ 可證偽",
+      "pass": true,
+      "detail": "載體重數 = 額外自由度，非徑向激發（徑向由 R4 塔供應）",
+      "tag": "A",
+      "integrity": true
+    },
+    {
+      "name": "A4a 60-載體預言：J=1 有 3 份、J=2 有 5 份、J=3 有 4 份**精確退化**同 J^PC 態 —— 觀測冇此類精確退化",
+      "pass": true,
+      "detail": "20-載體只預言 G 雙重（J=3 或 4 兩態退化）",
+      "tag": "A4",
+      "integrity": false
+    },
+    {
+      "name": "A5a `20` 由接駁層誘導（A1 逐類相等）⟹ 載體唔再係自由揀，而係 Ind 構造",
+      "pass": true,
+      "detail": "20 = 5·B（F₅·B）＝ (四面體, 子節點) 關聯集；60 = 5·4·3（三重關聯）",
+      "tag": "A5",
+      "integrity": false
+    },
+    {
+      "name": "A5b 判別靠重數/退化（A4）：`20` 取；`60` 之精確退化預言與觀測唔相容 ⟹ **保留 60 作已被排除之候選**",
+      "pass": true,
+      "detail": "1 bit → 已判（條件：算子對載體盲）",
+      "tag": "A5",
+      "integrity": false
+    },
+    {
+      "name": "A5c 條件要明寫：若未來 MA1 連接律令算子**非**載體盲，則多重態可被劈開 ⟹ 60 復活",
+      "pass": true,
+      "detail": "本判為**條件性**（conditional on carrier-blind connection）",
+      "tag": "A",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "ind_equals_chi20": true,
+  "decomp_20": {
+    "A": 1,
+    "T1": 1,
+    "T2": 1,
+    "G": 2,
+    "H": 1
+  },
+  "decomp_60": {
+    "A": 1,
+    "T1": 3,
+    "T2": 3,
+    "G": 4,
+    "H": 5
+  },
+  "mult_20": {
+    "A": 1,
+    "T1": 1,
+    "T2": 1,
+    "G": 2,
+    "H": 1
+  },
+  "mult_60": {
+    "A": 1,
+    "T1": 3,
+    "T2": 3,
+    "G": 4,
+    "H": 5
+  },
+  "carrier": 20,
+  "conditional": "carrier-blind connection law"
+}

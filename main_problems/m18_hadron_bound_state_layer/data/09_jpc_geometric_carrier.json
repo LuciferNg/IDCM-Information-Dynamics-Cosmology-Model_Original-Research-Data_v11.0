@@ -1,0 +1,435 @@
+{
+  "script": "09_jpc_geometric_carrier.py",
+  "checks": [
+    {
+      "name": "Z1a |T|=12、|O|=24、|I|=60 且類數 4/5/5",
+      "pass": true,
+      "detail": "12/24/60，類 4/5/5",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z1b 點群 irrep Σd² = |G|：C_n(1..12)、D_n(2..12)、T/O/I 全過",
+      "pass": true,
+      "detail": "Burnside 核 5/5 族",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z2a A₅ 特徵表 25+25 條正交關係精確成立",
+      "pass": true,
+      "detail": "列 25/25、行 25/25",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z2b Σ(χ(e))² = 1+9+9+16+25 = 60 = |A₅|",
+      "pass": true,
+      "detail": "60",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z3a 全部 J=0..8 之 n_R 為整數（1e−30 內）",
+      "pass": true,
+      "detail": "9/9",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z3b 內部閉合 Σ_R n_R·dim R = 2J+1（J=0..8）",
+      "pass": true,
+      "detail": "9/9",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z4a 有 3 維 irrep（J=1）者 = {T, O, I} 全部",
+      "pass": true,
+      "detail": "['T', 'O', 'I']",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z4b ★ 有 5 維 irrep（J=2）者 **唯一** = {I}",
+      "pass": true,
+      "detail": "T/O 皆無 5 維 ⟹ J=2 之存在**強制**載體為二十面體群（I ≅ A₅），非選擇",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z4c J 載體 = 幾何層 A₅（I）—— 由 J=2 之存在唯一逼出",
+      "pass": true,
+      "detail": "非「揀似嘅」；mode/tree 層（docs/04）結構性無 3 維 irrep ⟹ 唔可能替代",
+      "tag": "Z4",
+      "integrity": false
+    },
+    {
+      "name": "Z5a 單一 irrep J 值域 = {0,1,2}，載體 = {A, T1, H}（G 之 4 維無 2J+1 匹配）",
+      "pass": true,
+      "detail": "[0, 1, 2] ／ {0: 'A', 1: 'T1', 2: 'H'}（G dim=4 ⟹ 唔可能係純 J 多重態）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z5b J^PC 容量 = 12 類（3 irrep × P × C，零參數）",
+      "pass": true,
+      "detail": "12",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z5c T2 首次出現 J = 3（與 T1 之 J=1 不對稱）⟹ T2 態唔可能係 J=1",
+      "pass": true,
+      "detail": "T1→1（J=1）、T2→3（J=3）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6a 全部低窪（<1.7 GeV）J^PC 可命於 {A, T1, T2, H}（10/10）",
+      "pass": true,
+      "detail": "10/10 有載體",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6b J=3（ρ₃(1690) 3−−）須多 irrep（G⊕T2）⟹ 唔可能單一 irrep",
+      "pass": true,
+      "detail": "J=3 ⟹ G(4)+T2(3) = 7 ✓ ⟹ J≥3 必須分裂多重態",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6c 首現質量對 J 單調升（5/5，無反例）",
+      "pass": true,
+      "detail": "單調 ⟹ 與『J≥3 需多 irrep（額外成本）』相容；反例將直接否證本讀法",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6d ★ 已觀測 ⊆ 預測（7/7 逐類），且空槽 = qq̄ 禁類",
+      "pass": true,
+      "detail": "pred 8 ⊇ obs 7；pred−obs = ['2−−']（活預言）；12-容量內 qq̄ 禁類 = ['0+−', '0−−', '1−+', '2+−']（exotic 空槽）",
+      "tag": "Z",
+      "integrity": true
+    },
+    {
+      "name": "Z6e ★ 3−− ∉ 單 irrep 容量 12 ⟹ J=3 必須多 irrep（與 ρ₃(1690) 偏重一致）",
+      "pass": true,
+      "detail": "qq̄ 允許含 3−− 但容量唔含 ⟹ 結構上需要 G⊕T2 分裂多重態",
+      "tag": "Z",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "A5_classes": [
+    1,
+    12,
+    12,
+    20,
+    15
+  ],
+  "A5_char": {
+    "A": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "T1": [
+      "3",
+      "1/2 + sqrt(5)/2",
+      "1/2 - sqrt(5)/2",
+      "0",
+      "-1"
+    ],
+    "T2": [
+      "3",
+      "1/2 - sqrt(5)/2",
+      "1/2 + sqrt(5)/2",
+      "0",
+      "-1"
+    ],
+    "G": [
+      "4",
+      "-1",
+      "-1",
+      "1",
+      "0"
+    ],
+    "H": [
+      "5",
+      "0",
+      "0",
+      "-1",
+      "1"
+    ]
+  },
+  "branch_SO3_down_I": {
+    "0": {
+      "A": 1,
+      "T1": 0,
+      "T2": 0,
+      "G": 0,
+      "H": 0
+    },
+    "1": {
+      "A": 0,
+      "T1": 1,
+      "T2": 0,
+      "G": 0,
+      "H": 0
+    },
+    "2": {
+      "A": 0,
+      "T1": 0,
+      "T2": 0,
+      "G": 0,
+      "H": 1
+    },
+    "3": {
+      "A": 0,
+      "T1": 0,
+      "T2": 1,
+      "G": 1,
+      "H": 0
+    },
+    "4": {
+      "A": 0,
+      "T1": 0,
+      "T2": 0,
+      "G": 1,
+      "H": 1
+    },
+    "5": {
+      "A": 0,
+      "T1": 1,
+      "T2": 1,
+      "G": 0,
+      "H": 1
+    },
+    "6": {
+      "A": 1,
+      "T1": 1,
+      "T2": 0,
+      "G": 1,
+      "H": 1
+    },
+    "7": {
+      "A": 0,
+      "T1": 1,
+      "T2": 1,
+      "G": 1,
+      "H": 1
+    },
+    "8": {
+      "A": 0,
+      "T1": 0,
+      "T2": 1,
+      "G": 1,
+      "H": 2
+    }
+  },
+  "groups_with_3dim": [
+    "T",
+    "O",
+    "I"
+  ],
+  "groups_with_5dim": [
+    "I"
+  ],
+  "single_irrep_J": [
+    0,
+    1,
+    2
+  ],
+  "carrier": {
+    "0": "A",
+    "1": "T1",
+    "2": "H"
+  },
+  "first_J": {
+    "A": 0,
+    "T1": 1,
+    "T2": 3,
+    "G": 3,
+    "H": 2
+  },
+  "capacity_classes": [
+    "0++",
+    "0+−",
+    "0−+",
+    "0−−",
+    "1++",
+    "1+−",
+    "1−+",
+    "1−−",
+    "2++",
+    "2+−",
+    "2−+",
+    "2−−"
+  ],
+  "spare": [
+    "0+−",
+    "0−−",
+    "1−+",
+    "2+−",
+    "2−−"
+  ],
+  "qqbar_allowed": [
+    "0++",
+    "0−+",
+    "1++",
+    "1+−",
+    "1−−",
+    "2++",
+    "2−+",
+    "2−−",
+    "3−−"
+  ],
+  "predicted_classes": [
+    "0++",
+    "0−+",
+    "1++",
+    "1+−",
+    "1−−",
+    "2++",
+    "2−+",
+    "2−−"
+  ],
+  "observed_classes": [
+    "0++",
+    "0−+",
+    "1++",
+    "1+−",
+    "1−−",
+    "2++",
+    "2−+"
+  ],
+  "JPC_capacity": 12,
+  "low_jpc_rows": [
+    {
+      "hadron": "π",
+      "jpc": "0−+",
+      "J": 0,
+      "dim": 1,
+      "irreps": [
+        "A"
+      ]
+    },
+    {
+      "hadron": "η",
+      "jpc": "0−+",
+      "J": 0,
+      "dim": 1,
+      "irreps": [
+        "A"
+      ]
+    },
+    {
+      "hadron": "ρ(770)",
+      "jpc": "1−−",
+      "J": 1,
+      "dim": 3,
+      "irreps": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "hadron": "ω(782)",
+      "jpc": "1−−",
+      "J": 1,
+      "dim": 3,
+      "irreps": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "hadron": "a₀/f₀(980)",
+      "jpc": "0++",
+      "J": 0,
+      "dim": 1,
+      "irreps": [
+        "A"
+      ]
+    },
+    {
+      "hadron": "a₁(1260)",
+      "jpc": "1++",
+      "J": 1,
+      "dim": 3,
+      "irreps": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "hadron": "b₁(1235)",
+      "jpc": "1+−",
+      "J": 1,
+      "dim": 3,
+      "irreps": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "hadron": "f₂(1270)",
+      "jpc": "2++",
+      "J": 2,
+      "dim": 5,
+      "irreps": [
+        "H"
+      ]
+    },
+    {
+      "hadron": "a₂(1320)",
+      "jpc": "2++",
+      "J": 2,
+      "dim": 5,
+      "irreps": [
+        "H"
+      ]
+    },
+    {
+      "hadron": "π₂(1670)",
+      "jpc": "2−+",
+      "J": 2,
+      "dim": 5,
+      "irreps": [
+        "H"
+      ]
+    }
+  ],
+  "first_mass": [
+    {
+      "J": 0,
+      "mass": 139.57039,
+      "hadron": "π"
+    },
+    {
+      "J": 1,
+      "mass": 775.26,
+      "hadron": "ρ"
+    },
+    {
+      "J": 2,
+      "mass": 1270.0,
+      "hadron": "f₂"
+    },
+    {
+      "J": 3,
+      "mass": 1688.8,
+      "hadron": "ρ₃"
+    },
+    {
+      "J": 4,
+      "mass": 2040.0,
+      "hadron": "f₄"
+    }
+  ],
+  "monotone": true
+}

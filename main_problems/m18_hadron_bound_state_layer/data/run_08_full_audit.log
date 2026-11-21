@@ -1,0 +1,234 @@
+==============================================================================
+A1. 重跑 01–07，比對 data JSON（byte-identical）
+==============================================================================
+  01_reproduction_gate.py              exit=0  sha 72b48eae603d… identical
+  02_support_theorem.py                exit=0  sha 0e236ac88ee4… identical
+  03_composition_law.py                exit=0  sha 1a839d36d37f… identical
+  04_jpc_classification.py             exit=0  sha f6d91da893a2… identical
+  05_radial_ladder.py                  exit=0  sha 0c78f63fd4ed… identical
+  06_shape_parameter_identity.py       exit=0  sha da3b3abbcf37… identical
+  07_feedback_gate.py                  exit=0  sha cbf1be3ef1a4… identical
+  09_jpc_geometric_carrier.py          exit=0  sha 52a0df806e7a… identical
+  10_residual_census.py                exit=0  sha 9c0464f63d59… identical
+  11_coupling_mechanism.py             exit=0  sha 2571d5bbedb4… identical
+  12_ma1_faithfulness.py               exit=0  sha 1b019cf873a3… identical
+  13_ma1_tower.py                      exit=0  sha 21e4bd255869… identical
+  14_ma1_carrier.py                    exit=0  sha 4a8727ab9a87… identical
+  15_ma1_induction.py                  exit=0  sha 493c75e4018c… identical
+  16_md12_correction.py                exit=0  sha 1c8fe3a4f39a… identical
+  17_connection_law.py                 exit=0  sha 033aa457bff0… identical
+  18_ma234_resolution.py               exit=0  sha 8f5bdddd919c… identical
+  21_closeout_verify.py                exit=0  sha db090e3af03d… identical
+  22_coupling_dof.py                   exit=0  sha aed1b3294e5b… identical
+  PASS A1a 全部 01–07 exit 0 :: exit 集合 = [0]
+  PASS A1b 全部 data JSON byte-identical（重跑） :: 19/19 identical
+
+==============================================================================
+A2/A3/A4. docstring／JSON 結構／docs 對應
+==============================================================================
+  PASS A2 01_reproduction_gate.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 01_reproduction_gate.py JSON 可解析且含 checks/pass :: ['script', 'version', 'dps', 'checks', 'warns', 'pass']
+  PASS A2 02_support_theorem.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 02_support_theorem.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'pass', 'fail', 'integrity_fail', 'verdict_negative']
+  PASS A2 03_composition_law.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 03_composition_law.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'sum_hits', 'sum_all_m44', 'beat_hits']
+  PASS A2 04_jpc_classification.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 04_jpc_classification.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'labels', 'light_jpc', 'uniq_jpc']
+  PASS A2 05_radial_ladder.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 05_radial_ladder.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'intersection', 'capacity_pairs', 'cayley_ladder_u']
+  PASS A2 06_shape_parameter_identity.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 06_shape_parameter_identity.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'T_A', 'T_t', 'family_size']
+  PASS A2 07_feedback_gate.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 07_feedback_gate.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'A_max_MeV', 'A_req_MeV', 'Needed_B']
+  PASS A2 09_jpc_geometric_carrier.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 09_jpc_geometric_carrier.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'A5_classes', 'A5_char', 'branch_SO3_down_I']
+  PASS A2 10_residual_census.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 10_residual_census.py JSON 可解析且含 checks/pass :: ['script', 'residual_register', 'checks', 'integrity_fail', 'ground_P', 'pi_ratio']
+  PASS A2 11_coupling_mechanism.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 11_coupling_mechanism.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'a5_subgroup_orders', 'a5_orbit_sizes', 'branch']
+  PASS A2 12_ma1_faithfulness.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 12_ma1_faithfulness.py JSON 可解析且含 checks/pass :: ['script', 'code', 'checks', 'integrity_fail', 'A5_order', 'class_sizes']
+  PASS A2 13_ma1_tower.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 13_ma1_tower.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'subgroup_count', 'by_order', 'orbit_rows']
+  PASS A2 14_ma1_carrier.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 14_ma1_carrier.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'tower_intersection', 'orbit12_irreps', 'decomp_by_n']
+  PASS A2 15_ma1_induction.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 15_ma1_induction.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'ind_equals_chi20', 'decomp_20', 'decomp_60']
+  PASS A2 16_md12_correction.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 16_md12_correction.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'commutant_A5_on_20', 'commutant_A4_on_20', 'G_isotypic_dim']
+  PASS A2 17_connection_law.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 17_connection_law.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'stabilizer_tower', 'levels', 'fibers']
+  PASS A2 18_ma234_resolution.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 18_ma234_resolution.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'icosa_rotation_order', 'icosa_dets', 'full_sym_order']
+  PASS A2 21_closeout_verify.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 21_closeout_verify.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'sigma_gamma', 'sigma_gamma2', 'burnside']
+  PASS A2 22_coupling_dof.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 22_coupling_dof.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'A4_decomp', 'hom_dims', 'A5_hom_F0F1']
+
+==============================================================================
+A5. 關鍵數字追溯（docs §四 出現之核心數 ⟹ data JSON 內存在）
+==============================================================================
+  PASS A5 01_reproduction_gate.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 02_support_theorem.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 03_composition_law.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 04_jpc_classification.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 05_radial_ladder.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 06_shape_parameter_identity.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 07_feedback_gate.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 09_jpc_geometric_carrier.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 10_residual_register.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 11_coupling_mechanism.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 12_ma1_faithfulness.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 13_ma1_tower.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 14_ma1_carrier.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 15_ma1_induction.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 16_md12_correction.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 17_connection_law.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 18_ma234_resolution.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 21_closeout_verify.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 22_coupling_dof.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+
+==============================================================================
+A6. 本 M 目錄外零寫入（git status ＋ mtime 歸屬）
+==============================================================================
+  session 起點標記 mtime = 2026-11-19 20:44:15
+  變更行 69｜本 M 7｜本 M 以外（早於起點）10｜晚於起點 52
+     [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/audit_verify.json
+     [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit.log
+     [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit_boot.log
+     [pre-existing dir] ?? _backup/
+     [pre-existing 11-10 09:06] ?? main_problems/m14_uds_assignment/data/chain_matrix.json.bak_20261119_1017
+     [pre-existing 11-19 10:17] ?? main_problems/m14_uds_assignment/data/chain_matrix.json.bak_20261121_0140
+     [pre-existing 11-19 10:17] ?? main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md.bak2_20261121_0141
+     [pre-existing 11-10 12:46] ?? main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md.bak_20261119_1017
+     [pre-existing 11-10 09:52] ?? main_problems/m14_uds_assignment/scripts/l2_independent_verify.py.bak_20261121_0152
+     [pre-existing 11-10 09:43] ?? main_problems/m14_uds_assignment/scripts/l3_doc_crosscheck.py.bak_20261121_0152
+     [★ late 11-21 19:34]  M main_problems/m14_uds_assignment/data/audit_verify.json
+     [★ late 11-21 01:40]  M main_problems/m14_uds_assignment/data/chain_matrix.json
+     [★ late 11-21 19:34]  M main_problems/m14_uds_assignment/data/l2_independent_verify.json
+     [★ late 11-21 19:34]  M main_problems/m14_uds_assignment/data/l3_doc_crosscheck.json
+     [★ late 11-21 18:08]  M main_problems/m14_uds_assignment/data/reverse_coverage.json
+     [★ late 11-21 19:34]  M main_problems/m14_uds_assignment/data/run_23_audit_verify.log
+     [★ late 11-21 15:45]  M main_problems/m14_uds_assignment/data/run_37_reverse_coverage.log
+     [★ late 11-21 15:37]  M main_problems/m14_uds_assignment/data/run_l2_independent_verify.log
+     [★ late 11-21 15:45]  M main_problems/m14_uds_assignment/data/run_l3_doc_crosscheck.log
+     [★ late 11-21 01:42]  M main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md
+     [★ late 11-21 15:27]  M main_problems/m14_uds_assignment/scripts/l2_independent_verify.py
+     [★ late 11-21 01:52]  M main_problems/m14_uds_assignment/scripts/l3_doc_crosscheck.py
+     [★ late 11-21 02:02] ?? main_problems/m14_uds_assignment/data/chain_logs/e8tail_A_clean_p97C.log
+     [★ late 11-21 02:02] ?? main_problems/m14_uds_assignment/data/chain_logs/e8tail_B_clean_p97D.log
+     [★ late 11-21 02:02] ?? main_problems/m14_uds_assignment/data/e8_chain_clean.json
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_02_q1_station_gauge.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_03_q2a_label_provenance.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_04_q2b_permutation_uniqueness.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_05_q3_delta_u_sign.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_06_q4_third_slot.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_07_m13_incoming_reply.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_08_classification_partitions.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_09_pair_galois_orbits.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_10_symmetry_group_irreps.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_11_pair_physical_classification.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_13_channel_fate_classification.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_14_three_wave_resonance.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_15_general_resonance_law.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_16_convention_and_three_triples.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_17_chi3_charge_coefficient.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_18_triples_vs_tpipe.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_19_four_wave_and_mod3.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_20_single_label_theorem.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_21_odd_even_phase_gap.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_22_budget_defect_and_dyadic_depth.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_24_charge_kernel_and_complement.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_26_odd_sector_and_partition_separability.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_27_fourwave_88_and_duality.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_28_sublattice_divisibility.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_29_qsqrt2_sector_and_field_criterion.log
+     [★ late 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_30_ladder_ap_vs_gp.log
+     [★ late 11-21 01:54] ?? main_problems/m14_uds_assignment/data/run_31_general_ap_gp_criterion.log
+     [★ late 11-21 01:55] ?? main_problems/m14_uds_assignment/data/run_34_phi_ladder_identity.log
+     [★ late 11-21 01:55] ?? main_problems/m14_uds_assignment/data/run_35_residue_five_items.log
+     [★ late 11-21 01:56] ?? main_problems/m14_uds_assignment/data/run_36_parity_and_delta_theorems.log
+     [★ late 11-21 01:58] ?? main_problems/m14_uds_assignment/data/run_39_k3_closed_form_proof.log
+     [★ late 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_40_fourwave_overlap_theorem.log
+     [★ late 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_42_cross_section_machine.log
+     [★ late 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_43_second_order_selfenergy.log
+     [★ late 11-21 02:00] ?? main_problems/m14_uds_assignment/data/run_44_bubble_and_sign.log
+     [★ late 11-21 04:05] ?? main_problems/m14_uds_assignment/data/run_chain_audit18.log
+     [★ late 11-21 01:52] ?? main_problems/m14_uds_assignment/scripts/l2_independent_verify.py.bak2_20261121_1508
+     [mine]  M main_problems/m18_hadron_bound_state_layer/01_problem_record.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/README.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/SESSION_START.md
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/data/
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/docs/
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/final_result.md
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/scripts/
+  PASS A6a 硬閘結構證明：mode=enforce、本 session 恰 1 scope、roots 只含 m18 ⟹ 越界寫入結構上不可能 :: mode=enforce｜scope 數=1｜roots=['~/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m18_hadron_bound_state_layer']
+   本 M 外變更 62 行；落喺他 M 目錄／備份 62 行；無法歸屬 0 行
+     [outside 11-07 14:59]  M main_problems/m16_group_selection_principle/data/audit_verify.json
+     [outside 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit.log
+     [outside 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit_boot.log
+     [outside dir] ?? _backup/
+     [outside 11-10 09:06] ?? main_problems/m14_uds_assignment/data/chain_matrix.json.bak_20261119_1017
+     [outside 11-19 10:17] ?? main_problems/m14_uds_assignment/data/chain_matrix.json.bak_20261121_0140
+     [outside 11-19 10:17] ?? main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md.bak2_20261121_0141
+     [outside 11-10 12:46] ?? main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md.bak_20261119_1017
+     [outside 11-10 09:52] ?? main_problems/m14_uds_assignment/scripts/l2_independent_verify.py.bak_20261121_0152
+     [outside 11-10 09:43] ?? main_problems/m14_uds_assignment/scripts/l3_doc_crosscheck.py.bak_20261121_0152
+     [outside 11-21 19:34]  M main_problems/m14_uds_assignment/data/audit_verify.json
+     [outside 11-21 01:40]  M main_problems/m14_uds_assignment/data/chain_matrix.json
+     [outside 11-21 19:34]  M main_problems/m14_uds_assignment/data/l2_independent_verify.json
+     [outside 11-21 19:34]  M main_problems/m14_uds_assignment/data/l3_doc_crosscheck.json
+     [outside 11-21 18:08]  M main_problems/m14_uds_assignment/data/reverse_coverage.json
+     [outside 11-21 19:34]  M main_problems/m14_uds_assignment/data/run_23_audit_verify.log
+     [outside 11-21 15:45]  M main_problems/m14_uds_assignment/data/run_37_reverse_coverage.log
+     [outside 11-21 15:37]  M main_problems/m14_uds_assignment/data/run_l2_independent_verify.log
+     [outside 11-21 15:45]  M main_problems/m14_uds_assignment/data/run_l3_doc_crosscheck.log
+     [outside 11-21 01:42]  M main_problems/m14_uds_assignment/docs/53_e7_matrix_cpu_gpu.md
+     [outside 11-21 15:27]  M main_problems/m14_uds_assignment/scripts/l2_independent_verify.py
+     [outside 11-21 01:52]  M main_problems/m14_uds_assignment/scripts/l3_doc_crosscheck.py
+     [outside 11-21 02:02] ?? main_problems/m14_uds_assignment/data/chain_logs/e8tail_A_clean_p97C.log
+     [outside 11-21 02:02] ?? main_problems/m14_uds_assignment/data/chain_logs/e8tail_B_clean_p97D.log
+     [outside 11-21 02:02] ?? main_problems/m14_uds_assignment/data/e8_chain_clean.json
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_02_q1_station_gauge.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_03_q2a_label_provenance.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_04_q2b_permutation_uniqueness.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_05_q3_delta_u_sign.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_06_q4_third_slot.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_07_m13_incoming_reply.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_08_classification_partitions.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_09_pair_galois_orbits.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_10_symmetry_group_irreps.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_11_pair_physical_classification.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_13_channel_fate_classification.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_14_three_wave_resonance.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_15_general_resonance_law.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_16_convention_and_three_triples.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_17_chi3_charge_coefficient.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_18_triples_vs_tpipe.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_19_four_wave_and_mod3.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_20_single_label_theorem.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_21_odd_even_phase_gap.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_22_budget_defect_and_dyadic_depth.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_24_charge_kernel_and_complement.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_26_odd_sector_and_partition_separability.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_27_fourwave_88_and_duality.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_28_sublattice_divisibility.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_29_qsqrt2_sector_and_field_criterion.log
+     [outside 11-21 01:53] ?? main_problems/m14_uds_assignment/data/run_30_ladder_ap_vs_gp.log
+     [outside 11-21 01:54] ?? main_problems/m14_uds_assignment/data/run_31_general_ap_gp_criterion.log
+     [outside 11-21 01:55] ?? main_problems/m14_uds_assignment/data/run_34_phi_ladder_identity.log
+     [outside 11-21 01:55] ?? main_problems/m14_uds_assignment/data/run_35_residue_five_items.log
+     [outside 11-21 01:56] ?? main_problems/m14_uds_assignment/data/run_36_parity_and_delta_theorems.log
+     [outside 11-21 01:58] ?? main_problems/m14_uds_assignment/data/run_39_k3_closed_form_proof.log
+     [outside 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_40_fourwave_overlap_theorem.log
+     [outside 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_42_cross_section_machine.log
+     [outside 11-21 01:59] ?? main_problems/m14_uds_assignment/data/run_43_second_order_selfenergy.log
+     [outside 11-21 02:00] ?? main_problems/m14_uds_assignment/data/run_44_bubble_and_sign.log
+     [outside 11-21 04:05] ?? main_problems/m14_uds_assignment/data/run_chain_audit18.log
+     [outside 11-21 01:52] ?? main_problems/m14_uds_assignment/scripts/l2_independent_verify.py.bak2_20261121_1508
+  PASS A6b 本 M 外變更全部落喺他 M 目錄（並行 session）⟹ 本 session 可歸因寫入 = 0 :: 無法歸屬 0 行
+
+==============================================================================
+匯總：PASS 61 / FAIL 0（共 61）
+==============================================================================
+JSON → data/08_full_audit.json

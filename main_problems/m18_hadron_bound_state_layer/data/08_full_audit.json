@@ -1,0 +1,447 @@
+{
+  "script": "08_full_audit.py",
+  "checks": [
+    {
+      "name": "A1a 全部 01–07 exit 0",
+      "pass": true,
+      "detail": "exit 集合 = [0]"
+    },
+    {
+      "name": "A1b 全部 data JSON byte-identical（重跑）",
+      "pass": true,
+      "detail": "19/19 identical"
+    },
+    {
+      "name": "A2 01_reproduction_gate.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 01_reproduction_gate.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'version', 'dps', 'checks', 'warns', 'pass']"
+    },
+    {
+      "name": "A2 02_support_theorem.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 02_support_theorem.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'pass', 'fail', 'integrity_fail', 'verdict_negative']"
+    },
+    {
+      "name": "A2 03_composition_law.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 03_composition_law.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'sum_hits', 'sum_all_m44', 'beat_hits']"
+    },
+    {
+      "name": "A2 04_jpc_classification.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 04_jpc_classification.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'labels', 'light_jpc', 'uniq_jpc']"
+    },
+    {
+      "name": "A2 05_radial_ladder.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 05_radial_ladder.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'intersection', 'capacity_pairs', 'cayley_ladder_u']"
+    },
+    {
+      "name": "A2 06_shape_parameter_identity.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 06_shape_parameter_identity.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'T_A', 'T_t', 'family_size']"
+    },
+    {
+      "name": "A2 07_feedback_gate.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 07_feedback_gate.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'A_max_MeV', 'A_req_MeV', 'Needed_B']"
+    },
+    {
+      "name": "A2 09_jpc_geometric_carrier.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 09_jpc_geometric_carrier.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'A5_classes', 'A5_char', 'branch_SO3_down_I']"
+    },
+    {
+      "name": "A2 10_residual_census.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 10_residual_census.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'residual_register', 'checks', 'integrity_fail', 'ground_P', 'pi_ratio']"
+    },
+    {
+      "name": "A2 11_coupling_mechanism.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 11_coupling_mechanism.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'a5_subgroup_orders', 'a5_orbit_sizes', 'branch']"
+    },
+    {
+      "name": "A2 12_ma1_faithfulness.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 12_ma1_faithfulness.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'code', 'checks', 'integrity_fail', 'A5_order', 'class_sizes']"
+    },
+    {
+      "name": "A2 13_ma1_tower.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 13_ma1_tower.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'subgroup_count', 'by_order', 'orbit_rows']"
+    },
+    {
+      "name": "A2 14_ma1_carrier.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 14_ma1_carrier.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'tower_intersection', 'orbit12_irreps', 'decomp_by_n']"
+    },
+    {
+      "name": "A2 15_ma1_induction.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 15_ma1_induction.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'ind_equals_chi20', 'decomp_20', 'decomp_60']"
+    },
+    {
+      "name": "A2 16_md12_correction.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 16_md12_correction.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'commutant_A5_on_20', 'commutant_A4_on_20', 'G_isotypic_dim']"
+    },
+    {
+      "name": "A2 17_connection_law.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 17_connection_law.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'stabilizer_tower', 'levels', 'fibers']"
+    },
+    {
+      "name": "A2 18_ma234_resolution.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 18_ma234_resolution.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'icosa_rotation_order', 'icosa_dets', 'full_sym_order']"
+    },
+    {
+      "name": "A2 21_closeout_verify.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 21_closeout_verify.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'sigma_gamma', 'sigma_gamma2', 'burnside']"
+    },
+    {
+      "name": "A2 22_coupling_dof.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 22_coupling_dof.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'A4_decomp', 'hom_dims', 'A5_hom_F0F1']"
+    },
+    {
+      "name": "A5 01_reproduction_gate.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 02_support_theorem.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 03_composition_law.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 04_jpc_classification.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 05_radial_ladder.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 06_shape_parameter_identity.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 07_feedback_gate.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 09_jpc_geometric_carrier.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 10_residual_register.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 11_coupling_mechanism.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 12_ma1_faithfulness.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 13_ma1_tower.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 14_ma1_carrier.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 15_ma1_induction.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 16_md12_correction.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 17_connection_law.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 18_ma234_resolution.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 21_closeout_verify.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A5 22_coupling_dof.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
+      "name": "A6a 硬閘結構證明：mode=enforce、本 session 恰 1 scope、roots 只含 m18 ⟹ 越界寫入結構上不可能",
+      "pass": true,
+      "detail": "mode=enforce｜scope 數=1｜roots=['~/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m18_hadron_bound_state_layer']"
+    },
+    {
+      "name": "A6b 本 M 外變更全部落喺他 M 目錄（並行 session）⟹ 本 session 可歸因寫入 = 0",
+      "pass": true,
+      "detail": "無法歸屬 0 行"
+    }
+  ],
+  "pass": 61,
+  "fail": 0,
+  "rerun": [
+    {
+      "script": "01_reproduction_gate.py",
+      "exit": 0,
+      "sha_before": "72b48eae603dda02e3fa1c7e757ad64aadca0f6ca22cc722654b2cd43efdc732",
+      "sha_after": "72b48eae603dda02e3fa1c7e757ad64aadca0f6ca22cc722654b2cd43efdc732",
+      "identical": true
+    },
+    {
+      "script": "02_support_theorem.py",
+      "exit": 0,
+      "sha_before": "0e236ac88ee4cc4fdb80bb6c69f67e2c32ff18c4b2b97ca3afc727d3081bce33",
+      "sha_after": "0e236ac88ee4cc4fdb80bb6c69f67e2c32ff18c4b2b97ca3afc727d3081bce33",
+      "identical": true
+    },
+    {
+      "script": "03_composition_law.py",
+      "exit": 0,
+      "sha_before": "1a839d36d37fa90396f04c694b80c8ab7c2d3ee82dc7c2ebc6646da852d4dbce",
+      "sha_after": "1a839d36d37fa90396f04c694b80c8ab7c2d3ee82dc7c2ebc6646da852d4dbce",
+      "identical": true
+    },
+    {
+      "script": "04_jpc_classification.py",
+      "exit": 0,
+      "sha_before": "f6d91da893a26f9418d99cc3e7a3dbe78b31689e29aa135e11dbae4c7efb0e93",
+      "sha_after": "f6d91da893a26f9418d99cc3e7a3dbe78b31689e29aa135e11dbae4c7efb0e93",
+      "identical": true
+    },
+    {
+      "script": "05_radial_ladder.py",
+      "exit": 0,
+      "sha_before": "0c78f63fd4ededc105390ac0a84d6d8fbfcca7cb7f30e1d967175baf29d37c71",
+      "sha_after": "0c78f63fd4ededc105390ac0a84d6d8fbfcca7cb7f30e1d967175baf29d37c71",
+      "identical": true
+    },
+    {
+      "script": "06_shape_parameter_identity.py",
+      "exit": 0,
+      "sha_before": "da3b3abbcf37ee00547ca76a415d43c49aeb5f0764605a8d63e0fbc1f41fa793",
+      "sha_after": "da3b3abbcf37ee00547ca76a415d43c49aeb5f0764605a8d63e0fbc1f41fa793",
+      "identical": true
+    },
+    {
+      "script": "07_feedback_gate.py",
+      "exit": 0,
+      "sha_before": "cbf1be3ef1a48a96b293cefafa43e5dbb5db0297a4abfc7ea91732fce7f02a1a",
+      "sha_after": "cbf1be3ef1a48a96b293cefafa43e5dbb5db0297a4abfc7ea91732fce7f02a1a",
+      "identical": true
+    },
+    {
+      "script": "09_jpc_geometric_carrier.py",
+      "exit": 0,
+      "sha_before": "52a0df806e7aaf783ae27cf77c93e03411b39697cee1b00b300f8bfa333a15a9",
+      "sha_after": "52a0df806e7aaf783ae27cf77c93e03411b39697cee1b00b300f8bfa333a15a9",
+      "identical": true
+    },
+    {
+      "script": "10_residual_census.py",
+      "exit": 0,
+      "sha_before": "9c0464f63d59480aa581851a1f8944288d8ba259ab6c9d0ad7580176a9b79041",
+      "sha_after": "9c0464f63d59480aa581851a1f8944288d8ba259ab6c9d0ad7580176a9b79041",
+      "identical": true
+    },
+    {
+      "script": "11_coupling_mechanism.py",
+      "exit": 0,
+      "sha_before": "2571d5bbedb48de766b368b06c8486b27c117bbb24ae1b46a1950eed4ce3fdd6",
+      "sha_after": "2571d5bbedb48de766b368b06c8486b27c117bbb24ae1b46a1950eed4ce3fdd6",
+      "identical": true
+    },
+    {
+      "script": "12_ma1_faithfulness.py",
+      "exit": 0,
+      "sha_before": "1b019cf873a3499f979b26a2e5a36189c4b7c5a7325ca75776b9e3ea12d9d9e1",
+      "sha_after": "1b019cf873a3499f979b26a2e5a36189c4b7c5a7325ca75776b9e3ea12d9d9e1",
+      "identical": true
+    },
+    {
+      "script": "13_ma1_tower.py",
+      "exit": 0,
+      "sha_before": "21e4bd25586962ecbd86532441615b3d71eea7f9332f2aa9dbb67a3abd25d4e9",
+      "sha_after": "21e4bd25586962ecbd86532441615b3d71eea7f9332f2aa9dbb67a3abd25d4e9",
+      "identical": true
+    },
+    {
+      "script": "14_ma1_carrier.py",
+      "exit": 0,
+      "sha_before": "4a8727ab9a87ec58a13388fb630b64f21a0c8fdde80b9e65b8a23f1f514b65a2",
+      "sha_after": "4a8727ab9a87ec58a13388fb630b64f21a0c8fdde80b9e65b8a23f1f514b65a2",
+      "identical": true
+    },
+    {
+      "script": "15_ma1_induction.py",
+      "exit": 0,
+      "sha_before": "493c75e4018c876d716b49884c61f32f776cd8efeb62d30ec3d3fcd687e2a203",
+      "sha_after": "493c75e4018c876d716b49884c61f32f776cd8efeb62d30ec3d3fcd687e2a203",
+      "identical": true
+    },
+    {
+      "script": "16_md12_correction.py",
+      "exit": 0,
+      "sha_before": "1c8fe3a4f39a04d7e1f4c10324c1e776bb1ae7c07abfeaac2911ad9ae823c725",
+      "sha_after": "1c8fe3a4f39a04d7e1f4c10324c1e776bb1ae7c07abfeaac2911ad9ae823c725",
+      "identical": true
+    },
+    {
+      "script": "17_connection_law.py",
+      "exit": 0,
+      "sha_before": "033aa457bff0b73491ab2980e88ba0eab4848adbfc18ddbb5f67adc7a5e286dd",
+      "sha_after": "033aa457bff0b73491ab2980e88ba0eab4848adbfc18ddbb5f67adc7a5e286dd",
+      "identical": true
+    },
+    {
+      "script": "18_ma234_resolution.py",
+      "exit": 0,
+      "sha_before": "8f5bdddd919cfebcffe6fe5094b622b53d1fb388986d31c00d44f817db665cd9",
+      "sha_after": "8f5bdddd919cfebcffe6fe5094b622b53d1fb388986d31c00d44f817db665cd9",
+      "identical": true
+    },
+    {
+      "script": "21_closeout_verify.py",
+      "exit": 0,
+      "sha_before": "db090e3af03dd937dc058843f1a51da4155917073e9a7bd26408d9ed837d4131",
+      "sha_after": "db090e3af03dd937dc058843f1a51da4155917073e9a7bd26408d9ed837d4131",
+      "identical": true
+    },
+    {
+      "script": "22_coupling_dof.py",
+      "exit": 0,
+      "sha_before": "aed1b3294e5b2c579b584675957281ef32ff8d15d365990a263aad6ceca87a56",
+      "sha_after": "aed1b3294e5b2c579b584675957281ef32ff8d15d365990a263aad6ceca87a56",
+      "identical": true
+    }
+  ]
+}

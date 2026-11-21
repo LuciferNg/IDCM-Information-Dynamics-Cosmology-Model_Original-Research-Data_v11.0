@@ -1,0 +1,117 @@
+{
+  "script": "12_ma1_faithfulness.py",
+  "code": "MC10",
+  "checks": [
+    {
+      "name": "W1a A₅ 單：唯一 normal 階 = {1, 60}",
+      "pass": true,
+      "detail": "[1, 60]",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W1b 類大小和 = 60（1+12+12+15+20）",
+      "pass": true,
+      "detail": "[1, 12, 12, 15, 20]",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2a 最小 k 使 60 | k! = 5 ⟹ **最小忠實度 = 5**",
+      "pass": true,
+      "detail": "4! = 24 < 60；5! = 120",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2b 對 k ≤ 4：A₅ → S_k 之 hom 只能平凡（簡單 ⟹ 或忠實或平凡；忠實需 60|k!）",
+      "pass": true,
+      "detail": "k=1..4 全部 60 ∤ k!",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2c 推論：A₅ 若忠實作用於**保結構**之 4 分支樹 ⟹ 不可能（level 1 只有 B = 4 點）",
+      "pass": false,
+      "detail": "level 1 之作用 = hom A₅ → S₄，無法忠實 ⟹ 平凡；再由父子等變 ⟹ 全樹平凡",
+      "tag": "W2",
+      "integrity": false
+    },
+    {
+      "name": "W3'a 60 ∤ 88 且 60 ∤ 176 ⟹ 冇單射 A₅ → D₄₄／D₈₈ ⟹ 保鄰接作用只能平凡",
+      "pass": true,
+      "detail": "88 mod 60 = 28｜176 mod 60 = 56",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W3'b 因 A₅ 單，任何 hom A₅ → D_n 之 kernel ∈ {1, A₅}；kernel=1 需 60|2n（假）",
+      "pass": true,
+      "detail": "⟹ kernel = A₅ ⟹ 作用平凡",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W4a 逃生路線 = 3 條，全部有代價標籤",
+      "pass": true,
+      "detail": "3/3",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W5a B=5 會令 6/6 條已註冊恆等式斷裂 ⟹ E3 代價極高",
+      "pass": true,
+      "detail": "6/6 斷",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W6a MA1 最終判：保結構之忠實 A₅ 耦合 **結構上不可能**（樹需 B≥5、鏈需 60|176）",
+      "pass": false,
+      "detail": "兩條保結構路線皆死；只剩破結構之新載體（degree ≥ 5）",
+      "tag": "W6",
+      "integrity": false
+    },
+    {
+      "name": "W6b 新載體規格（MA1 收窄）：A₅-齊性空間，|orbit| ∈ {5,6,10,12,15,20,30,60}，且與樹之連接須 ≥ 5 分支等變",
+      "pass": true,
+      "detail": "最小規格 = degree 5 = F₅；呢個係 MA1 之可交付形式（唔係空口『要新層』）",
+      "tag": "W6",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "A5_order": 60,
+  "class_sizes": [
+    1,
+    12,
+    12,
+    15,
+    20
+  ],
+  "possible_normal_orders": [
+    1,
+    60
+  ],
+  "min_faithful_degree": 5,
+  "aut_C44": 88,
+  "escape_routes": [
+    {
+      "route": "E1 放棄 MD3（J 載體 ≠ A₅）",
+      "cost": "🔴 重價",
+      "why": "J=2 需 5 維 irrep；C_n/D_n/T/O 全無 ⟹ 冇替代"
+    },
+    {
+      "route": "E2 容許破結構耦合（新載體，degree ≥ 5）",
+      "cost": "🟡 中價",
+      "why": "需新嵌入層（MA1 規格化）；非典範（MC9）"
+    },
+    {
+      "route": "E3 改 B ≥ 5",
+      "cost": "🔴 重價",
+      "why": "B=4 已由 M16 閉合；且 B=5 會斷 Σλ=66、16=B²、12=B·N_gen 等"
+    }
+  ],
+  "B5_broken_idents": 6,
+  "idents_count": 6
+}

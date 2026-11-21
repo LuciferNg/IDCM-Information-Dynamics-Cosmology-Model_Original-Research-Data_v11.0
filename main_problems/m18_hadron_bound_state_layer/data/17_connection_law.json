@@ -1,0 +1,186 @@
+{
+  "script": "17_connection_law.py",
+  "checks": [
+    {
+      "name": "E1a 塔 = A₄(12) → C₃(3) → 1；層大小前三層 (1,4,12) 與 |A₄|/|H_d| 一致",
+      "pass": true,
+      "detail": "levels [1, 4, 12]｜|A₄|/|H| = 1, 4, 12",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E1b 塔結構停於 d = 2：d = 3 層 36 ≠ 60 ⟹ 之後係 ×(B−1) 續（無群結構）",
+      "pass": true,
+      "detail": "36 = 12·3",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E2a fiber 大小 = 5, 20, 60, 60（Ind 之指數）",
+      "pass": true,
+      "detail": "[5,20,60,60]",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E2b 全部分解 Σ mult·dim = |fiber|（閉合）",
+      "pass": true,
+      "detail": "4/4",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E3a SO(3)↓I 表自核：每個 J 之 irrep 維數和 = 2J+1",
+      "pass": true,
+      "detail": "9/9（J = 0..8）",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E3b ★ `d = 0` 只能完整承载 **J = 0**（唯一）；J = 1..8 全部需要 d ≥ 1",
+      "pass": true,
+      "detail": "d=0 可 [0]",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E3c `d ≥ 1`（fiber 20）可完全承载 J = 0..8 全部",
+      "pass": true,
+      "detail": "9/9",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E4a ★ 連接律 = 誘導束；`{20,60}` 之「單一載體」設定 **ill-posed** ⟹ 1 bit 解消（非揀 20）",
+      "pass": true,
+      "detail": "20 = J-content 首現之纖維（d=1），並非「被選中嘅唯一載體」",
+      "tag": "E4",
+      "integrity": false
+    },
+    {
+      "name": "E4b `60` 之角色改變：唔係「被排除之候選」，而係 `d ≥ 2` 之纖維（regular）",
+      "pass": true,
+      "detail": "docs/16 之『{20,60} 未解』被取代，唔係被推翻",
+      "tag": "E4",
+      "integrity": false
+    },
+    {
+      "name": "E4c 紀律：必須明寫舊設定錯喺邊（單一纖維假設），唔可以靜靜改口",
+      "pass": true,
+      "detail": "本節即為該明寫",
+      "tag": "E",
+      "integrity": true
+    },
+    {
+      "name": "E5a 預言 3 條全部寫成可檢形式（振幅／局域化）",
+      "pass": true,
+      "detail": "3/3",
+      "tag": "E",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "stabilizer_tower": [
+    [
+      "d=0",
+      "A₄",
+      12
+    ],
+    [
+      "d=1",
+      "C₃",
+      3
+    ],
+    [
+      "d=2",
+      "1",
+      1
+    ],
+    [
+      "d=3",
+      "1",
+      1
+    ]
+  ],
+  "levels": [
+    1,
+    4,
+    12,
+    36,
+    108
+  ],
+  "fibers": {
+    "d=0": {
+      "size": 5,
+      "decomp": {
+        "A": 1,
+        "T1": 0,
+        "T2": 0,
+        "G": 1,
+        "H": 0
+      },
+      "full_J": [
+        0
+      ]
+    },
+    "d=1": {
+      "size": 20,
+      "decomp": {
+        "A": 1,
+        "T1": 1,
+        "T2": 1,
+        "G": 2,
+        "H": 1
+      },
+      "full_J": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "d=2": {
+      "size": 60,
+      "decomp": {
+        "A": 1,
+        "T1": 3,
+        "T2": 3,
+        "G": 4,
+        "H": 5
+      },
+      "full_J": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "d=3": {
+      "size": 60,
+      "decomp": {
+        "A": 1,
+        "T1": 3,
+        "T2": 3,
+        "G": 4,
+        "H": 5
+      },
+      "full_J": []
+    }
+  },
+  "bit_dissolved": true,
+  "predictions": [
+    "J = 1, 2 之徑向波函數於根節點振幅 = 0（d=0 纖維只有 A⊕G）",
+    "J = 0 係唯一可完全局域於 d = 0 之態",
+    "J ≥ 3 之 G 成分可見於 d=0；T2／T1 成分必須 d ≥ 1"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "script": "19_chain_audit.py",
+  "checks": [
+    {
+      "name": "Q1a 每支腳本（含審計支）皆有 docs/NN（差集空）",
+      "pass": true,
+      "detail": "缺 []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q1b 每份 docs/NN 皆有腳本（差集空）",
+      "pass": true,
+      "detail": "孤兒 docs []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q2a 每個 data JSON 有 producer script",
+      "pass": true,
+      "detail": "22 JSON｜孤兒 []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q2b 每個 data JSON 有 canonical log",
+      "pass": true,
+      "detail": "缺 log []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q2c 每支 script 宣告之 JSON 存在",
+      "pass": true,
+      "detail": "缺 JSON []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q2d 每個 run_*.log 皆有對應 JSON（零孤兒 log）",
+      "pass": true,
+      "detail": "孤兒 log []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q3a 腳本／driver 內零 /tmp 或快取目錄引用",
+      "pass": true,
+      "detail": "0 命中",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q4a 全部推導腳本 exit 0",
+      "pass": true,
+      "detail": "19/19",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q4b 全部 JSON byte-identical（重跑後 sha 不變）",
+      "pass": true,
+      "detail": "19/19",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q4c 全部 stdout == canonical log（逐字節）",
+      "pass": true,
+      "detail": "19/19",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q5a 全部 log 匯總 ↔ JSON 一致（PASS／總數／實作閘）",
+      "pass": true,
+      "detail": "違例 []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q6a 全部產物 mtime ≥ producer mtime",
+      "pass": true,
+      "detail": "遲 []",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q7a driver 覆蓋集 == 推導腳本集 ∪ {08,19,20}",
+      "pass": true,
+      "detail": "覆蓋 ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']｜需 ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q7b driver 含三條線程鎖 export",
+      "pass": true,
+      "detail": "3/3",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q7c driver 預設 dry-run（未傳 --run 不執行）",
+      "pass": true,
+      "detail": "有 MODE 分流",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q8a docs 內 3+ 小數位數值全部可反溯（ORPHAN = 0）",
+      "pass": true,
+      "detail": "掃 95｜ORPHAN 0",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q9a 四件套齊全",
+      "pass": true,
+      "detail": "4/4",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q9b README.md 狀態行首含四態 emoji",
+      "pass": true,
+      "detail": "['🟡', '🔴']",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q9b final_result.md 狀態行首含四態 emoji",
+      "pass": true,
+      "detail": "['🟡']",
+      "tag": "Q",
+      "integrity": true
+    },
+    {
+      "name": "Q10a 無 execute_code headline 推導（本 M 全部數值皆有落碟 script）",
+      "pass": true,
+      "detail": "本 session 推導全部喺 scripts/01–18；execute_code 未用於產生 headline",
+      "tag": "Q",
+      "integrity": true
+    }
+  ],
+  "integrity_fail": 0,
+  "deriv_scripts": [
+    "01_reproduction_gate.py",
+    "02_support_theorem.py",
+    "03_composition_law.py",
+    "04_jpc_classification.py",
+    "05_radial_ladder.py",
+    "06_shape_parameter_identity.py",
+    "07_feedback_gate.py",
+    "09_jpc_geometric_carrier.py",
+    "10_residual_census.py",
+    "11_coupling_mechanism.py",
+    "12_ma1_faithfulness.py",
+    "13_ma1_tower.py",
+    "14_ma1_carrier.py",
+    "15_ma1_induction.py",
+    "16_md12_correction.py",
+    "17_connection_law.py",
+    "18_ma234_resolution.py",
+    "21_closeout_verify.py",
+    "22_coupling_dof.py"
+  ],
+  "orphan_numbers": [],
+  "pool_nums": 8162,
+  "scanned_tokens": 95
+}

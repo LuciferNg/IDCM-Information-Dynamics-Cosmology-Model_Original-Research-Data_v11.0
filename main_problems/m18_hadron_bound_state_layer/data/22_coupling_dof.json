@@ -1,0 +1,125 @@
+{
+  "script": "22_coupling_dof.py",
+  "checks": [
+    {
+      "name": "W1a A₄ 類大小 = 1／4／4／3（合 12；3-輪換分兩類）",
+      "pass": true,
+      "detail": "[1, 3, 4, 4]",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W1b A₄ 特徵表自核：⟨χ,χ⟩ = 1（四條 irrep）",
+      "pass": true,
+      "detail": "[True, True, True, True]",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2 F0 分解閉合（Σ mult·dim = |fiber|）",
+      "pass": true,
+      "detail": "5",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2 F1 分解閉合（Σ mult·dim = |fiber|）",
+      "pass": true,
+      "detail": "20",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2 F2 分解閉合（Σ mult·dim = |fiber|）",
+      "pass": true,
+      "detail": "60",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2d F0（5 點）= 2A ⊕ T（A₄ 固定一陪集 ＋ 4 點自然作用）",
+      "pass": true,
+      "detail": "{'A': 2, \"A'\": 0, \"A''\": 0, 'T': 1}",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W2e F2（60 點）= 5 × regular(A₄) = 5A⊕5A'⊕5A''⊕15T",
+      "pass": true,
+      "detail": "{'A': 5, \"A'\": 5, \"A''\": 5, 'T': 15}",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W3a ★ 相鄰耦合 dim Hom(F0,F1) = 11",
+      "pass": true,
+      "detail": "11",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W3b ★ dim Hom(F1,F2) = 100",
+      "pass": true,
+      "detail": "100",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W3c dim Hom(F2,F2) = Σ m² = 300（depth ≥ 2 之自我耦合空間）",
+      "pass": true,
+      "detail": "300",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W4a A₅-等變下 dim Hom(F0,F1) = 3（遠大於 A₄ 版 ⟹ 等變性弱化反而**減少**自由度？核數字）",
+      "pass": true,
+      "detail": "A₅: 3｜A₄: 11",
+      "tag": "W",
+      "integrity": true
+    },
+    {
+      "name": "W5a ★ 耦合自由度为 11（F0→F1）、100（F1→F2）、300（F2→F2）⟹ **唔係零參數**",
+      "pass": false,
+      "detail": "動力學層自由度已量化；本 M 唔可以宣稱零參數耦合",
+      "tag": "W5",
+      "integrity": false
+    },
+    {
+      "name": "W5b 因此 `MA1` 之殘項由「未定」升級為「**已量化維數**」：若日後要零參數，須另立選擇原則",
+      "pass": true,
+      "detail": "本輪只報維數，唔代 M5 揀耦合",
+      "tag": "W5",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "A4_decomp": {
+    "F0": {
+      "A": 2,
+      "A'": 0,
+      "A''": 0,
+      "T": 1
+    },
+    "F1": {
+      "A": 3,
+      "A'": 1,
+      "A''": 1,
+      "T": 5
+    },
+    "F2": {
+      "A": 5,
+      "A'": 5,
+      "A''": 5,
+      "T": 15
+    }
+  },
+  "hom_dims": {
+    "F0->F1": 11,
+    "F1->F2": 100,
+    "F2->F2": 300,
+    "F0->F0": 5,
+    "F1->F1": 36
+  },
+  "A5_hom_F0F1": 3
+}
