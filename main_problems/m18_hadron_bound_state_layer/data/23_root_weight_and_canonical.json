@@ -1,0 +1,113 @@
+{
+  "script": "23_root_weight_and_canonical.py",
+  "checks": [
+    {
+      "name": "X1a J=0 之 cap = 100%（唯一可完全局域根）",
+      "pass": true,
+      "detail": "100.0",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X1b J=1、J=2 之 cap = 0（根振幅必為 0）",
+      "pass": true,
+      "detail": "0.0｜0.0",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X1c J=5 之 cap = 0（T1⊕T2⊕H 全不在 F₀）",
+      "pass": true,
+      "detail": "0.0",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X1d 每 J 之成分維數和 = 2J+1（表自核）",
+      "pass": true,
+      "detail": "9/9",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2a M01 每點 4 子（總 20）",
+      "pass": true,
+      "detail": "4｜20",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2b M12 每點 3 子（總 60）",
+      "pass": true,
+      "detail": "3｜60",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2c A₄-平均後 T01 ≠ 0（典範方向存在）",
+      "pass": true,
+      "detail": "norm 1.527525",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2d T01 係 A₄-等變",
+      "pass": true,
+      "detail": "True",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X2e T01 **唔係** A₅-等變（破對稱見證；與 MD13 一致）",
+      "pass": true,
+      "detail": "A₅-等變 = False",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X3a F₀→F₁ 典範維數 = 2 ⟹ 剩餘自由 = 9",
+      "pass": true,
+      "detail": "2｜自由 9",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X3b F₁→F₂ 典範維數 = 2 ⟹ 剩餘自由 = 98",
+      "pass": true,
+      "detail": "2｜自由 98",
+      "tag": "X",
+      "integrity": true
+    },
+    {
+      "name": "X5a ★ `MD16` 收窄：耦合維數 11（`F₀→F₁`）之中，典範構造只填 2 維 ⟹ **真自由 = 9 維**",
+      "pass": true,
+      "detail": "典範 = 子節點關聯之 `A₄`-平均（唯一）＋ 全 1（平凡）",
+      "tag": "X5",
+      "integrity": false
+    },
+    {
+      "name": "X5b 根權重上限表（`cap(J)`）係 `P1–P3` 之最強形式：`J=1,2,5` cap = 0；`J=0` cap = 100%",
+      "pass": true,
+      "detail": "M5 可直接核：若 `J=2` 於根有非零權重 ⟹ `MD14` 錯",
+      "tag": "X5",
+      "integrity": false
+    }
+  ],
+  "integrity_fail": 0,
+  "cap_by_J": {
+    "0": 1.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.5714285714285714,
+    "4": 0.4444444444444444,
+    "5": 0.0,
+    "6": 0.38461538461538464,
+    "7": 0.26666666666666666,
+    "8": 0.23529411764705882
+  },
+  "canonical_dim_F0F1": 2,
+  "canonical_dim_F1F2": 2,
+  "free_F0F1": 9,
+  "free_F1F2": 98,
+  "T01_is_A5_equivariant": false
+}

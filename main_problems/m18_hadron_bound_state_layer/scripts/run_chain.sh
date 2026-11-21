@@ -27,7 +27,7 @@ run() {   # run <log> <script>
   return 0
 }
 
-for n in 01 02 03 04 05 06 07 09 10 11 12 13 14 15 16 17 18 21 22; do
+for n in 01 02 03 04 05 06 07 09 10 11 12 13 14 15 16 17 18 21 22 23; do
   f=$(ls scripts/${n}_*.py | head -1 | sed 's|scripts/||')
   run "run_${f%.py}.log" "$f"
 done

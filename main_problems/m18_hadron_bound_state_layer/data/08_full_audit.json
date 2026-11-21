@@ -9,7 +9,7 @@
     {
       "name": "A1b 全部 data JSON byte-identical（重跑）",
       "pass": true,
-      "detail": "19/19 identical"
+      "detail": "20/20 identical"
     },
     {
       "name": "A2 01_reproduction_gate.py docstring + docs 存在",
@@ -202,6 +202,16 @@
       "detail": "['script', 'checks', 'integrity_fail', 'A4_decomp', 'hom_dims', 'A5_hom_F0F1']"
     },
     {
+      "name": "A2 23_root_weight_and_canonical.py docstring + docs 存在",
+      "pass": true,
+      "detail": "docstring=True docs=True"
+    },
+    {
+      "name": "A3 23_root_weight_and_canonical.py JSON 可解析且含 checks/pass",
+      "pass": true,
+      "detail": "['script', 'checks', 'integrity_fail', 'cap_by_J', 'canonical_dim_F0F1', 'canonical_dim_F1F2']"
+    },
+    {
       "name": "A5 01_reproduction_gate.md 數字雙向可溯",
       "pass": true,
       "detail": "docs 缺 []｜JSON 缺 []"
@@ -297,6 +307,11 @@
       "detail": "docs 缺 []｜JSON 缺 []"
     },
     {
+      "name": "A5 23_root_weight_and_canonical.md 數字雙向可溯",
+      "pass": true,
+      "detail": "docs 缺 []｜JSON 缺 []"
+    },
+    {
       "name": "A6a 硬閘結構證明：mode=enforce、本 session 恰 1 scope、roots 只含 m18 ⟹ 越界寫入結構上不可能",
       "pass": true,
       "detail": "mode=enforce｜scope 數=1｜roots=['~/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m18_hadron_bound_state_layer']"
@@ -307,7 +322,7 @@
       "detail": "無法歸屬 0 行"
     }
   ],
-  "pass": 61,
+  "pass": 64,
   "fail": 0,
   "rerun": [
     {
@@ -369,8 +384,8 @@
     {
       "script": "10_residual_census.py",
       "exit": 0,
-      "sha_before": "9c0464f63d59480aa581851a1f8944288d8ba259ab6c9d0ad7580176a9b79041",
-      "sha_after": "9c0464f63d59480aa581851a1f8944288d8ba259ab6c9d0ad7580176a9b79041",
+      "sha_before": "3af2fe8271bc9b1e8f6127feeb11547f4c235fad69f06176d0062fe166849255",
+      "sha_after": "3af2fe8271bc9b1e8f6127feeb11547f4c235fad69f06176d0062fe166849255",
       "identical": true
     },
     {
@@ -441,6 +456,13 @@
       "exit": 0,
       "sha_before": "aed1b3294e5b2c579b584675957281ef32ff8d15d365990a263aad6ceca87a56",
       "sha_after": "aed1b3294e5b2c579b584675957281ef32ff8d15d365990a263aad6ceca87a56",
+      "identical": true
+    },
+    {
+      "script": "23_root_weight_and_canonical.py",
+      "exit": 0,
+      "sha_before": "f8101359244b97e94854d0cbc9bbbd6b98f9b82403c61c52b473ae4a698fcd6e",
+      "sha_after": "f8101359244b97e94854d0cbc9bbbd6b98f9b82403c61c52b473ae4a698fcd6e",
       "identical": true
     }
   ]

@@ -52,6 +52,7 @@ DOCMAP = {
     "18_ma234_resolution.py": "18_ma234_resolution.md",
     "21_closeout_verify.py": "21_closeout_verify.md",
     "22_coupling_dof.py": "22_coupling_dof.md",
+    "23_root_weight_and_canonical.py": "23_root_weight_and_canonical.md",
 }
 
 
@@ -127,6 +128,7 @@ TRACE = [
     ("18_ma234_resolution.md", "18_ma234_resolution.json", ["60", "120", "44"]),
     ("21_closeout_verify.md", "21_closeout_verify.json", ["90", "272", "68"]),
     ("22_coupling_dof.md", "22_coupling_dof.json", ["11", "36", "60"]),
+    ("23_root_weight_and_canonical.md", "23_root_weight_and_canonical.json", ["2", "11", "100"]),
 ]
 for doc, js, keys in TRACE:
     dtxt = open(os.path.join(DOCS, doc), encoding="utf-8").read()

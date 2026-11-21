@@ -240,13 +240,15 @@ REG = [
     {"code": "MD14", "kind": "MD", "item": "連接律 = 誘導束 fiber_d = Ind_{H_d}^{A₅}(triv) ⟹ (5,20,60,60)；{20,60} 之 1 bit ill-posed 解消", "status": "theorem", "ref": "docs/17 E2/E4"},
     {"code": "MD15", "kind": "MD", "item": "鏈 sector 表示盲（44 ∉ A₅ orbit 集；只供 γ_n 標量）⟹ content→irrep 映射唔存在", "status": "theorem", "ref": "docs/18 F4"},
     {"code": "MD16", "kind": "MD", "item": "耦合自由度 A₄-等變 11/100/300（A₅-等變 3/20/60）⟹ 零參數動力學結構上不可能", "status": "theorem", "ref": "docs/22 W3"},
+    {"code": "MD17", "kind": "MD", "item": "根權重上限 cap(J)：J=1,2,5 為 0；J=0 為 100%；J=3/4/6/7/8 = 57.14/44.44/38.46/26.67/23.53%", "status": "theorem", "ref": "docs/23 X1"},
+    {"code": "MD18", "kind": "MD", "item": "典範耦合只填 2 維（T01 平均＋全1）⟹ F₀→F₁ 真自由 9 維、F₁→F₂ 98 維", "status": "theorem", "ref": "docs/23 X3"},
 ]
 print()
 print("RA7. 殘留清單編碼：%d 項（MA %d／MB %d／MC %d／MD %d）"
       % (len(REG), sum(1 for r in REG if r["kind"] == "MA"), sum(1 for r in REG if r["kind"] == "MB"),
          sum(1 for r in REG if r["kind"] == "MC"), sum(1 for r in REG if r["kind"] == "MD")))
 chk("RA7 殘留清單全歸類（%d 項、碼唯一）" % len(REG),
-    len(REG) == 40 and len({r["code"] for r in REG}) == 40, "%d/%d 唯一碼" % (len(REG), len({r["code"] for r in REG})))
+    len(REG) == 42 and len({r["code"] for r in REG}) == 42, "%d/%d 唯一碼" % (len(REG), len({r["code"] for r in REG})))
 
 npass = sum(1 for c in checks if c["pass"])
 integ = [c for c in checks if c["integrity"]]

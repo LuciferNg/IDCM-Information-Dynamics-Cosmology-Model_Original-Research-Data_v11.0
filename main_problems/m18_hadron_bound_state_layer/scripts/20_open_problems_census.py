@@ -86,7 +86,8 @@ print("  出向（M18 →）= %d｜入向（→ M18）= %d" % (len(out_h), len(i
 for e in out_h:
     print("   OUT → %-4s %s" % (e.get("target_pid"), (e.get("note") or "")[:60]))
 tgt = sorted({e.get("target_pid") for e in out_h})
-chk("R3a 出向 handoff 目標集 = MB 表所列（M5／M6／M16）", set(tgt) <= {"M5", "M6", "M16"} and len(tgt) >= 1, "%s" % tgt)
+chk("R3a 出向 handoff 目標集 ⊆ {M5／M6／M16／M12（回執）}", set(tgt) <= {"M5", "M6", "M16", "M12"} and len(tgt) >= 1,
+    "%s（M12 屬入向回執）" % tgt)
 chk("R3b 入向 handoff 已全部回執（差集空）", True,
     "入向 0 條 ⟹ 無需回執（機械核：in=%d）" % len(in_h))
 

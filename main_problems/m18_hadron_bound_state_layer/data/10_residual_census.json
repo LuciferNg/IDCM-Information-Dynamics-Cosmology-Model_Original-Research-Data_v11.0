@@ -286,6 +286,20 @@
       "item": "耦合自由度 A₄-等變 11/100/300（A₅-等變 3/20/60）⟹ 零參數動力學結構上不可能",
       "status": "theorem",
       "ref": "docs/22 W3"
+    },
+    {
+      "code": "MD17",
+      "kind": "MD",
+      "item": "根權重上限 cap(J)：J=1,2,5 為 0；J=0 為 100%；J=3/4/6/7/8 = 57.14/44.44/38.46/26.67/23.53%",
+      "status": "theorem",
+      "ref": "docs/23 X1"
+    },
+    {
+      "code": "MD18",
+      "kind": "MD",
+      "item": "典範耦合只填 2 維（T01 平均＋全1）⟹ F₀→F₁ 真自由 9 維、F₁→F₂ 98 維",
+      "status": "theorem",
+      "ref": "docs/23 X3"
     }
   ],
   "checks": [
@@ -395,9 +409,9 @@
       "integrity": false
     },
     {
-      "name": "RA7 殘留清單全歸類（40 項、碼唯一）",
+      "name": "RA7 殘留清單全歸類（42 項、碼唯一）",
       "pass": true,
-      "detail": "40/40 唯一碼",
+      "detail": "42/42 唯一碼",
       "tag": "R",
       "integrity": true
     }

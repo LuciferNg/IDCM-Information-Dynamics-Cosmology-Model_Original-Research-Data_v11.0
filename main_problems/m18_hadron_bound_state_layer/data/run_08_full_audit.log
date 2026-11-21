@@ -9,7 +9,7 @@ A1. 重跑 01–07，比對 data JSON（byte-identical）
   06_shape_parameter_identity.py       exit=0  sha da3b3abbcf37… identical
   07_feedback_gate.py                  exit=0  sha cbf1be3ef1a4… identical
   09_jpc_geometric_carrier.py          exit=0  sha 52a0df806e7a… identical
-  10_residual_census.py                exit=0  sha 9c0464f63d59… identical
+  10_residual_census.py                exit=0  sha 3af2fe8271bc… identical
   11_coupling_mechanism.py             exit=0  sha 2571d5bbedb4… identical
   12_ma1_faithfulness.py               exit=0  sha 1b019cf873a3… identical
   13_ma1_tower.py                      exit=0  sha 21e4bd255869… identical
@@ -20,8 +20,9 @@ A1. 重跑 01–07，比對 data JSON（byte-identical）
   18_ma234_resolution.py               exit=0  sha 8f5bdddd919c… identical
   21_closeout_verify.py                exit=0  sha db090e3af03d… identical
   22_coupling_dof.py                   exit=0  sha aed1b3294e5b… identical
+  23_root_weight_and_canonical.py      exit=0  sha f8101359244b… identical
   PASS A1a 全部 01–07 exit 0 :: exit 集合 = [0]
-  PASS A1b 全部 data JSON byte-identical（重跑） :: 19/19 identical
+  PASS A1b 全部 data JSON byte-identical（重跑） :: 20/20 identical
 
 ==============================================================================
 A2/A3/A4. docstring／JSON 結構／docs 對應
@@ -64,6 +65,8 @@ A2/A3/A4. docstring／JSON 結構／docs 對應
   PASS A3 21_closeout_verify.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'sigma_gamma', 'sigma_gamma2', 'burnside']
   PASS A2 22_coupling_dof.py docstring + docs 存在 :: docstring=True docs=True
   PASS A3 22_coupling_dof.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'A4_decomp', 'hom_dims', 'A5_hom_F0F1']
+  PASS A2 23_root_weight_and_canonical.py docstring + docs 存在 :: docstring=True docs=True
+  PASS A3 23_root_weight_and_canonical.py JSON 可解析且含 checks/pass :: ['script', 'checks', 'integrity_fail', 'cap_by_J', 'canonical_dim_F0F1', 'canonical_dim_F1F2']
 
 ==============================================================================
 A5. 關鍵數字追溯（docs §四 出現之核心數 ⟹ data JSON 內存在）
@@ -87,12 +90,13 @@ A5. 關鍵數字追溯（docs §四 出現之核心數 ⟹ data JSON 內存在�
   PASS A5 18_ma234_resolution.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
   PASS A5 21_closeout_verify.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
   PASS A5 22_coupling_dof.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
+  PASS A5 23_root_weight_and_canonical.md 數字雙向可溯 :: docs 缺 []｜JSON 缺 []
 
 ==============================================================================
 A6. 本 M 目錄外零寫入（git status ＋ mtime 歸屬）
 ==============================================================================
   session 起點標記 mtime = 2026-11-19 20:44:15
-  變更行 69｜本 M 7｜本 M 以外（早於起點）10｜晚於起點 52
+  變更行 85｜本 M 23｜本 M 以外（早於起點）10｜晚於起點 52
      [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/audit_verify.json
      [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit.log
      [pre-existing 11-07 14:59]  M main_problems/m16_group_selection_principle/data/run_audit_boot.log
@@ -158,10 +162,26 @@ A6. 本 M 目錄外零寫入（git status ＋ mtime 歸屬）
      [mine]  M main_problems/m18_hadron_bound_state_layer/01_problem_record.md
      [mine]  M main_problems/m18_hadron_bound_state_layer/README.md
      [mine]  M main_problems/m18_hadron_bound_state_layer/SESSION_START.md
-     [mine] ?? main_problems/m18_hadron_bound_state_layer/data/
-     [mine] ?? main_problems/m18_hadron_bound_state_layer/docs/
-     [mine] ?? main_problems/m18_hadron_bound_state_layer/final_result.md
-     [mine] ?? main_problems/m18_hadron_bound_state_layer/scripts/
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/08_full_audit.json
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/10_residual_census.json
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/19_chain_audit.json
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/20_open_problems_census.json
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/run_08_full_audit.log
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/run_10_residual_census.log
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/run_19_chain_audit.log
+     [mine]  M main_problems/m18_hadron_bound_state_layer/data/run_20_open_problems_census.log
+     [mine]  M main_problems/m18_hadron_bound_state_layer/docs/10_residual_register.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/docs/19_chain_audit.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/docs/20_open_problems_inventory.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/final_result.md
+     [mine]  M main_problems/m18_hadron_bound_state_layer/scripts/08_full_audit.py
+     [mine]  M main_problems/m18_hadron_bound_state_layer/scripts/10_residual_census.py
+     [mine]  M main_problems/m18_hadron_bound_state_layer/scripts/20_open_problems_census.py
+     [mine]  M main_problems/m18_hadron_bound_state_layer/scripts/run_chain.sh
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/data/23_root_weight_and_canonical.json
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/data/run_23_root_weight_and_canonical.log
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/docs/23_root_weight_and_canonical.md
+     [mine] ?? main_problems/m18_hadron_bound_state_layer/scripts/23_root_weight_and_canonical.py
   PASS A6a 硬閘結構證明：mode=enforce、本 session 恰 1 scope、roots 只含 m18 ⟹ 越界寫入結構上不可能 :: mode=enforce｜scope 數=1｜roots=['~/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m18_hadron_bound_state_layer']
    本 M 外變更 62 行；落喺他 M 目錄／備份 62 行；無法歸屬 0 行
      [outside 11-07 14:59]  M main_problems/m16_group_selection_principle/data/audit_verify.json
@@ -229,6 +249,6 @@ A6. 本 M 目錄外零寫入（git status ＋ mtime 歸屬）
   PASS A6b 本 M 外變更全部落喺他 M 目錄（並行 session）⟹ 本 session 可歸因寫入 = 0 :: 無法歸屬 0 行
 
 ==============================================================================
-匯總：PASS 61 / FAIL 0（共 61）
+匯總：PASS 64 / FAIL 0（共 64）
 ==============================================================================
 JSON → data/08_full_audit.json

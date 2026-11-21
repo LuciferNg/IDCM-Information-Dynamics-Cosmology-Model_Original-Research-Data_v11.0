@@ -3,12 +3,13 @@
 ## 狀態
 
 🟡 **partial — 收尾完成**（2026-11-21）｜T1 🟡、T2 🟡、T3 🟡、T4 🔴、R5 🔴
-腳本 **22**（`01`–`18` 推導｜`19` 鏈審計｜`20` 開放普查｜`21` 收尾獨立驗證｜`22` 耦合自由度）＋ `run_chain.sh`
-docs **22** ｜ data **22** JSON ＋ **22** canonical log ｜ checks **338**（PASS 318 ＋ 誠實 negative 20；實作閘 FAIL 0）
-審計 **08 61/61** ｜ **19 20/20**（L1 19/19 byte-identical、L2 19/19、L3b ORPHAN 0／掃 95）｜ **20 7/7**｜**21 18/18**｜**22 12/13**
-**殘留權威：`docs/10_residual_register.md`（40 項：MA 6／MB 6／MC 12／MD 16）**
+腳本 **23**（`01`–`18` 推導｜`19` 鏈審計｜`20` 開放普查｜`21` 獨立驗證｜`22` 耦合 dof｜`23` 根權重＋典範耦合）＋ `run_chain.sh`
+docs **23** ｜ data **23** JSON ＋ **23** canonical log ｜ checks **354**（PASS 334 ＋ 誠實 negative 20；實作閘 FAIL 0）
+審計 **08 64/64** ｜ **19 20/20**（L1 20/20 byte-identical、L2 20/20、L3b ORPHAN 0／掃 97）｜ **20 7/7**｜**21 18/18**｜**22 12/13**｜**23 13/13**
+**殘留權威：`docs/10_residual_register.md`（42 項：MA 6／MB 6／MC 12／MD 18）**
 **開放問題權威：`docs/20_open_problems_inventory.md`（OA 1／OB 6／OC 30 ＋ handoff 解鎖分析）**
-★ **`MD16` 耦合自由度 `11/100/300`（`A₄`）｜`3/20/60`（`A₅`）⟹ 零參數動力學結構上不可能**
+★ **`MD16` 耦合 `11/100/300`｜`MD18` 典範只填 2 維（真自由 9）⟹ 零參數動力學結構上不可能**
+★ **`MD17` 根權重上限 `cap(J)`：`J=1,2,5` → 0；`J=0` → 100%**
 ★ **第十一輪 handoff**：非本 M 範圍 3 項已發還（`MB4`→M6、`MB5`→M5、`MB6` 三向張力→M16）
 ★ 三向張力（`MD3` × M16 × `MC10`）；★ 兩層分離（`MD10`）；★ 載體 `20 = Ind(F₅·B)`（`MD11`）
 ★ **`MD14` 連接律 = 誘導束**（纖維 `5/20/60`）⟹ **`{20,60}` 之 1 bit 解消（ill-posed）**；`MA1` 形式層閉合
@@ -73,9 +74,10 @@ M5 `final_result` L199：剩餘唯一前線 = mode 佔用／J^PC 算子（blocke
 | `docs/20` | **開放問題權威清單**（OA／OB／OC ＋ handoff 解鎖分析）|
 | `docs/21` | **收尾獨立驗證**（換算法：Laplacian 對角化／Burnside 第三路）|
 | `docs/22` | **耦合自由度普查**（`MD16`）|
+| `docs/23` | **根權重上限 ＋ 典範耦合**（`MD17`／`MD18`）|
 | **`docs/10`** | **殘留權威清單（MA／MB／MC／MD 共 23 項；雙字母碼）** |
 | `scripts/01`–`18`（推導）｜`19`（審計）｜`20`（普查）｜`21`（獨立驗證）｜`22`（耦合 dof）｜`run_chain.sh` | 與 docs 一一對應（docstring = docs §一）|
-| `data/` | 22 個 JSON ＋ 22 份 canonical log |
+| `data/` | 23 個 JSON ＋ 23 份 canonical log |
 
 ## 依賴
 

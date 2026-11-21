@@ -26,14 +26,14 @@
 ## 三、執行結果
 
 ```
-Q1  推導腳本 19 支 ↔ docs 19 份；全腳本（含審計支）22 支 ↔ docs 22 份
-Q2  22 JSON 全部有 producer ＋ canonical log；零孤兒（含 `Q2d` 反向：零孤兒 log）
+Q1  推導腳本 20 支 ↔ docs 20 份；全腳本（含審計支）23 支 ↔ docs 23 份
+Q2  23 JSON 全部有 producer ＋ canonical log；零孤兒（含 `Q2d` 反向：零孤兒 log）
 Q3  零 /tmp／快取引用（本支偵測器自身 pattern 行已排除，附理由）
-Q4  L1：19/19 exit 0｜19/19 JSON byte-identical｜19/19 stdout == canonical log（逐字節）
-Q5  L2：19/19 log 匯總 ↔ JSON 一致
+Q4  L1：20/20 exit 0｜20/20 JSON byte-identical｜20/20 stdout == canonical log（逐字節）
+Q5  L2：20/20 log 匯總 ↔ JSON 一致
 Q6  時序：零遲產物
-Q7  driver 覆蓋 01–22（含 08/19/20/21/22）；三條線程鎖齊；預設 dry-run
-Q8  L3b：掃 95 個數值 token，ORPHAN = 0（白名單 6 條附理由，含 4 條跨記錄值出處）
+Q7  driver 覆蓋 01–23（含 08/19/20/21/22/23）；三條線程鎖齊；預設 dry-run
+Q8  L3b：掃 97 個數值 token，ORPHAN = 0（白名單 6 條附理由，含 4 條跨記錄值出處）
 Q9  四件套 4/4；狀態行四態 emoji ✓
 Q10 無 execute_code headline
 ```

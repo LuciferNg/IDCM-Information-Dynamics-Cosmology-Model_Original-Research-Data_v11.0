@@ -11,14 +11,14 @@
     {
       "name": "R1b 分類總數 = 殘留權威表項數",
       "pass": true,
-      "detail": "40 = 40",
+      "detail": "42 = 42",
       "tag": "R",
       "integrity": true
     },
     {
-      "name": "R3a 出向 handoff 目標集 = MB 表所列（M5／M6／M16）",
+      "name": "R3a 出向 handoff 目標集 ⊆ {M5／M6／M16／M12（回執）}",
       "pass": true,
-      "detail": "['M16', 'M5', 'M6']",
+      "detail": "['M12', 'M16', 'M5', 'M6']（M12 屬入向回執）",
       "tag": "R",
       "integrity": true
     },
@@ -32,7 +32,7 @@
     {
       "name": "R4a OC 每項附依據（docs 編號）",
       "pass": true,
-      "detail": "31/31",
+      "detail": "33/33",
       "tag": "R",
       "integrity": true
     },
@@ -376,6 +376,22 @@
       "status": "theorem",
       "ref": "docs/22 W3",
       "basis": "docs/22 W3"
+    },
+    {
+      "code": "MD17",
+      "kind": "MD",
+      "item": "根權重上限 cap(J)：J=1,2,5 為 0；J=0 為 100%；J=3/4/6/7/8 = 57.14/44.44/38.46/26.67/23.53%",
+      "status": "theorem",
+      "ref": "docs/23 X1",
+      "basis": "docs/23 X1"
+    },
+    {
+      "code": "MD18",
+      "kind": "MD",
+      "item": "典範耦合只填 2 維（T01 平均＋全1）⟹ F₀→F₁ 真自由 9 維、F₁→F₂ 98 維",
+      "status": "theorem",
+      "ref": "docs/23 X3",
+      "basis": "docs/23 X3"
     }
   ],
   "old_to_new": [
@@ -448,6 +464,16 @@
       "target": "M5",
       "ts": "2026-11-21",
       "note": "回執（你 2026-11-19 兩條 note：R4 徑向塔 t* 需 12424×–57649×、R5 A ≤ αq(ħc/a) 定理）：已知悉，無需行動。另 M18 新發三件已在你 inbox：(1) MB5=baryon 三體非鏈譜載"
+    },
+    {
+      "target": "M5",
+      "ts": "2026-11-21",
+      "note": "補充 MB5（束上耦合）：M18 MD16 已量化耦合自由度 —— A₄-等變 dim Hom = 11（F₀→F₁，根上層→首層）／100（F₁→F₂）／300（F₂→F₂ 自我）；若假設 A₅-等變則 3／20／60。纖維 A₄-分解："
+    },
+    {
+      "target": "M12",
+      "ts": "2026-11-21",
+      "note": "回執（你 2026-11-21 18:35 P3b 跨 M 狀態字串）：已對齊 —— v11 根 README M 表 M18 列由『已註冊』改為『部分閉合』，並補上現況摘要（形式層全閉／三體 no-go／MD16 耦合 dof 11/10"
     }
   ],
   "incoming_handoffs": 1
