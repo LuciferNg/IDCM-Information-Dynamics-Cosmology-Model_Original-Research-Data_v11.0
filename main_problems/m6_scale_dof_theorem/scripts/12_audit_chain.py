@@ -70,7 +70,8 @@ for f in MD:
     if not os.path.exists(f):
         continue
     txt = open(f, encoding="utf-8").read()
-    listed |= set(re.findall(r"scripts/(\d\d[a-z0-9_]*\.py)", txt))
+    # l2/l3 唔匹配 \d\d 前綴 ⟹ 顯式納入（見 skill idcm-audit-verify §7.3）
+    listed |= set(re.findall(r"scripts/((?:\d\d|l[23])[a-z0-9_]*\.py)", txt))
 disk = {os.path.basename(s) for s in SCRIPTS}
 ALLOW_UNLISTED = {"12_audit_chain.py": "本審計工具自身（將登記入 record §十五）"}
 missing = listed - disk
