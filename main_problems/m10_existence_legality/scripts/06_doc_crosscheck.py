@@ -63,7 +63,8 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "12_primordial_label", "13_barrier_gate",
           "14_m10_consolidation", "15_mechanism_axis",
           "16_definition_d6", "17_surviving_results", "18_incoming_triage",
-          "19_em_sign_downstream", "20_status_audit", "21_r21_own_residuals"):
+          "19_em_sign_downstream", "20_status_audit", "21_r21_own_residuals",
+          "22_handoff_ledger"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -474,6 +475,15 @@ cl("21_r21_own_residuals", f"{j20s['null']['pct01']['median']}", "±0.1% 零假�
 cl("21_r21_own_residuals", f"{j19p['checks_passed']}/{j19p['checks_total']}", "scripts/19 check")
 cl("21_r21_own_residuals", f"{j20s['checks_passed']}/{j20s['checks_total']}", "scripts/20 check")
 
+
+# ---------------- docs/22 ← 18_w1_convention（對核 M5 分支）
+cl("22_handoff_ledger", f"{j18c['A_max_v1']:.5f}", "A_max v1")
+cl("22_handoff_ledger", f"{j18c['A_max_v2']:.5f}", "A_max v2")
+cl("22_handoff_ledger", f"{j18c['margin_v1']:.5f}", "v1 裕量")
+cl("22_handoff_ledger", f"{j18c['gap_v2']:.5f}", "v2 缺口")
+cl("22_handoff_ledger", f"{j18c['sigma_v2']:.3f}", "v2 σ")
+cl("22_handoff_ledger", f"{j18c['branch_diff']:.5f}", "兩支差")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -508,7 +518,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 21,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 22,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)
