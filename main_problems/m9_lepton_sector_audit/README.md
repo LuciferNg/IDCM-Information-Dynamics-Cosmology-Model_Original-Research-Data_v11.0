@@ -72,8 +72,9 @@ source:  調律者 2026-10-27「開M9 + M10，但本session不直接推」；同
 | `docs/04_spectral_uniqueness.md` | R4 語法 ＋ dof 階梯 ＋ holdout | ✅ |
 | `docs/05_preregistered_predictions.md` | R5 預註冊預言 | ✅ |
 | `docs/06_numerator_derivation.md` | **R6 域分離定理 ＋ 分子攻堅** | ✅ |
-| `scripts/01…06` | 零 import 獨立重建（29/29 ＋ 18/18）＋ 文檔×數據交叉核（52/52） | ✅ |
-| `data/run_01…06.log` ＋ 6 JSON | 執行記錄 | ✅ |
+| `docs/07_m15_handoff_verdict.md` | **M15 handoff 裁定（√5 載體窮舉、定理補完）** | ✅ |
+| `scripts/01…07` | 零 import 獨立重建（29/29 ＋ 18/18 ＋ 12/12）＋ 文檔×數據交叉核（52/52） | ✅ |
+| `data/run_01…07.log` ＋ 7 JSON | 執行記錄 | ✅ |
 | `final_result.md` | 結論摘要 | ✅ |
 
 ## 依賴

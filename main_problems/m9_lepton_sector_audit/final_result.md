@@ -88,4 +88,5 @@ R6 域論：sympy `minimal_polynomial` / `discriminant` / `factorint`（本 M �
 | `docs/04_spectral_uniqueness.md` | R4：語法凍結、dof 階梯、位元預算、holdout |
 | `docs/05_preregistered_predictions.md` | R5：CAP 預言、φ-ladder 永久否證、凍結語法失敗預言 |
 | `docs/06_numerator_derivation.md` | **R6：域分離定理、整數級 σ 表、選擇律 no-go、表達式空間飽和、單階梯 no-go** |
-| `scripts/01…06` | 零 import 獨立重建（29/29 ＋ 18/18）＋ 文檔×數據交叉核（52/52）；`data/run_01…06.log` |
+| `docs/07_m15_handoff_verdict.md` | **M15 handoff 裁定：定理補完（φ^x ∈ ℚ(√5) ⟺ x ∈ ℤ）＋ √5 載體窮舉 0 撞擊** |
+| `scripts/01…07` | 零 import 獨立重建（29/29 ＋ 18/18 ＋ 12/12）＋ 文檔×數據交叉核（52/52）；`data/run_01…07.log` |

@@ -1,0 +1,187 @@
+{
+  "sectors": {
+    "88": [],
+    "90": [
+      9,
+      18,
+      27,
+      36,
+      54,
+      63,
+      72,
+      81
+    ],
+    "45": [
+      9,
+      18,
+      27,
+      36
+    ],
+    "176": []
+  },
+  "sector_values_90": {
+    "9": [
+      "-1/2",
+      "3/2"
+    ],
+    "18": [
+      "-1/2",
+      "5/2"
+    ],
+    "27": [
+      "1/2",
+      "3/2"
+    ],
+    "36": [
+      "1/2",
+      "5/2"
+    ],
+    "54": [
+      "1/2",
+      "5/2"
+    ],
+    "63": [
+      "1/2",
+      "3/2"
+    ],
+    "72": [
+      "-1/2",
+      "5/2"
+    ],
+    "81": [
+      "-1/2",
+      "3/2"
+    ]
+  },
+  "theorem": {
+    "T1": "x ∈ ℚ\\ℤ ⟹ φ^x ∉ ℚ(√5)（deg 2q > 2）⟹ 分數指數永不可能是任何 γ 比值",
+    "T2": "φ^p ∈ ℚ(√5)；而 γ_n ∈ ℚ(√5) 僅當 5 | N（/88、/176 永空）",
+    "degrees": {
+      "2": {
+        "degree": 4,
+        "irreducible": true
+      },
+      "3": {
+        "degree": 6,
+        "irreducible": true
+      },
+      "4": {
+        "degree": 8,
+        "irreducible": true
+      },
+      "5": {
+        "degree": 10,
+        "irreducible": true
+      },
+      "9": {
+        "degree": 18,
+        "irreducible": true
+      },
+      "10": {
+        "degree": 20,
+        "irreducible": true
+      },
+      "18": {
+        "degree": 36,
+        "irreducible": true
+      },
+      "45": {
+        "degree": 90,
+        "irreducible": true
+      },
+      "88": {
+        "degree": 176,
+        "irreducible": true
+      },
+      "90": {
+        "degree": 180,
+        "irreducible": true
+      }
+    }
+  },
+  "hits_90": [],
+  "tested_90": 48,
+  "hits_45": [],
+  "tested_45": 8,
+  "p_range": [
+    -60,
+    60
+  ],
+  "m15_claim": {
+    "claim": "M15 遵守 φ 冪質量禁區，未用輕子比",
+    "grep_phi_power": "0 命中（全目錄含 data/：φ^ / phi** / pow(phi)）",
+    "grep_lepton_ratio": "0 命中（mass ratio / lepton / m_μ；perm_mul 為 substring 假陽性）",
+    "grep_M9_ladder": "0 命中（/88、/132、528 作階梯分母；M15 只引 /88 作環譜載體）",
+    "verdict": "✅ 聲稱成立"
+  },
+  "verdict": {
+    "T1": "x ∈ ℚ\\ℤ ⟹ φ^x ∉ ℚ(√5)（deg 2q > 2）⟹ 分數指數永不可能是任何 γ 比值",
+    "T2": "φ^p ∈ ℚ(√5)；而 γ_n ∈ ℚ(√5) 僅當 5 | N（/88、/176 永空）",
+    "exhaustive": "/90 與 /45 √5 扇區共 56 個 γ 比值 × 122 個整數 p ⟹ 0 撞擊",
+    "conclusion": "φ-冪 與 γ 比值在**任何** IDCM 載體上都不可共存：/88・/176 域論禁止（√5 ∉ 域）；/90・/45 雖含 √5 扇區，但窮舉 0 撞擊。⟹ φ-階梯永不可能是譜讀數（全域版，覆蓋 M15 §16.1(3) 之特例）。"
+  },
+  "checks": [
+    {
+      "check": "A1 /88 ℚ(√5) 扇區 = ∅（= M9 域分離定理之特例）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "A2 /90 半譜 ℚ(√5) 扇區 = {9,18,27,36} 且相異值恰 4 個（核 M15 §16.2）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "A3 /176（雙鏈）扇區 = ∅（5 ∤ 176）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "A4 扇區非空 ⟺ 5 | N（/45 亦非空）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "A5 /90 扇區值 = ±1/2 + {3/2,5/2}√5（核 M15 記載式）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "A6 γ₉+γ₃₆ = γ₁₈+γ₂₇ = γ_max = 4（M15 §16.2 兩對）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "B1 所有 q > 1 之 deg = 2q > 2 ⟹ φ^{p/q} ∉ ℚ(√5)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "B2 φ^p = F_pφ + F_{p−1} ∈ ℚ(√5) for p ∈ ℤ（故整數指數係唯一可能）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C1 /90 √5 扇區內 γ 比值無任何 φ^p 撞擊（p ∈ [−60,60]）",
+      "pass": true,
+      "detail": "0 撞擊 / 48 比值"
+    },
+    {
+      "check": "C2 |p| ≤ 17 亦 0 撞擊",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "D1 /45 扇區亦 0 撞擊",
+      "pass": true,
+      "detail": "0 / 8"
+    },
+    {
+      "check": "E1 M15 無 φ-冪、無輕子比、無 M9 階梯引用 ⟹ 聲稱成立",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "pass": 12,
+  "total": 12
+}
