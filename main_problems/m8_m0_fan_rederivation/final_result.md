@@ -48,7 +48,7 @@
 - **L3 文檔交叉核**：`scripts/11_doc_crosscheck.py`（39 檢查；唯讀，數值容差依文檔有效位）
 - **全審計**：`scripts/09_full_audit.py`（46 檢查；含 8 腳本重跑、標籤追溯、數字追溯、register、更正標記、§K 六項核對）
 - **driver**：`scripts/run_chain.sh`（預設 dry-run，`--run` 才執行）
-- **register**：`progress M8 verdict=partial`（23:09）＋ **`handed_off M8→M6`**（23:09:32，T3 判決回交，ref=`final_result.md`）；`mirror` 後 `REGISTER.md` v11.0/M8 = partial；`check` **HARD DRIFT 0／REF-MISSING 0／BLOCK-DRIFT 0**，M8 零命中
+- **register**：`progress M8 verdict=partial`（10-26 23:09）＋ **`handed_off M8→M6`**（T3 判決回交，**M6 已收訖** 23:34 並據此 closed）＋ **`handed_off M8→M15`**（11-22 回執：接受「無需行動」，附 M15 stale 一致性一報）＋ `note M21`（5.222686e35 → 5.223686e35 位數手誤）；**M8 零漂移**（`scripts/09` G4）；全域 `HARD DRIFT 18` 全屬他人 pid 域（M4／O124／O140／O142／O148 之 v10 docs 缺檔，只報告移交）
 - 文檔 9 份（`docs/01`–`09`）＋ 本檔
 - **審計發現並更正 2 處實錯**（皆 append-only，結論不變）：`docs/04 §4` 缺口因子 `2.3e35 → 5.223686e35`；`docs/09` 缺口倍數 `78.55 → 79.5538`（連帶後見 dev `0.068% → 1.33%`）
 

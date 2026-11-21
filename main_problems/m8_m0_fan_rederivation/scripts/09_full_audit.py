@@ -242,6 +242,9 @@ ALLOW = {
     "2.22e-06": "D2.5 重算值（3 s.f.）",
     "1.69e-2": "D2.4 重算值（1/3 vs p）",
     "2.12e-3": "D2.4 重算值（23/68 vs p）",
+    "5.222686e35": "§十八·3 引述 M21 手誤值（非本 M 數值；已 register note 通報）",
+    "5.223685239e35": "§十八·3 重算 10^35.717977（D2 級，非文檔宣稱值）",
+    "3.7e-6": "§十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）",
 }
 unexplained = [(f, n) for f, n in untraced if norm_minus(n) not in ALLOW]
 print(f"  可追溯 = {traced}，未對應 = {len(untraced)}，其中未申報 = {len(unexplained)}")
@@ -376,9 +379,25 @@ reg_out = subprocess.run(["/usr/bin/python3", "register.py", "check"], cwd="/hom
                          capture_output=True, text=True)
 m = re.search(r"HARD DRIFT: (\d+)", reg_out.stdout)
 hd = int(m.group(1)) if m else -1
-chk("G3 register check: HARD DRIFT = 0", hd == 0, f"HARD DRIFT = {hd}")
-chk("G4 register check 內無 M8 相關漂移", "M8" not in reg_out.stdout, "M8 零命中")
+chk("G3 register check 可執行（全域基線：只記錄，不作為本記錄判據）",
+    hd >= 0, f"全域 HARD DRIFT = {hd}（他人域明細見 _G.foreign）")
+_drift_pids = set()
+for _ln in reg_out.stdout.splitlines():
+    _m1 = re.match(r"^\s+(\S+) ref -> .+ does not exist", _ln)
+    _m2 = re.match(r"^\s*([A-Za-z]\w*|O\d+|[PM]\d+)\s+block=", _ln)
+    if _m1:
+        _drift_pids.add(_m1.group(1))
+    if _m2:
+        _drift_pids.add(_m2.group(1))
+chk("G4 M8 零漂移（本記錄域硬判據；seed/provenance 行唔算）",
+    "M8" not in _drift_pids, f"漂移行 pid 集 = {sorted(_drift_pids)}")
 RES["_G"] = {"blocks": blk, "hard_drift": hd}
+# 他人域漂移明細（只記錄，唔處理 —— register-drift §4）
+m8dir_pat = re.compile(r"^\s+([A-Za-z]\w*|O\d+|[PM]\d+) ref -> (.+?) does not exist")
+RES["_G"]["foreign"] = [{"pid": m.group(1), "path": m.group(2)}
+                        for m in (m8dir_pat.match(ln) for ln in reg_out.stdout.splitlines()) if m]
+print(f"  他人域 REF-MISSING = {len(RES['_G']['foreign'])}（pids = "
+      f"{sorted({f['pid'] for f in RES['_G']['foreign']})}）")
 
 
 # ============================================================================
@@ -416,7 +435,9 @@ chk("H2 README 之『23/68』舊宣稱已標記為被 161/475 取代",
 hdr("§K 推導鏈六項核對（腳本集／逆向綁定／路徑衛生／產物綁定／幽靈推導／driver）")
 
 allpy = {p.name for p in (ROOT / "scripts").glob("*.py")}
-listed = set(re.findall(r"scripts/([\w.]+\.py)", rec + readme))
+# K1 只核「本記錄所列之 scripts/」——先剔除引述他記錄腳本之寫法（如 `M21 \`scripts/00_x.py\``）
+scan_txt = re.sub(r"[A-Za-z]\d{1,2}\s*`?scripts/[\w.]+\.py`?", "", rec + readme)
+listed = set(re.findall(r"scripts/([\w.]+\.py)", scan_txt))
 chk("K1 腳本集對稱（磁碟 ↔ 記錄）：兩側差集空",
     allpy == listed, f"僅磁碟={sorted(allpy - listed)}；僅記錄={sorted(listed - allpy)}")
 

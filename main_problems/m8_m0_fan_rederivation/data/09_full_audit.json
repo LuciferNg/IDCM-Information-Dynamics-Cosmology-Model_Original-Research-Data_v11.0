@@ -243,7 +243,7 @@
     "detail": "未申報 = []"
   },
   "_D": {
-    "traced": 164,
+    "traced": 165,
     "untraced": [
       {
         "doc": "04_r2prime_two_chart_results.md",
@@ -344,6 +344,26 @@
         "doc": "01_problem_record.md",
         "num": "5.223686e35",
         "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.222686e35",
+        "reason": "§十八·3 引述 M21 手誤值（非本 M 數值；已 register note 通報）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.223686e35",
+        "reason": "D2.3 重算值（更正後）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "5.223685239e35",
+        "reason": "§十八·3 重算 10^35.717977（D2 級，非文檔宣稱值）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "3.7e-6",
+        "reason": "§十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）"
       }
     ]
   },
@@ -479,15 +499,15 @@
     "warn": false,
     "detail": "ok"
   },
-  "G3 register check: HARD DRIFT = 0": {
+  "G3 register check 可執行（全域基線：只記錄，不作為本記錄判據）": {
     "pass": true,
     "warn": false,
-    "detail": "HARD DRIFT = 0"
+    "detail": "全域 HARD DRIFT = 18（他人域明細見 _G.foreign）"
   },
-  "G4 register check 內無 M8 相關漂移": {
+  "G4 M8 零漂移（本記錄域硬判據；seed/provenance 行唔算）": {
     "pass": true,
     "warn": false,
-    "detail": "M8 零命中"
+    "detail": "漂移行 pid 集 = ['M4', 'O124', 'O140', 'O142', 'O148']"
   },
   "_G": {
     "blocks": {
@@ -516,7 +536,69 @@
         "source": "調律者 2026-10-26「v11.0 不逆交接回 v10.0，而且 M_0 可能並不符合 O38 的框架，開 M8 重新推 M_0，標度可能並非一個個點，而是江恩角度線反向交疊三角函數？」"
       }
     },
-    "hard_drift": 0
+    "hard_drift": 18,
+    "foreign": [
+      {
+        "pid": "M4",
+        "path": "open_problems_fresh/o140_finite_spectral_relativity/docs/19_m4_handoff_processing.md"
+      },
+      {
+        "pid": "M4",
+        "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o216_delta_n_color/docs/04_handoff_response_spectator_label_operator.md"
+      },
+      {
+        "pid": "O124",
+        "path": "open_problems_fresh/o124_qcd_gluon_scattering/docs/11_o_m4_em_operator_nogo.md"
+      },
+      {
+        "pid": "O124",
+        "path": "../IDCM-v10.0--It-From-Beat/open_problems_fresh/o124_qcd_gluon_scattering/docs/11_o_m4_em_operator_nogo.md"
+      },
+      {
+        "pid": "O140",
+        "path": "open_problems_fresh/o140_finite_spectral_relativity/docs/19_m4_handoff_processing.md"
+      },
+      {
+        "pid": "O140",
+        "path": "open_problems_fresh/o140_finite_spectral_relativity/docs/20_full_audit_verify.md"
+      },
+      {
+        "pid": "O140",
+        "path": "open_problems_fresh/o140_finite_spectral_relativity/docs/22_m5_handoff_processing.md"
+      },
+      {
+        "pid": "O140",
+        "path": "open_problems_fresh/o140_finite_spectral_relativity/docs/21_vacuous_check_correction.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/38_m4_a_spectral_identity.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/38_m4_a_spectral_identity.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/39_m4_q4_delivery_receipt.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/38_m4_a_spectral_identity.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/40_full_audit_v17_v31.md"
+      },
+      {
+        "pid": "O142",
+        "path": "open_problems_fresh/o142_boson_mass_derivation/docs/40_full_audit_v17_v31.md"
+      },
+      {
+        "pid": "O148",
+        "path": "open_problems_fresh/o148_dual_scale_vacuum_budget/docs/05_ratio_uniqueness_scan.md"
+      }
+    ]
   },
   "H1 docs/02_r1_results.md 含更正標記 ['docs/08', '無判別力']": {
     "pass": true,

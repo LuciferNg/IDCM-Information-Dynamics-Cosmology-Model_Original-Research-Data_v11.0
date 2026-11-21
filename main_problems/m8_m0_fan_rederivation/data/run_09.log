@@ -47,6 +47,10 @@
     [申報] 01_problem_record.md 2.3e35 — ❌ 已被 docs/04 附註更正為 5.223686e35（D2.3 把關）
     [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
     [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 01_problem_record.md 5.222686e35 — §十八·3 引述 M21 手誤值（非本 M 數值；已 register note 通報）
+    [申報] 01_problem_record.md 5.223686e35 — D2.3 重算值（更正後）
+    [申報] 01_problem_record.md 5.223685239e35 — §十八·3 重算 10^35.717977（D2 級，非文檔宣稱值）
+    [申報] 01_problem_record.md 3.7e-6 — §十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）
 [PASS] D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）  |  未申報 = []
 
 ==============================================================================
@@ -80,23 +84,24 @@
 ==============================================================================
 [PASS] G1 兩檔 block state 一致且 = partial  |  partial / partial
 [PASS] G2 兩檔 block updated = 2026-10-26  |  ok
-[PASS] G3 register check: HARD DRIFT = 0  |  HARD DRIFT = 0
-[PASS] G4 register check 內無 M8 相關漂移  |  M8 零命中
+[PASS] G3 register check 可執行（全域基線：只記錄，不作為本記錄判據）  |  全域 HARD DRIFT = 18（他人域明細見 _G.foreign）
+[PASS] G4 M8 零漂移（本記錄域硬判據；seed/provenance 行唔算）  |  漂移行 pid 集 = ['M4', 'O124', 'O140', 'O142', 'O148']
 
 ==============================================================================
 §H 更正標記：已推翻之結論必須標記
 ==============================================================================
 [PASS] H1 docs/02_r1_results.md 含更正標記 ['docs/08', '無判別力']  |  缺 []
 [PASS] H1 docs/04_r2prime_two_chart_results.md 含更正標記 ['更正']  |  缺 []
-[PASS] H1 docs/06_r5prime_hierarchy_reduction.md 含更正標記 ['更正']  |  缺 []
-[PASS] H1 docs/07_r6prime_three_input_falsifiability.md 含更正標記 ['更正']  |  缺 []
-[PASS] H1 docs/08_r7prime_power_audit_selfcorrection.md 含更正標記 ['推翻']  |  缺 []
-[PASS] H1b R3 撤銷標記留存（docs/04 含『撤銷』）  |  撤銷 出現 3 次
-[PASS] H2 README 之『23/68』舊宣稱已標記為被 161/475 取代  |  檢查 161/475 或『已取代』字樣
+[PASS] H1 docs/06_r5prime_hie
+==============================================================================
+[PASS] E1 每個 docs/*.md 皆列於 README  |  缺 = []
+[PASS] E2 每個 scripts/*.py 皆列於 README  |  缺 = []
+[PASS] E3 README 引用之檔案路徑全部存在（無斷鏈；已剔模板／裸前綴）  |  斷鏈 = []
+[PASS] E4 docs 編號連續 01–09  |  9 個檔案
 
 ==============================================================================
-§K 推導鏈六項核對（腳本集／逆向綁定／路徑衛生／產物綁定／幽靈推導／driver）
-=========================================
+§F 時序表：01_problem_record 每 row 必須引用存在之文檔
+==============================================================================
   時序 row 數 = 9：['1', '2', '3', '4', '5', '6', '7', '8', '9']
   被引用 docs = ['01', '02', '03', '04', '05', '06', '07', '08', '09']
 [PASS] F1 每個 docs/01–09 至少被時序表或結果節引用一次  |  未引用 = []
@@ -110,8 +115,9 @@
   SESSION_START    : state=partial
 [PASS] G1 兩檔 block state 一致且 = partial  |  partial / partial
 [PASS] G2 兩檔 block updated = 2026-10-26  |  ok
-[PASS] G3 register check: HARD DRIFT = 0  |  HARD DRIFT = 0
-[PASS] G4 register check 內無 M8 相關漂移  |  M8 零命中
+[PASS] G3 register check 可執行（全域基線：只記錄，不作為本記錄判據）  |  全域 HARD DRIFT = 18（他人域明細見 _G.foreign）
+[PASS] G4 M8 零漂移（本記錄域硬判據；seed/provenance 行唔算）  |  漂移行 pid 集 = ['M4', 'O124', 'O140', 'O142', 'O148']
+  他人域 REF-MISSING = 15（pids = ['M4', 'O124', 'O140', 'O142', 'O148']）
 
 ==============================================================================
 §H 更正標記：已推翻之結論必須標記
