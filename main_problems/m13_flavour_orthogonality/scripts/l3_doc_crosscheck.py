@@ -190,6 +190,11 @@ CLAIMS = [
     {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "gamma2_over_gamma1", "label": "γ₂/γ₁"},
     {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "z_B5_ceiling", "label": "z(B=5) 天花板"},
     {"doc": "docs/19_chain_ratio_and_besiii.md", "key": "sigma_Xi0_needed_B5", "label": "σ(Ξ⁰) 需 ≤"},
+    # docs/20 handoff 處理（M20 請求／M15 回執）
+    {"doc": "docs/20_handoff_m20_m15.md", "key": "rho_d", "label": "ρ_d 正典"},
+    {"doc": "docs/20_handoff_m20_m15.md", "key": "sigma_rho_d", "label": "σ_ρd 正典"},
+    {"doc": "docs/20_handoff_m20_m15.md", "key": "z_x2_d", "label": "z(ρ_d vs 3/8)"},
+    {"doc": "docs/20_handoff_m20_m15.md", "key": "gamma2_over_gamma1", "label": "γ₂/γ₁"},
 ]
 
 

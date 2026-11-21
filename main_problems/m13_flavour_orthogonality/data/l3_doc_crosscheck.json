@@ -371,6 +371,22 @@
     "pass": true,
     "detail": "L2 0.142681 ↔ 文檔 0.1427（rel 1.3e-04）"
   },
+  "C.20_handoff_m20_m.ρ_d 正典": {
+    "pass": true,
+    "detail": "L2 0.403504 ↔ 文檔 0.403504（rel 9.0e-14）"
+  },
+  "C.20_handoff_m20_m.σ_ρd 正典": {
+    "pass": true,
+    "detail": "L2 0.0447852 ↔ 文檔 0.0447852（rel 1.1e-10）"
+  },
+  "C.20_handoff_m20_m.z(ρ_d vs 3/8)": {
+    "pass": true,
+    "detail": "L2 -0.636453 ↔ 文檔 0.6365（rel 7.4e-05）"
+  },
+  "C.20_handoff_m20_m.γ₂/γ₁": {
+    "pass": true,
+    "detail": "L2 3.9949 ↔ 文檔 3.9949（rel 5.5e-11）"
+  },
   "F.01_reproduction_gate 全命中（5/5）": {
     "pass": true,
     "detail": ""
@@ -447,12 +463,16 @@
     "pass": true,
     "detail": ""
   },
+  "F.20_handoff_m20_m15 全命中（4/4）": {
+    "pass": true,
+    "detail": ""
+  },
   "F.final_result 全命中（8/8）": {
     "pass": true,
     "detail": ""
   },
   "_summary": {
-    "checks": 113,
+    "checks": 118,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": "5/5",
@@ -474,7 +494,8 @@
       "docs/17_handoff_replies.md": "9/9",
       "final_result.md": "8/8",
       "docs/18_full_push.md": "4/4",
-      "docs/19_chain_ratio_and_besiii.md": "3/3"
+      "docs/19_chain_ratio_and_besiii.md": "3/3",
+      "docs/20_handoff_m20_m15.md": "4/4"
     }
   }
 }
