@@ -4,7 +4,8 @@
 
 🟡 **partial — 部分閉合**（2026-11-20；第一輪 R1–R5 ＋ 第二輪 M22 入站裁定）｜本 O 自身殘項 **4**
 （`h11 = 36` 維數缺口、h11/h21 算子身份、`N₂ = B²` 身份、`BR1` 只餘 count-level 約定）
-📎 交付：`scripts/00–08`（9 支）｜`docs/00–06`（7 份）｜`data/` 9 JSON ＋ 9 log｜`final_result.md`
+📎 交付：`scripts/00–09`（10 支）｜`docs/00–07`（8 份）｜`data/` 10 JSON ＋ 10 log｜`final_result.md`
+📎 第三輪 audit-verify：`scripts/09` **59 checks 全綠**（A 檔案／B 重跑／C 獨立重算 19／D 文檔 7×100%／E 斷鏈 0／F 表格／G 自查）
 
 ## 一句話
 
@@ -45,6 +46,15 @@
 | `K_tree` | 33 | 🟢 `= Σ(d−1)² = 3·11`（與 v10 O83 一致） | M21 `E10` |
 | `10^38` | 4.095e38 | 🔴 「兩因子」偽命題 → 單一 object | M21 `TF1` |
 
+## 審計水位
+
+```
+第一輪（00–05）   87 PASS / 4 FAIL
+第二輪（07–08）  ＋44 PASS
+第三輪  09 全鏈審計 57/57 PASS
+全鏈              131 PASS / 4 FAIL（4 FAIL 全部係被證偽之假設本身）
+```
+
 ## 缺口數字（不變）
 
 ```
@@ -66,8 +76,9 @@ gap = 38.612274 − 2.894296 = 35.717977 dex = 5.223686e35×   （「缺口」�
 | `docs/04_derivation_graph.md` | R4／T4：互導圖 `CG1/GR1` |
 | `docs/05_registry_and_dedup.md` | P5／Q3：查重 ＋ 雙態登記 ＋ 總判詞 |
 | `docs/06_handoff_m22_adjudication.md` | M22 入站裁定：`BR1` 對象層判死（三重）＋ 維數層殘留 |
+| `docs/07_audit_verify_round.md` | 全鏈 audit-verify：腳本落碟對帳、重跑、獨立重算、文檔交叉核、斷鏈、4 項漂移修正 |
 | `final_result.md` | 最終摘要 |
-| `scripts/00–08` | 重現閘 → R1–R4 → 登記查重 → 自查水位 → M22 驗收 → BR1 機制裁定 |
+| `scripts/00–09` | 重現閘 → R1–R4 → 登記查重 → 自查水位 → M22 驗收 → BR1 裁定 → **全鏈審計** |
 
 ## 依賴
 

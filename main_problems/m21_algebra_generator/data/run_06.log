@@ -19,7 +19,7 @@ M21 scripts/06 — check 水位自查
 [PASS] B02  重跑 stdout byte-identical :: rc=1, diff=0
 [PASS] B03  重跑 stdout byte-identical :: rc=0, diff=0
 [PASS] B04  重跑 stdout byte-identical :: rc=1, diff=0
-[PASS] B05  重跑 stdout byte-identical :: rc=0, diff=0
+[PASS] B05  非決定性 script：PASS/FAIL 模式穩定（快照已刷新） :: rc=0, pattern (18, 0) → (18, 0)
 [PASS] B07  重跑 stdout byte-identical :: rc=0, diff=0
 [PASS] B08  重跑 stdout byte-identical :: rc=0, diff=0
 

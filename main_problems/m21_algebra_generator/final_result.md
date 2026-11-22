@@ -59,8 +59,10 @@ scripts/02  R2/T2   4/6  PASS（2 FAIL = 預期結論：CY1′ 命中 6 ≥ 5、
 scripts/03  R3/T3   8/8  PASS
 scripts/04  R4/T4   9/11 PASS（2 FAIL = 預期結論：GR1-c/d 不閉）
 scripts/05  P5/Q3  18/18 PASS
-scripts/06  自查     13/13 PASS（水位機械重算 + 決定性重跑）
-合計 87 PASS ／ 4 FAIL（00–05；4 FAIL 全部係被證偽之假設本身）
+scripts/06  自查     17/17 PASS（水位機械重算 + 決定性重跑；第二輪由 13 擴至 17）
+scripts/07  M22 驗收 22/22 ｜ scripts/08  BR1 裁定 22/22（第二輪）
+scripts/09  全鏈審計 59/59 PASS（A 檔案／B 重跑／C 獨立重算／D 文檔／E 斷鏈／F 表格／G 自查）
+第一輪 87 (00–05) ＋ 第二輪 44 (07–08) ⟹ **131 PASS ／ 4 FAIL**（4 FAIL 全部係被證偽之假設本身）
 ```
 
 判準凍結：`docs/00_preregistration.md`（跑 script 之前寫死）＋ §2 POSTHOC 披露
@@ -87,7 +89,7 @@ scripts/06  自查     13/13 PASS（水位機械重算 + 決定性重跑）
 
 ## 第二輪（2026-11-20）：M22 入站 handoff 裁定 —— `BR1` 對象層判死
 
-入站 1 條（M22 `11:12`，ref `docs/07_mr1_equivariance.md`）；四項宣稱**全部獨立重算通過**（`scripts/07` 22/22）：
+入站 1 條（M22 `11:12`，ref `m22_observational_field_layer/docs/07_mr1_equivariance.md`）；四項宣稱**全部獨立重算通過**（`scripts/07` 22/22）：
 
 ```
 Q1 60 = 16 + 44 之典範集合實現 ✅（{g²=e} 與補皆共軛穩定，違例 0）

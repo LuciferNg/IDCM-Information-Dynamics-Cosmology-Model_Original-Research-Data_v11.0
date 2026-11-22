@@ -71,9 +71,9 @@
       "detail": "rc=1, diff=0"
     },
     {
-      "tag": "B05  重跑 stdout byte-identical",
+      "tag": "B05  非決定性 script：PASS/FAIL 模式穩定（快照已刷新）",
       "pass": true,
-      "detail": "rc=0, diff=0"
+      "detail": "rc=0, pattern (18, 0) → (18, 0)"
     },
     {
       "tag": "B07  重跑 stdout byte-identical",

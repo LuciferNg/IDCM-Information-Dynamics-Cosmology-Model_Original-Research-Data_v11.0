@@ -1,0 +1,310 @@
+{
+  "checks": [
+    {
+      "tag": "A1  scripts 編號由 00 連續無缺",
+      "pass": true,
+      "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+    },
+    {
+      "tag": "A2  docs 編號由 00 連續無缺",
+      "pass": true,
+      "detail": "[0, 1, 2, 3, 4, 5, 6, 7]"
+    },
+    {
+      "tag": "A3  每支 script 有 data/run_NN.log（除審計自身 09）",
+      "pass": true,
+      "detail": "logs = 10 / scripts = 10"
+    },
+    {
+      "tag": "A3b  缺 log 者 ⊆ {09}（審計自身；首跑前後皆合法）",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "A4  四件套存在：01_problem_record.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A4  四件套存在：SESSION_START.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A4  四件套存在：README.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A4  四件套存在：final_result.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A5  registry block state = partial",
+      "pass": true,
+      "detail": "partial"
+    },
+    {
+      "tag": "A6  registry block verdict = partial",
+      "pass": true,
+      "detail": "partial"
+    },
+    {
+      "tag": "A7  每支 script 有 shebang ＋ docstring",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "B00  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B01  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B02  byte-identical ＋ rc=1",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B03  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B04  byte-identical ＋ rc=1",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B05  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B06  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B07  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B08  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "C1  γ_n + γ_{44−n} = 4（n=1..43，dec prec 60）違例 0",
+      "pass": true,
+      "detail": "violations = 0"
+    },
+    {
+      "tag": "C2  Σγ = 90（dec prec 60，容差 1e−45）",
+      "pass": true,
+      "detail": "90.000000000000000"
+    },
+    {
+      "tag": "C3  度集唯一（cwr 枚舉）= {1,3,3,4,5}",
+      "pass": true,
+      "detail": "[(1, 3, 3, 4, 5)]"
+    },
+    {
+      "tag": "C4  Σd(d−1) = 44 = 4·Σ(d−1)",
+      "pass": true,
+      "detail": "44"
+    },
+    {
+      "tag": "C5  Σ(d−1)(d−4) = 0（加權均值 = B）",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "C6  Σ(d−1)² = 33 ｜ Σ(d²−1) = 55",
+      "pass": true,
+      "detail": "33 / 55"
+    },
+    {
+      "tag": "C7  |A₅| = 60",
+      "pass": true,
+      "detail": "60"
+    },
+    {
+      "tag": "C8  #{g²=e} = 16 ｜ #非對合 = 44",
+      "pass": true,
+      "detail": "16 / 44"
+    },
+    {
+      "tag": "C9  共軛類大小多重集 = {20,15,12,12,1}",
+      "pass": true,
+      "detail": "[20, 15, 12, 12, 1]"
+    },
+    {
+      "tag": "C10 鏈側 gcd 型別 = {20,10,5,5,2,1,1}",
+      "pass": true,
+      "detail": "[20, 10, 5, 5, 2, 1, 1]"
+    },
+    {
+      "tag": "C11 反射 (21 對, 1 不動點, 1 無伴)",
+      "pass": true,
+      "detail": "21/[22]/[44]"
+    },
+    {
+      "tag": "C12 Σ d(d−1)/2 = 22 ｜ Σ d(d+1)/2 = 38 ｜ 22+38 = 60",
+      "pass": true,
+      "detail": "22 / 38 / 60"
+    },
+    {
+      "tag": "C13 Σ_(i<j) d_i d_j = 98 = ((Σd)²−Σd²)/2",
+      "pass": true,
+      "detail": "98"
+    },
+    {
+      "tag": "C14 群 orbit {20,12,12}/{2×22}；模 orbit {20,10,5,5,2,1,1}/{21×2,1,1}",
+      "pass": true,
+      "detail": "[20, 12, 12] / [20, 10, 5, 5, 2, 1, 1]"
+    },
+    {
+      "tag": "C15 等變配對 = 0（4×3 全不中）",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "C16 維數池 36 命中 = 0（h11 真缺口）",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "C17 {20,24} cut 密度 = 2/43",
+      "pass": true,
+      "detail": "2/43"
+    },
+    {
+      "tag": "C18 44 命中池內唯一（Σd(d−1)）",
+      "pass": true,
+      "detail": "['Σd(d−1)']"
+    },
+    {
+      "tag": "C19 98 命中池內唯一（Σ_(i<j)）",
+      "pass": true,
+      "detail": "['Σ_(i<j)']"
+    },
+    {
+      "tag": "D  00_preregistration.md claim 命中率 3/3",
+      "pass": true,
+      "detail": "3/3"
+    },
+    {
+      "tag": "D  01_a5_census_identity.md claim 命中率 5/5",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "tag": "D  02_cy3_route_and_pool_gate.md claim 命中率 3/3",
+      "pass": true,
+      "detail": "3/3"
+    },
+    {
+      "tag": "D  03_two_factor_audit.md claim 命中率 3/3",
+      "pass": true,
+      "detail": "3/3"
+    },
+    {
+      "tag": "D  04_derivation_graph.md claim 命中率 4/4",
+      "pass": true,
+      "detail": "4/4"
+    },
+    {
+      "tag": "D  05_registry_and_dedup.md claim 命中率 2/2",
+      "pass": true,
+      "detail": "2/2"
+    },
+    {
+      "tag": "D  06_handoff_m22_adjudication.md claim 命中率 5/5",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "tag": "D  07_audit_verify_round.md claim 命中率 4/4",
+      "pass": true,
+      "detail": "4/4"
+    },
+    {
+      "tag": "D-global1 38.612274 出現且無 38.61227 變體漂移",
+      "pass": true,
+      "detail": "count = 5"
+    },
+    {
+      "tag": "D-global2 缺口 35.717977 出現",
+      "pass": true,
+      "detail": "count = 9"
+    },
+    {
+      "tag": "D-global3 舊值 5.222686 只存於原文三處或更正語境；更正後值 ≥ 2 次",
+      "pass": true,
+      "detail": "5.223686 = 7, 未標語境 = []"
+    },
+    {
+      "tag": "D-global4 Σγ = 90 一致",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "tag": "D-global5 docs/05 已標「快照」；活 JSON 各關鍵詞族 ≥1 命中",
+      "pass": true,
+      "detail": "空族 = []"
+    },
+    {
+      "tag": "E1  docs→scripts 引用無斷鏈",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "E2  文檔→docs 引用無斷鏈",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "E3  final_result 引用檔案全部存在",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "E4  data/*.json 全部可解析",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "F1  未登記之表格缺陷 = 0",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "tag": "G1  本檔 check 數 ≥ 40（覆蓋 A–F 六段）",
+      "pass": true,
+      "detail": "57"
+    },
+    {
+      "tag": "G2  段別覆蓋齊全（A/B/C/D/E/F）",
+      "pass": true,
+      "detail": "見段標題"
+    }
+  ],
+  "n_pass": 59,
+  "n_fail": 0,
+  "n_total": 59,
+  "doc_claim_hit_rate": "29/29",
+  "table_bad": [
+    [
+      "01_problem_record.md",
+      "72",
+      "[3, 3, 5, 3, 3, 3, 3, 3, 3]"
+    ]
+  ]
+}

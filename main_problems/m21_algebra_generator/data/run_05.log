@@ -1,7 +1,7 @@
 ==============================================================================
 M21 scripts/05 — 產物查重 ＋ 雙態登記
 ==============================================================================
-  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9703
+  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9707
 
   K1  Σ_χ d(d−1) = 44（A₅ 度集普查）
     命中檔案數 = 26
@@ -70,7 +70,7 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
     命中檔案數 = 2
       · IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py
       · IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md
-[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9703 files
+[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9707 files
 [PASS] NDR1  K1 查重已記錄 :: hits = 26
 [PASS] NDR1  K2 查重已記錄 :: hits = 167
 [PASS] NDR1  K3 查重已記錄 :: hits = 77
