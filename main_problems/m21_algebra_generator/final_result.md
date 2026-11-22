@@ -132,6 +132,19 @@ Q4 Ω 3:16:41 不可 A₅-等變落 60 格 ✅（|R| = 23 不含 ∅；M22 報 2
 ## 交付層
 
 ```
-scripts/ 00–05（6 支）｜data/ 6 JSON ＋ 6 log｜docs/ 00–05（6 份）｜本檔｜README／01_problem_record／SESSION_START 同步
-register：progress M21 verdict=partial ＋ note → M15（Q3）／M6（殘餘措辭、dof）＋ mirror
+scripts/ 00–09（10 支）｜data/ 10 JSON ＋ 10 log｜docs/ 00–07（8 份）｜本檔｜README／01_problem_record／SESSION_START 同步
+register：progress M21 verdict=partial（三輪）＋ notes → M15／M6／M8 ＋ handoff → M22（回執）＋ mirror
+審計：scripts/09 全鏈 59/59 PASS（A 檔案／B 重跑／C 獨立重算 19／D 文檔 8×100%／E 斷鏈 0／F 表格／G 自查）
+```
+
+## 第三輪（2026-11-20）：全鏈 audit-verify
+
+```
+腳本落碟對帳：10 支 script（00–09）全部在 scripts/，各有 data/run_NN.log ＋ docs 段落（docs/07 §1 表）
+重跑：決定性腳本全 byte-identical（02/04 rc=1 = 被證偽假設本身）；05 標 NONDET（corpus 掃描）
+獨立重算 19 項全部 PASS（γ 對極／Σγ=90／CA1 唯一／普查／A₅ orbit／Λ²·Sym²／維數池／等變配對）
+文檔交叉核 8/8 命中率 100%；斷鏈 0；表格 1 已知既有（§三，原文不動）
+漂移修正 5 項：①缺口因子 5.222686→5.223686（§十三 附註）②水位 87→131 ③06 13→17
+              ④05 corpus 快照標記 ⑤05 非決定性登記（NONDET ＋ log 快照刷新）
+開放問題整理：§十四（殘項 4／已封 5／依賴他 O 4／本 O 可推 3／禁區）
 ```

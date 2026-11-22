@@ -60,7 +60,7 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] D  07_audit_verify_round.md claim 命中率 4/4 :: 4/4
 [PASS] D-global1 38.612274 出現且無 38.61227 變體漂移 :: count = 5
 [PASS] D-global2 缺口 35.717977 出現 :: count = 9
-[PASS] D-global3 舊值 5.222686 只存於原文三處或更正語境；更正後值 ≥ 2 次 :: 5.223686 = 7, 未標語境 = []
+[PASS] D-global3 舊值 5.222686 只存於原文三處或更正語境；更正後值 ≥ 2 次 :: 5.223686 = 8, 未標語境 = []
 [PASS] D-global4 Σγ = 90 一致 :: ok
 [PASS] D-global5 docs/05 已標「快照」；活 JSON 各關鍵詞族 ≥1 命中 :: 空族 = []
 
