@@ -252,6 +252,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -517,6 +525,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -788,6 +804,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -1053,6 +1077,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -1324,6 +1356,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -1589,6 +1629,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -1860,6 +1908,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -2125,6 +2181,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -2396,6 +2460,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -2661,6 +2733,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -2932,6 +3012,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3197,6 +3285,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -3468,6 +3564,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -3733,6 +3837,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -4004,6 +4116,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -4269,6 +4389,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -4540,6 +4668,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -4808,6 +4944,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -4837,7 +4981,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_walu27qg/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
+        "/tmp/m5audit_do_gd5t4/20/20_shape_ratio_closure.py:123: RuntimeWarning: overflow encountered in exp",
         "  a, t = np.exp(x[0]), np.exp(x[1])"
       ],
       "rerun_identical": true,
@@ -5079,6 +5223,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -5108,7 +5260,7 @@
       "log_exists": true,
       "exit": 0,
       "stderr_tail": [
-        "/tmp/m5audit_walu27qg/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
+        "/tmp/m5audit_do_gd5t4/21/21_R_ceiling.py:53: RuntimeWarning: overflow encountered in scalar power",
         "  return ALPHA * q * (HBARC / a) * rA * 1000, Cq * (HBARC / a) ** 3 * P0 * 1000, bd"
       ],
       "rerun_identical": true,
@@ -5347,6 +5499,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -5618,6 +5778,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -5883,6 +6051,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -6154,6 +6330,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -6419,6 +6603,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -6690,6 +6882,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -6955,6 +7155,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -7226,6 +7434,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -7491,6 +7707,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -7762,6 +7986,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -8027,6 +8259,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -8298,6 +8538,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -8563,6 +8811,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -8834,6 +9090,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -9099,6 +9363,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -9370,6 +9642,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -9635,6 +9915,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -9906,6 +10194,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -10171,6 +10467,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -10442,6 +10746,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -10707,6 +11019,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -10978,6 +11298,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -11243,6 +11571,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -11514,6 +11850,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -11779,6 +12123,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -12050,6 +12402,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -12315,6 +12675,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -12586,6 +12954,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -12851,6 +13227,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -13122,6 +13506,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -13387,6 +13779,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -13658,6 +14058,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -13923,6 +14331,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -14194,6 +14610,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -14459,6 +14883,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -14730,6 +15162,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -14740,9 +15180,9 @@
       ],
       "docstring_match": true,
       "t3": {
-        "meta": 3,
+        "meta": 6,
         "external": 0,
-        "derived": 6,
+        "derived": 11,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -14995,6 +15435,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -15266,6 +15714,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -15534,6 +15990,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -15547,6 +16011,558 @@
         "meta": 1,
         "external": 0,
         "derived": 11,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "60": {
+      "script": "60_drift_check.py",
+      "doc": "58_drift_check.md",
+      "log": "run_60_drift_check.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ],
+        [
+          "32_dimension_attack.json",
+          true
+        ],
+        [
+          "33_scale_identifiability.json",
+          true
+        ],
+        [
+          "34_metric_decay.json",
+          true
+        ],
+        [
+          "35_two_lengths.json",
+          true
+        ],
+        [
+          "36_A_bound.json",
+          true
+        ],
+        [
+          "37_third_family.json",
+          true
+        ],
+        [
+          "38_k_anomaly_significance.json",
+          true
+        ],
+        [
+          "39_sigma_propagation.json",
+          true
+        ],
+        [
+          "40_heavy_hfs_kappa.json",
+          true
+        ],
+        [
+          "41_chiral_log_regime.json",
+          true
+        ],
+        [
+          "42_scale_pair_operator.json",
+          true
+        ],
+        [
+          "43_contact_ml_variant.json",
+          true
+        ],
+        [
+          "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
+          "47_vself_class_isospin_channel.json",
+          true
+        ],
+        [
+          "48_sign_structure.json",
+          true
+        ],
+        [
+          "49_B_anomaly.json",
+          true
+        ],
+        [
+          "50_fractal_34_test.json",
+          true
+        ],
+        [
+          "51_em_sector_2amp.json",
+          true
+        ],
+        [
+          "52_lightflavour_law.json",
+          true
+        ],
+        [
+          "53_isospin_channel.json",
+          true
+        ],
+        [
+          "54_closed_form_scan.json",
+          true
+        ],
+        [
+          "55_m7_reply_arbitration.json",
+          true
+        ],
+        [
+          "56_m10_w1_channels.json",
+          true
+        ],
+        [
+          "57_inbound_adjudication.json",
+          true
+        ],
+        [
+          "58_branch_rederive.json",
+          true
+        ],
+        [
+          "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
+          "l2_independent_verify.json",
+          true
+        ],
+        [
+          "l3_doc_crosscheck.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 3,
+        "external": 0,
+        "derived": 5,
+        "pending": 0,
+        "unexplained": [],
+        "unexplained_n": 0,
+        "ctx": []
+      },
+      "sections_ok": true,
+      "has_criteria_section": false,
+      "h1_ok": true
+    },
+    "61": {
+      "script": "61_basis_identification.py",
+      "doc": "59_basis_identification.md",
+      "log": "run_61_basis_identification.log",
+      "log_exists": true,
+      "exit": 0,
+      "stderr_tail": [],
+      "rerun_identical": true,
+      "json": [
+        [
+          "01_chain_green_function.json",
+          true
+        ],
+        [
+          "02_ktree_radial_kernel.json",
+          true
+        ],
+        [
+          "03_ultrametric_nogo.json",
+          true
+        ],
+        [
+          "04_signed_kernel_identifiability.json",
+          true
+        ],
+        [
+          "05_state_overlap_identifiability.json",
+          true
+        ],
+        [
+          "06_kappa_interval_exclusion.json",
+          true
+        ],
+        [
+          "07_sign_structure_audit.json",
+          true
+        ],
+        [
+          "08_sampleout_channels.json",
+          true
+        ],
+        [
+          "09_contact_term.json",
+          true
+        ],
+        [
+          "10_tree_two_body.json",
+          true
+        ],
+        [
+          "11_scale_fixed_test.json",
+          true
+        ],
+        [
+          "12_full_audit.json",
+          true
+        ],
+        [
+          "13_layer_pin_a3.json",
+          true
+        ],
+        [
+          "14_spin_operator_decoupling.json",
+          true
+        ],
+        [
+          "15_contact_corrected.json",
+          true
+        ],
+        [
+          "16_verification.json",
+          true
+        ],
+        [
+          "17_d2_strong_ib.json",
+          true
+        ],
+        [
+          "18_g_kernel_first_pass.json",
+          true
+        ],
+        [
+          "19_two_sector.json",
+          true
+        ],
+        [
+          "20_shape_ratio_closure.json",
+          true
+        ],
+        [
+          "21_R_ceiling.json",
+          true
+        ],
+        [
+          "22_registered_family.json",
+          true
+        ],
+        [
+          "23_sign_theorem.json",
+          true
+        ],
+        [
+          "24_assignment_scope.json",
+          true
+        ],
+        [
+          "25_family_resolution.json",
+          true
+        ],
+        [
+          "26_downstream_recompute.json",
+          true
+        ],
+        [
+          "27_theorem_rederivation.json",
+          true
+        ],
+        [
+          "28_chain_continuity.json",
+          true
+        ],
+        [
+          "29_weight_convention.json",
+          true
+        ],
+        [
+          "30_v2_full_recompute.json",
+          true
+        ],
+        [
+          "31_v2_d2_s6.json",
+          true
+        ],
+        [
+          "32_dimension_attack.json",
+          true
+        ],
+        [
+          "33_scale_identifiability.json",
+          true
+        ],
+        [
+          "34_metric_decay.json",
+          true
+        ],
+        [
+          "35_two_lengths.json",
+          true
+        ],
+        [
+          "36_A_bound.json",
+          true
+        ],
+        [
+          "37_third_family.json",
+          true
+        ],
+        [
+          "38_k_anomaly_significance.json",
+          true
+        ],
+        [
+          "39_sigma_propagation.json",
+          true
+        ],
+        [
+          "40_heavy_hfs_kappa.json",
+          true
+        ],
+        [
+          "41_chiral_log_regime.json",
+          true
+        ],
+        [
+          "42_scale_pair_operator.json",
+          true
+        ],
+        [
+          "43_contact_ml_variant.json",
+          true
+        ],
+        [
+          "44_em_decomposition.json",
+          true
+        ],
+        [
+          "45_two_body_delta0_bound.json",
+          true
+        ],
+        [
+          "46_ml_exponent_stability.json",
+          true
+        ],
+        [
+          "47_vself_class_isospin_channel.json",
+          true
+        ],
+        [
+          "48_sign_structure.json",
+          true
+        ],
+        [
+          "49_B_anomaly.json",
+          true
+        ],
+        [
+          "50_fractal_34_test.json",
+          true
+        ],
+        [
+          "51_em_sector_2amp.json",
+          true
+        ],
+        [
+          "52_lightflavour_law.json",
+          true
+        ],
+        [
+          "53_isospin_channel.json",
+          true
+        ],
+        [
+          "54_closed_form_scan.json",
+          true
+        ],
+        [
+          "55_m7_reply_arbitration.json",
+          true
+        ],
+        [
+          "56_m10_w1_channels.json",
+          true
+        ],
+        [
+          "57_inbound_adjudication.json",
+          true
+        ],
+        [
+          "58_branch_rederive.json",
+          true
+        ],
+        [
+          "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
+          "l2_independent_verify.json",
+          true
+        ],
+        [
+          "l3_doc_crosscheck.json",
+          true
+        ]
+      ],
+      "docstring_match": true,
+      "t3": {
+        "meta": 0,
+        "external": 0,
+        "derived": 10,
         "pending": 0,
         "unexplained": [],
         "unexplained_n": 0,
@@ -15799,6 +16815,14 @@
         ],
         [
           "59_inbound_round2.json",
+          true
+        ],
+        [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
           true
         ],
         [
@@ -16058,6 +17082,14 @@
           true
         ],
         [
+          "60_drift_check.json",
+          true
+        ],
+        [
+          "61_basis_identification.json",
+          true
+        ],
+        [
           "l2_independent_verify.json",
           true
         ],
@@ -16070,16 +17102,16 @@
     }
   },
   "counts": {
-    "docs": 57,
-    "scripts": 59,
-    "logs": 65,
-    "json": 61,
+    "docs": 59,
+    "scripts": 61,
+    "logs": 67,
+    "json": 63,
     "claims": {
       "docs": [
-        "57"
+        "59"
       ],
       "scripts": [
-        "61"
+        "63"
       ],
       "log_json": []
     }
