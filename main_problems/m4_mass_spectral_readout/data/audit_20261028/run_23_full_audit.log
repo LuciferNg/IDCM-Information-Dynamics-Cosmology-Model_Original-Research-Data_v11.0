@@ -2,8 +2,8 @@
 M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
 ================================================================================================
 
-配對：45 組（scripts 全部=46，含本審計腳本自身 → 排除），docs=45，logs=44）
-臨時工作目錄：/tmp/m4audit_jy0qnjkx
+配對：47 組（scripts 全部=48，含本審計腳本自身 → 排除），docs=48，logs=44）
+臨時工作目錄：/tmp/m4audit_a9ek63hp
   [01] exit=0 重跑一致=True docstring=True T3 meta/external/pending=2/9/26 未解釋=1 結構=True json=—
   [02] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/8/2 未解釋=0 結構=True json=—
   [03] exit=0 重跑一致=True docstring=True T3 meta/external/pending=1/2/3 未解釋=0 結構=True json=—
@@ -29,7 +29,7 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   [24] exit=1 重跑一致=False docstring=None T3 meta/external/pending=1/5/18 未解釋=18 結構=True json=—
   [25] exit=0 重跑一致=True docstring=None T3 meta/external/pending=1/5/9 未解釋=2 結構=True json=[True]
   [26] exit=0 重跑一致=True docstring=False T3 meta/external/pending=6/17/11 未解釋=0 結構=True json=[True]
-  [27] exit=0 重跑一致=True docstring=False T3 meta/external/pending=3/5/10 未解釋=2 結構=False json=[True]
+  [27] exit=0 重跑一致=True docstring=False T3 meta/external/pending=4/5/10 未解釋=2 結構=True json=[True]
   [28] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[True]
   [29] exit=0 重跑一致=True docstring=False T3 meta/external/pending=9/5/21 未解釋=3 結構=True json=[True]
   [30] exit=0 重跑一致=True docstring=False T3 meta/external/pending=7/13/2 未解釋=0 結構=True json=[True]
@@ -37,38 +37,38 @@ M4 docs/23 — 全量審計（22 支腳本 × 22 份文檔）
   [33] exit=1 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
   [34] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[True]
   [35] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=None json=[True]
-  [36] exit=0 重跑一致=None docstring=False T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=[True]
+  [36] exit=0 重跑一致=None docstring=False T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[True]
   [38] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[True]
   [39] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
   [40] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
   [41] exit=1 重跑一致=False docstring=False T3 meta/external/pending=1/8/15 未解釋=15 結構=True json=—
-  [42] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=False json=—
+  [42] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
   [43] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=None json=—
   [44] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=None json=—
   [45] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[True]
   [46] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=[False]
   [47] exit=1 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
   [48] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
+  [49] exit=0 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
+  [51] exit=1 重跑一致=None docstring=None T3 meta/external/pending=None/None/None 未解釋=None 結構=True json=—
 
-[計數] actual: docs=45 scripts=46 logs=44 json=41
+[計數] actual: docs=48 scripts=48 logs=44 json=43
         README 宣稱: {'docs_claim': [], 'scripts_claim': [], 'log_claim': [], 'json_claim': ['14', '33']}
 
-[違規] 16
+[違規] 14
   - 24: exit 1
   - 24: 重跑非 byte-identical
   - 26: docstring 與 docs §一 不一致
   - 27: docstring 與 docs §一 不一致
-  - 27: 缺 前設問題/事前判準/結論報告
   - 29: docstring 與 docs §一 不一致
   - 30: docstring 與 docs §一 不一致
   - 33: exit 1
   - 36: docstring 與 docs §一 不一致
-  - 36: 缺 前設問題/事前判準/結論報告
   - 41: exit 1
   - 41: 重跑非 byte-identical
   - 41: docstring 與 docs §一 不一致
-  - 42: 缺 前設問題/事前判準/結論報告
   - 46: JSON 46_handoff_adjudication_round4.json 不一致
   - 47: exit 1
+  - 51: exit 1
 
 → data/23_full_audit.json

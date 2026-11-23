@@ -1,0 +1,82 @@
+================================================================================================================
+R2 — canonical 值必須在來源 data 檔內
+================================================================================================================
+  R_span         lattice span 比 R           canonical=12.0055        來源=data/11_lattice_flag.json                            ✓
+  sigma_R        R 之 σ（精確二階）                canonical=0.039833       來源=data/44_sigma_R_resolution.json                      ✓
+  X_ratio        X 比值形式                     canonical=2.5145         來源=data/42_flag2024_x_revision.json                     ✓
+  sigma_X        σ_X 比值形式                   canonical=0.1159         來源=data/42_flag2024_x_revision.json                     ✓
+  epsilon        FLAG ε                     canonical=0.79           來源=data/42_flag2024_x_revision.json                     ✓
+  em_K           em(K⁺−K⁰) 錨                canonical=2.26459        來源=data/36b_em_kaon_external.json                       ✓
+  z_canon        R5 canonical z（含 σ_X）      canonical=9.76           來源=data/46_handoff_adjudication_round4.json             ✓
+  O_N            ⟨O⟩_N                      canonical=0.8906         來源=data/46_handoff_adjudication_round4.json             ✓
+  O_Sigma        ⟨O⟩_Σ（total−ΔQED）          canonical=1.5469         來源=data/46_handoff_adjudication_round4.json             ✓
+  O_Xi           ⟨O⟩_Ξ                      canonical=2.293          來源=data/46_handoff_adjudication_round4.json             ✓
+  chi2_O1        χ²(⟨O⟩≡1) 新錨               canonical=18.9723        來源=data/47_downstream_rerun_round4.json                 ✓
+  p_O1           p(3 dof) 新錨                canonical=0.000277       來源=data/47_downstream_rerun_round4.json                 ✓
+  window_a       em 承載窗 a_max               canonical=0.9729         來源=data/45_pool_enumerator.json                         ✓
+  cap_gamma      4/γ₁                       canonical=784.965        來源=data/45_pool_enumerator.json                         ✓
+  A_dev          87γ₁⁴M₀ dev%               canonical=0.404          來源=data/45_pool_enumerator.json                         ✓
+  M0_eV          M₀（由 A 反解）                 canonical=2.79009e+07    來源=data/45_pool_enumerator.json                         ✓
+  density_F1     F1 比值池 coverage（log-uniform） canonical=20.54          來源=data/48_handoff_adjudication_round5.json             ✓
+  density_legacy legacy family density（不可復現） canonical=98.66          來源=data/45_pool_enumerator.json                         ✓
+  pnull_flavour  108 模型掃描 p_null（新錨）        canonical=0.565          來源=data/47_downstream_rerun_round4.json                 ✓
+  KN_sigma       K/N σ_Δ（協方差）               canonical=0.2327         來源=data/47_downstream_rerun_round4.json                 ✓
+PASS R2 全部 canonical 值可在來源 data 檔追到                                 | 0                              | 0 缺失
+
+================================================================================================================
+R3 — 舊值只可出現於已標明取代關係之文檔
+================================================================================================================
+  R_span         舊值 12.0049      出現於  3 份 doc；無標記  0 ✓
+  sigma_R        舊值 0.039896     出現於  4 份 doc；無標記  0 ✓
+  sigma_R        舊值 0.039714     出現於  3 份 doc；無標記  0 ✓
+  X_ratio        舊值 2.5600       出現於  5 份 doc；無標記  0 ✓
+  X_ratio        舊值 2.56 ± 0.094 出現於 12 份 doc；無標記  0 ✓
+  sigma_X        舊值 0.0943       出現於  4 份 doc；無標記  0 ✓
+  sigma_X        舊值 0.094        出現於 16 份 doc；無標記  0 ✓
+  epsilon        舊值 0.78         出現於  9 份 doc；無標記  0 ✓
+  z_canon        舊值 15.98        出現於  8 份 doc；無標記  0 ✓
+  O_Sigma        舊值 1.4980       出現於  7 份 doc；無標記  0 ✓
+  chi2_O1        舊值 18.2207      出現於  5 份 doc；無標記  0 ✓
+  p_O1           舊值 3.96e-4      出現於  1 份 doc；無標記  0 ✓
+  p_O1           舊值 1.97e-5      出現於  1 份 doc；無標記  0 ✓
+  window_a       舊值 0.3357       出現於  6 份 doc；無標記  0 ✓
+  density_F1     舊值 20.61        出現於  6 份 doc；無標記  0 ✓
+  density_legacy 舊值 97.9         出現於 10 份 doc；無標記  0 ✓
+  pnull_flavour  舊值 0.550        出現於  6 份 doc；無標記  0 ✓
+  KN_sigma       舊值 0.164        出現於  4 份 doc；無標記  0 ✓
+PASS R3 無『未標記即用舊值』之漂移                                               | 0                              | 0 處
+
+================================================================================================================
+R4 — 腳本／文檔／產物齊備
+================================================================================================================
+  腳本 52（NN 50）｜docs 48｜無對應 doc 之腳本：0
+PASS R4a 每支 NN 腳本有 doc（或已申報共用）                                      | 0                              | 0
+  無腳本之 docs 編號（敘述型）：['32', '37', '50']
+PASS R4b 無腳本之 docs 屬敘述型（白名單 32/37/50，已於 41 申報）                      | ['32', '37', '50']             | ⊆ {32,37,50}
+  data JSON 43｜無 producer：0
+PASS R4c 每個 data/*.json 有 producer                                  | 0                              | 0
+
+================================================================================================================
+R5 — 文檔數字可追度（ledger）
+================================================================================================================
+/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout/scripts/49_citation_registry_check.py:56: RuntimeWarning: invalid value encountered in scalar divide
+  if 0 <= j < arr.size and arr[j] > 0 and abs(arr[j] - v) / v <= rel:
+  未追到之 token 數（前 12）：
+    11_lattice_flag_span.md                         14
+    13_mdmu_second_instance.md                      11
+    20_identifiability.md                           11
+    17_em_decomposition.md                          10
+    19_delivery_processing.md                       10
+    21_upstream_verification.md                     10
+    39_m_series_handoff_intake_20261028.md          10
+    10_gamma1_gamma6_bridge.md                       9
+    18_em_constraints.md                             9
+    12_A_spectral_identity.md                        8
+    47_downstream_rerun_round4.md                    8
+    02_mc_mcs_judge.md                               7
+  合計 225（全部屬：上游 O-era 數值／計數整數／衍生算術；見 docs/49 §三 分類規則）
+
+================================================================================================================
+RESULT: 5/5 PASS
+================================================================================================================
+→ data/49_citation_registry.json

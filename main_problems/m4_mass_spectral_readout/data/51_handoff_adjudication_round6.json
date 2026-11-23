@@ -1,0 +1,91 @@
+{
+ "checks": [
+  {
+   "label": "A1 序列嚴格單調（8 值）",
+   "ok": true,
+   "got": "8 值",
+   "expect": "嚴格單調"
+  },
+  {
+   "label": "A2 支撐閘 coverage ≤ 0.1 ⟹ 只到 k = 2（k=3 為 12.269%）",
+   "ok": true,
+   "got": "k2=5.5353% / k3=12.269%",
+   "expect": "k≤2"
+  },
+  {
+   "label": "B1 34.229 < 35.155（等價性成立之方向）",
+   "ok": true,
+   "got": "34.2289 < 35.155",
+   "expect": "<"
+  },
+  {
+   "label": "B2 兩者差 < 1pp ⟹ 可稱『數值等價』",
+   "ok": true,
+   "got": "0.926pp",
+   "expect": "<1pp"
+  },
+  {
+   "label": "C1 M4 零引用該梯度 ⟹ ② 對本 O 下游影響 = 0",
+   "ok": false,
+   "got": "[('docs/51_handoff_adjudication_round6.md', 'τ513'), ('docs/51_handoff_adjudication_round6.md', 'c4285'), ('docs/51_handoff_adjudication_round6.md', 'μ1→s7'), ('01_problem_record.md', 'μ1→s7')]",
+   "expect": "0"
+  },
+  {
+   "label": "C2 M4 未以 ρ(k=3)=7 作結構證據（若有須改『條件性』）",
+   "ok": false,
+   "got": "['51_handoff_adjudication_round6.md']",
+   "expect": "0"
+  },
+  {
+   "label": "D1 M4 側方向一致（log-uniform > uniform）",
+   "ok": true,
+   "got": "38.112×",
+   "expect": ">1×"
+  }
+ ],
+ "data": {
+  "coverage_k1_8_uniform": [
+   0.1968,
+   5.5353,
+   12.269,
+   17.0396,
+   21.4821,
+   25.8069,
+   30.0554,
+   34.2289
+  ],
+  "gate": {
+   "k_max_under_0.1": 2,
+   "k3_pct": 12.269
+  },
+  "equivalence": {
+   "c8_uniform": 34.2289,
+   "c4_log_inner": 35.155,
+   "diff_pp": 0.926
+  },
+  "m4_gradient_citations": [
+   [
+    "docs/51_handoff_adjudication_round6.md",
+    "τ513"
+   ],
+   [
+    "docs/51_handoff_adjudication_round6.md",
+    "c4285"
+   ],
+   [
+    "docs/51_handoff_adjudication_round6.md",
+    "μ1→s7"
+   ],
+   [
+    "01_problem_record.md",
+    "μ1→s7"
+   ]
+  ],
+  "m4_rho3_evidence_docs": [
+   "51_handoff_adjudication_round6.md"
+  ],
+  "m4_own_measure_factor": 38.112,
+  "n_pass": 5,
+  "n_total": 7
+ }
+}

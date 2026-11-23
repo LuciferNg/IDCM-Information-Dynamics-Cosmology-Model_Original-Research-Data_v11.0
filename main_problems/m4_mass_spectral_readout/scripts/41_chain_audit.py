@@ -54,7 +54,8 @@ for p in md:
         doc_nums.add(m.group(1))
 # 已申報：doc-only（無腳本）／script-only（無 doc）
 DECLARED_DOC_ONLY = {"32": "docs/32_flavour_structure_scout.md — 純設計/scout 文檔，無腳本（宣告式）",
-                     "37": "docs/37_closeout_readiness.md — 收尾準備文檔，無腳本（宣告式）"}
+                     "37": "docs/37_closeout_readiness.md — 收尾準備文檔，無腳本（宣告式）",
+                     "50": "docs/50_residual_and_open_problems.md — 殘留／開放問題總表，無腳本（宣告式）"}
 script_no_doc = sorted(sc_nums - doc_nums)
 doc_no_script = sorted(doc_nums - sc_nums)
 DECLARED_SHARED = {"31b": "docs/31_flavour_insertion_negative.md（enum 附於同一 doc）",
@@ -66,7 +67,10 @@ DECLARED_SHARED = {"31b": "docs/31_flavour_insertion_negative.md（enum 附於�
                    "45": "docs/45_pool_enumerator.md（pool 型數字之獨立枚舉器，F8）",
                    "46": "docs/46_handoff_adjudication_round4.md（第四輪入站裁定之計算支撐）",
                    "47": "docs/47_downstream_rerun_round4.md（第四輪裁定之下游重推）",
-                   "48": "docs/48_handoff_adjudication_round5.md（第五輪入站裁定）"}
+                   "48": "docs/48_handoff_adjudication_round5.md（第五輪入站裁定）",
+                   "49": "docs/49_citation_registry.md（canonical registry ＋ 漂移檢查）",
+                   "50": "docs/50_residual_and_open_problems.md（殘留與開放問題總表；無腳本）",
+                   "51": "docs/51_handoff_adjudication_round6.md（第六輪入站裁定）"}
 add("1a 每支 NN 腳本都有 doc（或已申報共用）",
     all(n in DECLARED_DOC_ONLY or n in DECLARED_SHARED or n in doc_nums for n in script_no_doc),
     "script-only = %s" % {n: DECLARED_SHARED.get(n, "未申報") for n in script_no_doc})

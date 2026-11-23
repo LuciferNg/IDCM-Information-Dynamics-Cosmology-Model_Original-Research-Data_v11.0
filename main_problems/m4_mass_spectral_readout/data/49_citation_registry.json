@@ -1,0 +1,458 @@
+{
+ "checks": [
+  {
+   "label": "R2 全部 canonical 值可在來源 data 檔追到",
+   "ok": true,
+   "got": "0",
+   "expect": "0 缺失"
+  },
+  {
+   "label": "R3 無『未標記即用舊值』之漂移",
+   "ok": true,
+   "got": "0",
+   "expect": "0 處"
+  },
+  {
+   "label": "R4a 每支 NN 腳本有 doc（或已申報共用）",
+   "ok": true,
+   "got": "0",
+   "expect": "0"
+  },
+  {
+   "label": "R4b 無腳本之 docs 屬敘述型（白名單 32/37/50，已於 41 申報）",
+   "ok": true,
+   "got": "['32', '37', '50']",
+   "expect": "⊆ {32,37,50}"
+  },
+  {
+   "label": "R4c 每個 data/*.json 有 producer",
+   "ok": true,
+   "got": "0",
+   "expect": "0"
+  }
+ ],
+ "data": {
+  "registry": [
+   {
+    "id": "R_span",
+    "desc": "lattice span 比 R",
+    "canonical": 12.005533,
+    "sources": [
+     "data/11_lattice_flag.json",
+     "data/44_sigma_R_resolution.json"
+    ],
+    "superseded": [
+     "12.0049"
+    ]
+   },
+   {
+    "id": "sigma_R",
+    "desc": "R 之 σ（精確二階）",
+    "canonical": 0.039833,
+    "sources": [
+     "data/44_sigma_R_resolution.json"
+    ],
+    "superseded": [
+     "0.039896",
+     "0.039714"
+    ]
+   },
+   {
+    "id": "X_ratio",
+    "desc": "X 比值形式",
+    "canonical": 2.5145,
+    "sources": [
+     "data/42_flag2024_x_revision.json"
+    ],
+    "superseded": [
+     "2.5600",
+     "2.56 ± 0.094"
+    ]
+   },
+   {
+    "id": "sigma_X",
+    "desc": "σ_X 比值形式",
+    "canonical": 0.1159,
+    "sources": [
+     "data/42_flag2024_x_revision.json"
+    ],
+    "superseded": [
+     "0.0943",
+     "0.094"
+    ]
+   },
+   {
+    "id": "epsilon",
+    "desc": "FLAG ε",
+    "canonical": 0.79,
+    "sources": [
+     "data/42_flag2024_x_revision.json"
+    ],
+    "superseded": [
+     "0.78"
+    ]
+   },
+   {
+    "id": "em_K",
+    "desc": "em(K⁺−K⁰) 錨",
+    "canonical": 2.264589,
+    "sources": [
+     "data/36b_em_kaon_external.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "z_canon",
+    "desc": "R5 canonical z（含 σ_X）",
+    "canonical": 9.76,
+    "sources": [
+     "data/46_handoff_adjudication_round4.json"
+    ],
+    "superseded": [
+     "15.98"
+    ]
+   },
+   {
+    "id": "O_N",
+    "desc": "⟨O⟩_N",
+    "canonical": 0.8906,
+    "sources": [
+     "data/46_handoff_adjudication_round4.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "O_Sigma",
+    "desc": "⟨O⟩_Σ（total−ΔQED）",
+    "canonical": 1.5469,
+    "sources": [
+     "data/46_handoff_adjudication_round4.json",
+     "data/47_downstream_rerun_round4.json"
+    ],
+    "superseded": [
+     "1.4980"
+    ]
+   },
+   {
+    "id": "O_Xi",
+    "desc": "⟨O⟩_Ξ",
+    "canonical": 2.293,
+    "sources": [
+     "data/46_handoff_adjudication_round4.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "chi2_O1",
+    "desc": "χ²(⟨O⟩≡1) 新錨",
+    "canonical": 18.9723,
+    "sources": [
+     "data/47_downstream_rerun_round4.json"
+    ],
+    "superseded": [
+     "18.2207"
+    ]
+   },
+   {
+    "id": "p_O1",
+    "desc": "p(3 dof) 新錨",
+    "canonical": 0.000277,
+    "sources": [
+     "data/47_downstream_rerun_round4.json"
+    ],
+    "superseded": [
+     "3.96e-4",
+     "1.97e-5"
+    ]
+   },
+   {
+    "id": "window_a",
+    "desc": "em 承載窗 a_max",
+    "canonical": 0.9729,
+    "sources": [
+     "data/45_pool_enumerator.json"
+    ],
+    "superseded": [
+     "0.3357"
+    ]
+   },
+   {
+    "id": "cap_gamma",
+    "desc": "4/γ₁",
+    "canonical": 784.9646644,
+    "sources": [
+     "data/45_pool_enumerator.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "A_dev",
+    "desc": "87γ₁⁴M₀ dev%",
+    "canonical": 0.404,
+    "sources": [
+     "data/45_pool_enumerator.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "M0_eV",
+    "desc": "M₀（由 A 反解）",
+    "canonical": 27900900.0,
+    "sources": [
+     "data/45_pool_enumerator.json"
+    ],
+    "superseded": []
+   },
+   {
+    "id": "density_F1",
+    "desc": "F1 比值池 coverage（log-uniform）",
+    "canonical": 20.54,
+    "sources": [
+     "data/48_handoff_adjudication_round5.json"
+    ],
+    "superseded": [
+     "20.61"
+    ]
+   },
+   {
+    "id": "density_legacy",
+    "desc": "legacy family density（不可復現）",
+    "canonical": 98.66,
+    "sources": [
+     "data/45_pool_enumerator.json"
+    ],
+    "superseded": [
+     "97.9"
+    ]
+   },
+   {
+    "id": "pnull_flavour",
+    "desc": "108 模型掃描 p_null（新錨）",
+    "canonical": 0.565,
+    "sources": [
+     "data/47_downstream_rerun_round4.json"
+    ],
+    "superseded": [
+     "0.550"
+    ]
+   },
+   {
+    "id": "KN_sigma",
+    "desc": "K/N σ_Δ（協方差）",
+    "canonical": 0.2327,
+    "sources": [
+     "data/47_downstream_rerun_round4.json"
+    ],
+    "superseded": [
+     "0.164"
+    ]
+   }
+  ],
+  "R2_missing_source": [],
+  "R3_violations": [],
+  "R4_no_doc_scripts": [],
+  "R4_narrative_only_docs": [
+   "32",
+   "37",
+   "50"
+  ],
+  "R4_orphan_json": [],
+  "R5_unresolved_tokens_total": 225,
+  "R5_by_doc": [
+   {
+    "doc": "11_lattice_flag_span.md",
+    "unresolved": 14
+   },
+   {
+    "doc": "13_mdmu_second_instance.md",
+    "unresolved": 11
+   },
+   {
+    "doc": "20_identifiability.md",
+    "unresolved": 11
+   },
+   {
+    "doc": "17_em_decomposition.md",
+    "unresolved": 10
+   },
+   {
+    "doc": "19_delivery_processing.md",
+    "unresolved": 10
+   },
+   {
+    "doc": "21_upstream_verification.md",
+    "unresolved": 10
+   },
+   {
+    "doc": "39_m_series_handoff_intake_20261028.md",
+    "unresolved": 10
+   },
+   {
+    "doc": "10_gamma1_gamma6_bridge.md",
+    "unresolved": 9
+   },
+   {
+    "doc": "18_em_constraints.md",
+    "unresolved": 9
+   },
+   {
+    "doc": "12_A_spectral_identity.md",
+    "unresolved": 8
+   },
+   {
+    "doc": "47_downstream_rerun_round4.md",
+    "unresolved": 8
+   },
+   {
+    "doc": "02_mc_mcs_judge.md",
+    "unresolved": 7
+   },
+   {
+    "doc": "03_reading_strength.md",
+    "unresolved": 7
+   },
+   {
+    "doc": "01_quark_scan.md",
+    "unresolved": 6
+   },
+   {
+    "doc": "07_hit_followup.md",
+    "unresolved": 6
+   },
+   {
+    "doc": "46_handoff_adjudication_round4.md",
+    "unresolved": 6
+   },
+   {
+    "doc": "05_hadron_dm.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "15_exponent8.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "16_scale_operator.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "22_o216_o86_verification.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "23_full_audit.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "38_g3_decay_constant_precheck.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "42_flag2024_x_revision.md",
+    "unresolved": 5
+   },
+   {
+    "doc": "04_lepton_anchor.md",
+    "unresolved": 4
+   },
+   {
+    "doc": "09_density_gate.md",
+    "unresolved": 4
+   },
+   {
+    "doc": "33_handoff_intake_20261026.md",
+    "unresolved": 4
+   },
+   {
+    "doc": "40_recheck_m7_m10_20261028.md",
+    "unresolved": 4
+   },
+   {
+    "doc": "06_hop_probe.md",
+    "unresolved": 3
+   },
+   {
+    "doc": "28_matrix_element_resolution.md",
+    "unresolved": 3
+   },
+   {
+    "doc": "30_prediction_envelope.md",
+    "unresolved": 3
+   },
+   {
+    "doc": "48_handoff_adjudication_round5.md",
+    "unresolved": 3
+   },
+   {
+    "doc": "49_citation_registry.md",
+    "unresolved": 3
+   },
+   {
+    "doc": "08_span_12_judge.md",
+    "unresolved": 2
+   },
+   {
+    "doc": "29_operator_structure.md",
+    "unresolved": 2
+   },
+   {
+    "doc": "32_flavour_structure_scout.md",
+    "unresolved": 2
+   },
+   {
+    "doc": "37_closeout_readiness.md",
+    "unresolved": 2
+   },
+   {
+    "doc": "50_residual_and_open_problems.md",
+    "unresolved": 2
+   },
+   {
+    "doc": "14_double_probe.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "26_em_window_theorem.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "34_u_d_sector_verdict_citation.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "36_r5_em_kaon_external_verdict.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "41_chain_audit.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "45_pool_enumerator.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "51_handoff_adjudication_round6.md",
+    "unresolved": 1
+   },
+   {
+    "doc": "24_audit_round2.md",
+    "unresolved": 0
+   },
+   {
+    "doc": "25_import_verification.md",
+    "unresolved": 0
+   },
+   {
+    "doc": "27_em_sign_theorem.md",
+    "unresolved": 0
+   },
+   {
+    "doc": "31_flavour_insertion_negative.md",
+    "unresolved": 0
+   }
+  ],
+  "n_pass": 5,
+  "n_total": 5
+ }
+}

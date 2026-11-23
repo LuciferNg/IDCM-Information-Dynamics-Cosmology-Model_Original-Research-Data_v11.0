@@ -5,10 +5,10 @@ pid:     M4
 title:   質量 = 譜讀數差值：全費米子譜差閉合（差值閉合力學 v2, R7 定案承接；只開不推）
 state:   partial
 verdict: -
-flags:   running; r1-gate-pass; r2-bridge-exact; r3-lattice-rejudge; r4-negative
+flags:   running; r1-gate-pass; r2-bridge-exact; r3-lattice-rejudge; r4-negative; audit-full-20261123; handoff-26-replied
 owner:   M4
 created: 2026-10-21
-updated: 2026-10-24
+updated: 2026-11-23
 prereq:  O257 + O66 + O89 + O57 + P6 + O73 + O212
 source:  調律者 2026-10-21: 開v11 新M, 將/tmp全部py移入scripts；新session重建推導鏈及報告文檔
 -->

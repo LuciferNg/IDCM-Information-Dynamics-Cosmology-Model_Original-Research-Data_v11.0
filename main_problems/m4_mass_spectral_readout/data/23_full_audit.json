@@ -639,7 +639,7 @@
       ],
       "docstring_match": false,
       "t3": {
-        "meta": 3,
+        "meta": 4,
         "external": 5,
         "pending": 10,
         "unexplained": [
@@ -648,7 +648,7 @@
         ],
         "unexplained_n": 2
       },
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "28": {
@@ -804,7 +804,7 @@
         ]
       ],
       "docstring_match": false,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "38": {
@@ -893,7 +893,7 @@
       "rerun_identical": null,
       "json": [],
       "docstring_match": null,
-      "sections_ok": false,
+      "sections_ok": true,
       "h1_ok": true
     },
     "43": {
@@ -973,14 +973,38 @@
       "docstring_match": null,
       "sections_ok": true,
       "h1_ok": true
+    },
+    "49": {
+      "script": "49_citation_registry_check.py",
+      "doc": "49_citation_registry.md",
+      "log": "run_49_citation_registry_check.log",
+      "log_exists": false,
+      "exit": 0,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
+    },
+    "51": {
+      "script": "51_handoff_adjudication_round6.py",
+      "doc": "51_handoff_adjudication_round6.md",
+      "log": "run_51_handoff_adjudication_round6.log",
+      "log_exists": false,
+      "exit": 1,
+      "rerun_identical": null,
+      "json": [],
+      "docstring_match": null,
+      "sections_ok": true,
+      "h1_ok": true
     }
   },
   "counts": {
-    "docs": 45,
-    "scripts": 46,
-    "scripts_audited": 45,
+    "docs": 48,
+    "scripts": 48,
+    "scripts_audited": 47,
     "logs": 44,
-    "json": 41,
+    "json": 43,
     "claims": {
       "docs_claim": [],
       "scripts_claim": [],
@@ -996,17 +1020,15 @@
     "24: 重跑非 byte-identical",
     "26: docstring 與 docs §一 不一致",
     "27: docstring 與 docs §一 不一致",
-    "27: 缺 前設問題/事前判準/結論報告",
     "29: docstring 與 docs §一 不一致",
     "30: docstring 與 docs §一 不一致",
     "33: exit 1",
     "36: docstring 與 docs §一 不一致",
-    "36: 缺 前設問題/事前判準/結論報告",
     "41: exit 1",
     "41: 重跑非 byte-identical",
     "41: docstring 與 docs §一 不一致",
-    "42: 缺 前設問題/事前判準/結論報告",
     "46: JSON 46_handoff_adjudication_round4.json 不一致",
-    "47: exit 1"
+    "47: exit 1",
+    "51: exit 1"
   ]
 }
