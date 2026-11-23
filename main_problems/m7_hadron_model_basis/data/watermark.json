@@ -1,7 +1,7 @@
 {
  "close_out": "2026-10-26T12:59:45+08:00",
- "generated": "2026-11-23 11:11",
- "n": 98,
+ "generated": "2026-11-23 12:06",
+ "n": 102,
  "rows": [
   {
    "path": "docs/10_reproduction_gate.md",
@@ -40,7 +40,7 @@
   },
   {
    "path": "docs/17_audit_full_chain.md",
-   "mtime": "2026-11-23 11:09",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
@@ -95,7 +95,7 @@
   },
   {
    "path": "docs/28_flavour_blind_theorem.md",
-   "mtime": "2026-10-28 17:10",
+   "mtime": "2026-11-23 12:04",
    "after_close": true
   },
   {
@@ -115,7 +115,12 @@
   },
   {
    "path": "docs/32_unresolved_inventory.md",
-   "mtime": "2026-11-23 10:59",
+   "mtime": "2026-11-23 12:04",
+   "after_close": true
+  },
+  {
+   "path": "docs/33_label_bridge_nogo.md",
+   "mtime": "2026-11-23 12:04",
    "after_close": true
   },
   {
@@ -140,7 +145,7 @@
   },
   {
    "path": "scripts/04_doc_consistency.py",
-   "mtime": "2026-11-23 11:01",
+   "mtime": "2026-11-23 12:05",
    "after_close": true
   },
   {
@@ -155,7 +160,7 @@
   },
   {
    "path": "scripts/07_audit_full_chain.py",
-   "mtime": "2026-11-23 11:08",
+   "mtime": "2026-11-23 12:05",
    "after_close": true
   },
   {
@@ -215,7 +220,7 @@
   },
   {
    "path": "scripts/19_flavour_blind_theorem.py",
-   "mtime": "2026-10-28 17:08",
+   "mtime": "2026-11-23 12:01",
    "after_close": true
   },
   {
@@ -229,8 +234,13 @@
    "after_close": true
   },
   {
+   "path": "scripts/22_label_bridge_nogo.py",
+   "mtime": "2026-11-23 12:03",
+   "after_close": true
+  },
+  {
    "path": "scripts/run_chain.sh",
-   "mtime": "2026-11-23 10:59",
+   "mtime": "2026-11-23 12:04",
    "after_close": true
   },
   {
@@ -260,7 +270,7 @@
   },
   {
    "path": "data/04_doc_consistency.json",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 11:11",
    "after_close": true
   },
   {
@@ -275,7 +285,7 @@
   },
   {
    "path": "data/07_audit_full_chain.json",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:05",
    "after_close": true
   },
   {
@@ -330,7 +340,7 @@
   },
   {
    "path": "data/19_flavour_blind_theorem.json",
-   "mtime": "2026-10-28 17:08",
+   "mtime": "2026-11-23 12:02",
    "after_close": true
   },
   {
@@ -341,6 +351,11 @@
   {
    "path": "data/21_m2_reading_verify.json",
    "mtime": "2026-11-23 10:53",
+   "after_close": true
+  },
+  {
+   "path": "data/22_label_bridge_nogo.json",
+   "mtime": "2026-11-23 12:03",
    "after_close": true
   },
   {
@@ -380,7 +395,7 @@
   },
   {
    "path": "data/run_04_doc_consistency.log",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 11:11",
    "after_close": true
   },
   {
@@ -395,7 +410,7 @@
   },
   {
    "path": "data/run_07_audit_full_chain.log",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:05",
    "after_close": true
   },
   {
@@ -410,7 +425,7 @@
   },
   {
    "path": "data/run_10_watermark.log",
-   "mtime": "2026-11-23 11:11",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
@@ -455,7 +470,7 @@
   },
   {
    "path": "data/run_19_flavour_blind_theorem.log",
-   "mtime": "2026-10-28 17:08",
+   "mtime": "2026-11-23 12:02",
    "after_close": true
   },
   {
@@ -469,28 +484,33 @@
    "after_close": true
   },
   {
+   "path": "data/run_22_label_bridge_nogo.log",
+   "mtime": "2026-11-23 12:03",
+   "after_close": true
+  },
+  {
    "path": "data/watermark.json",
-   "mtime": "2026-11-23 11:11",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
    "path": "01_problem_record.md",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
    "path": "SESSION_START.md",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
    "path": "README.md",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   },
   {
    "path": "final_result.md",
-   "mtime": "2026-11-23 11:10",
+   "mtime": "2026-11-23 12:06",
    "after_close": true
   }
  ]

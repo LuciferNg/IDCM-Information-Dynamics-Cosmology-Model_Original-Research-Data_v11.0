@@ -360,6 +360,26 @@ ok("B17 n_s ＝ (⟨O⟩−1)·3/2（⟨O⟩=1+(B−2)n_s/3，B=4）", abs(float
    f"{float(ns_req):.10f}", f"{J15b['ns_req_256']:.10f}", "純代數恆等")
 ok("B17 所需 n_s ∉ {0,1,2}（域外）", ns_req > 2, f"{float(ns_req):.4f}", ">2")
 
+# ══════════ B18 scripts/22 標籤橋 no-go（對稱對／軌道分離） ══════════
+print("\nB18 標籤橋 no-go（22）：Δ 之反號對稱 ＋ 軌道分離 ＋ bit 成本")
+J22b = load("22_label_bridge_nogo.json")["metrics"]
+Gm = {n: mpf(4) * sin(pi * n / 88) ** 2 for n in range(1, 45)}
+M0b = mpf("27.900915")
+base = {"u": 3, "d": 11, "s": 27}
+def dlt(mp_):
+    return M0b * (Gm[mp_["d"]] - Gm[mp_["u"]])
+swap = {"u": "d", "d": "u", "s": "s"}
+maxdev_pair = mpf(0)
+for perm in [("u", "d", "s"), ("d", "u", "s"), ("u", "s", "d"), ("s", "d", "u"), ("d", "s", "u"), ("s", "u", "d")]:
+    nm = {f: base[g] for f, g in zip(("u", "d", "s"), perm)}
+    nm2 = {swap[f]: nm[f] for f in nm}
+    maxdev_pair = max(maxdev_pair, abs(dlt(nm) + dlt(nm2)))
+print(f"    三個 u↔d 交換對：max|Δ(π)+Δ(π∘swap)| = {mp.nstr(maxdev_pair, 4)}")
+ok("B18 Δ 之 u↔d 反號對稱（<1e−25）", maxdev_pair < mpf("1e-25"), mp.nstr(maxdev_pair, 3), "<1e−25")
+ok("B18 軌道大小 = 6（22 報）", J22b["orbit_size"] == 6, J22b["orbit_size"], 6)
+ok("B18 信息成本 = log₂6（<1e−9）", abs(J22b["bits_required"] - float(mp.log(6) / mp.log(2))) < 1e-9,
+   f"{J22b['bits_required']:.9f}", f"{float(mp.log(6)/mp.log(2)):.9f}")
+
 # ══════════ D1 文檔→腳本／JSON 引用無斷鏈 ══════════
 print("\nD1 全 corpus 之 scripts/ data/ 引用存在性")
 ref_bad = []
@@ -378,11 +398,11 @@ ok("D1 全部引用皆存在或已登記於 docs/30", not ref_bad2,
    f"未登記 {len(ref_bad2)}／登記 {len(ref_bad)-len(ref_bad2)}", "未登記 0")
 
 # ══════════ D2 每個推導腳本之 npass 有文檔落點 ══════════
-print("\nD2 scripts 11–20 之 JSON npass 是否在文檔出現")
+print("\nD2 scripts 11–22 之 JSON npass 是否在文檔出現")
 corpus = "\n".join(open(os.path.join(M7, "docs", x), encoding="utf-8").read()
                    for x in sorted(os.listdir(os.path.join(M7, "docs"))))
 missing_doc = []
-for nn in range(11, 21):
+for nn in range(11, 23):
     cand = [x for x in sorted(os.listdir(os.path.join(M7, "data"))) if x.startswith(f"{nn:02d}_") and x.endswith(".json")]
     if not cand:
         continue
@@ -393,7 +413,7 @@ for nn in range(11, 21):
     if f"{npv}/{ntv}" not in corpus and f"| {npv} |" not in corpus:
         missing_doc.append((nn, f"{npv}/{ntv}"))
 print(f"    缺文檔落點 = {missing_doc or 0}")
-ok("D2 scripts 11–20 全部 npass 有文檔落點", not missing_doc, missing_doc or 0, 0)
+ok("D2 scripts 11–22 全部 npass 有文檔落點", not missing_doc, missing_doc or 0, 0)
 
 # ══════════ C1 四件套 ＋ register state ══════════
 print("\nC1 四件套狀態行 ＋ register state")

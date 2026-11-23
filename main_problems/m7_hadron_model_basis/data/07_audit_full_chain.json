@@ -241,6 +241,27 @@
    "note": ""
   },
   {
+   "item": "B18 Δ 之 u↔d 反號對稱（<1e−25）",
+   "pass_": true,
+   "got": "0.0",
+   "want": "<1e−25",
+   "note": ""
+  },
+  {
+   "item": "B18 軌道大小 = 6（22 報）",
+   "pass_": true,
+   "got": "6",
+   "want": "6",
+   "note": ""
+  },
+  {
+   "item": "B18 信息成本 = log₂6（<1e−9）",
+   "pass_": true,
+   "got": "2.584962501",
+   "want": "2.584962501",
+   "note": ""
+  },
+  {
    "item": "D1 全部引用皆存在或已登記於 docs/30",
    "pass_": true,
    "got": "未登記 0／登記 22",
@@ -248,7 +269,7 @@
    "note": ""
   },
   {
-   "item": "D2 scripts 11–20 全部 npass 有文檔落點",
+   "item": "D2 scripts 11–22 全部 npass 有文檔落點",
    "pass_": true,
    "got": "0",
    "want": "0",
@@ -313,6 +334,7 @@
    "docs/30_broken_ref_register.md",
    "docs/31_m2_identity_propagation.md",
    "docs/32_unresolved_inventory.md",
+   "docs/33_label_bridge_nogo.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -332,6 +354,7 @@
    "scripts/19_flavour_blind_theorem.py",
    "scripts/20_m15_gate_check.py",
    "scripts/21_m2_reading_verify.py",
+   "scripts/22_label_bridge_nogo.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -354,6 +377,7 @@
    "data/19_flavour_blind_theorem.json",
    "data/20_m15_gate_check.json",
    "data/21_m2_reading_verify.json",
+   "data/22_label_bridge_nogo.json",
    "data/30_broken_ref_register.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
@@ -379,6 +403,7 @@
    "data/run_19_flavour_blind_theorem.log",
    "data/run_20_m15_gate_check.log",
    "data/run_21_m2_reading_verify.log",
+   "data/run_22_label_bridge_nogo.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -411,6 +436,7 @@
    "data/19_flavour_blind_theorem.json",
    "data/20_m15_gate_check.json",
    "data/21_m2_reading_verify.json",
+   "data/22_label_bridge_nogo.json",
    "data/30_broken_ref_register.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
@@ -436,6 +462,7 @@
    "data/run_19_flavour_blind_theorem.log",
    "data/run_20_m15_gate_check.log",
    "data/run_21_m2_reading_verify.log",
+   "data/run_22_label_bridge_nogo.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -460,6 +487,7 @@
    "docs/30_broken_ref_register.md",
    "docs/31_m2_identity_propagation.md",
    "docs/32_unresolved_inventory.md",
+   "docs/33_label_bridge_nogo.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -483,12 +511,27 @@
    "scripts/19_flavour_blind_theorem.py",
    "scripts/20_m15_gate_check.py",
    "scripts/21_m2_reading_verify.py",
+   "scripts/22_label_bridge_nogo.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "2c480b2",
+    "file": "01_problem_record.md",
+    "n_del": 74,
+    "n_live": 74,
+    "n_lost": 0
+   },
+   {
+    "commit": "2c480b2",
+    "file": "SESSION_START.md",
+    "n_del": 1,
+    "n_live": 0,
+    "n_lost": 0
+   },
    {
     "commit": "264c590",
     "file": "01_problem_record.md",
@@ -558,20 +601,6 @@
     "n_del": 51,
     "n_live": 51,
     "n_lost": 0
-   },
-   {
-    "commit": "b41bd47",
-    "file": "01_problem_record.md",
-    "n_del": 36,
-    "n_live": 36,
-    "n_lost": 0
-   },
-   {
-    "commit": "b41bd47",
-    "file": "20_o209_assignment.md",
-    "n_del": 1,
-    "n_live": 0,
-    "n_lost": 0
    }
   ],
   "violations": []
@@ -589,6 +618,6 @@
   "need_xi": 3.31008,
   "uncovered": 0
  },
- "npass": 40,
- "ntotal": 40
+ "npass": 43,
+ "ntotal": 43
 }

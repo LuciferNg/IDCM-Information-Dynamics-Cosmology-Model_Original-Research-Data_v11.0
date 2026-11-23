@@ -47,6 +47,7 @@ J18 = load("18_m5_operator_slot.json")
 J19 = load("19_flavour_blind_theorem.json")
 J20 = load("20_m15_gate_check.json")
 J21 = load("21_m2_reading_verify.json")
+J22 = load("22_label_bridge_nogo.json")
 JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
@@ -461,6 +462,16 @@ claim("§31 lmin", "31_m2_identity_propagation.md", M21["lambda_min"], "| `λ_mi
 claim("§31 W", "31_m2_identity_propagation.md", M21["W"], "| `W` |", cell=2, kth=0)
 claim("§31 zero", "31_m2_identity_propagation.md", M21["zero_families"], "| `dev=0` 族數 |", cell=2, kth=0, integer=True)
 claim("§31 maxdev", "31_m2_identity_propagation.md", M21["max_dev"], "| max dev |", cell=2, kth=0)
+
+# ══════════ docs/33（標籤橋 no-go） ══════════
+M22 = J22["metrics"]
+claim("§33 npass", "33_label_bridge_nogo.md", J22["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§33 ntotal", "33_label_bridge_nogo.md", J22["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§33 vocabdev", "33_label_bridge_nogo.md", M22["vocab_maxdev"], "| 詞彙 max dev |", cell=2, kth=0)
+claim("§33 orbit", "33_label_bridge_nogo.md", M22["orbit_size"], "| S₃ 軌道 |", cell=2, kth=0, integer=True)
+claim("§33 bits", "33_label_bridge_nogo.md", M22["bits_required"], "| 信息成本（bit） |", cell=2, kth=0)
+claim("§33 dmin", "33_label_bridge_nogo.md", M22["delta_min"], "| Δ 最小 |", cell=2, kth=0)
+claim("§33 dmax", "33_label_bridge_nogo.md", M22["delta_max"], "| Δ 最大 |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

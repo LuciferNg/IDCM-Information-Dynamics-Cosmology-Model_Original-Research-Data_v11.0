@@ -3,15 +3,15 @@ M7 全鏈審計（scripts/07）—— A 結構 / B 獨立重推導 / C 記錄層
 ====================================================================================================================
 
 A1 檔案對稱（README 所列 ↔ 磁碟）
-    README 提 57 項；磁碟 94 檔（含 log/版本檔）
-    跨 M／O 引用（存在於他目錄，合法）：['docs/01', 'docs/06', 'docs/33']
+    README 提 59 項；磁碟 98 檔（含 log/版本檔）
+    跨 M／O 引用（存在於他目錄，合法）：['docs/01', 'docs/06']
     README 有而全樹各處都冇：無
     磁碟有而 README 冇（除 run log／.v1）：無
   ✅ A1 README 引用全部存在                                   0 | want 0
   ✅ A1 所有 scripts/*.py 與 docs/*.md 已列於 README          0 | want 0
 
 A2 產物綁定（data/*.json ↔ producer script）
-    JSON 25 個；無 producer 者：無；歷史快照（白名單）：['02_r5_mode_content_nogo.v1.json']
+    JSON 26 個；無 producer 者：無；歷史快照（白名單）：['02_r5_mode_content_nogo.v1.json']
     跨 O data 輸入（合法）：3 項：['13_ud_verdict.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json', '12_o209_assignment.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json', '12_o209_assignment.py -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o136_quark_mass_spectrum/data/63_odd_v_factor_theorem.json']
     script 宣告但缺檔：無
   ✅ A2 無孤兒 JSON                                        0 | want 0
@@ -102,13 +102,19 @@ B14–B17 下游腳本恆等式（錨值／代數關係回核，非重跑搜尋�
   ✅ B17 n_s ＝ (⟨O⟩−1)·3/2（⟨O⟩=1+(B−2)n_s/3，B=4）        2.1319857422 | want 2.1319857422  純代數恆等
   ✅ B17 所需 n_s ∉ {0,1,2}（域外）                           2.1320 | want >2
 
+B18 標籤橋 no-go（22）：Δ 之反號對稱 ＋ 軌道分離 ＋ bit 成本
+    三個 u↔d 交換對：max|Δ(π)+Δ(π∘swap)| = 0.0
+  ✅ B18 Δ 之 u↔d 反號對稱（<1e−25）                           0.0 | want <1e−25
+  ✅ B18 軌道大小 = 6（22 報）                                 6 | want 6
+  ✅ B18 信息成本 = log₂6（<1e−9）                            2.584962501 | want 2.584962501
+
 D1 全 corpus 之 scripts/ data/ 引用存在性
     斷鏈 = 22；其中已登記（歷史／跨記錄）= 22；未登記 = 0
   ✅ D1 全部引用皆存在或已登記於 docs/30                            未登記 0／登記 22 | want 未登記 0
 
-D2 scripts 11–20 之 JSON npass 是否在文檔出現
+D2 scripts 11–22 之 JSON npass 是否在文檔出現
     缺文檔落點 = 0
-  ✅ D2 scripts 11–20 全部 npass 有文檔落點                    0
+  ✅ D2 scripts 11–22 全部 npass 有文檔落點                    0
 
 C1 四件套狀態行 ＋ register state
     01_problem_record.md       > **狀態**: 📄 **已註冊 — 未開始（只開不推）**｜本檔只有問題陳述，**無任何推導**
@@ -121,11 +127,13 @@ C1 四件套狀態行 ＋ register state
   ✅ C1 registry block == register state（無 BLOCK-DRIFT） {'01_problem_record.md': ('closed', 'negative'), 'SESSION_START.md': ('closed', 'negative')} | want closed/negative
 
 C2 水位：register close（2026-10-26T12:59:45）之後被改嘅檔
-    94 檔：['docs/10_reproduction_gate.md', 'docs/11_definition_freeze.md', 'docs/12_r5_verdict.md', 'docs/13_file_deletion_audit.md', 'docs/14_rerun_verification.md', 'docs/15_additivity_scope_verdict.md', 'docs/16_gap_closure.md', 'docs/17_audit_full_chain.md', 'docs/18_m4_intake_receipt.md', 'docs/19_o120_import.md', 'docs/20_o209_assignment.md', 'docs/21_incoming_triage.md', 'docs/22_external_recompute.md', 'docs/23_m4_intake_recheck.md', 'docs/24_session_handoff.md', 'docs/25_m2_m10_replies.md', 'docs/26_reverse_push_ban.md', 'docs/27_m5_operator_slot.md', 'docs/28_flavour_blind_theorem.md', 'docs/29_m15_gate_scope.md', 'docs/30_broken_ref_register.md', 'docs/31_m2_identity_propagation.md', 'docs/32_unresolved_inventory.md', 'scripts/03_grep_evidence.py', 'scripts/04_doc_consistency.py', 'scripts/05_additivity_scope.py', 'scripts/06_gap_closure.py', 'scripts/07_audit_full_chain.py', 'scripts/08_handoff_matrix.py', 'scripts/09_m4_receipt.py', 'scripts/10_watermark.py', 'scripts/11_o120_import_verify.py', 'scripts/12_o209_assignment.py', 'scripts/13_ud_verdict.py', 'scripts/14_external_recompute.py', 'scripts/15_m4_intake_recheck.py', 'scripts/16_m2_adjudication_verify.py', 'scripts/17_sigma_budget.py', 'scripts/18_m5_operator_slot.py', 'scripts/19_flavour_blind_theorem.py', 'scripts/20_m15_gate_check.py', 'scripts/21_m2_reading_verify.py', 'scripts/run_chain.sh', 'data/01_reproduction_gate.json', 'data/02_r5_mode_content_nogo.json', 'data/02b_r5_mode_content_nogo.json', 'data/03_grep_evidence.json', 'data/04_doc_consistency.json', 'data/05_additivity_scope.json', 'data/06_gap_closure.json', 'data/07_audit_full_chain.json', 'data/08_handoff_matrix.json', 'data/09_m4_receipt.json', 'data/11_o120_import.json', 'data/12_o209_assignment.json', 'data/13_ud_verdict.json', 'data/14_external_recompute.json', 'data/15_m4_intake_recheck.json', 'data/16_m2_adjudication.json', 'data/17_sigma_budget.json', 'data/18_m5_operator_slot.json', 'data/19_flavour_blind_theorem.json', 'data/20_m15_gate_check.json', 'data/21_m2_reading_verify.json', 'data/30_broken_ref_register.json', 'data/handoff_withdrawals.json', 'data/run_01_reproduction_gate.log', 'data/run_02_r5_mode_content_nogo.log', 'data/run_02_r5_mode_content_nogo.v1.log', 'data/run_02b_r5_mode_content_nogo.log', 'data/run_03_grep_evidence.log', 'data/run_04_doc_consistency.log', 'data/run_05_additivity_scope.log', 'data/run_06_gap_closure.log', 'data/run_07_audit_full_chain.log', 'data/run_08_handoff_matrix.log', 'data/run_09_m4_receipt.log', 'data/run_10_watermark.log', 'data/run_11_o120_import_verify.log', 'data/run_12_o209_assignment.log', 'data/run_13_ud_verdict.log', 'data/run_14_external_recompute.log', 'data/run_15_m4_intake_recheck.log', 'data/run_16_m2_adjudication_verify.log', 'data/run_17_sigma_budget.log', 'data/run_18_m5_operator_slot.log', 'data/run_19_flavour_blind_theorem.log', 'data/run_20_m15_gate_check.log', 'data/run_21_m2_reading_verify.log', 'data/watermark.json', '01_problem_record.md', 'SESSION_START.md', 'README.md', 'final_result.md']
-    水位（data/watermark.json，scripts/10 生成）列 98 檔；未覆蓋 0：[]
+    98 檔：['docs/10_reproduction_gate.md', 'docs/11_definition_freeze.md', 'docs/12_r5_verdict.md', 'docs/13_file_deletion_audit.md', 'docs/14_rerun_verification.md', 'docs/15_additivity_scope_verdict.md', 'docs/16_gap_closure.md', 'docs/17_audit_full_chain.md', 'docs/18_m4_intake_receipt.md', 'docs/19_o120_import.md', 'docs/20_o209_assignment.md', 'docs/21_incoming_triage.md', 'docs/22_external_recompute.md', 'docs/23_m4_intake_recheck.md', 'docs/24_session_handoff.md', 'docs/25_m2_m10_replies.md', 'docs/26_reverse_push_ban.md', 'docs/27_m5_operator_slot.md', 'docs/28_flavour_blind_theorem.md', 'docs/29_m15_gate_scope.md', 'docs/30_broken_ref_register.md', 'docs/31_m2_identity_propagation.md', 'docs/32_unresolved_inventory.md', 'docs/33_label_bridge_nogo.md', 'scripts/03_grep_evidence.py', 'scripts/04_doc_consistency.py', 'scripts/05_additivity_scope.py', 'scripts/06_gap_closure.py', 'scripts/07_audit_full_chain.py', 'scripts/08_handoff_matrix.py', 'scripts/09_m4_receipt.py', 'scripts/10_watermark.py', 'scripts/11_o120_import_verify.py', 'scripts/12_o209_assignment.py', 'scripts/13_ud_verdict.py', 'scripts/14_external_recompute.py', 'scripts/15_m4_intake_recheck.py', 'scripts/16_m2_adjudication_verify.py', 'scripts/17_sigma_budget.py', 'scripts/18_m5_operator_slot.py', 'scripts/19_flavour_blind_theorem.py', 'scripts/20_m15_gate_check.py', 'scripts/21_m2_reading_verify.py', 'scripts/22_label_bridge_nogo.py', 'scripts/run_chain.sh', 'data/01_reproduction_gate.json', 'data/02_r5_mode_content_nogo.json', 'data/02b_r5_mode_content_nogo.json', 'data/03_grep_evidence.json', 'data/04_doc_consistency.json', 'data/05_additivity_scope.json', 'data/06_gap_closure.json', 'data/07_audit_full_chain.json', 'data/08_handoff_matrix.json', 'data/09_m4_receipt.json', 'data/11_o120_import.json', 'data/12_o209_assignment.json', 'data/13_ud_verdict.json', 'data/14_external_recompute.json', 'data/15_m4_intake_recheck.json', 'data/16_m2_adjudication.json', 'data/17_sigma_budget.json', 'data/18_m5_operator_slot.json', 'data/19_flavour_blind_theorem.json', 'data/20_m15_gate_check.json', 'data/21_m2_reading_verify.json', 'data/22_label_bridge_nogo.json', 'data/30_broken_ref_register.json', 'data/handoff_withdrawals.json', 'data/run_01_reproduction_gate.log', 'data/run_02_r5_mode_content_nogo.log', 'data/run_02_r5_mode_content_nogo.v1.log', 'data/run_02b_r5_mode_content_nogo.log', 'data/run_03_grep_evidence.log', 'data/run_04_doc_consistency.log', 'data/run_05_additivity_scope.log', 'data/run_06_gap_closure.log', 'data/run_07_audit_full_chain.log', 'data/run_08_handoff_matrix.log', 'data/run_09_m4_receipt.log', 'data/run_10_watermark.log', 'data/run_11_o120_import_verify.log', 'data/run_12_o209_assignment.log', 'data/run_13_ud_verdict.log', 'data/run_14_external_recompute.log', 'data/run_15_m4_intake_recheck.log', 'data/run_16_m2_adjudication_verify.log', 'data/run_17_sigma_budget.log', 'data/run_18_m5_operator_slot.log', 'data/run_19_flavour_blind_theorem.log', 'data/run_20_m15_gate_check.log', 'data/run_21_m2_reading_verify.log', 'data/run_22_label_bridge_nogo.log', 'data/watermark.json', '01_problem_record.md', 'SESSION_START.md', 'README.md', 'final_result.md']
+    水位（data/watermark.json，scripts/10 生成）列 102 檔；未覆蓋 0：[]
   ✅ C2 水位覆蓋全部 close 後變更檔                               0  水位屬 live field，由 scripts/10 重生；本檢查只核覆蓋性
 
 C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可接受；內容消失不可）
+    2c480b2 01_problem_record.md               刪  74 行；其中水位 live-field 74；未重現 0
+    2c480b2 SESSION_START.md                   刪   1 行；其中水位 live-field  0；未重現 0
     264c590 01_problem_record.md               刪  69 行；其中水位 live-field 69；未重現 0
     96175d2 01_problem_record.md               刪  66 行；其中水位 live-field 66；未重現 0
     8468525 01_problem_record.md               刪  63 行；其中水位 live-field 63；未重現 0
@@ -136,11 +144,9 @@ C3 append-only：歷史檔刪除行是否【逐字重現】（換行正規化可
     0aad4b4 01_problem_record.md               刪  53 行；其中水位 live-field 53；未重現 0
     1ed8eb8 01_problem_record.md               刪  50 行；其中水位 live-field 50；未重現 0
     63cbdab 01_problem_record.md               刪  51 行；其中水位 live-field 51；未重現 0
-    b41bd47 01_problem_record.md               刪  36 行；其中水位 live-field 36；未重現 0
-    b41bd47 20_o209_assignment.md              刪   1 行；其中水位 live-field  0；未重現 0
     違規（內容消失）：無
   ✅ C3 歷史檔零內容消失（append-only）                           0  刪除行若逐字出現於新增 ⟹ 屬尾行換行正規化（cat >> 撞無 EOL），非改寫
 
 ====================================================================================================================
-結果：40/40 PASS；findings = 0
+結果：43/43 PASS；findings = 0
 JSON → data/07_audit_full_chain.json

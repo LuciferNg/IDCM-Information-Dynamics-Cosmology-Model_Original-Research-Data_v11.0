@@ -1,0 +1,65 @@
+{
+ "module": "M7",
+ "script": "22_label_bridge_nogo.py",
+ "checks": [
+  {
+   "item": "註冊詞彙全部 label-blind（max dev < 1e−30）",
+   "pass_": true,
+   "got": "3.67e-40",
+   "want": "<1e−30",
+   "note": "⟹ 味分裂只能經『指派』或『新係數』進入"
+  },
+  {
+   "item": "Δ 在 S₃ 下取 6 個相異值（含 ±）⟹ 指派無典範代表",
+   "pass_": true,
+   "got": "6",
+   "want": "6",
+   "note": ""
+  },
+  {
+   "item": "Δ 之符號依指派而變 ⟹ 同一物理內容可有相反預言",
+   "pass_": true,
+   "got": "[-74.027, 74.027]",
+   "want": "跨零",
+   "note": ""
+  },
+  {
+   "item": "指派選擇之信息成本 = log₂6（結構下界，非可調）",
+   "pass_": true,
+   "got": "2.5849625",
+   "want": "2.5849625",
+   "note": "離散 dof ≥ 1"
+  },
+  {
+   "item": "路線 (b) 之係數比由數據反解 ⟹ 零預言力",
+   "pass_": true,
+   "got": "C_d/C_u = 1 + Δ0/M₀",
+   "want": "反解",
+   "note": "新常數 1 個；違零參數 ＋ M2 唯一性"
+  },
+  {
+   "item": "路線窮舉完備（詞彙 5 類全部 label-blind ⟹ 無第三途徑）",
+   "pass_": true,
+   "got": "兩途皆封",
+   "want": "no-go",
+   "note": ""
+  },
+  {
+   "item": "零參數『標籤→譜量』橋不存在 ⟹ docs/32 #1 由「開放」收為 NO-GO",
+   "pass_": true,
+   "got": "NO-GO",
+   "want": "NO-GO",
+   "note": "味分裂一律外部（X、A_eff）"
+  }
+ ],
+ "npass": 7,
+ "ntotal": 7,
+ "metrics": {
+  "vocab_maxdev": 3.6734198463196485e-40,
+  "orbit_size": 6,
+  "bits_required": 2.584962500721156,
+  "delta_min": -74.02732404103378,
+  "delta_max": 74.02732404103378
+ },
+ "verdict": "no-go: label→spectrum bridge requires either 2.585 bit of assignment information (route a, empirically dead) or one new dimensionful constant (route b)"
+}

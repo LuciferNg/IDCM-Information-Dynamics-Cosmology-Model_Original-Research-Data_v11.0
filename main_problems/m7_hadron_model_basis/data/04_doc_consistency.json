@@ -1,6 +1,6 @@
 {
- "npass": 227,
- "ntotal": 227,
+ "npass": 234,
+ "ntotal": 234,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -689,13 +689,13 @@
    "name": "§17 npass",
    "doc": "17_audit_full_chain.md",
    "status": "✅",
-   "detail": "doc=40 art=40（整數須全等）"
+   "detail": "doc=43 art=43（整數須全等）"
   },
   {
    "name": "§17 ntotal",
    "doc": "17_audit_full_chain.md",
    "status": "✅",
-   "detail": "doc=40 art=40（整數須全等）"
+   "detail": "doc=43 art=43（整數須全等）"
   },
   {
    "name": "§17 b̂",
@@ -1380,6 +1380,48 @@
    "doc": "31_m2_identity_propagation.md",
    "status": "✅",
    "detail": "doc=1213.3798 art=1213.37979233 |Δ|=7.67e-06 ≤ 5.0e-05"
+  },
+  {
+   "name": "§33 npass",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§33 ntotal",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=7 art=7（整數須全等）"
+  },
+  {
+   "name": "§33 vocabdev",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=3.67e-40 art=3.67341984632e-40 |Δ|=3.42e-43 ≤ 5.0e-43"
+  },
+  {
+   "name": "§33 orbit",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§33 bits",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=2.5849625 art=2.58496250072 |Δ|=7.21e-10 ≤ 5.0e-08"
+  },
+  {
+   "name": "§33 dmin",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=-74.0273 art=-74.027324041 |Δ|=2.40e-05 ≤ 5.0e-05"
+  },
+  {
+   "name": "§33 dmax",
+   "doc": "33_label_bridge_nogo.md",
+   "status": "✅",
+   "detail": "doc=74.0273 art=74.027324041 |Δ|=2.40e-05 ≤ 5.0e-05"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

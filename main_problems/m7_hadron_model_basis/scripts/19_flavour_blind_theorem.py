@@ -43,14 +43,15 @@ N = 88
 GAM = [mpf(0)] + [4 * sin(n * pi / N) ** 2 for n in range(1, 45)]   # γ_n, n = 1..44
 GAMf = np.array([0.0] + [4 * np.sin(n * np.pi / N) ** 2 for n in range(1, 45)])
 
-# 樹核 g(d)：M6 已註冊之形式（d = |n_i − n_j| mod 88，g(d) = g(N−d)）
-# 本檔只用其**對稱性**（g(d) = g(N−d)），不引入任何未註冊數值
+# 樹核 g(d)：**M6 註冊閉式**（M6 docs/13 §：g(d) = [(N²−1) − 6d(N−d)]/(12N)，N = 88；
+#   g(0) = +7.332386、g(44) = −3.667614）
+# 定理只用到其**對稱性** g(d) = g(N−d) 與「只依模距」；換任何同型對稱核結論不變。
 def gfun(d):
-    return mpf(1) / (1 + mpf(d)) + mpf(d) * (N - d) / mpf(N * N) - mpf(1) / 2
+    return (mpf(N * N - 1) - 6 * mpf(d) * (N - mpf(d))) / (12 * N)
 
 
 def gfun_np(d):
-    return 1.0 / (1.0 + d) + d * (N - d) / (N * N) - 0.5
+    return ((N * N - 1) - 6 * d * (N - d)) / (12.0 * N)
 
 
 print("=" * 100)

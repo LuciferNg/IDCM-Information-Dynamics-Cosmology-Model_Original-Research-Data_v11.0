@@ -21,6 +21,7 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/33_label_bridge_nogo.md` | 標籤→譜量橋 **零參數 no-go**（7/7）：路線窮舉 (a) 2.585 bit／(b) 新常數；`docs/32` #1 收口 | 🔴 |
 | `docs/31_m2_identity_propagation.md` | M2 字面讀法傳播（6/6）：`λ≠0` 全族結構性排除；兩處 append 更新 | ✅ |
 | `docs/32_unresolved_inventory.md` | 未推完開放問題總表（8 項：2 活口 ＋ 6 外部） | 🟡 |
 | `docs/30_broken_ref_register.md` | 斷鏈引用登記（7 名／22 處：歷史離碟 ＋ M6／M10 跨記錄）；`07` D1 閘 | ✅ |
@@ -44,6 +45,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/22_label_bridge_nogo.py` | 標籤→譜量橋 no-go（7/7）：S₃ 軌道 6、log₂6 bit、係數反解 | 🔴 |
 | `scripts/21_m2_reading_verify.py` | M2 互換律字面讀法（6/6）：閉式路線 ＋ 結構性排除定理 | ✅ |
 | `scripts/20_m15_gate_check.py` | M15 回核（15/15）：γ_max/Σγ_odd/41/60/Ω 比 ＋ 946 身份 ＋ A6 範圍 | ✅ |
 | `scripts/19_flavour_blind_theorem.py` | 味盲定理（8/8）：946 對精確零 ＋ 10⁷ MC bit-identical 零 | ✅ |
@@ -110,4 +112,4 @@ handoff ×3：→ **M2**（加性泛函適用範圍）· → **M5**（weight 約
 | 傳播 | M2 字面讀法 ⟹ `λ≠0` 全族結構性排除 | ✅ 依據回正 |
 
 **開放問題清單**：`docs/32_unresolved_inventory.md`（8 項，含 3 項外部依賴）。
-**閘門**：`07` 40/40、`04` 227/227、`08` 4/4。
+**閘門**：`07` 43/43、`04` 227/227、`08` 4/4。
