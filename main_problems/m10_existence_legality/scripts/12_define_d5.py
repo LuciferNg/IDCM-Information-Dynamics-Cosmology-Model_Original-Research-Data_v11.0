@@ -174,7 +174,28 @@ R10 以 **NUBASE2020 半衰期**（判準從未使用之獨立資訊）測出：
 
 > 重跑後本檔與 `data/12` 之 `seal` 必須相同；不同即表示 `STATEMENT` 被改動（= 定義漂移）。
 """
+R23_NOTE = """
+---
+
+## R23 更正（2026-11-04）：通道集補齊（定義不變，僅快照值）
+
+`scripts/11`／`13` 之 `min_open_rel()` 原只計 8 通道（漏 `SF_sym`／`cluster`／`ternary-α`），已補齊至 𝒞_v2 全部 11 通道。
+本檔之 **D5.1–D5.7 定義與封印 c7fecc02 不變**（定義不含數值）；僅下列**快照值**更新：
+
+| 量 | 舊（8 通道） | 新（11 通道） |
+|:--|--:|--:|
+| D5.4 屏障帶條數 | 51（全 `SF_opt`） | **36（全 `cluster`）** |
+| D5.4 帶內 A 範圍 | [98,164] | **[110,164]** |
+| D5.5 失效半徑 `rel*` | 5.212e−4 | **2.836e−4** |
+| G1 反例 | 8/51 | **7/36** |
+| `Nat\\P` Tier 分佈 | 147＋51 | **162＋36** |
+
+★ 本節由 `scripts/12_define_d5.py` **隨生成一同輸出**，故重跑不會丟失（R26 修正：先前 append 式更正會被再生覆寫）。
+"""
+doc = doc.rstrip("\n") + "\n" + R23_NOTE
+
 with open(os.path.join(DOCS, "11_definition_d5.md"), "w", encoding="utf-8") as fh:
     fh.write(doc)
+
 print("docs/11_definition_d5.md 已生成（同封）")
 print("data/12_definition_d5.json 已寫")

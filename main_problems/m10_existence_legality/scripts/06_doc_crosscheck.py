@@ -51,7 +51,7 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "14_barrier_gate", "15_mechanism_classification",
           "16_definition_d6", "17_em_sign", "18_w1_convention",
           "19_p9_t2c", "20_w1_suppression", "21_ternary",
-          "22_w1_operators"):
+          "22_w1_operators", "25_m1_curve"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -65,7 +65,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "14_m10_consolidation", "15_mechanism_axis",
           "16_definition_d6", "17_surviving_results", "18_incoming_triage",
           "19_em_sign_downstream", "20_status_audit", "21_r21_own_residuals",
-          "22_handoff_ledger", "23_audit_r24", "24_r25_priority"):
+          "22_handoff_ledger", "23_audit_r24", "24_r25_priority", "25_r26_incoming_m1"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -508,6 +508,19 @@ cl("23_audit_r24", f"{j10c['P_size']}", "P 90")
 cl("23_audit_r24", f"{j10c['test_B']['SP_size']}", "S\\P 182")
 cl("23_audit_r24", f"{j13['tier_dist']['II']}", "Nat\\P Tier II 36")
 
+
+# ---------------- docs/25 ← 25_m1_curve（外部抄錄值）
+j25 = J["25_m1_curve"]
+cl("25_r26_incoming_m1", f"{j25['coverage_pct']['k=8']}", "k=8 覆蓋")
+cl("25_r26_incoming_m1", f"{j25['coverage_pct']['k=5']}", "k=5 覆蓋")
+cl("25_r26_incoming_m1", f"{j25['coverage_pct']['k=6']}", "k=6 覆蓋")
+cl("25_r26_incoming_m1", f"{j25['coverage_pct']['k=7']}", "k=7 覆蓋")
+cl("25_r26_incoming_m1", f"{j25['coverage_pct']['k≤4']:.3f}", "k≤4 覆蓋")
+cl("25_r26_incoming_m1", f"{j25['increments_pct'][0]:.4f}", "增量1")
+cl("25_r26_incoming_m1", f"{j25['increments_pct'][3]:.4f}", "增量4")
+cl("25_r26_incoming_m1", f"{j25['k_at_f1_equiv']}", "等效 k")
+cl("25_r26_incoming_m1", f"{j25['f1_pool_pct']}", "F1 池")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -542,7 +555,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 24,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 25,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

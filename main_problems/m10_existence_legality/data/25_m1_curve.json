@@ -1,0 +1,29 @@
+{
+  "script": "25_m1_coverage_curve.py 之輸入抄錄（外部 handoff 7c35ab6c，M1 docs/13）",
+  "provenance": {
+    "pid": "M1",
+    "hash": "7c35ab6c645a3cd7",
+    "ts": "2026-11-23T03:40:47+08:00",
+    "ref": "main_problems/m1_mass_file_schema/docs/13_residual_push.md"
+  },
+  "note": "數值為 M1 原文抄錄（uniform, ε=1e−3）；非本 M 重算。本 M 只作增量與判詞計算。",
+  "coverage_pct": {
+    "k≤4": 17.04,
+    "k=5": 21.4821,
+    "k=6": 25.8069,
+    "k=7": 30.0554,
+    "k=8": 34.2289
+  },
+  "increments_pct": [
+    4.4421,
+    4.3248,
+    4.2485,
+    4.1735
+  ],
+  "monotone": true,
+  "concave": true,
+  "f1_pool_pct": 20.61,
+  "m1_pool_equals_f1": false,
+  "k_at_f1_equiv": 4.804,
+  "dof_caveat": "k 增大 ⟹ 支撐增大且自由度增大；覆蓋率升不可作『編碼更強／預言力更高』之證據"
+}

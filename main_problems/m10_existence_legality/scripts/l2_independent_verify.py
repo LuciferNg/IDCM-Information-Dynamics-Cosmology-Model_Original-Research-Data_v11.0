@@ -413,6 +413,60 @@ def main():
     chk("C3 未解釋 = 0（D6 窮盡性）", SPLIT["unexplained"] == 0, str(SPLIT["unexplained"]))
     chk("C4 radius 為 S\\P 之實測子集最大值", RADIUS > 0, f"{float(RADIUS):.4e}")
 
+
+    # ---------------------------------------------------------------- §3c
+    hdr("§3c 三元（非 α）通道 ＋ W1 包絡（獨立重推；R25 新增）")
+
+    def q_tri(z, a):
+        """三分裂 Q 之最大（三碎片皆 ≥4 且質量實測）；獨立於 L1 之 scripts/21。"""
+        m0 = me(z, a)
+        if m0 is None or a < 12:
+            return None
+        best = None
+        for a1 in range(4, a - 7):
+            for a2 in range(4, a - a1 - 3):
+                a3 = a - a1 - a2
+                if a3 < 4:
+                    continue
+                for z1 in Z_OF_A.get(a1, ()):
+                    m1 = me(z1, a1)
+                    for z2 in Z_OF_A.get(a2, ()):
+                        z3 = z - z1 - z2
+                        if z3 < 1:
+                            continue
+                        m2, m3 = me(z2, a2), me(z3, a3)
+                        if m2 is None or m3 is None:
+                            continue
+                        qq = m0 - m1 - m2 - m3
+                        if best is None or qq > best:
+                            best = qq
+        return best
+
+    tri_vals = {}
+    for (z, a) in sorted(Pset):
+        tri_vals[(z, a)] = q_tri(z, a)
+    n_tri_c = sum(1 for v in tri_vals.values() if v is not None)
+    n_tri_v = sum(1 for v in tri_vals.values() if v is not None and v > 0)
+    DERIVED["tern_computable"] = n_tri_c
+    DERIVED["tern_violations"] = n_tri_v
+    chk("T1 三元通道可算數 = P 之 81/90（9 條碎片質量未測）", n_tri_c == 81, f"{n_tri_c}/{len(Pset)}")
+    chk("T2 三元通道對 P 零殺傷（Q_tern > 0 者 = 0）", n_tri_v == 0, f"{n_tri_v}")
+
+    env_lo, env_hi = EM_REQ - SIGMA_X, EM_REQ + SIGMA_X
+    DERIVED["envelope_lo"] = env_lo
+    DERIVED["envelope_hi"] = env_hi
+    DERIVED["amax_v1"], DERIVED["amax_v2"] = A1, A2
+    gap = EM_REQ - A2
+    z_gap = gap / SIGMA_X
+    z_self = (SELF_E - EM_REQ) / SIGMA_X
+    DERIVED["gap_v2_sigma"] = z_gap
+    DERIVED["self_z"] = z_self
+    chk("W1 需求帶 = [1.1727, 1.3607]", env_lo == F("1.1727") and env_hi == F("1.3607"),
+        f"[{float(env_lo):.4f}, {float(env_hi):.4f}]")
+    chk("W2 兩體 A_max(v2) 落於 1σ 帶（缺口 0.184σ ⟹ 數值不排除）",
+        env_lo <= A2 <= env_hi, f"{float(A2):.4f}，缺口 {float(z_gap):.3f}σ")
+    chk("W3 q² 自能 35.3σ 超（排除）", z_self > 30, f"{float(z_self):.1f}σ")
+
     hdr("§4 匯總")
     n = len([k for k in RES if not k.startswith("_")])
     print(f"檢查項 = {n}，FAIL = {NFAIL}")

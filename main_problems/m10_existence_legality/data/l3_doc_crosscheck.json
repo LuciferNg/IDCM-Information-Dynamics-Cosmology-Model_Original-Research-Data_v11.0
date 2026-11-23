@@ -1,7 +1,7 @@
 {
   "E1 L2 _derived 非空": {
     "pass": true,
-    "detail": "27 keys"
+    "detail": "35 keys"
   },
   "C.09_channel_complet.合法集 90": {
     "pass": true,
@@ -95,6 +95,34 @@
     "pass": true,
     "detail": "L2 11.7603 ↔ 文檔 11.76（rel 2.3e-05）"
   },
+  "C.24_r25_priority.md.三分裂可算 81": {
+    "pass": true,
+    "detail": "L2 81 ↔ 文檔 81（rel 0.0e+00）"
+  },
+  "C.24_r25_priority.md.三分裂違反 0": {
+    "pass": true,
+    "detail": "L2 0 ↔ 文檔 0（rel 0.0e+00）"
+  },
+  "C.24_r25_priority.md.1σ 下界 1.1727": {
+    "pass": true,
+    "detail": "L2 1.1727 ↔ 文檔 1.1727（rel 0.0e+00）"
+  },
+  "C.24_r25_priority.md.1σ 上界 1.3607": {
+    "pass": true,
+    "detail": "L2 1.3607 ↔ 文檔 1.3607（rel 0.0e+00）"
+  },
+  "C.24_r25_priority.md.A_max v2 1.2494": {
+    "pass": true,
+    "detail": "L2 1.24937 ↔ 文檔 1.2494（rel 2.4e-05）"
+  },
+  "C.24_r25_priority.md.缺口 0.184σ": {
+    "pass": true,
+    "detail": "L2 0.184356 ↔ 文檔 0.184（rel 1.9e-03）"
+  },
+  "C.24_r25_priority.md.自能 35.3σ": {
+    "pass": true,
+    "detail": "L2 35.2521 ↔ 文檔 35.3（rel 1.4e-03）"
+  },
   "F.docs/09_channel_completion.md 全命中": {
     "pass": true,
     "detail": "2/2"
@@ -127,8 +155,12 @@
     "pass": true,
     "detail": "3/3"
   },
+  "F.docs/24_r25_priority.md 全命中": {
+    "pass": true,
+    "detail": "7/7"
+  },
   "_summary": {
-    "checks": 32,
+    "checks": 40,
     "fail": 0,
     "by_doc": {
       "docs/09_channel_completion.md": [
@@ -162,9 +194,13 @@
       "docs/21_r21_own_residuals.md": [
         3,
         3
+      ],
+      "docs/24_r25_priority.md": [
+        7,
+        7
       ]
     }
   },
-  "pass": 32,
+  "pass": 40,
   "fail": 0
 }

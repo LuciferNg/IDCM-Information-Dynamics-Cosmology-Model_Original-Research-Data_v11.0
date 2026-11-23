@@ -65,6 +65,14 @@ CLAIMS = [
     {"doc": "docs/21_r21_own_residuals.md", "key": "fam_hits_1pct", "label": "±1% 命中 5", "anchor": "±1%"},
     {"doc": "docs/21_r21_own_residuals.md", "key": "fam_size", "label": "式族 4538", "anchor": "4538"},
     {"doc": "docs/20_status_audit.md", "key": "gamma_over_v2", "label": "γ 超 v2 11.76%", "anchor": "11.76", "scale": 100, "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "tern_computable", "label": "三分裂可算 81", "anchor": "81/90", "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "tern_violations", "label": "三分裂違反 0", "anchor": "Q_tern > 0", "span": 40},
+    {"doc": "docs/24_r25_priority.md", "key": "envelope_lo", "label": "1σ 下界 1.1727", "anchor": "1.1727", "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "envelope_hi", "label": "1σ 上界 1.3607", "anchor": "1.3607", "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "amax_v2", "label": "A_max v2 1.2494", "anchor": "1.2494", "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "gap_v2_sigma", "label": "缺口 0.184σ", "anchor": "0.184", "span": 20},
+    {"doc": "docs/24_r25_priority.md", "key": "self_z", "label": "自能 35.3σ", "anchor": "35.3", "span": 20},
+
 ]
 
 TOK = re.compile(r"(\d+(?:\.\d+)?)(?:[eE]([+\u2212-]?\d+))?")

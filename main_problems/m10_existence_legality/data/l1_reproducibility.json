@@ -56,10 +56,10 @@
       "script": "06_doc_crosscheck.py",
       "rc1": 0,
       "rc2": 0,
-      "md5_1": "348ea779e44d631e",
-      "md5_2": "348ea779e44d631e",
+      "md5_1": "6de02a06c8bf8fec",
+      "md5_2": "6de02a06c8bf8fec",
       "identical": true,
-      "stdout_lines": 47,
+      "stdout_lines": 48,
       "stderr_tail": ""
     },
     {

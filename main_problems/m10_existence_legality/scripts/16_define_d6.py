@@ -160,7 +160,21 @@ R14（`docs/15`）以 182 條例外作盲測，得：
 
 > 重跑後本檔與 `data/16` 之 `seal` 必須相同；不同即表示 `STATEMENT` 被改動（= 定義漂移）。
 """
+R23_NOTE = """
+---
+
+## R23 更正（2026-11-04）：兩個「51」唔同物（防混）
+
+- **𝒞2 二階弱 = 51 條**（機制計數，R14 起不變）。
+- **Tier II 屏障帶 = 36 條**（R23 後；前值 51，全 `SF_opt` → 現全 `cluster`）。
+
+★ 兩者在舊文檔同為「51」純屬巧合，**不可互換**。D6 之封印 6ca7a9d6 與分類軸不受影響（D6 不依 Tier 分層）。
+★ 本節由 `scripts/16_define_d6.py` 隨生成輸出，重跑不會丟失。
+"""
+doc = doc.rstrip("\n") + "\n" + R23_NOTE
+
 with open(os.path.join(DOCS, "16_definition_d6.md"), "w", encoding="utf-8") as fh:
     fh.write(doc)
+
 print("docs/16_definition_d6.md 已生成（同封）")
 print("data/16_definition_d6.json 已寫")
