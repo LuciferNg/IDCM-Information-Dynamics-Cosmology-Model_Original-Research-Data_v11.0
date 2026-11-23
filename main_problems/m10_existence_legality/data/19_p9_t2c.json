@@ -66,7 +66,7 @@
   "invariants": {
     "P_size": 90,
     "SP_size": 182,
-    "max_rel": 0.0005211539448161078,
+    "max_rel": 0.00028355273136785887,
     "Nat_not_P": 198
   },
   "verdict": "P9 = closed（T2c 對本 M 判準零影響；只影響 P1/P2 兩條預註冊，且 P1 兩支皆不變）",

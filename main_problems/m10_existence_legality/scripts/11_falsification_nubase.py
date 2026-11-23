@@ -163,37 +163,59 @@ for a in BY_A:
     BY_A[a].sort()
 Z_OF_A = {a: tuple(sorted(z for _, z in v)) for a, v in BY_A.items()}
 
+CLUSTERS = [(2, 4), (4, 8), (6, 12), (6, 14), (8, 16), (10, 20), (10, 24), (12, 28), (14, 32)]
+
 
 def min_open_rel(z, a):
-    """11 通道中最小之正 Q，除以原子質量（Tier 之相對量）。"""
+    """𝒞_v2 之**全部 11 通道**中最小之正 Q，除以原子質量（Tier 之相對量）。
+
+    ★ 更正（R23，2026-11-04）：本函數舊版只含 8 通道（β⁻/β⁺EC/α/p/n/2β⁻/2β⁺ + SF_opt），
+      與 docstring「11 通道」不符 ⟹ 半徑與 Tier 分層偏高（漏 SF_sym／cluster／ternary-α）。
+      現補齊至 11，與 `10_channel_completion` 之 𝒞_v2 定義一致。
+    """
     m = amass(z, a)
     if m is None:
         return None, None
     qs = []
-    for (zz, aa), nm in (((z + 1, a), "β⁻"), ((z - 1, a), "β⁺/EC"),
-                         ((z - 2, a - 4), "α"), ((z - 1, a - 1), "p"),
-                         ((z, a - 1), "n"), ((z + 2, a), "2β⁻"),
-                         ((z - 2, a), "2β⁺/ECEC")):
+    for (zz, aa), nm, sub in (((z + 1, a), "β⁻", F(0)), ((z - 1, a), "β⁺/EC", F(0)),
+                              ((z - 2, a - 4), "α", me(2, 4)), ((z - 1, a - 1), "p", ME_H),
+                              ((z, a - 1), "n", ME_N), ((z + 2, a), "2β⁻", F(0)),
+                              ((z - 2, a), "2β⁺/ECEC", F(0))):
         v = me(zz, aa)
+        if v is not None and sub is not None:
+            qs.append((nm, me(z, a) - v - sub))
+    if a % 2 == 0 and z % 2 == 0:                      # SF_sym
+        v = me(z // 2, a // 2)
         if v is not None:
-            q = me(z, a) - v - (ME_H if nm == "p" else (ME_N if nm == "n" else F(0)))
-            if nm == "α":
-                q = me(z, a) - v - me(2, 4)
-            qs.append((nm, q))
-    # SF_opt
-    best = None
-    if a >= 40:
+            qs.append(("SF_sym", me(z, a) - 2 * v))
+    if a >= 40:                                        # SF_opt
+        best = None
         for a1 in range(10, a - 9):
-            a2 = a - a1
             for z1 in Z_OF_A.get(a1, ()):
-                m1, m2 = me(z1, a1), me(z - z1, a2)
+                m1, m2 = me(z1, a1), me(z - z1, a - a1)
                 if m1 is None or m2 is None:
                     continue
                 q = me(z, a) - m1 - m2
                 if best is None or q > best:
                     best = q
+        if best is not None:
+            qs.append(("SF_opt", best))
+    best = None                                        # cluster
+    for zc, ac in CLUSTERS:
+        if ac >= a:
+            continue
+        m1, m2 = me(z - zc, a - ac), me(zc, ac)
+        if m1 is None or m2 is None:
+            continue
+        q = me(z, a) - m1 - m2
+        if best is None or q > best:
+            best = q
     if best is not None:
-        qs.append(("SF_opt", best))
+        qs.append(("cluster", best))
+    if a >= 12:                                        # ternary-α
+        m1, m2 = me(z - 6, a - 12), me(2, 4)
+        if m1 is not None and m2 is not None:
+            qs.append(("ternary-α", me(z, a) - m1 - 3 * m2))
     pos = [(nm, q) for nm, q in qs if q > 0]
     if not pos:
         return None, None

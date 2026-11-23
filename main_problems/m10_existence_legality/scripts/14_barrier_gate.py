@@ -19,6 +19,11 @@ M10 scripts/14 — R13：𝒞_B 障壘閘之嘗試及其必然失敗（判準單
   G2  「B_f < B* ⟹ 通道開」          （B* 由觀測窗給定）
   G3  「Q_SF > 0 ⟹ 通道開」          （現行 𝒞_v2，無障壘）
 
+★ R23（2026-11-04）樣本更正：上述「51 條」係 R13 當時（`min_open_rel` 僅 8 通道）之值。
+  定義補齊至 11 通道後，屏障帶 = **36 條（全部 cluster 通道）**。
+  下列 E1／E2／E3 之**事前預期原文保留、門檻不調**（FAIL 照記）；
+  另立 E1b／E2b／E3b 以 36 為母體（**後驗**，明示非預註冊）。
+
 事前預期（寫死）:
   E1 G1 之方向一：51 條屏障帶中 **零條** Q_SF ≥ B_f
   E2 G2：觀測 SF 者（NUBASE `SF=` 分支）與 51 條之 B_f **兩集不相交**（gap > 0）
@@ -208,12 +213,12 @@ print("     例:", [(a, z) for z, a in nonperm[:8]])
 
 # G2 對「Tier 預期」之影響：S\P_gated 是否全落 Tier III？
 iii = [(t["Z"], t["A"]) for t in items if t["tier"] == "III"]
-print(f"     S\\P_gated = {len(iii)} 條（原 S\\P = {len(items)} 減 51 條屏障帶）")
+print(f"     S\\P_gated = {len(iii)} 條（原 S\\P = {len(items)} 減 {len(band)} 條屏障帶）")
 n_bad3 = sum(1 for z, a in iii if Bf(z, a) < B_STAR and (q_sf_opt(z, a) or 0) > 0)
 print(f"     其中會被 G2 判合法者 = {n_bad3} 條 ⟹ Tier III 佔比由 "
-      f"{100*len(iii)/len(items):.1f}% 升至 {100*(len(iii)-n_bad3)/(len(items)-51):.1f}%")
+      f"{100*len(iii)/len(items):.1f}% 升至 {100*(len(iii)-n_bad3)/(len(items)-len(band)):.1f}%")
 ck("E4【後驗】採 G2 後 Tier III 佔比 = 100%（Tier 預期變完美）但 ⟸ 破產",
-   n_bad3 == 0 and len(iii) == len(items) - 51,
+   n_bad3 == 0 and len(iii) == len(items) - len(band),
    f"S\\P_gated = {len(iii)} 條全 Tier III ⟹ **取捨**：Tier 階梯之完美 vs ⟸ 方向之破產，"
    f"二者不可兼得")
 
@@ -223,10 +228,17 @@ print(f"     其中 NUBASE stbl = {n_stbl}/{len(nonperm)} ⟹ 全部「有效穩
 
 # ---------------------------------------------------------------- 結論
 print("\n[結論]")
-print("     G1（Q vs B_f）不成立：8 條反例。")
+print(f"     G1（Q vs B_f）不成立：{len(viol)} 條反例。")
 print("     G2（B_f < B*）判別乾淨（gap 24.7 MeV）但 B* 由**觀測窗**給定 ⟹ 引入比率。")
 print(f"     採 G2 ⟹ 合法集含 {len(nonperm)} 條非永久者 ⟹ ⟸ 方向破產。")
 print("     ⟹ **判準之單向性（D5.1）係邏輯必然，非設計取捨。**")
+
+
+# ---------------------------------------------------------------- 後驗（R23 樣本更正後）
+print("\n[後驗] 樣本更正後之重測（非預註冊）")
+print(f"     障帶 = {len(rows1)} 條；通道 = {sorted(set(t['channel'] for t in items if t['tier'] == 'II'))}")
+ck("E1c【後驗·樣本更正】新樣本下 G1 仍不成立（違反 > 0）", len(viol) > 0,
+   f"{len(viol)}/{len(rows1)} 條 Q ≥ B_f ⟹ G1 之方向一在任何樣本下皆破")
 
 print("\n" + "=" * 78)
 print(f"CHECK 合計: PASS {len(PASS)} / FAIL {len(FAIL)}  → {len(PASS)}/{len(PASS)+len(FAIL)}")
@@ -244,7 +256,7 @@ out = {"script": "14_barrier_gate.py", "role": "R13 𝒞_B 障壘閘之嘗試（
               "bf_band_max": bf_bd[-1][0], "gap": gap, "B_star": B_STAR,
               "n_sf_above_10": len(bf_sf) - n_sf_low},
        "G3": {"P_gated": len(gated), "n_nonpermanent": len(nonperm),
-              "SP_gated": len(iii), "tier3_frac_gated": (len(iii) - n_bad3) / (len(items) - 51),
+              "SP_gated": len(iii), "tier3_frac_gated": (len(iii) - n_bad3) / max(len(items) - len(band), 1),
               "n_nonpermanent_stbl": n_stbl,
               "frac": len(nonperm) / max(len(gated), 1)},
        "verdict": "判準之單向性係邏輯必然：任何以觀測窗修補 ⟹ 之閘，必破 ⟸",

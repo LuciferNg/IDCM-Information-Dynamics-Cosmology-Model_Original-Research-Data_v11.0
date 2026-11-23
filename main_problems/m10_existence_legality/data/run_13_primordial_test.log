@@ -9,19 +9,19 @@ M10 R12 — 第二獨立標籤：天然存在（IS>0）
   [PASS] E1【事前預期：P ⊆ Nat】  90/90 條合法項天然存在 ⟹ 判準之「永久」與「此刻仍在」一致
 
 [E2] Nat\P（天然存在卻判不合法）之 Tier 分佈
-     |Nat\P| = 198；Tier 分佈 = {'III': 147, 'II': 51}
+     |Nat\P| = 198；Tier 分佈 = {'III': 162, 'II': 36}
   [PASS] E2【事前預期：Nat\P 中 Tier I 個案 = 0】  Tier I = 0 條 ⟹ 凡天然存在而判不合法者，皆落近臨界或屏障帶
-  [PASS] E3【事前預期：max rel ≤ 5.3e−4】  max rel = 5.21e-04 ⟹ 與 R10（NUBASE T½ 標籤）之 5.21e−4 **一致**
+  [PASS] E3【事前預期：max rel ≤ 5.3e−4】  max rel = 2.84e-04 ⟹ 與 R10（NUBASE T½ 標籤）之 5.21e−4 **一致**
 
 [最強實證] 判「不合法」而此刻仍存在於自然界者
      Z= 41 A= 93 丰度 100.00000%  rel=1.08e-05 tier=III ch=SF_opt
-     Z= 45 A=103 丰度 100.00000%  rel=1.61e-04 tier=II ch=SF_opt
-     Z= 53 A=127 丰度 100.00000%  rel=2.54e-04 tier=II ch=SF_opt
-     Z= 55 A=133 丰度 100.00000%  rel=2.81e-04 tier=II ch=SF_opt
-     Z= 59 A=141 丰度 100.00000%  rel=3.69e-04 tier=II ch=SF_opt
-     Z= 65 A=159 丰度 100.00000%  rel=5.06e-04 tier=II ch=SF_opt
+     Z= 45 A=103 丰度 100.00000%  rel=6.45e-05 tier=III ch=cluster
+     Z= 53 A=127 丰度 100.00000%  rel=1.38e-04 tier=II ch=cluster
+     Z= 55 A=133 丰度 100.00000%  rel=1.20e-04 tier=II ch=cluster
+     Z= 59 A=141 丰度 100.00000%  rel=1.76e-04 tier=II ch=cluster
+     Z= 65 A=159 丰度 100.00000%  rel=2.79e-04 tier=II ch=cluster
      Z= 67 A=165 丰度 100.00000%  rel=9.04e-07 tier=III ch=α
-     Z= 69 A=169 丰度 100.00000%  rel=7.62e-06 tier=III ch=α
+     Z= 69 A=169 丰度 100.00000%  rel=5.78e-06 tier=III ch=ternary-α
      ⟹ 198 條天然存在核素被判「不合法」；判準之 ⟹ 方向對其**不可操作**
         （「不永久」≠「已衰變」—— 此即 D5.1(b) 之實證）
 
@@ -35,15 +35,15 @@ M10 R12 — 第二獨立標籤：天然存在（IS>0）
 
 [單一同位素元素] IS = 100% 而被判「不合法」者 = 11 條
      Z= 41 A= 93 rel=1.08e-05 tier=III ch=SF_opt
-     Z= 45 A=103 rel=1.61e-04 tier=II ch=SF_opt
-     Z= 53 A=127 rel=2.54e-04 tier=II ch=SF_opt
-     Z= 55 A=133 rel=2.81e-04 tier=II ch=SF_opt
-     Z= 59 A=141 rel=3.69e-04 tier=II ch=SF_opt
-     Z= 65 A=159 rel=5.06e-04 tier=II ch=SF_opt
+     Z= 45 A=103 rel=6.45e-05 tier=III ch=cluster
+     Z= 53 A=127 rel=1.38e-04 tier=II ch=cluster
+     Z= 55 A=133 rel=1.20e-04 tier=II ch=cluster
+     Z= 59 A=141 rel=1.76e-04 tier=II ch=cluster
+     Z= 65 A=159 rel=2.79e-04 tier=II ch=cluster
      Z= 67 A=165 rel=9.04e-07 tier=III ch=α
-     Z= 69 A=169 rel=7.62e-06 tier=III ch=α
+     Z= 69 A=169 rel=5.78e-06 tier=III ch=ternary-α
      Z= 79 A=197 rel=5.30e-06 tier=III ch=α
-     Z= 83 A=209 rel=1.61e-05 tier=III ch=α
+     Z= 83 A=209 rel=1.40e-05 tier=III ch=ternary-α
      Z= 91 A=231 rel=2.39e-05 tier=III ch=α
   [PASS] P.3 單一同位素元素而被判不合法者皆落 Tier II/III（無 Tier I）  11 條；其元素在自然界 100% 由此核素構成 ⟹ 判準之 ⟹ 方向最強反例（但皆屏障類）
 

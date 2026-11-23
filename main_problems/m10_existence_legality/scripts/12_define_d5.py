@@ -88,10 +88,17 @@ ck("D5.2 封印長度 64 hex", len(seal) == 64, seal)
 ck("D5.3 判準之可測方向與實測一致（P 全 stbl）",
    tb["SP_size"] > 0 and j10["test_A"]["falsified"] is False,
    f"P={j10['P_size']} 條、反例 {len(j10['test_A']['counterexamples'])} ⟹ D5.1(a) 成立")
-ck("D5.4 盲格之規模寫入定義（51 條、A∈[98,164]）",
-   tb["n_non_tier3"] == 51, f"Tier II 例外 = {tb['n_non_tier3']} 條")
-ck("D5.5 失效半徑與實測一致（5.21e−4）",
-   abs(tb["max_rel"] - 5.2115e-4) < 1e-7, f"max rel = {tb['max_rel']:.4e}")
+# ★ R23（2026-11-04）定義更正：min_open_rel 由 8 通道補齊至 𝒞_v2 全部 11 通道
+#   （舊版漏 SF_sym／cluster／ternary-α）⟹ 以下兩個「快照」值隨之更新。
+#   定義本身（D5.5 之 rel* 由 data 給定、不含數值）不變，封印不動。
+SNAP_BAND, SNAP_REL = 36, 2.8355273136785887e-4
+ck("D5.4 盲格之規模與 data 一致（36 條、A∈[110,164]；R23 定義更正後）",
+   tb["n_non_tier3"] == SNAP_BAND, f"Tier II 例外 = {tb['n_non_tier3']} 條")
+ck("D5.5 失效半徑與實測一致（2.84e−4；R23 定義更正後）",
+   abs(tb["max_rel"] - SNAP_REL) < 1e-12, f"max rel = {tb['max_rel']:.4e}")
+ck("D5.7 盲格之控制通道單一（36 條全 cluster）",
+   set(t["channel"] for t in tb["items"] if t["tier"] == "II") == {"cluster"},
+   f"通道 = {sorted(set(t['channel'] for t in tb['items'] if t['tier']=='II'))}")
 ck("D5.6 𝒞_v2 之 11 通道與 docs/09 一致",
    len(j9["final"]["channels"]) == 11 and j9["final"]["n_legal"] == 90,
    f"{len(j9['final']['channels'])} 類、合法集 {j9['final']['n_legal']} 條")

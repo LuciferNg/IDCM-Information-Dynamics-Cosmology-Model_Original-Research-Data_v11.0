@@ -1,0 +1,170 @@
+{
+  "E1 L2 _derived 非空": {
+    "pass": true,
+    "detail": "27 keys"
+  },
+  "C.09_channel_complet.合法集 90": {
+    "pass": true,
+    "detail": "L2 90 ↔ 文檔 90（rel 0.0e+00）"
+  },
+  "C.09_channel_complet.A_max 92": {
+    "pass": true,
+    "detail": "L2 92 ↔ 文檔 92（rel 0.0e+00）"
+  },
+  "C.10_falsification_n.S\\P = 182": {
+    "pass": true,
+    "detail": "L2 182 ↔ 文檔 182（rel 0.0e+00）"
+  },
+  "C.10_falsification_n.Tier III = 146": {
+    "pass": true,
+    "detail": "L2 146 ↔ 文檔 146（rel 0.0e+00）"
+  },
+  "C.10_falsification_n.失效半徑 2.84e−4": {
+    "pass": true,
+    "detail": "L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）"
+  },
+  "C.10_falsification_n.時間盲 8.3e53": {
+    "pass": true,
+    "detail": "L2 8.25635e+53 ↔ 文檔 8.3e+53（rel 5.3e-03）"
+  },
+  "C.12_primordial_labe.丰度標籤同半徑": {
+    "pass": true,
+    "detail": "L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）"
+  },
+  "C.17_surviving_resul.S2.4 半徑": {
+    "pass": true,
+    "detail": "L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）"
+  },
+  "C.17_surviving_resul.X3 之 Tier III 條數": {
+    "pass": true,
+    "detail": "L2 146 ↔ 文檔 146（rel 0.0e+00）"
+  },
+  "C.15_mechanism_axis..𝒞3 位壘 126": {
+    "pass": true,
+    "detail": "L2 126 ↔ 文檔 126（rel 0.0e+00）"
+  },
+  "C.15_mechanism_axis..𝒞2 二階弱 51": {
+    "pass": true,
+    "detail": "L2 51 ↔ 文檔 51（rel 0.0e+00）"
+  },
+  "C.15_mechanism_axis..𝒞1-禁戒 5": {
+    "pass": true,
+    "detail": "L2 5 ↔ 文檔 5（rel 0.0e+00）"
+  },
+  "C.15_mechanism_axis..未解釋 0": {
+    "pass": true,
+    "detail": "L2 0 ↔ 文檔 0（rel 0.0e+00）"
+  },
+  "C.19_em_sign_downstr.em(p)−em(n) = 1.2667": {
+    "pass": true,
+    "detail": "L2 1.26665 ↔ 文檔 1.2667（rel 3.6e-05）"
+  },
+  "C.19_em_sign_downstr.x(n) = 0.7823": {
+    "pass": true,
+    "detail": "L2 0.782301 ↔ 文檔 0.7823（rel 1.3e-06）"
+  },
+  "C.20_status_audit.md.A_max(v1) 1.27175": {
+    "pass": true,
+    "detail": "L2 1.27175 ↔ 文檔 1.27175（rel 3.2e-06）"
+  },
+  "C.20_status_audit.md.A_max(v2) 1.24937": {
+    "pass": true,
+    "detail": "L2 1.24937 ↔ 文檔 1.24937（rel 4.6e-07）"
+  },
+  "C.19_em_sign_downstr.缺口 0.01733": {
+    "pass": true,
+    "detail": "L2 0.0173294 ↔ 文檔 0.0173（rel 1.7e-03）"
+  },
+  "C.19_em_sign_downstr.0.184σ": {
+    "pass": true,
+    "detail": "L2 0.184356 ↔ 文檔 0.184（rel 1.9e-03）"
+  },
+  "C.21_r21_own_residua.抑制目標 0.276548": {
+    "pass": true,
+    "detail": "L2 0.276548 ↔ 文檔 0.276548（rel 3.6e-07）"
+  },
+  "C.21_r21_own_residua.±1% 命中 5": {
+    "pass": true,
+    "detail": "L2 5 ↔ 文檔 5（rel 0.0e+00）"
+  },
+  "C.21_r21_own_residua.式族 4538": {
+    "pass": true,
+    "detail": "L2 4538 ↔ 文檔 4538（rel 0.0e+00）"
+  },
+  "C.20_status_audit.md.γ 超 v2 11.76%": {
+    "pass": true,
+    "detail": "L2 11.7603 ↔ 文檔 11.76（rel 2.3e-05）"
+  },
+  "F.docs/09_channel_completion.md 全命中": {
+    "pass": true,
+    "detail": "2/2"
+  },
+  "F.docs/10_falsification_nubase.md 全命中": {
+    "pass": true,
+    "detail": "4/4"
+  },
+  "F.docs/12_primordial_label.md 全命中": {
+    "pass": true,
+    "detail": "1/1"
+  },
+  "F.docs/15_mechanism_axis.md 全命中": {
+    "pass": true,
+    "detail": "4/4"
+  },
+  "F.docs/17_surviving_results.md 全命中": {
+    "pass": true,
+    "detail": "2/2"
+  },
+  "F.docs/19_em_sign_downstream.md 全命中": {
+    "pass": true,
+    "detail": "4/4"
+  },
+  "F.docs/20_status_audit.md 全命中": {
+    "pass": true,
+    "detail": "3/3"
+  },
+  "F.docs/21_r21_own_residuals.md 全命中": {
+    "pass": true,
+    "detail": "3/3"
+  },
+  "_summary": {
+    "checks": 32,
+    "fail": 0,
+    "by_doc": {
+      "docs/09_channel_completion.md": [
+        2,
+        2
+      ],
+      "docs/10_falsification_nubase.md": [
+        4,
+        4
+      ],
+      "docs/12_primordial_label.md": [
+        1,
+        1
+      ],
+      "docs/17_surviving_results.md": [
+        2,
+        2
+      ],
+      "docs/15_mechanism_axis.md": [
+        4,
+        4
+      ],
+      "docs/19_em_sign_downstream.md": [
+        4,
+        4
+      ],
+      "docs/20_status_audit.md": [
+        3,
+        3
+      ],
+      "docs/21_r21_own_residuals.md": [
+        3,
+        3
+      ]
+    }
+  },
+  "pass": 32,
+  "fail": 0
+}

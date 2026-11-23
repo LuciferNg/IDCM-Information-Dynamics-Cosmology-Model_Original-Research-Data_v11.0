@@ -1,0 +1,49 @@
+
+==============================================================================
+§0 讀 L2
+==============================================================================
+[PASS] E1 L2 _derived 非空  |  27 keys
+
+==============================================================================
+§1 逐 claim（唯讀）
+==============================================================================
+[PASS] C.09_channel_complet.合法集 90  |  L2 90 ↔ 文檔 90（rel 0.0e+00）
+[PASS] C.09_channel_complet.A_max 92  |  L2 92 ↔ 文檔 92（rel 0.0e+00）
+[PASS] C.10_falsification_n.S\P = 182  |  L2 182 ↔ 文檔 182（rel 0.0e+00）
+[PASS] C.10_falsification_n.Tier III = 146  |  L2 146 ↔ 文檔 146（rel 0.0e+00）
+[PASS] C.10_falsification_n.失效半徑 2.84e−4  |  L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）
+[PASS] C.10_falsification_n.時間盲 8.3e53  |  L2 8.25635e+53 ↔ 文檔 8.3e+53（rel 5.3e-03）
+[PASS] C.12_primordial_labe.丰度標籤同半徑  |  L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）
+[PASS] C.17_surviving_resul.S2.4 半徑  |  L2 0.000283553 ↔ 文檔 0.000284（rel 1.6e-03）
+[PASS] C.17_surviving_resul.X3 之 Tier III 條數  |  L2 146 ↔ 文檔 146（rel 0.0e+00）
+[PASS] C.15_mechanism_axis..𝒞3 位壘 126  |  L2 126 ↔ 文檔 126（rel 0.0e+00）
+[PASS] C.15_mechanism_axis..𝒞2 二階弱 51  |  L2 51 ↔ 文檔 51（rel 0.0e+00）
+[PASS] C.15_mechanism_axis..𝒞1-禁戒 5  |  L2 5 ↔ 文檔 5（rel 0.0e+00）
+[PASS] C.15_mechanism_axis..未解釋 0  |  L2 0 ↔ 文檔 0（rel 0.0e+00）
+[PASS] C.19_em_sign_downstr.em(p)−em(n) = 1.2667  |  L2 1.26665 ↔ 文檔 1.2667（rel 3.6e-05）
+[PASS] C.19_em_sign_downstr.x(n) = 0.7823  |  L2 0.782301 ↔ 文檔 0.7823（rel 1.3e-06）
+[PASS] C.20_status_audit.md.A_max(v1) 1.27175  |  L2 1.27175 ↔ 文檔 1.27175（rel 3.2e-06）
+[PASS] C.20_status_audit.md.A_max(v2) 1.24937  |  L2 1.24937 ↔ 文檔 1.24937（rel 4.6e-07）
+[PASS] C.19_em_sign_downstr.缺口 0.01733  |  L2 0.0173294 ↔ 文檔 0.0173（rel 1.7e-03）
+[PASS] C.19_em_sign_downstr.0.184σ  |  L2 0.184356 ↔ 文檔 0.184（rel 1.9e-03）
+[PASS] C.21_r21_own_residua.抑制目標 0.276548  |  L2 0.276548 ↔ 文檔 0.276548（rel 3.6e-07）
+[PASS] C.21_r21_own_residua.±1% 命中 5  |  L2 5 ↔ 文檔 5（rel 0.0e+00）
+[PASS] C.21_r21_own_residua.式族 4538  |  L2 4538 ↔ 文檔 4538（rel 0.0e+00）
+[PASS] C.20_status_audit.md.γ 超 v2 11.76%  |  L2 11.7603 ↔ 文檔 11.76（rel 2.3e-05）
+
+==============================================================================
+§2 逐檔命中率
+==============================================================================
+[PASS] F.docs/09_channel_completion.md 全命中  |  2/2
+[PASS] F.docs/10_falsification_nubase.md 全命中  |  4/4
+[PASS] F.docs/12_primordial_label.md 全命中  |  1/1
+[PASS] F.docs/15_mechanism_axis.md 全命中  |  4/4
+[PASS] F.docs/17_surviving_results.md 全命中  |  2/2
+[PASS] F.docs/19_em_sign_downstream.md 全命中  |  4/4
+[PASS] F.docs/20_status_audit.md 全命中  |  3/3
+[PASS] F.docs/21_r21_own_residuals.md 全命中  |  3/3
+
+==============================================================================
+§3 匯總
+==============================================================================
+32/32 PASS（L3）
