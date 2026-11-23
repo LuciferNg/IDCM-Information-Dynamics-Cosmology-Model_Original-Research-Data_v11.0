@@ -40,7 +40,7 @@ docs = sorted(os.path.basename(p) for p in glob.glob(os.path.join(BASE, "docs", 
 jsons = sorted(os.path.basename(p) for p in glob.glob(os.path.join(BASE, "data", "*.json")))
 refs = sorted(os.listdir(os.path.join(BASE, "data", "refs")))
 print(f"\n[A1] scripts {len(scripts)}｜docs {len(docs)}｜json {len(jsons)}｜refs {len(refs)}")
-ck("A1.1 腳本數 = 20", len(scripts) == 20, f"{len(scripts)}")
+ck("A1.1 腳本數 = 22", len(scripts) == 22, f"{len(scripts)}")
 def has_json(sc):
     pre = sc[:2]
     return any(j.startswith(pre) for j in jsons)
@@ -139,7 +139,7 @@ print("\n[A7] README 檔案表覆蓋")
 readme = open(os.path.join(BASE, "README.md"), encoding="utf-8").read()
 miss_doc = [d for d in docs if d not in readme]
 ck("A7.1 每份 doc 見於 README", not miss_doc, f"未列：{miss_doc[:5]}")
-ck("A7.2 腳本範圍已列（01–20）", "`scripts/01`–`20`" in readme or "scripts/01`–`20" in readme,
+ck("A7.2 腳本範圍已列（01–22）", "`scripts/01`–`22`" in readme or "scripts/01`–`22" in readme,
    "README 之腳本行")
 
 print("\n" + "=" * 78)

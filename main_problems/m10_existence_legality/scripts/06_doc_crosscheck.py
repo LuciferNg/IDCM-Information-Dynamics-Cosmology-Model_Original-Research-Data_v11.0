@@ -50,7 +50,8 @@ for f in ("01_criteria_freeze", "02_sign_pattern", "03_precision_wall",
           "11_falsification_nubase", "12_definition_d5", "13_primordial_test",
           "14_barrier_gate", "15_mechanism_classification",
           "16_definition_d6", "17_em_sign", "18_w1_convention",
-          "19_p9_t2c", "20_w1_suppression"):
+          "19_p9_t2c", "20_w1_suppression", "21_ternary",
+          "22_w1_operators"):
     with open(os.path.join(DATA, f + ".json"), encoding="utf-8") as fh:
         J[f] = json.load(fh)
 
@@ -64,7 +65,7 @@ for f in ("01_criteria_freeze", "02_three_layer_classification",
           "14_m10_consolidation", "15_mechanism_axis",
           "16_definition_d6", "17_surviving_results", "18_incoming_triage",
           "19_em_sign_downstream", "20_status_audit", "21_r21_own_residuals",
-          "22_handoff_ledger"):
+          "22_handoff_ledger", "23_audit_r24", "24_r25_priority"):
     with open(os.path.join(DOCS, f + ".md"), encoding="utf-8") as fh:
         DOC[f] = norm(fh.read())
 
@@ -484,6 +485,29 @@ cl("22_handoff_ledger", f"{j18c['gap_v2']:.5f}", "v2 缺口")
 cl("22_handoff_ledger", f"{j18c['sigma_v2']:.3f}", "v2 σ")
 cl("22_handoff_ledger", f"{j18c['branch_diff']:.5f}", "兩支差")
 
+
+# ---------------- docs/24 ← 21_ternary ＋ 22_w1_operators
+j21t = J["21_ternary"]; j22o = J["22_w1_operators"]
+cl("24_r25_priority", f"{j21t['n_tern_computable']}/{j21t['P_size']}", "三分裂可算比例")
+cl("24_r25_priority", f"{j21t['n_violations']}", "三分裂違反數")
+cl("24_r25_priority", f"{j22o['envelope'][0]:.4f}", "1σ 下界")
+cl("24_r25_priority", f"{j22o['envelope'][1]:.4f}", "1σ 上界")
+cl("24_r25_priority", f"{j22o['A_max_v2']:.4f}", "A_max v2")
+cl("24_r25_priority", f"{j22o['gap_v2_sigma']:.3f}", "兩體缺口 σ")
+cl("24_r25_priority", f"{j22o['A_max_v1']:.4f}", "A_max v1")
+cl("24_r25_priority", f"{j22o['self_energy']:.4f}", "自能量級")
+cl("24_r25_priority", f"{j22o['self_z']:.1f}", "自能 σ 數")
+cl("24_r25_priority", f"{j22o['checks_passed']}/{j22o['checks_total']}", "22 check")
+cl("24_r25_priority", f"{j21t['checks_passed']}/{j21t['checks_total']}", "21 check")
+
+
+# ---------------- docs/23（審計報告：引用 R23 更正後之值）
+cl("23_audit_r24", f"{j10c['test_B']['tier3']}", "Tier III 146")
+cl("23_audit_r24", e_(j10c["test_B"]["max_rel"], 2), "失效半徑")
+cl("23_audit_r24", f"{j10c['P_size']}", "P 90")
+cl("23_audit_r24", f"{j10c['test_B']['SP_size']}", "S\\P 182")
+cl("23_audit_r24", f"{j13['tier_dist']['II']}", "Nat\\P Tier II 36")
+
 print(f"\n[C1] 逐條核 {len(CLAIMS)} 條 claim：")
 bad = [(doc, s, why) for doc, s, why in CLAIMS if s not in DOC[doc]]
 for doc, s, why in bad:
@@ -518,7 +542,7 @@ for doc, s, why in CLAIMS:
     per[doc] = per.get(doc, 0) + 1
 for doc in sorted(per):
     print(f"    {doc:<34} {per[doc]:>3} 條")
-ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 22,
+ck("C4 每份 doc 至少 5 條", all(v >= 5 for v in per.values()) and len(per) == 24,
    f"{len(per)} 份 doc，最少 {min(per.values())} 條")
 
 print("\n" + "=" * 78)

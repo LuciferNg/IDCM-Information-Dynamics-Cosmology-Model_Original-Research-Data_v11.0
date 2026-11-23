@@ -1,0 +1,15 @@
+{
+  "script": "21_ternary_fission_test.py",
+  "role": "R25-A 非 α 三分裂檢定",
+  "P_size": 90,
+  "A_max": 92,
+  "n_tern_computable": 81,
+  "n_violations": 0,
+  "violations": [],
+  "n_beta_open_in_P": 0,
+  "n_ternary_alpha_open_all": 1064,
+  "verdict": "三元（非 α）通道對 P 之 90 條零殺傷 ⟹ 殘留⑤-a 封閉；β 延遲粒子無前提",
+  "checks_passed": 3,
+  "checks_total": 3,
+  "failures": []
+}

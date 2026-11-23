@@ -136,9 +136,10 @@
 | `docs/21_r21_own_residuals.md` | R21 自身殘留：**P9 封閉**（`𝒞` 全 `ΔB=0`）＋ **P7 抑制密度檢定陰性** | ✅ |
 | `docs/22_handoff_ledger.md` | R22 **handoff 全帳**（入向 8 ＋ 回覆 note 2；出向 19／live 14） | ✅ |
 | `docs/23_audit_r24.md` | R24 **全鏈審計**（L1 20/20・L2 10/10・L3 32/32）＋ **R23 定義更正**（8→11 通道）與完整傳播 | ✅ |
+| `docs/24_r25_priority.md` | R25 按優先度：⑤ 三分裂封閉／**W1 分層**（0.18σ vs 35.3σ）／W6 provenance 更正 | ✅ |
 | `docs/17_surviving_results.md` | **生存清單**：S1 結構定理 7／S2 經驗事實 9／S3 條件接口 6／S4 撤回 11，附證偽條件與引用規則 | ✅ |
 | `final_result.md` | 結論摘要（RESULT_TEMPLATE 格式） | ✅ |
-| `scripts/01`–`20`（＋`l1/l2/l3/audit` 審計層） | **R23 後重算**（見 `docs/23`）；全 exit 0；`06` = 交叉核 **368 claim／22 份 doc** | ✅ |
+| `scripts/01`–`22`（＋`l1/l2/l3/audit` 審計層） | **R25 後重算**（見 `docs/23`／`docs/24`）；全 exit 0；`06` = 交叉核 **384 claim／24 份 doc** | ✅ |
 | `data/*.log`／`*.json` | 執行記錄 ＋ 數值 | ✅ |
 
 ## 依賴
