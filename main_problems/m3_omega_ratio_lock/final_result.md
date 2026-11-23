@@ -2,7 +2,7 @@
 
 ## 狀態
 
-🟡 **`verdict partial`**（主體閉合、保留一個外部等數），2026-11-03｜version v11.0。
+🟡 **`verdict partial`**（主體閉合；R2 已改性質為 dataset-dependent），2026-11-23｜version v11.0。
 沿革（append-only 於 `01_problem_record`）：🔴 四缺口 → 🟡 G1–G4 → 🟢 P1–P4 → R1/R5/R6 結案。
 
 ## 結論（一句）
@@ -27,15 +27,15 @@
 ## 審計（終態 2026-11-03）
 
 ```
-L1 17/17（兩跑 byte-identical 且 == canonical） ｜ L2 47 keys ＋ 10 恆等式 ｜
-L3 27/27（19/19 檔有 claim） ｜ audit 14/14（FAIL 0、WARN 0；含 2 負控制）
+L1 19/19（兩跑 byte-identical 且 == canonical） ｜ L2 61 keys ＋ 10 恆等式 ｜
+L3 32/32（20/20 檔有 claim） ｜ audit 17/17（FAIL 0、WARN 0；含 2 負控制）
 ※ 2026-11-03：補建 docs/13、docs/18、final_result；docs/03／11 加撤回指針
 階段性收尾 v1（2026-11-03）：開放項全保留；見 `01_problem_record §三十`
 ```
 
 ## 保留開放
 
-- **R2** `Ω_b = 3/60` 對 Planck **+2.33σ**（預註冊；CMB-S4 σ≈0.0005 ⟹ 6.2σ 判別）。統計上限 **3.25σ** 已定（`docs/14`）。
+- **R2** `Ω_b = 3/60`：**baseline 單通道 +2.32σ**；八通道 `−1.07σ…+2.72σ`（跨度 3.79σ）⟹ **dataset-dependent，非結構缺口**（`docs/20`）。統計上限 3.25σ 不變（整數空間）。
 - **R3** `B^(L−1) = κ⁻¹` 只喺 B=3,4（算術重合，非結構律）。
 
 ## 禁區（禁重推）

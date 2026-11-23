@@ -1,9 +1,9 @@
 §A1 canonical log 對稱
-  [PASS] 每支 L1 有 canonical log  18 支 / 缺 []
+  [PASS] 每支 L1 有 canonical log  19 支 / 缺 []
   [PASS] A10 產物時序（log mtime ≥ script mtime）  違例 []
 
 §A2 L1 兩跑 determinism ＋ == canonical
-  [PASS] L1 18/18 兩跑 identical 且 == canonical  []
+  [PASS] L1 19/19 兩跑 identical 且 == canonical  []
   [PASS] A5 無 nan/inf 數值  []
 
 §A3 路徑衛生
@@ -14,7 +14,7 @@
 
 §A6 L3 覆蓋
   [PASS] 每份 doc 有 ≥1 claim  缺 []、額外 ['final_result.md']
-  [PASS] L3 claims 29/29 PASS  
+  [PASS] L3 claims 32/32 PASS  
 
 §A7 撤回前向指針
   [PASS] 被推翻 doc 含撤回指針  缺 []
@@ -32,5 +32,14 @@
 §A12 內部碼命名
   [PASS] 無點號式內部碼（m14.1 型）  []
 
-audit 14/14 PASS ｜ FAIL 0 ｜ WARN 0
-SUMMARY PASS=14 FAIL=0
+§A13 反向覆蓋（docs 4+位小數 → data 池）
+  [PASS] docs 每個 4+ 位小數可追溯至 data  {}
+
+§A14 腳本 → 文檔綁定
+  [PASS] 每支 L1 腳本在文檔／記錄有引用  []
+
+§A15 文檔互引斷鏈
+  [PASS] docs 互引全部可解析（本錄或已標來源之跨記錄）  斷鏈 []；跨記錄 5 條已標來源
+
+audit 17/17 PASS ｜ FAIL 0 ｜ WARN 0
+SUMMARY PASS=17 FAIL=0

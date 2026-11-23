@@ -133,6 +133,54 @@ for p in list(DOCS.glob("*.md")) + [ROOT/"01_problem_record.md", ROOT/"README.md
     for m in re.finditer(r"\bm\d+\.\d+\b", t): bad_code.append(f"{p.name}:{m.group(0)}")
 chk("無點號式內部碼（m14.1 型）", not bad_code, f"{bad_code[:5]}")
 
+
+print("\n§A13 反向覆蓋（docs 4+位小數 → data 池）")
+def _toks(txt):
+    txt = txt.replace("\u2212", "-")
+    return {float(m.group(0)) for m in re.finditer(r"-?\d+\.\d{4,}", txt)}
+_pool = set()
+for f in list(DATA.glob("*.out")) + list(DATA.glob("*.json")) + list(DATA.glob("*.log")):
+    if f.name.startswith("run_l3") or f.name in ("l3_doc_crosscheck.json", "run_18_audit_verify.log"):
+        continue
+    _pool |= _toks(f.read_text(encoding="utf-8", errors="ignore"))
+_untraced = {}
+for d in sorted(DOCS.glob("*.md")):
+    vals = _toks(d.read_text(encoding="utf-8"))
+    bad = [v for v in vals if not any(abs(v-q) <= max(abs(v)*5e-3, 1e-9) for q in _pool)]
+    if bad: _untraced[d.name] = sorted(bad)
+chk("docs 每個 4+ 位小數可追溯至 data", not _untraced, f"{_untraced}")
+
+print("\n§A14 腳本 → 文檔綁定")
+_docs_txt = "\n".join(p.read_text(encoding="utf-8") for p in DOCS.glob("*.md"))
+_docs_txt += "\n" + (ROOT/"01_problem_record.md").read_text(encoding="utf-8")
+_nom = [p.name for p in L1
+        if (f"scripts/{p.stem.split('_')[0]}" not in _docs_txt and p.stem not in _docs_txt)]
+chk("每支 L1 腳本在文檔／記錄有引用", not _nom, f"{_nom}")
+
+print("\n§A15 文檔互引斷鏈")
+_broken, _cross = [], []
+V11 = ROOT.parent.parent          # main_problems 之上
+V10 = V11.parent/"IDCM-v10.0--It-From-Beat"
+for d in sorted(DOCS.glob("*.md")):
+    txt = d.read_text(encoding="utf-8")
+    for m in re.finditer(r"docs/([0-9A-Za-z_\-]+\.md)", txt):
+        name = m.group(1)
+        if (ROOT/"docs"/name).exists(): continue
+        found = None
+        for base in (V11, V10):
+            hit = next(base.rglob(name), None)
+            if hit: found = hit; break
+        if not found:
+            _broken.append(f"{d.name}→{name}"); continue
+        rec = found.parent.parent.name            # e.g. o163_dm_identity / m2_...
+        tok = rec.split("_")[0].upper()           # O163 / M2
+        if tok in txt.upper():
+            _cross.append(f"{d.name}→{tok}/{name}")
+        else:
+            _broken.append(f"{d.name}→{name}（跨記錄但未標來源）")
+chk("docs 互引全部可解析（本錄或已標來源之跨記錄）", not _broken,
+    f"斷鏈 {_broken[:6]}；跨記錄 {len(_cross)} 條已標來源")
+
 tot = P + F
 print(f"\naudit {P}/{tot} PASS ｜ FAIL {F} ｜ WARN 0")
 print("SUMMARY PASS=%d FAIL=%d" % (P, F))

@@ -34,6 +34,7 @@ run 15_round15.out 15_round15_r1_gate_identity.py
 run 16_round16.out 16_round16_a3_scale_invariance.py
 run 17_round17.out 17_round17_pythagoras_audit.py
 run 19_round19.out 19_round19_m16_handoff.py
+run 20_round20.out 20_round20_upstream_reframe.py
 
 if [ "$DO" = "--run" ]; then
   echo "== L2"; $PY scripts/l2_independent_verify.py > data/run_l2_independent_verify.log 2>&1 || exit 1

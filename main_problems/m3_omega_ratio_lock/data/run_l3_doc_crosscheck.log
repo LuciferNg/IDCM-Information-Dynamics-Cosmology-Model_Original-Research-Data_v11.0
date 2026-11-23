@@ -27,7 +27,10 @@
   [PASS] 18_round18_audit_verify.md                   整數三分 1711              L2=1711  最近=1711.0  dev=0.00e+00
   [PASS] 19_round19_m16_handoff.md                    k = 1.0142（定義式）        L2=1.014198782961460446247464503042596348884  最近=1.0142  dev=1.20e-06
   [PASS] 19_round19_m16_handoff.md                    σ_k 傳播 = 0.0060        L2=0.006  最近=0.006  dev=0.00e+00
+  [PASS] 20_round20_omega_b_reframe.md                χ² 三通道 = 3.25          L2=3.247232010619403764726126314366307974999  最近=3.25  dev=8.52e-04
+  [PASS] 20_round20_omega_b_reframe.md                跨度 3.79σ               L2=3.788689162912878787878787878787878787876  最近=3.79  dev=3.46e-04
+  [PASS] 20_round20_omega_b_reframe.md                z 下限 −1.07σ            L2=-1.067845289958333333333333333333333333334  最近=-1.07  dev=2.02e-03
 
-  docs 在碟 = 19 ；有 claim = 20 ；缺 claim = []
+  docs 在碟 = 20 ；有 claim = 21 ；缺 claim = []
 
-L3 29/29 ；all_pass=True
+L3 32/32 ；all_pass=True

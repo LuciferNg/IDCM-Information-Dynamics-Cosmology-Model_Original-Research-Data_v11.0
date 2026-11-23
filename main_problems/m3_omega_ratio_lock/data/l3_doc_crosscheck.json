@@ -260,6 +260,33 @@
    "nearest": 0.006,
    "dev": 0.0,
    "pass": true
+  },
+  {
+   "doc": "20_round20_omega_b_reframe.md",
+   "label": "χ² 三通道 = 3.25",
+   "key": "chi2_tri",
+   "expected": "3.247232010619403764726126314366307974999",
+   "nearest": 3.25,
+   "dev": 0.0008524150327244686,
+   "pass": true
+  },
+  {
+   "doc": "20_round20_omega_b_reframe.md",
+   "label": "跨度 3.79σ",
+   "key": "z_chan_span",
+   "expected": "3.788689162912878787878787878787878787876",
+   "nearest": 3.79,
+   "dev": 0.0003459869708902905,
+   "pass": true
+  },
+  {
+   "doc": "20_round20_omega_b_reframe.md",
+   "label": "z 下限 −1.07σ",
+   "key": "z_chan_min",
+   "expected": "-1.067845289958333333333333333333333333334",
+   "nearest": -1.07,
+   "dev": 0.002017811064888305,
+   "pass": true
   }
  ],
  "per_doc": {
@@ -342,10 +369,14 @@
   "19_round19_m16_handoff.md": [
    2,
    2
+  ],
+  "20_round20_omega_b_reframe.md": [
+   3,
+   3
   ]
  },
  "pass": true,
- "docs_on_disk": 19,
- "docs_with_claim": 20,
+ "docs_on_disk": 20,
+ "docs_with_claim": 21,
  "docs_missing_claim": []
 }

@@ -10,7 +10,7 @@
 Ω_Λ = 41/60（⟨W⟩²/Σγ）、Ω_m = 19/60、Ω_dm = 16/60（B^ℓ/(N_d+B^ℓ)，ℓ=2）、Ω_b = 3/60
 60 = Σγ/(3/2)   零自由度：兩錨（⟨W⟩²=61.5、16=B^ℓ）⟹ 三分量
 ```
-開放項：**R2** `Ω_b` +2.33σ（等 CMB-S4）、**R3** 算術註記、**R4** `⊕` 三分同構（已判死）。
+開放項：**R2** `Ω_b` —— baseline +2.32σ、八通道 −1.07σ…+2.72σ（**dataset-dependent**，非結構缺口）、**R3** 算術註記、**R4** `⊕` 三分同構（已判死）。
 詳見 `01_problem_record.md §三十`。
 
 ## 檔案
@@ -55,6 +55,8 @@
 | `scripts/17_round17_pythagoras_audit.py` | 8/8 PASS | — |
 | `docs/19_round19_m16_handoff.md` | 第十九輪 M16 handoff 處理：算術引理接受、階-60 唯一性未證、MF2「由 Ω_b 測定」判不成立 | 裁定 |
 | `scripts/19_round19_m16_handoff.py` | 9/9 PASS | — |
+| `docs/20_round20_omega_b_reframe.md` | 第二十輪 上游 O163 影響：八通道重算、R2 措辭改為 dataset-dependent；上游 χ²=9.63 不可重現 | 更正 |
+| `scripts/20_round20_upstream_reframe.py` | 7/7 PASS | — |
 | `docs/18_round18_audit_verify.md` | 第十八輪 **Audit-Verify**（首建 L2/L3/audit/driver）：L1 17/17、L2 45 keys、L3 27/27、audit 14/14 | 審計 |
 | `scripts/18_audit_verify.py` | audit 14/14（含 2 負控制）| — |
 | `scripts/l2_independent_verify.py` | 45 keys ＋ 10 identities | — |

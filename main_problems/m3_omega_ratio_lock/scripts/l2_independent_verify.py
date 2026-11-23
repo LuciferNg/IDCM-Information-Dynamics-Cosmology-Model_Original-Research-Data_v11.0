@@ -131,6 +131,23 @@ put("m16_k", (mp.mpf(vis)/tot)/mp.mpf(str(INPUTS["omega_b"])))
 put("m16_sig_k_prop", mp.mpf(str(INPUTS["sig_b"]))/(mp.mpf(1)/20))
 put("m16_z_prop", ((mp.mpf(vis)/tot)/mp.mpf(str(INPUTS["omega_b"])) - 1) /
                   (mp.mpf(str(INPUTS["sig_b"]))/(mp.mpf(1)/20)))
+put("lattice_1_60", mp.mpf(1)/tot)          # Ω 槽間距（docs/14）
+put("cum_share_21_60", mp.mpf(cum[2])/tot)  # 累積讀法 21/60（docs/15）
+# ── 上游 O163 八通道（獨立重算）────────────────────────────────
+_CH = [("0.02212","0.00022"),("0.02249","0.00025"),("0.02400","0.00120"),
+       ("0.02236","0.00015"),("0.02237","0.00015"),("0.02242","0.00014"),
+       ("0.02260","0.00010"),("0.02218","0.00055")]
+_wb = mp.mpf(vis)/tot*mp.mpf(str(INPUTS["h_anchor"]))**2
+_z = [(  _wb - mp.mpf(o))/mp.mpf(sg) for o, sg in _CH]
+put("z_chan_min", min(_z)); put("z_chan_max", max(_z))
+put("z_chan_span", max(_z)-min(_z))
+put("n_chan_ok15", sum(1 for x in _z if abs(x) < mp.mpf("1.5")))
+_tri = _CH[:3]
+_w = [1/mp.mpf(sg)**2 for _, sg in _tri]
+_mean = sum(mp.mpf(o)*wi for (o, _), wi in zip(_tri, _w))/sum(_w)
+put("chi2_tri", sum(((mp.mpf(o)-_mean)/mp.mpf(sg))**2 for o, sg in _tri))
+put("mean_tri", _mean)
+put("sig_tri", 1/mp.sqrt(sum(_w)))
 put("dict_admissible", sum(1 for t in triples if chi2(t) <= chi2_obs and set(t) <= D))
 
 # ── IDENTITIES（代數恆等，差 < 1e-30）────────────────────────
@@ -157,7 +174,13 @@ with open("data/l2_independent_verify.json", "w", encoding="utf-8") as f:
 
 np_ = 0
 for k, v in _out.items():
-    print(f"  [key] {k} = {v}"); np_ += 1
+    if isinstance(v, mp.mpf):
+        print(f"  [key] {k} = {mp.nstr(v, 10, strip_zeros=False)}")
+    elif isinstance(v, (int, str, list, tuple, dict)):
+        print(f"  [key] {k} = {v}")
+    else:
+        print(f"  [key] {k} = {float(v):.10g}  ({v})")
+    np_ += 1
 for k, v in _ident.items():
     st = "PASS" if v < mp.mpf("1e-30") else "FAIL"
     print(f"  [{st}] ident {k}  |diff| = {mp.nstr(v, 5)}")

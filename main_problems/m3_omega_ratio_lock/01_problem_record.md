@@ -99,6 +99,7 @@ source:  調律者2026-10-15: 喺 v11 開新 M——「脫同步態Ω_b為什麼
 | 19 | 2026-11-03 | 第十七輪 畢氏和積審計（8/8）：非一般律、方向倒轉、零指派力 ⟹ 禁區 | scripts/17, data/17, docs/17 |
 | 20 | 2026-11-03 | 第十八輪 **Audit-Verify**（首建 L2/L3/audit/driver）：L1 17/17、L2 45 keys、L3 27/27、audit 14/14；修 D1–D3 | scripts/18, data/18, docs/18_round18_audit_verify.md |
 | 21 | 2026-11-22 | 第十九輪 **M16 handoff 處理**：算術引理接受、階-60 唯一性標未證、MF2「由 Ω_b 測定」判不成立（k 係定義式）；9/9 | scripts/19, data/19, docs/19_round19_m16_handoff.md |
+| 22 | 2026-11-23 | 第二十輪 **八點交付**：全鏈腳本落碟對照 ＋ audit 17/17（新增 A13–A15）＋ M2 回執 ACK ＋ O163 上游更正（R2 措辭） | scripts/20, data/20, docs/20_round20_omega_b_reframe.md |
 
 ## 七、相關文件
 
@@ -1121,3 +1122,116 @@ R2（Ω_b +2.33σ） —— 維持；M16 之 k 只係其重寫
 ### 31.4 回執
 
 已 register `handoff → M16`（2026-11-22），內容：A/B 接受、C 標未證、D/E 判不成立並附精確數、F 歸因不適用。
+
+---
+
+## 三十二、第二十輪：八點指令交付（全鏈審計 ＋ handoff ＋ 上游更正 ＋ 四件套）
+
+> 日期 2026-11-23｜用戶八點指令（腳本落碟／audit-verify／漂移斷鏈／handoff 檢查／處理回送／重算影響／四件套／殘留盤點）
+
+### 32.1 ① 全推導鏈腳本落碟 ＋ 過程結果入文檔
+
+| # | 腳本 | canonical log | 文檔 |
+|:-:|:--|:--|:--|
+| 1 | `01_round1_spectral_identities.py` | `01_round1.out` | `01_round1_partition_null.md` |
+| 2 | `02_round2_g3_assignment.py` | `02_round2.out` | `02_round2_g3_assignment.md` |
+| 3 | `03_round3_r3_operatorization.py` | `03_round3.out` | `03_round3_r3_operatorization.md` |
+| 4 | `04_round4_oplus_legitimacy.py` | `04_round4.out` | `04_round4_oplus_legitimacy.md` |
+| 5 | `05_round5_chain_length_origin.py` | `05_round5.out` | `05_round5_chain_length_origin.md` |
+| 6 | `06_round6_f2_onedim.py` | `06_round6.out` | `06_round6_f2_onedim.md` |
+| 7 | `07_round7_single_component.py` | `07_round7.out` | `07_round7_single_component.md` |
+| 8 | `08_round8_correction_k.py` | `08_round8.out` | `08_round8_correction_k.md` |
+| 9 | `09_round9_gamma1_identity.py` | `09_round9.out` | `09_round9_gamma1_identity.md` |
+| 10 | `10_round10_omega_b_fork.py` | `10_round10.out` | `10_round10_omega_b_fork.md` |
+| 11 | `11_round11_g3_fork.py` | `11_round11.out` | `11_round11_g3_fork.md` |
+| 12 | `12_round12_g3a_p4.py` | `12_round12.out` | `12_round12_g3a_p4.md` |
+| 13 | `13_round13_index_audit.py` | `13_round13.out` | `13_round13_index_audit.md` |
+| 14 | `14_round14_r5_mc_null.py` | `14_round14.out` | `14_round14_r5_mc_null.md` |
+| 15 | `15_round15_r1_gate_identity.py` | `15_round15.out` | `15_round15_r1_gate_identity.md` |
+| 16 | `16_round16_a3_scale_invariance.py` | `16_round16.out` | `16_round16_a3_dimension_capacity.md` |
+| 17 | `17_round17_pythagoras_audit.py` | `17_round17.out` | `17_round17_pythagoras_audit.md` |
+| 18 | `19_round19_m16_handoff.py` | `19_round19.out` | `19_round19_m16_handoff.md` |
+| 19 | `20_round20_upstream_reframe.py` | `20_round20.out` | `20_round20_omega_b_reframe.md` |
+| 19 | `18_audit_verify.py` | data/run_18_audit_verify.log | docs/18 |
+| 20 | `l2_independent_verify.py` | data/run_l2_independent_verify.log | —（供 L3） |
+| 21 | `l3_doc_crosscheck.py` | data/run_l3_doc_crosscheck.log | —（審計器） |
+| 22 | `run_chain.sh` | —（driver） | — |
+
+```
+核對結果：18 支 L1 腳本全在 scripts/；18 個 canonical log 全在 data/；
+          每支腳本在文檔／記錄有引用（A14）；無孤兒、無 inline 幽靈（A3 路徑衛生 0 命中）
+新增基建：L2（61 keys）、L3（32 claims）、audit（17 項）、driver（20 支）
+```
+
+### 32.2 ② audit-verify 全鏈結果
+
+```
+L1    19/19（18 L1 ＋ l2/l3 另計；每支兩跑 byte-identical 且 == canonical）
+L2    61 keys ＋ 10 identities（零 import L1、零讀 docs）
+L3    32/32（20/20 檔有 claim）
+audit 17/17 PASS ｜ FAIL 0 ｜ WARN 0
+```
+
+**本輪新增審計項**（原本 14 → 17）：
+```
+A13 反向覆蓋：docs 每個 4+ 位小數必須可追溯至 data 池（0.5%）→ 0 未追溯
+A14 腳本→文檔綁定：每支 L1 在文檔／記錄有引用 → 0 缺
+A15 文檔互引：本錄或已標來源之跨記錄（斷鏈 0；跨記錄 3 條已標 O163／O220／M2）
+```
+
+### 32.3 ③ 數字漂移與斷鏈
+
+```
+docs 4+ 位小數未追溯 = 0（A13）
+文檔互引斷鏈 = 0（A15；3 條跨記錄已標來源）
+腳本↔log↔doc 三向對稱 = 通過（A1／A14）
+★ 上游發現：O163 docs/17 §2 之 χ² = 9.63 不可重現（本 M 重算 3.25，p ≈ 0.20）
+   ⟹ 下游受影響者 = M3 §三十 R2 措辭（已更正，見 32.5）；M3 數值無變
+```
+
+### 32.4 ④⑤ Handoff 帳與處理
+
+| 方向 | 數 | 明細 |
+|:--|:--:|:--|
+| 入向 | **11** | M2 ×2（10-24 ＋ **11-22 回執**）、M12 ×2（10-29 ＋ 11-03 追問→11-21 撤回）、M15 ×3、M16 ×2、`merged` 1 |
+| 出向 | **4** | M15／M2／M12（11-03）＋ M16（11-22）|
+
+**本輪處理**：`M2 11-22 回執`（`docs/03` 判詞）—— M2 互核 P4 橋三方一致、**無異議、無行動需求**
+⟹ 本 M **ACK 回執**（register handoff → M2），不改任何數值。
+`M12 11-03 追問` 已由 M12 於 11-21 撤回（併發冗餘）⟹ 無需回覆。
+
+### 32.5 ⑥ Handoff 後影響：R2 措辭更正（唯一受影響下游）
+
+由 O163 上游更新觸發（非 handoff）：
+
+| 項 | 舊 | 新 |
+|:--|:--|:--|
+| 張力 | 「對 Planck +2.33σ」| 「baseline 單通道 +2.32σ；八通道 −1.07σ…+2.72σ（跨度 3.79σ）」|
+| 性質 | 結構預言待判 | **dataset-dependent**，非結構缺口 |
+| 行動 | 等 CMB-S4 | **無需專等**；新通道只更新通道值 |
+| 統計上限 | 3.25σ | 不變（講整數空間大小）|
+
+**數值不變**：`Ω_b = 3/60`、`ω_b = 0.0227186`、其餘三分量、`ℓ = 2`。
+影響範圍：`§三十 30.3`、`final_result`、`README`（三處已改）；`docs/20` 為更正依據。
+
+### 32.6 ⑦ 四件套同步
+
+| 檔 | 狀態行 | 本輪更新 |
+|:--|:--|:--|
+| `01_problem_record.md` | 🟡 階段性收尾 ＋ 全鏈審計 | §三十二 ＋ 時序 #22 |
+| `SESSION_START.md` | 快照（append-only）| §二十五（本輪）|
+| `README.md` | 🟡 階段性收尾 v1 | R2 措辭 ＋ docs/20 行 |
+| `final_result.md` | 🟡 `verdict partial` | R2 措辭 ＋ 審計四數（19／61／32／17）|
+
+### 32.7 ⑧ 殘留與新開放（全數保留，帶觸發器）
+
+| # | 項 | 狀態 | 類型 | 觸發器 |
+|:-:|:--|:--|:--|:--|
+| **R2** | `Ω_b = 3/60` 通道判詞 | 🟡 **已改性質**（dataset-dependent；baseline +2.32σ）| 觀測 | 新通道／更新 Planck likelihood → 只更新通道值 |
+| **R3** | `B^(L−1) = κ⁻¹` 只 B=3,4 | 🟡 算術重合註記 | 記錄 | — |
+| **R4** | `⊕` 三分同構 | 🔴 判死（2:16:42 ≠ 3:16:41）| 否定 | — |
+| **R7** | O163 `χ²=9.63` 不可重現 | 🟡 **新**（v10 側缺陷；版本隔離 ⟹ 只記錄）| 外部 | v10 側自行審計／更新 docs/17 |
+| **R8** | M16「階 60 之 13 群唯一」 | 🟡 **新**（外部未證）| 外部 | M16 提供小群庫枚舉或 GAP 輸出 |
+| — | 5σ 判準對整數閉合不可達 | ⚫ 方法層已定 | 方法 | 空間 ≳ 3.5e6 才可能 |
+
+**無新增本 M 內部開放問題**：本輪全部發現屬上游／外部，或已由 §三十二 收口。

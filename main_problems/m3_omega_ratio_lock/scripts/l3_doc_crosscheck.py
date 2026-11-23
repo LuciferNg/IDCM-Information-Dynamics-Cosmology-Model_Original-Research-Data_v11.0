@@ -78,6 +78,9 @@ CLAIMS = [
     ("18_round18_audit_verify.md",   "整數三分 1711",       "n_triples", None, 1e-9, "num"),
     ("19_round19_m16_handoff.md",    "k = 1.0142（定義式）",  "m16_k",     "1.0142", 5e-4, "num"),
     ("19_round19_m16_handoff.md",    "σ_k 傳播 = 0.0060",    "m16_sig_k_prop", "0.0060", 5e-3, "num"),
+    ("20_round20_omega_b_reframe.md","χ² 三通道 = 3.25",      "chi2_tri",  "3.25", 5e-3, "num"),
+    ("20_round20_omega_b_reframe.md","跨度 3.79σ",            "z_chan_span","3.79", 5e-3, "num"),
+    ("20_round20_omega_b_reframe.md","z 下限 −1.07σ",         "z_chan_min", "−1.07", 5e-3, "num"),
 ]
 
 report = {"claims": [], "per_doc": {}, "pass": True}

@@ -1,44 +1,44 @@
-  [key] gam_max = 4.0
-  [key] sig_gamma = 90.0
-  [key] gamma_2 = 0.02035711623813453524781592444656242524696
-  [key] gamma_3 = 0.04570626805768096102656290132001788261131
-  [key] sig_odd = 44.0
-  [key] sig_even = 46.0
-  [key] kappa = 0.0625
+  [key] gam_max = 4.000000000
+  [key] sig_gamma = 90.00000000
+  [key] gamma_2 = 0.02035711624
+  [key] gamma_3 = 0.04570626806
+  [key] sig_odd = 44.00000000
+  [key] sig_even = 46.00000000
+  [key] kappa = 0.06250000000
   [key] cum = [1.0, 5.0, 21.0, 85.0, 341.0, 1365.0]
   [key] ell = 2
-  [key] cum2 = 21.0
+  [key] cum2 = 21.00000000
   [key] rank_0_43 = 3
   [key] rank_phys = 2
   [key] vis = 3
   [key] dm = 16
   [key] lam = 41
   [key] total = 60
-  [key] omegaL = 41/60
-  [key] omega_m = 19/60
-  [key] omega_b = 1/20
-  [key] omega_dm = 4/15
-  [key] E_sync = 123/2
-  [key] E_proj = 57/2
-  [key] ratio_41_19 = 41/19
-  [key] quantum = 3/2
-  [key] sixty_from_sig = 60
-  [key] z_L = -0.1872146118721461187214611872146118721455
-  [key] z_m = 0.1872146118721461187214611872146118721463
-  [key] z_b = 2.333333333333333333333333333333333333334
-  [key] z_dm = 0.4333333333333333333333333333333333333343
-  [key] omega_b_h2 = 0.02271858565205
-  [key] dev_1_45_pct = 2.233635434224999999999999999999999999998
-  [key] h_for_1_45 = 0.6666666666666666666666666666666666666667
-  [key] z_l1 = -36.22733333333333333333333333333333333333
-  [key] z_l2 = 0.4393333333333333333333333333333333333343
-  [key] z_l3 = 65.62451851851851851851851851851851851852
-  [key] z_l4 = 117.7726666666666666666666666666666666667
+  [key] omegaL = 0.6833333333  (41/60)
+  [key] omega_m = 0.3166666667  (19/60)
+  [key] omega_b = 0.05  (1/20)
+  [key] omega_dm = 0.2666666667  (4/15)
+  [key] E_sync = 61.5  (123/2)
+  [key] E_proj = 28.5  (57/2)
+  [key] ratio_41_19 = 2.157894737  (41/19)
+  [key] quantum = 1.5  (3/2)
+  [key] sixty_from_sig = 60  (60)
+  [key] z_L = -0.1872146119
+  [key] z_m = 0.1872146119
+  [key] z_b = 2.333333333
+  [key] z_dm = 0.4333333333
+  [key] omega_b_h2 = 0.02271858565
+  [key] dev_1_45_pct = 2.233635434
+  [key] h_for_1_45 = 0.6666666667
+  [key] z_l1 = -36.22733333
+  [key] z_l2 = 0.4393333333
+  [key] z_l3 = 65.62451852
+  [key] z_l4 = 117.7726667
   [key] n_triples = 1711
-  [key] chi2_obs = 5.6672715331207515
-  [key] chi2_3_15_42 = 18.247201059194026
-  [key] p1_value_space = 0.0005844535359438924
-  [key] z_p1 = 3.246360528119658
+  [key] chi2_obs = 5.667271533  (5.6672715331207515)
+  [key] chi2_3_15_42 = 18.24720106  (18.247201059194026)
+  [key] p1_value_space = 0.0005844535359  (0.0005844535359438924)
+  [key] z_p1 = 3.246360528  (3.246360528119658)
   [key] pyth_lhs_5_12_13 = 462
   [key] pyth_rhs_5_12_13 = 780
   [key] prod_345 = 60
@@ -46,9 +46,18 @@
   [key] dict_size = 24
   [key] m16_arith_sets = 7
   [key] m16_arith_unique_set = (3, 4, 5)
-  [key] m16_k = 1.014198782961460446247464503042596348884
-  [key] m16_sig_k_prop = 0.006
-  [key] m16_z_prop = 2.366463826910074374577417173766058147397
+  [key] m16_k = 1.014198783
+  [key] m16_sig_k_prop = 0.006000000000
+  [key] m16_z_prop = 2.366463827
+  [key] lattice_1_60 = 0.01666666667
+  [key] cum_share_21_60 = 0.3500000000
+  [key] z_chan_min = -1.067845290
+  [key] z_chan_max = 2.720843873
+  [key] z_chan_span = 3.788689163
+  [key] n_chan_ok15 = 4
+  [key] chi2_tri = 3.247232011
+  [key] mean_tri = 0.02231342629
+  [key] sig_tri = 0.0001636146295
   [key] dict_admissible = 1
   [PASS] ident sig_gamma == 2M+2  |diff| = 0.0
   [PASS] ident sig_odd == M  |diff| = 0.0
@@ -61,4 +70,4 @@
   [PASS] ident E_sync/41 == E_proj/19  |diff| = 0.0
   [PASS] ident total == N_d + B^ell  |diff| = 0
 
-keys 52 ; identities 10 ; all_pass True
+keys 61 ; identities 10 ; all_pass True
