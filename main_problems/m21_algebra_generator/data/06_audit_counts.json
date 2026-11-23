@@ -41,9 +41,24 @@
       "detail": "22/0"
     },
     {
-      "tag": "TOT  合計水位（131 PASS / 4 FAIL，scripts 00–05 ＋ 07–08）",
+      "tag": "A10  log(8P/0F) ≡ JSON(n_pass=8,n_fail=0)",
       "pass": true,
-      "detail": "131/4"
+      "detail": "8/0"
+    },
+    {
+      "tag": "A11  log(3P/1F) ≡ JSON(n_pass=3,n_fail=1)",
+      "pass": true,
+      "detail": "3/1"
+    },
+    {
+      "tag": "A12  log(4P/1F) ≡ JSON(n_pass=4,n_fail=1)",
+      "pass": true,
+      "detail": "4/1"
+    },
+    {
+      "tag": "TOT  合計水位（146 PASS / 6 FAIL，scripts 00–05 ＋ 07–08 ＋ 10–12）",
+      "pass": true,
+      "detail": "146/6"
     },
     {
       "tag": "B00  重跑 stdout byte-identical",
@@ -84,13 +99,28 @@
       "tag": "B08  重跑 stdout byte-identical",
       "pass": true,
       "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B10  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B11  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B12  重跑 stdout byte-identical",
+      "pass": true,
+      "detail": "rc=1, diff=0"
     }
   ],
-  "n_pass": 17,
+  "n_pass": 23,
   "n_fail": 0,
-  "n_total": 17,
+  "n_total": 23,
   "watermark": {
-    "pass": 131,
-    "fail": 4
+    "pass": 146,
+    "fail": 6
   }
 }

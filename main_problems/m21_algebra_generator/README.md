@@ -4,8 +4,9 @@
 
 🟡 **partial — 部分閉合**（2026-11-20；第一輪 R1–R5 ＋ 第二輪 M22 入站裁定）｜本 O 自身殘項 **4**
 （`h11 = 36` 維數缺口、h11/h21 算子身份、`N₂ = B²` 身份、`BR1` 只餘 count-level 約定）
-📎 交付：`scripts/00–09`（10 支）｜`docs/00–07`（8 份）｜`data/` 10 JSON ＋ 10 log｜`final_result.md`
-📎 第三輪 audit-verify：`scripts/09` **59 checks 全綠**（A 檔案／B 重跑／C 獨立重算 19／D 文檔 7×100%／E 斷鏈 0／F 表格／G 自查）
+📎 交付：`scripts/00–12`（13 支）｜`docs/00–09`（10 份）｜`data/` 13 JSON ＋ 13 log｜`final_result.md`
+📎 第三輪 audit-verify：`scripts/09` **64 checks 全綠**（A 檔案／B 重跑／C 獨立重算 19／D 文檔 10×100%／E 斷鏈 0／F 表格／G 自查）
+📎 第四輪（`§十四 D` 三入口）：`DA1 🔴 vacuous`｜`DA2 🔴 真缺口（候選 4 條）`｜`DA3 🔴 粗標籤` ⟹ **D 段清空**
 
 ## 一句話
 
@@ -51,8 +52,9 @@
 ```
 第一輪（00–05）   87 PASS / 4 FAIL
 第二輪（07–08）  ＋44 PASS
-第三輪  09 全鏈審計 57/57 PASS
-全鏈              131 PASS / 4 FAIL（4 FAIL 全部係被證偽之假設本身）
+第四輪（10–12）  ＋15 PASS / ＋2 FAIL（DA1 8/8；DA2 3/4；DA3 4/5，FAIL = E2a／E3a 結論）
+第三輪  09 全鏈審計 64/64 PASS
+全鏈              146 PASS / 6 FAIL（6 FAIL 全部係被證偽之假設本身）
 ```
 
 ## 缺口數字（不變）
@@ -76,9 +78,11 @@ gap = 38.612274 − 2.894296 = 35.717977 dex = 5.223686e35×   （「缺口」�
 | `docs/04_derivation_graph.md` | R4／T4：互導圖 `CG1/GR1` |
 | `docs/05_registry_and_dedup.md` | P5／Q3：查重 ＋ 雙態登記 ＋ 總判詞 |
 | `docs/06_handoff_m22_adjudication.md` | M22 入站裁定：`BR1` 對象層判死（三重）＋ 維數層殘留 |
-| `docs/07_audit_verify_round.md` | 全鏈 audit-verify：腳本落碟對帳、重跑、獨立重算、文檔交叉核、斷鏈、4 項漂移修正 |
+| `docs/07_audit_verify_round.md` | 全鏈 audit-verify：腳本落碟對帳、重跑、獨立重算、文檔交叉核、斷鏈、5 項漂移修正 |
+| `docs/08_preregistration_round4.md` | 第四輪判準凍結（DA1／DA2／DA3，E1a–E3c） |
+| `docs/09_round4_DA_results.md` | 第四輪結果：三入口全封（vacuous／真缺口／粗標籤）＋ §十四 更新 |
 | `final_result.md` | 最終摘要 |
-| `scripts/00–09` | 重現閘 → R1–R4 → 登記查重 → 自查水位 → M22 驗收 → BR1 裁定 → **全鏈審計** |
+| `scripts/00–12` | 重現閘 → R1–R4 → 登記查重 → 自查水位 → M22 驗收 → BR1 裁定 → 全鏈審計 → DA1／DA2／DA3 |
 
 ## 依賴
 

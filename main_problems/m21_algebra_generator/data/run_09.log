@@ -3,11 +3,11 @@ M21 scripts/09 — 全鏈 audit-verify
 ==============================================================================
 
 ── A 檔案與編號完整性 ──
-  scripts（10）：['00_reproduction_gate.py', '01_a5_census_identity.py', '02_cy3_pool_gate.py', '03_two_factor_audit.py', '04_derivation_graph.py', '05_registry_and_dedup.py', '06_audit_counts.py', '07_m22_intake.py', '08_br1_mechanism_verdict.py', '09_full_audit.py']
-  docs（8）：['00_preregistration.md', '01_a5_census_identity.md', '02_cy3_route_and_pool_gate.md', '03_two_factor_audit.md', '04_derivation_graph.md', '05_registry_and_dedup.md', '06_handoff_m22_adjudication.md', '07_audit_verify_round.md']
-[PASS] A1  scripts 編號由 00 連續無缺 :: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[PASS] A2  docs 編號由 00 連續無缺 :: [0, 1, 2, 3, 4, 5, 6, 7]
-[PASS] A3  每支 script 有 data/run_NN.log（除審計自身 09） :: logs = 10 / scripts = 10
+  scripts（13）：['00_reproduction_gate.py', '01_a5_census_identity.py', '02_cy3_pool_gate.py', '03_two_factor_audit.py', '04_derivation_graph.py', '05_registry_and_dedup.py', '06_audit_counts.py', '07_m22_intake.py', '08_br1_mechanism_verdict.py', '09_full_audit.py', '10_da1_22_identity.py', '11_da2_h11_canonical.py', '12_da3_coarse_label.py']
+  docs（10）：['00_preregistration.md', '01_a5_census_identity.md', '02_cy3_route_and_pool_gate.md', '03_two_factor_audit.md', '04_derivation_graph.md', '05_registry_and_dedup.md', '06_handoff_m22_adjudication.md', '07_audit_verify_round.md', '08_preregistration_round4.md', '09_round4_DA_results.md']
+[PASS] A1  scripts 編號由 00 連續無缺 :: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+[PASS] A2  docs 編號由 00 連續無缺 :: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[PASS] A3  每支 script 有 data/run_NN.log（除審計自身 09） :: logs = 13 / scripts = 13
 [PASS] A3b  缺 log 者 ⊆ {09}（審計自身；首跑前後皆合法） :: []
 [PASS] A4  四件套存在：01_problem_record.md :: 
 [PASS] A4  四件套存在：SESSION_START.md :: 
@@ -27,6 +27,9 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] B06  byte-identical ＋ rc=0 :: rc=0, diff=0
 [PASS] B07  byte-identical ＋ rc=0 :: rc=0, diff=0
 [PASS] B08  byte-identical ＋ rc=0 :: rc=0, diff=0
+[PASS] B10  byte-identical ＋ rc=0 :: rc=0, diff=0
+[PASS] B11  byte-identical ＋ rc=1 :: rc=1, diff=0
+[PASS] B12  byte-identical ＋ rc=1 :: rc=1, diff=0
 
 ── C 獨立重算 headline ──
 [PASS] C1  γ_n + γ_{44−n} = 4（n=1..43，dec prec 60）違例 0 :: violations = 0
@@ -58,6 +61,8 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] D  05_registry_and_dedup.md claim 命中率 2/2 :: 2/2
 [PASS] D  06_handoff_m22_adjudication.md claim 命中率 5/5 :: 5/5
 [PASS] D  07_audit_verify_round.md claim 命中率 4/4 :: 4/4
+[PASS] D  08_preregistration_round4.md claim 命中率 5/5 :: 5/5
+[PASS] D  09_round4_DA_results.md claim 命中率 4/4 :: 4/4
 [PASS] D-global1 38.612274 出現且無 38.61227 變體漂移 :: count = 5
 [PASS] D-global2 缺口 35.717977 出現 :: count = 9
 [PASS] D-global3 舊值 5.222686 只存於原文三處或更正語境；更正後值 ≥ 2 次 :: 5.223686 = 8, 未標語境 = []
@@ -76,10 +81,10 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] F1  未登記之表格缺陷 = 0 :: []
 
 ── G 自查水位 ──
-  本檔 checks = 57（PASS 57 / FAIL 0）
-[PASS] G1  本檔 check 數 ≥ 40（覆蓋 A–F 六段） :: 57
+  本檔 checks = 62（PASS 62 / FAIL 0）
+[PASS] G1  本檔 check 數 ≥ 40（覆蓋 A–F 六段） :: 62
 [PASS] G2  段別覆蓋齊全（A/B/C/D/E/F） :: 見段標題
 
 ==============================================================================
-scripts/09 結果：59/59 PASS ｜ 0 FAIL
+scripts/09 結果：64/64 PASS ｜ 0 FAIL
 ==============================================================================

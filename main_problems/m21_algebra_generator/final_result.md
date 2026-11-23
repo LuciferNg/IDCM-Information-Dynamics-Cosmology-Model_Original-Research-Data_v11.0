@@ -61,7 +61,8 @@ scripts/04  R4/T4   9/11 PASS（2 FAIL = 預期結論：GR1-c/d 不閉）
 scripts/05  P5/Q3  18/18 PASS
 scripts/06  自查     17/17 PASS（水位機械重算 + 決定性重跑；第二輪由 13 擴至 17）
 scripts/07  M22 驗收 22/22 ｜ scripts/08  BR1 裁定 22/22（第二輪）
-scripts/09  全鏈審計 59/59 PASS（A 檔案／B 重跑／C 獨立重算／D 文檔／E 斷鏈／F 表格／G 自查）
+scripts/09  全鏈審計 64/64 PASS（A 檔案／B 重跑／C 獨立重算／D 文檔／E 斷鏈／F 表格／G 自查）
+scripts/06  水位自查 23/23 PASS（全鏈 146 PASS / 6 FAIL）
 第一輪 87 (00–05) ＋ 第二輪 44 (07–08) ⟹ **131 PASS ／ 4 FAIL**（4 FAIL 全部係被證偽之假設本身）
 ```
 
@@ -132,9 +133,18 @@ Q4 Ω 3:16:41 不可 A₅-等變落 60 格 ✅（|R| = 23 不含 ∅；M22 報 2
 ## 交付層
 
 ```
-scripts/ 00–09（10 支）｜data/ 10 JSON ＋ 10 log｜docs/ 00–07（8 份）｜本檔｜README／01_problem_record／SESSION_START 同步
+scripts/ 00–12（13 支）｜data/ 13 JSON ＋ 13 log｜docs/ 00–09（10 份）｜本檔｜README／01_problem_record／SESSION_START 同步
 register：progress M21 verdict=partial（三輪）＋ notes → M15／M6／M8 ＋ handoff → M22（回執）＋ mirror
 審計：scripts/09 全鏈 59/59 PASS（A 檔案／B 重跑／C 獨立重算 19／D 文檔 8×100%／E 斷鏈 0／F 表格／G 自查）
+```
+
+## 第四輪（2026-11-20）：`§十四 D` 三入口全封（負）
+
+```
+DA1  🔴 vacuous   N_d = 2·Σ dim Λ² 係恆等（sympy 符號 ＋ 10^4 隨機）；鏈側 22 全為 44／88 之函數
+DA2  🔴 真缺口    預登錄池 𝔇（94）內 36 命中 4 條、分屬 2 個恆等族 ⟹ 零判別力（候選入檔 DF1）
+DA3  🔴 粗標籤    φ(N_site)=40 有 6 解（82/88/100/110/132/150）；兩側 20 屬獨立計數（無機制）
+⟹ §十四 D 清空；BF6–BF8 立；殘項仍 4（AB1–AB4），全部屬「需新算子／需上游」
 ```
 
 ## 第三輪（2026-11-20）：全鏈 audit-verify

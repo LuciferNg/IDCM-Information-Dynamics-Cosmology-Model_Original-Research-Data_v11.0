@@ -3,17 +3,17 @@
     {
       "tag": "A1  scripts 編號由 00 連續無缺",
       "pass": true,
-      "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
     },
     {
       "tag": "A2  docs 編號由 00 連續無缺",
       "pass": true,
-      "detail": "[0, 1, 2, 3, 4, 5, 6, 7]"
+      "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
     },
     {
       "tag": "A3  每支 script 有 data/run_NN.log（除審計自身 09）",
       "pass": true,
-      "detail": "logs = 10 / scripts = 10"
+      "detail": "logs = 13 / scripts = 13"
     },
     {
       "tag": "A3b  缺 log 者 ⊆ {09}（審計自身；首跑前後皆合法）",
@@ -99,6 +99,21 @@
       "tag": "B08  byte-identical ＋ rc=0",
       "pass": true,
       "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B10  byte-identical ＋ rc=0",
+      "pass": true,
+      "detail": "rc=0, diff=0"
+    },
+    {
+      "tag": "B11  byte-identical ＋ rc=1",
+      "pass": true,
+      "detail": "rc=1, diff=0"
+    },
+    {
+      "tag": "B12  byte-identical ＋ rc=1",
+      "pass": true,
+      "detail": "rc=1, diff=0"
     },
     {
       "tag": "C1  γ_n + γ_{44−n} = 4（n=1..43，dec prec 60）違例 0",
@@ -236,6 +251,16 @@
       "detail": "4/4"
     },
     {
+      "tag": "D  08_preregistration_round4.md claim 命中率 5/5",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "tag": "D  09_round4_DA_results.md claim 命中率 4/4",
+      "pass": true,
+      "detail": "4/4"
+    },
+    {
       "tag": "D-global1 38.612274 出現且無 38.61227 變體漂移",
       "pass": true,
       "detail": "count = 5"
@@ -288,7 +313,7 @@
     {
       "tag": "G1  本檔 check 數 ≥ 40（覆蓋 A–F 六段）",
       "pass": true,
-      "detail": "57"
+      "detail": "62"
     },
     {
       "tag": "G2  段別覆蓋齊全（A/B/C/D/E/F）",
@@ -296,10 +321,10 @@
       "detail": "見段標題"
     }
   ],
-  "n_pass": 59,
+  "n_pass": 64,
   "n_fail": 0,
-  "n_total": 59,
-  "doc_claim_hit_rate": "29/29",
+  "n_total": 64,
+  "doc_claim_hit_rate": "38/38",
   "table_bad": [
     [
       "01_problem_record.md",

@@ -91,7 +91,7 @@ ck("A7  每支 script 有 shebang ＋ docstring", not nodoc, str(nodoc))
 # ══════════════════════════════════════════════════════════════════
 sec("B 全鏈重跑（vs 入庫 log）")
 env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
-RC_EXPECT = {"02": 1, "04": 1}      # 預期 FAIL（被證偽假設本身）
+RC_EXPECT = {"02": 1, "04": 1, "11": 1, "12": 1}   # 預期 FAIL（被證偽假設本身：E2a / E3a）
 for f in scripts:
     num = f[:2]
     if num == "09":
@@ -290,6 +290,10 @@ CLAIMS = {
                                             ("131 PASS", "131")],
     "docs/07_audit_verify_round.md": [("59", "59"), ("19/19", "19"),
                                       ("0 條斷鏈", "0"), ("NONDET", "05")],
+    "docs/08_preregistration_round4.md": [("DA1", "DA1"), ("DA2", "DA2"), ("DA3", "DA3"),
+                                          ("E1a", "E1a"), ("q ≤ 5%", "5%")],
+    "docs/09_round4_DA_results.md": [("vacuous", "22"), ("n₃₆ = 4", "4"),
+                                     ("解數 6", "6"), ("DA1", "DA1")],
 }
 # 每 claim = (doc 內字串, 重算／應存在之值字串)；檢查文檔含該字串且該值與重算一致
 recalc = {"30": len(pool) + 12, "60": 60, "16": 16, "0": 0, "3.33%": 3.33,

@@ -597,10 +597,14 @@
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o142_boson_mass_derivation/docs/36_lambda_scale_adjudication.md",
       "IDCM-v10.0--It-From-Beat/open_problems_fresh/o142_boson_mass_derivation/scripts/24_lambda_scale_adjudication.py",
       "IDCM-v11.0--Reality-Architecture/README.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/final_result.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/01_problem_record.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/README.md",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/docs/04_open_problems_inventory.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/docs/01_exchange_law.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/scripts/08_p4_c2_position.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/audit/l2_recompute.py",
+      "IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange/audit/l3_docs.py",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/final_result.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/01_problem_record.md",
       "IDCM-v11.0--Reality-Architecture/main_problems/m6_scale_dof_theorem/docs/15_m_series_handoff_adjudication.md",
@@ -780,5 +784,5 @@
       "IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md"
     ]
   },
-  "n_files_scanned": 9707
+  "n_files_scanned": 9726
 }

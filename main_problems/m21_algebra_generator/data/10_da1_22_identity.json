@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "tag": "E1a-a 恆等（sympy 符號）",
+      "pass": true,
+      "detail": "≡ 0"
+    },
+    {
+      "tag": "E1a-b 恆等（10^4 隨機度集）",
+      "pass": true,
+      "detail": "全部相等"
+    },
+    {
+      "tag": "E1a  恆等成立 ⟹ 「22 = N_d/2」零內容（除 2 之算術）",
+      "pass": true,
+      "detail": "N_d = Σd(d−1) = 2·Σd(d−1)/2"
+    },
+    {
+      "tag": "E1b-a  所有候選值皆 = 22",
+      "pass": true,
+      "detail": "[22]"
+    },
+    {
+      "tag": "E1b-b  每項皆係 N_d（=44）或 N_site（=88）之函數 ⟹ 非獨立",
+      "pass": true,
+      "detail": "N_site/4 = 22；N_d/2 = 22；前後皆由 44／88 決定"
+    },
+    {
+      "tag": "E1c  逆對數 = |非對合|/2 = 22 ⟹ 恆為 44 之函數",
+      "pass": true,
+      "detail": "22"
+    },
+    {
+      "tag": "E1d  22 於池內命中數 = 1",
+      "pass": true,
+      "detail": "['ΣΛ²']"
+    },
+    {
+      "tag": "DA1  判 🔴 vacuous（三條件不全中）",
+      "pass": true,
+      "detail": "E1a 恆等 + E1b 非獨立"
+    }
+  ],
+  "n_pass": 8,
+  "n_fail": 0,
+  "n_total": 8,
+  "identity": {
+    "N_d": 44,
+    "two_lam2": 44,
+    "sympy_identity": true
+  },
+  "chain_22_candidates": {
+    "n* = N_site/4": 22,
+    "對極對數 + 不動點 = N_d/2": 22,
+    "#{n ∈ 1..43 : n < 44−n} + 1": 22,
+    "#{n : γ_n < 2} + 1": 22
+  },
+  "module_pool": {
+    "ΣΛ¹ = Σd": 16,
+    "ΣΛ²": 22,
+    "ΣΛ³": 16,
+    "ΣΛ⁴": 6,
+    "ΣΛ⁵": 1,
+    "ΣSym²": 38,
+    "ΣSym³": 76,
+    "Σ_{i<j} d_i d_j": 98,
+    "k": 5,
+    "|G|": 60
+  },
+  "hits22": [
+    "ΣΛ²"
+  ],
+  "verdict": "DA1 🔴 vacuous"
+}
