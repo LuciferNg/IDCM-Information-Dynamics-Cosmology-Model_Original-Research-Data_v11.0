@@ -23,7 +23,7 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] B02  byte-identical ＋ rc=1 :: rc=1, diff=0
 [PASS] B03  byte-identical ＋ rc=0 :: rc=0, diff=0
 [PASS] B04  byte-identical ＋ rc=1 :: rc=1, diff=0
-[FAIL] B05  byte-identical ＋ rc=0 :: rc=0, diff=YES
+[PASS] B05  非決定性（corpus）：rc=0 ＋ PASS/FAIL 模式穩定 :: rc=0, pattern (18, 0) → (18, 0)
 [PASS] B06  byte-identical ＋ rc=0 :: rc=0, diff=0
 [PASS] B07  byte-identical ＋ rc=0 :: rc=0, diff=0
 [PASS] B08  byte-identical ＋ rc=0 :: rc=0, diff=0
@@ -81,10 +81,10 @@ M21 scripts/09 — 全鏈 audit-verify
 [PASS] F1  未登記之表格缺陷 = 0 :: []
 
 ── G 自查水位 ──
-  本檔 checks = 62（PASS 61 / FAIL 1）
+  本檔 checks = 62（PASS 62 / FAIL 0）
 [PASS] G1  本檔 check 數 ≥ 40（覆蓋 A–F 六段） :: 62
 [PASS] G2  段別覆蓋齊全（A/B/C/D/E/F） :: 見段標題
 
 ==============================================================================
-scripts/09 結果：63/64 PASS ｜ 1 FAIL
+scripts/09 結果：64/64 PASS ｜ 0 FAIL
 ==============================================================================

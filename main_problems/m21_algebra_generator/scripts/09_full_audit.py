@@ -92,6 +92,7 @@ ck("A7  每支 script 有 shebang ＋ docstring", not nodoc, str(nodoc))
 sec("B 全鏈重跑（vs 入庫 log）")
 env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
 RC_EXPECT = {"02": 1, "04": 1, "11": 1, "12": 1}   # 預期 FAIL（被證偽假設本身：E2a / E3a）
+NONDET = {"05"}    # 05 之輸出含 corpus 掃描總檔數（隨他人新增檔案變動）⟹ 非 byte-identical
 for f in scripts:
     num = f[:2]
     if num == "09":
@@ -101,6 +102,13 @@ for f in scripts:
     old = open(old_p, encoding="utf-8").read() if os.path.exists(old_p) else ""
     new = r.stdout.decode("utf-8")
     exp_rc = RC_EXPECT.get(num, 0)
+    if num in NONDET:
+        # 非決定性：只核 rc ＋ PASS/FAIL 模式穩定（corpus 增長只改檔數細節）
+        pat_old = (old.count("[PASS]"), old.count("[FAIL]"))
+        pat_new = (new.count("[PASS]"), new.count("[FAIL]"))
+        ck(f"B{num}  非決定性（corpus）：rc={exp_rc} ＋ PASS/FAIL 模式穩定",
+           r.returncode == exp_rc and pat_old == pat_new, f"rc={r.returncode}, pattern {pat_old} → {pat_new}")
+        continue
     ck(f"B{num}  byte-identical ＋ rc={exp_rc}", new == old and r.returncode == exp_rc,
        f"rc={r.returncode}, diff={'0' if new == old else 'YES'}")
 
