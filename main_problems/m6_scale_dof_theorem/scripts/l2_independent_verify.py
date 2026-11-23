@@ -73,6 +73,59 @@ def g_kernel(d, I):
     return (mp.mpf(N * N - 1) - 6 * d * (N - d)) / (12 * N)
 
 
+
+# ── 精確分圓環 ℚ[x]/(Φ₈₈)，Φ₈₈ = Σ_{j=0..10} (−1)^j x^{4j}（度 40）────────────
+from fractions import Fraction
+from math import gcd as _gcd
+
+_PHI = {4 * j: Fraction((-1) ** j) for j in range(11)}
+
+
+def _red(p):
+    p = {k: Fraction(v) for k, v in p.items() if v}
+    while any(k >= 40 for k in p):
+        top = max(p)
+        c = p.pop(top)
+        for j in range(10):
+            kk = top - 40 + 4 * j
+            p[kk] = p.get(kk, Fraction(0)) - c * _PHI[4 * j]
+        p = {k: v for k, v in p.items() if v}
+    return p
+
+
+def _gamma_vec(n, N):
+    """γ_n = 2 − (ζ^n + ζ^−n) 之環向量（40 維 Fraction）。"""
+    n %= N
+    v = {0: Fraction(2)}
+    for k, sg in ((n, -1), ((-n) % N, -1)):
+        v[k] = v.get(k, Fraction(0)) + sg
+    return _red(v)
+
+
+def _rank_Q(rows, ncol):
+    """精確 rank（Fraction Gaussian elimination）。"""
+    m = [dict(r) for r in rows]
+    rank = 0
+    for col in range(ncol):
+        piv = None
+        for i in range(rank, len(m)):
+            if m[i].get(col):
+                piv = i
+                break
+        if piv is None:
+            continue
+        m[rank], m[piv] = m[piv], m[rank]
+        pv = m[rank][col]
+        for i in range(len(m)):
+            if i != rank and m[i].get(col):
+                f = m[i][col] / pv
+                for kk, vv in m[rank].items():
+                    m[i][kk] = m[i].get(kk, Fraction(0)) - f * vv
+                m[i] = {k: v for k, v in m[i].items() if v}
+        rank += 1
+    return rank
+
+
 # ② DERIVE —— 純函數
 DERIVE = {
     "sum_gamma":  lambda I: mp.fsum(gam(n, I) for n in range(I["N_d"] + 1)),
@@ -97,6 +150,12 @@ DERIVE = {
     "Tt_v2":      lambda I: mp.mpf(I["t_v2_MeV"]) / mp.mpf(I["M0_MeV"]),
     "kappa_lo":   lambda I: mp.mpf(I["kappa_lo_MeV"]) / mp.mpf(I["M0_MeV"]),
     "kappa_hi":   lambda I: mp.mpf(I["kappa_hi_MeV"]) / mp.mpf(I["M0_MeV"]),
+    "delta_alpha_inv": lambda I: mp.mpf((I["B"] - 1) ** 2),
+    "rank_Q":     lambda I: mp.mpf(_rank_Q([_gamma_vec(n, I["N"]) for n in range(I["N_d"] + 1)], 40)),
+    "n_orbits":   lambda I: mp.mpf(len({_gcd(n, I["N"]) for n in range(1, I["N_d"] + 1)})),
+    "max_orbit":  lambda I: mp.mpf(max(sum(1 for m in range(1, I["N_d"] + 1) if _gcd(m, I["N"]) == g)
+                                      for g in {_gcd(n, I["N"]) for n in range(1, I["N_d"] + 1)})),
+    "sum_gamma_sq": lambda I: mp.fsum(gam(n, I) ** 2 for n in range(I["N_d"] + 1)),
     "H0_z":       lambda I: abs(mp.mpf(I["H0_pred"]) - mp.mpf(I["H0_planck"])) / mp.mpf(I["H0_sigma"]),
 }
 
@@ -114,6 +173,9 @@ IDENTITIES = [
     ("I4 λ_max(1) = γ₄₄ = 4k（兩路徑）",
      lambda I: 4 * 1 - gam(0, I),
      lambda I: gam(I["N_d"], I)),
+    ("I6 rank_ℚ{γ_n} = 20（環向量精確 rank）",
+     lambda I: mp.mpf(_rank_Q([_gamma_vec(n, I["N"]) for n in range(I["N_d"] + 1)], 40)),
+     lambda I: mp.mpf(20)),
     ("I5 每量子容量 = Σγ·M₀（兩路徑）",
      lambda I: mp.fsum(gam(n, I) for n in range(I["N_d"] + 1)) * mp.mpf(I["M0_MeV"]),
      lambda I: mp.mpf(I["N"] + 2) * mp.mpf(I["M0_MeV"])),

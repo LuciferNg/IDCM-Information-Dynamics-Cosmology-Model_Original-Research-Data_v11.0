@@ -55,6 +55,42 @@
     "pass": true,
     "detail": "L2 43 ↔ 文檔 43（rel 0.0e+00）"
   },
+  "C.08_framework_self_.rank_ℚ{γ_n} = 20": {
+    "pass": true,
+    "detail": "L2 20 ↔ 文檔 20（rel 0.0e+00）"
+  },
+  "C.09_upgrade_routes..7 個 Galois 軌道": {
+    "pass": true,
+    "detail": "L2 7 ↔ 文檔 7（rel 0.0e+00）"
+  },
+  "C.10_forced_single_s.7 個軌道（T2′ 上界）": {
+    "pass": true,
+    "detail": "L2 7 ↔ 文檔 7（rel 0.0e+00）"
+  },
+  "C.10_forced_single_s.最大軌道 20": {
+    "pass": true,
+    "detail": "L2 20 ↔ 文檔 20（rel 0.0e+00）"
+  },
+  "C.12_economy_and_hom.rank 20（參數經濟）": {
+    "pass": true,
+    "detail": "L2 20 ↔ 文檔 20（rel 0.0e+00）"
+  },
+  "C.final_result.md.Σγ² = 272": {
+    "pass": true,
+    "detail": "L2 272 ↔ 文檔 272（rel 0.0e+00）"
+  },
+  "C.11_beta_no_go.md.Δα⁻¹ = 9 = (B−1)²": {
+    "pass": true,
+    "detail": "L2 9 ↔ 文檔 9（rel 0.0e+00）"
+  },
+  "C.README.md.Σγ = 90（上游依賴列）": {
+    "pass": true,
+    "detail": "L2 90 ↔ 文檔 90（rel 0.0e+00）"
+  },
+  "C.16_full_chain_audi.rank_ℚ = 20（本輪精確算出）": {
+    "pass": true,
+    "detail": "L2 20 ↔ 文檔 20（rel 0.0e+00）"
+  },
   "F.docs/14_scale_axis_theorem.md 全命中（2/2）": {
     "pass": true,
     "detail": ""
@@ -71,7 +107,7 @@
     "pass": true,
     "detail": ""
   },
-  "F.final_result.md 全命中（1/1）": {
+  "F.final_result.md 全命中（2/2）": {
     "pass": true,
     "detail": ""
   },
@@ -79,8 +115,36 @@
     "pass": true,
     "detail": ""
   },
+  "F.docs/08_framework_self_audit.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/09_upgrade_routes.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/10_forced_single_scale.md 全命中（2/2）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/12_economy_and_homogeneity.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/11_beta_no_go.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.README.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
+  "F.docs/16_full_chain_audit.md 全命中（1/1）": {
+    "pass": true,
+    "detail": ""
+  },
   "_summary": {
-    "checks": 20,
+    "checks": 36,
     "fail": 0,
     "by_doc": {
       "docs/14_scale_axis_theorem.md": [
@@ -100,15 +164,43 @@
         4
       ],
       "final_result.md": [
+        2,
+        2
+      ],
+      "01_problem_record.md": [
         1,
         1
       ],
-      "01_problem_record.md": [
+      "docs/08_framework_self_audit.md": [
+        1,
+        1
+      ],
+      "docs/09_upgrade_routes.md": [
+        1,
+        1
+      ],
+      "docs/10_forced_single_scale.md": [
+        2,
+        2
+      ],
+      "docs/12_economy_and_homogeneity.md": [
+        1,
+        1
+      ],
+      "docs/11_beta_no_go.md": [
+        1,
+        1
+      ],
+      "README.md": [
+        1,
+        1
+      ],
+      "docs/16_full_chain_audit.md": [
         1,
         1
       ]
     }
   },
-  "pass": 20,
+  "pass": 36,
   "fail": 0
 }

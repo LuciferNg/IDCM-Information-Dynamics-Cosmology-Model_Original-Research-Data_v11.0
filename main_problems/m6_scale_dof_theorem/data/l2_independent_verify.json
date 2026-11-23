@@ -1,7 +1,7 @@
 {
-  "D 全部 key 可推導（19 個）": {
+  "D 全部 key 可推導（24 個）": {
     "pass": true,
-    "detail": "19/19"
+    "detail": "24/24"
   },
   "I1 Σ_{0..44}γ = N+2（數值 vs 閉式）": {
     "pass": true,
@@ -16,6 +16,10 @@
     "detail": "差 = 8.90526e-41"
   },
   "I4 λ_max(1) = γ₄₄ = 4k（兩路徑）": {
+    "pass": true,
+    "detail": "差 = 0.0"
+  },
+  "I6 rank_ℚ{γ_n} = 20（環向量精確 rank）": {
     "pass": true,
     "detail": "差 = 0.0"
   },
@@ -135,16 +139,36 @@
       "float": 2.529465431510042,
       "str": "2.529465431510041874970767"
     },
+    "delta_alpha_inv": {
+      "float": 9.0,
+      "str": "9.0"
+    },
+    "rank_Q": {
+      "float": 20.0,
+      "str": "20.0"
+    },
+    "n_orbits": {
+      "float": 7.0,
+      "str": "7.0"
+    },
+    "max_orbit": {
+      "float": 20.0,
+      "str": "20.0"
+    },
+    "sum_gamma_sq": {
+      "float": 272.0,
+      "str": "272.0"
+    },
     "H0_z": {
       "float": 0.08722222222222223,
       "str": "0.08722222222222222222222222"
     }
   },
   "_summary": {
-    "checks": 11,
+    "checks": 12,
     "fail": 0,
-    "n_derived": 19
+    "n_derived": 24
   },
-  "pass": 11,
+  "pass": 12,
   "fail": 0
 }

@@ -42,10 +42,12 @@
 | `scripts/13_h2_layer_scope.py` | H2 判定腳本（核加性 ＋ M₀ 標度身份 ＋ 帳本 ＋ 約定穩健性） | 🟢 9/9 |
 | `docs/14_scale_axis_theorem.md` | **(B) 尺度軸定理**：B1 代數剛性（精確分圓環）＋ B2 適足性 ＋ B3 帳本判準；T2″ | 🟢 4/4 |
 | `scripts/14_scale_axis_theorem.py` | (B) 腳本：`ℚ[x]/(Φ₈₈)` 精確環 12/12 ＋ 超越反例負控制 3/3 ＋ H₀ 0.087σ | 🟢 4/4 |
+| `docs/16_full_chain_audit.md` | **全鏈審計**：齊備度／覆蓋矩陣／漂移掃描／四件套／殘留 9＋新開 3 | 🟢 37/37 |
 | `docs/15_m_series_handoff_adjudication.md` | **入站 handoff 裁定**（M5/M8/M1/M15/M18，10 條）：κ 不可定值、dof 兩賬分立、`ħc/a₀` no-go、五處自查更正 | 🟢 4/4 |
 | `scripts/15_handoff_adjudication_scan.py` | 裁定機器核：零交叉／支撐 43+1／n_q ≥／算子身份掃描（含隨機期望） | 🟢 4/4 |
-| `scripts/l2_independent_verify.py` | **L2 獨立閘**：由原始輸入重算 11 項（Σγ、配對、λ_max、零根、n_q、T_A/T_t、κ/M₀、H₀ z） | 🟢 11/11 |
-| `scripts/l3_doc_crosscheck.py` | **L3 唯讀交叉核**：13 claims／6 檔，期望值只取 L2 | 🟢 20/20 |
+| `scripts/l2_independent_verify.py` | **L2 獨立閘**：由原始輸入重算（Σγ、配對、λ_max、零根、n_q、T_A/T_t、κ/M₀、H₀ z、**rank_ℚ=20**、7 軌道、Σγ²=272、Δα⁻¹） | 🟢 12/12 |
+| `scripts/l3_doc_crosscheck.py` | **L3 唯讀交叉核**：32 claims／11 檔，期望值只取 L2 | 🟢 32/32 |
+| `scripts/16_claim_coverage.py` | **宣稱覆蓋台賬**：逐檔列 04／L3 覆蓋數，零覆蓋須豁免並寫理由 | 🟢 19/19 |
 | `scripts/04_doc_consistency.py` | 文檔↔數據一致性（32 claims） | 🟢 32/32 |
 | `scripts/run_chain.sh` | 全鏈 driver（預設 dry-run，`--run` 才跑） | 🟢 |
 | `data/01–12_*.json`、`data/run_*.log` | 輸出數據與執行記錄（重跑 byte-identical） | 🟢 |

@@ -1,0 +1,133 @@
+{
+ "rows": [
+  {
+   "doc": "docs/01_t1_composite_additivity.md",
+   "claims_04": 8,
+   "claims_l3": 0,
+   "total": 8
+  },
+  {
+   "doc": "docs/02_t2_scale_dof_theorem.md",
+   "claims_04": 5,
+   "claims_l3": 0,
+   "total": 5
+  },
+  {
+   "doc": "docs/03_r4_counterexample_hunt.md",
+   "claims_04": 5,
+   "claims_l3": 0,
+   "total": 5
+  },
+  {
+   "doc": "docs/04_t3_handoff_and_verdict.md",
+   "claims_04": 2,
+   "claims_l3": 0,
+   "total": 2
+  },
+  {
+   "doc": "docs/05_p_dof_ledger.md",
+   "claims_04": 4,
+   "claims_l3": 0,
+   "total": 4
+  },
+  {
+   "doc": "docs/06_kappa_lambda_identifiability.md",
+   "claims_04": 2,
+   "claims_l3": 0,
+   "total": 2
+  },
+  {
+   "doc": "docs/07_hidden_layer_mechanism.md",
+   "claims_04": 5,
+   "claims_l3": 3,
+   "total": 8
+  },
+  {
+   "doc": "docs/08_framework_self_audit.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "docs/09_upgrade_routes.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "docs/10_forced_single_scale.md",
+   "claims_04": 0,
+   "claims_l3": 2,
+   "total": 2
+  },
+  {
+   "doc": "docs/11_beta_no_go.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "docs/12_economy_and_homogeneity.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "docs/13_h2_verdict.md",
+   "claims_04": 0,
+   "claims_l3": 2,
+   "total": 2
+  },
+  {
+   "doc": "docs/14_scale_axis_theorem.md",
+   "claims_04": 0,
+   "claims_l3": 2,
+   "total": 2
+  },
+  {
+   "doc": "docs/15_m_series_handoff_adjudication.md",
+   "claims_04": 0,
+   "claims_l3": 4,
+   "total": 4
+  },
+  {
+   "doc": "docs/16_full_chain_audit.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "01_problem_record.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "README.md",
+   "claims_04": 0,
+   "claims_l3": 1,
+   "total": 1
+  },
+  {
+   "doc": "final_result.md",
+   "claims_04": 1,
+   "claims_l3": 2,
+   "total": 3
+  },
+  {
+   "doc": "SESSION_START.md",
+   "claims_04": 0,
+   "claims_l3": 0,
+   "total": 0
+  }
+ ],
+ "zero_coverage": [
+  "SESSION_START.md"
+ ],
+ "exempt": {
+  "SESSION_START.md": "第 1 輪不可變快照（原則不改）；其數字全部係 docs/01 之前身，已由 04 覆蓋對應 docs"
+ },
+ "unexempt": [],
+ "total_claims_04": 32,
+ "total_claims_l3": 22
+}

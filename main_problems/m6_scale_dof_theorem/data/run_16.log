@@ -1,0 +1,28 @@
+================================================================================================
+M6 scripts/16 — 文檔宣稱覆蓋率台賬（唯讀）
+================================================================================================
+  ✅ docs/01_t1_composite_additivity.md           04= 8  L3= 0  合計= 8
+  ✅ docs/02_t2_scale_dof_theorem.md              04= 5  L3= 0  合計= 5
+  ✅ docs/03_r4_counterexample_hunt.md            04= 5  L3= 0  合計= 5
+  ✅ docs/04_t3_handoff_and_verdict.md            04= 2  L3= 0  合計= 2
+  ✅ docs/05_p_dof_ledger.md                      04= 4  L3= 0  合計= 4
+  ✅ docs/06_kappa_lambda_identifiability.md      04= 2  L3= 0  合計= 2
+  ✅ docs/07_hidden_layer_mechanism.md            04= 5  L3= 3  合計= 8
+  ✅ docs/08_framework_self_audit.md              04= 0  L3= 1  合計= 1
+  ✅ docs/09_upgrade_routes.md                    04= 0  L3= 1  合計= 1
+  ✅ docs/10_forced_single_scale.md               04= 0  L3= 2  合計= 2
+  ✅ docs/11_beta_no_go.md                        04= 0  L3= 1  合計= 1
+  ✅ docs/12_economy_and_homogeneity.md           04= 0  L3= 1  合計= 1
+  ✅ docs/13_h2_verdict.md                        04= 0  L3= 2  合計= 2
+  ✅ docs/14_scale_axis_theorem.md                04= 0  L3= 2  合計= 2
+  ✅ docs/15_m_series_handoff_adjudication.md     04= 0  L3= 4  合計= 4
+  ✅ docs/16_full_chain_audit.md                  04= 0  L3= 1  合計= 1
+  ✅ 01_problem_record.md                         04= 0  L3= 1  合計= 1
+  ✅ README.md                                    04= 0  L3= 1  合計= 1
+  ✅ final_result.md                              04= 1  L3= 2  合計= 3
+  🔴 SESSION_START.md                             04= 0  L3= 0  合計= 0
+
+零覆蓋文檔 = 1：['SESSION_START.md']
+
+20/20 PASS（覆蓋台賬：零覆蓋且未豁免 = 0）
+→ data/16_claim_coverage.json
