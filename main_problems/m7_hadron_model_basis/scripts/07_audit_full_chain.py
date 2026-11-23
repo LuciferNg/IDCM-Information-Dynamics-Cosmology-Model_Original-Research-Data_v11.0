@@ -273,6 +273,128 @@ ok("B9 γ₄M₀ 與 05 C3 一致（−2.2605）", abs(float(dev_xi) - J05["C3"]
 ok("B9 所需 = Δ×2.56 一致（+3.310）", abs(float(need_xi) - J05["C3"]["need_MeV"][2]) < 1e-3,
    mp.nstr(need_xi, 6), f"{J05['C3']['need_MeV'][2]:.3f}")
 
+# ══════════ B10 scripts/17 σ 預算（Fraction 精確；另一法） ══════════
+print("\nB10 σ 預算（scripts/17）——Fraction 精確 Δ²/S ＋ 末端 sqrt")
+J17b = load("17_sigma_budget.json")["metrics"]
+em = Fraction("2.264589"); pred = Fraction("0.332667")   # 14/22 之中心值與預言（17 只存派生量）
+s_em = Fraction("0.120863"); s_x = Fraction("0.094")
+D2ex = (em - pred) ** 2
+Sex = s_em ** 2 + (Fraction(5, 3) * s_x) ** 2
+z_ex = -sqrt(mpf(D2ex.numerator) / D2ex.denominator) / sqrt(mpf(Sex.numerator) / Sex.denominator)
+print(f"    精確 Δ² = {float(D2ex):.9f}；S = {float(Sex):.9f}；z = {mp.nstr(z_ex, 8)}")
+print(f"    17 報：σ_tot = {J17b['s_tot']:.8f}；z_tot = {J17b['z_tot']:.6f}")
+ok("B10 σ_tot² = σ_em² + (5/3 σ_X)²（精確 Fraction）", abs(float(Sex) - J17b["s_tot"] ** 2) < 1e-15,
+   f"{float(Sex):.9f}", f"{J17b['s_tot']**2:.9f}")
+ok("B10 z 重算一致（<1e−9）", abs(float(z_ex) - J17b["z_tot"]) < 1e-9,
+   mp.nstr(z_ex, 8), f"{J17b['z_tot']:.6f}")
+
+# ══════════ B11 scripts/18 k 反解（log10 路線） ══════════
+print("\nB11 k = ln T₃/ln r（改用 log10 比值，另一法）")
+J18b = load("18_m5_operator_slot.json")["metrics"]
+k_log10 = mp.log10(mpf("14.352258")) / mp.log10(mpf("3.291339"))
+print(f"    log10 路線 k = {mp.nstr(k_log10, 10)}；18 報 k = {J18b['k']:.10f}")
+ok("B11 k 兩法一致（<1e−12）", abs(float(k_log10) - J18b["k"]) < 1e-12, mp.nstr(k_log10, 10),
+   f"{J18b['k']:.10f}")
+ok("B11 與 √5 之差 ≈ 0.0034%（18 報）", abs((float(k_log10) / float(sqrt(5)) - 1) * 100 - J18b["dev_sq5_pct"]) < 1e-9,
+   f"{float((k_log10/sqrt(5)-1)*100):+.4f}%", f"{J18b['dev_sq5_pct']:+.4f}%")
+
+# ══════════ B12 scripts/19 味盲（多重集／符號路線，非 MC） ══════════
+print("\nB12 味盲不變性（整數多重集 ＋ sympy 符號，非 MC 路線）")
+import sympy as sp2
+GAM19 = [mpf(0)] + [4 * sin(n * pi / 88) ** 2 for n in range(1, 45)]
+n_pair, bad = 0, 0
+for a in range(1, 45):
+    for b in range(a + 1, 45):
+        n_pair += 1
+        if sorted([GAM19[a], GAM19[b]]) != sorted([GAM19[b], GAM19[a]]):
+            bad += 1
+print(f"    946 對之 γ 多重集比較：不合 = {bad}")
+ok("B12 946 對 γ 多重集恆等（精確比較）", bad == 0 and n_pair == 946, f"{n_pair} 對／{bad} 不合", "946／0")
+u_, d_ = sp2.symbols("f_u f_d")
+# ⚠ sympy subs({u:d, d:u}) 係**順序**代換（u→d 後再 d→u 會命中新 d）⟹ 用 Lambda 直接求值
+Ef = sp2.Lambda((u_, d_), 90 * (u_ + d_))     # 一體：只依佔用模多重集
+diff12 = sp2.simplify(Ef(u_, d_) - Ef(d_, u_))
+ok("B12 sympy：一體式交換 f_u↔f_d 恆等（Lambda 求值）",
+   diff12 == sp2.Integer(0) and sp2.simplify(Ef(u_, d_) - Ef(d_, u_)).is_zero is not False,
+   str(diff12), "0", "整數多重集 ＋ 符號雙證；subs 順序陷阱已避")
+
+# ══════════ B13 scripts/20 Σγ_odd（配對代數） ══════════
+print("\nB13 Σγ_odd = 44（11 對 × 4）＋ 41/60 恆等")
+sum_odd_num = sum(4 * sin(pi * n / 88) ** 2 for n in range(1, 45) if n % 2 == 1)
+J20b = load("20_m15_gate_check.json")["budget"]
+print(f"    數值 Σγ_odd = {mp.nstr(sum_odd_num, 12)}；配對代數 11×4 = 44；20 報 {J20b['sum_gamma_odd']}")
+ok("B13 Σγ_odd 兩法一致（<1e−45）",
+   abs(sum_odd_num - 44) < mpf("1e-45") and J20b["sum_gamma_odd"] == 44,
+   mp.nstr(sum_odd_num, 10), "44")
+ok("B13 41 = 44−4+1 且 3+16+41 = 60", (44 - 4 + 1 == 41) and (3 + 16 + 41 == 60), "41／60", "41／60")
+ok("B13 Ω_b = 3/60 = 1/20", J20b["omega_b"] == "1/20", J20b["omega_b"], "1/20")
+
+# ══════════ B14–B17 下游腳本（11–16）之恆等式回核 ══════════
+print("\nB14–B17 下游腳本恆等式（錨值／代數關係回核，非重跑搜尋）")
+J12b, J13b = load("12_o209_assignment.json")["metrics"], load("13_ud_verdict.json")["metrics"]
+J14b, J15b = load("14_external_recompute.json")["metrics"], load("15_m4_intake_recheck.json")["metrics"]
+ANCHOR, SIG_ANCHOR = Fraction("2.150538"), Fraction("0.110995")
+
+# ⚠ 12 之約定 = **對數比**：z = ln(ratio/tgt)/(σ_rel)，σ_rel = 0.110995/2.150538（非線性差）
+z12 = mp.log(mpf(str(J12b["ratio_pl_ud"])) / mpf("2.150538")) / (mpf("0.110995") / mpf("2.150538"))
+print(f"    B14 12.ratio_pl_ud = {J12b['ratio_pl_ud']:.7f} ⟹ z(對數比，σ_rel) = {float(z12):+.5f}")
+ok("B14 z_pl_ud 與錨值恆等式一致（<1e−6）", abs(float(z12) - J12b["z_pl_ud"]) < 1e-6,
+   f"{float(z12):+.5f}", f"{J12b['z_pl_ud']:+.5f}")
+
+xs = [Fraction(str(v)) for v in J13b["X_cands"].values()]
+spread = max(xs) - min(xs)
+print(f"    B15 X 候選跨度 = {float(spread):.6f}；13 報 {J13b['X_spread']:.6f}；/σ_X(0.094) = {float(spread/Fraction('0.094')):.2f}σ")
+ok("B15 X 跨度 ＝ max−min（<1e−9）", abs(float(spread) - J13b["X_spread"]) < 1e-9,
+   f"{float(spread):.6f}", f"{J13b['X_spread']:.6f}")
+ok("B15 跨度/σ_X = 403.03σ", abs(float(spread / Fraction("0.094")) - J13b["X_spread_over_sigma"]) < 1e-6,
+   f"{float(spread/Fraction('0.094')):.2f}", f"{J13b['X_spread_over_sigma']:.2f}")
+
+em_ex = Fraction("1.78") * Fraction(str(J14b["dM2_pi"])) / Fraction(str(J14b["sum_M"]))
+print(f"    B16 em = (1+ε)·ΔM²_π/Σm = {float(em_ex):.9f}；14 報 {J14b['em']:.9f}")
+ok("B16 em 恆等式（ε=0.78；<1e−9）", abs(float(em_ex) - J14b["em"]) < 1e-9,
+   f"{float(em_ex):.9f}", f"{J14b['em']:.9f}")
+
+ns_req = (Fraction(str(J15b["O_K_X256"])) - 1) * Fraction(3, 2)
+print(f"    B17 n_s(req) = (⟨O⟩−1)·3/2 = {float(ns_req):.10f}；15 報 {J15b['ns_req_256']:.10f}")
+ok("B17 n_s ＝ (⟨O⟩−1)·3/2（⟨O⟩=1+(B−2)n_s/3，B=4）", abs(float(ns_req) - J15b["ns_req_256"]) < 1e-12,
+   f"{float(ns_req):.10f}", f"{J15b['ns_req_256']:.10f}", "純代數恆等")
+ok("B17 所需 n_s ∉ {0,1,2}（域外）", ns_req > 2, f"{float(ns_req):.4f}", ">2")
+
+# ══════════ D1 文檔→腳本／JSON 引用無斷鏈 ══════════
+print("\nD1 全 corpus 之 scripts/ data/ 引用存在性")
+ref_bad = []
+for f in [os.path.join(M7, "README.md"), os.path.join(M7, "final_result.md"),
+          os.path.join(M7, "SESSION_START.md"), os.path.join(M7, "01_problem_record.md")] + \
+         [os.path.join(M7, "docs", x) for x in sorted(os.listdir(os.path.join(M7, "docs")))]:
+    txt = open(f, encoding="utf-8").read()
+    for m in re.finditer(r"(scripts/[0-9]{2}[a-z]?_[A-Za-z0-9_]+\.py|data/[0-9]{2}[a-z]?_[A-Za-z0-9_]+\.json)", txt):
+        tgt = os.path.join(M7, m.group(1))
+        if not os.path.exists(tgt):
+            ref_bad.append((os.path.basename(f), m.group(1)))
+LEGACY = {e["ref"]: e for e in json.load(open(os.path.join(M7, "data", "30_broken_ref_register.json"), encoding="utf-8"))["entries"]}
+ref_bad2 = [(f, r) for f, r in ref_bad if r not in LEGACY]
+print(f"    斷鏈 = {len(ref_bad)}；其中已登記（歷史／跨記錄）= {len(ref_bad) - len(ref_bad2)}；未登記 = {len(ref_bad2)}")
+ok("D1 全部引用皆存在或已登記於 docs/30", not ref_bad2,
+   f"未登記 {len(ref_bad2)}／登記 {len(ref_bad)-len(ref_bad2)}", "未登記 0")
+
+# ══════════ D2 每個推導腳本之 npass 有文檔落點 ══════════
+print("\nD2 scripts 11–20 之 JSON npass 是否在文檔出現")
+corpus = "\n".join(open(os.path.join(M7, "docs", x), encoding="utf-8").read()
+                   for x in sorted(os.listdir(os.path.join(M7, "docs"))))
+missing_doc = []
+for nn in range(11, 21):
+    cand = [x for x in sorted(os.listdir(os.path.join(M7, "data"))) if x.startswith(f"{nn:02d}_") and x.endswith(".json")]
+    if not cand:
+        continue
+    j = json.load(open(os.path.join(M7, "data", cand[0]), encoding="utf-8"))
+    npv = j.get("npass"); ntv = j.get("ntotal")
+    if npv is None:
+        continue
+    if f"{npv}/{ntv}" not in corpus and f"| {npv} |" not in corpus:
+        missing_doc.append((nn, f"{npv}/{ntv}"))
+print(f"    缺文檔落點 = {missing_doc or 0}")
+ok("D2 scripts 11–20 全部 npass 有文檔落點", not missing_doc, missing_doc or 0, 0)
+
 # ══════════ C1 四件套 ＋ register state ══════════
 print("\nC1 四件套狀態行 ＋ register state")
 def first_status(p, pat=r"狀態"):

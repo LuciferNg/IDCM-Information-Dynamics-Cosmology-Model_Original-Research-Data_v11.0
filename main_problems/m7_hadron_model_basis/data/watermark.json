@@ -1,7 +1,7 @@
 {
  "close_out": "2026-10-26T12:59:45+08:00",
- "generated": "2026-11-22 00:11",
- "n": 91,
+ "generated": "2026-11-23 11:11",
+ "n": 98,
  "rows": [
   {
    "path": "docs/10_reproduction_gate.md",
@@ -30,7 +30,7 @@
   },
   {
    "path": "docs/15_additivity_scope_verdict.md",
-   "mtime": "2026-10-28 10:20",
+   "mtime": "2026-11-23 10:56",
    "after_close": true
   },
   {
@@ -40,7 +40,7 @@
   },
   {
    "path": "docs/17_audit_full_chain.md",
-   "mtime": "2026-10-27 01:15",
+   "mtime": "2026-11-23 11:09",
    "after_close": true
   },
   {
@@ -104,6 +104,21 @@
    "after_close": true
   },
   {
+   "path": "docs/30_broken_ref_register.md",
+   "mtime": "2026-11-23 10:46",
+   "after_close": true
+  },
+  {
+   "path": "docs/31_m2_identity_propagation.md",
+   "mtime": "2026-11-23 10:54",
+   "after_close": true
+  },
+  {
+   "path": "docs/32_unresolved_inventory.md",
+   "mtime": "2026-11-23 10:59",
+   "after_close": true
+  },
+  {
    "path": "scripts/01_reproduction_gate.py",
    "mtime": "2026-10-26 11:32",
    "after_close": false
@@ -125,7 +140,7 @@
   },
   {
    "path": "scripts/04_doc_consistency.py",
-   "mtime": "2026-11-22 00:10",
+   "mtime": "2026-11-23 11:01",
    "after_close": true
   },
   {
@@ -140,7 +155,7 @@
   },
   {
    "path": "scripts/07_audit_full_chain.py",
-   "mtime": "2026-10-27 11:15",
+   "mtime": "2026-11-23 11:08",
    "after_close": true
   },
   {
@@ -209,8 +224,13 @@
    "after_close": true
   },
   {
+   "path": "scripts/21_m2_reading_verify.py",
+   "mtime": "2026-11-23 10:52",
+   "after_close": true
+  },
+  {
    "path": "scripts/run_chain.sh",
-   "mtime": "2026-11-22 00:10",
+   "mtime": "2026-11-23 10:59",
    "after_close": true
   },
   {
@@ -240,7 +260,7 @@
   },
   {
    "path": "data/04_doc_consistency.json",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
@@ -255,12 +275,12 @@
   },
   {
    "path": "data/07_audit_full_chain.json",
-   "mtime": "2026-10-28 17:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
    "path": "data/08_handoff_matrix.json",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
@@ -319,6 +339,16 @@
    "after_close": true
   },
   {
+   "path": "data/21_m2_reading_verify.json",
+   "mtime": "2026-11-23 10:53",
+   "after_close": true
+  },
+  {
+   "path": "data/30_broken_ref_register.json",
+   "mtime": "2026-11-23 10:44",
+   "after_close": true
+  },
+  {
    "path": "data/handoff_withdrawals.json",
    "mtime": "2026-10-28 11:04",
    "after_close": true
@@ -350,7 +380,7 @@
   },
   {
    "path": "data/run_04_doc_consistency.log",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
@@ -365,12 +395,12 @@
   },
   {
    "path": "data/run_07_audit_full_chain.log",
-   "mtime": "2026-10-28 17:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
    "path": "data/run_08_handoff_matrix.log",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
@@ -380,7 +410,7 @@
   },
   {
    "path": "data/run_10_watermark.log",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:11",
    "after_close": true
   },
   {
@@ -434,28 +464,33 @@
    "after_close": true
   },
   {
+   "path": "data/run_21_m2_reading_verify.log",
+   "mtime": "2026-11-23 10:53",
+   "after_close": true
+  },
+  {
    "path": "data/watermark.json",
-   "mtime": "2026-11-22 00:11",
+   "mtime": "2026-11-23 11:11",
    "after_close": true
   },
   {
    "path": "01_problem_record.md",
-   "mtime": "2026-11-22 00:10",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
    "path": "SESSION_START.md",
-   "mtime": "2026-10-26 13:00",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
    "path": "README.md",
-   "mtime": "2026-11-22 00:10",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   },
   {
    "path": "final_result.md",
-   "mtime": "2026-10-26 15:07",
+   "mtime": "2026-11-23 11:10",
    "after_close": true
   }
  ]

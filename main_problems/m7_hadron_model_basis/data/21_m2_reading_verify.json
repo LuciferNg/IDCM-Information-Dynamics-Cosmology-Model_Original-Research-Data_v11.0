@@ -1,0 +1,59 @@
+{
+ "module": "M7",
+ "script": "21_m2_reading_verify.py",
+ "checks": [
+  {
+   "item": "兩路線一致（<1e−45）",
+   "pass_": true,
+   "got": "0.0",
+   "want": "<1e−45",
+   "note": ""
+  },
+  {
+   "item": "偏差與 M2 一致（<1e−4 MeV）",
+   "pass_": true,
+   "got": "668.3187719",
+   "want": "668.31876",
+   "note": ""
+  },
+  {
+   "item": "量級 O(10²) MeV ⟹ λ 族被強烈排除",
+   "pass_": true,
+   "got": "668.319 MeV",
+   "want": ">100 MeV",
+   "note": ""
+  },
+  {
+   "item": "dev = 0 之族 = 0（N_d=44 ⟹ 兩側皆≤1 不可能）",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": "⟹ λ≠0 **普遍**被排除 ⟹ 結構性，非 200 組 MC 之經驗結果"
+  },
+  {
+   "item": "λ_min = −Σγ/W 與 M2 C3 一致",
+   "pass_": true,
+   "got": "-2.06949412",
+   "want": "-2.0694941",
+   "note": ""
+  },
+  {
+   "item": "W = 43.48888889（M2 值）",
+   "pass_": true,
+   "got": "43.4888888889",
+   "want": "43.4888888889",
+   "note": ""
+  }
+ ],
+ "npass": 6,
+ "ntotal": 6,
+ "metrics": {
+  "A_m3": 4.091202631007394,
+  "dev_mod3": 668.3187719148086,
+  "zero_families": 0,
+  "max_dev": 1213.3797923333334,
+  "lambda_min": -2.0694941236586613,
+  "W": 43.48888888888889
+ },
+ "verdict": "literal reading: exchange law kills every non-separable family structurally (dev=0 only at k<=1 trivial ends), not merely 200/200 MC"
+}

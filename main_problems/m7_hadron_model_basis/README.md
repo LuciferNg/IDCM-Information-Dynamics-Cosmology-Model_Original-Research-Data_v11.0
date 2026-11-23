@@ -21,6 +21,9 @@
 | `docs/12_r5_verdict.md` | R5 判死閘（K1–K8）＋ 4 項結構結果 ＋ 審計項 | 🔴 |
 | `docs/13_file_deletion_audit.md` | 13:33 刪除事件審計：21 檔零缺失、6 檔離碟（全屬並行 session、全未 commit、6/6 副本在 scratch） | ✅ |
 | `docs/14_rerun_verification.md` | 全 4 腳本重跑（JSON byte-identical）＋ 文檔數字 **88/88 PASS**；發現 3 個記錄層錯（已 append-only 更正） | ✅ |
+| `docs/31_m2_identity_propagation.md` | M2 字面讀法傳播（6/6）：`λ≠0` 全族結構性排除；兩處 append 更新 | ✅ |
+| `docs/32_unresolved_inventory.md` | 未推完開放問題總表（8 項：2 活口 ＋ 6 外部） | 🟡 |
+| `docs/30_broken_ref_register.md` | 斷鏈引用登記（7 名／22 處：歷史離碟 ＋ M6／M10 跨記錄）；`07` D1 閘 | ✅ |
 | `docs/29_m15_gate_scope.md` | M15 交接回核（15/15）：`3:16:41` 預算譜源以本 M 譜確認；A6 味盲閘範圍須帶 `F̂ ∈ 𝒜` | ✅ |
 | `docs/28_flavour_blind_theorem.md` | **味盲定理**（8/8）：𝒜 味-blind ⟹ Δ0／s-d／u-c ≡ 0（一體＋兩體；946 對精確 ＋ 10⁷ MC）；判死味分裂之 M7 來源 | 🔴 |
 | `docs/27_m5_operator_slot.md` | 回覆 M5 docs/52：Δ0 算子槽位需求；√5 = B-only fit；M7 缺「標籤層→譜量」橋 | ✅ |
@@ -41,6 +44,7 @@
 | `scripts/02b_r5_mode_content_nogo.py` | 整數定理、χ²、非可加性、跨 M 核（v1 封存 `deprecated/`） | ✅ |
 | `scripts/03_grep_evidence.py` | 概念詞證據 ＋ 凍結 hash | ✅ |
 | `scripts/04_doc_consistency.py` | 文檔↔輸出檢查器（**111** 條 claim；ulp 由文檔精度推，零可調容差） | ✅ |
+| `scripts/21_m2_reading_verify.py` | M2 互換律字面讀法（6/6）：閉式路線 ＋ 結構性排除定理 | ✅ |
 | `scripts/20_m15_gate_check.py` | M15 回核（15/15）：γ_max/Σγ_odd/41/60/Ω 比 ＋ 946 身份 ＋ A6 範圍 | ✅ |
 | `scripts/19_flavour_blind_theorem.py` | 味盲定理（8/8）：946 對精確零 ＋ 10⁷ MC bit-identical 零 | ✅ |
 | `scripts/18_m5_operator_slot.py` | M5 docs/52 回核（6/6）：√5 地位、A_eff 標度、基底可行性 | ✅ |
@@ -89,3 +93,21 @@ handoff ×3：→ **M2**（加性泛函適用範圍）· → **M5**（weight 約
 3. Q4：s/d、u/c 之 sector 內細分（v9／P10 側）
 4. M4：`⟨O⟩` 程序須重審（對應關係問題）
 5. ~~味分裂（Δ0／s/d／u/c）之 M7 內來源~~ ⟹ **判死**（味盲定理，`docs/28`）：𝒜 味-blind ⟹ 分裂 ≡ 0（946 對精確 ＋ 10⁷ MC）；已由外部否證 ⟹ 分裂一律外部輸入（`X`、`A_eff`）
+---
+
+## ▶ 最新狀態（append-only，2026-11-23）
+
+**verdict 未變**：🔴 negative（T1／T2／T3）。以下為 2026-10-27～11-23 追加結果（詳 `final_result` §最新狀態、`docs/19–31`）：
+
+| 類 | 項 | 判 |
+|:--|:--|:--:|
+| 定理 | O209 唯一分配（`1/362,880`） | ✅ 但 0 bit（排序型） |
+| 判死 | u/d 扇區指派 | 🔴 NO-GO |
+| 判死 | 外部 em(K⁺−K⁰) | 🔴 KILL（canonical `z=−9.76`） |
+| 定理 | **味盲**：`𝒜` 生成元皆 label-blind ⟹ `Δ0`／`s-d`／`u-c` ≡ 0 | 🔴 判死味分裂之 M7 來源 |
+| 缺口 | 「標籤層（味）→ 譜量」標度橋 | 🔴 未註冊（阻 `Δ0`） |
+| 確認 | M15 `3:16:41` 預算（`Σγ_odd = 44 = N_d`） | ✅ |
+| 傳播 | M2 字面讀法 ⟹ `λ≠0` 全族結構性排除 | ✅ 依據回正 |
+
+**開放問題清單**：`docs/32_unresolved_inventory.md`（8 項，含 3 項外部依賴）。
+**閘門**：`07` 40/40、`04` 227/227、`08` 4/4。

@@ -1,0 +1,60 @@
+{
+ "module": "M7",
+ "doc": "docs/30_broken_ref_register.md",
+ "created": "2026-11-22",
+ "policy": "歷史引用不改寫（append-only）；本表登記其身份。新文檔引用現行檔一律用現名。",
+ "entries": [
+  {
+   "ref": "scripts/01_repro_gate.py",
+   "kind": "legacy_offdisk",
+   "note": "舊名（12:42 前），已離碟；git 從未 commit；scratch 副本 d577a467dd7f…",
+   "see": "docs/13 §三",
+   "successor": "scripts/01_reproduction_gate.py"
+  },
+  {
+   "ref": "scripts/02_definition_freeze.py",
+   "kind": "legacy_offdisk",
+   "note": "舊名腳本，已離碟；內容遷為 docs/11",
+   "see": "docs/13 §三",
+   "successor": "docs/11_definition_freeze.md"
+  },
+  {
+   "ref": "data/01_repro_gate.json",
+   "kind": "legacy_offdisk",
+   "note": "舊名，已離碟；scratch 0ad2f06e3d89…",
+   "see": "docs/13 §三",
+   "successor": "data/01_reproduction_gate.json"
+  },
+  {
+   "ref": "data/02_definition_freeze.json",
+   "kind": "legacy_offdisk",
+   "note": "舊名，已離碟；scratch 30369fd256a4…",
+   "see": "docs/13 §三",
+   "successor": null
+  },
+  {
+   "ref": "scripts/02_t2_scale_dof_theorem.py",
+   "kind": "cross_record",
+   "owner": "M6",
+   "note": "M6 之未追蹤 WIP（語料定義漂移之源）",
+   "see": "docs/14 §六",
+   "successor": null
+  },
+  {
+   "ref": "data/02_t2_scale_dof_theorem.json",
+   "kind": "cross_record",
+   "owner": "M6",
+   "note": "同上",
+   "see": "docs/14 §六",
+   "successor": null
+  },
+  {
+   "ref": "scripts/16_define_d6.py",
+   "kind": "cross_record",
+   "owner": "M10",
+   "note": "M10 D6 定義生成腳本（存在於 m10_*/scripts/）",
+   "see": "docs/25 §三",
+   "successor": null
+  }
+ ]
+}

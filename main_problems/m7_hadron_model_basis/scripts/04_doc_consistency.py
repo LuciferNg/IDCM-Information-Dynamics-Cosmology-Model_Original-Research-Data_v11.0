@@ -46,6 +46,7 @@ J08 = load("08_handoff_matrix.json")
 J18 = load("18_m5_operator_slot.json")
 J19 = load("19_flavour_blind_theorem.json")
 J20 = load("20_m15_gate_check.json")
+J21 = load("21_m2_reading_verify.json")
 JWD = json.load(open(os.path.join(M7, "data", "handoff_withdrawals.json"), encoding="utf-8"))
 CH = J01["checks"]
 NUM = re.compile(r"[−-]?\+?\d+(?:\.\d+)?(?:[eE][−-]?\d+)?")
@@ -308,8 +309,8 @@ claim("§16 σ_Σ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][1]), "| 
 claim("§16 σ_Ξ", "16_gap_closure.md", abs(J06["G1"]["per_channel_z"][2]), "| `σ_Ξ` |", cell=2, kth=0)
 
 # ══════════ docs/17（全鏈審計） ══════════
-claim("§17 npass", "17_audit_full_chain.md", J07["npass"], "| 審計 npass |", cell=2, kth=0, integer=True)
-claim("§17 ntotal", "17_audit_full_chain.md", J07["ntotal"], "| 審計 ntotal |", cell=2, kth=0, integer=True)
+claim("§17 npass", "17_audit_full_chain.md", J07["npass"], "| 審計 v2 npass |", cell=2, kth=0, integer=True)
+claim("§17 ntotal", "17_audit_full_chain.md", J07["ntotal"], "| 審計 v2 ntotal |", cell=2, kth=0, integer=True)
 claim("§17 b̂", "17_audit_full_chain.md", J07["metrics"]["b_hat"], "| 審計 b̂ |", cell=2, kth=0)
 claim("§17 σ_b", "17_audit_full_chain.md", J07["metrics"]["sig_b"], "| 審計 σ_b |", cell=2, kth=0)
 claim("§17 χ²", "17_audit_full_chain.md", J07["metrics"]["chi2"], "| 審計 χ² |", cell=2, kth=0)
@@ -450,6 +451,16 @@ claim("§29 gmax", "29_m15_gate_scope.md", M20["gamma_max"], "| `γ_max` |", cel
 claim("§29 sgodd", "29_m15_gate_scope.md", M20["sum_gamma_odd"], "| `Σγ_odd` |", cell=2, kth=0, integer=True)
 claim("§29 41", "29_m15_gate_scope.md", M20["fortyone"], "| 41 |", cell=2, kth=0, integer=True)
 claim("§29 60", "29_m15_gate_scope.md", M20["denom"], "| 60 |", cell=2, kth=0, integer=True)
+
+# ══════════ docs/31（M2 傳播） ══════════
+M21 = J21["metrics"]
+claim("§31 npass", "31_m2_identity_propagation.md", J21["npass"], "| npass |", cell=2, kth=0, integer=True)
+claim("§31 ntotal", "31_m2_identity_propagation.md", J21["ntotal"], "| ntotal |", cell=2, kth=0, integer=True)
+claim("§31 dev", "31_m2_identity_propagation.md", M21["dev_mod3"], "| dev（mod-3） |", cell=2, kth=0)
+claim("§31 lmin", "31_m2_identity_propagation.md", M21["lambda_min"], "| `λ_min` |", cell=2, kth=0)
+claim("§31 W", "31_m2_identity_propagation.md", M21["W"], "| `W` |", cell=2, kth=0)
+claim("§31 zero", "31_m2_identity_propagation.md", M21["zero_families"], "| `dev=0` 族數 |", cell=2, kth=0, integer=True)
+claim("§31 maxdev", "31_m2_identity_propagation.md", M21["max_dev"], "| max dev |", cell=2, kth=0)
 
 RES.append(dict(name="v1 vs v2 K1 max_dev", doc="—",
                 status="✅" if abs(Jv1["K1"]["max_dev"] - J02["K1"]["max_dev"]) < 1e-18 else "🔴 MISMATCH",

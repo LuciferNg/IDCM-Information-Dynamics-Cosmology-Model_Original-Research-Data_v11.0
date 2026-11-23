@@ -1,6 +1,6 @@
 {
- "npass": 220,
- "ntotal": 220,
+ "npass": 227,
+ "ntotal": 227,
  "nfail": 0,
  "corrected": 4,
  "verdict": "PASS",
@@ -689,13 +689,13 @@
    "name": "§17 npass",
    "doc": "17_audit_full_chain.md",
    "status": "✅",
-   "detail": "doc=23 art=23（整數須全等）"
+   "detail": "doc=40 art=40（整數須全等）"
   },
   {
    "name": "§17 ntotal",
    "doc": "17_audit_full_chain.md",
    "status": "✅",
-   "detail": "doc=23 art=23（整數須全等）"
+   "detail": "doc=40 art=40（整數須全等）"
   },
   {
    "name": "§17 b̂",
@@ -1338,6 +1338,48 @@
    "doc": "29_m15_gate_scope.md",
    "status": "✅",
    "detail": "doc=60 art=60（整數須全等）"
+  },
+  {
+   "name": "§31 npass",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§31 ntotal",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=6 art=6（整數須全等）"
+  },
+  {
+   "name": "§31 dev",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=668.3187719 art=668.318771915 |Δ|=1.48e-08 ≤ 5.0e-08"
+  },
+  {
+   "name": "§31 lmin",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=-2.06949412 art=-2.06949412366 |Δ|=3.66e-09 ≤ 5.0e-09"
+  },
+  {
+   "name": "§31 W",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=43.4888888889 art=43.4888888889 |Δ|=1.11e-11 ≤ 5.0e-11"
+  },
+  {
+   "name": "§31 zero",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=0 art=0（整數須全等）"
+  },
+  {
+   "name": "§31 maxdev",
+   "doc": "31_m2_identity_propagation.md",
+   "status": "✅",
+   "detail": "doc=1213.3798 art=1213.37979233 |Δ|=7.67e-06 ≤ 5.0e-05"
   },
   {
    "name": "v1 vs v2 K1 max_dev",

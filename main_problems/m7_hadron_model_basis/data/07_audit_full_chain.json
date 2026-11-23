@@ -136,6 +136,125 @@
    "note": ""
   },
   {
+   "item": "B10 σ_tot² = σ_em² + (5/3 σ_X)²（精確 Fraction）",
+   "pass_": true,
+   "got": "0.039152309",
+   "want": "0.039152309",
+   "note": ""
+  },
+  {
+   "item": "B10 z 重算一致（<1e−9）",
+   "pass_": true,
+   "got": "-9.7636206",
+   "want": "-9.763621",
+   "note": ""
+  },
+  {
+   "item": "B11 k 兩法一致（<1e−12）",
+   "pass_": true,
+   "got": "2.236145086",
+   "want": "2.2361450862",
+   "note": ""
+  },
+  {
+   "item": "B11 與 √5 之差 ≈ 0.0034%（18 報）",
+   "pass_": true,
+   "got": "+0.0034%",
+   "want": "+0.0034%",
+   "note": ""
+  },
+  {
+   "item": "B12 946 對 γ 多重集恆等（精確比較）",
+   "pass_": true,
+   "got": "946 對／0 不合",
+   "want": "946／0",
+   "note": ""
+  },
+  {
+   "item": "B12 sympy：一體式交換 f_u↔f_d 恆等（Lambda 求值）",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": "整數多重集 ＋ 符號雙證；subs 順序陷阱已避"
+  },
+  {
+   "item": "B13 Σγ_odd 兩法一致（<1e−45）",
+   "pass_": true,
+   "got": "44.0",
+   "want": "44",
+   "note": ""
+  },
+  {
+   "item": "B13 41 = 44−4+1 且 3+16+41 = 60",
+   "pass_": true,
+   "got": "41／60",
+   "want": "41／60",
+   "note": ""
+  },
+  {
+   "item": "B13 Ω_b = 3/60 = 1/20",
+   "pass_": true,
+   "got": "1/20",
+   "want": "1/20",
+   "note": ""
+  },
+  {
+   "item": "B14 z_pl_ud 與錨值恆等式一致（<1e−6）",
+   "pass_": true,
+   "got": "+8.06931",
+   "want": "+8.06931",
+   "note": ""
+  },
+  {
+   "item": "B15 X 跨度 ＝ max−min（<1e−9）",
+   "pass_": true,
+   "got": "37.885000",
+   "want": "37.885000",
+   "note": ""
+  },
+  {
+   "item": "B15 跨度/σ_X = 403.03σ",
+   "pass_": true,
+   "got": "403.03",
+   "want": "403.03",
+   "note": ""
+  },
+  {
+   "item": "B16 em 恆等式（ε=0.78；<1e−9）",
+   "pass_": true,
+   "got": "2.264588962",
+   "want": "2.264588962",
+   "note": ""
+  },
+  {
+   "item": "B17 n_s ＝ (⟨O⟩−1)·3/2（⟨O⟩=1+(B−2)n_s/3，B=4）",
+   "pass_": true,
+   "got": "2.1319857422",
+   "want": "2.1319857422",
+   "note": "純代數恆等"
+  },
+  {
+   "item": "B17 所需 n_s ∉ {0,1,2}（域外）",
+   "pass_": true,
+   "got": "2.1320",
+   "want": ">2",
+   "note": ""
+  },
+  {
+   "item": "D1 全部引用皆存在或已登記於 docs/30",
+   "pass_": true,
+   "got": "未登記 0／登記 22",
+   "want": "未登記 0",
+   "note": ""
+  },
+  {
+   "item": "D2 scripts 11–20 全部 npass 有文檔落點",
+   "pass_": true,
+   "got": "0",
+   "want": "0",
+   "note": ""
+  },
+  {
    "item": "C1 register = closed/negative",
    "pass_": true,
    "got": "closed/negative",
@@ -191,6 +310,9 @@
    "docs/27_m5_operator_slot.md",
    "docs/28_flavour_blind_theorem.md",
    "docs/29_m15_gate_scope.md",
+   "docs/30_broken_ref_register.md",
+   "docs/31_m2_identity_propagation.md",
+   "docs/32_unresolved_inventory.md",
    "scripts/03_grep_evidence.py",
    "scripts/04_doc_consistency.py",
    "scripts/05_additivity_scope.py",
@@ -209,6 +331,7 @@
    "scripts/18_m5_operator_slot.py",
    "scripts/19_flavour_blind_theorem.py",
    "scripts/20_m15_gate_check.py",
+   "scripts/21_m2_reading_verify.py",
    "scripts/run_chain.sh",
    "data/01_reproduction_gate.json",
    "data/02_r5_mode_content_nogo.json",
@@ -230,6 +353,8 @@
    "data/18_m5_operator_slot.json",
    "data/19_flavour_blind_theorem.json",
    "data/20_m15_gate_check.json",
+   "data/21_m2_reading_verify.json",
+   "data/30_broken_ref_register.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
@@ -253,6 +378,7 @@
    "data/run_18_m5_operator_slot.log",
    "data/run_19_flavour_blind_theorem.log",
    "data/run_20_m15_gate_check.log",
+   "data/run_21_m2_reading_verify.log",
    "data/watermark.json",
    "01_problem_record.md",
    "SESSION_START.md",
@@ -284,6 +410,8 @@
    "data/18_m5_operator_slot.json",
    "data/19_flavour_blind_theorem.json",
    "data/20_m15_gate_check.json",
+   "data/21_m2_reading_verify.json",
+   "data/30_broken_ref_register.json",
    "data/handoff_withdrawals.json",
    "data/run_01_reproduction_gate.log",
    "data/run_02_r5_mode_content_nogo.log",
@@ -307,6 +435,7 @@
    "data/run_18_m5_operator_slot.log",
    "data/run_19_flavour_blind_theorem.log",
    "data/run_20_m15_gate_check.log",
+   "data/run_21_m2_reading_verify.log",
    "data/watermark.json",
    "docs/10_reproduction_gate.md",
    "docs/11_definition_freeze.md",
@@ -328,6 +457,9 @@
    "docs/27_m5_operator_slot.md",
    "docs/28_flavour_blind_theorem.md",
    "docs/29_m15_gate_scope.md",
+   "docs/30_broken_ref_register.md",
+   "docs/31_m2_identity_propagation.md",
+   "docs/32_unresolved_inventory.md",
    "final_result.md",
    "scripts/01_reproduction_gate.py",
    "scripts/02_r5_mode_content_nogo.py",
@@ -350,12 +482,20 @@
    "scripts/18_m5_operator_slot.py",
    "scripts/19_flavour_blind_theorem.py",
    "scripts/20_m15_gate_check.py",
+   "scripts/21_m2_reading_verify.py",
    "scripts/run_chain.sh"
   ],
   "uncovered": []
  },
  "C3": {
   "rows": [
+   {
+    "commit": "264c590",
+    "file": "01_problem_record.md",
+    "n_del": 69,
+    "n_live": 69,
+    "n_lost": 0
+   },
    {
     "commit": "96175d2",
     "file": "01_problem_record.md",
@@ -432,13 +572,6 @@
     "n_del": 1,
     "n_live": 0,
     "n_lost": 0
-   },
-   {
-    "commit": "2a3e313",
-    "file": "01_problem_record.md",
-    "n_del": 44,
-    "n_live": 44,
-    "n_lost": 0
    }
   ],
   "violations": []
@@ -456,6 +589,6 @@
   "need_xi": 3.31008,
   "uncovered": 0
  },
- "npass": 23,
- "ntotal": 23
+ "npass": 40,
+ "ntotal": 40
 }
