@@ -1,7 +1,7 @@
 ==============================================================================
 M21 scripts/05 — 產物查重 ＋ 雙態登記
 ==============================================================================
-  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9726
+  掃描檔案數（v10 ∪ v11，.md/.py，排除本 O） = 9733
 
   K1  Σ_χ d(d−1) = 44（A₅ 度集普查）
     命中檔案數 = 26
@@ -49,7 +49,7 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
       · IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/src/sqrt_phi_algebraic_origin.py
 
   K6  f_M0·f_R 乘積 = N_O38
-    命中檔案數 = 97
+    命中檔案數 = 98
       · IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino/docs/14_open_problems.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md
       · IDCM-v10.0--It-From-Beat/open_problems_fresh/o86_sm_gr_coupling/SESSION_START.md
@@ -70,19 +70,19 @@ M21 scripts/05 — 產物查重 ＋ 雙態登記
     命中檔案數 = 2
       · IDCM-v11.0--Reality-Architecture/main_problems/m22_observational_field_layer/scripts/00_reproduction_gate.py
       · IDCM-v11.0--Reality-Architecture/main_problems/m16_group_selection_principle/docs/05_minimum_cost_principle.md
-[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9726 files
+[PASS] NDR1-a  查重掃描完成（> 500 檔） :: 9733 files
 [PASS] NDR1  K1 查重已記錄 :: hits = 26
 [PASS] NDR1  K2 查重已記錄 :: hits = 167
 [PASS] NDR1  K3 查重已記錄 :: hits = 77
 [PASS] NDR1  K4 查重已記錄 :: hits = 29
 [PASS] NDR1  K5 查重已記錄 :: hits = 122
-[PASS] NDR1  K6 查重已記錄 :: hits = 97
+[PASS] NDR1  K6 查重已記錄 :: hits = 98
 [PASS] NDR1  K7 查重已記錄 :: hits = 157
 [PASS] NDR1  K8 查重已記錄 :: hits = 2
 [PASS] NDR1-dedup  K1 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 26
 [PASS] NDR1-dedup  K2 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 167
 [PASS] NDR1-dedup  K4 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 29
-[PASS] NDR1-dedup  K6 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 97
+[PASS] NDR1-dedup  K6 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 98
 [PASS] NDR1-dedup  K7 有上游命中 ⟹ 只可宣稱裁決／閘／圖，不得宣稱新恆等式 :: hits = 157
 
 ── 雙態登記（機械生成）──

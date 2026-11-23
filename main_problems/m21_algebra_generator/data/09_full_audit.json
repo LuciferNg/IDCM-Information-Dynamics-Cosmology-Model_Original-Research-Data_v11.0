@@ -82,8 +82,8 @@
     },
     {
       "tag": "B05  byte-identical ＋ rc=0",
-      "pass": true,
-      "detail": "rc=0, diff=0"
+      "pass": false,
+      "detail": "rc=0, diff=YES"
     },
     {
       "tag": "B06  byte-identical ＋ rc=0",
@@ -321,8 +321,8 @@
       "detail": "見段標題"
     }
   ],
-  "n_pass": 64,
-  "n_fail": 0,
+  "n_pass": 63,
+  "n_fail": 1,
   "n_total": 64,
   "doc_claim_hit_rate": "38/38",
   "table_bad": [
