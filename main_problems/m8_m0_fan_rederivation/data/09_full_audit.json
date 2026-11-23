@@ -243,7 +243,7 @@
     "detail": "未申報 = []"
   },
   "_D": {
-    "traced": 165,
+    "traced": 166,
     "untraced": [
       {
         "doc": "04_r2prime_two_chart_results.md",
@@ -364,6 +364,11 @@
         "doc": "01_problem_record.md",
         "num": "3.7e-6",
         "reason": "§十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "8.685e-4",
+        "reason": "§十九·2 空模型窗寬 4 s.f.（data/12 window_dex = 8.6858925e−4）"
       }
     ]
   },
@@ -420,7 +425,7 @@
   "E4 docs 編號連續 01–09": {
     "pass": true,
     "warn": false,
-    "detail": "9 個檔案"
+    "detail": "10 個檔案"
   },
   "_E": {
     "docs": [
@@ -432,7 +437,8 @@
       "06_r5prime_hierarchy_reduction.md",
       "07_r6prime_three_input_falsifiability.md",
       "08_r7prime_power_audit_selfcorrection.md",
-      "09_r8prime_forcing_candidates.md"
+      "09_r8prime_forcing_candidates.md",
+      "10_nogo_prereg_count_family.md"
     ],
     "scripts": [
       "01_fan_geometry.py",
@@ -445,20 +451,22 @@
       "08_forcing_candidates.py",
       "09_full_audit.py",
       "10_independent_verifier.py",
-      "11_doc_crosscheck.py"
+      "11_doc_crosscheck.py",
+      "12_count_family_blindtest.py",
+      "13_nearest_diag.py"
     ],
     "dangling": [],
     "missing_readme": []
   },
-  "F1 每個 docs/01–09 至少被時序表或結果節引用一次": {
+  "F1 每個 docs/01–10 至少被時序表或結果節引用一次": {
     "pass": true,
     "warn": false,
     "detail": "未引用 = []"
   },
-  "F2 時序 row 數 = 9（R1／R2′／R3′+R4′／R5′／R6′／R7′／R8′／審計一輪／audit-verify 全鏈）": {
+  "F2 時序 row 數 = 10（R1–R8′／審計一輪／audit-verify 全鏈／handoff 帳／純計數族盲測）": {
     "pass": true,
     "warn": false,
-    "detail": "rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9']"
+    "detail": "rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']"
   },
   "F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）": {
     "pass": true,
@@ -475,7 +483,8 @@
       "6",
       "7",
       "8",
-      "9"
+      "9",
+      "10"
     ],
     "cited_docs": [
       "01",
@@ -486,7 +495,8 @@
       "06",
       "07",
       "08",
-      "09"
+      "09",
+      "10"
     ]
   },
   "G1 兩檔 block state 一致且 = partial": {
@@ -665,10 +675,10 @@
     "warn": false,
     "detail": "skill §3.1 ⑥"
   },
-  "K6b driver dry-run 可執行且列出 11 步": {
+  "K6b driver dry-run 可執行且列出全部 13 支腳本": {
     "pass": true,
     "warn": false,
-    "detail": "exit=0，[dry] 行數=11"
+    "detail": "exit=0，[dry] 行數=13／磁碟 .py = 13"
   },
   "_summary": {
     "warn": 0,

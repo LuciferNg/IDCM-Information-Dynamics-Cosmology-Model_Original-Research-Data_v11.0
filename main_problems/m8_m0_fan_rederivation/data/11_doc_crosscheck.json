@@ -135,6 +135,18 @@
     "pass": true,
     "detail": "期望 5.00222e-12 ↔ 文檔 5.00222e-12（rel 0.0e+00；R8′）"
   },
+  "C.10_nogo_prereg.|D| = 1368（預註冊族規模）": {
+    "pass": true,
+    "detail": "期望 1368 ↔ 文檔 1368（rel 0.0e+00；L2 §5b 獨立算術）"
+  },
+  "C.10_nogo_prereg.p₃(44) = 161": {
+    "pass": true,
+    "detail": "期望 161 ↔ 文檔 161（rel 0.0e+00；B3 三分拆）"
+  },
+  "C.10_nogo_prereg.名義 N_family = 33132": {
+    "pass": true,
+    "detail": "期望 33132 ↔ 文檔 33132（rel 0.0e+00；§1.4）"
+  },
   "C2.1 docs/09 載 79.5538（★二輪更正）": {
     "pass": true,
     "detail": "舊 78.55 只可留於更正欄"
@@ -156,7 +168,7 @@
     "detail": "非 78.55"
   },
   "_summary": {
-    "checks": 39,
+    "checks": 42,
     "fail": 0,
     "by_doc": {
       "docs/02_r1_results.md": [
@@ -192,6 +204,10 @@
         4
       ],
       "01_problem_record.md": [
+        3,
+        3
+      ],
+      "docs/10_nogo_prereg_count_family.md": [
         3,
         3
       ]

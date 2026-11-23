@@ -245,6 +245,7 @@ ALLOW = {
     "5.222686e35": "§十八·3 引述 M21 手誤值（非本 M 數值；已 register note 通報）",
     "5.223685239e35": "§十八·3 重算 10^35.717977（D2 級，非文檔宣稱值）",
     "3.7e-6": "§十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）",
+    "8.685e-4": "§十九·2 空模型窗寬 4 s.f.（data/12 window_dex = 8.6858925e−4）",
 }
 unexplained = [(f, n) for f, n in untraced if norm_minus(n) not in ALLOW]
 print(f"  可追溯 = {traced}，未對應 = {len(untraced)}，其中未申報 = {len(unexplained)}")
@@ -343,13 +344,13 @@ RES["_E"] = {"docs": sorted(docs_act), "scripts": sorted(scr_act),
 hdr("§F 時序表：01_problem_record 每 row 必須引用存在之文檔")
 
 rec = (ROOT / "01_problem_record.md").read_text(encoding="utf-8")
-rows = re.findall(r"^\| (\d+) \| 2026-10-26 \|", rec, re.M)
+rows = re.findall(r"^\| (\d+) \| 2026-\d\d-\d\d \|", rec, re.M)
 print(f"  時序 row 數 = {len(rows)}：{rows}")
 cited = set(re.findall(r"`docs/(\d+)_[\w_]+\.md`", norm_minus(rec)))
 print(f"  被引用 docs = {sorted(cited)}")
-missing_docs = sorted(set(f"{i:02d}" for i in range(1, 10)) - cited)
-chk("F1 每個 docs/01–09 至少被時序表或結果節引用一次", not missing_docs, f"未引用 = {missing_docs}")
-chk("F2 時序 row 數 = 9（R1／R2′／R3′+R4′／R5′／R6′／R7′／R8′／審計一輪／audit-verify 全鏈）", len(rows) == 9, f"rows = {rows}")
+missing_docs = sorted(set(f"{i:02d}" for i in range(1, 11)) - cited)
+chk("F1 每個 docs/01–10 至少被時序表或結果節引用一次", not missing_docs, f"未引用 = {missing_docs}")
+chk("F2 時序 row 數 = 10（R1–R8′／審計一輪／audit-verify 全鏈／handoff 帳／純計數族盲測）", len(rows) == 10, f"rows = {rows}")
 chk("F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）",
     (rec.count("推翻") + rec.count("撤回") + rec.count("撤銷")) >= 3,
     f"推翻={rec.count('推翻')} 撤回={rec.count('撤回')} 撤銷={rec.count('撤銷')}")
@@ -517,8 +518,9 @@ chk("K6 driver 存在（scripts/run_chain.sh，預設 dry-run）", drv.exists(),
 if drv.exists():
     dry = subprocess.run(["bash", str(drv)], capture_output=True, text=True, cwd=str(ROOT))
     n_lines = dry.stdout.count("[dry]")
-    chk("K6b driver dry-run 可執行且列出 11 步", dry.returncode == 0 and n_lines == 11,
-        f"exit={dry.returncode}，[dry] 行數={n_lines}")
+    n_expect = len(allpy)
+    chk(f"K6b driver dry-run 可執行且列出全部 {n_expect} 支腳本", dry.returncode == 0 and n_lines == n_expect,
+        f"exit={dry.returncode}，[dry] 行數={n_lines}／磁碟 .py = {n_expect}")
 
 
 # ============================================================================

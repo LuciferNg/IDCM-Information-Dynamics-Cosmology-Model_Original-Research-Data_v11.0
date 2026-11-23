@@ -36,6 +36,9 @@
 [PASS] C.01_problem_rec.缺口倍數  |  期望 79.5538 ↔ 文檔 79.5538（rel 1.4e-11；★79.5538）
 [PASS] C.01_problem_rec.S*  |  期望 47.5278 ↔ 文檔 47.5278（rel 1.2e-13；指數族）
 [PASS] C.01_problem_rec.det'(1−K/2)  |  期望 5.00222e-12 ↔ 文檔 5.00222e-12（rel 0.0e+00；R8′）
+[PASS] C.10_nogo_prereg.|D| = 1368（預註冊族規模）  |  期望 1368 ↔ 文檔 1368（rel 0.0e+00；L2 §5b 獨立算術）
+[PASS] C.10_nogo_prereg.p₃(44) = 161  |  期望 161 ↔ 文檔 161（rel 0.0e+00；B3 三分拆）
+[PASS] C.10_nogo_prereg.名義 N_family = 33132  |  期望 33132 ↔ 文檔 33132（rel 0.0e+00；§1.4）
 
   逐檔命中：
     docs/02_r1_results.md                          1/1
@@ -47,6 +50,7 @@
     docs/09_r8prime_forcing_candidates.md          7/7
     README.md                                      4/4
     01_problem_record.md                           3/3
+    docs/10_nogo_prereg_count_family.md            3/3
 
 ==============================================================================
 §2 高風險數字之專項核（★ = 本輪審計更正項）
@@ -60,7 +64,7 @@
 ==============================================================================
 §3 匯總
 ==============================================================================
-檢查項 = 39，FAIL = 0
+檢查項 = 42，FAIL = 0
 
 寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/11_doc_crosscheck.json
 寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/run_11.log

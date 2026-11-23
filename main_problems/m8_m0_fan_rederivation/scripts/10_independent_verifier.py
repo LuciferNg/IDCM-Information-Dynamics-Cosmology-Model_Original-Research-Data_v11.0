@@ -240,13 +240,35 @@ RES["_cross"] = {"lambda_max4": float(lam_max)}
 
 
 # ============================================================================
-# §6 匯總
+# §5b 純計數族規模（docs/10 預註冊量之獨立算術）
 # ============================================================================
+hdr("§5b 純計數族規模（獨立算術；docs/10 §1.2–§1.4 之預註冊量）")
+_NF = [3, 4, 5, 7, 9, 11, 13, 16, 18, 20, 22, 24, 29, 33, 44, 47, 55, 60, 88]
+_NB = [44, 60, 88, 90]
+_NS = [3, 4, 5, 7, 9, 11, 13, 16, 18, 20, 22, 24, 29, 33, 44]
+_NA = [2, 3, 4, 5, 7, 11]
+_n_b1 = len(_NF)
+_n_b2 = sum(n - 1 for n in _NB)
+_n_b3 = sum(1 for a in range(1, 45) for b in range(1, a + 1)
+            for c in range(1, b + 1) if a + b + c == 44)   # a≥b≥c≥1, a+b+c=44
+_n_b4 = sum(_NS)
+_n_b5 = _n_b4
+_n_b6, _n_b7, _n_b8, _n_b9 = 60, 20, 47, 15
+_n_b10 = len(_NA) * len(range(3, 45))
+_nD = _n_b1 + _n_b2 + _n_b3 + _n_b4 + _n_b5 + _n_b6 + _n_b7 + _n_b8 + _n_b9 + _n_b10
+chk("E1 |D| = 1368（B1–B10 逐條重算）", _nD == 1368,
+    f"{_n_b1}+{_n_b2}+{_n_b3}+{_n_b4}+{_n_b5}+{_n_b6}+{_n_b7}+{_n_b8}+{_n_b9}+{_n_b10} = {_nD}")
+chk("E2 B3 三分拆 p₃(44) = 161", _n_b3 == 161, f"枚舉 = {_n_b3}")
+chk("E3 名義 N_family = (25+1368)×12 + 1368×12 = 33132",
+    (25 + _nD) * 12 + _nD * 12 == 33132, f"{(25 + _nD) * 12 + _nD * 12}")
+
 hdr("§6 匯總")
 total = len([k for k in RES if not k.startswith("_")])
 print(f"檢查項 = {total}，FAIL = {N_FAIL}")
 RES["_summary"] = {"checks": total, "fail": N_FAIL}
 
+RES["_family"] = {"n_D": _nD, "n_B3": _n_b3, "n_atoms": 25,
+                  "nominal": (25 + _nD) * 12 + _nD * 12}
 (DATA / "10_independent_verify.json").write_text(
     json.dumps(RES, ensure_ascii=False, indent=2), encoding="utf-8")
 (DATA / "run_10.log").write_text("\n".join(LOG) + "\n", encoding="utf-8")

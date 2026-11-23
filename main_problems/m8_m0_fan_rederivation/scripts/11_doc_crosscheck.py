@@ -48,7 +48,10 @@ TOK = re.compile(r"(\d+(?:\.\d+)?)(?:[eE]([+\u2212-]?\d+))?")
 
 
 def tokens(text):
-    """抽全部數值 token：(float_value, 有效位數)"""
+    """抽全部數值 token → [(float, 有效位數)]（U+2212 先歸一；千分位逗號先剝）"""
+    text = text.replace("\u2212", "-")
+    text = re.sub(r"(?<![\d,])(\d{1,3}(?:,\d{3})+)(?![\d,])",
+                  lambda m: m.group(1).replace(",", ""), text)
     out = []
     for m in TOK.finditer(text.replace("\u2212", "-")):
         mant, exp = m.group(1), m.group(2)
@@ -80,6 +83,7 @@ sp = L2["_spectrum"]
 ch = L2["_chart"]
 hi = L2["_hierarchy"]
 de = L2["_determinant"]
+fa = L2["_family"]
 
 RATIO = 1.0 / de["gap_factor"]          # 1/det(1+K) 比 μ 大幾多倍（= 79.5538）
 
@@ -118,6 +122,9 @@ CLAIMS = [
     ("01_problem_record.md", "缺口倍數", RATIO, "★79.5538"),
     ("01_problem_record.md", "S*", hi["S_star"], "指數族"),
     ("01_problem_record.md", "det'(1−K/2)", sp["det_prime_half"], "R8′"),
+    ("docs/10_nogo_prereg_count_family.md", "|D| = 1368（預註冊族規模）", fa["n_D"], "L2 §5b 獨立算術"),
+    ("docs/10_nogo_prereg_count_family.md", "p₃(44) = 161", fa["n_B3"], "B3 三分拆"),
+    ("docs/10_nogo_prereg_count_family.md", "名義 N_family = 33132", fa["nominal"], "§1.4"),
 ]
 
 hdr("§1 文檔數字 ↔ L2 獨立重算（唯讀；數值容差）")
