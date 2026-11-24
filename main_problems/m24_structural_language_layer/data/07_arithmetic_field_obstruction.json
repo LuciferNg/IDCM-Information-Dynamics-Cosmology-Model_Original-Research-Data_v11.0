@@ -1,0 +1,177 @@
+{
+  "checks": [
+    {
+      "tag": "C1-a  5 ∤ 88 ⟹ ram(ℚ(√5)) ⊄ ram(ℚ(ζ₈₈)) ⟹ ℚ(√5) ⊄ ℚ(ζ₈₈)（定理：K⊂L ⟹ ram(K)⊆ram(L)）",
+      "pass": true,
+      "detail": "ram_cyc = [2, 11]"
+    },
+    {
+      "tag": "C1-b  disc(ℚ(√5)) = 5（fundamental discriminant，squarefree 5 ≡ 1 mod 4）",
+      "pass": true,
+      "detail": "D = 5"
+    },
+    {
+      "tag": "C2-a  8 個特徵標全部乘性（逐對 40² 檢）",
+      "pass": true,
+      "detail": "pairs = 1600"
+    },
+    {
+      "tag": "C2-b  conductor 值 ⊆ {1,2,4,8,11,22,44,88}（88 之因數）",
+      "pass": true,
+      "detail": "[1, 4, 8, 11, 44, 88]"
+    },
+    {
+      "tag": "C2-c  **無**任何二次子域 = ℚ(√5)：D 候選中 squarefree part = 5 者 = 0 ⟹ C2 機核成立",
+      "pass": true,
+      "detail": "has5 = []"
+    },
+    {
+      "tag": "C2-e  誠實：D=5 之 probe 吻合數 = 0 ⟹ ℚ(√5) 之排除**只依賴 C1 定理**（5 ramified），非依賴 probe 搜尋",
+      "pass": true,
+      "detail": "match5 = []"
+    },
+    {
+      "tag": "C2-d  非平凡二次子域數 = 7（(Z/88)^× 之 2-rank 3 ⟹ 2³−1 = 7）",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "tag": "C3-a  結構推論：算術自然之跨側字典 像 ⊆ ℚ（兩域交集），可携帶者僅度集之 ℚ-對稱函數",
+      "pass": true,
+      "detail": "標「推論」，不作定理"
+    },
+    {
+      "tag": "C3-b  三目標之已註冊表達式皆 ℚ-對稱（只依賴度多重集之無序結構）⟹ 算術障礙不個別殺任何一數",
+      "pass": true,
+      "detail": "障礙係『精細標籤不可跨側』，非『目標數不可達』"
+    }
+  ],
+  "n_pass": 9,
+  "n_fail": 0,
+  "n_total": 9,
+  "ramification": {
+    "88": {
+      "2": 3,
+      "11": 1
+    },
+    "ram_q5": [
+      5
+    ],
+    "ram_cyc": [
+      2,
+      11
+    ]
+  },
+  "characters": [
+    {
+      "key": [
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      "conductor": 1,
+      "D_matches": []
+    },
+    {
+      "key": [
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      "conductor": 11,
+      "D_matches": [
+        -11,
+        124
+      ]
+    },
+    {
+      "key": [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      "conductor": 8,
+      "D_matches": [
+        -8
+      ]
+    },
+    {
+      "key": [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      "conductor": 88,
+      "D_matches": [
+        -248,
+        88,
+        337
+      ]
+    },
+    {
+      "key": [
+        [
+          1,
+          0
+        ],
+        0
+      ],
+      "conductor": 4,
+      "D_matches": [
+        -4,
+        341
+      ]
+    },
+    {
+      "key": [
+        [
+          1,
+          0
+        ],
+        1
+      ],
+      "conductor": 44,
+      "D_matches": [
+        -31,
+        44
+      ]
+    },
+    {
+      "key": [
+        [
+          1,
+          1
+        ],
+        0
+      ],
+      "conductor": 8,
+      "D_matches": [
+        8
+      ]
+    },
+    {
+      "key": [
+        [
+          1,
+          1
+        ],
+        1
+      ],
+      "conductor": 88,
+      "D_matches": [
+        -88,
+        248
+      ]
+    }
+  ],
+  "has_q5_subfield": [],
+  "verdict": "C1/C2 機核成立（ℚ(√5) ⊄ ℚ(ζ₈₈)）；C3 = 結構推論（像 ⊆ ℚ）"
+}

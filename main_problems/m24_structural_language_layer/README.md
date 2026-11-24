@@ -2,8 +2,9 @@
 
 ## 狀態
 
-🟡 **partial — 第一輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄
-重現閘 17/17｜scripts 76 PASS / 0 FAIL（00–05）｜6 docs｜6 data
+🟡 **partial — 兩輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄（已量化）
+重現閘 17/17｜scripts 99 PASS / 0 FAIL（00–08）｜9 docs｜9 data
+第二輪：R-a／R-b 復活失敗（統一索引族 0 命中）；R-c 得 ℚ(√5) ⊄ ℚ(ζ₈₈) 障礙；T3 收緊至定義級（內容 ≤3 bits）
 
 ## 一句話
 
@@ -55,7 +56,11 @@ predict:  (N₂, h11, h21) = (16, 36, 98) 同源 ＋ 密度 ≤5% ＋ 零自由�
 | `docs/03_l3_measure_transport_result.md` | T3 🟡：O210 範圍閘、零參數傳輸三路、條件式定理 |
 | `docs/04_l0_meta_language_result.md` | T4 ✅：S1–S4 判準、10/10 校準、3 盲測、grade 分裂 |
 | `docs/05_interdependence_and_ledger.md` | P5 🔴：分裂定理、總帳、復活條件 R-a–R-d |
-| `scripts/00–05` `data/*.json` `logs/*.txt` | 六輪機核（76 PASS / 0 FAIL，全 exit 0） |
+| `docs/06_preregistration_round2.md` | 第二輪跑前凍結：R-a／R-b 規則族、C1–C3、D1–D3 |
+| `docs/07_r_a_r_b_uniform_rule_result.md` | R-a／R-b 🔴：117 格 × 13 濾子 0 命中；後驗 36 讀法（M 型） |
+| `docs/08_arithmetic_field_obstruction.md` | R-c 🟡：ℚ(√5) ⊄ ℚ(ζ₈₈)（定理＋機核）⟹ 像 ⊆ ℚ |
+| `docs/09_t3_dof_result.md` | T3 收緊：零參數⟹Aut-不變（定義級）；內容 ≤3 bits = {20,24} |
+| `scripts/00–08` `data/*.json` `logs/*.txt` | 九輪機核（99 PASS / 0 FAIL，全 exit 0） |
 
 ## 依賴
 

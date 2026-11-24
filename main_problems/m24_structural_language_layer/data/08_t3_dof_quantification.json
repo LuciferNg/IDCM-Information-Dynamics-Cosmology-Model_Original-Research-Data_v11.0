@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "tag": "D1-a  共軛不變族 = 2³ = 8（3 bits）；僅逆不變 = 2²²（22 bits）",
+      "pass": true,
+      "detail": "8｜4194304"
+    },
+    {
+      "tag": "D2-a  非等變傳輸之選擇數 = 44! ≈ 2^180.8（≫ dof 0）｜mod 60 後 bit 長 = 175",
+      "pass": true,
+      "detail": "bits = 180.79｜quot bits = 175"
+    },
+    {
+      "tag": "D2-b  等變雙射數 = 0（6 對 orbit 多重集全不中）⟹ 非等變 44! 個全部違零參數",
+      "pass": true,
+      "detail": "eqv = []"
+    },
+    {
+      "tag": "D2-c  8 個共軛不變選項中，唯一與模式側分割可比者 = {20,24}（階3 vs 階5 ≡ gcd=1 vs >1）⟹ 等變族之全部可觀測內容 ≤ log₂8 = 3 bits，且命中者係粗標籤",
+      "pass": true,
+      "detail": "matches = [('階3 vs 階5', 'gcd=1 vs >1', [24, 20])]｜bits ≤ 3"
+    },
+    {
+      "tag": "D2-d  振幅指派需 44 個實數（≥ 44·b bits）≫ 3 bits ⟹ 等變族在維度上不可能承載振幅（此即 M21 AB4 之定量版）",
+      "pass": true,
+      "detail": "44 reals vs 3 bits"
+    },
+    {
+      "tag": "D3-a  定義級命題成立：零參數 ⟹ Aut-不變（反例即含標籤選擇 = 自由度）",
+      "pass": true,
+      "detail": "D1 命題；本檔量化其後果"
+    },
+    {
+      "tag": "D3-b  L3 判維持 🟡（不得升 🟢）：條件式定理已由「兩路證據」升為「定義級」，唯一逃生 = 拒絕 D1（即以『標籤選擇不算參數』為新假設，該假設本身即有 dof）",
+      "pass": true,
+      "detail": "🟡（收緊，不升格）"
+    }
+  ],
+  "n_pass": 7,
+  "n_fail": 0,
+  "n_total": 7,
+  "invariant_families": {
+    "conj": {
+      "orbit_sizes": [
+        20,
+        12,
+        12
+      ],
+      "n_subsets": 8,
+      "bits": 3
+    },
+    "inv": {
+      "orbit_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n_subsets": 4194304,
+      "bits": 22
+    },
+    "conj_inv": {
+      "n_subsets": 8
+    }
+  },
+  "factorial44": {
+    "value": "2658271574788448768043625811014615890319638528000000000",
+    "log2": 180.79460562491477,
+    "mod60_bits": 175
+  },
+  "equivariant_bijections": [],
+  "content_bound_bits": 3,
+  "content_match": [
+    [
+      "階3 vs 階5",
+      "gcd=1 vs >1",
+      [
+        24,
+        20
+      ]
+    ]
+  ],
+  "verdict": "T3 🟡（定義級收緊：零參數⟹Aut-不變；等變族內容 ≤3 bits = {20,24} 粗標籤）"
+}
