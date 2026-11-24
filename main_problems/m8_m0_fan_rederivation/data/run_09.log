@@ -52,14 +52,14 @@
     [申報] 01_problem_record.md 5.223685239e35 — §十八·3 重算 10^35.717977（D2 級，非文檔宣稱值）
     [申報] 01_problem_record.md 3.7e-6 — §十八·3 N_O38 7 位輸入之精度差（log₁₀ 比較）
     [申報] 01_problem_record.md 8.685e-4 — §十九·2 空模型窗寬 4 s.f.（data/12 window_dex = 8.6858925e−4）
-    [申報] 01_problem_record.md 6.2e-6 — ★未申報
-    [申報] 01_problem_record.md 2.658e54 — ★未申報
-    [申報] 01_problem_record.md 2.625e25 — ★未申報
-    [申報] 01_problem_record.md 1.855e134 — ★未申報
+    [申報] 01_problem_record.md 6.2e-6 — §二十一·2 43·ln2 手誤量（重算）
+    [申報] 01_problem_record.md 2.658e54 — §二十一·3 44! 量級（反駁『有界』主張，重算）
+    [申報] 01_problem_record.md 2.625e25 — §二十一·3 C(88,44) 量級（重算）
+    [申報] 01_problem_record.md 1.855e134 — §二十一·3 88! 量級（重算）
     [申報] 01_problem_record.md 3.619e-51 — §二十一·3 F 公理自洽性反例（γ₁^22）
     [申報] 01_problem_record.md 1.58e30 — §二十一·3 F 公理偏差倍數（重算）
     [申報] 01_problem_record.md 2.3168022e-21 — §二十一·4 γ₁^9 重算值（判死 γ₁^{N/2} 整數步路線）
-[FAIL] D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）  |  未申報 = [('01_problem_record.md', '6.2e-6'), ('01_problem_record.md', '2.658e54'), ('01_problem_record.md', '2.625e25'), ('01_problem_record.md', '1.855e134')]
+[PASS] D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）  |  未申報 = []
 
 ==============================================================================
 §D2 文內推導值重算（唔信文檔，重新計）

@@ -238,9 +238,9 @@
     "unresolved": []
   },
   "D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）": {
-    "pass": false,
+    "pass": true,
     "warn": false,
-    "detail": "未申報 = [('01_problem_record.md', '6.2e-6'), ('01_problem_record.md', '2.658e54'), ('01_problem_record.md', '2.625e25'), ('01_problem_record.md', '1.855e134')]"
+    "detail": "未申報 = []"
   },
   "_D": {
     "traced": 169,
@@ -373,22 +373,22 @@
       {
         "doc": "01_problem_record.md",
         "num": "6.2e-6",
-        "reason": null
+        "reason": "§二十一·2 43·ln2 手誤量（重算）"
       },
       {
         "doc": "01_problem_record.md",
         "num": "2.658e54",
-        "reason": null
+        "reason": "§二十一·3 44! 量級（反駁『有界』主張，重算）"
       },
       {
         "doc": "01_problem_record.md",
         "num": "2.625e25",
-        "reason": null
+        "reason": "§二十一·3 C(88,44) 量級（重算）"
       },
       {
         "doc": "01_problem_record.md",
         "num": "1.855e134",
-        "reason": null
+        "reason": "§二十一·3 88! 量級（重算）"
       },
       {
         "doc": "01_problem_record.md",
@@ -717,9 +717,7 @@
   },
   "_summary": {
     "warn": 0,
-    "fail": 1,
-    "findings": [
-      "FAIL: D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報） — 未申報 = [('01_problem_record.md', '6.2e-6'), ('01_problem_record.md', '2.658e54'), ('01_problem_record.md', '2.625e25'), ('01_problem_record.md', '1.855e134')]"
-    ]
+    "fail": 0,
+    "findings": []
   }
 }
