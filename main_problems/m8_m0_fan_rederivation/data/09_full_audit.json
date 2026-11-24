@@ -238,12 +238,12 @@
     "unresolved": []
   },
   "D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報）": {
-    "pass": true,
+    "pass": false,
     "warn": false,
-    "detail": "未申報 = []"
+    "detail": "未申報 = [('01_problem_record.md', '6.2e-6'), ('01_problem_record.md', '2.658e54'), ('01_problem_record.md', '2.625e25'), ('01_problem_record.md', '1.855e134')]"
   },
   "_D": {
-    "traced": 166,
+    "traced": 169,
     "untraced": [
       {
         "doc": "04_r2prime_two_chart_results.md",
@@ -369,6 +369,41 @@
         "doc": "01_problem_record.md",
         "num": "8.685e-4",
         "reason": "§十九·2 空模型窗寬 4 s.f.（data/12 window_dex = 8.6858925e−4）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "6.2e-6",
+        "reason": null
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.658e54",
+        "reason": null
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.625e25",
+        "reason": null
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "1.855e134",
+        "reason": null
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "3.619e-51",
+        "reason": "§二十一·3 F 公理自洽性反例（γ₁^22）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "1.58e30",
+        "reason": "§二十一·3 F 公理偏差倍數（重算）"
+      },
+      {
+        "doc": "01_problem_record.md",
+        "num": "2.3168022e-21",
+        "reason": "§二十一·4 γ₁^9 重算值（判死 γ₁^{N/2} 整數步路線）"
       }
     ]
   },
@@ -682,7 +717,9 @@
   },
   "_summary": {
     "warn": 0,
-    "fail": 0,
-    "findings": []
+    "fail": 1,
+    "findings": [
+      "FAIL: D1 未對應數字全部屬『跨記錄引用』或『已重算』（零未申報） — 未申報 = [('01_problem_record.md', '6.2e-6'), ('01_problem_record.md', '2.658e54'), ('01_problem_record.md', '2.625e25'), ('01_problem_record.md', '1.855e134')]"
+    ]
   }
 }
