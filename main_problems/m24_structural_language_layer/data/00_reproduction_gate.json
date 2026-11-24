@@ -1,0 +1,148 @@
+{
+  "checks": [
+    {
+      "tag": "①-a  N_d = Σ_χ d(d−1) = |G| − #{g²=e} = 44",
+      "pass": true,
+      "detail": "N_d = 44｜|G|−N₂ = 44"
+    },
+    {
+      "tag": "①-b  N₂ = #{g: g²=e} = Σd = 16",
+      "pass": true,
+      "detail": "N₂ = 16｜Σd = 16"
+    },
+    {
+      "tag": "①-c  ΣΛ² = 22 ｜ ΣSym² = 38 ｜ Λ² + Sym² = Σd² = |G|",
+      "pass": true,
+      "detail": "22 ｜ 38 ｜ 和 = 60"
+    },
+    {
+      "tag": "①-d  γ_n + γ_{44−n} = B 恆等 ⟹ Σγ = 21·4 + 2 + 4 = 90 = B(N_d+1)/2",
+      "pass": true,
+      "detail": "Σγ = 90"
+    },
+    {
+      "tag": "①-e  h11 = N_d − 2B = 36",
+      "pass": true,
+      "detail": "36"
+    },
+    {
+      "tag": "①-f  h21 = Σγ + 2B = 98",
+      "pass": true,
+      "detail": "98"
+    },
+    {
+      "tag": "①-g  數值 cross-check（dps60）：Σγ、γ_22、γ_44、γ_max",
+      "pass": true,
+      "detail": "Σγ = 90.0｜γ_22 = 2.0｜γ_44 = 4.0"
+    },
+    {
+      "tag": "②-a  池 𝔇 大小 = 94",
+      "pass": true,
+      "detail": "|𝔇| = 94"
+    },
+    {
+      "tag": "②-b  命中 h11 = 36 者 n₃₆ = 4（兩恆等族）",
+      "pass": true,
+      "detail": "n₃₆ = 4｜['|G| − (|{order ∈ {5}}|)', '|G| − (Σ類子集 {12,12})', '|{order ∈ {1,2,3}}|', 'Σ類子集 {20,15,1}']"
+    },
+    {
+      "tag": "②-c  q_obs(44) = 1/30（族 𝔉 30 名 ｜ 命中 44 = 1）",
+      "pass": true,
+      "detail": "|𝔉| = 30｜命中 = ['Σ(d−1)^1 d^1 (d+1)^0']｜q = 1/30"
+    },
+    {
+      "tag": "②-d  {20,24} 在 cut 空間命中 = 2/43 = 4.65%",
+      "pass": true,
+      "detail": "cuts = [20, 24]｜2/43"
+    },
+    {
+      "tag": "③  任意度集 ΣΛ² = Σd(d−1)/2 ⟹「N_d/2 = ΣΛ²」係除 2 算術（1000 組 0 違例）",
+      "pass": true,
+      "detail": "trials = 1000｜violations = 0"
+    },
+    {
+      "tag": "④  φ(N) = 40 之偶數解（≤600）= {82,88,100,110,132,150}（6 解）",
+      "pass": true,
+      "detail": "[82, 88, 100, 110, 132, 150]"
+    },
+    {
+      "tag": "⑤-a  docs/11 存在且非空",
+      "pass": true,
+      "detail": "4399 chars"
+    },
+    {
+      "tag": "⑤-b  docs/11 未被撤回（無撤回標記）｜且 §7 明載「測度層 🔴 no-go（永久）」",
+      "pass": true,
+      "detail": "withdraw_marks = []"
+    },
+    {
+      "tag": "⑥  三個上游 data 樹（M21／M22／O210）(size, mtime_ns) 全不變 ⟹ 未重跑",
+      "pass": true,
+      "detail": "trees = 3｜changes = 0｜[]"
+    },
+    {
+      "tag": "⑥-b  本閘 AST 無外部進程呼叫（system/run/Popen/call/execv/spawn*）",
+      "pass": true,
+      "detail": "calls = []"
+    }
+  ],
+  "n_pass": 17,
+  "n_fail": 0,
+  "n_total": 17,
+  "rebuild": {
+    "N_d": 44,
+    "h11": 36,
+    "h21": 98,
+    "N2": 16,
+    "lam2": 22,
+    "sym2": 38,
+    "Sigma_gamma": 90,
+    "B": 4
+  },
+  "a5": {
+    "order": 60,
+    "class_sizes": [
+      20,
+      15,
+      12,
+      12,
+      1
+    ],
+    "degree_set": [
+      1,
+      3,
+      3,
+      4,
+      5
+    ],
+    "order_counts": {
+      "1": 1,
+      "2": 15,
+      "3": 20,
+      "5": 24
+    }
+  },
+  "pool": {
+    "size": 94,
+    "hits36": [
+      "|G| − (|{order ∈ {5}}|)",
+      "|G| − (Σ類子集 {12,12})",
+      "|{order ∈ {1,2,3}}|",
+      "Σ類子集 {20,15,1}"
+    ]
+  },
+  "family": {
+    "size": 30,
+    "hits44": [
+      "Σ(d−1)^1 d^1 (d+1)^0"
+    ]
+  },
+  "phi_solutions": [
+    82,
+    88,
+    100,
+    110,
+    132,
+    150
+  ]
+}

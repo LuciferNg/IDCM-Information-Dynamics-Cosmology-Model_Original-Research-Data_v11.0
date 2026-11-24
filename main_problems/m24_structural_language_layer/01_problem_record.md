@@ -3,12 +3,12 @@
 <!-- registry
 pid:     M24
 title:   結構語言層：分次標籤代數（L2）／上同調-Hodge 函子（L1）／測度傳輸層（L3）＋ count-identity 元語言 —— 建構或否證
-state:   registered
-verdict: -
-flags:   opened-only; no-derivation; language-layer; framework-level; test-suite-m21
+state:   partial
+verdict: partial
+flags:   language-layer; framework-level; test-suite-m21; round1-done; l0-built; l1-l2-negative; l3-narrowed
 owner:   M24
 created: 2026-11-20
-updated: 2026-11-20
+updated: 2026-11-25
 prereq:  M21（四殘項 AB1–AB4 作測試用例，所有權仍在 M21）＋ v10 O210 docs/11（測度層永久 no-go）＋ v10 O211（h11=36／h21=98 零輸入）＋ M22（BR1′–BR1‴）＋ M16／M6（dof = 0／1）
 source:  調律者 2026-11-20「欠缺什麼機制和什麼語言」→「開新M，待下一session建構」
 -->
@@ -156,9 +156,10 @@ predict:  (N₂, h11, h21) = (16, 36, 98)
 ## §九 狀態
 
 ```
-state = registered（只開不推）
-verdict = -
-scripts = 0 ｜ docs = 0 ｜ data = 0
+state = partial（第一輪推完；2026-11-25）
+verdict = partial
+scripts = 6（00–05）｜ docs = 6（00 預註冊 ＋ 01–05 結果）｜ data = 6（json）｜ logs = 6
+合計 76 PASS / 0 FAIL（全部 exit 0）
 ```
 
 ---
@@ -172,3 +173,94 @@ scripts = 0 ｜ docs = 0 ｜ data = 0
 - v10 `O211`（`h11=36`／`h21=98` 零輸入）
 - M12 `scripts/12_kappa_contraction.py`（Hodge ↔ 譜「無先驗對應」之明示）
 - M22 `docs/07_mr1_equivariance.md`（`BR1′`–`BR1‴`）
+
+---
+
+## §十一 第一輪結果（2026-11-25；append-only，不改 §〇–§十）
+
+### §11.0 重現閘（`scripts/00`，**17/17 PASS**，EXIT=0）
+
+```
+① N_d=44｜N₂=16｜ΣΛ²=22｜ΣSym²=38｜Σγ=90（γ_n+γ_{44−n}=B 恆等：21·4+2+4）｜h11=36｜h21=98
+   （A₅ 由 5 點偶置換精確重建；dps60 數值 cross-check 全中）
+② 池 𝔇=94｜n₃₆=4（2 恆等族）｜q_obs(44)=1/30｜{20,24} cut=2/43
+③ 「22=N_d/2」= 除 2 算術（1000 隨機度集 0 違例）
+④ φ(N)=40 偶數解（≤600）= {82,88,100,110,132,150}
+⑤ v10 O210 docs/11 存在、4399 chars、無撤回標記、§7 載「測度層 🔴 no-go（永久）」
+⑥ 上游三 data 樹 (size, mtime_ns) 全不變 ＋ AST 無進程呼叫 ⟹ 未重跑上游
+```
+
+### §11.1 判詞總表
+
+| 層 | T | 判 | 依據（腳本／水位） |
+|:-:|:-:|:--:|:--|
+| L2 分次標籤代數 | T1 | **🔴** | `scripts/01`（19/19）｜K1／K2／K4 FAIL；三數跨兩系統，交集 = {16} |
+| L1 上同調-Hodge 函子 | T2 | **🔴** | `scripts/02`（18/18）｜H1／H2／H3 FAIL；F1=(4,0)/(4,4)｜F2=59｜無單一函子 |
+| L3 測度傳輸 | T3 | **🟡 收窄** | `scripts/03`（10/10）｜O210 不覆蓋（Hom(A₅,ℤ₄)=0）；範疇內零參數傳輸三路全封 |
+| L0 count-identity 元語言 | T4 | **✅ 建成** | `scripts/04`（3/3）｜校準 10/10｜盲測 3/3 非F |
+| 三層互依 | P5 | **🔴** | `scripts/05`（9/9）｜I1 FAIL；分裂位置精確定位 |
+
+### §11.2 ★ 交集定理 ＋ 分裂定理（本輪硬結果）
+
+```
+L2-A（元素階）  = {16, 36}      98 ∉（元素計數 ≤ |G| = 60，型別不可能）
+L2-B（同構型）  = {16, 98}      36 ∉ 分級層（aggregate 0 命中；specific 只有 pattern {3,3,4}）
+L2-C（模式）    = {16, 36}      98 ∉（Σγ+2B 非計數）
+交集 = {16}   ⟹ 唯一跨側值恰為三數之一 ⟹ 不可作 producer（循環）
+分裂：repr-side {16, 98} ｜ chain-side {36}
+```
+
+### §11.3 ★ 新障礙定理：O211 Kähler sector 非 Galois 不變
+
+```
+Gal = (Z/88)^×/{±1}（order 20）作用於 {1..44}：orbit 大小 {20,10,5,5,2,1,1}
+S = {1..36}（O211 保留規則）非不變；反例 a=3, n=13 → 39
+但大小 36 之不變集存在（4 種 orbit 組合）⟹ 阻塞係「規則非不變」，非「無不變 36 集」
+不變子集 γ 和（128 子集）命中 98 = 0（orbit γ 和全為整數：40/20/9/11/4/2/4）
+```
+
+### §11.4 L0 grade 分裂（K6）＋ 殺手測試
+
+```
+16 → F（S1–S4 全過：FS 定理／模維數 ↔ 對合計數）
+98 → M（模側維數真、Hodge 函子缺；且 = ((Σd)²−Σd²)/2 代數恆等）
+36 → M（模側只在 specific pattern；鏈側濾子非 Galois 不變；池 94 命中 4）
+⟹ 三數不同級 ⟹ 殺手測試 FAIL（K1／K4／K6 FAIL，K3 部分）
+```
+
+### §11.5 總帳
+
+```
+連續 dof 增量 = 0 ｜ 新增結構約定 = 0
+殘項發還 M21（本 M 不改判）：AB1 🔴（新增非 Galois 不變）、AB2 🔴、AB3 🟡→F 候選、AB4 🟡
+```
+
+### §11.6 復活條件（可證偽，交下一入口）
+
+```
+R-a 模側分級層不變量 = 36（非 specific pattern）
+R-b 鏈側計數型量 = 98（非 Σγ+2B 之約定移位）
+R-c 自然變換 K₀(A₅) → 鏈譜範疇（表示環層；BR1 只封元素層）
+R-d 2B 移位由 K_Tree 分支耦合唯一強迫（現為 O56 🟡）
+```
+
+### §11.7 交付清單
+
+```
+scripts/00_reproduction_gate.py        17/17
+scripts/01_l2_label_algebra.py         19/19
+scripts/02_l1_hodge_functor.py         18/18
+scripts/03_l3_measure_transport.py     10/10
+scripts/04_l0_meta_language.py          3/3
+scripts/05_interdependence_ledger.py    9/9
+docs/00_preregistration.md ＋ docs/01–05（結果）｜ data/*.json（6）｜ logs/00–05.txt
+```
+
+### §11.8 誠實標記
+
+```
+· 校準非盲（判準設計時已知 M21 九判詞；後驗成份已標，另加 3 條未參與設計之盲測）
+· L1 只窮舉 5 個預登錄候選 ＋ 一條 sector 障礙，未證「Hodge 函子永久不可能」
+· L3 未證「任何零參數傳輸必過 forgetful」（只給兩路證據）⟹ 判 🟡 非 🔴
+· C³/A₅ 非緊，兩種 Hodge 約定皆已算（4,0）／（4,4），判詞不依賴約定選擇
+```

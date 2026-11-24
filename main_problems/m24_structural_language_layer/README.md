@@ -2,7 +2,8 @@
 
 ## 狀態
 
-⚪ **registered — 未開推**（2026-11-20 開檔）｜本 session 零推導、零 scripts、零 data
+🟡 **partial — 第一輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄
+重現閘 17/17｜scripts 76 PASS / 0 FAIL（00–05）｜6 docs｜6 data
 
 ## 一句話
 
@@ -22,13 +23,14 @@ L0  元語言：結構身份由「交換圖存在」定義，而唔係數字相�
     現況：所有「M 型」判詞靠密度閘（5%／k-free ≤5 條）＝啟發式
 ```
 
-## 殺手測試（唯一硬判準）
+## 殺手測試（唯一硬判準）→ **FAIL**（第一輪）
 
 ```
-predict:  (N₂, h11, h21) = (16, 36, 98)
-          同源 ＋ 每數池內密度 ≤ 5% ＋ 零自由參數
-碎片（假設，非結論）：N₂ = B·B ｜ h11 = B·N_gen² ｜ h21 = 2·L₄²
-⟹ 三者必須同源；分開凑 = 否證
+predict:  (N₂, h11, h21) = (16, 36, 98) 同源 ＋ 密度 ≤5% ＋ 零自由參數
+判定：K1 同源 FAIL（三數跨兩系統：repr {16,98}｜chain {36}；交集 = {16}）
+      K4 零參 FAIL（36 於模側須逐數選 isotypic pattern {3,3,4}）
+      K6 同級 FAIL（L0 grade：16 = F｜98 = M｜36 = M）
+⟹ 非同一標籤系統之產物；F 型升格不成立
 ```
 
 ## 範圍收窄
@@ -44,10 +46,16 @@ predict:  (N₂, h11, h21) = (16, 36, 98)
 
 | 檔 | 內容 |
 |:--|:--|
-| `01_problem_record.md` | §〇 fence／Q1–Q4／T1–T4／P1–P5／R1–R5／禁區／判準／殺手測試 |
-| `SESSION_START.md` | 接手起點、重現閘六項、範圍收窄、禁區、分工、殺手測試 |
+| `01_problem_record.md` | §〇 fence／Q1–Q4／T1–T4／P1–P5／R1–R5／禁區／判準／殺手測試／**§十一 第一輪結果** |
+| `SESSION_START.md` | 接手起點、重現閘六項、範圍收窄、禁區、分工／**§九 第一輪 session 記錄** |
 | `README.md` | 本檔 |
-| `docs/` `scripts/` `data/` | 空（只開不推） |
+| `docs/00_preregistration.md` | 跑前凍結：𝕃 3 系統／𝔉 5 函子／H1–H4／M1–M3／S1–S4／校準集 |
+| `docs/01_l2_label_algebra_result.md` | T1 🔴：三系統庫存、交集定理、MC null 診斷 |
+| `docs/02_l1_hodge_functor_result.md` | T2 🔴：F1 (4,0)/(4,4)、F2 59、Galois 障礙定理 |
+| `docs/03_l3_measure_transport_result.md` | T3 🟡：O210 範圍閘、零參數傳輸三路、條件式定理 |
+| `docs/04_l0_meta_language_result.md` | T4 ✅：S1–S4 判準、10/10 校準、3 盲測、grade 分裂 |
+| `docs/05_interdependence_and_ledger.md` | P5 🔴：分裂定理、總帳、復活條件 R-a–R-d |
+| `scripts/00–05` `data/*.json` `logs/*.txt` | 六輪機核（76 PASS / 0 FAIL，全 exit 0） |
 
 ## 依賴
 
@@ -59,5 +67,5 @@ predict:  (N₂, h11, h21) = (16, 36, 98)
 
 ## 註冊
 
-`register.py` pid = `M24`｜state = `registered`｜verdict = `-`｜
+`register.py` pid = `M24`｜state = `partial`｜verdict = `partial`（2026-11-25）｜
 source = 調律者 2026-11-20「欠缺什麼機制和什麼語言」→「開新M，待下一session建構」

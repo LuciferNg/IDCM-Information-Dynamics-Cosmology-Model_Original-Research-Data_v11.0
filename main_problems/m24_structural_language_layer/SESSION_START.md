@@ -1,7 +1,7 @@
 # M24 — SESSION_START（接手文件）
 
-> **建立**: 2026-11-20｜**狀態**: ⚪ 已註冊、未開推
-> **本 session 性質**: 只開不推 —— 零 scripts、零 docs 內容、零數據。
+> **建立**: 2026-11-20｜**狀態**: 🟡 partial（第一輪推完 2026-11-25）
+> **本 session 性質**: 第一輪已執行 —— 重現閘 17/17；L0 建成、L1／L2 否證、L3 收窄（見 §九）
 
 ---
 
@@ -100,4 +100,56 @@ predict:  (N₂, h11, h21) = (16, 36, 98)
             資料夾 m24_structural_language_layer/{docs,scripts,data} 建空
             零推導、零 scripts、零 data
             register v11.0/M24 state=registered verdict=-
+```
+
+---
+
+## §九 第一輪 session 記錄（2026-11-25）
+
+### §9.1 執行順序（照 §二 → §五）
+
+```
+0  重現閘 scripts/00：17/17 PASS（六項全過；數全對 ⟹ 續推）
+1  docs/00_preregistration.md 凍結（R1–R4 池／判準／盲窗）—— 跑前落地
+2  scripts/01（L2／T1）19/19 → scripts/02（L1／T2）18/18 → scripts/03（L3／T3）10/10
+   → scripts/04（L0／T4）3/3 → scripts/05（P5）9/9
+3  docs/01–05 結果檔 → 01_problem_record §十一（append-only）→ 本節 → README → register
+```
+
+### §9.2 判詞（詳見 01_problem_record §十一）
+
+```
+T1 L2 分次標籤代數   🔴  三數跨兩系統；交集 = {16}
+T2 L1 Hodge 函子     🔴  5 候選全失敗；F1=(4,0)/(4,4)｜F2=59；O211 sector 非 Galois 不變
+T3 L3 測度傳輸       🟡  O210 不覆蓋本範疇（Hom(A₅,ℤ₄)=0）；範疇內三路全封
+T4 L0 元語言         ✅  校準 10/10；盲測 3/3；S1–S4 四條件
+P5 三層互依          🔴  I1 FAIL；分裂：repr {16,98} ｜ chain {36}
+殺手測試            FAIL（K1／K4／K6 FAIL，K3 部分）⟹ 非同源
+```
+
+### §9.3 本輪三件硬結果
+
+1. **交集定理**：三個預登錄標籤系統之命中集交集 = `{16}`，而 `16` 恰為三數之一
+   ⟹ 唯一跨側值不可作 producer（用作橋即循環）。
+2. **Galois 障礙定理**：`O211` 之 Kähler sector `{1..36}` 非 `(Z/88)^×/{±1}` 不變
+   （反例 `a=3, n=13 → 39`）；但大小 36 之不變集存在（4 種組合）
+   ⟹ 阻塞係「規則非不變」，非「無不變 36 集」。`h11 = 36` 之鏈側身份因此更尖。
+3. **L0 grade 分裂**：`16 = F`、`98 = M`、`36 = M` ⟹ 殺手測試之「同級」由判準直接判死
+   （舊 M21 只有密度閘，冇 grade 維度）。
+
+### §9.4 未做／未閉（誠實）
+
+```
+· L1 未證「Hodge 函子永久不可能」（只窮舉 5 候選 ＋ 一條 sector 障礙）
+· L3 未證「任何零參數傳輸必過 forgetful」（只兩路證據）⟹ 🟡
+· L0 校準非盲（後驗成份；另加 3 條未參與設計之 functional 作部分補償）
+· §六 分工：M21 之 AB1–AB4 判詞本 M 一律未改，只 register 發還（§9.5）
+```
+
+### §9.5 register（2026-11-25）
+
+```
+progress: v11.0/M24 verdict=partial；ref = docs/05_interdependence_and_ledger.md
+handoff 回執：note → M21（AB1–AB4 之語言層裁定；AB3 建議升 F 候選，adoption 權在 M21）
+承接：M21 2026-11-23 之入站 handoff（AB1–AB4 測試用例）—— 已於本輪逐項用作測試用例
 ```
