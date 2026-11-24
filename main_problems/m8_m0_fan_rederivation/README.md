@@ -70,6 +70,8 @@
 | `scripts/13_nearest_diag.py` | 跑後診斷（最近者／跨度；非判據） | 🟢 4/4 |
 | `docs/11_step_ratio_prereg.md` | **★ 門 (C) 步長比族盲測（預註冊）**：`μ = r^N`，2227 個已註冊比值 × 23 特權整數 | 🔴 判詞 N |
 | `scripts/14_step_ratio_scan.py` | 執行（構族／精確整數判據／target-shift null 10⁵） | 🟢 7/7 |
+| `docs/12_operator_class_verdict.md` | **★ 門 (C) 算子類判定**：A（O210 歸一化映射）≠ B（模空間自同態）；decimation 譜 `{0,1}`；自由 `C` 零約束 | 🔴 門 (C) 封 |
+| `scripts/15_operator_class.py` | 判定執行（decimation 譜／非交換性／B1 構造示範） | 🟢 12/12 |
 | `scripts/10_independent_verifier.py` | **L2 獨立重推導**（34 檢查；唔 import L1） | 🟢 34/34 |
 | `scripts/11_doc_crosscheck.py` | **L3 文檔交叉核**（42 檢查；唯讀，數值容差） | 🟢 42/42 |
 | `scripts/run_chain.sh` | 推導鏈 driver（預設 dry-run，`--run` 執行） | 🟢 |

@@ -40,6 +40,18 @@
 [PASS] C.10_nogo_prereg.p₃(44) = 161  |  期望 161 ↔ 文檔 161（rel 0.0e+00；B3 三分拆）
 [PASS] C.10_nogo_prereg.名義 N_family = 33132  |  期望 33132 ↔ 文檔 33132（rel 0.0e+00；§1.4）
 
+  逐檔命中：
+    docs/02_r1_results.md                          1/1
+    docs/04_r2prime_two_chart_results.md           7/7
+    docs/05_r3prime_r4prime_audit.md               2/2
+    docs/06_r5prime_hierarchy_reduction.md         5/5
+    docs/07_r6prime_three_input_falsifiability.md  2/2
+    docs/08_r7prime_power_audit_selfcorrection.md  3/3
+    docs/09_r8prime_forcing_candidates.md          7/7
+    README.md                                      4/4
+    01_problem_record.md                           3/3
+    docs/10_nogo_prereg_count_family.md            3/3
+
 ==============================================================================
 §2 高風險數字之專項核（★ = 本輪審計更正項）
 ==============================================================================
@@ -52,3 +64,7 @@
 ==============================================================================
 §3 匯總
 ==============================================================================
+檢查項 = 42，FAIL = 0
+
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/11_doc_crosscheck.json
+寫出: /home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m8_m0_fan_rederivation/data/run_11.log

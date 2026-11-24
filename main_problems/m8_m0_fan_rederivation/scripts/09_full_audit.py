@@ -254,6 +254,8 @@ ALLOW = {
     "2.625e25": "§二十一·3 C(88,44) 量級（重算）",
     "1.855e134": "§二十一·3 88! 量級（重算）",
     "4.21e-4": "§二十二·3 γ₂/γ₄₄ 之 |N−9|（data/14 _nearest6 dist）",
+    "1.87e5": "§二十三·4 B1 示範之 ‖[C,K]‖_F（r=1e5 案例，data/15 _demo）",
+    "6.557": "§二十三·3 ‖[P,K]‖_F（data/15 _comm.fro = 6.557439）",
 }
 unexplained = [(f, n) for f, n in untraced if norm_minus(n) not in ALLOW]
 print(f"  可追溯 = {traced}，未對應 = {len(untraced)}，其中未申報 = {len(unexplained)}")
@@ -356,9 +358,9 @@ rows = re.findall(r"^\| (\d+) \| 2026-\d\d-\d\d \|", rec, re.M)
 print(f"  時序 row 數 = {len(rows)}：{rows}")
 cited = set(re.findall(r"`docs/(\d+)_[\w_]+\.md`", norm_minus(rec)))
 print(f"  被引用 docs = {sorted(cited)}")
-missing_docs = sorted(set(f"{i:02d}" for i in range(1, 12)) - cited)
-chk("F1 每個 docs/01–11 至少被時序表或結果節引用一次", not missing_docs, f"未引用 = {missing_docs}")
-chk("F2 時序 row 數 = 11（R1–R8′／三輪審計／handoff 帳／純計數族／步長比族）", len(rows) == 11, f"rows = {rows}")
+missing_docs = sorted(set(f"{i:02d}" for i in range(1, 13)) - cited)
+chk("F1 每個 docs/01–12 至少被時序表或結果節引用一次", not missing_docs, f"未引用 = {missing_docs}")
+chk("F2 時序 row 數 = 12（R1–R8′／四輪審計／handoff 帳／純計數族／步長族／算子類判定）", len(rows) == 12, f"rows = {rows}")
 chk("F3 時序表保留『推翻／撤回／撤銷』字樣（append-only 更正可見）",
     (rec.count("推翻") + rec.count("撤回") + rec.count("撤銷")) >= 3,
     f"推翻={rec.count('推翻')} 撤回={rec.count('撤回')} 撤銷={rec.count('撤銷')}")
