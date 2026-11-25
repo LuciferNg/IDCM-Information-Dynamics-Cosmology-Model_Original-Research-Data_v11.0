@@ -33,6 +33,8 @@ EXEMPT = {
     "docs/13": "通道存續之讀法更正記錄；數字僅為模數與對數（44／21），已由 docs/12、docs/14 claim 覆蓋",
     "docs/22": "審計報告自身（自指）；其數字為各層計數，已由 audit 自身斷言",
     "docs/38": "內部碼命名空間規範＋映射表；數字僅為碼序號（MR1–MR8），非譜量 ⟹ 無 claim",
+    "docs/55": "診斷類：M₀ 標度殘差閘（9 族覆蓋＋null）之一次性攻堅；數字全部落 data/m0_resid_gate.json，判準為族級否證而非譜量 claim",
+    "docs/56": "清冊類：腳本與過程記錄清冊（manifest）—— 只有支數與檔名映射，無譜量 claim；判準見 docs/22 §二十八 之①c／⑨",
 }
 
 CLAIMS = [
@@ -274,10 +276,8 @@ CLAIMS = [
      "anchor": "0.004871899480"},
     {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_A7_gpu", "label": "E_7(A,GPU) = 10325.589025559188",
      "anchor": "10325.589025559188"},
-    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B7_gpu", "label": "E_7(B,GPU) = 0.006584778230",
-     "anchor": "0.006584778230"},
-    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B7_cpu", "label": "E_7(B,CPU) = 0.006584778237",
-     "anchor": "0.006584778237"},
+    {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B7_cpu", "label": "E_7(B,CPU) = −0.0001713036871197294（乾淨；舊 +0.006584778237 屬 stale 快取，見 §8.3）",
+     "anchor": "−0.0001713036871197294"},
     {"doc": "docs/53_e7_matrix_cpu_gpu.md", "key": "mtx_B6_cpu", "label": "E_6(B,CPU) = −0.014904537963",
      "anchor": "−0.014904537963"},
     # docs/48 全 44 n（新）

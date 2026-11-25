@@ -673,3 +673,170 @@ R_p 中位 0.070695／0.031677／0.004350 ⟹ R → 0
 L1 49 支 ×2 ｜ L2 105/105 ｜ L3 188/188 ｜ audit 173/173（FAIL 0、WARN 1→0，docs/49 已入診斷類白名單）
 ```
 
+
+
+## §二十七 audit18：E_8 兩格落地（2026-11-23）
+
+### 值（乾淨重算；污染值作廢）
+
+```
+A｜CPU  E_8 = −199888.189901825419      （p97C，1,840 塊，92,685 s；‖V^{9→7}φ_4^9‖ = 105.8650303）
+B｜CPU  E_8 = −0.00036040774006972244   （p97D，1,840 塊，99,597 s；‖V^{9→7}φ_4^9‖ = 6.210649e−02）
+A｜GPU／B｜GPU  blocked：V^{7→9} 輸出 3,679,075,400 態 × 4 B = 14.72 GB ≫ VRAM 1.25 GB
+作廢：A 之 −199887.348002301500（ledger 鍵退化致重複計數）；E_7(B) 之 +0.006584778237（stale op_t77）
+```
+
+### 判讀
+
+```
+A：符號 ＋−＋−＋−＋−、比值 16.53→19.36 單調 ⟹ DEN = γ₁ − E_k（RS 原式）為正典
+B：符號 ＋−＋−＋−−−、比值振盪 0.011–130、φ_5^7 範數 5.78e−03（三分項相消 ~62%）
+   ⟹ B 屬分母條件數診斷，非第二條物理路徑
+```
+
+### 本輪修復（審計抓出，非推導錯）
+
+```
+① 16 個新數值未落地 ⟹ data/e8_chain_clean.json ＋ data/chain_logs/e8tail_{A,B}_clean_*.log
+② canonical log 混入 stderr（計時行）⟹ 6 支改 `> log 2>/dev/null` 重生
+③ run_chain.sh 造 35 個重複 flat log ⟹ 已刪（孤兒 0）
+④ L2：maxrel 逐列取 max 改全 rows 掃描；X102/X104 更新為更正後實況；void 格 key 移除
+```
+
+### 四數
+
+```
+L1 50 支 ×2 ｜ L2 122/122 ｜ L3 234/234 ｜ audit 182/182（FAIL 0、WARN 0；canonical md5 2cc46be4）
+```
+
+註：本節 append 於 audit18 通過之後；所含數字為審計狀態量（非物理量），下一輪 audit 一併覆蓋。
+
+## §二十八 封定審計 seal21（2026-11-25 06:03）
+
+### 28.1 四數
+
+```
+檢查項 182｜FAIL 0｜WARN 0｜EXIT = 0
+canonical md5 = ffc7540316e1（data/run_23_audit_verify.log，12,263 B）
+```
+
+### 28.2 關鍵閘（逐項）
+
+```
+①c scripts 實際 50 == LOGS 宣告 50
+⑤ 每份 doc 有 claim 或被明示豁免，未覆蓋 []
+⑤b claim 46 + 豁免 8 = 54 vs 磁碟 doc 54
+⑦ L1 兩跑 byte-identical（53 條：50 L1 ＋ L2 ＋ L3 ＋ 審計自身）
+⑧.L2 / ⑧.L3 兩跑 byte-identical、≡ canonical、FAIL 0
+⑨a docs 54 == README 54｜⑨b 漏 []｜⑨c scripts 50 == README 50
+② 未綁且未申報 doc []｜④a 缺 []｜④c 孤兒 []
+```
+
+### 28.3 送入本輪審計之範圍
+
+```
+docs/49 §九–§十六（八節）：L3 載體定位、兩通道否、V^{3↔5} ± 結構、CS = ∏ε、
+  A2 = ‖w‖² ≥ 0、CS／譜隙界否、相消來源、失諧否
+docs/55 §一–§九（M₀ 標度殘差閘，族級判死）
+01_problem_record 第 44–54 列｜register 11 條 note
+data/ 新增 12 檔｜scripts/oneoff 2 支（不入 L1 集）
+```
+
+### 28.4 時序與狀態
+
+```
+chain：L2（04:29）→ L3（04:29）→ audit（06:03）
+全鏈 EXIT = 0；未 commit（依調律者指示）
+```
+
+## §二十九 M14 收尾八步（2026-11-25；依調律者指示）
+
+### 29.1 ① 腳本歸檔檢查
+
+```
+發現：MR-A／MR-B／± 結構／L3／E_8 之探針共 27 支僅存於 /home/wsl/idcm_ckpt/e8（未入記錄）
+修：全部 copy -p 至 scripts/oneoff/probes_m14/（27 支；內容逐位相同）
+建：docs/56_scripts_manifest.md —— 全鏈清冊（L1 50／l2-l3 2／oneoff 8／probes_m14 27）＋每支之產物與文檔映射
+```
+
+### 29.2 ②③ 全鏈一致與數字無漂移
+
+```
+37_reverse_coverage：未追溯（且不在 ALLOW）= 0（兩跑 byte-identical，canonical 1,894 B）
+L2 122 / FAIL 0｜L3 234 / FAIL 0（重生後）
+docs 55 == README 55（⑨a）｜圍欄偶數｜U+FFFD 無
+```
+
+### 29.3 ④⑤ Handoff 檢查與交付
+
+```
+incoming 11 條（M13×4、M15×4、M19×1、M12 withdraw×1 等）：待承接 0
+本輪新增回執 8 條：M12（撤回確認＋19:11 回覆回執）、M13×4（Q2 殘差／H1 同向／Q2 瞄準表／R1 γ₂γ₁ 候選）、
+                  M15×2（Z3 與七個 id／R2 裁決）、M19×1（診斷更正「可算 ≠ 可判」）
+判詞要點：B=4 為正典（序 gauge）；γ₂/γ₁ = 3.994904229 列誘餌；α∝(1,2,4) 約束自洽 ≠ producer 存在
+```
+
+### 29.4 ⑥ Handoff 之下游影響（本 M 內）
+
+```
+M19 更正 ⟹ docs/09 §附註（append-only）：S4 由「不可算」改為「可算不可判」；Q1 措辭收窄，範圍不變
+其餘回執之外部影響：無新增下游推導需重算（本輪所有結構結果皆為新節，未回溯改寫舊節）
+超出 M14 範圍者：只經 register handoff（本節 29.3），本 M 未擅自處理
+```
+
+### 29.5 ⑦ 四件套同步
+
+```
+01_problem_record.md  55 列（第 41–55 列本輪新增）
+final_result.md       §三 現況同步（2026-11-25）
+README.md             docs 55 份 ＋ 進展四十一（MR-B／± 結構／封定）
+SESSION_START.md      末節「本 session 完成」（原文保留不動）
+```
+
+### 29.6 ⑧ 殘留與新開放問題
+
+```
+殘留 55 列（01_problem_record）；分層見 final_result §3.6
+新開放（本輪產生）：L3 之量級分佈層證明｜t2/t1 符號分佈之結構意義｜n=3/35 淺相消身份
+                   ｜|t1+t3+t4| 閉式｜w=0 之 70,720 元素｜17 個 w 值分類｜M₀ 兩條活路線
+v10／v11 上下游：O38（M₀ 錨，v10）只作禁區依據引用；M12／M13／M15／M19 回執已發，無新增發還
+```
+
+## §三十 seal23 封定 ＋ 兩支 register 檢查 ＋ 下游措辭掃描（2026-11-25）
+
+### 30.1 seal23 四數
+
+```
+檢查項 182｜FAIL 0｜WARN 0｜EXIT = 0
+canonical md5 = b2a4d375e2ca（data/run_23_audit_verify.log）
+①c scripts 50 == LOGS 50｜⑤b 46 claims ＋ 9 豁免 = 55 vs 磁碟 55｜⑨a docs 55 == README 55
+鏈：L2（12:09）→ L3（12:09）→ audit（13:43），全 EXIT 0
+```
+
+### 30.2 ④ 兩支 register 檢查（skill 要求）
+
+```
+register.py check      ：STATUS-DRIFT 0｜BLOCK-DRIFT 0｜REF-MISSING 18（HARD DRIFT 18）
+  18 條全屬【他 pid】：M4 ×2、O124 ×2、O140 ×4、O142 ×5、O148 ×1（餘 +3）
+  ★ M14 自身 ref 缺失 = 0
+  M4 之兩條指向 v10 OpenProblems（o140 docs/19、o216 docs/04）⟹ 跨版本路徑已改號 ⟹ 硬閘不 handoff，只記錄
+register.py audit-refs ：本 pid 無 MISSING（輸出無 M14 行）
+```
+
+### 30.3 ⑥ 下游措辭過時掃描
+
+```
+v11 main_problems（除本目錄）：M18 docs/03、M24（4 檔）、M13（5 檔）提及 M14
+v10 open_problems_fresh：O163、O221、O201 提及 M14（歷史引用）
+唯一語意可過時者：M13 final_result R1 列「兩候選永久等價（差 0.011σ，需 281× 精度）」
+  ⟹ 本輪 M14 已裁定 B=4 正典、γ₂/γ₁ = 3.994904229 列誘餌（register handoff 已發）
+  ⟹ 依紀律：不改 M13 檔案，只以 register 通報（已於⑤完成）
+其餘提及皆為歷史／身份引用，無「未開推／只開不推／待下一 session」字樣 ⟹ 無需通報
+```
+
+### 30.4 判定
+
+```
+✅ 八步完成 ＋ 兩支 register 檢查 ＋ 下游掃描
+✅ seal23 全綠；本節 append 後再跑 seal24 作最終封定
+```

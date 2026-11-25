@@ -687,8 +687,8 @@ def _mtx():
         "E1": rows["E1"]["A_cpu"],
         "A7": rows["E7"]["A_gpu"], "B7": rows["E7"]["B_gpu"],
         "B6cpu": rows["E6"]["B_cpu"], "B7cpu": rows["E7"]["B_cpu"], "A7cpu": rows["E7"]["A_cpu"],
-        "maxrelA": max(v for k, v in rows["E3"].items() if k.startswith("rel_") and v is not None),
-        "maxrelB": max(v for k, v in rows["E7"].items() if k.startswith("rel_") and v is not None and k != "rel_A"),
+        "maxrelA": max([v for r in d["rows"] for k, v in r.items() if k == "rel_A" and v is not None] or [0.0]),
+        "maxrelB": max([v for r in d["rows"] for k, v in r.items() if k == "rel_B" and v is not None] or [0.0]),
     })
     return _MTX_CACHE
 
@@ -1377,7 +1377,6 @@ DERIVE = {
     "e7_E5": lambda I: _e7()["E5"],
     "mtx_E1": lambda I: _mtx()["E1"],
     "mtx_A7_gpu": lambda I: _mtx()["A7"],
-    "mtx_B7_gpu": lambda I: _mtx()["B7"],
     "mtx_B6_cpu": lambda I: _mtx()["B6cpu"],
     "mtx_B7_cpu": lambda I: _mtx()["B7cpu"],
     "cell_A_cpu_E1": lambda I, c="A_cpu", e="E1": _mtx_cell(c, e),
@@ -1387,6 +1386,7 @@ DERIVE = {
     "cell_A_cpu_E5": lambda I, c="A_cpu", e="E5": _mtx_cell(c, e),
     "cell_A_cpu_E6": lambda I, c="A_cpu", e="E6": _mtx_cell(c, e),
     "cell_A_cpu_E7": lambda I, c="A_cpu", e="E7": _mtx_cell(c, e),
+    "cell_A_cpu_E8": lambda I, c="A_cpu", e="E8": _mtx_cell(c, e),
     "cell_A_gpu_E1": lambda I, c="A_gpu", e="E1": _mtx_cell(c, e),
     "cell_A_gpu_E2": lambda I, c="A_gpu", e="E2": _mtx_cell(c, e),
     "cell_A_gpu_E3": lambda I, c="A_gpu", e="E3": _mtx_cell(c, e),
@@ -1401,13 +1401,13 @@ DERIVE = {
     "cell_B_cpu_E5": lambda I, c="B_cpu", e="E5": _mtx_cell(c, e),
     "cell_B_cpu_E6": lambda I, c="B_cpu", e="E6": _mtx_cell(c, e),
     "cell_B_cpu_E7": lambda I, c="B_cpu", e="E7": _mtx_cell(c, e),
+    "cell_B_cpu_E8": lambda I, c="B_cpu", e="E8": _mtx_cell(c, e),
     "cell_B_gpu_E1": lambda I, c="B_gpu", e="E1": _mtx_cell(c, e),
     "cell_B_gpu_E2": lambda I, c="B_gpu", e="E2": _mtx_cell(c, e),
     "cell_B_gpu_E3": lambda I, c="B_gpu", e="E3": _mtx_cell(c, e),
     "cell_B_gpu_E4": lambda I, c="B_gpu", e="E4": _mtx_cell(c, e),
     "cell_B_gpu_E5": lambda I, c="B_gpu", e="E5": _mtx_cell(c, e),
     "cell_B_gpu_E6": lambda I, c="B_gpu", e="E6": _mtx_cell(c, e),
-    "cell_B_gpu_E7": lambda I, c="B_gpu", e="E7": _mtx_cell(c, e),
     "e7_E6": lambda I: _e7()["E6"],
     "e7_E7": lambda I: _e7()["E7"],
     "e7_E6_5mode": lambda I: _e7()["E6_5mode"],
@@ -1899,9 +1899,11 @@ def main():
     m = _mtx()
     chk("X100 E_1 ≡ γ_n = 0.004871899480（四欄同值）", abs(m["E1"] - 0.004871899480351504) < 1e-15, f"{m['E1']:.12f}")
     chk("X101 E_7(A, GPU) = +10325.589025559188", abs(m["A7"] - 10325.589025559188) < 1e-6, f"{m['A7']:.9f}")
-    chk("X102 E_7(B, GPU) = +0.006584778230", abs(m["B7"] - 0.006584778230) < 1e-9, f"{m['B7']:.12f}")
+    chk("X102 E_7(B, GPU) 作廢（stale op_t77 同源污染；矩陣存 None，不得引用）",
+        m["B7"] is None, str(m["B7"]))
     chk("X103 cpu↔gpu 最大相對差 ≤ 2.1e−8", m["maxrelA"] < 2.2e-8, f"{m['maxrelA']:.2e}")
-    chk("X104 E_7(B, CPU) = +0.006584778237", abs(m["B7cpu"] - 0.006584778237) < 1e-12, f"{m['B7cpu']:.12f}")
+    chk("X104 E_7(B, CPU) = −0.0001713036871197294（乾淨重跑；舊 +0.006584778237 屬 stale 快取）",
+        abs(m["B7cpu"] + 0.0001713036871197294) < 1e-15, f"{m['B7cpu']:.18f}")
     chk("X99 ‖V^{7→5}φ_3^7‖ = 14.526（經閘）vs 舊 GPU 2246.285",
         abs(e7["V75n"] - 14.52618953969585) < 1e-6 and abs(e7["V75old"] - 2246.285) < 1e-3,
         f"{e7['V75n']:.6f} / {e7['V75old']:.3f}")

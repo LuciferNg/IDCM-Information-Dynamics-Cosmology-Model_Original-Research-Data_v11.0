@@ -1,0 +1,46 @@
+{
+ "note": "MR-A 窄縫判別（docs/49 §一.3 殘留）：∏C(c_Q,c_R) vs raw ∏c_Q^{c_R}；窗口 modes 1..4",
+ "identity": {
+  "noA_over_fpA_vs_binomQ_CR": {
+   "samples": 920,
+   "mismatch": 0,
+   "max_dev": 0.0
+  },
+  "noC_over_fpC_vs_binomS_plus_A": {
+   "samples": 14640,
+   "mismatch": 0,
+   "max_dev": 0.0
+  }
+ },
+ "adjoint": {
+  "window_modes": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "n_T3": 20,
+  "n_T5": 56,
+  "pairs": 1120,
+  "prodC_max_abs_diff": 1.387779e-17,
+  "prodC_elements_over_1e-12": 0,
+  "raw_max_abs_diff": 0.1889875,
+  "raw_elements_over_1e-12": 160,
+  "convention_gap_max_abs": 0.1889875,
+  "norm_A_prodC": 0.5837300238472755,
+  "max_abs_A_prodC": 0.07698004,
+  "max_abs_A_raw": 0.2635231
+ },
+ "verdict": "∏C 正典（= 引擎實作、E_2/E_3/E_4 三錨、伴隨差 1.39e−17）；raw ∏c_Q^{c_R} 排除（伴隨差 1.89e−1，160/1120 元素破缺）",
+ "engine_source": "/home/wsl/idcm_ckpt/e8/e7chain.py（op 之 noA/fpA、noC/fpC）",
+ "probes": [
+  "probe_mrA_final.py",
+  "probe_mrA_raw.py",
+  "probe_mrA_adjoint2.py",
+  "probe_mrA_decode.py",
+  "probe_mrA_decode2.py",
+  "probe_mrA_decode3.py",
+  "probe_mrA_rankcheck.py"
+ ],
+ "probes_dir": "/home/wsl/idcm_ckpt/e8/probes_mrA/"
+}

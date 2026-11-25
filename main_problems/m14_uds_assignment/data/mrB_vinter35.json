@@ -1,0 +1,19 @@
+{
+ "w_distinct": 17,
+ "w_min": -10,
+ "w_max": 30,
+ "paths": 58442310,
+ "neg_paths": 19242720,
+ "neg_path_frac": 0.3292600857152977,
+ "distinct_entries": 54532500,
+ "mean_paths": 1.071696878008527,
+ "max_paths": 3,
+ "multi_path_frac": 0.05831326273323248,
+ "cancel_frac": 0.0014571860816944024,
+ "mixed_frac_all": 0.0014571860816944024,
+ "mixed_frac_multi": 0.024988930706220942,
+ "entry_neg_frac": 0.3357649108329895,
+ "entry_zero": 70720,
+ "mixed_final_neg": 3812,
+ "mixed_final_pos": 4932
+}

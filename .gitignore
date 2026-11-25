@@ -12,3 +12,12 @@ __pycache__/
 *.pre_patch3*
 *.pre_patch4*
 *.pre_patch5*
+
+# M14 本地備份與一次性長跑封存（留痕不入庫）
+main_problems/m14_uds_assignment/data/*.bak_*
+main_problems/m14_uds_assignment/docs/*.bak*
+main_problems/m14_uds_assignment/scripts/*.bak*
+main_problems/m14_uds_assignment/data/archive/
+*.npy
+main_problems/m14_uds_assignment/*.bak*
+main_problems/m14_uds_assignment/*.bak_*

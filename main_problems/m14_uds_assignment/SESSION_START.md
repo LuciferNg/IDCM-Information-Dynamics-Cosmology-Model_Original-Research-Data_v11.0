@@ -50,3 +50,18 @@ M13 已證 `ρ_x` **只依賴 `α`、與站指派無關**（站無關性定理�
 `docs/NN_*.md` ＋ `scripts/NN_*.py` ＋ `data/run_NN_*.log`，一發現一 doc；`final_result.md` 只在全滅或結構閉合時寫。
 
 > ⚠ **2026-10-31 附註（append-only）**：verdict 已由 `negative` 改為 **`partial`**（Q1／Q2②／Q3② 之死判撤回；理由見 `docs/09`、`final_result §附註二`）。原文（第 1 輪快照）保留不動。
+
+---
+
+## §本 session 完成（2026-11-23 → 11-25；append-only，上方原文不動）
+
+```
+承接狀態：🟡 partial（不 close；依「推盡 ≠ 結論」）
+本 session 產出：docs/49 §五–§十六（十二節）｜docs/55（M₀ 標度殘差閘）｜docs/56（腳本清冊）
+               docs/22 §二十七／§二十八｜docs/09 §附註（M19 診斷更正）｜01 第 41–55 列
+               data 新增 14 檔｜scripts/oneoff 8 ＋ probes_m14 27
+封定：seal21／seal22 = 182 / FAIL 0 / WARN 0 / EXIT 0，md5 ffc7540316e1（兩輪逐字相同）
+register：incoming 11 條全回（待承接 0）；出向回執 8 條（M12／M13×4／M15×2／M19）
+四件套：01（55 列）／final_result（§三 現況）／README（docs 55、進展四十一）／本檔
+未 commit（調律者指示）
+```

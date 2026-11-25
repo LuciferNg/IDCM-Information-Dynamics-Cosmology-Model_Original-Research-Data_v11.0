@@ -591,17 +591,13 @@
     "pass": true,
     "detail": "L2 10325.6 ↔ 文檔 10325.6（rel 0.0e+00）"
   },
-  "C.53_e7_matrix_cpu_g.E_7(B,GPU) = 0.006584778230": {
+  "C.53_e7_matrix_cpu_g.E_7(B,CPU) = −0.0001713036871197294（乾淨；舊 +0.006584778237 屬 stale 快取，見 §8.3）": {
     "pass": true,
-    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 1.3e-11）"
-  },
-  "C.53_e7_matrix_cpu_g.E_7(B,CPU) = 0.006584778237": {
-    "pass": true,
-    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 4.3e-11）"
+    "detail": "L2 -0.000171304 ↔ 文檔 0.000171304（rel 0.0e+00）"
   },
   "C.53_e7_matrix_cpu_g.E_6(B,CPU) = −0.014904537963": {
     "pass": true,
-    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 1.1e-11）"
+    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 2.8e-13）"
   },
   "C.48_fifth_order_all.|E_5/E_4| 全譜最小 29.6506": {
     "pass": true,
@@ -681,15 +677,15 @@
   },
   "C.53_e7_matrix_cpu_g.A_cpu E2 = −0.080530741364": {
     "pass": true,
-    "detail": "L2 -0.0805307 ↔ 文檔 0.0805307（rel 5.8e-12）"
+    "detail": "L2 -0.0805307 ↔ 文檔 0.0805307（rel 4.8e-15）"
   },
   "C.53_e7_matrix_cpu_g.B_cpu E2 = −0.633720033859": {
     "pass": true,
-    "detail": "L2 -0.63372 ↔ 文檔 0.63372（rel 6.9e-13）"
+    "detail": "L2 -0.63372 ↔ 文檔 0.63372（rel 6.3e-14）"
   },
   "C.53_e7_matrix_cpu_g.A_cpu E3 = +0.256285991128": {
     "pass": true,
-    "detail": "L2 0.256286 ↔ 文檔 0.256286（rel 4.3e-13）"
+    "detail": "L2 0.256286 ↔ 文檔 0.256286（rel 3.7e-14）"
   },
   "C.53_e7_matrix_cpu_g.A_gpu E3 = +0.256285996352": {
     "pass": true,
@@ -697,7 +693,7 @@
   },
   "C.53_e7_matrix_cpu_g.B_cpu E3 = +0.040240117635": {
     "pass": true,
-    "detail": "L2 0.0402401 ↔ 文檔 0.0402401（rel 8.7e-12）"
+    "detail": "L2 0.0402401 ↔ 文檔 0.0402401（rel 2.7e-14）"
   },
   "C.53_e7_matrix_cpu_g.A_cpu E4 = −2.833281397088": {
     "pass": true,
@@ -709,7 +705,7 @@
   },
   "C.53_e7_matrix_cpu_g.B_cpu E4 = −0.045644034981": {
     "pass": true,
-    "detail": "L2 -0.045644 ↔ 文檔 0.045644（rel 3.6e-12）"
+    "detail": "L2 -0.045644 ↔ 文檔 0.045644（rel 8.0e-14）"
   },
   "C.53_e7_matrix_cpu_g.A_cpu E5 = +38.088139445510": {
     "pass": true,
@@ -721,7 +717,7 @@
   },
   "C.53_e7_matrix_cpu_g.B_cpu E5 = +0.015000708917": {
     "pass": true,
-    "detail": "L2 0.0150007 ↔ 文檔 0.0150007（rel 2.6e-11）"
+    "detail": "L2 0.0150007 ↔ 文檔 0.0150007（rel 1.5e-13）"
   },
   "C.53_e7_matrix_cpu_g.A_cpu E6 = −631.576826694853": {
     "pass": true,
@@ -733,7 +729,7 @@
   },
   "C.53_e7_matrix_cpu_g.B_cpu E6 = −0.014904537963": {
     "pass": true,
-    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 1.1e-11）"
+    "detail": "L2 -0.0149045 ↔ 文檔 0.0149045（rel 2.8e-13）"
   },
   "C.53_e7_matrix_cpu_g.A_cpu E7 = +10325.588935405450": {
     "pass": true,
@@ -743,9 +739,17 @@
     "pass": true,
     "detail": "L2 10325.6 ↔ 文檔 10325.6（rel 0.0e+00）"
   },
-  "C.53_e7_matrix_cpu_g.B_cpu E7 = +0.006584778237": {
+  "C.53_e7_matrix_cpu_g.B_cpu E7 = −0.000171303687": {
     "pass": true,
-    "detail": "L2 0.00658478 ↔ 文檔 0.00658478（rel 4.3e-11）"
+    "detail": "L2 -0.000171304 ↔ 文檔 0.000171304（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.A_cpu E8 = −199888.189901825419": {
+    "pass": true,
+    "detail": "L2 -199888 ↔ 文檔 199888（rel 0.0e+00）"
+  },
+  "C.53_e7_matrix_cpu_g.B_cpu E8 = −0.00036040774006972244": {
+    "pass": true,
+    "detail": "L2 -0.000360408 ↔ 文檔 0.000360408（rel 0.0e+00）"
   },
   "F.docs/01_reproduction_gate.md 全命中（2/2）": {
     "pass": true,
@@ -927,12 +931,12 @@
     "pass": true,
     "detail": ""
   },
-  "F.docs/53_e7_matrix_cpu_gpu.md 全命中（23/23）": {
+  "F.docs/53_e7_matrix_cpu_gpu.md 全命中（24/24）": {
     "pass": true,
     "detail": ""
   },
   "_summary": {
-    "checks": 233,
+    "checks": 234,
     "fail": 0,
     "by_doc": {
       "docs/01_reproduction_gate.md": [
@@ -1088,8 +1092,8 @@
         8
       ],
       "docs/53_e7_matrix_cpu_gpu.md": [
-        23,
-        23
+        24,
+        24
       ],
       "docs/48_fifth_order_all44.md": [
         3,
@@ -1127,7 +1131,9 @@
       "docs/09",
       "docs/13",
       "docs/22",
-      "docs/38"
+      "docs/38",
+      "docs/55",
+      "docs/56"
     ],
     "exempt_reasons": {
       "docs/03": "AST 出處追溯記錄；數字僅為 v9 字面值（gen_modes=[1,4,5]、z2_map={1:3,4:2,5:0}）與 N_trials=6，非本 M 譜量 ⟹ 無譜量宣稱可 claim",
@@ -1136,7 +1142,9 @@
       "docs/09": "概念更正記錄（對象型別）；唯一精確值 A_eff=4.4492±0.4603 屬 M5 跨記錄",
       "docs/13": "通道存續之讀法更正記錄；數字僅為模數與對數（44／21），已由 docs/12、docs/14 claim 覆蓋",
       "docs/22": "審計報告自身（自指）；其數字為各層計數，已由 audit 自身斷言",
-      "docs/38": "內部碼命名空間規範＋映射表；數字僅為碼序號（MR1–MR8），非譜量 ⟹ 無 claim"
+      "docs/38": "內部碼命名空間規範＋映射表；數字僅為碼序號（MR1–MR8），非譜量 ⟹ 無 claim",
+      "docs/55": "診斷類：M₀ 標度殘差閘（9 族覆蓋＋null）之一次性攻堅；數字全部落 data/m0_resid_gate.json，判準為族級否證而非譜量 claim",
+      "docs/56": "清冊類：腳本與過程記錄清冊（manifest）—— 只有支數與檔名映射，無譜量 claim；判準見 docs/22 §二十八 之①c／⑨"
     }
   }
 }

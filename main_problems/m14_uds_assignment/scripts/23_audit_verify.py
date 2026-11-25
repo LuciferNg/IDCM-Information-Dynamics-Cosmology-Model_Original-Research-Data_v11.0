@@ -148,6 +148,8 @@ def main():
                                    "路徑 B 之 V^{7→7} 6 h，且輸出含耗時行 ⟹ 不符 L1 兩跑 byte-identical；"
                                    "算子本身已由 scripts/52、scripts/53 兩支 L1 腳本把關，鏈 log 存 data/chain_logs/，"
                                    "數字落 data/chain_matrix.json",
+        "55_m0_scale_attack.md": "診斷類（本 M 開放項）：M₀ 標度殘差閘 —— 9 條已註冊結構族 × 覆蓋 ＋ null；生成器 scripts/oneoff/m0_resid_gate.py（oneoff 不入 L1 集），數字落 data/m0_resid_gate.json；判準為族級否證（1e−3 層命中 6 vs 期望 5.861941 ⟹ 超額 0）而非譜量 claim",
+        "56_scripts_manifest.md": "清冊類：全推導鏈腳本清冊（L1 50／分層 2／oneoff 8／probes_m14 27）＋每支之產物與文檔映射；生成器無（人寫清冊），無譜量 claim",
         "49_final_push.md": "診斷類：四支 scratch 診斷腳本（diag46／conv_test／n3033／adjoint35）產出，"
                             "數字落 data/final_push_stats.json；主結論以 docs/44 已封錨作試金石，"
                             "不重算 docs/42–48；診斷腳本未入 scripts/（成本 >35 min／跑且屬一次性）",
