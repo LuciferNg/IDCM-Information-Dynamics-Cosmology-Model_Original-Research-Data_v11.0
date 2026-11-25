@@ -2,9 +2,10 @@
 
 ## 狀態
 
-🟡 **partial — 兩輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄（已量化）
-重現閘 17/17｜scripts 99 PASS / 0 FAIL（00–08）｜9 docs｜9 data
-第二輪：R-a／R-b 復活失敗（統一索引族 0 命中）；R-c 得 ℚ(√5) ⊄ ℚ(ζ₈₈) 障礙；T3 收緊至定義級（內容 ≤3 bits）
+🟡 **partial — 三輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄（已量化）
+重現閘 17/17｜scripts 117 PASS / 0 FAIL（00–12）｜15 docs｜13 data
+第二輪：R-a／R-b 復活失敗；R-c 得 ℚ(√5) ⊄ ℚ(ζ₈₈)；T3 收緊至定義級（內容 ≤3 bits）
+第三輪：R-a′（9 置換模 ×5 構作）／R-b′（rank ≡ id）／R-d′（2B 非強迫；典範 m = 43）全 🔴；L0 壓力測試 7/7
 
 ## 一句話
 
@@ -60,7 +61,12 @@ predict:  (N₂, h11, h21) = (16, 36, 98) 同源 ＋ 密度 ≤5% ＋ 零自由�
 | `docs/07_r_a_r_b_uniform_rule_result.md` | R-a／R-b 🔴：117 格 × 13 濾子 0 命中；後驗 36 讀法（M 型） |
 | `docs/08_arithmetic_field_obstruction.md` | R-c 🟡：ℚ(√5) ⊄ ℚ(ζ₈₈)（定理＋機核）⟹ 像 ⊆ ℚ |
 | `docs/09_t3_dof_result.md` | T3 收緊：零參數⟹Aut-不變（定義級）；內容 ≤3 bits = {20,24} |
-| `scripts/00–08` `data/*.json` `logs/*.txt` | 九輪機核（99 PASS / 0 FAIL，全 exit 0） |
+| `docs/10_preregistration_round3.md` | 第三輪跑前凍結：R-a′／R-b′／R-d′／L0 壓力 7 案例 |
+| `docs/11_induced_module_result.md` | R-a′ 🔴：9 置換模 ×5 構作 = 81 值，三數 0；98 全族 0/81 |
+| `docs/12_rank_modular_result.md` | R-b′ 🔴：`rank ≡ id`（族退化）；98 只在 mod 11 殘餘類 8 |
+| `docs/13_2B_forcing_result.md` | R-d′ 🔴：典範 `n ≤ m` 值 = 43；`2B` 非 2D 判準所迫 |
+| `docs/14_l0_stress_result.md` | L0 ✅ 7/7 非F ＋ 兩項記錄層 audit（AUD-1／AUD-2） |
+| `scripts/00–12` `data/*.json` `logs/*.txt` | 十三輪機核（117 PASS / 0 FAIL，全 exit 0） |
 
 ## 依賴
 
