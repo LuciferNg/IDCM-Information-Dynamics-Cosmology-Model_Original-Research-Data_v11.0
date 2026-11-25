@@ -23,7 +23,7 @@
     {
       "tag": "A5  文檔引用全部解析（本地 或 跨 O 上游唯一定位）",
       "pass": true,
-      "detail": "斷鏈 = []｜跨 O 解析 = 12 處（皆存在）"
+      "detail": "斷鏈 = []｜跨 O 解析 = 11 處（皆存在）"
     },
     {
       "tag": "A6  四件套水位 = Σ data checks 且 final_result 存在",
@@ -65,7 +65,7 @@
   "problems_doc": [],
   "problems_log": [],
   "broken_refs": [],
-  "cross_O_refs": 12,
+  "cross_O_refs": 11,
   "stale": [],
   "key_constants": {
     "N_d=44": 7,

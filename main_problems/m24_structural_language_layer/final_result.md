@@ -57,7 +57,9 @@ F ⟺ S1∧S2∧S3∧S4｜¬S1 ⟹ A｜¬S2 ⟹ T｜S2∧(¬S3∨¬S4) ⟹ M
 上游：M21（AB1–AB4 測試用例）｜M22（BR1′–BR1‴）｜v10 O210 docs/11（測度層 no-go，只讀）
       v10 O211（h11／h21 零輸入，只讀）｜M12 scripts/12（Hodge↔譜 無先驗對應）
       M16／M6（dof）
-下游：M21 AB1–AB4 之語言層裁定（handoff 已發）｜M14（比值族／h11 讀法之交叉核，handoff 已發）
+下游：M21 AB1–AB4 之語言層裁定（handoff ＋ note 已發）｜M14（比值族／h11 讀法交叉核，handoff 已發）
+      M8（其「等 M24 新代數層」路線措辭過時，負面先驗已通報，handoff 已發）
+      M9（AUD-1 μ/e 比值族數值否證，note 已發）
       IDCM 新描述語言（框架長期方向）：元層已可用，物件層仍缺
 ```
 

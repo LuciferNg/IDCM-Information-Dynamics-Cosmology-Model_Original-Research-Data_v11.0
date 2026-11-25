@@ -6,7 +6,7 @@ M24 scripts/14 — audit-verify
 [PASS] A2  結果 doc 每篇引用至少一支存在 script（4 篇預註冊豁免） :: 缺陷 = []
 [PASS] A3  data 之 n_pass/n_total 見於引用其 script 之 doc :: problems = []
 [PASS] A4  logs/NN.txt 判詞 == data/NN_*.json（逐對） :: problems = []
-[PASS] A5  文檔引用全部解析（本地 或 跨 O 上游唯一定位） :: 斷鏈 = []｜跨 O 解析 = 12 處（皆存在）
+[PASS] A5  文檔引用全部解析（本地 或 跨 O 上游唯一定位） :: 斷鏈 = []｜跨 O 解析 = 11 處（皆存在）
   ledger（排除 ['14_audit_verify.json']）= 14 個 json
   Σ checks = 119/119（FAIL 0）
 [PASS] A6  四件套水位 = Σ data checks 且 final_result 存在 :: 119/119｜命中 = {'01_problem_record.md': True, 'SESSION_START.md': True, 'README.md': True, 'final_result.md': True}
