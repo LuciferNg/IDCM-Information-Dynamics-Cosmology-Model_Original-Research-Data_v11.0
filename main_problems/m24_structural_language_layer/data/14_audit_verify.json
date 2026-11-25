@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "tag": "A1  scripts 每支被 docs 引用",
+      "pass": true,
+      "detail": "未引用 = []"
+    },
+    {
+      "tag": "A2  結果 doc 每篇引用至少一支存在 script（4 篇預註冊豁免）",
+      "pass": true,
+      "detail": "缺陷 = []"
+    },
+    {
+      "tag": "A3  data 之 n_pass/n_total 見於引用其 script 之 doc",
+      "pass": true,
+      "detail": "problems = []"
+    },
+    {
+      "tag": "A4  logs/NN.txt 判詞 == data/NN_*.json（逐對）",
+      "pass": true,
+      "detail": "problems = []"
+    },
+    {
+      "tag": "A5  文檔引用全部解析（本地 或 跨 O 上游唯一定位）",
+      "pass": true,
+      "detail": "斷鏈 = []｜跨 O 解析 = 12 處（皆存在）"
+    },
+    {
+      "tag": "A6  四件套水位 = Σ data checks 且 final_result 存在",
+      "pass": true,
+      "detail": "119/119｜命中 = {'01_problem_record.md': True, 'SESSION_START.md': True, 'README.md': True, 'final_result.md': True}"
+    },
+    {
+      "tag": "A7  非當前水位之 PASS 數皆位於「第X輪」節內",
+      "pass": true,
+      "detail": "stale = []"
+    },
+    {
+      "tag": "A8  關鍵常數／結構句全鏈出現",
+      "pass": true,
+      "detail": "{'N_d=44': 7, 'N₂=16': 4, 'Σγ=90': 9, 'h11=36': 21, 'h21=98': 11, 'B=4': 5, '2B=8': 4, '交集{16}': 7}"
+    },
+    {
+      "tag": "A9  5+ 組文檔宣稱與 data 機核值一致",
+      "pass": true,
+      "detail": "fail = []"
+    }
+  ],
+  "n_pass": 9,
+  "n_fail": 0,
+  "n_total": 9,
+  "counts": {
+    "scripts": 15,
+    "docs": 18,
+    "data": 15,
+    "logs": 15
+  },
+  "sum_checks": {
+    "pass": 119,
+    "total": 119,
+    "fail": 0
+  },
+  "missing_ref": [],
+  "no_script": [],
+  "problems_doc": [],
+  "problems_log": [],
+  "broken_refs": [],
+  "cross_O_refs": 12,
+  "stale": [],
+  "key_constants": {
+    "N_d=44": 7,
+    "N₂=16": 4,
+    "Σγ=90": 9,
+    "h11=36": 21,
+    "h21=98": 11,
+    "B=4": 5,
+    "2B=8": 4,
+    "交集{16}": 7
+  },
+  "spot": [
+    [
+      "docs/01 命中 16 = 4",
+      true
+    ],
+    [
+      "docs/01 交集 = {16}",
+      true
+    ],
+    [
+      "docs/07 triple families = 0",
+      true
+    ],
+    [
+      "docs/13 inv_m = [43,44]",
+      true
+    ],
+    [
+      "docs/14 n_cases = 7",
+      true
+    ],
+    [
+      "docs/16 98 命中 = 0",
+      true
+    ],
+    [
+      "docs/11 98 = 0/81",
+      true
+    ]
+  ],
+  "verdict": "見 docs/17_audit_report.md"
+}

@@ -2,11 +2,12 @@
 
 ## 狀態
 
-🟡 **partial — 四輪推完**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄（已量化）
-重現閘 17/17｜scripts 119 PASS / 0 FAIL（00–13）｜17 docs｜14 data
+🟡 **partial — 四輪推完 ＋ audit-verify**（2026-11-25）｜L0 ✅ 建成 · L1/L2 🔴 否證 · L3 🟡 收窄（已量化）
+重現閘 17/17｜ledger 119 PASS / 0 FAIL（scripts 00–13）｜audit-verify 9/9（scripts/14）｜18 docs｜15 data
 第二輪：R-a／R-b 復活失敗；R-c 得 ℚ(√5) ⊄ ℚ(ζ₈₈)；T3 收緊至定義級（內容 ≤3 bits）
 第三輪：R-a′（置換模）／R-b′（rank ≡ id）／R-d′（2B 非強迫）全 🔴；L0 壓力 7/7
 第四輪：R-a″（25 特徵標誘導模）🔴；98 全誘導族 0/306；36 讀法增至五個且互不相干
+audit：斷鏈 0、data↔log↔doc 全一致、四件套同步（含新建 final_result.md）；M14 三項宣稱交叉核全中
 
 ## 一句話
 
@@ -69,7 +70,9 @@ predict:  (N₂, h11, h21) = (16, 36, 98) 同源 ＋ 密度 ≤5% ＋ 零自由�
 | `docs/14_l0_stress_result.md` | L0 ✅ 7/7 非F ＋ 兩項記錄層 audit（AUD-1／AUD-2） |
 | `docs/15_preregistration_round4.md` | 第四輪跑前凍結：`Ind_H χ`（1／2 維）＋ N1–N5 |
 | `docs/16_character_induced_result.md` | R-a″ 🔴：25 誘導模 ×9 構作；98 = 0/225；算術障礙在模本身可見 |
-| `scripts/00–13` `data/*.json` `logs/*.txt` | 十四輪機核（119 PASS / 0 FAIL，全 exit 0） |
+| `docs/17_audit_report.md` | audit-verify 9/9 ＋ 八步收尾 ＋ M14 交叉核 ＋ 殘留/新開放 |
+| `final_result.md` | 四件套之一：狀態／結論／四層判詞／十條關鍵結果／否證／殘留 |
+| `scripts/00–13`（推導）＋ `scripts/14`（audit） | ledger 119 PASS / 0 FAIL｜audit 9/9（`data/*.json` 15、`logs/*.txt` 15） |
 
 ## 依賴
 
