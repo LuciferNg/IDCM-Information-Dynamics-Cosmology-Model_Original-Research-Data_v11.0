@@ -58,3 +58,28 @@ cs_sig_gate.py（CS = ∏ε 之閘）｜m0_resid_gate.py（M₀ 殘差族覆蓋�
 ② scripts/oneoff/probes_m14 為執行時副本（原檔在 idcm_ckpt），兩者內容逐位相同（copy -p）
 ③ 所有文檔引用數字皆有 data/*.json|*.log 落地（37_reverse_coverage 未追溯 = 0）
 ```
+
+## §六 更新（2026-11-26）：探針 27 → 45 支（新增 18）
+
+```
+新增探針與文檔映射（全部由本輪 §十七–§二十六 產生）：
+  probe_rank1.py     → docs/49 §十七（秩一：sign(t2_r1)=sign(t2) 44/44；主導模份額）
+  probe_tail5.py     → docs/49 §十七（N_eff(w²)、top-10 份額、近退化態數）
+  probe_r1reason.py  → docs/49 §十八（H1 最近模 5/44 否；gap2/gap1；N_eff(1/den²)）
+  probe_r1support.py → docs/49 §十八（H2 允許集最近模 14/44 否；支撐集 441,737／1,712,304）
+  probe_degen5.py    → docs/49 §十九（EQ 簡併普查 815,171 distinct、最大重數 360）
+  probe_offdelta.py  → docs/49 §十九（44 n 之 δ 分組：22 個精確值，dps 60）
+  probe_delta_alg.py → docs/49 §二十（22 δ 之 PSLQ 有理判定：0/22）
+  probe_gammadim.py  → docs/49 §二十（ℚ-維數 12 判定；360 重數簇 = 五餘弦零和）
+  probe_oos_dim.py   → docs/49 §二十一（OOS-1：m88 dim40 預言 ≥40 ⟹ 實測 28 FAIL）
+  probe_oos_dim2.py  → docs/49 §二十一（OOS-2：m45 20／m180 42 PASS）
+  probe_oos_dim3.py  → docs/49 §二十二（OOS-3：R1／R2 關係數 ⟹ m60 18／m176 44 PASS）
+  probe_wclass.py    → docs/49 §二十三（四腿 W 全域 667,920 簽名：5 值計數）
+  probe_w3struct.py  → docs/49 §二十四（w=+3 之 88 簽名 = (k,k,k,k) ⊕ (k,k,45−k,45−k)）
+  probe_wmask.py     → docs/49 §二十五（16 遮罩 census；popcount 律）
+  probe_wclassify.py → docs/49 §二十五（重數型／反射對數分佈，輔證）
+  probe_w17_check.py → docs/49 §二十六（12,000 路徑 w_rec ≡ W_table 零差 ⟹ §十一 值域更正）
+庫／驅動（load-bearing，非探針）：
+  e7chain.py（E₇ 鏈模組，被多支探針 import）｜e7run.py（E₇ 驅動，表 QUI／TRI 之來源）
+⟹ 修正 §四 之計數：27 → 45（本節為 append-only 更新，§四 原文不動）
+```

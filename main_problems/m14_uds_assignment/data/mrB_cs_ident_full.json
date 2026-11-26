@@ -1,0 +1,25 @@
+{
+ "domain_size": 667920,
+ "n_mismatch": 0,
+ "values": [
+  -1,
+  0,
+  1,
+  2,
+  3
+ ],
+ "counts": {
+  "-1": 18592,
+  "0": 611454,
+  "1": 35014,
+  "2": 2772,
+  "3": 88
+ },
+ "neg_fraction_signature_level": 0.02783566894238831,
+ "equiv_string": "1162/41745",
+ "layers": {
+  "signature_level_w_lt0": 0.02783566894238831,
+  "element_level_neg": 0.335765,
+  "path_weighted_neg": 0.32926
+ }
+}

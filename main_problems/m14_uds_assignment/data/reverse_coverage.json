@@ -1,6 +1,6 @@
 {
- "pool": 6435,
- "tokens": 1022,
+ "pool": 8762,
+ "tokens": 1112,
  "untraced": [],
  "allowed": [
   [
@@ -22,10 +22,6 @@
   [
    "46_quint_sector.md",
    "0.04714"
-  ],
-  [
-   "47_fifth_order.md",
-   "0.6128"
   ],
   [
    "50_precise_vertex.md",
@@ -122,7 +118,7 @@
    "untraced": []
   },
   "22_audit_report.md": {
-   "tokens": 86,
+   "tokens": 88,
    "untraced": []
   },
   "23_green_kernel_and_complement.md": {
@@ -230,7 +226,7 @@
    "untraced": []
   },
   "49_final_push.md": {
-   "tokens": 70,
+   "tokens": 158,
    "untraced": []
   },
   "50_precise_vertex.md": {
