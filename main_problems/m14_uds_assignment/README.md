@@ -666,6 +666,7 @@ Q4 死  ：「rank+1 = 3」只對 44/112 成立；耦合塊恆為 (u,d) 對（ra
 | `docs/51_precise_vertex_e6.md` | ★★★ `E_6` 7 模態閉合（路徑 A n=1） | ✅ |
 | `docs/55_m0_scale_attack.md` | ★★★ `M₀` 標度殘差閘：9 族覆蓋＋null ⟹ 族級判死；★ 開放項歸 M14（不 handoff O38） | 🔴 族級判死（0 條活路線於族內） |
 | `docs/56_scripts_manifest.md` | ★★ 全推導鏈腳本清冊（L1 50／分層 2／oneoff 8／probes 27）＋每支產物與文檔映射 | ✅ 完成（缺口誠實聲明見 §五） |
+| `docs/57_residual_and_physics_application.md` | ★★ 殘留清單（R1–R12）＋已證否禁區（N1–N7）＋物理應用三級路線（秩一混合／12 維質量比格／反射對偶／頂點整數權重） | 🟡 整理（無新譜量） |
 | `scripts/51_precise_vertex.py` | 精確四波頂點＋兩讀法 `E_2/E_3`（G1 閘、`T2/T0`） | ✅ |
 | `scripts/52_fourwave_operator.py` | 通用四波算子（CPU）＋六閘（三通道對 `51`、同模伴隨性、χ⁴ 率） | ✅ |
 | `scripts/53_vertex_gpu.py` | GPU 算子（CuPy RawModule 四 kernel）＋對 CPU 五通道閘 | ✅ |

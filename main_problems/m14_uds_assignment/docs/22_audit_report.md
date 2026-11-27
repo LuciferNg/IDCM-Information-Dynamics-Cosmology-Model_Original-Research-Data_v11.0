@@ -935,7 +935,7 @@ probes_m14 = 49 支（本輪新增 4：probe_cs_vs_ident／probe_delta_22／prob
 
 ```
 37_reverse_coverage：未追溯 0；兩跑 byte-identical；canonical 1,714 B
-（本輪期間觸發並修正：p0-Σ −8535.462824 屬 37 自身輸出 ⟹ 改為不引數字）
+（本輪期間觸發並修正：p0-Σ 之原值屬 37 自身輸出而非 data 落盤值 ⟹ 依前例改措辭為「Σ 值見 register note P0-Σ，未落地 data ⟹ 本節不引數字」，37 隨之歸 0）
 ```
 
 ### 32.4 ④⑤ Handoff

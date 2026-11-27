@@ -1,0 +1,158 @@
+{
+ "lepton": {
+  "n_pairs": 3,
+  "max_matched": 4,
+  "p_best": "1.3803913741304528",
+  "n_injectable_no_reuse": 2,
+  "assignment": [
+   [
+    "tau",
+    "e",
+    1,
+    21
+   ],
+   [
+    "tau",
+    "mu",
+    8,
+    25
+   ]
+  ],
+  "pairs": [
+   "mu>e",
+   "tau>e",
+   "tau>mu"
+  ],
+  "n_candidates": 1508
+ },
+ "up": {
+  "n_pairs": 3,
+  "max_matched": 4,
+  "p_best": "2.1316642164259494",
+  "n_injectable_no_reuse": 1,
+  "assignment": [
+   [
+    "t",
+    "c",
+    7,
+    25
+   ]
+  ],
+  "pairs": [
+   "c>u",
+   "t>u",
+   "t>c"
+  ],
+  "n_candidates": 1245
+ },
+ "down": {
+  "n_pairs": 3,
+  "max_matched": 5,
+  "p_best": "1.2774671650428926",
+  "n_injectable_no_reuse": 1,
+  "assignment": [
+   [
+    "b",
+    "d",
+    2,
+    43
+   ]
+  ],
+  "pairs": [
+   "s>d",
+   "b>d",
+   "b>s"
+  ],
+  "n_candidates": 1620
+ },
+ "all9": {
+  "n_pairs": 36,
+  "max_matched": 21,
+  "p_best": "1.0194009658225944",
+  "n_injectable_no_reuse": 7,
+  "assignment": [
+   [
+    "u",
+    "e",
+    8,
+    17
+   ],
+   [
+    "d",
+    "e",
+    6,
+    19
+   ],
+   [
+    "s",
+    "u",
+    4,
+    31
+   ],
+   [
+    "mu",
+    "s",
+    33,
+    38
+   ],
+   [
+    "c",
+    "mu",
+    5,
+    18
+   ],
+   [
+    "tau",
+    "c",
+    23,
+    29
+   ],
+   [
+    "b",
+    "tau",
+    20,
+    39
+   ]
+  ],
+  "pairs": [
+   "u>e",
+   "d>e",
+   "d>u",
+   "s>e",
+   "s>u",
+   "s>d",
+   "mu>e",
+   "mu>u",
+   "mu>d",
+   "mu>s",
+   "c>e",
+   "c>u",
+   "c>d",
+   "c>s",
+   "c>mu",
+   "tau>e",
+   "tau>u",
+   "tau>d",
+   "tau>s",
+   "tau>mu",
+   "tau>c",
+   "b>e",
+   "b>u",
+   "b>d",
+   "b>s",
+   "b>mu",
+   "b>c",
+   "b>tau",
+   "t>e",
+   "t>u",
+   "t>d",
+   "t>s",
+   "t>mu",
+   "t>c",
+   "t>tau",
+   "t>b"
+  ],
+  "n_candidates": 19658
+ },
+ "eps_log": 0.001
+}

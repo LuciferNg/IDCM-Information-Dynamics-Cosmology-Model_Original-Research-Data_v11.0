@@ -35,9 +35,15 @@ EXEMPT = {
     "docs/38": "內部碼命名空間規範＋映射表；數字僅為碼序號（MR1–MR8），非譜量 ⟹ 無 claim",
     "docs/55": "診斷類：M₀ 標度殘差閘（9 族覆蓋＋null）之一次性攻堅；數字全部落 data/m0_resid_gate.json，判準為族級否證而非譜量 claim",
     "docs/56": "清冊類：腳本與過程記錄清冊（manifest）—— 只有支數與檔名映射，無譜量 claim；判準見 docs/22 §二十八 之①c／⑨",
+    "docs/57": "整理類：殘留清單（R1–R12）＋物理應用路線圖 —— 數字全部引 docs/49 已 claim 之值或 data/ 既有鍵，無新譜量；成本級（1 天／6 h／GB 等）為資源估計非譜量",
 }
 
 CLAIMS = [
+    # docs/49 §三十九 遮罩代數（L2 §3.9 Y1–Y7）
+    {"doc": "docs/49_final_push.md", "key": "n_masks_16", "label": "實現遮罩數 16"},
+    # docs/49 §四十 譜比天花板（L2 §3.9 Y8–Y9）
+    {"doc": "docs/49_final_push.md", "key": "gam_ratio_44_1", "label": "γ_44/γ_1 = 820.035002083"},
+    {"doc": "docs/49_final_push.md", "key": "mass_ceiling_half", "label": "m∝γ^{1/2} 天花板 28.636253"},
     # docs/01 重現閘
     {"doc": "docs/01_reproduction_gate.md", "key": "n_A2p1", "label": "A₂⊕1 = 44"},
     {"doc": "docs/01_reproduction_gate.md", "key": "n_A2block", "label": "A₂ 2×2 塊 = 87"},

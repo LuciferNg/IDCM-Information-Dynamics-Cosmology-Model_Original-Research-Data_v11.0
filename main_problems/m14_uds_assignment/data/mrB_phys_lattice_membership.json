@@ -1,0 +1,96 @@
+{
+ "criterion": "|γ_b/γ_a − m_hi/m_lo| / (m_hi/m_lo) < 1e−6（p=1 讀法）",
+ "n_ratios": 946,
+ "rows": [
+  {
+   "pair": "t/u",
+   "obs": "79949.0740741",
+   "best_rel_residual": "0.989743",
+   "best_stations": [
+    1,
+    44
+   ],
+   "within_range": false,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "tau/e",
+   "obs": "3477.22828002",
+   "best_rel_residual": "0.76417",
+   "best_stations": [
+    1,
+    44
+   ],
+   "within_range": false,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "mu/e",
+   "obs": "206.768282988",
+   "best_rel_residual": "0.0073006",
+   "best_stations": [
+    2,
+    44
+   ],
+   "within_range": true,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "tau/mu",
+   "obs": "16.8170293324",
+   "best_rel_residual": "0.00366379",
+   "best_stations": [
+    7,
+    41
+   ],
+   "within_range": true,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "b/s",
+   "obs": "44.7537473233",
+   "best_rel_residual": "0.00827398",
+   "best_stations": [
+    4,
+    34
+   ],
+   "within_range": true,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "c/u",
+   "obs": "587.962962963",
+   "best_rel_residual": "0.00427504",
+   "best_stations": [
+    1,
+    29
+   ],
+   "within_range": true,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "t/c",
+   "obs": "135.976377953",
+   "best_rel_residual": "0.00109358",
+   "best_stations": [
+    1,
+    12
+   ],
+   "within_range": true,
+   "meets_1e-6": false
+  },
+  {
+   "pair": "b/u",
+   "obs": "1935.18518519",
+   "best_rel_residual": "0.57625",
+   "best_stations": [
+    1,
+    44
+   ],
+   "within_range": false,
+   "meets_1e-6": false
+  }
+ ],
+ "n_pass": 0,
+ "verdict": "判死：無任何觀測質量比落在 946 個 γ 比上（1e−6 級）"
+}

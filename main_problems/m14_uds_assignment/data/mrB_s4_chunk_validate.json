@@ -1,0 +1,22 @@
+{
+ "mechanism_check": {
+  "n_out": 2048,
+  "n_channels": 17,
+  "blocks": 8,
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "note": "僅驗證累加機制（float64 結合律無損），不驗 E₈ 語義"
+ },
+ "e8_sizing": {
+  "states_V7_9": 3679075400,
+  "bytes_float32": 14716301600,
+  "bytes_float64": 29432603200,
+  "gib_float32": 13.705623894929886,
+  "gib_float64": 27.41124778985977,
+  "chunk_states_2p24": 16777216,
+  "chunk_gib_float64": 0.125,
+  "n_chunks": 220,
+  "disk_free_gib_ref": 119,
+  "vram_ref_gib": 1.25
+ }
+}

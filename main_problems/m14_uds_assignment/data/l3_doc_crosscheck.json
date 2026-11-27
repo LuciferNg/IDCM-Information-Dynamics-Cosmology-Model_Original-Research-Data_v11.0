@@ -1,7 +1,19 @@
 {
   "E1 L2 有 _derived 且非空": {
     "pass": true,
-    "detail": "282 keys"
+    "detail": "286 keys"
+  },
+  "C.49_final_push.md.實現遮罩數 16": {
+    "pass": true,
+    "detail": "L2 16 ↔ 文檔 16（rel 0.0e+00）"
+  },
+  "C.49_final_push.md.γ_44/γ_1 = 820.035002083": {
+    "pass": true,
+    "detail": "L2 820.035 ↔ 文檔 820.035（rel 3.6e-13）"
+  },
+  "C.49_final_push.md.m∝γ^{1/2} 天花板 28.636253": {
+    "pass": true,
+    "detail": "L2 28.6363 ↔ 文檔 28.6363（rel 9.9e-09）"
   },
   "C.01_reproduction_ga.A₂⊕1 = 44": {
     "pass": true,
@@ -915,7 +927,7 @@
     "pass": true,
     "detail": ""
   },
-  "F.docs/49_final_push.md 全命中（1/1）": {
+  "F.docs/49_final_push.md 全命中（4/4）": {
     "pass": true,
     "detail": ""
   },
@@ -936,9 +948,13 @@
     "detail": ""
   },
   "_summary": {
-    "checks": 234,
+    "checks": 237,
     "fail": 0,
     "by_doc": {
+      "docs/49_final_push.md": [
+        4,
+        4
+      ],
       "docs/01_reproduction_gate.md": [
         2,
         2
@@ -1075,10 +1091,6 @@
         3,
         3
       ],
-      "docs/49_final_push.md": [
-        1,
-        1
-      ],
       "docs/50_precise_vertex.md": [
         6,
         6
@@ -1133,7 +1145,8 @@
       "docs/22",
       "docs/38",
       "docs/55",
-      "docs/56"
+      "docs/56",
+      "docs/57"
     ],
     "exempt_reasons": {
       "docs/03": "AST 出處追溯記錄；數字僅為 v9 字面值（gen_modes=[1,4,5]、z2_map={1:3,4:2,5:0}）與 N_trials=6，非本 M 譜量 ⟹ 無譜量宣稱可 claim",
@@ -1144,7 +1157,8 @@
       "docs/22": "審計報告自身（自指）；其數字為各層計數，已由 audit 自身斷言",
       "docs/38": "內部碼命名空間規範＋映射表；數字僅為碼序號（MR1–MR8），非譜量 ⟹ 無 claim",
       "docs/55": "診斷類：M₀ 標度殘差閘（9 族覆蓋＋null）之一次性攻堅；數字全部落 data/m0_resid_gate.json，判準為族級否證而非譜量 claim",
-      "docs/56": "清冊類：腳本與過程記錄清冊（manifest）—— 只有支數與檔名映射，無譜量 claim；判準見 docs/22 §二十八 之①c／⑨"
+      "docs/56": "清冊類：腳本與過程記錄清冊（manifest）—— 只有支數與檔名映射，無譜量 claim；判準見 docs/22 §二十八 之①c／⑨",
+      "docs/57": "整理類：殘留清單（R1–R12）＋物理應用路線圖 —— 數字全部引 docs/49 已 claim 之值或 data/ 既有鍵，無新譜量；成本級（1 天／6 h／GB 等）為資源估計非譜量"
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+ "real_injectable": 7,
+ "real_max_matched_raw": 21,
+ "null_n": 2000,
+ "null_inj_mean": 6.3885,
+ "null_inj_sd": 2.1203338552758417,
+ "null_inj_p95": 10.0,
+ "null_inj_max": 13,
+ "z": 0.28839797962875435,
+ "eps_log": 0.001,
+ "seed": 20261127
+}

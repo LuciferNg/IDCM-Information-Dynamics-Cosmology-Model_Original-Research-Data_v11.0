@@ -1910,6 +1910,43 @@ def main():
     chk("X81 五模態總數 = 多重集 C(44+5−1,5) = C(48,5) = 1712304（枚舉覆蓋完整）",
         __import__("math").comb(48, 5) == 1712304, str(__import__("math").comb(48, 5)))
 
+    hdr("§3.9 四腿遮罩代數（§三十九）＋ 譜比天花板（§四十）")
+    _SIG391 = [(1, -1, -1, 1), (1, -1, 1, -1), (1, -1, -1, -1), (1, -1, 1, 1),
+               (1, 1, -1, 1), (1, 1, 1, -1), (1, 1, -1, -1), (1, 1, 1, 1)]
+    _CS391 = [1, 1, -1, -1, -1, -1, 1, 1]
+    _mk = {}
+    for _rem in range(1, 45):
+        for _a3 in itertools.combinations_with_replacement(range(1, 45), 3):
+            _v = (_rem,) + _a3
+            _m = frozenset(i for i, _sg in enumerate(_SIG391)
+                           if (_v[0] * _sg[0] + _v[1] * _sg[1] + _v[2] * _sg[2] + _v[3] * _sg[3]) % 90 == 0)
+            _mk[_m] = _mk.get(_m, 0) + 1
+    _m16 = sorted(_mk)
+    _wm = {m: sum(_CS391[i] for i in m) for m in _m16}
+    _wcnt = {}
+    for m in _m16:
+        _wcnt[_wm[m]] = _wcnt.get(_wm[m], 0) + _mk[m]
+    chk("Y1 實現遮罩數 = 16（256 個可能中）", len(_m16) == 16, str(len(_m16)))
+    chk("Y2 簽名總數 = 44·C(46,3) = 667920", sum(_mk.values()) == 667920, str(sum(_mk.values())))
+    chk("Y3 基數律：|mask|=2 ⟹ w=+2 全部", all(_wm[m] == 2 for m in _m16 if len(m) == 2), "")
+    chk("Y4 基數律：|mask|=3 ⟹ w=+3 全部", all(_wm[m] == 3 for m in _m16 if len(m) == 3), "")
+    chk("Y5 符號同質：無混號遮罩（空集除外）",
+        all(len({_CS391[i] for i in m}) == 1 for m in _m16 if m), "")
+    _inter_ok = all(frozenset(set(a) & set(b)) in set(_m16) for a in _m16 for b in _m16)
+    chk("Y6 ∩ 封閉（meet-semilattice）", _inter_ok, "")
+    _union_bad = sum(1 for a in _m16 for b in _m16 if frozenset(set(a) | set(b)) not in set(_m16))
+    chk("Y7 ∪ 不封閉（116 違例）", _union_bad == 116, str(_union_bad))
+    D["n_masks_16"] = len(_m16)
+    _g1 = 4 * mp.sin(mp.pi * mp.mpf(1) / 90) ** 2
+    _g44 = 4 * mp.sin(mp.pi * mp.mpf(44) / 90) ** 2
+    D["gam_ratio_44_1"] = _g44 / _g1
+    D["mass_ceiling_half"] = mp.sqrt(_g44 / _g1)
+    D["mass_ceiling_one"] = _g44 / _g1
+    chk("Y8 γ_44/γ_1 = 820.035002083", abs(_g44 / _g1 - mp.mpf("820.035002083")) < mp.mpf("1e-9"),
+        mp.nstr(_g44 / _g1, 15))
+    chk("Y9 m∝γ^{1/2} 天花板 = 28.636253", abs(mp.sqrt(_g44 / _g1) - mp.mpf("28.636253")) < mp.mpf("1e-6"),
+        mp.nstr(mp.sqrt(_g44 / _g1), 12))
+
     hdr("§4 匯總")
     nchk = len([k for k in RES if not k.startswith("_")])
     print(f"檢查項 = {nchk}，FAIL = {NFAIL}")

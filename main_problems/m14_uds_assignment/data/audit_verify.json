@@ -41,11 +41,11 @@
   },
   "⑤b claim 份數 + 豁免份數 == 磁碟 doc 份數": {
     "status": "PASS",
-    "detail": "46 + 9 = 55 vs 55"
+    "detail": "46 + 10 = 56 vs 56"
   },
   "⑤c 每項豁免附非空理由": {
     "status": "PASS",
-    "detail": "豁免 9 條 vs 名單 9；空理由 []"
+    "detail": "豁免 10 條 vs 名單 10；空理由 []"
   },
   "⑥a run_chain.sh 存在": {
     "status": "PASS",
@@ -681,7 +681,7 @@
   },
   "⑨a docs 實際數 == README 檔表所列": {
     "status": "PASS",
-    "detail": "實際 55 vs README 55"
+    "detail": "實際 56 vs README 56"
   },
   "⑨b docs 每份都在 README 檔表": {
     "status": "PASS",
@@ -731,7 +731,7 @@
     "checks": 182,
     "fail": 0,
     "warn": 0,
-    "n_docs": 55,
+    "n_docs": 56,
     "n_scripts": 50,
     "n_logs": 53
   }

@@ -1,0 +1,91 @@
+{
+ "gamma_1": "0.0048718994803515047737",
+ "gamma_44": "3.9951281005196484952",
+ "gamma_ratio": "820.0350020832946819",
+ "mass_ceiling_p_half": "28.6362532829",
+ "mass_ceiling_p_one": "820.035002083",
+ "required_power_min_over_all_pairs": "1.682599677",
+ "rows": [
+  {
+   "a": "t",
+   "b": "u",
+   "obs_ratio": "79949.0740741",
+   "need_power_p": "1.682599677",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": false
+  },
+  {
+   "a": "tau",
+   "b": "e",
+   "obs_ratio": "3477.22828002",
+   "need_power_p": "1.215318086",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": false
+  },
+  {
+   "a": "mu",
+   "b": "e",
+   "obs_ratio": "206.768282988",
+   "need_power_p": "0.7946524067",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": true
+  },
+  {
+   "a": "tau",
+   "b": "mu",
+   "obs_ratio": "16.8170293324",
+   "need_power_p": "0.4206656793",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": true,
+   "feasible_p_one": true
+  },
+  {
+   "a": "b",
+   "b": "s",
+   "obs_ratio": "44.7537473233",
+   "need_power_p": "0.5665491986",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": true
+  },
+  {
+   "a": "c",
+   "b": "u",
+   "obs_ratio": "587.962962963",
+   "need_power_p": "0.9504149859",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": true
+  },
+  {
+   "a": "t",
+   "b": "c",
+   "obs_ratio": "135.976377953",
+   "need_power_p": "0.7321846911",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": true
+  },
+  {
+   "a": "b",
+   "b": "u",
+   "obs_ratio": "1935.18518519",
+   "need_power_p": "1.127972406",
+   "p_half_ceiling": "28.63625328",
+   "p_one_ceiling": "820.0350021",
+   "feasible_p_half": false,
+   "feasible_p_one": false
+  }
+ ],
+ "verdict": "部分可能"
+}

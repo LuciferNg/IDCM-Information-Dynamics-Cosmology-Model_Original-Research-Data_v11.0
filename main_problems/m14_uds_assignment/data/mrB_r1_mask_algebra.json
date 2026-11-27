@@ -1,0 +1,174 @@
+{
+ "n_masks": 16,
+ "masks": {
+  "": {
+   "w": 0,
+   "signatures": 611454
+  },
+  "0,1,6": {
+   "w": 3,
+   "signatures": 44
+  },
+  "5": {
+   "w": -1,
+   "signatures": 6853
+  },
+  "0": {
+   "w": 1,
+   "signatures": 6622
+  },
+  "0,1": {
+   "w": 2,
+   "signatures": 924
+  },
+  "7": {
+   "w": 1,
+   "signatures": 8988
+  },
+  "0,7": {
+   "w": 2,
+   "signatures": 231
+  },
+  "0,1,7": {
+   "w": 3,
+   "signatures": 22
+  },
+  "2": {
+   "w": -1,
+   "signatures": 4886
+  },
+  "1": {
+   "w": 1,
+   "signatures": 12782
+  },
+  "1,6": {
+   "w": 2,
+   "signatures": 924
+  },
+  "1,7": {
+   "w": 2,
+   "signatures": 462
+  },
+  "6": {
+   "w": 1,
+   "signatures": 6622
+  },
+  "3": {
+   "w": -1,
+   "signatures": 6853
+  },
+  "6,7": {
+   "w": 2,
+   "signatures": 231
+  },
+  "1,6,7": {
+   "w": 3,
+   "signatures": 22
+  }
+ },
+ "w_single_valued": true,
+ "union_closed": false,
+ "inter_closed": true,
+ "complement_closed": false,
+ "union_violations_sample": [
+  [
+   [
+    0,
+    1,
+    6
+   ],
+   [
+    5
+   ],
+   [
+    0,
+    1,
+    5,
+    6
+   ]
+  ],
+  [
+   [
+    0,
+    1,
+    6
+   ],
+   [
+    7
+   ],
+   [
+    0,
+    1,
+    6,
+    7
+   ]
+  ],
+  [
+   [
+    0,
+    1,
+    6
+   ],
+   [
+    0,
+    7
+   ],
+   [
+    0,
+    1,
+    6,
+    7
+   ]
+  ],
+  [
+   [
+    0,
+    1,
+    6
+   ],
+   [
+    0,
+    1,
+    7
+   ],
+   [
+    0,
+    1,
+    6,
+    7
+   ]
+  ],
+  [
+   [
+    0,
+    1,
+    6
+   ],
+   [
+    2
+   ],
+   [
+    0,
+    1,
+    2,
+    6
+   ]
+  ]
+ ],
+ "inter_violations_sample": [],
+ "cardinality_to_w": {
+  "0": [
+   0
+  ],
+  "1": [
+   -1,
+   1
+  ],
+  "2": [
+   2
+  ],
+  "3": [
+   3
+  ]
+ }
+}

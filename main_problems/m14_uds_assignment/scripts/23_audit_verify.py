@@ -135,6 +135,7 @@ def main():
 
     # 敘事類 doc：無 producer script 屬正常，但必須明示理由（唔可以靜靜放行）
     NARRATIVE = {
+        "57_residual_and_physics_application.md": "整理類（殘留清單＋物理應用路線圖）：數字全引 docs/49 已 claim 值或 data/ 既有鍵，無新譜量；本身非推導doc ⟹ 無 producer script",
         "07_verdicts_and_handoffs.md": "判詞與移交敘述表：全部數字引他 doc，本身無 producer",
         "09_correction_object_type.md": "概念更正（對象型別）；唯一精確值屬 M5 跨記錄",
         "13_channel_fate_correction.md": "讀法更正記錄：程式與 log 保留不動（append-only）",
