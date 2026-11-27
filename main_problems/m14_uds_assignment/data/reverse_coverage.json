@@ -1,6 +1,6 @@
 {
- "pool": 8948,
- "tokens": 1198,
+ "pool": 8968,
+ "tokens": 1220,
  "untraced": [],
  "allowed": [
   [
@@ -226,7 +226,7 @@
    "untraced": []
   },
   "49_final_push.md": {
-   "tokens": 224,
+   "tokens": 238,
    "untraced": []
   },
   "50_precise_vertex.md": {
@@ -254,7 +254,7 @@
    "untraced": []
   },
   "57_residual_and_physics_application.md": {
-   "tokens": 20,
+   "tokens": 28,
    "untraced": []
   }
  }

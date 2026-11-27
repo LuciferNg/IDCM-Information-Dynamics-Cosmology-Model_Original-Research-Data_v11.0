@@ -1,0 +1,35 @@
+{
+ "W2": "61.5",
+ "lambda": "0.0162601626016260162601626",
+ "lambda_exact": "2/123",
+ "lambda_is_2_over_123": true,
+ "g4": "0.3902439024390243902439024",
+ "g4_exact": "16/41",
+ "g4_is_16_over_41": true,
+ "gamma22_88": "2.0",
+ "gamma22_90": "1.9302010065949980567",
+ "sum88_44": "90.0",
+ "sum90_44": "88.0",
+ "ratio_g4_over_lambdaSM": "3.02350586844",
+ "dev_if_div3_pct": "0.783529",
+ "lambda_B": "1.4635254915624211362",
+ "ratio_layers_lambdaB_over_lambdaC": "90.0068177310889",
+ "g4_lambdaB_layer": "35.1246117974981",
+ "verdicts": {
+  "Z_is_unknown": false,
+  "chain_mismatch": "M14 四腿 mod 90（Dirichlet /90，Σγ=88）vs W-field λ 建於 /88（Σγ=90）",
+  "sm_correspondence": "g₄/λ_SM ≈ 3.02；除 N_gen 才落 0.78% ⟹ 陷阱區（<3%）⟹ 不升格"
+ },
+ "layers": {
+  "lambda_C": "0.0162601626016260162601626",
+  "lambda_B": "1.4635254915624211362",
+  "lambda_M0_layer": "0.03125",
+  "note": "1/32 = κ/2（κ = 1/16）；三層不可互換"
+ },
+ "sm_compare": {
+  "g4_over_3": "0.130081300813008",
+  "dev_pct": "0.783529",
+  "ratio_g4_over_lambdaSM": "3.02350586844",
+  "verdict": "陷阱區（≤3%）⟹ 不升格"
+ }
+}
