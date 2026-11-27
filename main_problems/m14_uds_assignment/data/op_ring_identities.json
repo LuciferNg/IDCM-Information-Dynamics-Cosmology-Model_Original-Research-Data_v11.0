@@ -1,0 +1,27 @@
+{
+ "gamma_operator_identity": {
+  "all_44_match_dev": "9.18355e-41",
+  "gamma_1_operator": "0.0048718994803515047737",
+  "gamma_44_operator": "3.9951281005196484952",
+  "note": "γ_n = |λ_{p=1}(S^n−1)|²；真空模給 2 ⟹ 必須標動量模 p=1"
+ },
+ "sum_gamma": "88.0",
+ "leg_norm_sq": 2,
+ "contraction_is_2I": true,
+ "contraction_trace": 88,
+ "W_is_4pt_vacuum_correlator": true,
+ "sum_W": 22230,
+ "sum_W2": 65486,
+ "N": 667920,
+ "formulas": {
+  "gamma": "γ_n = ‖(S^n − 1)|0⟩‖² = 4sin²(πn/90)",
+  "W": "W(v) = ⟨0|Φ_{v1}Φ_{v2}Φ_{v3}Φ_{v4}|0⟩,  Φ_v = S^v − S^{−v}",
+  "leg": "‖Φ_v|0⟩‖² = 2 ⟹ 四腿正規化因子 = 2^{4/2} = 4"
+ },
+ "normalization": {
+  "factor": 4,
+  "omega_mean": "0.008320607258354293927416",
+  "omega_mean2": "0.006127792250568930410828",
+  "note": "ω = W/4（腿範數² = 2 ⟹ 四腿 2^{4/2}）"
+ }
+}
