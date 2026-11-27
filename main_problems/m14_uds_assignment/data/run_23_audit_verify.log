@@ -215,7 +215,7 @@
 §⑩ 四件套狀態行同步
 ==============================================================================
 [PASS] ⑩a 四件套齊存  |  ['01_problem_record.md', 'README.md', 'SESSION_START.md', 'final_result.md']
-[PASS] ⑩b final_result 與 register 一致（partial, 非 negative-only）
+[PASS] ⑩b final_result 狀態行存在且非 negative-only（partial／closed）
 
 ==============================================================================
 §⑪ 文件衛生

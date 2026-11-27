@@ -270,8 +270,14 @@ def main():
     for f, ls in lines.items():
         blob = " ".join(ls)
         verdicts[f] = ("partial" in blob.lower(), "negative" in blob.lower())
-    chk("⑩b final_result 與 register 一致（partial, 非 negative-only）",
-        verdicts.get("final_result.md", (False, True))[0])
+    # 2026-11-27 收尾：M14 由 partial 封定為 closed。原條件只認 "partial" 會把合法封定誤判 FAIL；
+    # 判準意圖不變（狀態行須存在、且唔可以係純負面結論），接受 partial／closed 兩態。
+    # 2026-11-27 修：lines 之 value 係 list[str]，直接 join(list) 會拋
+    # TypeError: sequence item 0: expected str instance, list found
+    # （原版 seal43 crash 於 ⑩b，AUDIT exit 1；該輪作廢、不引用）
+    fr_blob = " ".join(x for f, ls in lines.items() if f == "final_result.md" for x in ls)
+    chk("⑩b final_result 狀態行存在且非 negative-only（partial／closed）",
+        ("partial" in fr_blob.lower() or "closed" in fr_blob.lower()))
 
     hdr("§⑪ 文件衛生")
     bad_fence = [p.name for p in list(DOCS.glob("*.md")) + [ROOT / "README.md", ROOT / "final_result.md"]

@@ -83,3 +83,69 @@ cs_sig_gate.py（CS = ∏ε 之閘）｜m0_resid_gate.py（M₀ 殘差族覆蓋�
   e7chain.py（E₇ 鏈模組，被多支探針 import）｜e7run.py（E₇ 驅動，表 QUI／TRI 之來源）
 ⟹ 修正 §四 之計數：27 → 45（本節為 append-only 更新，§四 原文不動）
 ```
+
+## §七 更新（2026-11-27 收尾）：探針實測 67 支＋全量索引（append-only；§四／§六 原文不動）
+
+> 計數更正：§四 記 27 支、§六 記 45 支；本節實測 **67 支**（含本次補歸檔 1 支）。
+> 原文保留為歷史；本節為生效值。
+
+### 7.1 統計
+
+```
+probe 總數                67
+有 json 產物              51（產物落 data/，命名前綴規則見 7.2）
+無 json（只落 docs／stdout）16（見 7.4）
+清冊 §四／§六 曾列名       28
+```
+
+### 7.2 命名前綴規則（避免再誤判「缺產物」）
+
+```
+probe 內寫 mrB/x.json      ⟹ data/ 落 mrB_x.json
+probe 內寫 op_*.json       ⟹ data/ 落 op_*.json（無前綴）
+probe 內寫 phys_*.json     ⟹ data/ 落 mrB_phys_*.json
+probe 內寫 s2_/s3_/s4_     ⟹ data/ 落 mrB_s*_*.json
+probe 內寫 r1_/r4_/r5_     ⟹ data/ 落 mrB_r*_*.json
+```
+
+### 7.3 新增探針索引（本輪 §三十五–§四十九 所用；產物 → 文檔節）
+
+```
+probe_r1_r5                      mrB_r1_masks_ordered／mrB_r5_distribution／mrB_dominance   → §三十五／§三十六
+probe_r1_mask_algebra            mrB_r1_mask_algebra                                      → §三十九
+probe_r4_support45               mrB_r4_support45／mrB_offdelta                           → §三十八
+probe_phys_mass_ceiling          mrB_phys_mass_ceiling                                    → §四十
+probe_phys_power_fit2            mrB_phys_power_fit                                       → §四十
+probe_phys_power_null            mrB_phys_power_null                                      → §四十
+probe_phys_lattice_membership    mrB_phys_lattice_membership                              → §四十一
+probe_s2_lambda_trap             mrB_s2_lambda_trap                                       → §四十二
+probe_s3_pair_orbits             mrB_s3_pair_orbits                                       → §四十三
+probe_s3_assignment_dof          mrB_s3_assignment_dof                                    → §四十三
+probe_s4_chunk_validate          mrB_s4_chunk_validate                                    → §四十四
+probe_op_ring_identities         op_ring_identities                                       → §四十五
+probe_op_sign_homogeneity        op_sign_homogeneity_proof                                → §四十五
+probe_op_w_fourier               op_w_fourier                                             → §四十六
+probe_op_fourwave_H              op_fourwave_H                                            → §四十七
+probe_op_z_normalization         op_z_normalization                                       → §四十八
+probe_op_dual_chain_nogo         op_dual_chain_nogo                                       → §四十九
+```
+
+### 7.4 無 json 產物之 16 支（誠實聲明）
+
+```
+庫／驅動（5）：e7chain（被多支 import）、e8_79p、e8_97b、e8_97c、e8b_97
+舊探針（11）：probe_cs_vs_ident、probe_mrA_adjoint、probe_mrA_adjoint2、probe_mrA_decode、
+              probe_mrA_decode2、probe_mrA_decode3、probe_mrA_final、probe_mrA_rankcheck、
+              probe_mrA_raw、probe_w3struct、probe_wclassify
+處置：其數值只落 docs（§十七–§三十四 各節）；重跑可重建但無 json 對賬 ⟹ 標【doc-only】
+      （不補寫 json：事後補寫屬回溯污染，禁用）
+```
+
+### 7.5 歸檔動作（本節）
+
+```
+cp -p /home/wsl/idcm_ckpt/e8/probe_phys_power_fit.py scripts/oneoff/probes_m14/
+  理由：ckpt 存在而 scripts/ 缺（①a 差集唯一項）；已被 probe_phys_power_fit2 取代 ⟹ 標【superseded】
+  產物 mrB_phys_power_fit.json 由 fit2 產生（fit 為中間版本，保留作歷史）
+複核：ckpt → scripts/ 差集 = 0
+```

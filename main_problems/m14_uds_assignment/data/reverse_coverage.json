@@ -1,6 +1,6 @@
 {
  "pool": 8970,
- "tokens": 1220,
+ "tokens": 1221,
  "untraced": [],
  "allowed": [
   [
@@ -254,7 +254,7 @@
    "untraced": []
   },
   "57_residual_and_physics_application.md": {
-   "tokens": 28,
+   "tokens": 29,
    "untraced": []
   }
  }

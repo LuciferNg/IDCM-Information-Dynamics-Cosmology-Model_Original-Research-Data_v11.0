@@ -695,7 +695,7 @@
     "status": "PASS",
     "detail": "['01_problem_record.md', 'README.md', 'SESSION_START.md', 'final_result.md']"
   },
-  "⑩b final_result 與 register 一致（partial, 非 negative-only）": {
+  "⑩b final_result 狀態行存在且非 negative-only（partial／closed）": {
     "status": "PASS",
     "detail": ""
   },
